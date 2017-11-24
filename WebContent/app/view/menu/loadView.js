@@ -2,9 +2,8 @@
 define(["jquery",
         'underscore',
         "app/utils/utils",
-        "app/data/tableaux",
         "text!app/template/menu/popup/load.html"], 
-function($, _, Utils, Tableaux, page) {
+function($, _, Utils, page) {
 	'use strict';
 
 	return function(parent, Textes) {
@@ -46,9 +45,7 @@ function($, _, Utils, Tableaux, page) {
 				} catch(e) {
 					return that.error();
 				}
-				if (!save || !save.lieu) return that.error();
-				var tableau = Tableaux.get(save.lieu);
-				if (tableau.length == 0) return that.error();
+				if (!save) return that.error();
 				
 				that.parent.loadGame(code);
 			});

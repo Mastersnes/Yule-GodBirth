@@ -1,0 +1,43 @@
+
+/**
+* God
+**/
+god {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/**
+* Sous forme de poussiere
+**/
+god.dust-1 {
+	background-image: url("../img/game/god/dust-1.png");
+}
+god.dust-2 {
+	background-image: url("../img/game/god/dust-2.png");
+}
+god.dust-3 {
+	background-image: url("../img/game/god/dust-3.png");
+}
+god.dust-4 {
+	background-image: url("../img/game/god/dust-4.png");
+}
+god.dust-5 {
+	background-image: url("../img/game/god/dust-5.png");
+}
+
+/**
+* Forme d'oeuf
+**/
+god.egg-1 {
+	background-image: url("../img/game/god/egg-1.png");
+}
+god.egg-2 {
+	background-image: url("../img/game/god/egg-2.png");
+}
+god.egg-3 {
+	background-image: url("../img/game/god/egg-3.png");
+}
