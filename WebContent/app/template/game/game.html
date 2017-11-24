@@ -1,0 +1,46 @@
+<div class="game page">
+    <div class="scene">
+        <planFar class="background"></planFar>
+        <div class="camera">
+            <plan class="background"></plan>
+            <plan class="stage">
+                <fleche class="gauche"></fleche>
+                <fleche class="droite"></fleche>
+                <fleche class="haut"></fleche>
+                <fleche class="bas"></fleche>
+                <actions></actions>
+            </plan>
+            <plan class="frontground"></plan>
+        </div>
+        <lampe></lampe>
+        <planFar class="frontground"></planFar>
+        
+        <div class="collapse popupText" id="popupText">
+			<mask></mask>
+			<content>
+				<div class="text"></div>
+			</content>
+		</div>
+		<inventaire class="collapse">
+			<button type="button" class="close" aria-label="Close">X</button>
+			<mask></mask>
+			<content class="h-center v-center"></content>
+		</inventaire>
+		
+		<div class="collapse popupText" id="pause">
+		    <mask></mask>
+		    <content>
+		        <div class="text"><%=data.text.get("codeHolder")%> : <span id="code"></span></div>
+		    </content>
+		</div>
+		<params class="text">
+			<div id="open-close">◄</div>
+			<ul class="collapse">
+				<li><div id="clue"><%=data.text.get("clue")%></div> |</li>
+				<li><div id="mute"><%=data.text.get("mute")%></div> |</li>
+				<li><div id="quit"><%=data.text.get("quit")%></div></li>
+			</ul>
+		</params>
+		<clue class="hidden" key="indice-tournevis"></clue>
+    </div>
+</div>
