@@ -4,8 +4,15 @@
 **/
 god {
 	position: absolute;
+	left: 25%;
+	top: 25%;
+	
+	z-index: 2;
+	cursor: pointer;
+	
 	width: 50%;
 	height: 50%;
+    
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -13,31 +20,31 @@ god {
 /**
 * Sous forme de poussiere
 **/
-god.dust-1 {
-	background-image: url("../img/game/god/dust-1.png");
+god.dust[level="1"] {
+	background-image: url("../img/game/god/dust/1.png");
 }
-god.dust-2 {
-	background-image: url("../img/game/god/dust-2.png");
+god.dust[level="2"] {
+	background-image: url("../img/game/god/dust/2.png");
 }
-god.dust-3 {
-	background-image: url("../img/game/god/dust-3.png");
+god.dust[level="3"] {
+	background-image: url("../img/game/god/dust/3.png");
 }
-god.dust-4 {
-	background-image: url("../img/game/god/dust-4.png");
+god.dust[level="4"] {
+	background-image: url("../img/game/god/dust/4.png");
 }
-god.dust-5 {
-	background-image: url("../img/game/god/dust-5.png");
+god.dust[level="5"] {
+	background-image: url("../img/game/god/dust/5.png");
 }
 
 /**
 * Forme d'oeuf
 **/
-god.egg-1 {
-	background-image: url("../img/game/god/egg-1.png");
+god.egg[level="1"] {
+	background-image: url("../img/game/god/egg/1.png");
 }
-god.egg-2 {
-	background-image: url("../img/game/god/egg-2.png");
+god.egg[level="2"] {
+	background-image: url("../img/game/god/egg/2.png");
 }
-god.egg-3 {
-	background-image: url("../img/game/god/egg-3.png");
+god.egg[level="3"] {
+	background-image: url("../img/game/god/egg/3.png");
 }

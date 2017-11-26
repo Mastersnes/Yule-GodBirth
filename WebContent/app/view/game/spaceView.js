@@ -1,6 +1,7 @@
 'use strict';
 define(["jquery", 
-        "app/utils/utils"], function($, Utils){
+        "app/utils/utils",
+        "app/view/game/godView"], function($, Utils, GodView){
     return function(parent){
         this.init = function(parent) {
             this.maxFront = 3;
@@ -8,17 +9,23 @@ define(["jquery",
             this.parent = parent;
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
-            
-            this.godView = new GodView(this);
+        };
+        
+        this.render = function() {
+        	this.godView = new GodView(this);
         };
         
         this.loop = function() {
-            var mustChangeFront = Utils.rand(0, 10) == 5;
+            var mustChangeFront = Utils.rand(0, 100) == 50;
             if (mustChangeFront) {
                 //On change le front
                 var front = Utils.rand(1, this.maxFront+1);
-                $();
+                $("space.front").attr("type", front);
             }
+        };
+        
+        this.makeEvents = function() {
+        	this.godView.makeEvents();
         };
         
         this.init(parent);

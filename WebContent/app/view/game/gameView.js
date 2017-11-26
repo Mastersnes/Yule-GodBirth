@@ -35,6 +35,8 @@ function($, _, Utils, page, Scene, SpaceView) {
 			};
 			this.el.html(template(templateData));
 			
+			this.spaceView.render();
+			
 			var save;
 			if (code) save = JSON.parse(Utils.decode(code));
 			else if (load) {
@@ -61,7 +63,6 @@ function($, _, Utils, page, Scene, SpaceView) {
         this.makeEvents = function() {
             var that = this;
             
-            this.scene.makeEvents();
             this.spaceView.makeEvents();
         };
 		

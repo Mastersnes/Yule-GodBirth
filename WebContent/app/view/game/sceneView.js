@@ -7,9 +7,8 @@ define(["jquery",
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
             
-            this.elementView = new ElementView(this);
             var that = this;
-            $( window ).resize(function() {
+            $(window).resize(function() {
                 that.resize();
             });
         };

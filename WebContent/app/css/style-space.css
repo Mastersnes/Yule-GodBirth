@@ -3,20 +3,28 @@
 * Space
 **/
 space {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 space.back {
-	background-image: url("../img/game/space-back.jpg");
+	z-index: 0;
+	background-image: url("../img/game/space/back.jpg");
 }
-space.front1 {
-	background-image: url("../img/game/space-front1.png");
+space.front {
+	z-index: 10;
+	pointer-events: none;
 }
-space.front2 {
-	background-image: url("../img/game/space-front2.png");
+space.front[type="1"] {
+	background-image: url("../img/game/space/front1.png");
 }
-space.front3 {
-	background-image: url("../img/game/space-front3.png");
+space.front[type="2"] {
+	background-image: url("../img/game/space/front2.png");
+}
+space.front[type="3"] {
+	background-image: url("../img/game/space/front3.png");
 }
