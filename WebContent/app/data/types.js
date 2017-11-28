@@ -4,15 +4,18 @@ define(["jquery"], function($){
 			"dust" : {
 				name : "dust",
 			    nbr : 5,
-				next : "egg"
+				next : "egg",
+				text : ["cinematique-dust1", "", "cinematique-dust2"]
 			},
 			"egg" : {
 			    name : "egg",
 			    nbr : 3,
-				next : "baby"
+				next : "baby",
+				text : ["cinematique-egg1", "", "cinematique-egg2"]
 			},
             "baby" : {
-                name : "baby"
+                name : "baby",
+                text : ["cinematique-baby1"]
             }
 	};
 	

@@ -8,6 +8,7 @@ define(["jquery",
             
             this.parent = parent;
             this.Textes = parent.Textes;
+            this.textView = parent.textView;
             this.mediatheque = parent.mediatheque;
         };
         

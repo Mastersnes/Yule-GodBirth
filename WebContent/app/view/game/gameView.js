@@ -4,14 +4,16 @@ define(["jquery",
         "app/utils/utils",
         "text!app/template/game/game.html",
         "app/view/game/sceneView",
-        "app/view/game/spaceView"],
-function($, _, Utils, page, Scene, SpaceView) {
+        "app/view/game/spaceView",
+        "app/view/game/textView"],
+function($, _, Utils, page, Scene, SpaceView, TextView) {
 	'use strict';
 
 	return function(parent, load, code, Textes, Mediatheque) {
 		this.init = function(parent, load, code, Textes, Mediatheque) {
 		    this.el = $("#app");
 			this.Textes = Textes;
+			this.textView = new TextView(this);
 			this.mediatheque = Mediatheque;
 			this.kongregateUtils = parent.kongregateUtils;
 			

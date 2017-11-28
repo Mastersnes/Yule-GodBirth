@@ -6,10 +6,10 @@ define(["jquery",
         this.init = function(parent) {
             this.parent = parent;
             this.Textes = parent.Textes;
+            this.textView = parent.textView;
             this.mediatheque = parent.mediatheque;
             
-            this.type = GodType.get("dust");
-            this.level = 1;
+            this.setType("dust");
             
             this.render();
         };
@@ -21,6 +21,12 @@ define(["jquery",
         
         this.loop = function() {
         };
+        
+        this.setType = function(type) {
+            this.type = GodType.get(type);
+            this.level = 1;
+            this.textView.show(this.type.text);
+        };
 
         this.makeEvents = function() {
         	var that = this;
@@ -30,16 +36,13 @@ define(["jquery",
             		that.level++;
             		
             		if (that.level > that.type.nbr) {
-            		    if (that.type.next) {
-            		        that.type = GodType.get(that.type.next);
-            		        $("god").attr("class", that.type.name);
-            		        that.level = 1;
-            		    }else {
-            		        that.level = that.type.nbr;
-            		    }
+            		    if (that.type.next) that.setType(that.type.next);
+            		    else that.level = that.type.nbr;
+            		}else {
+            		    that.textView.next();
             		}
             		
-            		$("god").attr("level", that.level);
+            		that.render();
         		}
         	});
         };
