@@ -2,13 +2,18 @@
 define(["jquery"], function($){
 	var data = {
 			"dust" : {
-				nbr : 5,
+				name : "dust",
+			    nbr : 5,
 				next : "egg"
 			},
 			"egg" : {
-				nbr : 3,
+			    name : "egg",
+			    nbr : 3,
 				next : "baby"
-			}
+			},
+            "baby" : {
+                name : "baby"
+            }
 	};
 	
 	return {

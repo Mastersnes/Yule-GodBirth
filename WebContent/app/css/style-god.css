@@ -48,3 +48,10 @@ god.egg[level="2"] {
 god.egg[level="3"] {
 	background-image: url("../img/game/god/egg/3.png");
 }
+
+/**
+* Forme Bebe
+**/
+god.baby[level="1"] {
+    background-image: url("../img/game/god/baby/1.png");
+}
