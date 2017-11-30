@@ -1,0 +1,17 @@
+<div class="popup popupEvent">
+    <mask></mask>
+    <div class="content">
+        <div class="texte"><%= data.text.get(data.event.text) %></div>
+        <ul class="choix texte popup-menu">
+            <%
+                var actions = data.event.actions;
+                for (var actionIndex in actions) {
+                var action = actions[actionIndex];
+            %>
+                <li index="<%=actionIndex%>"><%=data.text.get(action.name)%></li>
+            <%
+                }
+            %>
+        </ul>
+    </div>
+</div>

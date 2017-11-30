@@ -15,14 +15,12 @@ function($, _, page) {
 		
 		this.show = function(ids, callback) {
 		    this.ids = ids;
+		    console.log("Textes : ", this.ids);
 			this.callback = callback;
 			this.current = -1;
-			console.log("show : ", this.ids);
 			
 			$("#popupText").show();
 			this.visible = true;
-			
-			this.next();
 		};
 		
 		this.next = function() {
@@ -30,11 +28,11 @@ function($, _, page) {
 		    
 		    this.current ++;
 			if (this.current < this.ids.length) {
-			    console.log("showText : ", this.id, this.current);
 			    var id = this.ids[this.current];
+			    console.log("showText : ", this.current, id);
 				var value = this.Textes.get(id);
 				if (value) $("#popupText.text").html(value);
-				else $("#popupText.text").html(id);
+				else $("#popupText.text").empty();
 			}else {
 			    console.log("hideText");
 			    this.visible = false;

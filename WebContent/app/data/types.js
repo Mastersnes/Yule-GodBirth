@@ -15,7 +15,12 @@ define(["jquery"], function($){
 			},
             "baby" : {
                 name : "baby",
-                text : ["cinematique-baby1"]
+                text : ["cinematique-baby1"],
+                events : {
+                    typeEvents : ["baby-event1", "baby-event2"],
+                    newEvents : ["general-event1", "general-event2"]
+                    
+                }
             }
 	};
 	

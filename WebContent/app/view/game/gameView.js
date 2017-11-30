@@ -3,25 +3,33 @@ define(["jquery",
         'underscore',
         "app/utils/utils",
         "text!app/template/game/game.html",
-        "app/view/game/sceneView",
-        "app/view/game/spaceView",
-        "app/view/game/textView"],
-function($, _, Utils, page, Scene, SpaceView, TextView) {
+        "app/manager/sceneManager",
+        "app/manager/textManager",
+        "app/manager/eventManager",
+        "app/manager/pointManager",
+        "app/view/game/spaceView"],
+function($, _, Utils, page, SceneManager, TextManager, EventManager, PointManager, SpaceView) {
 	'use strict';
 
 	return function(parent, load, code, Textes, Mediatheque) {
 		this.init = function(parent, load, code, Textes, Mediatheque) {
 		    this.el = $("#app");
 			this.Textes = Textes;
-			this.textView = new TextView(this);
 			this.mediatheque = Mediatheque;
 			this.kongregateUtils = parent.kongregateUtils;
-			
-			this.scene = new Scene(this);
-			this.spaceView = new SpaceView(this);
+			this.pause = false;
 			
 			this.render(load, code);
 			
+			// Manager
+            this.scene = new SceneManager(this);
+            this.textManager = new TextManager(this);
+            this.eventManager = new EventManager(this);
+            this.pointManager = new PointManager(this);
+            
+            this.spaceView = new SpaceView(this);
+            this.spaceView.render();
+
 			if (!this.alreadyLoop) {
 			    this.alreadyLoop = true;
                 this.makeEvents();
@@ -36,8 +44,6 @@ function($, _, Utils, page, Scene, SpaceView, TextView) {
 					text : this.Textes
 			};
 			this.el.html(template(templateData));
-			
-			this.spaceView.render();
 			
 			var save;
 			if (code) save = JSON.parse(Utils.decode(code));
@@ -54,8 +60,10 @@ function($, _, Utils, page, Scene, SpaceView, TextView) {
 		};
 		
 		this.loop = function() {
-            this.spaceView.loop();
-            
+            if (!this.pause) {
+    		    this.spaceView.loop();
+                this.eventManager.loop();
+            }
             var that = this;
             setTimeout(function() {
                 that.loop();

@@ -119,8 +119,10 @@ define(["jquery"], function($){
 				this.local = navigator.language || navigator.userLanguage;
 			}
 			var text = $.extend(true, {}, data[key]);
-			if (!text[this.local]) return text.en;
-			return text[this.local];
+			
+			if (text[this.local]) return text[this.local]; 
+			else if (text.en) return text.en;
+			else return key;
 		}
 	};
 });

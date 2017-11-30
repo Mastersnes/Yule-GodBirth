@@ -102,11 +102,6 @@ ul.popup-menu > li:hover {
 	background: -o-linear-gradient(top, #f5f5f5 5%, #555 100%);
 }
 
-.popup .close {
-	top: -1.5vh;
-    right: -0.5vw;
-}
-
 .close {
 	width: 30px !important; height: 30px !important;
 	position: absolute !important;

@@ -6,12 +6,13 @@ define(["jquery",
         this.init = function(parent) {
             this.parent = parent;
             this.Textes = parent.Textes;
-            this.textView = parent.textView;
             this.mediatheque = parent.mediatheque;
             
-            this.setType("dust");
+            //Manager
+            this.textManager = parent.textManager;
+            this.eventManager = parent.eventManager;
             
-            this.render();
+            this.setType("dust", true);
         };
         
         this.render = function() {
@@ -20,31 +21,36 @@ define(["jquery",
         };
         
         this.loop = function() {
+            this.render();
         };
         
-        this.setType = function(type) {
+        this.setType = function(type, first) {
             this.type = GodType.get(type);
             this.level = 1;
-            this.textView.show(this.type.text);
+            this.eventManager.setTypeEvents(this.type.events);
+            this.textManager.show(this.type.text);
+            
+            this.textManager.next();
         };
 
         this.makeEvents = function() {
         	var that = this;
             $("god").click(function() {
-        		that.level = parseInt($("god").attr("level"));
-        		if (that.type.nbr) {
-            		that.level++;
-            		
-            		if (that.level > that.type.nbr) {
-            		    if (that.type.next) that.setType(that.type.next);
-            		    else that.level = that.type.nbr;
-            		}else {
-            		    that.textView.next();
-            		}
-            		
-            		that.render();
-        		}
+                that.textManager.next();
+                that.checkLevel();
         	});
+        };
+        
+        this.checkLevel = function() {
+            this.level = parseInt($("god").attr("level"));
+            if (this.type.nbr) {
+                this.level++;
+                
+                if (this.level > this.type.nbr) {
+                    if (this.type.next) this.setType(this.type.next);
+                    else this.level = this.type.nbr;
+                }
+            }
         };
         
         this.init(parent);

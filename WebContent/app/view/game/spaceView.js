@@ -8,21 +8,28 @@ define(["jquery",
             
             this.parent = parent;
             this.Textes = parent.Textes;
-            this.textView = parent.textView;
             this.mediatheque = parent.mediatheque;
+
+            // Manager
+            this.textManager = parent.textManager;
+            this.eventManager = parent.eventManager;
+            
+            this.godView = new GodView(this);
         };
         
         this.render = function() {
-        	this.godView = new GodView(this);
+        	this.godView.render();
         };
         
         this.loop = function() {
-            var mustChangeFront = Utils.rand(0, 100) == 50;
+            var mustChangeFront = Utils.rand(0, 100) == 0;
             if (mustChangeFront) {
                 //On change le front
                 var front = Utils.rand(1, this.maxFront+1);
                 $("space.front").attr("type", front);
             }
+            
+            this.godView.loop();
         };
         
         this.makeEvents = function() {
