@@ -11,6 +11,7 @@ define(["jquery",
             //Manager
             this.textManager = parent.textManager;
             this.eventManager = parent.eventManager;
+            this.pointManager = parent.pointManager;
             
             this.setType("dust", true);
         };
@@ -37,6 +38,7 @@ define(["jquery",
         	var that = this;
             $("god").click(function() {
                 that.textManager.next();
+                that.pointManager.click();
                 that.checkLevel();
         	});
         };

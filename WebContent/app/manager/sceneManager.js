@@ -11,6 +11,8 @@ define(["jquery",
             $(window).resize(function() {
                 that.resize();
             });
+            
+            this.resize();
         };
         
         this.resize = function() {

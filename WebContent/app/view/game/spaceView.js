@@ -13,6 +13,7 @@ define(["jquery",
             // Manager
             this.textManager = parent.textManager;
             this.eventManager = parent.eventManager;
+            this.pointManager = parent.pointManager;
             
             this.godView = new GodView(this);
         };

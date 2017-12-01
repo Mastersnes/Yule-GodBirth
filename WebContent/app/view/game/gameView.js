@@ -63,6 +63,7 @@ function($, _, Utils, page, SceneManager, TextManager, EventManager, PointManage
             if (!this.pause) {
     		    this.spaceView.loop();
                 this.eventManager.loop();
+                this.pointManager.loop();
             }
             var that = this;
             setTimeout(function() {

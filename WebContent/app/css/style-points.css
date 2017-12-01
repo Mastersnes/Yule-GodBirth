@@ -1,0 +1,46 @@
+/**
+* Points
+**/
+.points {
+	z-index : 100;
+    position : absolute;
+    display: inline-block;
+    left: 0; top: 0;
+    
+    width: 100%;
+    height: 3%;
+}
+.points .img {
+	width: 8%; height: 100%;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.points .text, .points .img {
+	display: inline-block;
+}
+.points .text {
+    color: #f1efeb;
+}
+
+
+croyance {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+croyance .img {
+	background-image: url("../img/game/god/baby/1.png");
+}
+
+illumination {
+    position: relative;
+    display: none;
+    float: right;
+    text-align: right;
+    width: 50%;
+    height: 100%;
+}
+illumination .img {
+	background-image: url("../img/game/god/egg/1.png");
+}
