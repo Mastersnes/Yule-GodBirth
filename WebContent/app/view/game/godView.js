@@ -13,6 +13,8 @@ define(["jquery",
             this.eventManager = parent.eventManager;
             this.pointManager = parent.pointManager;
             
+            this.gameMenuView = parent.gameMenuView;
+            
             this.setType("dust", true);
         };
         
@@ -40,6 +42,7 @@ define(["jquery",
                 that.textManager.next();
                 that.pointManager.click();
                 that.checkLevel();
+                that.render();
         	});
         };
         
@@ -52,6 +55,11 @@ define(["jquery",
                     if (this.type.next) this.setType(this.type.next);
                     else this.level = this.type.nbr;
                 }
+            }
+            
+            if (this.type.name == "baby") {
+            	this.gameMenuView.unlockOnglet("god");
+            	$(".gameMenu").show();
             }
         };
         

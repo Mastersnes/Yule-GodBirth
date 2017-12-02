@@ -7,8 +7,11 @@ define(["jquery",
         "app/manager/textManager",
         "app/manager/eventManager",
         "app/manager/pointManager",
-        "app/view/game/spaceView"],
-function($, _, Utils, page, SceneManager, TextManager, EventManager, PointManager, SpaceView) {
+        "app/view/game/spaceView",
+        "app/view/game/gameMenuView"],
+function($, _, Utils, page, 
+		SceneManager, TextManager, EventManager, PointManager, 
+		SpaceView, GameMenuView) {
 	'use strict';
 
 	return function(parent, load, code, Textes, Mediatheque) {
@@ -26,9 +29,13 @@ function($, _, Utils, page, SceneManager, TextManager, EventManager, PointManage
             this.textManager = new TextManager(this);
             this.eventManager = new EventManager(this);
             this.pointManager = new PointManager(this);
+
+            this.gameMenuView = new GameMenuView(this);
+            this.gameMenuView.render();
             
             this.spaceView = new SpaceView(this);
             this.spaceView.render();
+
 
 			if (!this.alreadyLoop) {
 			    this.alreadyLoop = true;
@@ -68,7 +75,7 @@ function($, _, Utils, page, SceneManager, TextManager, EventManager, PointManage
             var that = this;
             setTimeout(function() {
                 that.loop();
-            }, 30);
+            }, 1000);
         };
         
         this.makeEvents = function() {

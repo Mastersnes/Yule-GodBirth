@@ -30,10 +30,10 @@ function($, _, Utils) {
 		
 		this.render = function() {
 		    $("croyance .text").html(this.points.croyance);
-		    $("croyance .img").attr("title", this.points.croyance);
+		    $("croyance .img").attr("title", this.Textes.get("croyance") + this.points.croyance);
 		    
 		    $("illumination .text").html(this.points.illumination);
-		    $("illumination .img").attr("title", this.points.illumination);
+		    $("illumination .img").attr("title", this.Textes.get("illumination") + this.points.illumination);
 		    if (this.points.illumination > 0) {
 		        $("illumination").show();
 		    }

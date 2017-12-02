@@ -15,6 +15,8 @@ define(["jquery",
             this.eventManager = parent.eventManager;
             this.pointManager = parent.pointManager;
             
+            this.gameMenuView = parent.gameMenuView;
+            
             this.godView = new GodView(this);
         };
         
@@ -23,7 +25,7 @@ define(["jquery",
         };
         
         this.loop = function() {
-            var mustChangeFront = Utils.rand(0, 100) == 0;
+            var mustChangeFront = Utils.rand(0, 1) == 0;
             if (mustChangeFront) {
                 //On change le front
                 var front = Utils.rand(1, this.maxFront+1);

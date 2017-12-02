@@ -105,6 +105,18 @@ define(["jquery"], function($){
 		"copyright-donot" : {
 			fr : "Merci de ne pas la modifier ou la partager de fa&ccedil;on commerciale sans notre accord.",
 			en : "Please don't modify and share it commercially without our consent."
+		},
+		
+		/**
+		 * Jeu
+		 */
+		"croyance" : {
+			fr : "Croyance :",
+			en : "Croyance :"
+		},
+		"illumination" : {
+			fr : "Illumination :",
+			en : "Illumination :"
 		}
 	};
 	
