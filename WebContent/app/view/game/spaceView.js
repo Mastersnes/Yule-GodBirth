@@ -15,7 +15,7 @@ define(["jquery",
             this.eventManager = parent.eventManager;
             this.pointManager = parent.pointManager;
             
-            this.gameMenuView = parent.gameMenuView;
+            this.ameliorationView = parent.ameliorationView;
             
             this.godView = new GodView(this);
         };

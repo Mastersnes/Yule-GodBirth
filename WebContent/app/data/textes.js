@@ -111,12 +111,32 @@ define(["jquery"], function($){
 		 * Jeu
 		 */
 		"croyance" : {
-			fr : "Croyance :",
-			en : "Croyance :"
+			fr : "Croyance : ",
+			en : "Croyance : "
 		},
 		"illumination" : {
-			fr : "Illumination :",
-			en : "Illumination :"
+			fr : "Illumination : ",
+			en : "Illumination : "
+		},
+		"level" : {
+			fr : "Level : ",
+			en : "Level : "
+		},
+		"prix" : {
+			fr : "Prix : ",
+			en : "Prix : "
+		},
+		"gain" : {
+			fr : "Gain : ",
+			en : "Gain : "
+		},
+		"parClick" : {
+			fr : "/click",
+			en : "/click"
+		},
+		"parSec" : {
+			fr : "/sec",
+			en : "/sec"
 		}
 	};
 	

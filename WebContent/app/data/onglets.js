@@ -3,14 +3,7 @@ define(["jquery"], function($){
 	var data = {
 			"god" : {
 				name : "god",
-			    items : [
-			        {
-			        	name : "planete",
-			        	prix : function (level) {
-			        		return level;
-			        	}
-			        }
-			    ]
+			    items : ["planete","test","test2"]
 			}
 	};
 	

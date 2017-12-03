@@ -13,7 +13,7 @@ define(["jquery",
             this.eventManager = parent.eventManager;
             this.pointManager = parent.pointManager;
             
-            this.gameMenuView = parent.gameMenuView;
+            this.ameliorationView = parent.ameliorationView;
             
             this.setType("dust", true);
         };
@@ -52,14 +52,18 @@ define(["jquery",
                 this.level++;
                 
                 if (this.level > this.type.nbr) {
-                    if (this.type.next) this.setType(this.type.next);
+                	/**
+                	 * Lorsqu'on affiche pour la premiere fois le dieu enfant
+                	 * on affiche le menu
+                	 */
+                	if (this.type.next == "baby") {
+                    	this.ameliorationView.unlockOnglet("god");
+                    	$(".ameliorations").show();
+                    }
+                	
+                	if (this.type.next) this.setType(this.type.next);
                     else this.level = this.type.nbr;
                 }
-            }
-            
-            if (this.type.name == "baby") {
-            	this.gameMenuView.unlockOnglet("god");
-            	$(".gameMenu").show();
             }
         };
         

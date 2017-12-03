@@ -8,10 +8,10 @@ define(["jquery",
         "app/manager/eventManager",
         "app/manager/pointManager",
         "app/view/game/spaceView",
-        "app/view/game/gameMenuView"],
+        "app/view/game/ameliorationView"],
 function($, _, Utils, page, 
 		SceneManager, TextManager, EventManager, PointManager, 
-		SpaceView, GameMenuView) {
+		SpaceView, AmeliorationView) {
 	'use strict';
 
 	return function(parent, load, code, Textes, Mediatheque) {
@@ -30,8 +30,8 @@ function($, _, Utils, page,
             this.eventManager = new EventManager(this);
             this.pointManager = new PointManager(this);
 
-            this.gameMenuView = new GameMenuView(this);
-            this.gameMenuView.render();
+            this.ameliorationView = new AmeliorationView(this);
+            this.ameliorationView.render();
             
             this.spaceView = new SpaceView(this);
             this.spaceView.render();
@@ -82,6 +82,13 @@ function($, _, Utils, page,
             var that = this;
             
             this.spaceView.makeEvents();
+            
+            $(".text").click(function() {
+            	return true;
+            });
+            $(".text").bind('selectstart', function(){
+            	return false;
+            });
         };
 		
 		this.init(parent, load, code, Textes, Mediatheque);

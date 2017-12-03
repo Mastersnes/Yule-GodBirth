@@ -22,9 +22,8 @@ function($, _, Utils, page, Events) {
 		this.loop = function() {
 		    var totalEvents = this.typeEvents.concat(this.generalEvents);
 		    if (totalEvents == 0) return;
-		    console.log("events : ", totalEvents);
 		    
-		    var rand = Utils.rand(0, 100);
+		    var rand = Utils.rand(0, 1000);
 		    if (rand == 0) {
 		        var randIndex = Utils.rand(0, totalEvents.length);
 		        var randEvent = Events.get(totalEvents[randIndex]);
@@ -35,13 +34,11 @@ function($, _, Utils, page, Events) {
 		            this.show();
 		        }
 		    }
-		}
+		};
 		
 		this.show = function() {
 		    if (!this.currentEvent) return;
 		    this.parent.pause = true;
-		    
-		    console.log("show events : ", this.currentEvent);
 		    
 		    var that = this;
 		    
