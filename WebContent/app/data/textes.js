@@ -122,6 +122,10 @@ define(["jquery"], function($){
 			fr : "Level : ",
 			en : "Level : "
 		},
+		"passageLevel" : {
+		    fr : "Passage au level : ",
+		    en : "Passage au level : "
+		},
 		"prix" : {
 			fr : "Prix : ",
 			en : "Prix : "

@@ -60,45 +60,84 @@ function($, _, Utils, page, Onglets, Items) {
 			
 			itemDom.html(this.Textes.get(item.name));
 			this.el.find("content").append(itemDom);
-			
-//			this.refreshItem(itemId);
 		};
 		
-		this.refreshItem = function(itemId) {
+		this.showTitle = function(itemId) {
 			var item = Items.get(itemId);
 			
-			console.log("Item : ", item);
-			
-			var title = this.Textes.get(item.name) + "\n";
-			title += this.Textes.get("level") + item.level + "\n";
+			this.el.find(".description #nom").html(this.Textes.get(item.name));
+			this.el.find(".description #level").html(item.level);
 
-			var prix = item.prix();
-			title += this.Textes.get("prix") + "\n";
-			if (prix.croyance) title += this.Textes.get("croyance") + prix.croyance + "\n";
-			if (prix.illumination) title += this.Textes.get("illumination") + prix.illumination + "\n";
+			this.el.find(".description #level-suivant").html(item.level+1);
 			
-			var gain = item.gain();
-			console.log(gain);
-			title += this.Textes.get("gain") + "\n";
-			if (gain.click.croyance || gain.loop.croyance) {
-				title += this.Textes.get("croyance");
-				if (gain.click.croyance) title += "+" + gain.click.croyance + this.Textes.get("parClick") + "\n";
-				if (gain.loop.croyance) title += "+" + gain.click.croyance + this.Textes.get("parSec") + "\n";
-			}
-			if (gain.click.illumination || gain.loop.illumination) {
-				title += this.Textes.get("illumination");
-				if (gain.click.illumination) title += "+" + gain.click.illumination + this.Textes.get("parClick") + "\n";
-				if (gain.loop.illumination) title += "+" + gain.click.illumination + this.Textes.get("parSec") + "\n";
-			}
-			itemDom.attr("title", title);
+			/**
+			 * Gain CURRENT LEVEL
+			 */
+			var gainCurrent = item.gain();
+            this.el.find(".description #croyance-click span").html(gainCurrent.click.croyance);
+            if (gainCurrent.click.croyance) this.el.find(".description #croyance-click").show();
+            else this.el.find(".description #croyance-click").hide();
+            
+            this.el.find(".description #illumination-click span").html(gainCurrent.click.illumination);
+            if (gainCurrent.click.illumination) this.el.find(".description #illumination-click").show();
+            else this.el.find(".description #illumination-click").hide();
+            
+            this.el.find(".description #croyance-loop span").html(gainCurrent.loop.croyance);
+            if (gainCurrent.loop.croyance) this.el.find(".description #croyance-loop").show();
+            else this.el.find(".description #croyance-loop").hide();
+            
+            this.el.find(".description #illumination-loop span").html(gainCurrent.loop.illumination);
+            if (gainCurrent.loop.illumination) this.el.find(".description #illumination-loop").show();
+            else this.el.find(".description #illumination-loop").hide();
+            
+			/**
+			 * PRIX NEXT LEVEL
+			 */
+			var prix = item.prix();
+			
+			this.el.find(".description #croyance-prix span").html(prix.croyance);
+			if (prix.croyance) this.el.find(".description #croyance-prix").show();
+			else this.el.find(".description #croyance-prix").hide();
+
+			this.el.find(".description #illumination-prix span").html(prix.illumination);
+			if (prix.illumination) this.el.find(".description #illumination-prix").show();
+			else this.el.find(".description #illumination-prix").hide();
+			
+			/**
+			 * Gain NEXT LEVEL
+			 */
+			var gainNext = item.gain(item.level+1);
+			this.el.find(".description #croyance-click span").html(gainNext.click.croyance);
+            if (gainNext.click.croyance) this.el.find(".description #croyance-click").show();
+            else this.el.find(".description #croyance-click").hide();
+            
+            this.el.find(".description #illumination-click span").html(gainNext.click.illumination);
+            if (gainNext.click.illumination) this.el.find(".description #illumination-click").show();
+            else this.el.find(".description #illumination-click").hide();
+            
+            this.el.find(".description #croyance-loop span").html(gainNext.loop.croyance);
+            if (gainNext.loop.croyance) this.el.find(".description #croyance-loop").show();
+            else this.el.find(".description #croyance-loop").hide();
+            
+            this.el.find(".description #illumination-loop span").html(gainNext.loop.illumination);
+            if (gainNext.loop.illumination) this.el.find(".description #illumination-loop").show();
+            else this.el.find(".description #illumination-loop").hide();
+            
+            this.el.find(".description").show();
 		};
         
         this.makeEvents = function() {
             var that = this;
             
-            $("item").off("click");
             $("item").on("click", function() {
             	alert("click");
+            });
+
+            $("item").hover(function() {
+                var itemId = $(this).attr("id");
+                that.showTitle(itemId);
+            }, function() {
+                that.el.find(".description").hide();
             });
         };
 		

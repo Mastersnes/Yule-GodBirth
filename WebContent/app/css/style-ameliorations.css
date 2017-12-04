@@ -41,3 +41,30 @@
     -o-filter: grayscale(1);
     -ms-filter: grayscale(1);
 }
+
+/**
+* Description
+**/
+#ameliorations .description {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	left: 0; top: 0;
+	background-color: gray;
+	border: 2px solid black;
+	
+	padding: 1%;
+}
+#ameliorations .description .titre {
+	font-weight: bold;
+	font-size: 1em;
+}
+#ameliorations .description .text {
+	font-size: 0.8em;
+}
+#ameliorations .description .underline {
+	text-decoration: underline;
+}
+#ameliorations .description .escap {
+	margin-left: 3%;
+}

@@ -1,7 +1,7 @@
 'use strict';
 define(["jquery"], function($){
 	var data = {
-			"planete" : function() {
+			"planete" : new function() {
 				this.level = 0;
 				this.name = "planete";
 				
@@ -12,11 +12,11 @@ define(["jquery"], function($){
 	        			illumination : 0
 	        		};
 			    };
-			    this.gain = function () {
-	        		var that = this;
+			    this.gain = function (lvl) {
+	        		if (!lvl) lvl = this.level;
 	        		return {
 	        			click : {
-	        				croyance : that.level*5,
+	        				croyance : lvl*5,
 	        				illumination : 0
 	        			},
 	        			loop : {
@@ -26,7 +26,7 @@ define(["jquery"], function($){
 	        		};
 	        	};
 			},
-			"test" : function() {
+			"test" : new function() {
 				this.level = 0;
 				this.name = "test";
 				
@@ -37,21 +37,21 @@ define(["jquery"], function($){
 	        			illumination : 0
 	        		};
 			    };
-			    this.gain = function () {
-	        		var that = this;
+			    this.gain = function (lvl) {
+			        if (!lvl) lvl = this.level+1;
 	        		return {
 	        			click : {
-	        				croyance : 0,
+	        				croyance : lvl+5,
 	        				illumination : 0
 	        			},
 	        			loop : {
-	        				croyance : that.level,
+	        				croyance : lvl,
 	        				illumination : 0
 	        			}
 	        		};
 	        	};
 			},
-			"test2" : function() {
+			"test2" : new function() {
 				this.level = 0;
 				this.name = "test2";
 				
@@ -59,11 +59,11 @@ define(["jquery"], function($){
 					var that = this;
 					return {
 	        			croyance : that.level+30,
-	        			illumination : that.level
+	        			illumination : that.level+1
 	        		};
 			    };
-			    this.gain = function () {
-	        		var that = this;
+			    this.gain = function (lvl) {
+			        if (!lvl) lvl = this.level+1;
 	        		return {
 	        			click : {
 	        				croyance : 0,
@@ -71,7 +71,7 @@ define(["jquery"], function($){
 	        			},
 	        			loop : {
 	        				croyance : 0,
-	        				illumination : that.level
+	        				illumination : lvl
 	        			}
 	        		};
 	        	};
