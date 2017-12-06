@@ -136,9 +136,12 @@ function($, _, Utils, page, Onglets, Items) {
             $("item").hover(function() {
                 var itemId = $(this).attr("id");
                 that.showTitle(itemId);
+                
+                var x = $(this).position().left;
+                var y = $(this).offset().top - that.el.find(".description").height();
                 that.el.find(".description").css({
-                    left : 0,
-                    top : 0
+                    left : x,
+                    top : y
                 });
             }, function() {
                 that.el.find(".description").hide();
