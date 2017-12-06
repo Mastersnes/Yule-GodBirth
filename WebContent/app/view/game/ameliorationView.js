@@ -136,6 +136,10 @@ function($, _, Utils, page, Onglets, Items) {
             $("item").hover(function() {
                 var itemId = $(this).attr("id");
                 that.showTitle(itemId);
+                that.el.find(".description").css({
+                    left : 0,
+                    top : 0
+                });
             }, function() {
                 that.el.find(".description").hide();
             });
