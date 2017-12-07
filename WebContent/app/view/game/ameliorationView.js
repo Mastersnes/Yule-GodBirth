@@ -137,9 +137,10 @@ function($, _, Utils, page, Onglets, Items) {
                 var itemId = $(this).attr("id");
                 that.showTitle(itemId);
                 
-                var x = $(this).position().left;
-                var y = $(this).offset().top - that.el.find(".description").height();
+                var x = $(this).position().left + parseInt($(this).css('marginLeft'), 10);
+                var y = $(this).offset().top - that.el.find(".description").outerHeight();
                 that.el.find(".description").css({
+                    width : $(this).width(),
                     left : x,
                     top : y
                 });
