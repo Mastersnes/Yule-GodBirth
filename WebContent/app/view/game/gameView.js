@@ -70,12 +70,16 @@ function($, _, Utils, page,
             if (!this.pause) {
     		    this.spaceView.loop();
                 this.eventManager.loop();
-                this.pointManager.loop();
+                this.ameliorationView.loop(this);
             }
             var that = this;
             setTimeout(function() {
                 that.loop();
             }, 1000);
+        };
+        
+        this.click = function() {
+            this.ameliorationView.click(this);
         };
         
         this.makeEvents = function() {

@@ -125,12 +125,31 @@ function($, _, Utils, page, Onglets, Items) {
             
             this.el.find(".description").show();
 		};
+		
+		this.loop = function(game) {
+		    var listItem = Items.list();
+		    console.log("loop : ", listItem);
+		    for (var index in listItem) {
+		        var item = listItem[index];
+		        item.loop(game);
+		    }
+		};
+        
+        this.click = function(game) {
+            var listItem = Items.list();
+            for (var index in listItem) {
+                var item = listItem[index];
+                item.click(game);
+            }
+        };
         
         this.makeEvents = function() {
             var that = this;
             
             $("item").on("click", function() {
-            	alert("click");
+                var itemId = $(this).attr("id");
+                var item = Items.get(itemId);
+                item.level++;
             });
 
             $("item").hover(function() {

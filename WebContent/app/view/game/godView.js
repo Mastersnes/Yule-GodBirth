@@ -40,7 +40,7 @@ define(["jquery",
         	var that = this;
             $("god").click(function() {
                 that.textManager.next();
-                that.pointManager.click();
+                that.ameliorationView.click();
                 that.checkLevel();
                 that.render();
         	});

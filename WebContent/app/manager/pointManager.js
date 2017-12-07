@@ -16,16 +16,6 @@ function($, _, Utils) {
 			        croyance : 0,
 			        illumination : 0
 			};
-			this.increment = {
-			        croyance : {
-			            click : 1,
-			            loop : 0
-			        },
-			        illumination : {
-			            click : 0,
-			            loop : 0
-			        }
-			};
 		};
 		
 		this.render = function() {
@@ -39,20 +29,13 @@ function($, _, Utils) {
 		    }
 		};
 		
-		this.loop = function() {
-		    this.points.croyance += this.increment.croyance.loop;
-		    this.points.illumination += this.increment.illumination.loop;
+		this.addPoints = function(points) {
+		    this.points.croyance += points.croyance;
+		    this.points.illumination += points.illumination;
 		    
 		    this.render();
 		};
 		
-		this.click = function() {
-		    this.points.croyance += this.increment.croyance.click;
-		    this.points.illumination += this.increment.illumination.click;
-		    
-		    this.render();
-		};
-
 		this.init(parent);
 	};
 });

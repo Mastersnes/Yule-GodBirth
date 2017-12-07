@@ -25,6 +25,13 @@ define(["jquery"], function($){
 	        			}
 	        		};
 	        	};
+	        	
+	        	this.loop = function(game) {
+	        	    game.pointManager.addPoints(this.gain().loop);
+	        	};
+	        	this.click = function(game) {
+	        	    game.pointManager.addPoints(this.gain().click);
+	        	};
 			},
 			"test" : new function() {
 				this.level = 0;
@@ -50,6 +57,12 @@ define(["jquery"], function($){
 	        			}
 	        		};
 	        	};
+	        	
+	        	this.loop = function(game) {
+                };
+                this.click = function(game) {
+                    
+                };
 			},
 			"test2" : new function() {
 				this.level = 0;
@@ -75,6 +88,12 @@ define(["jquery"], function($){
 	        			}
 	        		};
 	        	};
+	        	
+	        	this.loop = function(game) {
+                };
+                this.click = function(game) {
+                    
+                };
 			}
 	};
 	
@@ -84,7 +103,9 @@ define(["jquery"], function($){
 		**/
 		get : function(key) {
 			return data[key];
-//			return $.extend(true, {}, data[key]);
+		},
+		list : function() {
+		    return data;
 		}
 	};
 });
