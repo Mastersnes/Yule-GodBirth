@@ -36,6 +36,16 @@ function($, _, Utils) {
 		    this.render();
 		};
 		
+		this.depenser = function(prix) {
+		    if (this.points.croyance >= prix.croyance && this.points.illumination >= prix.illumination) {
+		        this.points.croyance -= prix.croyance;
+		        this.points.illumination -= prix.illumination;
+		        this.render();
+		        return true;
+		    }
+		    return false;
+		};
+		
 		this.init(parent);
 	};
 });

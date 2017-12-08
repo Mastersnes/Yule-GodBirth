@@ -16,7 +16,7 @@ define(["jquery"], function($){
 	        		if (!lvl) lvl = this.level;
 	        		return {
 	        			click : {
-	        				croyance : lvl*5,
+	        				croyance : 1 + lvl*5,
 	        				illumination : 0
 	        			},
 	        			loop : {
@@ -24,13 +24,6 @@ define(["jquery"], function($){
 	        				illumination : 0
 	        			}
 	        		};
-	        	};
-	        	
-	        	this.loop = function(game) {
-	        	    game.pointManager.addPoints(this.gain().loop);
-	        	};
-	        	this.click = function(game) {
-	        	    game.pointManager.addPoints(this.gain().click);
 	        	};
 			},
 			"test" : new function() {
@@ -45,10 +38,10 @@ define(["jquery"], function($){
 	        		};
 			    };
 			    this.gain = function (lvl) {
-			        if (!lvl) lvl = this.level+1;
+			        if (!lvl) lvl = this.level;
 	        		return {
 	        			click : {
-	        				croyance : lvl+5,
+	        				croyance : lvl*10,
 	        				illumination : 0
 	        			},
 	        			loop : {
@@ -57,12 +50,6 @@ define(["jquery"], function($){
 	        			}
 	        		};
 	        	};
-	        	
-	        	this.loop = function(game) {
-                };
-                this.click = function(game) {
-                    
-                };
 			},
 			"test2" : new function() {
 				this.level = 0;
@@ -76,7 +63,7 @@ define(["jquery"], function($){
 	        		};
 			    };
 			    this.gain = function (lvl) {
-			        if (!lvl) lvl = this.level+1;
+			        if (!lvl) lvl = this.level;
 	        		return {
 	        			click : {
 	        				croyance : 0,
@@ -88,12 +75,6 @@ define(["jquery"], function($){
 	        			}
 	        		};
 	        	};
-	        	
-	        	this.loop = function(game) {
-                };
-                this.click = function(game) {
-                    
-                };
 			}
 	};
 	
