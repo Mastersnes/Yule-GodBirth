@@ -1,14 +1,14 @@
 'use strict';
 define(["jquery"], function($){
 	var data = {
-			"planete" : new function() {
-				this.level = 0;
-				this.name = "planete";
+			"cernunos" : new function() {
+				this.level = 1;
+				this.name = "cernunos";
 				
 				this.prix = function () {
 					var that = this;
 					return {
-	        			croyance : that.level+10,
+	        			croyance : that.level,
 	        			illumination : 0
 	        		};
 			    };
@@ -16,7 +16,7 @@ define(["jquery"], function($){
 	        		if (!lvl) lvl = this.level;
 	        		return {
 	        			click : {
-	        				croyance : 1 + lvl*5,
+	        				croyance : lvl,
 	        				illumination : 0
 	        			},
 	        			loop : {
@@ -26,22 +26,22 @@ define(["jquery"], function($){
 	        		};
 	        	};
 			},
-			"test" : new function() {
+			"gaia" : new function() {
 				this.level = 0;
-				this.name = "test";
+				this.name = "gaia";
 				
 				this.prix = function () {
 					var that = this;
 					return {
-	        			croyance : that.level+20,
+	        			croyance : (that.level+1)*100,
 	        			illumination : 0
 	        		};
 			    };
 			    this.gain = function (lvl) {
-			        if (!lvl) lvl = this.level;
+	        		if (!lvl) lvl = this.level;
 	        		return {
 	        			click : {
-	        				croyance : lvl*10,
+	        				croyance : 0,
 	        				illumination : 0
 	        			},
 	        			loop : {
@@ -50,16 +50,19 @@ define(["jquery"], function($){
 	        			}
 	        		};
 	        	};
+	        	this.unlock = function(ameliorations) {
+	        		ameliorations.unlockOnglet("gaia");
+	        	};
 			},
-			"test2" : new function() {
+			"hecate" : new function() {
 				this.level = 0;
-				this.name = "test2";
+				this.name = "hecate";
 				
 				this.prix = function () {
 					var that = this;
 					return {
-	        			croyance : that.level+30,
-	        			illumination : that.level+1
+	        			croyance : (that.level+1)*10,
+	        			illumination : 0
 	        		};
 			    };
 			    this.gain = function (lvl) {
@@ -71,7 +74,82 @@ define(["jquery"], function($){
 	        			},
 	        			loop : {
 	        				croyance : 0,
-	        				illumination : lvl
+	        				illumination : 0
+	        			}
+	        		};
+	        	};
+			},
+			"selene" : new function() {
+				this.level = 0;
+				this.name = "selene";
+				
+				this.prix = function () {
+					var that = this;
+					return {
+	        			croyance : (that.level+1)*10,
+	        			illumination : 0
+	        		};
+			    };
+			    this.gain = function (lvl) {
+			        if (!lvl) lvl = this.level;
+	        		return {
+	        			click : {
+	        				croyance : 0,
+	        				illumination : 0
+	        			},
+	        			loop : {
+	        				croyance : 0,
+	        				illumination : 0
+	        			}
+	        		};
+	        	};
+			},
+			"gaia-1" : new function() {
+				this.level = 0;
+				this.name = "gaia-1";
+				
+				this.prix = function () {
+					var that = this;
+					return {
+	        			croyance : (that.level+1)*10,
+	        			illumination : 0
+	        		};
+			    };
+			    this.gain = function (lvl) {
+			        if (!lvl) lvl = this.level;
+	        		return {
+	        			click : {
+	        				croyance : 0,
+	        				illumination : 0
+	        			},
+	        			loop : {
+	        				croyance : 0,
+	        				illumination : 0
+	        			}
+	        		};
+	        	};
+			},
+			"gaia-2" : new function() {
+				this.level = 0;
+				this.name = "gaia-2";
+				
+				this.prix = function () {
+					var that = this;
+					return {
+	        			croyance : (that.level+1)*10,
+	        			illumination : 0
+	        		};
+			    };
+			    this.gain = function (lvl) {
+			        if (!lvl) lvl = this.level;
+	        		return {
+	        			click : {
+	        				croyance : 0,
+	        				illumination : 0
+	        			},
+	        			loop : {
+	        				croyance : 0,
+	        				illumination : 0
 	        			}
 	        		};
 	        	};

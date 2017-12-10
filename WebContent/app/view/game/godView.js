@@ -57,7 +57,7 @@ define(["jquery",
                 	 * on affiche le menu
                 	 */
                 	if (this.type.next == "baby") {
-                    	this.ameliorationView.unlockOnglet("god");
+                    	this.ameliorationView.unlockOnglet("god", true);
                     	$(".ameliorations").show();
                     }
                 	

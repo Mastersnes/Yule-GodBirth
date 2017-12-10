@@ -46,3 +46,9 @@ button:focus {outline:0;}
     max-width: 100%;
     word-wrap: break-word;
 }
+.preload {
+	position: absolute !important;
+	left: -9999px !important;
+	top : -9999px !important;
+	width: 0%  !important; height: 0%  !important;
+}

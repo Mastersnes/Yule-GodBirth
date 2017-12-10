@@ -27,8 +27,8 @@ function($, _, Utils, page, Onglets, Items) {
 			this.el.html(template(templateData));
 		};
 		
-		this.unlockOnglet = function(ongletId) {
-			if ($("#"+ongletId).length > 0) return;
+		this.unlockOnglet = function(ongletId, show) {
+			if ($("onglet#"+ongletId).length > 0) return;
 			
 			var ongletDom = $("<onglet></onglet>");
 			ongletDom.attr("class", "text " + ongletId);
@@ -37,10 +37,16 @@ function($, _, Utils, page, Onglets, Items) {
 			ongletDom.html(this.Textes.get(ongletId));
 			this.el.find("onglets").append(ongletDom);
 			
-			this.showItems(ongletId);
+			this.makeOngletEvents(ongletId);
+			
+			if (show) this.showItems(ongletId);
 		};
 		
 		this.showItems = function(ongletId) {
+			console.log("show : ", ongletId);
+			$("onglet.active").removeClass("active");
+			$("onglet#"+ongletId).addClass("active");
+			
 			this.el.find("content").empty();
 			
 			var onglet = Onglets.get(ongletId);
@@ -49,7 +55,7 @@ function($, _, Utils, page, Onglets, Items) {
 				this.addItem(itemId);
 			}
 			
-			this.makeEvents();
+			this.makeItemEvents();
 		};
 		
 		this.addItem = function(itemId) {
@@ -61,6 +67,7 @@ function($, _, Utils, page, Onglets, Items) {
 			itemDom.attr("level", item.level);
 			
 			itemDom.html(this.Textes.get(item.name));
+			
 			this.el.find("content").append(itemDom);
 		};
 		
@@ -133,7 +140,7 @@ function($, _, Utils, page, Onglets, Items) {
             }
         };
         
-        this.makeEvents = function() {
+        this.makeItemEvents = function() {
             var that = this;
             
             $("item").on("click", function() {
@@ -141,7 +148,8 @@ function($, _, Utils, page, Onglets, Items) {
                 var item = Items.get(itemId);
                 
                 if (that.pointManager.depenser(item.prix())) {
-                    item.level++;
+                    if (item.level == 0 && item.unlock) item.unlock(that);
+                	item.level++;
                     $(this).attr("level", item.level);
                     that.showDescription(itemId);
                 }else {
@@ -165,6 +173,15 @@ function($, _, Utils, page, Onglets, Items) {
                 });
             }, function() {
                 that.el.find(".description").hide();
+            });
+        };
+        
+        this.makeOngletEvents = function(ongletId) {
+        	var that = this;
+        	
+        	$("onglet#"+ongletId).on("click", function() {
+                var ongletId = $(this).attr("id");
+                that.showItems(ongletId);
             });
         };
 		

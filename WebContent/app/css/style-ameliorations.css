@@ -14,7 +14,11 @@
 	position: relative;
 	background-color: blue;
 	cursor: pointer;
-	font-size: 2em;
+	font-size: 3vh;
+	margin-right: 1%;
+}
+.ameliorations onglet.active {
+	background-color: red;
 }
 .ameliorations content {
 	display: block;

@@ -3,7 +3,11 @@ define(["jquery"], function($){
 	var data = {
 			"god" : {
 				name : "god",
-			    items : ["planete","test","test2"]
+			    items : ["cernunos", "gaia", "hecate", "selene"]
+			},
+			"gaia" : {
+				name : "gaia",
+			    items : ["gaia-1", "gaia-2"]
 			}
 	};
 	
