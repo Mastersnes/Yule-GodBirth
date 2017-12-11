@@ -107,21 +107,53 @@ function($, _, Utils, page, Onglets, Items) {
             /**
              * GAIN
              */
+            //Croyance
+            if (gain.click.croyance || gain.loop.croyance) dom.find("#croyance").show();
+            else dom.find("#croyance").hide();
+            
             dom.find("#croyance-click span").html(gain.click.croyance);
             if (gain.click.croyance) dom.find("#croyance-click").show();
             else dom.find("#croyance-click").hide();
-            
-            dom.find("#illumination-click span").html(gain.click.illumination);
-            if (gain.click.illumination) dom.find("#illumination-click").show();
-            else dom.find("#illumination-click").hide();
             
             dom.find("#croyance-loop span").html(gain.loop.croyance);
             if (gain.loop.croyance) dom.find("#croyance-loop").show();
             else dom.find("#croyance-loop").hide();
             
+            //Illumination
+            if (gain.click.illumination || gain.loop.illumination) dom.find("#illumination").show();
+            else dom.find("#illumination").hide();
+            
+            dom.find("#illumination-click span").html(gain.click.illumination);
+            if (gain.click.illumination) dom.find("#illumination-click").show();
+            else dom.find("#illumination-click").hide();
+            
             dom.find("#illumination-loop span").html(gain.loop.illumination);
             if (gain.loop.illumination) dom.find("#illumination-loop").show();
             else dom.find("#illumination-loop").hide();
+
+            //Bien
+            if (gain.click.bien || gain.loop.bien) dom.find("#bien").show();
+            else dom.find("#bien").hide();
+            
+            dom.find("#bien-click span").html(gain.click.bien);
+            if (gain.click.bien) dom.find("#bien-click").show();
+            else dom.find("#bien-click").hide();
+            
+            dom.find("#bien-loop span").html(gain.loop.bien);
+            if (gain.loop.bien) dom.find("#bien-loop").show();
+            else dom.find("#bien-loop").hide();
+
+            //Mal
+            if (gain.click.mal || gain.loop.mal) dom.find("#mal").show();
+            else dom.find("#mal").hide();
+            
+            dom.find("#mal-click span").html(gain.click.mal);
+            if (gain.click.mal) dom.find("#mal-click").show();
+            else dom.find("#mal-click").hide();
+            
+            dom.find("#mal-loop span").html(gain.loop.mal);
+            if (gain.loop.mal) dom.find("#mal-loop").show();
+            else dom.find("#mal-loop").hide();
 		};
 		
 		this.loop = function(game) {

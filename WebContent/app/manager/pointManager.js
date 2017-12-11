@@ -14,7 +14,9 @@ function($, _, Utils) {
 			
 			this.points = {
 			        croyance : 0,
-			        illumination : 0
+			        illumination : 0,
+			        bien : 0,
+			        mal : 0
 			};
 		};
 		
@@ -24,14 +26,22 @@ function($, _, Utils) {
 		    
 		    $("illumination .text").html(this.points.illumination);
 		    $("illumination .img").attr("title", this.Textes.get("illumination") + this.points.illumination);
-		    if (this.points.illumination > 0) {
-		        $("illumination").show();
-		    }
+		    if (this.points.illumination > 0) $("illumination").show();
+
+		    $("bien .text").html(this.points.bien);
+		    $("bien .img").attr("title", this.Textes.get("bien") + this.points.bien);
+		    if (this.points.bien > 0) $("bien").show();
+		    
+		    $("mal .text").html(this.points.mal);
+		    $("mal .img").attr("title", this.Textes.get("mal") + this.points.mal);
+		    if (this.points.mal > 0) $("mal").show();
 		};
 		
 		this.addPoints = function(points) {
 		    this.points.croyance += points.croyance;
 		    this.points.illumination += points.illumination;
+		    this.points.bien += points.bien;
+		    this.points.mal += points.mal;
 		    
 		    this.render();
 		};

@@ -118,6 +118,14 @@ define(["jquery"], function($){
 			fr : "Illumination : ",
 			en : "Illumination : "
 		},
+		"bien" : {
+		    fr : "Bien : ",
+		    en : "Bien : "
+		},
+		"mal" : {
+		    fr : "Mal : ",
+		    en : "Mal : "
+		},
 		"level" : {
 			fr : "Level : ",
 			en : "Level : "

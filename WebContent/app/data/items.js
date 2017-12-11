@@ -17,11 +17,15 @@ define(["jquery"], function($){
 	        		return {
 	        			click : {
 	        				croyance : lvl,
-	        				illumination : 0
+	        				illumination : 0,
+	        				bien : 0,
+	        				mal : 0
 	        			},
 	        			loop : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			}
 	        		};
 	        	};
@@ -42,11 +46,15 @@ define(["jquery"], function($){
 	        		return {
 	        			click : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			},
 	        			loop : {
 	        				croyance : lvl,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			}
 	        		};
 	        	};
@@ -70,11 +78,15 @@ define(["jquery"], function($){
 	        		return {
 	        			click : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			},
 	        			loop : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			}
 	        		};
 	        	};
@@ -95,11 +107,15 @@ define(["jquery"], function($){
 	        		return {
 	        			click : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			},
 	        			loop : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			}
 	        		};
 	        	};
@@ -120,11 +136,15 @@ define(["jquery"], function($){
 	        		return {
 	        			click : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			},
 	        			loop : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			}
 	        		};
 	        	};
@@ -145,11 +165,15 @@ define(["jquery"], function($){
 	        		return {
 	        			click : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			},
 	        			loop : {
 	        				croyance : 0,
-	        				illumination : 0
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			}
 	        		};
 	        	};

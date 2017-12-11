@@ -69,26 +69,3 @@ mal {
 mal .img {
 	background-image: url("../img/game/god/egg/1.png");
 }
-
-vie {
-	position: absolute;
-	display: none;
-	
-	width: 50%; height: 100%;
-	left: 0; top: 6vh;
-}
-vie .img {
-	background-image: url("../img/game/god/baby/1.png");
-}
-
-mort {
-    position: absolute;
-    display: none;
-    
-    text-align: right;
-    width: 50%; height: 100%;
-    right: 0; top: 6vh;
-}
-mort .img {
-	background-image: url("../img/game/god/egg/1.png");
-}
