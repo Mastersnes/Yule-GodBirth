@@ -19,28 +19,76 @@
 	display: inline-block;
 }
 .points .text {
+	font-size: 3vh;
     color: #f1efeb;
 }
 
 
 croyance {
-	position: relative;
-	float: left;
-	width: 50%;
-	height: 100%;
+	position: absolute;
+	display: block;
+	
+	width: 50%; height: 100%;
+	left: 0; top: 0;
 }
 croyance .img {
 	background-image: url("../img/game/god/baby/1.png");
 }
 
 illumination {
-    position: relative;
+    position: absolute;
     display: none;
-    float: right;
+    
     text-align: right;
-    width: 50%;
-    height: 100%;
+    width: 50%; height: 100%;
+    right: 0; top: 0;
 }
 illumination .img {
+	background-image: url("../img/game/god/egg/1.png");
+}
+
+bien {
+	position: absolute;
+	display: none;
+	
+	width: 50%; height: 100%;
+	left: 0; top: 3vh;
+}
+bien .img {
+	background-image: url("../img/game/god/baby/1.png");
+}
+
+mal {
+    position: absolute;
+    display: none;
+    
+    text-align: right;
+    width: 50%; height: 100%;
+    right: 0; top: 3vh;
+}
+mal .img {
+	background-image: url("../img/game/god/egg/1.png");
+}
+
+vie {
+	position: absolute;
+	display: none;
+	
+	width: 50%; height: 100%;
+	left: 0; top: 6vh;
+}
+vie .img {
+	background-image: url("../img/game/god/baby/1.png");
+}
+
+mort {
+    position: absolute;
+    display: none;
+    
+    text-align: right;
+    width: 50%; height: 100%;
+    right: 0; top: 6vh;
+}
+mort .img {
 	background-image: url("../img/game/god/egg/1.png");
 }
