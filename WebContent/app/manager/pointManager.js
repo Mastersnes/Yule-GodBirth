@@ -15,8 +15,8 @@ function($, _, Utils) {
 			this.points = {
 			        croyance : 0,
 			        illumination : 0,
-			        bien : 0,
-			        mal : 0
+			        bien : 100,
+			        mal : 100
 			};
 		};
 		
@@ -41,7 +41,9 @@ function($, _, Utils) {
 		    this.points.croyance += points.croyance;
 		    this.points.illumination += points.illumination;
 		    this.points.bien += points.bien;
+		    if (this.points.bien < 0) this.points.bien = 0;
 		    this.points.mal += points.mal;
+		    if (this.points.mal < 0) this.points.mal = 0;
 		    
 		    this.render();
 		};
@@ -54,6 +56,10 @@ function($, _, Utils) {
 		        return true;
 		    }
 		    return false;
+		};
+		
+		this.gameOver = function() {
+		    return (this.points.bien * this.points.mal) <= 0;
 		};
 		
 		this.init(parent);

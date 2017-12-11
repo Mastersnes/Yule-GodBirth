@@ -17,9 +17,9 @@ define(["jquery"], function($){
 	        		return {
 	        			click : {
 	        				croyance : lvl,
-	        				illumination : 0,
-	        				bien : 0,
-	        				mal : 0
+	        				illumination : lvl,
+	        				bien : lvl,
+	        				mal : -lvl
 	        			},
 	        			loop : {
 	        				croyance : 0,

@@ -8,10 +8,12 @@ define(["jquery",
         "app/manager/eventManager",
         "app/manager/pointManager",
         "app/view/game/spaceView",
-        "app/view/game/ameliorationView"],
+        "app/view/game/ameliorationView",
+        "app/view/game/endView"
+        ],
 function($, _, Utils, page, 
 		SceneManager, TextManager, EventManager, PointManager, 
-		SpaceView, AmeliorationView) {
+		SpaceView, AmeliorationView, EndView) {
 	'use strict';
 
 	return function(parent, load, code, Textes, Mediatheque) {
@@ -21,6 +23,7 @@ function($, _, Utils, page,
 			this.mediatheque = Mediatheque;
 			this.kongregateUtils = parent.kongregateUtils;
 			this.pause = false;
+			this.endGame = false;
 			
 			this.render(load, code);
 			
@@ -35,6 +38,8 @@ function($, _, Utils, page,
             
             this.spaceView = new SpaceView(this);
             this.spaceView.render();
+
+            this.endView = new EndView(this);
 
 
 			if (!this.alreadyLoop) {
@@ -67,15 +72,26 @@ function($, _, Utils, page,
 		};
 		
 		this.loop = function() {
-            if (!this.pause) {
-    		    this.spaceView.loop();
-                this.eventManager.loop();
-                this.ameliorationView.loop(this);
-            }
-            var that = this;
-            setTimeout(function() {
-                that.loop();
-            }, 1000);
+		    if (!this.endGame) {
+    		    if (!this.pause) {
+        		    this.spaceView.loop();
+                    this.eventManager.loop();
+                    this.ameliorationView.loop(this);
+                    
+                    if (this.pointManager.gameOver()) {
+                        this.gameOver();
+                    }
+                }
+                var that = this;
+                setTimeout(function() {
+                    that.loop();
+                }, 1000);
+		    }
+        };
+        
+        this.gameOver = function() {
+            this.endGame = true;
+            this.endView.render();
         };
         
         this.click = function() {
