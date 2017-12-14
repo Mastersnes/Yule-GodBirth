@@ -149,7 +149,54 @@ define(["jquery"], function($){
 		"parSec" : {
 			fr : "/sec",
 			en : "/sec"
-		}
+		},
+		/**
+		 * Ameliorations
+		 */
+		"grandTout" : {
+            fr : "Grand Tout",
+            en : "Grand Tout"
+        },
+        "dieu" : {
+            fr : "Dieu",
+            en : "Dieu"
+        },
+        "deesse" : {
+            fr : "Deesse",
+            en : "Deesse"
+        },
+        "incarnation" : {
+            fr : "Incarnation",
+            en : "Incarnation"
+        },
+        "gaia-ouranos" : {
+            fr : "Gaia/Ouranos",
+            en : "Gaia/Ouranos"
+        },
+        "selene-pan" : {
+            fr : "Selene/Pan",
+            en : "Selene/Pan"
+        },
+        "hecate-cernunnos" : {
+            fr : "Hecate/Cernunnos",
+            en : "Hecate/Cernunnos"
+        },
+        "isis-osiris" : {
+            fr : "Isis/Osiris",
+            en : "Isis/Osiris"
+        },
+        "eve-adam" : {
+            fr : "Eve/Adam",
+            en : "Eve/Adam"
+        },
+        "lilith-samael" : {
+            fr : "Lilith/Samael",
+            en : "Lilith/Samael"
+        },
+        "jesus-marie" : {
+            fr : "Jesus/Marie",
+            en : "Jesus/Marie"
+        }
 	};
 	
 	return {

@@ -180,7 +180,7 @@ function($, _, Utils, page, Onglets, Items) {
                 var item = Items.get(itemId);
                 
                 if (that.pointManager.depenser(item.prix())) {
-                    if (item.level == 0 && item.unlock) item.unlock(that);
+                    if (item.select) item.select(that.parent, that);
                 	item.level++;
                     $(this).attr("level", item.level);
                     that.showDescription(itemId);
