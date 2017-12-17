@@ -151,51 +151,91 @@ define(["jquery"], function($){
 			en : "/sec"
 		},
 		/**
-		 * Ameliorations
+		 * Ameliorations - Onlets
 		 */
-		"grandTout" : {
+		"deite" : {
+            fr : "Deités",
+            en : "Deities"
+        },
+        "univers" : {
+            fr : "Univers",
+            en : "Univers"
+        },
+        "vie" : {
+            fr : "Vie",
+            en : "Life"
+        },
+        "mort" : {
+            fr : "Mort",
+            en : "Death"
+        },
+        /**
+         * Ameliorations - Deites
+         */
+        "grandTout" : {
             fr : "Grand Tout",
-            en : "Grand Tout"
+            en : "Great Everything"
         },
         "dieu" : {
             fr : "Dieu",
-            en : "Dieu"
+            en : "God"
         },
         "deesse" : {
-            fr : "Deesse",
-            en : "Deesse"
+            fr : "Déesse",
+            en : "Goddess"
         },
-        "incarnation" : {
-            fr : "Incarnation",
-            en : "Incarnation"
+        /**
+         * Ameliorations - Univers
+         */
+        "terre" : {
+            fr : "Terre",
+            en : "Earth"
         },
-        "gaia-ouranos" : {
-            fr : "Gaia/Ouranos",
-            en : "Gaia/Ouranos"
+        "lune" : {
+            fr : "Lune",
+            en : "Moon"
         },
-        "selene-pan" : {
-            fr : "Selene/Pan",
-            en : "Selene/Pan"
+        "soleil" : {
+            fr : "Soleil",
+            en : "Sun"
         },
-        "hecate-cernunnos" : {
-            fr : "Hecate/Cernunnos",
-            en : "Hecate/Cernunnos"
+        /**
+         * Ameliorations - Vie
+         */
+        "ciel" : {
+            fr : "Ciel",
+            en : "Sky"
         },
-        "isis-osiris" : {
-            fr : "Isis/Osiris",
-            en : "Isis/Osiris"
+        "foret" : {
+            fr : "Fôrets",
+            en : "Forest"
         },
-        "eve-adam" : {
-            fr : "Eve/Adam",
-            en : "Eve/Adam"
+        "volcan" : {
+            fr : "Volcans",
+            en : "Volcanoes"
         },
-        "lilith-samael" : {
-            fr : "Lilith/Samael",
-            en : "Lilith/Samael"
+        "ocean" : {
+            fr : "Oceans",
+            en : "Oceans"
         },
-        "jesus-marie" : {
-            fr : "Jesus/Marie",
-            en : "Jesus/Marie"
+        /**
+         * Ameliorations - Mort
+         */
+        "gouffre" : {
+            fr : "Gouffre",
+            en : "-"
+        },
+        "vide" : {
+            fr : "Vide",
+            en : "-"
+        },
+        "chaos" : {
+            fr : "Chaos",
+            en : "-"
+        },
+        "abysses" : {
+            fr : "Abysses",
+            en : "-"
         }
 	};
 	

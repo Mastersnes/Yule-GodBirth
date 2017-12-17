@@ -41,7 +41,6 @@ define(["jquery",
             $("god").click(function() {
                 that.textManager.next();
                 that.ameliorationView.click(that.parent.parent);
-                that.checkLevel();
                 that.render();
         	});
         };
@@ -50,17 +49,7 @@ define(["jquery",
             this.level = parseInt($("god").attr("level"));
             if (this.type.nbr) {
                 this.level++;
-                
                 if (this.level > this.type.nbr) {
-                	/**
-                	 * Lorsqu'on affiche pour la premiere fois le dieu enfant
-                	 * on affiche le menu
-                	 */
-                	if (this.type.next == "baby") {
-                    	this.ameliorationView.unlockOnglet("god", true);
-                    	$(".ameliorations").show();
-                    }
-                	
                 	if (this.type.next) this.setType(this.type.next);
                     else this.level = this.type.nbr;
                 }

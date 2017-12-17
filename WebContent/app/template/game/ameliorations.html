@@ -1,51 +1,78 @@
 <div class="ameliorations">
-	<onglets>
-	</onglets>
-	<content>
-	</content>
+	<onglets></onglets>
+	<content></content>
 </div>
 
-<div class="description">
-    <div id="current">
-        <p class="titre"><span id="nom"></span> (Level <span id="level"></span>)</p>
-	    <p id="croyance" class="text escap">
-	       Croyance : <span id="croyance-click"><span></span>/clicks</span>
-	       <span id="croyance-loop"><span></span>/secondes</span>
-	    </p>
-	    <p id="illumination" class="text escap">
-           Illumination : <span id="illumination-click"><span></span>/clicks</span>
-           <span id="illumination-loop"><span></span>/secondes</span>
-        </p>
-	    <p id="bien" class="text escap">
-           Bien : <span id="bien-click"><span></span>/clicks</span>
-           <span id="bien-loop"><span></span>/secondes</span>
-        </p>
-	    <p id="mal" class="text escap">
-           Mal : <span id="mal-click"><span></span>/clicks</span>
-           <span id="mal-loop"><span></span>/secondes</span>
-        </p>
-    </div>
-    <div id="next">
-	    <p class="text underline">Passer au level : <span id="level-suivant"></span></p>
-	    <p id="croyance-prix" class="text escap">Croyance : <span></span></p>
-	    <p id="illumination-prix" class="text escap">Illumination : <span></span></p>
-	    
-	    <p class="text underline">Vous gagnerez : </p>
-	    <p id="croyance" class="text escap">
-           Croyance : <span id="croyance-click"><span></span>/clicks</span>
-           <span id="croyance-loop"><span></span>/secondes</span>
-        </p>
-	    <p id="illumination" class="text escap">
-           Illumination : <span id="illumination-click"><span></span>/clicks</span>
-           <span id="illumination-loop"><span></span>/secondes</span>
-        </p>
-        <p id="bien" class="text escap">
-           Bien : <span id="bien-click"><span></span>/clicks</span>
-           <span id="bien-loop"><span></span>/secondes</span>
-        </p>
-        <p id="mal" class="text escap">
-           Mal : <span id="mal-click"><span></span>/clicks</span>
-           <span id="mal-loop"><span></span>/secondes</span>
-        </p>
-    </div>
+<div id="description" class="popup">
+	<mask></mask>
+	<div class="description content">
+		<button type="button" class="close" aria-label="Close">X</button>
+	    <div id="current">
+	        <p class="titre"><span id="nom"></span> (Level <span id="level"></span>)</p>
+		    <div id="croyance" class="text categorie">
+		       <div>Croyance</div>
+		       <div id="croyance-click"><span></span>/clicks</div>
+		       <div id="croyance-loop"><span></span>/secondes</div>
+		    </div>
+		    <div id="illumination" class="text categorie">
+	           <div>Illumination</div>
+	           <div id="illumination-click"><span></span>/clicks</div>
+	           <div id="illumination-loop"><span></span>/secondes</div>
+	        </div>
+		    <div id="bien" class="text categorie">
+	           <div>Bien</div>
+	           <div id="bien-click"><span></span>/clicks</div>
+	           <div id="bien-loop"><span></span>/secondes</div>
+	        </div>
+		    <div id="mal" class="text categorie">
+	           <div>Mal</div>
+	           <div id="mal-click"><span></span>/clicks</div>
+	           <div id="mal-loop"><span></span>/secondes</div>
+	        </div>
+	    </div>
+	    <div id="next">
+		    <p class="titre underline">Passer au level : <span id="level"></span></p>
+		    <div id="croyance-prix" class="categorie text">
+		    	<div>Croyance</div>
+		    	<span></span>
+		    </div>
+		    <div id="illumination-prix" class="categorie text">
+		    	<div>Illumination</div>
+		    	<span></span>
+		    </div>
+		    
+		    <p class="titre underline">Vous gagnerez : </p>
+		    <div id="croyance" class="categorie text">
+	           <div>Croyance</div>
+	           <div id="croyance-click"><span></span>/clicks</div>
+	           <div id="croyance-loop"><span></span>/secondes</div>
+	        </div>
+		    <div id="illumination" class="categorie text">
+	           <div>Illumination</div>
+	           <div id="illumination-click"><span></span>/clicks</div>
+	           <div id="illumination-loop"><span></span>/secondes</div>
+	        </div>
+	        <div id="bien" class="categorie text">
+	           <div>Bien</div>
+	           <div id="bien-click"><span></span>/clicks</div>
+	           <div id="bien-loop"><span></span>/secondes</div>
+	        </div>
+	        <div id="mal" class="categorie text">
+	           <div>Mal</div>
+	           <div id="mal-click"><span></span>/clicks</div>
+	           <div id="mal-loop"><span></span>/secondes</div>
+	        </div>
+	    </div>
+	    <div>
+	    	<div id="plus1" class="categorie text button">
+	    		+1
+	    	</div>
+	    	<div id="plus10" class="categorie text button">
+	    		+10
+	    	</div>
+	    	<div id="plus100" class="categorie text button">
+	    		+100
+	    	</div>
+	    </div>
+	</div>
 </div>

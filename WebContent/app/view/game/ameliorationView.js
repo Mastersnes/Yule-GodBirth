@@ -14,6 +14,7 @@ function($, _, Utils, page, Onglets, Items) {
 		    this.parent = parent;
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
+            this.items = Items;
             
             this.pointManager = parent.pointManager;
 		};
@@ -25,10 +26,18 @@ function($, _, Utils, page, Onglets, Items) {
 					text : this.Textes
 			};
 			this.el.html(template(templateData));
+			
+			/**
+			 * En tout premier on affiche les grandes deités
+			 */
+			this.unlockOnglet("deite", true);
+            $(".ameliorations").show();
 		};
 		
 		this.unlockOnglet = function(ongletId, show) {
 			if ($("onglet#"+ongletId).length > 0) return;
+			var onglet = Onglets.get(ongletId);
+			if (!onglet) return;
 			
 			var ongletDom = $("<onglet></onglet>");
 			ongletDom.attr("class", "text " + ongletId);
@@ -43,7 +52,6 @@ function($, _, Utils, page, Onglets, Items) {
 		};
 		
 		this.showItems = function(ongletId) {
-			console.log("show : ", ongletId);
 			$("onglet.active").removeClass("active");
 			$("onglet#"+ongletId).addClass("active");
 			
@@ -77,14 +85,14 @@ function($, _, Utils, page, Onglets, Items) {
 		    this.setDescription("#current", item.name, item.level, null, item.gain());
 		    this.setDescription("#next", null, item.level+1, item.prix(), item.gain(item.level+1));
             
-            this.el.find(".description").show();
+            this.el.find("#description").show();
 		};
 		
 		/**
 		 * Permet de remplir les champs de la description
 		 */
 		this.setDescription = function(domId, name, level, prix, gain) {
-		    var dom = this.el.find(".description " + domId);
+		    var dom = this.el.find("#description " + domId);
 		    /**
 		     * LEVEL
 		     */
@@ -112,48 +120,48 @@ function($, _, Utils, page, Onglets, Items) {
             else dom.find("#croyance").hide();
             
             dom.find("#croyance-click span").html(gain.click.croyance);
-            if (gain.click.croyance) dom.find("#croyance-click").show();
-            else dom.find("#croyance-click").hide();
+            if (gain.click.croyance) dom.find("#croyance-click").css("visibility", "visible");
+            else dom.find("#croyance-click").css("visibility", "hidden");
             
             dom.find("#croyance-loop span").html(gain.loop.croyance);
-            if (gain.loop.croyance) dom.find("#croyance-loop").show();
-            else dom.find("#croyance-loop").hide();
+            if (gain.loop.croyance) dom.find("#croyance-loop").css("visibility", "visible");
+            else dom.find("#croyance-loop").css("visibility", "hidden");
             
             //Illumination
             if (gain.click.illumination || gain.loop.illumination) dom.find("#illumination").show();
             else dom.find("#illumination").hide();
             
             dom.find("#illumination-click span").html(gain.click.illumination);
-            if (gain.click.illumination) dom.find("#illumination-click").show();
-            else dom.find("#illumination-click").hide();
+            if (gain.click.illumination) dom.find("#illumination-click").css("visibility", "visible");
+            else dom.find("#illumination-click").css("visibility", "hidden");
             
             dom.find("#illumination-loop span").html(gain.loop.illumination);
-            if (gain.loop.illumination) dom.find("#illumination-loop").show();
-            else dom.find("#illumination-loop").hide();
+            if (gain.loop.illumination) dom.find("#illumination-loop").css("visibility", "visible");
+            else dom.find("#illumination-loop").css("visibility", "hidden");
 
             //Bien
             if (gain.click.bien || gain.loop.bien) dom.find("#bien").show();
             else dom.find("#bien").hide();
             
             dom.find("#bien-click span").html(gain.click.bien);
-            if (gain.click.bien) dom.find("#bien-click").show();
-            else dom.find("#bien-click").hide();
+            if (gain.click.bien) dom.find("#bien-click").css("visibility", "visible");
+            else dom.find("#bien-click").css("visibility", "hidden");
             
             dom.find("#bien-loop span").html(gain.loop.bien);
-            if (gain.loop.bien) dom.find("#bien-loop").show();
-            else dom.find("#bien-loop").hide();
+            if (gain.loop.bien) dom.find("#bien-loop").css("visibility", "visible");
+            else dom.find("#bien-loop").css("visibility", "hidden");
 
             //Mal
             if (gain.click.mal || gain.loop.mal) dom.find("#mal").show();
             else dom.find("#mal").hide();
             
             dom.find("#mal-click span").html(gain.click.mal);
-            if (gain.click.mal) dom.find("#mal-click").show();
-            else dom.find("#mal-click").hide();
+            if (gain.click.mal) dom.find("#mal-click").css("visibility", "visible");
+            else dom.find("#mal-click").css("visibility", "hidden");
             
             dom.find("#mal-loop span").html(gain.loop.mal);
-            if (gain.loop.mal) dom.find("#mal-loop").show();
-            else dom.find("#mal-loop").hide();
+            if (gain.loop.mal) dom.find("#mal-loop").css("visibility", "visible");
+            else dom.find("#mal-loop").css("visibility", "hidden");
 		};
 		
 		this.loop = function(game) {
@@ -176,35 +184,32 @@ function($, _, Utils, page, Onglets, Items) {
             var that = this;
             
             $("item").on("click", function() {
-                var itemId = $(this).attr("id");
-                var item = Items.get(itemId);
-                
-                if (that.pointManager.depenser(item.prix())) {
-                    if (item.select) item.select(that.parent, that);
-                	item.level++;
-                    $(this).attr("level", item.level);
-                    that.showDescription(itemId);
-                }else {
-                    var dom = $(this); 
-                    dom.addClass("error");
-                    setTimeout(function() { 
-                        dom.removeClass("error");
-                    }, 1000);
-                }
+            	that.currentItem = $(this).attr("id");
+                that.showDescription(that.currentItem);
             });
 
-            $("item").hover(function() {
-                var itemId = $(this).attr("id");
-                that.showDescription(itemId);
+            this.el.find("#description button#nextLevel").click(function() {
+                var itemId = that.currentItem;
+                var item = Items.get(itemId);
                 
-                var x = $(this).position().left + parseInt($(this).css('marginLeft'), 10);
-                var y = $(this).offset().top - that.el.find(".description").outerHeight();
-                that.el.find(".description").css({
-                    left : x,
-                    top : y
-                });
-            }, function() {
-                that.el.find(".description").hide();
+                var restrictions = that.checkRestrictions(item.restrictions);
+                if (!restrictions) {
+                	var prixOk = that.pointManager.depenser(item.prix());
+                	if (prixOk) {
+	                    if (item.select) item.select(that.parent, that);
+	                	item.level++;
+	                    $(this).attr("level", item.level);
+	                    that.showDescription(itemId);
+	                    return;
+                	}
+                }
+                
+                console.log("petit hackeur !");
+            });
+            
+            this.el.find("#description .close").click(function() {
+            	that.currentItem = null;
+            	that.el.find("#description").hide();
             });
         };
         
@@ -215,6 +220,18 @@ function($, _, Utils, page, Onglets, Items) {
                 var ongletId = $(this).attr("id");
                 that.showItems(ongletId);
             });
+        };
+        
+        this.checkRestrictions = function(restrictions) {
+        	var restrictionsRest = [];
+        	for (var index in restrictions) {
+        		var restriction = restrictions[index];
+        		var itemRestrict = Items.get(restriction.name);
+        		if (itemRestrict.level < restriction.level) {
+        			restrictionsRest.push(restriction);
+        		}
+        	}
+        	return restrictionsRest;
         };
 		
 		this.init(parent);

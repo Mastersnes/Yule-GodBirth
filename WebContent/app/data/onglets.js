@@ -1,13 +1,21 @@
 'use strict';
 define(["jquery"], function($){
 	var data = {
-			"god" : {
-				name : "god",
-			    items : ["cernunos", "gaia", "hecate", "selene"]
+			"deite" : {
+				name : "deite",
+			    items : ["grandTout", "dieu", "deesse"]
 			},
-			"gaia" : {
-				name : "gaia",
-			    items : ["gaia-1", "gaia-2"]
+			"univers" : {
+				name : "univers",
+			    items : ["terre", "lune", "soleil"]
+			},
+			"vie" : {
+				name : "vie",
+			    items : ["ciel", "foret", "volcan", "ocean"]
+			},
+			"mort" : {
+				name : "mort",
+			    items : ["gouffre", "vide", "chaos", "abysses"]
 			}
 	};
 	

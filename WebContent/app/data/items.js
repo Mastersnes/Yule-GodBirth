@@ -1,14 +1,88 @@
 'use strict';
 define(["jquery"], function($){
 	var data = {
-			"cernunos" : new function() {
+			"grandTout" : new function() {
 				this.level = 1;
-				this.name = "cernunos";
+				this.name = "grandTout";
 				
+				this.restriction = function () {
+					var lvl = this.level+1;
+					return [{
+						name : "dieu",
+						level : lvl
+					},{
+						name : "deesse",
+						level : lvl
+					}];
+			    };
 				this.prix = function () {
-					var that = this;
+					var lvl = this.level+1;
 					return {
-	        			croyance : that.level,
+	        			croyance : lvl*10,
+	        			illumination : 0
+	        		};
+			    };
+			    this.gain = function (lvl) {
+	        		if (!lvl) lvl = this.level;
+	        		return {
+	        			click : {
+	        				croyance : lvl*20,
+	        				illumination : lvl*30,
+	        				bien : lvl*10,
+	        				mal : -lvl*20
+	        			},
+	        			loop : {
+	        				croyance : lvl*10,
+	        				illumination : lvl*200,
+                            bien : 0,
+                            mal : 0
+	        			}
+	        		};
+	        	};
+	        	this.select = function(game, ameliorations) {
+	        	};
+			},
+			"dieu" : new function() {
+				this.level = 0;
+				this.name = "dieu";
+				
+				this.restriction = function () {};
+				this.prix = function () {
+					var lvl = this.level+1;
+					return {
+	        			croyance : lvl*2,
+	        			illumination : 0
+	        		};
+			    };
+			    this.gain = function (lvl) {
+	        		if (!lvl) lvl = this.level;
+	        		return {
+	        			click : {
+	        				croyance : 0,
+	        				illumination : 0,
+	        				bien : 0,
+	        				mal : 0
+	        			},
+	        			loop : {
+	        				croyance : lvl,
+	        				illumination : 0,
+	        				bien : 0,
+	        				mal : lvl
+	        			}
+	        		};
+	        	};
+	        	this.select = function(game, ameliorations) {
+	        	};
+			},
+			"deesse" : new function() {
+				this.level = 0;
+				this.name = "deesse";
+				
+				this.restriction = function () {};
+				this.prix = function () {
+					var lvl = this.level+1;
+					return {
+	        			croyance : lvl*3,
 	        			illumination : 0
 	        		};
 			    };
@@ -17,165 +91,19 @@ define(["jquery"], function($){
 	        		return {
 	        			click : {
 	        				croyance : lvl,
-	        				illumination : lvl,
+	        				illumination : 0,
+	        				bien : 0,
+	        				mal : 0
+	        			},
+	        			loop : {
+	        				croyance : lvl,
+	        				illumination : 0,
 	        				bien : lvl,
-	        				mal : -lvl
-	        			},
-	        			loop : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
+	        				mal : 0
 	        			}
 	        		};
 	        	};
-			},
-			"gaia" : new function() {
-				this.level = 0;
-				this.name = "gaia";
-				
-				this.prix = function () {
-					var that = this;
-					return {
-	        			croyance : (that.level+1)*100,
-	        			illumination : 0
-	        		};
-			    };
-			    this.gain = function (lvl) {
-	        		if (!lvl) lvl = this.level;
-	        		return {
-	        			click : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			},
-	        			loop : {
-	        				croyance : lvl,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			}
-	        		};
-	        	};
-	        	this.unlock = function(ameliorations) {
-	        		ameliorations.unlockOnglet("gaia");
-	        	};
-			},
-			"hecate" : new function() {
-				this.level = 0;
-				this.name = "hecate";
-				
-				this.prix = function () {
-					var that = this;
-					return {
-	        			croyance : (that.level+1)*10,
-	        			illumination : 0
-	        		};
-			    };
-			    this.gain = function (lvl) {
-			        if (!lvl) lvl = this.level;
-	        		return {
-	        			click : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			},
-	        			loop : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			}
-	        		};
-	        	};
-			},
-			"selene" : new function() {
-				this.level = 0;
-				this.name = "selene";
-				
-				this.prix = function () {
-					var that = this;
-					return {
-	        			croyance : (that.level+1)*10,
-	        			illumination : 0
-	        		};
-			    };
-			    this.gain = function (lvl) {
-			        if (!lvl) lvl = this.level;
-	        		return {
-	        			click : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			},
-	        			loop : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			}
-	        		};
-	        	};
-			},
-			"gaia-1" : new function() {
-				this.level = 0;
-				this.name = "gaia-1";
-				
-				this.prix = function () {
-					var that = this;
-					return {
-	        			croyance : (that.level+1)*10,
-	        			illumination : 0
-	        		};
-			    };
-			    this.gain = function (lvl) {
-			        if (!lvl) lvl = this.level;
-	        		return {
-	        			click : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			},
-	        			loop : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			}
-	        		};
-	        	};
-			},
-			"gaia-2" : new function() {
-				this.level = 0;
-				this.name = "gaia-2";
-				
-				this.prix = function () {
-					var that = this;
-					return {
-	        			croyance : (that.level+1)*10,
-	        			illumination : 0
-	        		};
-			    };
-			    this.gain = function (lvl) {
-			        if (!lvl) lvl = this.level;
-	        		return {
-	        			click : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			},
-	        			loop : {
-	        				croyance : 0,
-	        				illumination : 0,
-                            bien : 0,
-                            mal : 0
-	        			}
-	        		};
+	        	this.select = function(game, ameliorations) {
 	        	};
 			}
 	};
