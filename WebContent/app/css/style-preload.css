@@ -1,0 +1,57 @@
+/**
+* Preload
+**/
+preload {
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/**Dieu**/
+preload.dieu[step="1"] {
+	background-image: url("../img/game/ameliorations/dieu/dieu.png");
+}
+preload.dieu[step="2"] {
+	background-image: url("../img/game/ameliorations/dieu/1.png");
+}
+preload.dieu[step="3"] {
+	background-image: url("../img/game/ameliorations/dieu/2.png");
+}
+preload.dieu[step="4"] {
+	background-image: url("../img/game/ameliorations/dieu/3.png");
+}
+preload.dieu[step="5"] {
+	background-image: url("../img/game/ameliorations/dieu/4.png");
+}
+
+/**Deesse**/
+preload.deesse[step="1"] {
+	background-image: url("../img/game/ameliorations/deesse/deesse.png");
+}
+preload.deesse[step="2"] {
+	background-image: url("../img/game/ameliorations/deesse/1.png");
+}
+preload.deesse[step="3"] {
+	background-image: url("../img/game/ameliorations/deesse/2.png");
+}
+preload.deesse[step="4"] {
+	background-image: url("../img/game/ameliorations/deesse/3.png");
+}
+preload.deesse[step="5"] {
+	background-image: url("../img/game/ameliorations/deesse/4.png");
+}
+
+/**Grand Tout**/
+preload.grandTout[step="1"] {
+	background-image: url("../img/game/ameliorations/grandTout/grandTout.png");
+}
+preload.grandTout[step="2"] {
+	background-image: url("../img/game/ameliorations/grandTout/1.png");
+}
+preload.grandTout[step="3"] {
+	background-image: url("../img/game/ameliorations/grandTout/2.png");
+}
+preload.grandTout[step="4"] {
+	background-image: url("../img/game/ameliorations/grandTout/3.png");
+}
+preload.grandTout[step="5"] {
+	background-image: url("../img/game/ameliorations/grandTout/4.png");
+}

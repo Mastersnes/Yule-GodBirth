@@ -73,8 +73,7 @@ function($, _, Utils, page, Onglets, Items) {
 			itemDom.attr("class", item.name);
 			itemDom.attr("id", item.name);
 			itemDom.attr("level", item.level);
-			
-			itemDom.html(this.Textes.get(item.name));
+			itemDom.html("<span></span>");
 			
 			this.el.find("content").append(itemDom);
 		};
@@ -82,8 +81,8 @@ function($, _, Utils, page, Onglets, Items) {
 		this.showDescription = function(itemId) {
 		    var item = Items.get(itemId);
 			
-		    this.setDescription("#current", item.name, item.level, null, item.gain());
-		    this.setDescription("#next", null, item.level+1, item.prix(), item.gain(item.level+1));
+		    this.setDescription("#current", item, 0);
+		    this.setDescription("#next", item, 1);
             
             this.el.find("#description").show();
 		};
@@ -91,17 +90,46 @@ function($, _, Utils, page, Onglets, Items) {
 		/**
 		 * Permet de remplir les champs de la description
 		 */
-		this.setDescription = function(domId, name, level, prix, gain) {
-		    var dom = this.el.find("#description " + domId);
-		    /**
+		this.setDescription = function(domId, item, incr) {
+			var dom = this.el.find("#description " + domId);
+			
+			/**
 		     * LEVEL
 		     */
-		    dom.find("#nom").html(this.Textes.get(name));
-            dom.find("#level").html(level);
+		    dom.find("#nom").html(this.Textes.get(item.name));
+            dom.find("#level").html(item.level + incr);
+            
+            /**
+             * Restrictions
+             */
+            var restrictions = item.restriction();
+            if (restrictions.length == 0) dom.find("#restrictions").hide();
+            else {
+            	dom.find("#restrictions > #list").empty();
+            	dom.find("#restrictions").show();
+	            for (var index in restrictions) {
+	            	var restriction = restrictions[index];
+	            	
+	            	var restrictionDom = $("<div></div>");
+	            	restrictionDom.attr("class", "categorie");
+	            	if (this.checkRestriction(restriction)) restrictionDom.addClass("ok");
+	            	
+	            	var restrictionIcon = $("<span></span>");
+	            	restrictionIcon.attr("class", "icon");
+	            	restrictionDom.append(restrictionIcon);
+	            	
+	            	var restrictionText = $("<span></span>");
+	            	restrictionText.append(this.Textes.get(restriction.name)).append(" (" + restriction.level + ")");
+	            	restrictionDom.append(restrictionText);
+	            	
+	            	dom.find("#restrictions > #list").append(restrictionDom);
+	            }
+            }
             
             /**
              * PRIX
              */
+            var prix = item.prix();
             if (prix) {
                 dom.find("#croyance-prix span").html(prix.croyance);
                 if (prix.croyance) dom.find("#croyance-prix").show();
@@ -116,6 +144,7 @@ function($, _, Utils, page, Onglets, Items) {
              * GAIN
              */
             //Croyance
+            var gain = item.gain(item.level + incr);
             if (gain.click.croyance || gain.loop.croyance) dom.find("#croyance").show();
             else dom.find("#croyance").hide();
             
@@ -187,13 +216,20 @@ function($, _, Utils, page, Onglets, Items) {
             	that.currentItem = $(this).attr("id");
                 that.showDescription(that.currentItem);
             });
+            
+            $("item").hover(function() {
+            	$(this).removeClass('out').addClass('in');
+            }, function() {
+            	$(this).removeClass('in').addClass('out');
+            });
+            
 
             this.el.find("#description button#nextLevel").click(function() {
                 var itemId = that.currentItem;
                 var item = Items.get(itemId);
                 
                 var restrictions = that.checkRestrictions(item.restrictions);
-                if (!restrictions) {
+                if (!restrictions || restrictions.length == 0) {
                 	var prixOk = that.pointManager.depenser(item.prix());
                 	if (prixOk) {
 	                    if (item.select) item.select(that.parent, that);
@@ -222,16 +258,29 @@ function($, _, Utils, page, Onglets, Items) {
             });
         };
         
+        /**
+         * Verifie si il reste des restrictions verifié
+         */
         this.checkRestrictions = function(restrictions) {
         	var restrictionsRest = [];
         	for (var index in restrictions) {
         		var restriction = restrictions[index];
-        		var itemRestrict = Items.get(restriction.name);
-        		if (itemRestrict.level < restriction.level) {
+        		if (this.checkRestriction(restriction)) {
         			restrictionsRest.push(restriction);
         		}
         	}
         	return restrictionsRest;
+        };
+        
+        /**
+         * Verifie si une restriction est verifié
+         */
+        this.checkRestriction = function(restriction) {
+        	var itemRestrict = Items.get(restriction.name);
+    		if (itemRestrict.level < restriction.level) {
+    			return false;
+    		}
+        	return true;
         };
 		
 		this.init(parent);

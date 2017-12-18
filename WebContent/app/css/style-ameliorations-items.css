@@ -1,3 +1,95 @@
-.ameliorations item.cernunos {
-	background-image: url("../img/game/god/baby/1.png");
+/**
+* Dieu
+**/
+.ameliorations item.dieu span {
+	background-image: url("../img/game/ameliorations/dieu/dieu.png");
+}
+.ameliorations item.dieu.out span {
+	animation-name: dieu-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+}
+.ameliorations item.dieu.in span {
+	animation-name: dieu-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+}
+
+@keyframes dieu-in {
+    0% {background-image: url("../img/game/ameliorations/dieu/dieu.png");}
+    25% {background-image: url("../img/game/ameliorations/dieu/1.png");}
+    50% {background-image: url("../img/game/ameliorations/dieu/2.png");}
+    75% {background-image: url("../img/game/ameliorations/dieu/3.png");}
+    100% {background-image: url("../img/game/ameliorations/dieu/4.png");}
+}
+@keyframes dieu-out {
+    0% {background-image: url("../img/game/ameliorations/dieu/4.png");}
+    25% {background-image: url("../img/game/ameliorations/dieu/3.png");}
+    50% {background-image: url("../img/game/ameliorations/dieu/2.png");}
+    75% {background-image: url("../img/game/ameliorations/dieu/1.png");}
+    100% {background-image: url("../img/game/ameliorations/dieu/dieu.png");}
+}
+
+/**
+* Deesse
+**/
+.ameliorations item.deesse span {
+	background-image: url("../img/game/ameliorations/deesse/deesse.png");
+}
+.ameliorations item.deesse.out span {
+	animation-name: deesse-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+}
+.ameliorations item.deesse.in span {
+	animation-name: deesse-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+}
+
+@keyframes deesse-in {
+    0% {background-image: url("../img/game/ameliorations/deesse/deesse.png");}
+    25% {background-image: url("../img/game/ameliorations/deesse/1.png");}
+    50% {background-image: url("../img/game/ameliorations/deesse/2.png");}
+    75% {background-image: url("../img/game/ameliorations/deesse/3.png");}
+    100% {background-image: url("../img/game/ameliorations/deesse/4.png");}
+}
+@keyframes deesse-out {
+    0% {background-image: url("../img/game/ameliorations/deesse/4.png");}
+    25% {background-image: url("../img/game/ameliorations/deesse/3.png");}
+    50% {background-image: url("../img/game/ameliorations/deesse/2.png");}
+    75% {background-image: url("../img/game/ameliorations/deesse/1.png");}
+    100% {background-image: url("../img/game/ameliorations/deesse/deesse.png");}
+}
+
+/**
+* Grand Tout
+**/
+.ameliorations item.grandTout span {
+	background-image: url("../img/game/ameliorations/grandTout/grandTout.png");
+}
+.ameliorations item.grandTout.out span {
+	animation-name: grandTout-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+}
+.ameliorations item.grandTout.in span {
+	animation-name: grandTout-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+}
+
+@keyframes grandTout-in {
+    0% {background-image: url("../img/game/ameliorations/grandTout/grandTout.png");}
+    25% {background-image: url("../img/game/ameliorations/grandTout/1.png");}
+    50% {background-image: url("../img/game/ameliorations/grandTout/2.png");}
+    75% {background-image: url("../img/game/ameliorations/grandTout/3.png");}
+    100% {background-image: url("../img/game/ameliorations/grandTout/4.png");}
+}
+@keyframes grandTout-out {
+    0% {background-image: url("../img/game/ameliorations/grandTout/4.png");}
+    25% {background-image: url("../img/game/ameliorations/grandTout/3.png");}
+    50% {background-image: url("../img/game/ameliorations/grandTout/2.png");}
+    75% {background-image: url("../img/game/ameliorations/grandTout/1.png");}
+    100% {background-image: url("../img/game/ameliorations/grandTout/grandTout.png");}
 }

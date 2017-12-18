@@ -46,6 +46,12 @@ button:focus {outline:0;}
     max-width: 100%;
     word-wrap: break-word;
 }
+.underline {
+	text-decoration: underline;
+}
+.stroke {
+	text-decoration: line-through;
+}
 .preload {
 	position: absolute !important;
 	left: -9999px !important;

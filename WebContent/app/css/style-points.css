@@ -32,7 +32,7 @@ croyance {
 	left: 0; top: 3vh;
 }
 croyance .img {
-	background-image: url("../img/game/god/baby/1.png");
+	background-image: url("../img/game/interface/icones/croyance.png");
 }
 
 illumination {
@@ -44,7 +44,7 @@ illumination {
     right: 0; top: 3vh;
 }
 illumination .img {
-	background-image: url("../img/game/god/egg/1.png");
+	background-image: url("../img/game/interface/icones/illumination.png");
 }
 
 bien {
@@ -55,7 +55,7 @@ bien {
 	left: 0; top: 0;
 }
 bien .img {
-	background-image: url("../img/game/god/baby/1.png");
+	background-image: url("../img/game/interface/icones/bien.png");
 }
 
 mal {
@@ -67,5 +67,5 @@ mal {
     right: 0; top: 0;
 }
 mal .img {
-	background-image: url("../img/game/god/egg/1.png");
+	background-image: url("../img/game/interface/icones/mal.png");
 }

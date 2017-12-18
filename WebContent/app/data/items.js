@@ -43,7 +43,7 @@ define(["jquery"], function($){
 	        	};
 			},
 			"dieu" : new function() {
-				this.level = 0;
+				this.level = 2;
 				this.name = "dieu";
 				
 				this.restriction = function () {};
