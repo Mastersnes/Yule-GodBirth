@@ -94,7 +94,7 @@
 	font-size: 1.2em;
 }
 #ameliorations .description .categorie {
-	width: auto;
+	width: 20%;
 	padding: 0% 2% 1% 2%;
 	display: inline-block;
 }
@@ -113,4 +113,19 @@
 }
 #ameliorations #restrictions .categorie.ok {
 	color: #35d035;
+}
+
+#ameliorations #restrictions .categorie .text {
+    vertical-align: super;
+}
+#ameliorations #restrictions .categorie .icon {
+    display: inline-block;
+    width: 10%; height: 2%;
+    
+    background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url("../img/game/interface/icones/bien.png");
+}
+#ameliorations #restrictions .categorie.ok .icon {
+    background-image: url("../img/game/interface/icones/mal.png");
 }

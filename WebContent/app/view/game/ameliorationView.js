@@ -119,6 +119,7 @@ function($, _, Utils, page, Onglets, Items) {
 	            	restrictionDom.append(restrictionIcon);
 	            	
 	            	var restrictionText = $("<span></span>");
+	            	restrictionText.attr("class", "text");
 	            	restrictionText.append(this.Textes.get(restriction.name)).append(" (" + restriction.level + ")");
 	            	restrictionDom.append(restrictionText);
 	            	
