@@ -1,0 +1,14 @@
+
+/**
+* Game
+**/
+.end {
+	background-color: black;
+}
+
+.end .text {
+	z-index: 1000;
+	font-size: 3vh;
+    color: #f1efeb;
+    text-align: center;
+}

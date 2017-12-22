@@ -21,19 +21,15 @@ function($, _, Utils) {
 		};
 		
 		this.render = function() {
-		    $("croyance .text").html(this.points.croyance);
-		    $("croyance .img").attr("title", this.Textes.get("croyance") + this.points.croyance);
+		    $("croyance .text").html(Utils.format(this.points.croyance, true, this.Textes));
 		    
-		    $("illumination .text").html(this.points.illumination);
-		    $("illumination .img").attr("title", this.Textes.get("illumination") + this.points.illumination);
+		    $("illumination .text").html(Utils.format(this.points.illumination, true, this.Textes));
 		    if (this.points.illumination > 0) $("illumination").show();
 
-		    $("bien .text").html(this.points.bien);
-		    $("bien .img").attr("title", this.Textes.get("bien") + this.points.bien);
+		    $("bien .text").html(Utils.format(this.points.bien, true, this.Textes));
 		    if (this.points.bien > 0) $("bien").show();
 		    
-		    $("mal .text").html(this.points.mal);
-		    $("mal .img").attr("title", this.Textes.get("mal") + this.points.mal);
+		    $("mal .text").html(Utils.format(this.points.mal, true, this.Textes));
 		    if (this.points.mal > 0) $("mal").show();
 		};
 		
@@ -48,8 +44,14 @@ function($, _, Utils) {
 		    this.render();
 		};
 		
-		this.depenser = function(prix) {
+		this.checkOk = function(prix) {
 		    if (this.points.croyance >= prix.croyance && this.points.illumination >= prix.illumination) {
+		        return true;
+		    }
+		    return false;
+		};
+		this.depenser = function(prix) {
+		    if (this.checkOk(prix)) {
 		        this.points.croyance -= prix.croyance;
 		        this.points.illumination -= prix.illumination;
 		        this.render();

@@ -50,6 +50,25 @@ define(["jquery", "sha"], function($, sha, clipboard){
         },
 		clone : function(value) {
 			return $.extend(true, {}, value);
+		},
+		format : function(amount, court, Texte) {
+		    var abs = Math.abs(amount);
+		    if (abs >= 1000000000) {
+		        var formatAmount = Math.round(amount / 10000000)/100;
+		        var notation = court?"G":Texte.get("milliards");
+		        return formatAmount + " " + notation;
+		    }
+		    if (abs >= 1000000) {
+		        var formatAmount = Math.round(amount / 10000)/100;
+		        var notation = court?"M":Texte.get("millions");
+		        return formatAmount + " " + notation;
+		    }
+		    if (abs >= 1000) {
+		        var formatAmount = Math.round(amount / 10)/100;
+		        var notation = court?"K":Texte.get("mille");
+		        return formatAmount + " " + notation;
+		    }
+		    return amount;
 		}
 	};
 });

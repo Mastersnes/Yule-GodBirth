@@ -96,6 +96,10 @@ function($, _, Utils, page,
         
         this.click = function() {
             this.ameliorationView.click(this);
+            
+            if (this.pointManager.gameOver()) {
+                this.gameOver();
+            }
         };
         
         this.makeEvents = function() {

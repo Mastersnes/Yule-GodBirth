@@ -2,8 +2,9 @@
 define(["jquery",
         'underscore',
         "app/utils/utils",
-        "text!app/template/game/end.html"],
-function($, _, Utils, page) {
+        "text!app/template/game/end.html",
+        "app/manager/sceneManager"],
+function($, _, Utils, page, SceneManager) {
 	'use strict';
 
 	return function(parent) {
@@ -18,10 +19,11 @@ function($, _, Utils, page) {
 			_.templateSettings.variable = "data";
 			var template = _.template(page);
 			var templateData = {
-					text : this.Textes,
-					points : this.parent.pointManager.points
+					text : this.Textes
 			};
 			this.el.html(template(templateData));
+			
+			this.scene = new SceneManager(this);
 		};
 		
 		this.init(parent);

@@ -14,6 +14,7 @@ define(["jquery",
             this.pointManager = parent.pointManager;
             
             this.ameliorationView = parent.ameliorationView;
+            this.gameView = parent.parent;
             
             this.setType("dust", true);
         };
@@ -40,7 +41,7 @@ define(["jquery",
         	var that = this;
             $("god").click(function() {
                 that.textManager.next();
-                that.ameliorationView.click(that.parent.parent);
+                that.gameView.click();
                 that.render();
         	});
         };

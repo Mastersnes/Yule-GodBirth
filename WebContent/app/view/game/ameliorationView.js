@@ -4,8 +4,9 @@ define(["jquery",
         "app/utils/utils",
         "text!app/template/game/ameliorations.html",
         "app/data/onglets",
-        "app/data/items"],
-function($, _, Utils, page, Onglets, Items) {
+        "app/data/items",
+        "app/view/game/descriptionView"],
+function($, _, Utils, page, Onglets, Items, DescriptionView) {
 	'use strict';
 
 	return function(parent) {
@@ -14,7 +15,7 @@ function($, _, Utils, page, Onglets, Items) {
 		    this.parent = parent;
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
-            this.items = Items;
+            this.Items = Items;
             
             this.pointManager = parent.pointManager;
 		};
@@ -27,10 +28,12 @@ function($, _, Utils, page, Onglets, Items) {
 			};
 			this.el.html(template(templateData));
 			
+			this.descriptionView = new DescriptionView(this);
+			this.descriptionView.makeEvents();
+			
 			/**
 			 * En tout premier on affiche les grandes deités
 			 */
-			this.unlockOnglet("deite", true);
             $(".ameliorations").show();
 		};
 		
@@ -78,128 +81,22 @@ function($, _, Utils, page, Onglets, Items) {
 			this.el.find("content").append(itemDom);
 		};
 		
-		this.showDescription = function(itemId) {
-		    var item = Items.get(itemId);
-			
-		    this.setDescription("#current", item, 0);
-		    this.setDescription("#next", item, 1);
-            
-            this.el.find("#description").show();
-		};
-		
-		/**
-		 * Permet de remplir les champs de la description
-		 */
-		this.setDescription = function(domId, item, incr) {
-			var dom = this.el.find("#description " + domId);
-			
-			/**
-		     * LEVEL
-		     */
-		    dom.find("#nom").html(this.Textes.get(item.name));
-            dom.find("#level").html(item.level + incr);
-            
-            /**
-             * Restrictions
-             */
-            var restrictions = item.restriction();
-            if (restrictions.length == 0) dom.find("#restrictions").hide();
-            else {
-            	dom.find("#restrictions > #list").empty();
-            	dom.find("#restrictions").show();
-	            for (var index in restrictions) {
-	            	var restriction = restrictions[index];
-	            	
-	            	var restrictionDom = $("<div></div>");
-	            	restrictionDom.attr("class", "categorie");
-	            	if (this.checkRestriction(restriction)) restrictionDom.addClass("ok");
-	            	
-	            	var restrictionIcon = $("<span></span>");
-	            	restrictionIcon.attr("class", "icon");
-	            	restrictionDom.append(restrictionIcon);
-	            	
-	            	var restrictionText = $("<span></span>");
-	            	restrictionText.attr("class", "text");
-	            	restrictionText.append(this.Textes.get(restriction.name)).append(" (" + restriction.level + ")");
-	            	restrictionDom.append(restrictionText);
-	            	
-	            	dom.find("#restrictions > #list").append(restrictionDom);
-	            }
-            }
-            
-            /**
-             * PRIX
-             */
-            var prix = item.prix();
-            if (prix) {
-                dom.find("#croyance-prix span").html(prix.croyance);
-                if (prix.croyance) dom.find("#croyance-prix").show();
-                else dom.find("#croyance-prix").hide();
-    
-                dom.find("#illumination-prix span").html(prix.illumination);
-                if (prix.illumination) dom.find("#illumination-prix").show();
-                else dom.find("#illumination-prix").hide();
-            }
-            
-            /**
-             * GAIN
-             */
-            //Croyance
-            var gain = item.gain(item.level + incr);
-            if (gain.click.croyance || gain.loop.croyance) dom.find("#croyance").show();
-            else dom.find("#croyance").hide();
-            
-            dom.find("#croyance-click span").html(gain.click.croyance);
-            if (gain.click.croyance) dom.find("#croyance-click").css("visibility", "visible");
-            else dom.find("#croyance-click").css("visibility", "hidden");
-            
-            dom.find("#croyance-loop span").html(gain.loop.croyance);
-            if (gain.loop.croyance) dom.find("#croyance-loop").css("visibility", "visible");
-            else dom.find("#croyance-loop").css("visibility", "hidden");
-            
-            //Illumination
-            if (gain.click.illumination || gain.loop.illumination) dom.find("#illumination").show();
-            else dom.find("#illumination").hide();
-            
-            dom.find("#illumination-click span").html(gain.click.illumination);
-            if (gain.click.illumination) dom.find("#illumination-click").css("visibility", "visible");
-            else dom.find("#illumination-click").css("visibility", "hidden");
-            
-            dom.find("#illumination-loop span").html(gain.loop.illumination);
-            if (gain.loop.illumination) dom.find("#illumination-loop").css("visibility", "visible");
-            else dom.find("#illumination-loop").css("visibility", "hidden");
-
-            //Bien
-            if (gain.click.bien || gain.loop.bien) dom.find("#bien").show();
-            else dom.find("#bien").hide();
-            
-            dom.find("#bien-click span").html(gain.click.bien);
-            if (gain.click.bien) dom.find("#bien-click").css("visibility", "visible");
-            else dom.find("#bien-click").css("visibility", "hidden");
-            
-            dom.find("#bien-loop span").html(gain.loop.bien);
-            if (gain.loop.bien) dom.find("#bien-loop").css("visibility", "visible");
-            else dom.find("#bien-loop").css("visibility", "hidden");
-
-            //Mal
-            if (gain.click.mal || gain.loop.mal) dom.find("#mal").show();
-            else dom.find("#mal").hide();
-            
-            dom.find("#mal-click span").html(gain.click.mal);
-            if (gain.click.mal) dom.find("#mal-click").css("visibility", "visible");
-            else dom.find("#mal-click").css("visibility", "hidden");
-            
-            dom.find("#mal-loop span").html(gain.loop.mal);
-            if (gain.loop.mal) dom.find("#mal-loop").css("visibility", "visible");
-            else dom.find("#mal-loop").css("visibility", "hidden");
-		};
-		
 		this.loop = function(game) {
+		    var listOnglet = Onglets.list();
+		    for (var index in listOnglet) {
+                var onglet = listOnglet[index];
+                if (this.checkOngletAffichable(onglet.conditions)) {
+                    this.unlockOnglet(onglet.name, onglet.start);
+                }
+            }
+		    
 		    var listItem = Items.list();
 		    for (var index in listItem) {
 		        var item = listItem[index];
 		        game.pointManager.addPoints(item.gain().loop);
 		    }
+		    
+		    this.descriptionView.loop(game);
 		};
         
         this.click = function(game) {
@@ -214,39 +111,14 @@ function($, _, Utils, page, Onglets, Items) {
             var that = this;
             
             $("item").on("click", function() {
-            	that.currentItem = $(this).attr("id");
-                that.showDescription(that.currentItem);
+            	that.descriptionView.currentItem = $(this).attr("id");
+                that.descriptionView.show($(this).attr("id"), true);
             });
             
             $("item").hover(function() {
             	$(this).removeClass('out').addClass('in');
             }, function() {
             	$(this).removeClass('in').addClass('out');
-            });
-            
-
-            this.el.find("#description button#nextLevel").click(function() {
-                var itemId = that.currentItem;
-                var item = Items.get(itemId);
-                
-                var restrictions = that.checkRestrictions(item.restrictions);
-                if (!restrictions || restrictions.length == 0) {
-                	var prixOk = that.pointManager.depenser(item.prix());
-                	if (prixOk) {
-	                    if (item.select) item.select(that.parent, that);
-	                	item.level++;
-	                    $(this).attr("level", item.level);
-	                    that.showDescription(itemId);
-	                    return;
-                	}
-                }
-                
-                console.log("petit hackeur !");
-            });
-            
-            this.el.find("#description .close").click(function() {
-            	that.currentItem = null;
-            	that.el.find("#description").hide();
             });
         };
         
@@ -260,13 +132,13 @@ function($, _, Utils, page, Onglets, Items) {
         };
         
         /**
-         * Verifie si il reste des restrictions verifié
+         * Verifie si il reste des restrictions a verifier
          */
         this.checkRestrictions = function(restrictions) {
         	var restrictionsRest = [];
         	for (var index in restrictions) {
         		var restriction = restrictions[index];
-        		if (this.checkRestriction(restriction)) {
+        		if (!this.checkRestriction(restriction)) {
         			restrictionsRest.push(restriction);
         		}
         	}
@@ -274,7 +146,7 @@ function($, _, Utils, page, Onglets, Items) {
         };
         
         /**
-         * Verifie si une restriction est verifié
+         * Verifie si une restriction est verifiée
          */
         this.checkRestriction = function(restriction) {
         	var itemRestrict = Items.get(restriction.name);
@@ -283,6 +155,38 @@ function($, _, Utils, page, Onglets, Items) {
     		}
         	return true;
         };
+
+        /**
+         * Verifie si une amelioration peut etre acheté
+         */
+        this.checkAchetable = function(item, level) {
+            var itemRestrictions = item.restrictions(level);
+            var restrictions = this.checkRestrictions(itemRestrictions);
+            
+            if (!restrictions || restrictions.length == 0) {
+                var prixOk = this.pointManager.checkOk(item.prix(level));
+                return prixOk;
+            }
+            return false;
+        };
+        
+        /**
+         * Verifie si un onglet doit etre afficher
+         */
+        this.checkOngletAffichable = function(conditions) {
+            if (!conditions || conditions.length == 0) return true;
+            
+            for (var index in conditions) {
+                var condition = conditions[index];
+                var itemRestrict = Items.get(condition.name);
+                if (itemRestrict.level < condition.level) {
+                    return false;
+                }
+            }
+            return true;
+        };
+        
+        
 		
 		this.init(parent);
 	};

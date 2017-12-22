@@ -108,6 +108,11 @@
     margin: 5% 2% 3% 2%;
 }
 
+#ameliorations .description .button[disabled="disabled"] {
+	cursor: not-allowed;
+	background-color: #c0c0c0;
+}
+
 #ameliorations #restrictions .categorie {
 	color: #a00e0e;
 }

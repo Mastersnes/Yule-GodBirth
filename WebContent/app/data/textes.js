@@ -106,6 +106,22 @@ define(["jquery"], function($){
 			fr : "Merci de ne pas la modifier ou la partager de fa&ccedil;on commerciale sans notre accord.",
 			en : "Please don't modify and share it commercially without our consent."
 		},
+		"gameOver-1" : {
+		    fr : "L'équilibre de l'univers a été rompus... Vous avez échoué...",
+		    en : "The balance of the universe has been broken... You have failed..."
+		},
+		"gameOver-2" : {
+            fr : "Vous pouvez réessayer en rechargeant le jeu !",
+            en : "You can try again by reloading the game !"
+        },
+        "gameOver-3" : {
+            fr : "Decouvrez nos autres jeux sur <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>.",
+            en : "Discover our other games on <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>."
+        },
+        "gameOver-4" : {
+            fr : "Et si vous voulez nous encouragez, allez faire un tour sur <a target='_blank' alt='Tipeee' href='https://www.tipeee.com/les-jeux-de-bebel/'>Tipeee</a>.",
+            en : "And if you want to encourage us, join us on <a target='_blank' alt='Tipeee' href='https://www.tipeee.com/les-jeux-de-bebel/'>Tipeee</a>."
+        },
 		
 		/**
 		 * Jeu
@@ -236,6 +252,21 @@ define(["jquery"], function($){
         "abysses" : {
             fr : "Abysses",
             en : "-"
+        },
+        /**
+         * Notations
+         */
+        "milliards" : {
+            fr : "Milliards",
+            en : "Billions"
+        },
+        "millions" : {
+            fr : "Millions",
+            en : "Millions"
+        },
+        "mille" : {
+            fr : "Mille",
+            en : "Thousand"
         }
 	};
 	
