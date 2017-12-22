@@ -43,6 +43,7 @@ define(["jquery"], function($){
 	        		};
 	        	};
 	        	this.select = function(game, ameliorations) {
+	        	    game.spaceView.godView.checkLevel();
 	        	};
 			},
 			"dieu" : new function() {
