@@ -18,17 +18,20 @@ function($, _, Utils) {
 
 		this.show = function(itemId, reinitIncr) {
             this.currentItem = itemId;
-		    var item = this.Items.get(itemId);
-            
-            this.fill("#current", item, 0);
             
             if (reinitIncr) this.currentIncr = 1;
-            this.refresh(item);
+            this.refresh();
             
             this.el.show();
         };
         
-        this.refresh = function(item) {
+        this.refresh = function() {
+        	var itemId = this.currentItem;
+		    var item = this.Items.get(itemId);
+        	
+		    if (!item) return;
+		    
+        	this.fill("#current", item, 0);
             this.fill("#next", item, this.currentIncr);
             
             if (!this.parent.checkAchetable(item, item.level+1)) this.el.find(".nextLevel[incr='1']").attr("disabled", "disabled");
@@ -39,7 +42,7 @@ function($, _, Utils) {
             
             if (!this.parent.checkAchetable(item, item.level+100)) this.el.find(".nextLevel[incr='100']").attr("disabled", "disabled");
             else this.el.find(".nextLevel[incr='100']").removeAttr("disabled");
-        }
+        };
         
         /**
          * Permet de remplir les champs de la description
@@ -165,30 +168,28 @@ function($, _, Utils) {
                         item.level+=incr;
                         
                         $("item#"+itemId).attr("level", item.level);
-                        that.show(itemId, false);
+                        that.refresh();
                     }
                 }
             });
 		    
 		    this.el.find(".nextLevel").hover(function() {
-		        var itemId = that.currentItem;
-                var item = that.Items.get(itemId);
 		        that.currentIncr = parseInt($(this).attr("incr"));
-		        
-		        that.refresh(item);
+		        that.refresh();
             });
 		    
 		    this.el.find(".close, mask").click(function() {
-                that.currentItem = null;
-                that.el.hide();
+                that.close();
             });
 		};
 		
+		this.close = function() {
+			this.currentItem = null;
+            this.el.hide();
+		};
+		
 		this.loop = function(game) {
-		    var itemId = this.currentItem;
-            var item = this.Items.get(itemId);
-            
-            if (item) this.refresh(item);
+            this.refresh();
 		};
 		
 		this.init(parent);

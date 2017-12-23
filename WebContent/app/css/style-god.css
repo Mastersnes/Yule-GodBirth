@@ -14,6 +14,19 @@ god {
     background-size: 100% 100%;
 }
 
+god:not(.baby) {
+	animation-name: turn;
+    animation-duration: 100s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes turn {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
 /**
 * Sous forme de poussiere
 **/
