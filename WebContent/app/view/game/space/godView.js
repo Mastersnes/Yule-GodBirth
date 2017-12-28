@@ -41,14 +41,13 @@ define(["jquery",
         	var that = this;
             $("god").click(function() {
                 that.textManager.next();
-                that.gameView.click();
                 that.render();
         	});
         };
         
         this.checkLevel = function() {
-            this.level = parseInt($("god").attr("level"));
-            if (this.type.nbr) {
+        	if (!this.level) this.level=0;
+        	if (this.type.nbr) {
                 this.level++;
                 if (this.level > this.type.nbr) {
                 	if (this.type.next) this.setType(this.type.next);

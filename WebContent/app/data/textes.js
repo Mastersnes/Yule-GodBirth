@@ -126,21 +126,29 @@ define(["jquery"], function($){
 		/**
 		 * Jeu
 		 */
+        "quetes" : {
+        	fr : "Objectifs",
+        	en : "Objectifs"
+        },
 		"croyance" : {
-			fr : "Croyance : ",
-			en : "Croyance : "
+			fr : "Croyance",
+			en : "Croyance"
 		},
 		"illumination" : {
-			fr : "Illumination : ",
-			en : "Illumination : "
+			fr : "Illumination",
+			en : "Illumination"
 		},
 		"bien" : {
-		    fr : "Bien : ",
-		    en : "Bien : "
+		    fr : "Bien",
+		    en : "Bien"
 		},
 		"mal" : {
-		    fr : "Mal : ",
-		    en : "Mal : "
+		    fr : "Mal",
+		    en : "Mal"
+		},
+		"equilibre" : {
+			fr : "Equilibre de l'univers",
+			en : "Equilibre de l'univers"
 		},
 		"level" : {
 			fr : "Level : ",
@@ -157,10 +165,6 @@ define(["jquery"], function($){
 		"gain" : {
 			fr : "Gain : ",
 			en : "Gain : "
-		},
-		"parClick" : {
-			fr : "/click",
-			en : "/click"
 		},
 		"parSec" : {
 			fr : "/sec",

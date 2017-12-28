@@ -28,12 +28,6 @@ define(["jquery"], function($){
 			    this.gain = function (lvl) {
 	        		if (!lvl) lvl = this.level;
 	        		return {
-	        			click : {
-	        				croyance : lvl*20,
-	        				illumination : lvl*30,
-	        				bien : lvl*10,
-	        				mal : -lvl*20
-	        			},
 	        			loop : {
 	        				croyance : lvl*10,
 	        				illumination : lvl*200,
@@ -42,8 +36,10 @@ define(["jquery"], function($){
 	        			}
 	        		};
 	        	};
-	        	this.select = function(game, ameliorations) {
-	        	    game.spaceView.godView.checkLevel();
+	        	this.select = function(game, ameliorations, incr) {
+	        	    for (var i=0; i<incr; i++) {
+	        	    	game.spaceView.godView.checkLevel();
+	        	    }
 	        	    ameliorations.descriptionView.close();
 	        	};
 			},
@@ -62,12 +58,6 @@ define(["jquery"], function($){
 			    this.gain = function (lvl) {
 	        		if (!lvl) lvl = this.level;
 	        		return {
-	        			click : {
-	        				croyance : 0,
-	        				illumination : 0,
-	        				bien : 0,
-	        				mal : 0
-	        			},
 	        			loop : {
 	        				croyance : lvl,
 	        				illumination : 0,
@@ -94,12 +84,6 @@ define(["jquery"], function($){
 			    this.gain = function (lvl) {
 	        		if (!lvl) lvl = this.level;
 	        		return {
-	        			click : {
-	        				croyance : lvl,
-	        				illumination : 0,
-	        				bien : 0,
-	        				mal : 0
-	        			},
 	        			loop : {
 	        				croyance : lvl,
 	        				illumination : 0,
@@ -130,12 +114,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -162,12 +140,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -194,12 +166,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -230,12 +196,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -262,12 +222,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -294,12 +248,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -326,12 +274,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -362,12 +304,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -394,12 +330,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -426,12 +356,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,
@@ -458,12 +382,6 @@ define(["jquery"], function($){
                 this.gain = function (lvl) {
                     if (!lvl) lvl = this.level;
                     return {
-                        click : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : 0,
-                            mal : 0
-                        },
                         loop : {
                             croyance : lvl,
                             illumination : 0,

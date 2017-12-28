@@ -11,3 +11,43 @@
 	margin-right: auto;
 	overflow: hidden;
 }
+
+.goto {
+	cursor: pointer;
+	position: absolute;
+    z-index: 10;
+    bottom: 16%;
+    color: red;
+    transition: background-color 1s;
+}
+.goto:hover {
+	background-color: blue;
+}
+.goto.right {
+	right: 0%;
+}
+.goto.left {
+	left: 0%;
+}
+
+.constellation, .space, .quete {
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%;
+	height: 100%;
+	
+	transition: transform 1s ease-in-out;
+}
+.constellation, .quete {
+	display: none;
+}
+
+.constellation {
+	transform: scale(1) translate(0%, 0%);
+}
+.constellation.zoom[cible="space-star"] {
+	transform: scale(2) translate(25%, 25%);
+}
+.constellation.zoom[cible="quete-star"] {
+	transform: scale(2) translate(-25%, -25%);
+}

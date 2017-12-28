@@ -2,16 +2,16 @@
 define(["jquery",
         'underscore',
         "app/utils/utils",
-        "text!app/template/game/ameliorations.html",
+        "text!app/template/game/space/ameliorations.html",
         "app/data/onglets",
         "app/data/items",
-        "app/view/game/descriptionView"],
+        "app/view/game/space/descriptionView"],
 function($, _, Utils, page, Onglets, Items, DescriptionView) {
 	'use strict';
 
 	return function(parent) {
 		this.init = function(parent) {
-		    this.el = $("#ameliorations");
+		    this.el = "#ameliorations";
 		    this.parent = parent;
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
@@ -26,7 +26,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			var templateData = {
 					text : this.Textes
 			};
-			this.el.html(template(templateData));
+			$(this.el).html(template(templateData));
 			
 			this.descriptionView = new DescriptionView(this);
 			this.descriptionView.makeEvents();
@@ -47,7 +47,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			ongletDom.attr("id",ongletId);
 			ongletDom.attr("title", this.Textes.get(ongletId));
 			ongletDom.html(this.Textes.get(ongletId));
-			this.el.find("onglets").append(ongletDom);
+			$(this.el).find("onglets").append(ongletDom);
 			
 			this.makeOngletEvents(ongletId);
 			
@@ -58,7 +58,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			$("onglet.active").removeClass("active");
 			$("onglet#"+ongletId).addClass("active");
 			
-			this.el.find("content").empty();
+			$(this.el).find("content").empty();
 			
 			var onglet = Onglets.get(ongletId);
 			for (var id in onglet.items) {
@@ -74,11 +74,19 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			
 			var itemDom = $("<item></item>");
 			itemDom.attr("class", item.name);
+			itemDom.attr("title", this.Textes.get(item.name) + " (" + item.level + ")");
 			itemDom.attr("id", item.name);
 			itemDom.attr("level", item.level);
 			itemDom.html("<span></span>");
 			
-			this.el.find("content").append(itemDom);
+			$(this.el).find("content").append(itemDom);
+		};
+		
+		this.refreshItem = function(item) {
+			var itemDom = $("item#"+item.name);
+			if (itemDom.length == 0) return;
+			itemDom.attr("title", this.Textes.get(item.name) + " (" + item.level + ")");
+			itemDom.attr("level", item.level);
 		};
 		
 		this.loop = function(game) {
@@ -94,18 +102,11 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 		    for (var index in listItem) {
 		        var item = listItem[index];
 		        game.pointManager.addPoints(item.gain().loop);
+		        this.refreshItem(item);
 		    }
 		    
 		    this.descriptionView.loop(game);
 		};
-        
-        this.click = function(game) {
-            var listItem = Items.list();
-            for (var index in listItem) {
-                var item = listItem[index];
-                game.pointManager.addPoints(item.gain().click);
-            }
-        };
         
         this.makeItemEvents = function() {
             var that = this;
@@ -160,7 +161,9 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
          * Verifie si une amelioration peut etre acheté
          */
         this.checkAchetable = function(item, level) {
-            var itemRestrictions = item.restrictions(level);
+            if (item.max && level > item.max) return false;
+        	
+        	var itemRestrictions = item.restrictions(level);
             var restrictions = this.checkRestrictions(itemRestrictions);
             
             if (!restrictions || restrictions.length == 0) {

@@ -1,9 +1,12 @@
 'use strict';
 define(["jquery", 
         "app/utils/utils",
-        "app/view/game/godView"], function($, Utils, GodView){
+        "text!app/template/game/space/space.html",
+        "app/view/game/space/godView",
+        "app/view/game/space/ameliorationView"], function($, Utils, page, GodView, AmeliorationView){
     return function(parent){
         this.init = function(parent) {
+        	this.el = $(".space");
             this.maxFront = 3;
             
             this.parent = parent;
@@ -15,16 +18,23 @@ define(["jquery",
             this.eventManager = parent.eventManager;
             this.pointManager = parent.pointManager;
             
-            this.ameliorationView = parent.ameliorationView;
-            
+            this.ameliorationView = new AmeliorationView(this);
             this.godView = new GodView(this);
         };
         
         this.render = function() {
+        	_.templateSettings.variable = "data";
+			var template = _.template(page);
+			var templateData = {
+					text : this.Textes
+			};
+			this.el.html(template(templateData));
+        	
         	this.godView.render();
+        	this.ameliorationView.render();
         };
         
-        this.loop = function() {
+        this.loop = function(game) {
             var mustChangeFront = Utils.rand(0, 1) == 0;
             if (mustChangeFront) {
                 //On change le front
@@ -33,10 +43,16 @@ define(["jquery",
             }
             
             this.godView.loop();
+            this.ameliorationView.loop(game);
         };
         
         this.makeEvents = function() {
         	this.godView.makeEvents();
+        	
+        	var that = this;
+        	this.el.find(".goto").click(function() {
+        		that.parent.showConstellation();
+        	});
         };
         
         this.init(parent);

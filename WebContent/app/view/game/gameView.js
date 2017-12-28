@@ -7,13 +7,14 @@ define(["jquery",
         "app/manager/textManager",
         "app/manager/eventManager",
         "app/manager/pointManager",
-        "app/view/game/spaceView",
-        "app/view/game/ameliorationView",
+        "app/view/game/space/spaceView",
+        "app/view/game/quete/queteView",
+        "app/view/game/constellation/constellationView",
         "app/view/game/endView"
         ],
 function($, _, Utils, page, 
 		SceneManager, TextManager, EventManager, PointManager, 
-		SpaceView, AmeliorationView, EndView) {
+		SpaceView, QueteView, ConstellationView, EndView) {
 	'use strict';
 
 	return function(parent, load, code, Textes, Mediatheque) {
@@ -33,11 +34,14 @@ function($, _, Utils, page,
             this.eventManager = new EventManager(this);
             this.pointManager = new PointManager(this);
 
-            this.ameliorationView = new AmeliorationView(this);
-            this.ameliorationView.render();
-            
             this.spaceView = new SpaceView(this);
             this.spaceView.render();
+
+            this.constellationView = new ConstellationView(this);
+            this.constellationView.render();
+
+            this.queteView = new QueteView(this);
+            this.queteView.render();
 
             this.endView = new EndView(this);
 
@@ -74,9 +78,9 @@ function($, _, Utils, page,
 		this.loop = function() {
 		    if (!this.endGame) {
     		    if (!this.pause) {
-        		    this.spaceView.loop();
+        		    this.spaceView.loop(this);
+        		    this.constellationView.loop(this);
                     this.eventManager.loop();
-                    this.ameliorationView.loop(this);
                     
                     if (this.pointManager.gameOver()) {
                         this.gameOver();
@@ -94,25 +98,34 @@ function($, _, Utils, page,
             this.endView.render();
         };
         
-        this.click = function() {
-            this.ameliorationView.click(this);
-            
-            if (this.pointManager.gameOver()) {
-                this.gameOver();
-            }
+        this.showConstellation = function() {
+        	$(".constellation-star").hide();
+        	$(".constellation").show();
+        	
+        	setTimeout(function() {
+        		$(".constellation").removeClass("zoom");
+        	}, 10);
+        };
+        this.showStar = function(star) {
+        	var cible = $(star.attr("cible"));
+        	
+        	$(".constellation").attr("cible", star.attr("class"));
+        	$(".constellation").addClass("zoom");
+        	setTimeout(function() {
+            	$(".constellation").hide();
+            	cible.show();
+        	}, 1000);
         };
         
         this.makeEvents = function() {
             var that = this;
             
             this.spaceView.makeEvents();
+            this.queteView.makeEvents();
+            this.constellationView.makeEvents();
             
-            $(".text").click(function() {
-            	return true;
-            });
-            $(".text").bind('selectstart', function(){
-            	return false;
-            });
+            $(".text").click(function() {return true;});
+            $(".text").bind('selectstart', function(){return false;});
         };
 		
 		this.init(parent, load, code, Textes, Mediatheque);

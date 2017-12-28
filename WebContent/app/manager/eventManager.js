@@ -2,7 +2,7 @@
 define(["jquery",
         'underscore',
         "app/utils/utils",
-        "text!app/template/game/events.html",
+        "text!app/template/game/space/events.html",
         "app/data/events"
         ],
 function($, _, Utils, page, Events) {
@@ -23,17 +23,32 @@ function($, _, Utils, page, Events) {
 		    var totalEvents = this.typeEvents.concat(this.generalEvents);
 		    if (totalEvents == 0) return;
 		    
-		    var rand = Utils.rand(0, 1000);
+		    var rand = Utils.rand(0, 100);
 		    if (rand == 0) {
-		        var randIndex = Utils.rand(0, totalEvents.length);
-		        var randEvent = Events.get(totalEvents[randIndex]);
-		        var appair = true;
-		        if (randEvent.rarity) appair = Utils.rand(0, randEvent.rarity) == 0;
-		        if (appair) {
-		            this.currentEvent = randEvent;
-		            this.show();
-		        }
+		    	var randEvent;
+		    	var limit = 0;
+		    	while (!this.checkEvent(randEvent) && limit < 100) {
+			        var randIndex = Utils.rand(0, totalEvents.length);
+			        randEvent = Events.get(totalEvents[randIndex]);
+			        limit++;
+		    	}
+		        
+	            this.currentEvent = randEvent;
+	            if (this.currentEvent.unique) this.uniquesEvent.push(this.currentEvent.name);
+	            this.show();
 		    }
+		};
+		
+		this.checkEvent = function(randEvent) {
+			if (!randEvent) return false;
+			var isOk = true;
+			if (randEvent.unique) {
+				isOk = this.uniquesEvent.indexOf(randEvent.name) < 0;
+			}
+			if (randEvent.rarity) {
+				isOk = Utils.rand(0, randEvent.rarity) == 0;
+			}
+			return isOk;
 		};
 		
 		this.show = function() {

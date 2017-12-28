@@ -1,0 +1,29 @@
+
+/**
+* Constellation
+**/
+etoile {
+	cursor: pointer;
+	position: absolute;
+	width: 10%;height: 10%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+etoile > span {
+	position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    
+    font-size: 2vh !important;
+    text-align: center;
+    color: beige;
+    background-color: black;
+}
+etoile.space-star {
+	top: 20%;left: 20%;
+	background-image: url("../img/game/god/egg/1.png");
+}
+etoile.quete-star {
+	top: 70%;left: 70%;
+	background-image: url("../img/game/god/egg/2.png");
+}

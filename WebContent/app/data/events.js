@@ -2,6 +2,7 @@
 define(["jquery"], function($){
 	var data = {
 			"baby-event1" : {
+				name : "baby-event1",
 			    text : "test-baby-event1",
 			    actions : [
 			         {
@@ -19,6 +20,7 @@ define(["jquery"], function($){
 			    ]
 			},
 			"baby-event2" : {
+				name : "baby-event2",
                 text : "test-baby-event2",
                 actions : [
                      {
@@ -36,6 +38,7 @@ define(["jquery"], function($){
                 ]
             },
             "general-event1" : {
+            	name : "general-event1",
                 text : "test-general-event1",
                 actions : [
                      {
@@ -53,6 +56,7 @@ define(["jquery"], function($){
                 ]
             },
             "general-event2" : {
+            	name : "general-event2",
                 text : "test-general-event2",
                 actions : [
                      {

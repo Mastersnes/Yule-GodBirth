@@ -12,14 +12,18 @@ function($, _, Utils) {
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
             this.Items = parent.Items;
+            this.refreshMax = false;
             
             this.pointManager = parent.pointManager;
 		};
 
 		this.show = function(itemId, reinitIncr) {
-            this.currentItem = itemId;
+			this.currentItem = itemId;
             
-            if (reinitIncr) this.currentIncr = 1;
+            if (reinitIncr) {
+            	this.currentIncr = 1;
+            	this.refreshMax = false;
+            }
             this.refresh();
             
             this.el.show();
@@ -31,6 +35,9 @@ function($, _, Utils) {
         	
 		    if (!item) return;
 		    
+		    var maxIncr = this.getMaxIncr(item);
+            if (this.refreshMax) this.currentIncr = maxIncr;
+		    
         	this.fill("#current", item, 0);
             this.fill("#next", item, this.currentIncr);
             
@@ -40,8 +47,10 @@ function($, _, Utils) {
             if (!this.parent.checkAchetable(item, item.level+10)) this.el.find(".nextLevel[incr='10']").attr("disabled", "disabled");
             else this.el.find(".nextLevel[incr='10']").removeAttr("disabled");
             
-            if (!this.parent.checkAchetable(item, item.level+100)) this.el.find(".nextLevel[incr='100']").attr("disabled", "disabled");
-            else this.el.find(".nextLevel[incr='100']").removeAttr("disabled");
+            this.el.find(".nextLevel#max").attr("incr", maxIncr);
+            this.el.find(".nextLevel#max span").html("+" + maxIncr);
+            if (maxIncr == 0) this.el.find(".nextLevel#max").attr("disabled", "disabled");
+            else this.el.find(".nextLevel#max").removeAttr("disabled");
         };
         
         /**
@@ -91,11 +100,11 @@ function($, _, Utils) {
              */
             var prix = item.prix(level);
             if (prix) {
-                dom.find("#croyance-prix span").html(Utils.format(prix.croyance, true, this.Textes));
+                dom.find("#croyance-prix > span").html(Utils.format(prix.croyance, true, this.Textes));
                 if (prix.croyance) dom.find("#croyance-prix").show();
                 else dom.find("#croyance-prix").hide();
     
-                dom.find("#illumination-prix span").html(Utils.format(prix.illumination, true, this.Textes));
+                dom.find("#illumination-prix > span").html(Utils.format(prix.illumination, true, this.Textes));
                 if (prix.illumination) dom.find("#illumination-prix").show();
                 else dom.find("#illumination-prix").hide();
             }
@@ -105,76 +114,60 @@ function($, _, Utils) {
              */
             //Croyance
             var gain = item.gain(level);
-            if (gain.click.croyance || gain.loop.croyance) dom.find("#croyance").show();
-            else dom.find("#croyance").hide();
-            
-            dom.find("#croyance-click span").html(Utils.format(gain.click.croyance, true, this.Textes));
-            if (gain.click.croyance) dom.find("#croyance-click").css("visibility", "visible");
-            else dom.find("#croyance-click").css("visibility", "hidden");
             
             dom.find("#croyance-loop span").html(Utils.format(gain.loop.croyance, true, this.Textes));
-            if (gain.loop.croyance) dom.find("#croyance-loop").css("visibility", "visible");
-            else dom.find("#croyance-loop").css("visibility", "hidden");
+            if (gain.loop.croyance) dom.find("#croyance").show();
+            else dom.find("#croyance").hide();
             
             //Illumination
-            if (gain.click.illumination || gain.loop.illumination) dom.find("#illumination").show();
-            else dom.find("#illumination").hide();
-            
-            dom.find("#illumination-click span").html(Utils.format(gain.click.illumination, true, this.Textes));
-            if (gain.click.illumination) dom.find("#illumination-click").css("visibility", "visible");
-            else dom.find("#illumination-click").css("visibility", "hidden");
-            
             dom.find("#illumination-loop span").html(Utils.format(gain.loop.illumination, true, this.Textes));
-            if (gain.loop.illumination) dom.find("#illumination-loop").css("visibility", "visible");
-            else dom.find("#illumination-loop").css("visibility", "hidden");
+            if (gain.loop.illumination) dom.find("#illumination").show();
+            else dom.find("#illumination").hide();
 
             //Bien
-            if (gain.click.bien || gain.loop.bien) dom.find("#bien").show();
-            else dom.find("#bien").hide();
-            
-            dom.find("#bien-click span").html(Utils.format(gain.click.bien, true, this.Textes));
-            if (gain.click.bien) dom.find("#bien-click").css("visibility", "visible");
-            else dom.find("#bien-click").css("visibility", "hidden");
-            
             dom.find("#bien-loop span").html(Utils.format(gain.loop.bien, true, this.Textes));
-            if (gain.loop.bien) dom.find("#bien-loop").css("visibility", "visible");
-            else dom.find("#bien-loop").css("visibility", "hidden");
+            if (gain.loop.bien) dom.find("#bien").show();
+            else dom.find("#bien").hide();
 
             //Mal
-            if (gain.click.mal || gain.loop.mal) dom.find("#mal").show();
-            else dom.find("#mal").hide();
-            
-            dom.find("#mal-click span").html(Utils.format(gain.click.mal, true, this.Textes));
-            if (gain.click.mal) dom.find("#mal-click").css("visibility", "visible");
-            else dom.find("#mal-click").css("visibility", "hidden");
-            
             dom.find("#mal-loop span").html(Utils.format(gain.loop.mal, true, this.Textes));
-            if (gain.loop.mal) dom.find("#mal-loop").css("visibility", "visible");
-            else dom.find("#mal-loop").css("visibility", "hidden");
+            if (gain.loop.mal) dom.find("#mal").show();
+            else dom.find("#mal").hide();
+        };
+        
+        this.getMaxIncr = function(item) {
+        	var incr = 0;
+        	while(this.parent.checkAchetable(item, item.level+incr+1)) {
+        		incr++;
+        	}
+        	return incr;
         };
         
 		this.makeEvents = function() {
 		    var that = this;
 		    
 		    this.el.find(".nextLevel").click(function() {
-		        var incr = parseInt($(this).attr("incr"));
+		    	var incr = parseInt($(this).attr("incr"));
+		    	
                 var itemId = that.currentItem;
                 var item = that.Items.get(itemId);
                 var level = item.level+incr;
                 
                 if (that.parent.checkAchetable(item, level)) {
                     if (that.pointManager.depenser(item.prix(level))) {
-                        if (item.select) item.select(that.parent.parent, that.parent);
+                        if (item.level == 0) that.close();
                         item.level+=incr;
-                        
                         $("item#"+itemId).attr("level", item.level);
+                        
+                        if (item.select) item.select(that.parent.parent.parent, that.parent, incr);
                         that.refresh();
                     }
                 }
             });
 		    
 		    this.el.find(".nextLevel").hover(function() {
-		        that.currentIncr = parseInt($(this).attr("incr"));
+		        that.refreshMax = $(this).attr("id") == "max";
+		    	that.currentIncr = parseInt($(this).attr("incr"));
 		        that.refresh();
             });
 		    

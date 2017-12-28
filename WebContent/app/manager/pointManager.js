@@ -31,6 +31,16 @@ function($, _, Utils) {
 		    
 		    $("mal .text").html(Utils.format(this.points.mal, true, this.Textes));
 		    if (this.points.mal > 0) $("mal").show();
+		    
+		    var total = this.points.bien + this.points.mal;
+		    var bienPercent = Utils.toPercent(this.points.bien, total);
+		    
+		    $("jauge yang").css({
+		    	width : bienPercent + "%"
+		    });
+		    $("jauge yinyang").css({
+		    	left : (bienPercent - 2.25) + "%"
+		    });
 		};
 		
 		this.addPoints = function(points) {
@@ -61,7 +71,12 @@ function($, _, Utils) {
 		};
 		
 		this.gameOver = function() {
-		    return (this.points.bien * this.points.mal) <= 0;
+			var total = this.points.bien + this.points.mal;
+		    var bienPercent = Utils.toPercent(this.points.bien, total);
+			
+			return ((this.points.bien * this.points.mal) <= 0) 
+			|| bienPercent > 90
+			|| bienPercent < 10;
 		};
 		
 		this.init(parent);

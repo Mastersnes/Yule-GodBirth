@@ -51,7 +51,7 @@
     transition: all 300ms;
 }
 
-.ameliorations item[level="0"]:not(.error) {
+.ameliorations item[level="0"] {
 	filter: grayscale(1);
     -webkit-filter: grayscale(1);
     -moz-filter: grayscale(1);
@@ -64,73 +64,4 @@
 	width: 100%; height: 100%;
 	background-repeat: no-repeat;
     background-size: 100% 100%;
-}
-
-.ameliorations item.error {
-	animation-name: item-error;
-    animation-duration: 1s;
-}
-
-@keyframes item-error {
-    0% {background-color: #1A1A1A;}
-    50% {background-color: #b90f0b;}
-    100% {background-color: #1A1A1A;}
-}
-
-/**
-* Description
-**/
-#ameliorations .description {
-	background-color: gray;
-	border: 2px solid black;
-	padding: 1%;
-	text-align: center;
-}
-#ameliorations .description .titre {
-	font-weight: bold;
-	font-size: 2em;
-}
-#ameliorations .description .text {
-	font-size: 1.2em;
-}
-#ameliorations .description .categorie {
-	width: 20%;
-	padding: 0% 2% 1% 2%;
-	display: inline-block;
-}
-
-#ameliorations .description .button {
-	cursor: pointer;
-	width: 15%;
-	
-    border-radius: 10%;
-    background-color: red;
-    margin: 5% 2% 3% 2%;
-}
-
-#ameliorations .description .button[disabled="disabled"] {
-	cursor: not-allowed;
-	background-color: #c0c0c0;
-}
-
-#ameliorations #restrictions .categorie {
-	color: #a00e0e;
-}
-#ameliorations #restrictions .categorie.ok {
-	color: #35d035;
-}
-
-#ameliorations #restrictions .categorie .text {
-    vertical-align: super;
-}
-#ameliorations #restrictions .categorie .icon {
-    display: inline-block;
-    width: 10%; height: 2%;
-    
-    background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-image: url("../img/game/interface/icones/bien.png");
-}
-#ameliorations #restrictions .categorie.ok .icon {
-    background-image: url("../img/game/interface/icones/mal.png");
 }
