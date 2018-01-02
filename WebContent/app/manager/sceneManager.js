@@ -15,6 +15,9 @@ define(["jquery",
             this.resize();
         };
         
+        /**
+         * Redimensionne la fenetre en fonction du ratio de l'ecran
+         */
         this.resize = function() {
             var w = $("body").width();
             var h = $("body").height();

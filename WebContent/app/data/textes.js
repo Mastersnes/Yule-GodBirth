@@ -258,6 +258,18 @@ define(["jquery"], function($){
             en : "-"
         },
         /**
+         * Quetes
+         */
+        "quete-1" : {
+        	fr : "Faites grandir la Terre et donnez-lui la force necessaire pour donner la vie",
+        	en : "Faites grandir la Terre et donnez-lui la force necessaire pour donner la vie"
+        },
+        "quete-2" : {
+        	fr : "Faites jaillir la lumiere du Soleil sur le monde",
+        	en : "Faites jaillir la lumiere du Soleil sur le monde"
+        },
+        
+        /**
          * Notations
          */
         "milliards" : {

@@ -22,6 +22,9 @@ function($, _, page) {
 			this.visible = true;
 		};
 		
+		/**
+		 * Passe au texte suivant jusqu'a la fin, appel ensuite le callback specifié
+		 */
 		this.next = function() {
 		    if (!this.visible || this.ids[this.current] == "fin") return;
 		    

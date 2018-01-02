@@ -43,6 +43,9 @@ function($, _, Utils) {
 		    });
 		};
 		
+		/**
+		 * Ajoute les points
+		 */
 		this.addPoints = function(points) {
 		    this.points.croyance += points.croyance;
 		    this.points.illumination += points.illumination;
@@ -54,12 +57,19 @@ function($, _, Utils) {
 		    this.render();
 		};
 		
+		/**
+		 * Verifie si l'on assez pour ce prix
+		 */
 		this.checkOk = function(prix) {
 		    if (this.points.croyance >= prix.croyance && this.points.illumination >= prix.illumination) {
 		        return true;
 		    }
 		    return false;
 		};
+		
+		/**
+		 * Depense les points que l'on a en fonction du prix
+		 */
 		this.depenser = function(prix) {
 		    if (this.checkOk(prix)) {
 		        this.points.croyance -= prix.croyance;
@@ -70,6 +80,9 @@ function($, _, Utils) {
 		    return false;
 		};
 		
+		/**
+		 * Condition de gameOver si le bien ou le mal prennent le pas l'un sur l'autre
+		 */
 		this.gameOver = function() {
 			var total = this.points.bien + this.points.mal;
 		    var bienPercent = Utils.toPercent(this.points.bien, total);

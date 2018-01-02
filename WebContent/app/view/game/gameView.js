@@ -107,13 +107,15 @@ function($, _, Utils, page,
         	}, 10);
         };
         this.showStar = function(star) {
-        	var cible = $(star.attr("cible"));
+        	var cible = star.attr("cible");
         	
         	$(".constellation").attr("cible", star.attr("class"));
         	$(".constellation").addClass("zoom");
+        	
+        	var that = this;
         	setTimeout(function() {
             	$(".constellation").hide();
-            	cible.show();
+            	that[cible + "View"].show();
         	}, 1000);
         };
         
@@ -121,7 +123,6 @@ function($, _, Utils, page,
             var that = this;
             
             this.spaceView.makeEvents();
-            this.queteView.makeEvents();
             this.constellationView.makeEvents();
             
             $(".text").click(function() {return true;});

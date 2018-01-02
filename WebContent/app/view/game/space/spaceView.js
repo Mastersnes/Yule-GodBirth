@@ -34,6 +34,10 @@ define(["jquery",
         	this.ameliorationView.render();
         };
         
+        this.show = function() {
+        	this.el.show();
+        };
+        
         this.loop = function(game) {
             var mustChangeFront = Utils.rand(0, 1) == 0;
             if (mustChangeFront) {

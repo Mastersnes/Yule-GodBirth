@@ -22,7 +22,7 @@ define(["jquery", "sha"], function($, sha, clipboard){
 	            }
 	        });
 		},
-	
+		
 		rand : function(pMin, pMax) {
 		  var min = Math.ceil(pMin);
 		  var max = Math.floor(pMax);
