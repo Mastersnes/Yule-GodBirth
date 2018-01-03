@@ -2,8 +2,9 @@
 define(["jquery", 
         "app/utils/utils",
         "text!app/template/game/quete/quete.html",
-        "app/data/quetes"], 
-        function($, Utils, page, Quetes){
+        "app/data/quetes",
+        "app/view/game/quete/detailView"], 
+        function($, Utils, page, Quetes, DetailView){
     return function(parent){
         this.init = function(parent) {
         	this.el = $(".quete");
@@ -13,7 +14,7 @@ define(["jquery",
             this.mediatheque = parent.mediatheque;
             
             this.ameliorationView = this.parent.spaceView.ameliorationView;
-
+            
             this.complete = [];
         };
         
@@ -21,11 +22,12 @@ define(["jquery",
         	_.templateSettings.variable = "data";
 			var template = _.template(page);
 			var templateData = {
-					text : this.Textes,
-					quetes : Quetes.list(),
-					complete : this.complete
+					text : this.Textes
 			};
 			this.el.html(template(templateData));
+			
+			this.detailView = new DetailView(this);
+			this.detailView.render();
 			
 			this.refresh();
 			this.makeEvents();
@@ -73,6 +75,23 @@ define(["jquery",
         };
         
         /**
+         * Verifie si une quete est reussie
+         */
+        this.checkComplete = function(quete) {
+        	if (!this.checkDraw(quete)) return false;
+        	
+        	// Si au moins une des ameliorations n'a pas le niveau necessaire, la quete n'est pas complete
+        	var checkAmeliorations = quete.conditions;
+        	for (var indexAmelioration in checkAmeliorations) {
+        		var ameliorationToCheck = checkAmeliorations[indexAmelioration];
+        		var amelioration = this.ameliorationView.Items.get(ameliorationToCheck.name);
+        		if (amelioration.level < ameliorationToCheck.level) return false;
+        	}
+        	
+        	return true;
+        };
+        
+        /**
          * Affiche la quete
          */
         this.drawQuete = function(quete) {
@@ -81,6 +100,7 @@ define(["jquery",
         	queteDom.addClass("h-center");
         	
         	var queteCheck = $("<collecte></collecte>");
+        	if (this.checkComplete(quete)) queteCheck.addClass("complete");
         	queteDom.append(queteCheck);
 
         	var queteContent = $("<content></content>");
@@ -94,6 +114,19 @@ define(["jquery",
         };
         
         this.loop = function(game) {
+        	var quetes = Quetes.list();
+        	for (var index in quetes) {
+        		var quete = quetes[index];
+        		this.refreshQuete(quete);
+        	}
+        	
+        	this.detailView.loop();
+        };
+        
+        this.refreshQuete = function(quete) {
+        	var queteDom = $("quete#"+quete.name);
+        	if (this.checkComplete(quete)) queteDom.find("collecte").addClass("complete");
+        	else queteDom.find("collecte").removeClass("complete");
         };
         
         this.makeEvents = function() {
@@ -101,6 +134,15 @@ define(["jquery",
         	this.el.find(".goto").click(function() {
         		that.parent.showConstellation();
         	});
+        	
+        	this.el.find("quete").click(function() {
+        		var queteId = $(this).attr("id");
+        		var quete = Quetes.get(queteId);
+        		
+        		that.detailView.show(quete);
+        	});
+        	
+        	this.detailView.makeEvents();
         };
         
         this.init(parent);

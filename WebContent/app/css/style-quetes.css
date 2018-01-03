@@ -11,16 +11,24 @@ quetes {
 }
 
 quetes > quete {
+	cursor: pointer;
 	position: relative !important;
 	display: block;
 	width: 80%;height: 10%;
 	margin-top: 1%;
 }
 quetes > quete collecte {
+	cursor: not-allowed;
 	display: inline-block;
 	width: 10%;height: 100%;	
+	
+	background-color: gray;
+}
+quetes > quete collecte.complete {
+	cursor: pointer;
 	background-color: yellow;
 }
+
 quetes > quete content {
 	position: absolute;
 	display: inline-block;

@@ -79,6 +79,7 @@ function($, _, Utils, page,
 		    if (!this.endGame) {
     		    if (!this.pause) {
         		    this.spaceView.loop(this);
+        		    this.queteView.loop(this);
         		    this.constellationView.loop(this);
                     this.eventManager.loop();
                     
@@ -123,6 +124,7 @@ function($, _, Utils, page,
             var that = this;
             
             this.spaceView.makeEvents();
+            this.queteView.makeEvents();
             this.constellationView.makeEvents();
             
             $(".text").click(function() {return true;});

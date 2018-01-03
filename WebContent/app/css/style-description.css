@@ -1,33 +1,33 @@
 /**
 * Description
 **/
-#ameliorations .description {
+.popup-game {
 	padding: 1%;
 	text-align: center;
 	
 	color: #c6c6e6;
 	
-	width: auto;
-    height: auto;
+	width: auto !important;
+    height: auto !important;
     max-height: 100%;
     max-width: 90%;
 }
-#ameliorations .description .titre {
+.popup-game .titre {
 	font-weight: bold;
 	font-size: 2.5vh;
 	color: #9379e0;
 }
-#ameliorations .description .text {
+.popup-game .text {
 	font-size: 2vh;
 }
-#ameliorations .description .categorie {
+.popup-game .categorie {
 	width: 20%;
 	padding: 0% 2% 1% 2%;
 	display: inline-block;
 	vertical-align: middle;
 }
 
-#ameliorations .description .button {
+.popup-game .button {
 	cursor: pointer;
 	width: 15%; height: 4%;
     margin: 5% 2% 3% 2%;
@@ -37,12 +37,12 @@
 	background-image: url("../img/game/interface/bouton/on.png");
 }
 
-#ameliorations .description .button span {
+.popup-game .button span {
 	display: block;
     margin-top: 4%;
 }
 
-#ameliorations .description .button[disabled="disabled"] {
+.popup-game .button[disabled="disabled"] {
 	cursor: not-allowed;
 	
 	background-repeat: no-repeat;
@@ -50,14 +50,14 @@
 	background-image: url("../img/game/interface/bouton/off.png");
 }
 
-#ameliorations #restrictions .categorie {
+#restrictions .categorie {
 	color: #a00e0e;
 }
-#ameliorations #restrictions .categorie.ok {
+#restrictions .categorie.ok {
 	color: #35d035;
 }
 
-#ameliorations .categorie .icon {
+.categorie .icon {
 	display: inline-block;
     width: 10%; height: 2%;
     
@@ -65,10 +65,10 @@
 	background-size: 100% 100%;
 }
 
-#ameliorations .categorie.croyance .icon {background-image: url("../img/game/interface/icones/croyance.png");}
-#ameliorations .categorie.illumination .icon {background-image: url("../img/game/interface/icones/illumination.png");}
-#ameliorations .categorie.bien .icon {background-image: url("../img/game/interface/icones/bien.png");}
-#ameliorations .categorie.mal .icon {background-image: url("../img/game/interface/icones/mal.png");}
+.categorie.croyance .icon {background-image: url("../img/game/interface/icones/croyance.png");}
+.categorie.illumination .icon {background-image: url("../img/game/interface/icones/illumination.png");}
+.categorie.bien .icon {background-image: url("../img/game/interface/icones/bien.png");}
+.categorie.mal .icon {background-image: url("../img/game/interface/icones/mal.png");}
 
-#ameliorations #restrictions .categorie .icon {background-image: url("../img/game/interface/icones/mal.png");}
-#ameliorations #restrictions .categorie.ok .icon {background-image: url("../img/game/interface/icones/bien.png");}
+#restrictions .categorie .icon {background-image: url("../img/game/interface/icones/mal.png");}
+#restrictions .categorie.ok .icon {background-image: url("../img/game/interface/icones/bien.png");}
