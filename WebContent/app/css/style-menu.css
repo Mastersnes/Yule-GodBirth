@@ -124,7 +124,7 @@ a {
 	background-image: url("../img/menu/flag/en.jpg");
 }
 
-.close {
+.close-button {
 	width: 6% !important; height: 7vh !important;
 	position: absolute !important;
 	opacity : 1 !important;
@@ -133,7 +133,7 @@ a {
 	background-repeat: no-repeat !important;
     background-size: 100% 100% !important;
 }
-.close:hover {
+.close-button:hover {
 	animation-name: close-turn;
     animation-duration: 1s;
     animation-fill-mode: forwards;

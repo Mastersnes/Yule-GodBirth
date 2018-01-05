@@ -12,7 +12,9 @@ define(["jquery",
             this.parent = parent;
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
+            this.Quetes = Quetes;
             
+            this.pointManager = this.parent.pointManager;
             this.ameliorationView = this.parent.spaceView.ameliorationView;
             
             this.complete = [];
@@ -84,11 +86,19 @@ define(["jquery",
         	var checkAmeliorations = quete.conditions;
         	for (var indexAmelioration in checkAmeliorations) {
         		var ameliorationToCheck = checkAmeliorations[indexAmelioration];
-        		var amelioration = this.ameliorationView.Items.get(ameliorationToCheck.name);
-        		if (amelioration.level < ameliorationToCheck.level) return false;
+        		if (!this.checkCondition(ameliorationToCheck)) return false;
         	}
         	
         	return true;
+        };
+        
+        /**
+         * Verifie la condition d'une quete
+         */
+        this.checkCondition = function(condition) {
+            var amelioration = this.ameliorationView.Items.get(condition.name);
+            if (amelioration.level < condition.level) return false;
+            return true;
         };
         
         /**
@@ -129,6 +139,20 @@ define(["jquery",
         	else queteDom.find("collecte").removeClass("complete");
         };
         
+        /**
+         * Complete la quete
+         */
+        this.completeQuete = function(quete, queteId) {
+            if (!quete) quete = Quetes.get(queteId);
+            
+            if (!this.checkComplete(quete)) return;
+            this.complete.push(quete.name);
+            
+            this.pointManager.addPoints(quete.gains);
+            
+            this.refresh();
+        };
+        
         this.makeEvents = function() {
         	var that = this;
         	this.el.find(".goto").click(function() {
@@ -137,9 +161,12 @@ define(["jquery",
         	
         	this.el.find("quete").click(function() {
         		var queteId = $(this).attr("id");
-        		var quete = Quetes.get(queteId);
-        		
-        		that.detailView.show(quete);
+        		that.detailView.show(queteId);
+        	});
+
+        	this.el.find("collecte").click(function() {
+        	    var queteId = $(this).attr("id");
+        	    that.completeQuete(null, queteId);
         	});
         	
         	this.detailView.makeEvents();
