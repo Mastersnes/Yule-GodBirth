@@ -43,7 +43,8 @@ define(["jquery",
             /**
              * Titre
              */
-            dom.find("titre").html(this.Textes.get(quete.name));
+            dom.find("#nom").html(this.Textes.get(quete.name));
+            dom.find("#descr").html(this.Textes.get(quete.description));
             
             /**
              * Conditions
@@ -116,13 +117,13 @@ define(["jquery",
         this.makeEvents = function() {
         	var that = this;
         	
-        	this.el.find(".close, mask").click(function() {
+        	this.el.find(".close-button, mask").click(function() {
                 that.close();
             });
         	this.el.find("#collecte").click(function() {
         	    var quete = that.currentQuete;
         	    if (!quete) return;
-        	    that.parent.completeQuete(quete);
+        	    if (!that.parent.completeQuete(quete)) return;
         	    that.close();
         	});
         };

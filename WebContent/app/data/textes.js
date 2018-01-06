@@ -171,7 +171,7 @@ define(["jquery"], function($){
 			en : "/sec"
 		},
 		/**
-		 * Ameliorations - Onlets
+		 * Ameliorations - Onglets
 		 */
 		"deite" : {
             fr : "Deités",
@@ -188,6 +188,10 @@ define(["jquery"], function($){
         "mort" : {
             fr : "Mort",
             en : "Death"
+        },
+        "incarnation" : {
+        	fr : "Incarnation",
+        	en : "Incarnation"
         },
         /**
          * Ameliorations - Deites
@@ -261,10 +265,18 @@ define(["jquery"], function($){
          * Quetes
          */
         "quete-1" : {
+        	fr : "Les debuts de la terre",
+        	en : "Les debuts de la terre"
+        },
+        "quete-1-desc" : {
         	fr : "Faites grandir la Terre et donnez-lui la force necessaire pour donner la vie",
         	en : "Faites grandir la Terre et donnez-lui la force necessaire pour donner la vie"
         },
         "quete-2" : {
+        	fr : "La lumiere eternelle",
+        	en : "La lumiere eternelle"
+        },
+        "quete-2-desc" : {
         	fr : "Faites jaillir la lumiere du Soleil sur le monde",
         	en : "Faites jaillir la lumiere du Soleil sur le monde"
         },

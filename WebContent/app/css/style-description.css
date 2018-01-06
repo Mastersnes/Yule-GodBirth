@@ -12,6 +12,10 @@
     max-height: 100%;
     max-width: 90%;
 }
+.popup-game #description {
+	margin-bottom: 2%;
+}
+
 .popup-game .titre {
 	font-weight: bold;
 	font-size: 2.5vh;
@@ -50,10 +54,10 @@
 	background-image: url("../img/game/interface/bouton/off.png");
 }
 
-#restrictions .categorie {
+#restrictions .categorie, #prix .categorie {
 	color: #a00e0e;
 }
-#restrictions .categorie.ok {
+#restrictions .categorie.ok, #prix .categorie.ok {
 	color: #35d035;
 }
 

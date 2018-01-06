@@ -125,11 +125,12 @@ a {
 }
 
 .close-button {
+	cursor: pointer;
 	width: 6% !important; height: 7vh !important;
 	position: absolute !important;
 	opacity : 1 !important;
 	
-	background-image: url("../img/game/interface/croix/0.png") !important;
+	background-image: url("../img/game/interface/croix/0.png");
 	background-repeat: no-repeat !important;
     background-size: 100% 100% !important;
 }
@@ -139,6 +140,24 @@ a {
     animation-fill-mode: forwards;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+
+	-webkit-animation-name: close-turn;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: close-turn;
+    -moz-animation-duration: 1s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: close-turn;
+    -o-animation-duration: 1s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
 }
 
 @keyframes close-turn {

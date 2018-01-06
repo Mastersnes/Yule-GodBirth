@@ -11,15 +11,15 @@ define(["jquery"], function($){
 			    conditions : [
 			         {
 			             name : "grandTout",
-			             level : 2
+			             level : 3
 			         },
 			         {
                          name : "dieu",
-                         level : 1
+                         level : 2
                      },
                      {
                          name : "deesse",
-                         level : 1
+                         level : 2
                      }
 			    ],
 				name : "univers",
@@ -29,15 +29,15 @@ define(["jquery"], function($){
 			    conditions : [
                      {
                          name : "terre",
-                         level : 3
-                     },
-                     {
-                         name : "lune",
-                         level : 3
+                         level : 10
                      },
                      {
                          name : "soleil",
-                         level : 3
+                         level : 10
+                     },
+                     {
+                         name : "deesse",
+                         level : 10
                      }
                 ],
 				name : "vie",
@@ -46,16 +46,16 @@ define(["jquery"], function($){
 			"mort" : {
 			    conditions : [
                      {
-                         name : "terre",
-                         level : 3
-                     },
-                     {
                          name : "lune",
-                         level : 3
+                         level : 10
                      },
                      {
                          name : "soleil",
-                         level : 3
+                         level : 10
+                     },
+                     {
+                         name : "dieu",
+                         level : 10
                      }
                 ],
 				name : "mort",

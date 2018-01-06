@@ -114,9 +114,14 @@ define(["jquery",
         	queteDom.append(queteCheck);
 
         	var queteContent = $("<content></content>");
+	        	var queteTitre = $("<div></div>");
+	        	queteTitre.addClass("text underline");
+	        	queteTitre.html(this.Textes.get(quete.name));
+	        	queteContent.append(queteTitre);
+	        	
 	        	var queteText = $("<div></div>");
 	        	queteText.addClass("text");
-	        	queteText.html(this.Textes.get(quete.name));
+	        	queteText.html(this.Textes.get(quete.description));
 	        	queteContent.append(queteText);
         	queteDom.append(queteContent);
         	
@@ -145,12 +150,13 @@ define(["jquery",
         this.completeQuete = function(quete, queteId) {
             if (!quete) quete = Quetes.get(queteId);
             
-            if (!this.checkComplete(quete)) return;
+            if (!this.checkComplete(quete)) return false;
             this.complete.push(quete.name);
             
             this.pointManager.addPoints(quete.gains);
             
             this.refresh();
+            return true;
         };
         
         this.makeEvents = function() {

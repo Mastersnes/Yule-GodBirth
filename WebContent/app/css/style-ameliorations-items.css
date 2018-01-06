@@ -8,11 +8,35 @@
 	animation-name: dieu-out;
     animation-duration: 0.25s;
     animation-fill-mode: both;
+
+	-webkit-animation-name: dieu-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: dieu-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: dieu-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
 }
 .ameliorations item.dieu.in span {
 	animation-name: dieu-in;
     animation-duration: 0.25s;
     animation-fill-mode: both;
+    
+    -webkit-animation-name: dieu-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: dieu-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: dieu-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
 }
 
 @keyframes dieu-in {
@@ -40,11 +64,35 @@
 	animation-name: deesse-out;
     animation-duration: 0.25s;
     animation-fill-mode: both;
+    
+    -webkit-animation-name: deesse-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: deesse-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: deesse-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
 }
 .ameliorations item.deesse.in span {
 	animation-name: deesse-in;
     animation-duration: 0.25s;
     animation-fill-mode: both;
+    
+    -webkit-animation-name: deesse-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: deesse-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: deesse-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
 }
 
 @keyframes deesse-in {
@@ -72,11 +120,35 @@
 	animation-name: grandTout-out;
     animation-duration: 0.25s;
     animation-fill-mode: both;
+    
+    -webkit-animation-name: grandTout-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: grandTout-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: grandTout-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
 }
 .ameliorations item.grandTout.in span {
 	animation-name: grandTout-in;
     animation-duration: 0.25s;
     animation-fill-mode: both;
+    
+    -webkit-animation-name: grandTout-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: grandTout-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: grandTout-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
 }
 
 @keyframes grandTout-in {

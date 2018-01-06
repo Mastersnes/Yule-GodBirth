@@ -98,14 +98,24 @@ function($, _, Utils) {
             /**
              * PRIX
              */
+            var pointPossede = this.pointManager.points;
             var prix = item.prix(level);
             if (prix) {
                 dom.find("#croyance-prix > span").html(Utils.format(prix.croyance, true, this.Textes));
-                if (prix.croyance) dom.find("#croyance-prix").show();
+                if (prix.croyance) {
+                	dom.find("#croyance-prix").show();
+                	console.log("prix : ", prix.croyance, pointPossede.croyance);
+                	if (pointPossede.croyance >= prix.croyance) dom.find("#croyance-prix").addClass("ok");
+                	else dom.find("#croyance-prix").removeClass("ok");
+                }
                 else dom.find("#croyance-prix").hide();
     
                 dom.find("#illumination-prix > span").html(Utils.format(prix.illumination, true, this.Textes));
-                if (prix.illumination) dom.find("#illumination-prix").show();
+                if (prix.illumination) {
+                	dom.find("#illumination-prix").show();
+                	if (pointPossede.illumination >= prix.illumination) dom.find("#illumination-prix").addClass("ok");
+                	else dom.find("#illumination-prix").removeClass("ok");
+                }
                 else dom.find("#illumination-prix").hide();
             }
             
@@ -171,7 +181,7 @@ function($, _, Utils) {
 		        that.refresh();
             });
 		    
-		    this.el.find(".close, mask").click(function() {
+		    this.el.find(".close-button, mask").click(function() {
                 that.close();
             });
 		};

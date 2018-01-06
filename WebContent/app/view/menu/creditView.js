@@ -26,7 +26,7 @@ function($, _, Utils, page) {
 		
 		this.makeEvents = function() {
 			var that = this;
-			$(this.el).find(".close").click(function() {
+			$(this.el).find(".close-button").click(function() {
 				$(that.el).hide("slow");
 			});
 			$("#deviant").click(function() {

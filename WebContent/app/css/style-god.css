@@ -20,6 +20,24 @@ god:not(.baby) {
     animation-fill-mode: forwards;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    
+    -webkit-animation-name: turn;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+	-moz-animation-name: turn;
+    -moz-animation-duration: 100s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: turn;
+    -o-animation-duration: 100s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
 }
 
 @keyframes turn {
