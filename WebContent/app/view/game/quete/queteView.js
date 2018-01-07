@@ -152,7 +152,6 @@ define(["jquery",
             
             if (!this.checkComplete(quete)) return false;
             this.complete.push(quete.name);
-            
             this.pointManager.addPoints(quete.gains);
             
             this.refresh();

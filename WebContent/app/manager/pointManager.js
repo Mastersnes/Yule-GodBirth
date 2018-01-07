@@ -47,12 +47,16 @@ function($, _, Utils) {
 		 * Ajoute les points
 		 */
 		this.addPoints = function(points) {
-		    this.points.croyance += points.croyance;
-		    this.points.illumination += points.illumination;
-		    this.points.bien += points.bien;
-		    if (this.points.bien < 0) this.points.bien = 0;
-		    this.points.mal += points.mal;
-		    if (this.points.mal < 0) this.points.mal = 0;
+		    if (points.croyance) this.points.croyance += points.croyance;
+		    if (points.illumination) this.points.illumination += points.illumination;
+		    if (points.bien) {
+			    this.points.bien += points.bien;
+			    if (this.points.bien < 0) this.points.bien = 0;
+		    }
+		    if (points.mal) { 
+			    this.points.mal += points.mal;
+			    if (this.points.mal < 0) this.points.mal = 0;
+			}
 		    
 		    this.render();
 		};

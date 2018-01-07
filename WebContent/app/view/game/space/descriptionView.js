@@ -104,7 +104,6 @@ function($, _, Utils) {
                 dom.find("#croyance-prix > span").html(Utils.format(prix.croyance, true, this.Textes));
                 if (prix.croyance) {
                 	dom.find("#croyance-prix").show();
-                	console.log("prix : ", prix.croyance, pointPossede.croyance);
                 	if (pointPossede.croyance >= prix.croyance) dom.find("#croyance-prix").addClass("ok");
                 	else dom.find("#croyance-prix").removeClass("ok");
                 }

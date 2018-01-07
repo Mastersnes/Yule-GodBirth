@@ -5,7 +5,7 @@ define(["jquery"], function($){
 			 * Deites
 			 */
 	        "grandTout" : new function() {
-				this.level = 1;
+				this.level = 0;
 				this.name = "grandTout";
 				
 				this.restrictions = function (lvl) {
@@ -21,16 +21,16 @@ define(["jquery"], function($){
 				this.prix = function (lvl) {
 				    if(!lvl) lvl = this.level;
 					return {
-	        			croyance : lvl*10,
-	        			illumination : 0
+	        			croyance : Math.round(100*Math.pow(lvl, 3) + 100*Math.pow(lvl, 2) + 50*lvl),
+	        			illumination : Math.round(lvl<5?0:5*Math.pow(lvl-5, 2) + 2*(lvl-5) + 5)
 	        		};
 			    };
 			    this.gain = function (lvl) {
 	        		if (!lvl) lvl = this.level;
 	        		return {
 	        			loop : {
-	        				croyance : lvl*10,
-	        				illumination : lvl*200,
+	        				croyance : Math.round(0.25*Math.pow(lvl, 3) + 5*Math.pow(lvl, 2) + 3*lvl + 1) + 10000,
+	        				illumination : Math.round(lvl<10?0:Math.pow(lvl-9, 2)) + 10000,
                             bien : 0,
                             mal : 0
 	        			}
@@ -51,18 +51,18 @@ define(["jquery"], function($){
 				this.prix = function (lvl) {
 				    if(!lvl) lvl = this.level;
 					return {
-	        			croyance : lvl*2,
-	        			illumination : 0
+	        			croyance : Math.round(110*Math.pow(lvl, 3) + 50*Math.pow(lvl, 2) + 20*lvl),
+	        			illumination : Math.round(lvl<10?0:5*Math.pow(lvl-8, 2) + 4*(lvl-8))
 	        		};
 			    };
 			    this.gain = function (lvl) {
 	        		if (!lvl) lvl = this.level;
 	        		return {
 	        			loop : {
-	        				croyance : lvl,
+	        				croyance : Math.round(1*Math.pow(lvl, 3) + 3*Math.pow(lvl, 2) + 2*lvl + 3),
 	        				illumination : 0,
-	        				bien : 0,
-	        				mal : lvl
+	        				bien : -Math.round(2*Math.pow(lvl, 3) + 0.5*Math.pow(lvl, 2) + 1*lvl),
+	        				mal : Math.round(5*Math.pow(lvl, 3) + 2*Math.pow(lvl, 2) + 2*lvl)
 	        			}
 	        		};
 	        	};
@@ -77,17 +77,17 @@ define(["jquery"], function($){
 				this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
 					return {
-	        			croyance : lvl*3,
-	        			illumination : 0
+	        			croyance : Math.round(105*Math.pow(lvl, 3) + 40*Math.pow(lvl, 2) + 30*lvl),
+	        			illumination : Math.round(lvl<10?0:3*Math.pow(lvl-8, 2) + 2*(lvl-8))
 	        		};
 			    };
 			    this.gain = function (lvl) {
 	        		if (!lvl) lvl = this.level;
 	        		return {
 	        			loop : {
-	        				croyance : lvl,
-	        				illumination : 0,
-	        				bien : lvl,
+	        				croyance : Math.round(1*Math.pow(lvl, 2) + 1*lvl + 1),
+	        				illumination : Math.round(lvl<5?0:0.25*Math.pow(lvl-5, 3) + 30.5*Math.pow(lvl-5, 2) + 1*(lvl-5) + 1),
+	        				bien : Math.round(8*Math.pow(lvl, 3) + 4*Math.pow(lvl, 2) + 3*lvl + 1),
 	        				mal : 0
 	        			}
 	        		};

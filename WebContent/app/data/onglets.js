@@ -11,7 +11,7 @@ define(["jquery"], function($){
 			    conditions : [
 			         {
 			             name : "grandTout",
-			             level : 3
+			             level : 2
 			         },
 			         {
                          name : "dieu",

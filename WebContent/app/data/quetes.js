@@ -4,7 +4,7 @@ define(["jquery"], function($){
 			"quete-1" : {
 			    name : "quete-1",
 			    description : "quete-1-desc",
-				apparition : [],
+			    apparition : {},
 			    conditions : [
 				     {
 				    	 name : "terre",

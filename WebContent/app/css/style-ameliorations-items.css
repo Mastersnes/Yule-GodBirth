@@ -165,3 +165,339 @@
     75% {background-image: url("../img/game/ameliorations/grandTout/1.png");}
     100% {background-image: url("../img/game/ameliorations/grandTout/grandTout.png");}
 }
+
+/**
+* Terre
+**/
+.ameliorations item.terre span {
+	background-image: url("../img/game/ameliorations/terre/terre.png");
+}
+.ameliorations item.terre.out span {
+	animation-name: terre-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: terre-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: terre-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: terre-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.terre.in span {
+	animation-name: terre-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: terre-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: terre-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: terre-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes terre-in {
+    0% {background-image: url("../img/game/ameliorations/terre/terre.png");}
+    25% {background-image: url("../img/game/ameliorations/terre/1.png");}
+    50% {background-image: url("../img/game/ameliorations/terre/2.png");}
+    75% {background-image: url("../img/game/ameliorations/terre/3.png");}
+    100% {background-image: url("../img/game/ameliorations/terre/4.png");}
+}
+@keyframes terre-out {
+    0% {background-image: url("../img/game/ameliorations/terre/4.png");}
+    25% {background-image: url("../img/game/ameliorations/terre/3.png");}
+    50% {background-image: url("../img/game/ameliorations/terre/2.png");}
+    75% {background-image: url("../img/game/ameliorations/terre/1.png");}
+    100% {background-image: url("../img/game/ameliorations/terre/terre.png");}
+}
+
+/**
+* Lune
+**/
+.ameliorations item.lune span {
+	background-image: url("../img/game/ameliorations/lune/lune.png");
+}
+.ameliorations item.lune.out span {
+	animation-name: lune-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: lune-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: lune-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: lune-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.lune.in span {
+	animation-name: lune-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: lune-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: lune-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: lune-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes lune-in {
+    0% {background-image: url("../img/game/ameliorations/lune/lune.png");}
+    25% {background-image: url("../img/game/ameliorations/lune/1.png");}
+    50% {background-image: url("../img/game/ameliorations/lune/2.png");}
+    75% {background-image: url("../img/game/ameliorations/lune/3.png");}
+    100% {background-image: url("../img/game/ameliorations/lune/4.png");}
+}
+@keyframes lune-out {
+    0% {background-image: url("../img/game/ameliorations/lune/4.png");}
+    25% {background-image: url("../img/game/ameliorations/lune/3.png");}
+    50% {background-image: url("../img/game/ameliorations/lune/2.png");}
+    75% {background-image: url("../img/game/ameliorations/lune/1.png");}
+    100% {background-image: url("../img/game/ameliorations/lune/lune.png");}
+}
+
+/**
+* Soleil
+**/
+.ameliorations item.soleil span {
+	background-image: url("../img/game/ameliorations/soleil/soleil.png");
+}
+.ameliorations item.soleil.out span {
+	animation-name: soleil-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: soleil-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: soleil-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: soleil-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.soleil.in span {
+	animation-name: soleil-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: soleil-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: soleil-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: soleil-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes soleil-in {
+    0% {background-image: url("../img/game/ameliorations/soleil/soleil.png");}
+    25% {background-image: url("../img/game/ameliorations/soleil/1.png");}
+    50% {background-image: url("../img/game/ameliorations/soleil/2.png");}
+    75% {background-image: url("../img/game/ameliorations/soleil/3.png");}
+    100% {background-image: url("../img/game/ameliorations/soleil/4.png");}
+}
+@keyframes soleil-out {
+    0% {background-image: url("../img/game/ameliorations/soleil/4.png");}
+    25% {background-image: url("../img/game/ameliorations/soleil/3.png");}
+    50% {background-image: url("../img/game/ameliorations/soleil/2.png");}
+    75% {background-image: url("../img/game/ameliorations/soleil/1.png");}
+    100% {background-image: url("../img/game/ameliorations/soleil/soleil.png");}
+}
+
+/**
+* Ciel
+**/
+.ameliorations item.ciel span {
+	background-image: url("../img/game/ameliorations/ciel/ciel.png");
+}
+.ameliorations item.ciel.out span {
+	animation-name: ciel-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: ciel-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: ciel-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: ciel-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.ciel.in span {
+	animation-name: ciel-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: ciel-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: ciel-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: ciel-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes ciel-in {
+    0% {background-image: url("../img/game/ameliorations/ciel/ciel.png");}
+    25% {background-image: url("../img/game/ameliorations/ciel/1.png");}
+    50% {background-image: url("../img/game/ameliorations/ciel/2.png");}
+    75% {background-image: url("../img/game/ameliorations/ciel/3.png");}
+    100% {background-image: url("../img/game/ameliorations/ciel/4.png");}
+}
+@keyframes ciel-out {
+    0% {background-image: url("../img/game/ameliorations/ciel/4.png");}
+    25% {background-image: url("../img/game/ameliorations/ciel/3.png");}
+    50% {background-image: url("../img/game/ameliorations/ciel/2.png");}
+    75% {background-image: url("../img/game/ameliorations/ciel/1.png");}
+    100% {background-image: url("../img/game/ameliorations/ciel/ciel.png");}
+}
+
+/**
+* Foret
+**/
+.ameliorations item.foret span {
+	background-image: url("../img/game/ameliorations/foret/foret.png");
+}
+.ameliorations item.foret.out span {
+	animation-name: foret-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: foret-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: foret-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: foret-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.foret.in span {
+	animation-name: foret-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: foret-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: foret-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: foret-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes foret-in {
+    0% {background-image: url("../img/game/ameliorations/foret/foret.png");}
+    25% {background-image: url("../img/game/ameliorations/foret/1.png");}
+    50% {background-image: url("../img/game/ameliorations/foret/2.png");}
+    75% {background-image: url("../img/game/ameliorations/foret/3.png");}
+    100% {background-image: url("../img/game/ameliorations/foret/4.png");}
+}
+@keyframes foret-out {
+    0% {background-image: url("../img/game/ameliorations/foret/4.png");}
+    25% {background-image: url("../img/game/ameliorations/foret/3.png");}
+    50% {background-image: url("../img/game/ameliorations/foret/2.png");}
+    75% {background-image: url("../img/game/ameliorations/foret/1.png");}
+    100% {background-image: url("../img/game/ameliorations/foret/foret.png");}
+}
+
+/**
+* Volcan
+**/
+.ameliorations item.volcan span {
+	background-image: url("../img/game/ameliorations/volcan/volcan.png");
+}
+.ameliorations item.volcan.out span {
+	animation-name: volcan-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: volcan-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: volcan-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: volcan-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.volcan.in span {
+	animation-name: volcan-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: volcan-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: volcan-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: volcan-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes volcan-in {
+    0% {background-image: url("../img/game/ameliorations/volcan/volcan.png");}
+    25% {background-image: url("../img/game/ameliorations/volcan/1.png");}
+    50% {background-image: url("../img/game/ameliorations/volcan/2.png");}
+    75% {background-image: url("../img/game/ameliorations/volcan/3.png");}
+    100% {background-image: url("../img/game/ameliorations/volcan/4.png");}
+}
+@keyframes volcan-out {
+    0% {background-image: url("../img/game/ameliorations/volcan/4.png");}
+    25% {background-image: url("../img/game/ameliorations/volcan/3.png");}
+    50% {background-image: url("../img/game/ameliorations/volcan/2.png");}
+    75% {background-image: url("../img/game/ameliorations/volcan/1.png");}
+    100% {background-image: url("../img/game/ameliorations/volcan/volcan.png");}
+}

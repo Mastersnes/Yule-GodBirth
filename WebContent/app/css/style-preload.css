@@ -56,6 +56,108 @@ preload.grandTout[step="5"] {
 	background-image: url("../img/game/ameliorations/grandTout/4.png");
 }
 
+/**Terre**/
+preload.terre[step="1"] {
+	background-image: url("../img/game/ameliorations/terre/terre.png");
+}
+preload.terre[step="2"] {
+	background-image: url("../img/game/ameliorations/terre/1.png");
+}
+preload.terre[step="3"] {
+	background-image: url("../img/game/ameliorations/terre/2.png");
+}
+preload.terre[step="4"] {
+	background-image: url("../img/game/ameliorations/terre/3.png");
+}
+preload.terre[step="5"] {
+	background-image: url("../img/game/ameliorations/terre/4.png");
+}
+
+/**Lune**/
+preload.lune[step="1"] {
+	background-image: url("../img/game/ameliorations/lune/lune.png");
+}
+preload.lune[step="2"] {
+	background-image: url("../img/game/ameliorations/lune/1.png");
+}
+preload.lune[step="3"] {
+	background-image: url("../img/game/ameliorations/lune/2.png");
+}
+preload.lune[step="4"] {
+	background-image: url("../img/game/ameliorations/lune/3.png");
+}
+preload.lune[step="5"] {
+	background-image: url("../img/game/ameliorations/lune/4.png");
+}
+
+/**Soleil**/
+preload.soleil[step="1"] {
+	background-image: url("../img/game/ameliorations/soleil/soleil.png");
+}
+preload.soleil[step="2"] {
+	background-image: url("../img/game/ameliorations/soleil/1.png");
+}
+preload.soleil[step="3"] {
+	background-image: url("../img/game/ameliorations/soleil/2.png");
+}
+preload.soleil[step="4"] {
+	background-image: url("../img/game/ameliorations/soleil/3.png");
+}
+preload.soleil[step="5"] {
+	background-image: url("../img/game/ameliorations/soleil/4.png");
+}
+
+/**Ciel**/
+preload.ciel[step="1"] {
+	background-image: url("../img/game/ameliorations/ciel/ciel.png");
+}
+preload.ciel[step="2"] {
+	background-image: url("../img/game/ameliorations/ciel/1.png");
+}
+preload.ciel[step="3"] {
+	background-image: url("../img/game/ameliorations/ciel/2.png");
+}
+preload.ciel[step="4"] {
+	background-image: url("../img/game/ameliorations/ciel/3.png");
+}
+preload.ciel[step="5"] {
+	background-image: url("../img/game/ameliorations/ciel/4.png");
+}
+
+/**Foret**/
+preload.foret[step="1"] {
+	background-image: url("../img/game/ameliorations/foret/foret.png");
+}
+preload.foret[step="2"] {
+	background-image: url("../img/game/ameliorations/foret/1.png");
+}
+preload.foret[step="3"] {
+	background-image: url("../img/game/ameliorations/foret/2.png");
+}
+preload.foret[step="4"] {
+	background-image: url("../img/game/ameliorations/foret/3.png");
+}
+preload.foret[step="5"] {
+	background-image: url("../img/game/ameliorations/foret/4.png");
+}
+
+/**Volcan**/
+preload.volcan[step="1"] {
+	background-image: url("../img/game/ameliorations/volcan/volcan.png");
+}
+preload.volcan[step="2"] {
+	background-image: url("../img/game/ameliorations/volcan/1.png");
+}
+preload.volcan[step="3"] {
+	background-image: url("../img/game/ameliorations/volcan/2.png");
+}
+preload.volcan[step="4"] {
+	background-image: url("../img/game/ameliorations/volcan/3.png");
+}
+preload.volcan[step="5"] {
+	background-image: url("../img/game/ameliorations/volcan/4.png");
+}
+
 /**
 * close
 **/
