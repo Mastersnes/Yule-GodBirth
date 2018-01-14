@@ -30,7 +30,7 @@
 	left: 0%;
 }
 
-.constellation, .space, .quete {
+.constellation, .space, .quete, .autel {
 	position: absolute;
 	left: 0; top: 0;
 	width: 100%;
@@ -38,7 +38,7 @@
 	
 	transition: transform 1s ease-in-out;
 }
-.constellation, .quete {
+.constellation, .quete, .autel {
 	display: none;
 }
 
@@ -50,4 +50,7 @@
 }
 .constellation.zoom[cible="quete-star"] {
 	transform: scale(2) translate(-25%, -25%);
+}
+.constellation.zoom[cible="autel-star"] {
+	transform: scale(2) translate(-25%, 15%);
 }

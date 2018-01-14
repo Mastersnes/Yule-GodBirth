@@ -9,12 +9,13 @@ define(["jquery",
         "app/manager/pointManager",
         "app/view/game/space/spaceView",
         "app/view/game/quete/queteView",
+        "app/view/game/autel/autelView",
         "app/view/game/constellation/constellationView",
         "app/view/game/endView"
         ],
 function($, _, Utils, page, 
 		SceneManager, TextManager, EventManager, PointManager, 
-		SpaceView, QueteView, ConstellationView, EndView) {
+		SpaceView, QueteView, AutelView, ConstellationView, EndView) {
 	'use strict';
 
 	return function(parent, load, code, Textes, Mediatheque) {
@@ -42,6 +43,9 @@ function($, _, Utils, page,
 
             this.queteView = new QueteView(this);
             this.queteView.render();
+            
+            this.autelView = new AutelView(this);
+            this.autelView.render();
 
             this.endView = new EndView(this);
 
@@ -80,6 +84,7 @@ function($, _, Utils, page,
     		    if (!this.pause) {
         		    this.spaceView.loop(this);
         		    this.queteView.loop(this);
+        		    this.autelView.loop(this);
         		    this.constellationView.loop(this);
                     this.eventManager.loop();
                     
@@ -125,6 +130,7 @@ function($, _, Utils, page,
             
             this.spaceView.makeEvents();
             this.queteView.makeEvents();
+            this.autelView.makeEvents();
             this.constellationView.makeEvents();
             
             $(".text").click(function() {return true;});

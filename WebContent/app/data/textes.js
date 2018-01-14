@@ -130,6 +130,10 @@ define(["jquery"], function($){
         	fr : "Objectifs",
         	en : "Objectifs"
         },
+        "autel" : {
+        	fr : "Autel",
+        	en : "Autel"
+        },
 		"croyance" : {
 			fr : "Croyance",
 			en : "Croyance"

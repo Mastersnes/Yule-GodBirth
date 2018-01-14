@@ -27,3 +27,7 @@ etoile.quete-star {
 	top: 70%;left: 70%;
 	background-image: url("../img/game/god/egg/2.png");
 }
+etoile.autel-star {
+	top: 30%;left: 70%;
+	background-image: url("../img/game/god/egg/3.png");
+}
