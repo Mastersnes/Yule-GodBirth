@@ -193,9 +193,9 @@ define(["jquery"], function($){
             fr : "Mort",
             en : "Death"
         },
-        "incarnation" : {
-        	fr : "Incarnation",
-        	en : "Incarnation"
+        "concept" : {
+        	fr : "Concept",
+        	en : "Concept"
         },
         /**
          * Ameliorations - Deites
@@ -261,9 +261,24 @@ define(["jquery"], function($){
             fr : "Chaos",
             en : "-"
         },
-        "abysses" : {
+        "abysse" : {
             fr : "Abysses",
             en : "-"
+        },
+        /**
+         * Ameliorations - Concept
+         */
+        "amour" : {
+            fr : "Amour",
+            en : "Love"
+        },
+        "connaissance" : {
+            fr : "Connaissance",
+            en : "Knowledge"
+        },
+        "evolution" : {
+            fr : "Evolution",
+            en : "Evolution"
         },
         /**
          * Quetes

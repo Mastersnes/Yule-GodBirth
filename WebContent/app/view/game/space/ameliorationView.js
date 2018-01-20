@@ -101,7 +101,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 		    var listItem = Items.list();
 		    for (var index in listItem) {
 		        var item = listItem[index];
-		        game.pointManager.addPoints(item.gain().loop);
+		        game.pointManager.addPoints(item.gain(item.level, Items).loop);
 		        this.refreshItem(item);
 		    }
 		    

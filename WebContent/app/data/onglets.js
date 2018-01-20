@@ -59,7 +59,37 @@ define(["jquery"], function($){
                      }
                 ],
 				name : "mort",
-			    items : ["gouffre", "vide", "chaos", "abysses"]
+			    items : ["gouffre", "vide", "chaos", "abysse"]
+			},
+			"concept" : {
+			    conditions : [
+                     {
+                         name : "dieu",
+                         level : 20
+                     },
+                     {
+                         name : "deesse",
+                         level : 20
+                     },
+                     {
+                         name : "terre",
+                         level : 30
+                     },
+                     {
+                         name : "lune",
+                         level : 30
+                     },
+                     {
+                         name : "chaos",
+                         level : 50
+                     },
+                     {
+                         name : "foret",
+                         level : 50
+                     }
+                ],
+				name : "concept",
+			    items : ["amour", "connaissance", "evolution"]
 			}
 	};
 	

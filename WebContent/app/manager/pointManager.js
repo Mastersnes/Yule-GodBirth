@@ -26,12 +26,6 @@ function($, _, Utils) {
 		    $("illumination .text").html(Utils.format(this.points.illumination, true, this.Textes));
 		    if (this.points.illumination > 0) $("illumination").show();
 
-		    $("bien .text").html(Utils.format(this.points.bien, true, this.Textes));
-		    if (this.points.bien > 0) $("bien").show();
-		    
-		    $("mal .text").html(Utils.format(this.points.mal, true, this.Textes));
-		    if (this.points.mal > 0) $("mal").show();
-		    
 		    var total = this.points.bien + this.points.mal;
 		    var bienPercent = Utils.toPercent(this.points.bien, total);
 		    
@@ -47,13 +41,13 @@ function($, _, Utils) {
 		 * Ajoute les points
 		 */
 		this.addPoints = function(points) {
-		    if (points.croyance) this.points.croyance += points.croyance;
-		    if (points.illumination) this.points.illumination += points.illumination;
-		    if (points.bien) {
+		    if (points.croyance && points.croyance < 1000000000000) this.points.croyance += points.croyance;
+		    if (points.illumination && points.illumination < 1000000000000) this.points.illumination += points.illumination;
+		    if (points.bien && points.bien < 1000000000000) {
 			    this.points.bien += points.bien;
 			    if (this.points.bien < 0) this.points.bien = 0;
 		    }
-		    if (points.mal) { 
+		    if (points.mal && points.mal < 1000000000000) { 
 			    this.points.mal += points.mal;
 			    if (this.points.mal < 0) this.points.mal = 0;
 			}

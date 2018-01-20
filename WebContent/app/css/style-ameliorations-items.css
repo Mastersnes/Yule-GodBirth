@@ -501,3 +501,451 @@
     75% {background-image: url("../img/game/ameliorations/volcan/1.png");}
     100% {background-image: url("../img/game/ameliorations/volcan/volcan.png");}
 }
+
+/**
+* Chaos
+**/
+.ameliorations item.chaos span {
+	background-image: url("../img/game/ameliorations/chaos/chaos.png");
+}
+.ameliorations item.chaos.out span {
+	animation-name: chaos-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: chaos-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: chaos-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: chaos-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.chaos.in span {
+	animation-name: chaos-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: chaos-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: chaos-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: chaos-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes chaos-in {
+    0% {background-image: url("../img/game/ameliorations/chaos/chaos.png");}
+    25% {background-image: url("../img/game/ameliorations/chaos/1.png");}
+    50% {background-image: url("../img/game/ameliorations/chaos/2.png");}
+    75% {background-image: url("../img/game/ameliorations/chaos/3.png");}
+    100% {background-image: url("../img/game/ameliorations/chaos/4.png");}
+}
+@keyframes chaos-out {
+    0% {background-image: url("../img/game/ameliorations/chaos/4.png");}
+    25% {background-image: url("../img/game/ameliorations/chaos/3.png");}
+    50% {background-image: url("../img/game/ameliorations/chaos/2.png");}
+    75% {background-image: url("../img/game/ameliorations/chaos/1.png");}
+    100% {background-image: url("../img/game/ameliorations/chaos/chaos.png");}
+}
+
+/**
+* Gouffre
+**/
+.ameliorations item.gouffre span {
+	background-image: url("../img/game/ameliorations/gouffre/gouffre.png");
+}
+.ameliorations item.gouffre.out span {
+	animation-name: gouffre-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: gouffre-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: gouffre-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: gouffre-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.gouffre.in span {
+	animation-name: gouffre-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: gouffre-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: gouffre-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: gouffre-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes gouffre-in {
+    0% {background-image: url("../img/game/ameliorations/gouffre/gouffre.png");}
+    25% {background-image: url("../img/game/ameliorations/gouffre/1.png");}
+    50% {background-image: url("../img/game/ameliorations/gouffre/2.png");}
+    75% {background-image: url("../img/game/ameliorations/gouffre/3.png");}
+    100% {background-image: url("../img/game/ameliorations/gouffre/4.png");}
+}
+@keyframes gouffre-out {
+    0% {background-image: url("../img/game/ameliorations/gouffre/4.png");}
+    25% {background-image: url("../img/game/ameliorations/gouffre/3.png");}
+    50% {background-image: url("../img/game/ameliorations/gouffre/2.png");}
+    75% {background-image: url("../img/game/ameliorations/gouffre/1.png");}
+    100% {background-image: url("../img/game/ameliorations/gouffre/gouffre.png");}
+}
+
+/**
+* Ocean
+**/
+.ameliorations item.ocean span {
+	background-image: url("../img/game/ameliorations/ocean/ocean.png");
+}
+.ameliorations item.ocean.out span {
+	animation-name: ocean-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: ocean-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: ocean-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: ocean-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.ocean.in span {
+	animation-name: ocean-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: ocean-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: ocean-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: ocean-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes ocean-in {
+    0% {background-image: url("../img/game/ameliorations/ocean/ocean.png");}
+    25% {background-image: url("../img/game/ameliorations/ocean/1.png");}
+    50% {background-image: url("../img/game/ameliorations/ocean/2.png");}
+    75% {background-image: url("../img/game/ameliorations/ocean/3.png");}
+    100% {background-image: url("../img/game/ameliorations/ocean/4.png");}
+}
+@keyframes ocean-out {
+    0% {background-image: url("../img/game/ameliorations/ocean/4.png");}
+    25% {background-image: url("../img/game/ameliorations/ocean/3.png");}
+    50% {background-image: url("../img/game/ameliorations/ocean/2.png");}
+    75% {background-image: url("../img/game/ameliorations/ocean/1.png");}
+    100% {background-image: url("../img/game/ameliorations/ocean/ocean.png");}
+}
+
+/**
+* Vide
+**/
+.ameliorations item.vide span {
+	background-image: none;
+}
+.ameliorations item.vide.out span {
+	animation-name: vide-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: vide-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: vide-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: vide-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.vide.in span {
+	animation-name: vide-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: vide-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: vide-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: vide-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes vide-in {
+    0% {background-image: none;}
+    25% {background-image: url("../img/game/ameliorations/vide/1.png");}
+    50% {background-image: url("../img/game/ameliorations/vide/2.png");}
+    75% {background-image: url("../img/game/ameliorations/vide/3.png");}
+    100% {background-image: url("../img/game/ameliorations/vide/4.png");}
+}
+@keyframes vide-out {
+    0% {background-image: none;}
+    25% {background-image: url("../img/game/ameliorations/vide/3.png");}
+    50% {background-image: url("../img/game/ameliorations/vide/2.png");}
+    75% {background-image: url("../img/game/ameliorations/vide/1.png");}
+    100% {background-image: none;}
+}
+
+/**
+* Abysse
+**/
+.ameliorations item.abysse span {
+	background-image: url("../img/game/ameliorations/abysse/abysse.png");
+}
+.ameliorations item.abysse.out span {
+	animation-name: abysse-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: abysse-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: abysse-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: abysse-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.abysse.in span {
+	animation-name: abysse-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: abysse-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: abysse-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: abysse-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes abysse-in {
+    0% {background-image: url("../img/game/ameliorations/abysse/abysse.png");}
+    25% {background-image: url("../img/game/ameliorations/abysse/1.png");}
+    50% {background-image: url("../img/game/ameliorations/abysse/2.png");}
+    75% {background-image: url("../img/game/ameliorations/abysse/3.png");}
+    100% {background-image: url("../img/game/ameliorations/abysse/4.png");}
+}
+@keyframes abysse-out {
+    0% {background-image: url("../img/game/ameliorations/abysse/4.png");}
+    25% {background-image: url("../img/game/ameliorations/abysse/3.png");}
+    50% {background-image: url("../img/game/ameliorations/abysse/2.png");}
+    75% {background-image: url("../img/game/ameliorations/abysse/1.png");}
+    100% {background-image: url("../img/game/ameliorations/abysse/abysse.png");}
+}
+
+/**
+* Amour
+**/
+.ameliorations item.amour span {
+	background-image: url("../img/game/ameliorations/amour/amour.png");
+}
+.ameliorations item.amour.out span {
+	animation-name: amour-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: amour-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: amour-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: amour-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.amour.in span {
+	animation-name: amour-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: amour-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: amour-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: amour-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes amour-in {
+    0% {background-image: url("../img/game/ameliorations/amour/amour.png");}
+    25% {background-image: url("../img/game/ameliorations/amour/1.png");}
+    50% {background-image: url("../img/game/ameliorations/amour/2.png");}
+    75% {background-image: url("../img/game/ameliorations/amour/3.png");}
+    100% {background-image: url("../img/game/ameliorations/amour/4.png");}
+}
+@keyframes amour-out {
+    0% {background-image: url("../img/game/ameliorations/amour/4.png");}
+    25% {background-image: url("../img/game/ameliorations/amour/3.png");}
+    50% {background-image: url("../img/game/ameliorations/amour/2.png");}
+    75% {background-image: url("../img/game/ameliorations/amour/1.png");}
+    100% {background-image: url("../img/game/ameliorations/amour/amour.png");}
+}
+
+/**
+* Connaissance
+**/
+.ameliorations item.connaissance span {
+	background-image: url("../img/game/ameliorations/connaissance/connaissance.png");
+}
+.ameliorations item.connaissance.out span {
+	animation-name: connaissance-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: connaissance-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: connaissance-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: connaissance-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.connaissance.in span {
+	animation-name: connaissance-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: connaissance-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: connaissance-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: connaissance-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes connaissance-in {
+    0% {background-image: url("../img/game/ameliorations/connaissance/connaissance.png");}
+    25% {background-image: url("../img/game/ameliorations/connaissance/1.png");}
+    50% {background-image: url("../img/game/ameliorations/connaissance/2.png");}
+    75% {background-image: url("../img/game/ameliorations/connaissance/3.png");}
+    100% {background-image: url("../img/game/ameliorations/connaissance/4.png");}
+}
+@keyframes connaissance-out {
+    0% {background-image: url("../img/game/ameliorations/connaissance/4.png");}
+    25% {background-image: url("../img/game/ameliorations/connaissance/3.png");}
+    50% {background-image: url("../img/game/ameliorations/connaissance/2.png");}
+    75% {background-image: url("../img/game/ameliorations/connaissance/1.png");}
+    100% {background-image: url("../img/game/ameliorations/connaissance/connaissance.png");}
+}
+
+/**
+* Evolution
+**/
+.ameliorations item.evolution span {
+	background-image: url("../img/game/ameliorations/evolution/evolution.png");
+}
+.ameliorations item.evolution.out span {
+	animation-name: evolution-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: evolution-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: evolution-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: evolution-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.evolution.in span {
+	animation-name: evolution-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: evolution-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: evolution-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: evolution-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes evolution-in {
+    0% {background-image: url("../img/game/ameliorations/evolution/evolution.png");}
+    25% {background-image: url("../img/game/ameliorations/evolution/1.png");}
+    50% {background-image: url("../img/game/ameliorations/evolution/2.png");}
+    75% {background-image: url("../img/game/ameliorations/evolution/3.png");}
+    100% {background-image: url("../img/game/ameliorations/evolution/4.png");}
+}
+@keyframes evolution-out {
+    0% {background-image: url("../img/game/ameliorations/evolution/4.png");}
+    25% {background-image: url("../img/game/ameliorations/evolution/3.png");}
+    50% {background-image: url("../img/game/ameliorations/evolution/2.png");}
+    75% {background-image: url("../img/game/ameliorations/evolution/1.png");}
+    100% {background-image: url("../img/game/ameliorations/evolution/evolution.png");}
+}

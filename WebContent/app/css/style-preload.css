@@ -158,6 +158,139 @@ preload.volcan[step="5"] {
 	background-image: url("../img/game/ameliorations/volcan/4.png");
 }
 
+/**Chaos**/
+preload.chaos[step="1"] {
+	background-image: url("../img/game/ameliorations/chaos/chaos.png");
+}
+preload.chaos[step="2"] {
+	background-image: url("../img/game/ameliorations/chaos/1.png");
+}
+preload.chaos[step="3"] {
+	background-image: url("../img/game/ameliorations/chaos/2.png");
+}
+preload.chaos[step="4"] {
+	background-image: url("../img/game/ameliorations/chaos/3.png");
+}
+preload.chaos[step="5"] {
+	background-image: url("../img/game/ameliorations/chaos/4.png");
+}
+
+/**Gouffre**/
+preload.gouffre[step="1"] {
+	background-image: url("../img/game/ameliorations/gouffre/gouffre.png");
+}
+preload.gouffre[step="2"] {
+	background-image: url("../img/game/ameliorations/gouffre/1.png");
+}
+preload.gouffre[step="3"] {
+	background-image: url("../img/game/ameliorations/gouffre/2.png");
+}
+preload.gouffre[step="4"] {
+	background-image: url("../img/game/ameliorations/gouffre/3.png");
+}
+preload.gouffre[step="5"] {
+	background-image: url("../img/game/ameliorations/gouffre/4.png");
+}
+
+/**Ocean**/
+preload.ocean[step="1"] {
+	background-image: url("../img/game/ameliorations/ocean/ocean.png");
+}
+preload.ocean[step="2"] {
+	background-image: url("../img/game/ameliorations/ocean/1.png");
+}
+preload.ocean[step="3"] {
+	background-image: url("../img/game/ameliorations/ocean/2.png");
+}
+preload.ocean[step="4"] {
+	background-image: url("../img/game/ameliorations/ocean/3.png");
+}
+preload.ocean[step="5"] {
+	background-image: url("../img/game/ameliorations/ocean/4.png");
+}
+
+/**Vide**/
+preload.vide[step="2"] {
+	background-image: url("../img/game/ameliorations/vide/1.png");
+}
+preload.vide[step="3"] {
+	background-image: url("../img/game/ameliorations/vide/2.png");
+}
+preload.vide[step="4"] {
+	background-image: url("../img/game/ameliorations/vide/3.png");
+}
+preload.vide[step="5"] {
+	background-image: url("../img/game/ameliorations/vide/4.png");
+}
+
+/**Abysse**/
+preload.abysse[step="1"] {
+	background-image: url("../img/game/ameliorations/abysse/abysse.png");
+}
+preload.abysse[step="2"] {
+	background-image: url("../img/game/ameliorations/abysse/1.png");
+}
+preload.abysse[step="3"] {
+	background-image: url("../img/game/ameliorations/abysse/2.png");
+}
+preload.abysse[step="4"] {
+	background-image: url("../img/game/ameliorations/abysse/3.png");
+}
+preload.abysse[step="5"] {
+	background-image: url("../img/game/ameliorations/abysse/4.png");
+}
+
+/**Amour**/
+preload.amour[step="1"] {
+	background-image: url("../img/game/ameliorations/amour/amour.png");
+}
+preload.amour[step="2"] {
+	background-image: url("../img/game/ameliorations/amour/1.png");
+}
+preload.amour[step="3"] {
+	background-image: url("../img/game/ameliorations/amour/2.png");
+}
+preload.amour[step="4"] {
+	background-image: url("../img/game/ameliorations/amour/3.png");
+}
+preload.amour[step="5"] {
+	background-image: url("../img/game/ameliorations/amour/4.png");
+}
+
+/**Connaissance**/
+preload.connaissance[step="1"] {
+	background-image: url("../img/game/ameliorations/connaissance/connaissance.png");
+}
+preload.connaissance[step="2"] {
+	background-image: url("../img/game/ameliorations/connaissance/1.png");
+}
+preload.connaissance[step="3"] {
+	background-image: url("../img/game/ameliorations/connaissance/2.png");
+}
+preload.connaissance[step="4"] {
+	background-image: url("../img/game/ameliorations/connaissance/3.png");
+}
+preload.connaissance[step="5"] {
+	background-image: url("../img/game/ameliorations/connaissance/4.png");
+}
+
+/**Evolution**/
+preload.evolution[step="1"] {
+	background-image: url("../img/game/ameliorations/evolution/evolution.png");
+}
+preload.evolution[step="2"] {
+	background-image: url("../img/game/ameliorations/evolution/1.png");
+}
+preload.evolution[step="3"] {
+	background-image: url("../img/game/ameliorations/evolution/2.png");
+}
+preload.evolution[step="4"] {
+	background-image: url("../img/game/ameliorations/evolution/3.png");
+}
+preload.evolution[step="5"] {
+	background-image: url("../img/game/ameliorations/evolution/4.png");
+}
+
 /**
 * close
 **/

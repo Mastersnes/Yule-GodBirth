@@ -10,27 +10,23 @@ define(["jquery"], function($){
 				
 				this.restrictions = function (lvl) {
 					if(!lvl) lvl = this.level;
-					return [{
-						name : "dieu",
-						level : lvl
-					},{
-						name : "deesse",
-						level : lvl
-					}];
+					return [];
 			    };
 				this.prix = function (lvl) {
 				    if(!lvl) lvl = this.level;
 					return {
-	        			croyance : Math.round(100*Math.pow(lvl, 3) + 100*Math.pow(lvl, 2) + 50*lvl),
-	        			illumination : Math.round(lvl<5?0:5*Math.pow(lvl-5, 2) + 2*(lvl-5) + 5)
+	        			croyance : 10*lvl,
+	        			illumination : 0
 	        		};
 			    };
-			    this.gain = function (lvl) {
-	        		if (!lvl) lvl = this.level;
+			    this.gain = function (incr, ameliorations) {
+	        		if (!incr) incr = 0;
+	        		var dieu = ameliorations.get("dieu").level + incr;
+	        		var deesse = ameliorations.get("deesse").level + incr;
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(0.25*Math.pow(lvl, 3) + 5*Math.pow(lvl, 2) + 3*lvl + 1) + 10000,
-	        				illumination : Math.round(lvl<10?0:Math.pow(lvl-9, 2)) + 10000,
+	        				croyance : dieu + deesse,
+	        				illumination : 0,
                             bien : 0,
                             mal : 0
 	        			}
@@ -47,22 +43,25 @@ define(["jquery"], function($){
 				this.level = 0;
 				this.name = "dieu";
 				
-				this.restrictions = function (lvl) {};
+				this.restrictions = function (lvl) {
+					if(!lvl) lvl = this.level;
+					return [];
+			    };
 				this.prix = function (lvl) {
 				    if(!lvl) lvl = this.level;
 					return {
-	        			croyance : Math.round(110*Math.pow(lvl, 3) + 50*Math.pow(lvl, 2) + 20*lvl),
-	        			illumination : Math.round(lvl<10?0:5*Math.pow(lvl-8, 2) + 4*(lvl-8))
+	        			croyance : lvl*10,
+	        			illumination : 0
 	        		};
 			    };
-			    this.gain = function (lvl) {
-	        		if (!lvl) lvl = this.level;
+			    this.gain = function (incr, ameliorations) {
+	        		if (!incr) incr = 0;
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(1*Math.pow(lvl, 3) + 3*Math.pow(lvl, 2) + 2*lvl + 3),
+	        				croyance : this.level + incr,
 	        				illumination : 0,
-	        				bien : -Math.round(2*Math.pow(lvl, 3) + 0.5*Math.pow(lvl, 2) + 1*lvl),
-	        				mal : Math.round(5*Math.pow(lvl, 3) + 2*Math.pow(lvl, 2) + 2*lvl)
+                            bien : 0,
+                            mal : 0
 	        			}
 	        		};
 	        	};
@@ -73,22 +72,25 @@ define(["jquery"], function($){
 				this.level = 0;
 				this.name = "deesse";
 				
-				this.restrictions = function (lvl) {};
+				this.restrictions = function (lvl) {
+					if(!lvl) lvl = this.level;
+					return [];
+			    };
 				this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
 					return {
-	        			croyance : Math.round(105*Math.pow(lvl, 3) + 40*Math.pow(lvl, 2) + 30*lvl),
-	        			illumination : Math.round(lvl<10?0:3*Math.pow(lvl-8, 2) + 2*(lvl-8))
+	        			croyance : 0,
+	        			illumination : 0
 	        		};
 			    };
-			    this.gain = function (lvl) {
-	        		if (!lvl) lvl = this.level;
+			    this.gain = function (incr, ameliorations) {
+	        		if (!incr) incr = 0;
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(1*Math.pow(lvl, 2) + 1*lvl + 1),
-	        				illumination : Math.round(lvl<5?0:0.25*Math.pow(lvl-5, 3) + 30.5*Math.pow(lvl-5, 2) + 1*(lvl-5) + 1),
-	        				bien : Math.round(8*Math.pow(lvl, 3) + 4*Math.pow(lvl, 2) + 3*lvl + 1),
-	        				mal : 0
+	        				croyance : this.level + incr,
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
 	        			}
 	        		};
 	        	};
@@ -111,17 +113,19 @@ define(["jquery"], function($){
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var deesse = ameliorations.get("deesse").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : deesse + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
@@ -137,17 +141,19 @@ define(["jquery"], function($){
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var deesse = ameliorations.get("deesse").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : deesse + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
@@ -163,17 +169,19 @@ define(["jquery"], function($){
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var dieu = ameliorations.get("dieu").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : dieu + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
@@ -189,21 +197,23 @@ define(["jquery"], function($){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                        croyance : lvl*3,
+                        croyance : lvl*4,
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var deesse = ameliorations.get("deesse").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : deesse + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
@@ -215,21 +225,23 @@ define(["jquery"], function($){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                        croyance : lvl*3,
+                        croyance : lvl*4,
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var dieu = ameliorations.get("dieu").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : dieu + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
@@ -241,21 +253,23 @@ define(["jquery"], function($){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                        croyance : lvl*3,
+                        croyance : lvl*4,
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var dieu = ameliorations.get("dieu").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : dieu + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
@@ -267,21 +281,23 @@ define(["jquery"], function($){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                        croyance : lvl*3,
+                        croyance : lvl*4,
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var deesse = ameliorations.get("deesse").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : deesse + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
@@ -297,21 +313,23 @@ define(["jquery"], function($){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                        croyance : lvl*3,
+                        croyance : lvl*5,
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var deesse = ameliorations.get("deesse").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : deesse + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
@@ -323,21 +341,23 @@ define(["jquery"], function($){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                        croyance : lvl*3,
+                        croyance : lvl*5,
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var dieu = ameliorations.get("dieu").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : dieu + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
@@ -353,23 +373,25 @@ define(["jquery"], function($){
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var dieu = ameliorations.get("dieu").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : dieu + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
-                    };
-                };
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             },
-            "abysses" : new function() {
+            "abysse" : new function() {
                 this.level = 0;
-                this.name = "abysses";
+                this.name = "abysse";
                 
                 this.restrictions = function (lvl) {};
                 this.prix = function (lvl) {
@@ -379,17 +401,110 @@ define(["jquery"], function($){
                         illumination : 0
                     };
                 };
-                this.gain = function (lvl) {
-                    if (!lvl) lvl = this.level;
-                    return {
-                        loop : {
-                            croyance : lvl,
-                            illumination : 0,
-                            bien : lvl,
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var deesse = ameliorations.get("deesse").level + incr;
+	        		var me = this.level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : deesse + me,
+	        				illumination : 0,
+                            bien : 0,
                             mal : 0
-                        }
+	        			}
+	        		};
+	        	};
+                this.select = function(game, ameliorations) {
+                };
+            },
+            
+            /**
+             * Concept
+             */
+            "amour" : new function() {
+                this.level = 0;
+                this.name = "amour";
+                
+                this.restrictions = function (lvl) {};
+                this.prix = function (lvl) {
+                    if(!lvl) lvl = this.level;
+                    return {
+                        croyance : lvl*10,
+                        illumination : 0
                     };
                 };
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var deesse = ameliorations.get("deesse").level + incr;
+	        		var dieu = ameliorations.get("dieu").level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : deesse * dieu,
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
+	        			}
+	        		};
+	        	};
+                this.select = function(game, ameliorations) {
+                };
+            },
+            "connaissance" : new function() {
+                this.level = 0;
+                this.name = "connaissance";
+                
+                this.restrictions = function (lvl) {};
+                this.prix = function (lvl) {
+                    if(!lvl) lvl = this.level;
+                    return {
+                        croyance : lvl*10,
+                        illumination : 0
+                    };
+                };
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var terre = ameliorations.get("terre").level + incr;
+	        		var lune = ameliorations.get("lune").level + incr;
+	        		var soleil = ameliorations.get("soleil").level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : (terre + lune) * soleil,
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
+	        			}
+	        		};
+	        	};
+                this.select = function(game, ameliorations) {
+                };
+            },
+            "evolution" : new function() {
+                this.level = 0;
+                this.name = "evolution";
+                
+                this.restrictions = function (lvl) {};
+                this.prix = function (lvl) {
+                    if(!lvl) lvl = this.level;
+                    return {
+                        croyance : lvl*10,
+                        illumination : 0
+                    };
+                };
+                this.gain = function (incr, ameliorations) {
+                	if (!incr) incr = 0;
+	        		var foret = ameliorations.get("foret").level + incr;
+	        		var ocean = ameliorations.get("ocean").level + incr;
+	        		var vide = ameliorations.get("vide").level + incr;
+	        		var chaos = ameliorations.get("chaos").level + incr;
+	        		return {
+	        			loop : {
+	        				croyance : (foret + chaos) * (ocean + vide),
+	        				illumination : 0,
+                            bien : 0,
+                            mal : 0
+	        			}
+	        		};
+	        	};
                 this.select = function(game, ameliorations) {
                 };
             }

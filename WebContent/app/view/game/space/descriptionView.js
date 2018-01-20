@@ -122,7 +122,7 @@ function($, _, Utils) {
              * GAIN
              */
             //Croyance
-            var gain = item.gain(level);
+            var gain = item.gain(incr, this.parent.Items);
             
             dom.find("#croyance-loop span").html(Utils.format(gain.loop.croyance, true, this.Textes));
             if (gain.loop.croyance) dom.find("#croyance").show();
