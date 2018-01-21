@@ -8,6 +8,7 @@ etoile {
 	width: 10%;height: 10%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-image: url("../img/game/interface/star/1.png");
 }
 etoile > span {
 	position: absolute;
@@ -19,15 +20,46 @@ etoile > span {
     color: beige;
     background-color: black;
 }
+
+etoile:hover {
+	animation-name: star-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+	-webkit-animation-name: star-anim;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: star-anim;
+    -moz-animation-duration: 1s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: star-anim;
+    -o-animation-duration: 1s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+@keyframes star-anim {
+    0% {background-image: url("../img/game/interface/star/1.png");}
+    25% {background-image: url("../img/game/interface/star/2.png");}
+    50% {background-image: url("../img/game/interface/star/3.png");}
+    75% {background-image: url("../img/game/interface/star/4.png");}
+    100% {background-image: url("../img/game/interface/star/1.png");}
+}
+
 etoile.space-star {
 	top: 20%;left: 20%;
-	background-image: url("../img/game/god/egg/1.png");
 }
 etoile.quete-star {
 	top: 70%;left: 70%;
-	background-image: url("../img/game/god/egg/2.png");
 }
 etoile.autel-star {
 	top: 30%;left: 70%;
-	background-image: url("../img/game/god/egg/3.png");
 }

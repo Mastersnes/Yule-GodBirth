@@ -291,6 +291,20 @@ preload.evolution[step="5"] {
 	background-image: url("../img/game/ameliorations/evolution/4.png");
 }
 
+/**Star**/
+preload.star[step="1"] {
+	background-image: url("../img/game/interface/star/1.png");
+}
+preload.star[step="2"] {
+	background-image: url("../img/game/interface/star/2.png");
+}
+preload.star[step="3"] {
+	background-image: url("../img/game/interface/star/3.png");
+}
+preload.star[step="4"] {
+	background-image: url("../img/game/interface/star/4.png");
+}
+
 /**
 * close
 **/

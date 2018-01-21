@@ -41,13 +41,14 @@ function($, _, Utils) {
 		 * Ajoute les points
 		 */
 		this.addPoints = function(points) {
-		    if (points.croyance && points.croyance < 1000000000000) this.points.croyance += points.croyance;
-		    if (points.illumination && points.illumination < 1000000000000) this.points.illumination += points.illumination;
-		    if (points.bien && points.bien < 1000000000000) {
+			var maxPoint = Math.pow(10, 12);
+		    if (points.croyance && points.croyance < maxPoint) this.points.croyance += points.croyance;
+		    if (points.illumination && points.illumination < maxPoint) this.points.illumination += points.illumination;
+		    if (points.bien && points.bien < maxPoint) {
 			    this.points.bien += points.bien;
 			    if (this.points.bien < 0) this.points.bien = 0;
 		    }
-		    if (points.mal && points.mal < 1000000000000) { 
+		    if (points.mal && points.mal < maxPoint) {
 			    this.points.mal += points.mal;
 			    if (this.points.mal < 0) this.points.mal = 0;
 			}

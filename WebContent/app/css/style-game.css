@@ -17,11 +17,18 @@
 	position: absolute;
     z-index: 10;
     bottom: 16%;
-    color: red;
-    transition: background-color 1s;
+    
+    width: 4%; height: 5%;
+
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("../img/game/interface/constellation/normal.png");
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
 }
 .goto:hover {
-	background-color: blue;
+	background-image: url("../img/game/interface/constellation/hover.png");
+	transform: scale(1.2);
 }
 .goto.right {
 	right: 0%;

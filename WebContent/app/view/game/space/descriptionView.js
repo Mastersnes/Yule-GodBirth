@@ -24,12 +24,12 @@ function($, _, Utils) {
             	this.currentIncr = 1;
             	this.refreshMax = false;
             }
-            this.refresh();
+            this.refresh(false);
             
             this.el.show();
         };
         
-        this.refresh = function() {
+        this.refresh = function(loop) {
         	var itemId = this.currentItem;
 		    var item = this.Items.get(itemId);
         	
@@ -38,8 +38,8 @@ function($, _, Utils) {
 		    var maxIncr = this.getMaxIncr(item);
             if (this.refreshMax) this.currentIncr = maxIncr;
 		    
-        	this.fill("#current", item, 0);
-            this.fill("#next", item, this.currentIncr);
+        	this.fill("#current", item, 0, loop);
+            this.fill("#next", item, this.currentIncr, loop);
             
             if (!this.parent.checkAchetable(item, item.level+1)) this.el.find(".nextLevel[incr='1']").attr("disabled", "disabled");
             else this.el.find(".nextLevel[incr='1']").removeAttr("disabled");
@@ -56,7 +56,7 @@ function($, _, Utils) {
         /**
          * Permet de remplir les champs de la description
          */
-        this.fill = function(domId, item, incr) {
+        this.fill = function(domId, item, incr, loop) {
             var dom = this.el.find(domId);
             
             var level = item.level + incr;
@@ -99,7 +99,7 @@ function($, _, Utils) {
              * PRIX
              */
             var pointPossede = this.pointManager.points;
-            var prix = item.prix(level);
+            var prix = this.parent.calculPrix(item, level);
             if (prix) {
                 dom.find("#croyance-prix > span").html(Utils.format(prix.croyance, true, this.Textes));
                 if (prix.croyance) {
@@ -123,30 +123,35 @@ function($, _, Utils) {
              */
             //Croyance
             var gain = item.gain(incr, this.parent.Items);
+            if (!loop) console.log(item, incr, gain);
             
             dom.find("#croyance-loop span").html(Utils.format(gain.loop.croyance, true, this.Textes));
-            if (gain.loop.croyance) dom.find("#croyance").show();
+            dom.find("#croyance-click span").html(Utils.format(gain.click.croyance, true, this.Textes));
+            if (gain.loop.croyance || gain.click.croyance) dom.find("#croyance").show();
             else dom.find("#croyance").hide();
             
             //Illumination
             dom.find("#illumination-loop span").html(Utils.format(gain.loop.illumination, true, this.Textes));
-            if (gain.loop.illumination) dom.find("#illumination").show();
+            dom.find("#illumination-click span").html(Utils.format(gain.click.illumination, true, this.Textes));
+            if (gain.loop.illumination || gain.click.illumination) dom.find("#illumination").show();
             else dom.find("#illumination").hide();
 
             //Bien
             dom.find("#bien-loop span").html(Utils.format(gain.loop.bien, true, this.Textes));
-            if (gain.loop.bien) dom.find("#bien").show();
+            dom.find("#bien-click span").html(Utils.format(gain.click.bien, true, this.Textes));
+            if (gain.loop.bien || gain.click.bien) dom.find("#bien").show();
             else dom.find("#bien").hide();
 
             //Mal
             dom.find("#mal-loop span").html(Utils.format(gain.loop.mal, true, this.Textes));
-            if (gain.loop.mal) dom.find("#mal").show();
+            dom.find("#mal-click span").html(Utils.format(gain.click.mal, true, this.Textes));
+            if (gain.loop.mal || gain.click.mal) dom.find("#mal").show();
             else dom.find("#mal").hide();
         };
         
         this.getMaxIncr = function(item) {
         	var incr = 0;
-        	while(this.parent.checkAchetable(item, item.level+incr+1)) {
+        	while(this.parent.checkAchetable(item, item.level+incr+1) && incr < Math.pow(10, 3)) {
         		incr++;
         	}
         	return incr;
@@ -157,13 +162,15 @@ function($, _, Utils) {
 		    
 		    this.el.find(".nextLevel").click(function() {
 		    	var incr = parseInt($(this).attr("incr"));
+		    	if(incr == 0) return;
 		    	
                 var itemId = that.currentItem;
                 var item = that.Items.get(itemId);
                 var level = item.level+incr;
                 
-                if (that.parent.checkAchetable(item, level)) {
-                    if (that.pointManager.depenser(item.prix(level))) {
+                var prixTotal = that.parent.calculPrix(item, level);
+                if (that.parent.checkAchetable(item, level, prixTotal)) {
+                	if (that.pointManager.depenser(prixTotal)) {
                         if (item.level == 0) that.close();
                         item.level+=incr;
                         $("item#"+itemId).attr("level", item.level);
@@ -191,7 +198,7 @@ function($, _, Utils) {
 		};
 		
 		this.loop = function(game) {
-            this.refresh();
+            this.refresh(true);
 		};
 		
 		this.init(parent);

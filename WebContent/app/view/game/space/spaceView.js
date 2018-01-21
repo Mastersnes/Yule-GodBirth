@@ -39,7 +39,7 @@ define(["jquery",
         };
         
         this.loop = function(game) {
-            var mustChangeFront = Utils.rand(0, 1) == 0;
+            var mustChangeFront = Utils.rand(0, 5) == 0;
             if (mustChangeFront) {
                 //On change le front
                 var front = Utils.rand(1, this.maxFront+1);
@@ -48,6 +48,10 @@ define(["jquery",
             
             this.godView.loop();
             this.ameliorationView.loop(game);
+        };
+
+        this.click = function(game) {
+        	this.ameliorationView.click(game);
         };
         
         this.makeEvents = function() {

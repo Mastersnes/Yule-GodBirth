@@ -69,6 +69,9 @@ define(["jquery", "sha"], function($, sha, clipboard){
 		        return formatAmount + " " + notation;
 		    }
 		    return amount;
-		}
+		},
+		pow : function(multiple, base, puissance) {
+        	return multiple * Math.pow(base, puissance);
+        }
 	};
 });

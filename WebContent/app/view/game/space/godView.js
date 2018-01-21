@@ -41,6 +41,7 @@ define(["jquery",
         	var that = this;
             $("god").click(function() {
                 that.textManager.next();
+                that.parent.click(that.gameView);
                 that.render();
         	});
         };

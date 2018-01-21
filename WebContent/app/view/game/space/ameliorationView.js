@@ -87,6 +87,11 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			if (itemDom.length == 0) return;
 			itemDom.attr("title", this.Textes.get(item.name) + " (" + item.level + ")");
 			itemDom.attr("level", item.level);
+			
+			
+			if (this.checkAchetable(item, item.level+1)) {
+				if (!itemDom.hasClass("dispo")) itemDom.addClass("dispo");
+			}else itemDom.removeClass("dispo");
 		};
 		
 		this.loop = function(game) {
@@ -101,11 +106,21 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 		    var listItem = Items.list();
 		    for (var index in listItem) {
 		        var item = listItem[index];
-		        game.pointManager.addPoints(item.gain(item.level, Items).loop);
+		        game.pointManager.addPoints(item.gain(0, Items).loop);
 		        this.refreshItem(item);
 		    }
 		    
 		    this.descriptionView.loop(game);
+		};
+
+		this.click = function(game) {
+			var listItem = Items.list();
+			for (var index in listItem) {
+				var item = listItem[index];
+				if (item.name == "grandTout") console.log(item, item.gain(0, Items));
+				game.pointManager.addPoints(item.gain(0, Items).click);
+				this.refreshItem(item);
+			}
 		};
         
         this.makeItemEvents = function() {
@@ -160,17 +175,42 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
         /**
          * Verifie si une amelioration peut etre acheté
          */
-        this.checkAchetable = function(item, level) {
-            if (item.max && level > item.max) return false;
+        this.checkAchetable = function(item, level, prixTotal) {
+        	var max = item.max?item.max:100;
+        	if (level > max) return false;
+        	if (level == item.level) return false;
+        	
+        	if (!prixTotal) prixTotal = this.calculPrix(item, level);
         	
         	var itemRestrictions = item.restrictions(level);
             var restrictions = this.checkRestrictions(itemRestrictions);
             
             if (!restrictions || restrictions.length == 0) {
-                var prixOk = this.pointManager.checkOk(item.prix(level));
+                var prixOk = this.pointManager.checkOk(prixTotal);
                 return prixOk;
             }
             return false;
+        };
+        
+        /**
+         * Calcul le prix total d'un achat
+         */
+        this.calculPrix = function(item, level) {
+        	var currentLvl = item.level;
+        	
+        	var prixTotal = {
+        		croyance : 0,
+        		illumination : 0	
+        	};
+        	
+        	var i = 1;
+        	while (currentLvl + i <= level) {
+        		var prix = item.prix(currentLvl + i);
+        		prixTotal.croyance += prix.croyance;
+        		prixTotal.illumination += prix.illumination;
+        		i++;
+        	}
+        	return prixTotal;
         };
         
         /**
