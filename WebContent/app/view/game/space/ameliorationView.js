@@ -117,7 +117,6 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			var listItem = Items.list();
 			for (var index in listItem) {
 				var item = listItem[index];
-				if (item.name == "grandTout") console.log(item, item.gain(0, Items));
 				game.pointManager.addPoints(item.gain(0, Items).click);
 				this.refreshItem(item);
 			}
@@ -134,6 +133,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
             $("item").hover(function() {
             	$(this).removeClass('out').addClass('in');
             }, function() {
+            	if (!that.descriptionView.currentItem)
             	$(this).removeClass('in').addClass('out');
             });
         };

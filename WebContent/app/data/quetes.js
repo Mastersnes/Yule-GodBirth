@@ -4,15 +4,18 @@ define(["jquery"], function($){
 			"quete-1" : {
 			    name : "quete-1",
 			    description : "quete-1-desc",
-			    apparition : {},
+			    apparition : {
+					 isComplete : [],
+				     ameliorations : []
+				},
 			    conditions : [
 				     {
-				    	 name : "terre",
-				    	 level : 5
+				    	 name : "grandTout",
+				    	 level : 1
 				     }
 				],
 			    gains : {
-			    	croyance : 10000,
+			    	croyance : 100,
 			    	illumination : 0
 			    }
 			},
@@ -21,22 +24,47 @@ define(["jquery"], function($){
 			    description : "quete-2-desc",
 				apparition : {
 					 isComplete : [],
-				     ameliorations : [
-				         {
-					    	 name : "grandTout",
-					    	 level : 3
-				         }
-				     ]
+				     ameliorations : []
 				},
 			    conditions : [
 				     {
-				    	 name : "soleil",
-				    	 level : 30
-				     }
+				    	 name : "dieu",
+				    	 level : 3
+			         },
+			         {
+				    	 name : "deesse",
+				    	 level : 3
+			         }
 				],
 			    gains : {
-			    	croyance : 50000,
+			    	croyance : 1000,
 			    	illumination : 1
+			    }
+			},
+			"quete-3" : {
+			    name : "quete-3",
+			    description : "quete-3-desc",
+				apparition : {
+					 isComplete : [],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "grandTout",
+				    	 level : 5
+			         },
+			         {
+				    	 name : "dieu",
+				    	 level : 5
+			         },
+			         {
+				    	 name : "deesse",
+				    	 level : 5
+			         }
+				],
+			    gains : {
+			    	croyance : 5000,
+			    	illumination : 0
 			    }
 			}
 	};

@@ -13,14 +13,36 @@ define(["jquery"], function($){
 				next : "baby",
 				text : ["cinematique-egg1", "", "cinematique-egg2"]
 			},
-            "baby" : {
-                name : "baby",
-                text : ["cinematique-baby1"],
+			"baby" : {
+				name : "baby",
+				nbr : 3,
+				next : "child",
+				text : ["cinematique-baby1"]
+			},
+            "child" : {
+                name : "child",
+                text : ["cinematique-child1"],
                 events : {
-                    typeEvents : ["baby-event1", "baby-event2"],
+                    typeEvents : ["child-event1", "child-event2"],
                     newEvents : ["general-event1", "general-event2"]
-                    
-                }
+                },
+                animations : [
+	                {
+	                	name : "cligne",
+	                	chance : 5,
+	                	time : 500
+	                },
+	                {
+	                	name : "langue",
+	                	chance : 10,
+	                	time : 500
+	                },
+	                {
+	                	name : "tourneTete",
+	                	chance : 10,
+	                	time : 800
+	                }
+                ]
             }
 	};
 	

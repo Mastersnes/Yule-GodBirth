@@ -120,35 +120,11 @@
 	animation-name: grandTout-out;
     animation-duration: 0.25s;
     animation-fill-mode: both;
-    
-    -webkit-animation-name: grandTout-out;
-    -webkit-animation-duration: 0.25s;
-    -webkit-animation-fill-mode: both;
-
-	-moz-animation-name: grandTout-out;
-    -moz-animation-duration: 0.25s;
-    -moz-animation-fill-mode: both;
-
-	-o-animation-name: grandTout-out;
-    -o-animation-duration: 0.25s;
-    -o-animation-fill-mode: both;
 }
 .ameliorations item.grandTout.in span {
 	animation-name: grandTout-in;
     animation-duration: 0.25s;
     animation-fill-mode: both;
-    
-    -webkit-animation-name: grandTout-in;
-    -webkit-animation-duration: 0.25s;
-    -webkit-animation-fill-mode: both;
-
-	-moz-animation-name: grandTout-in;
-    -moz-animation-duration: 0.25s;
-    -moz-animation-fill-mode: both;
-
-	-o-animation-name: grandTout-in;
-    -o-animation-duration: 0.25s;
-    -o-animation-fill-mode: both;
 }
 
 @keyframes grandTout-in {

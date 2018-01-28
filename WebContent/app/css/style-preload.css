@@ -5,6 +5,63 @@ preload {
 	background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+/**GOD**/
+preload.god-dust[step="1"] {
+	background-image: url("../img/game/god/dust/1.png");
+}
+preload.god-dust[step="2"] {
+	background-image: url("../img/game/god/dust/2.png");
+}
+preload.god-dust[step="3"] {
+	background-image: url("../img/game/god/dust/3.png");
+}
+preload.god-dust[step="4"] {
+	background-image: url("../img/game/god/dust/4.png");
+}
+preload.god-dust[step="5"] {
+	background-image: url("../img/game/god/dust/5.png");
+}
+
+preload.god-egg[step="1"] {
+	background-image: url("../img/game/god/egg/1.png");
+}
+preload.god-egg[step="2"] {
+	background-image: url("../img/game/god/egg/2.png");
+}
+preload.god-egg[step="3"] {
+	background-image: url("../img/game/god/egg/3.png");
+}
+
+preload.god-baby[step="1"] {
+	background-image: url("../img/game/god/baby/1.png");
+}
+
+preload.god-child[step="1"] {
+	background-image: url("../img/game/god/child/1.png");
+}
+preload.god-child-cligne[step="1"] {
+	background-image: url("../img/game/god/child/cligne/1.png");
+}
+preload.god-child-langue[step="1"] {
+	background-image: url("../img/game/god/child/langue/1.png");
+}
+preload.god-child-langue[step="2"] {
+	background-image: url("../img/game/god/child/langue/2.png");
+}
+preload.god-child-langue[step="3"] {
+	background-image: url("../img/game/god/child/langue/3.png");
+}
+preload.god-child-langue[step="4"] {
+	background-image: url("../img/game/god/child/langue/4.png");
+}
+preload.god-child-tourneTete[step="1"] {
+	background-image: url("../img/game/god/child/tourneTete/1.png");
+}
+preload.god-child-tourneTete[step="2"] {
+	background-image: url("../img/game/god/child/tourneTete/2.png");
+}
+
 /**Dieu**/
 preload.dieu[step="1"] {
 	background-image: url("../img/game/ameliorations/dieu/dieu.png");
@@ -303,6 +360,23 @@ preload.star[step="3"] {
 }
 preload.star[step="4"] {
 	background-image: url("../img/game/interface/star/4.png");
+}
+
+/**Quete**/
+preload.quete-complete[step="1"] {
+	background-image: url("../img/game/interface/quetes/active.png");
+}
+preload.quete-complete[step="2"] {
+	background-image: url("../img/game/interface/quetes/1.png");
+}
+preload.quete-complete[step="3"] {
+	background-image: url("../img/game/interface/quetes/2.png");
+}
+preload.quete-complete[step="4"] {
+	background-image: url("../img/game/interface/quetes/3.png");
+}
+preload.quete-complete[step="5"] {
+	background-image: url("../img/game/interface/quetes/4.png");
 }
 
 /**

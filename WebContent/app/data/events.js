@@ -1,38 +1,38 @@
 'use strict';
 define(["jquery"], function($){
 	var data = {
-			"baby-event1" : {
-				name : "baby-event1",
-			    text : "test-baby-event1",
+			"child-event1" : {
+				name : "child-event1",
+			    text : "test-child-event1",
 			    actions : [
 			         {
 			             name : "oui",
 			             action : function(game) {
-			                 alert("test-baby-event1 oui");
+			                 alert("test-child-event1 oui");
 			             }
 			         },
 			         {
                          name : "non",
                          action : function(game) {
-                             alert("test-baby-event1 non");
+                             alert("test-child-event1 non");
                          }
                      }
 			    ]
 			},
-			"baby-event2" : {
-				name : "baby-event2",
-                text : "test-baby-event2",
+			"child-event2" : {
+				name : "child-event2",
+                text : "test-child-event2",
                 actions : [
                      {
                          name : "oui",
                          action : function(game) {
-                             alert("test-baby-event2 oui");
+                             alert("test-child-event2 oui");
                          }
                      },
                      {
                          name : "non",
                          action : function(game) {
-                             alert("test-baby-event2 non");
+                             alert("test-child-event2 non");
                          }
                      }
                 ]

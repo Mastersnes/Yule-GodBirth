@@ -66,6 +66,7 @@ function($, _, Utils) {
              */
             dom.find("#nom").html(this.Textes.get(item.name));
             dom.find("#level").html(level);
+            dom.find("#descr").html(this.Textes.get(item.descr));
             
             /**
              * Restrictions
@@ -121,10 +122,8 @@ function($, _, Utils) {
             /**
              * GAIN
              */
-            //Croyance
             var gain = item.gain(incr, this.parent.Items);
-            if (!loop) console.log(item, incr, gain);
-            
+            //Croyance
             dom.find("#croyance-loop span").html(Utils.format(gain.loop.croyance, true, this.Textes));
             dom.find("#croyance-click span").html(Utils.format(gain.click.croyance, true, this.Textes));
             if (gain.loop.croyance || gain.click.croyance) dom.find("#croyance").show();
@@ -177,6 +176,7 @@ function($, _, Utils) {
                         
                         if (item.select) item.select(that.parent.parent.parent, that.parent, incr);
                         that.refresh();
+                        that.close();
                     }
                 }
             });
@@ -188,6 +188,8 @@ function($, _, Utils) {
             });
 		    
 		    this.el.find(".close-button, mask").click(function() {
+		    	var itemId = that.currentItem;
+		    	$("item#"+itemId).removeClass('in').addClass('out');
                 that.close();
             });
 		};

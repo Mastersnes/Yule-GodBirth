@@ -58,6 +58,7 @@ define(["jquery",
         	if (this.complete.indexOf(quete.name) > -1) return false;
         	
         	// Si au moins une des quete dependante n'est pas collectée, on n'affiche pas
+        	if (!quete.apparition) console.log(quete);
         	var checkQuete = quete.apparition.isComplete;
         	for (var indexComplete in checkQuete) {
         		var queteToCheck = checkQuete[indexComplete];
@@ -169,8 +170,9 @@ define(["jquery",
         		that.detailView.show(queteId);
         	});
 
-        	this.el.find("collecte").click(function() {
-        	    var queteId = $(this).attr("id");
+        	this.el.find("collecte").click(function(e) {
+        		e.stopPropagation();
+        		var queteId = $(this).parent().attr("id");
         	    that.completeQuete(null, queteId);
         	});
         	

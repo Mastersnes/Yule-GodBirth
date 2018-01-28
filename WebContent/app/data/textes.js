@@ -201,16 +201,28 @@ define(["jquery"], function($){
          * Ameliorations - Deites
          */
         "grandTout" : {
-            fr : "Grand Tout",
+            fr : "Grand-Tout",
             en : "Great Everything"
+        },
+        "grandTout-descr" : {
+        	fr : "Le début et la fin de toute chose. Le Grand-Tout evoluera pour chaque amélioration effectuée.",
+        	en : "-"
         },
         "dieu" : {
             fr : "Dieu",
             en : "God"
         },
+        "dieu-descr" : {
+        	fr : "Dieu de la nature, de la forêt et géniteur de toutes choses. Il est complémentaire de la Déesse et progresse en sa compagnie.",
+        	en : "-"
+        },
         "deesse" : {
-            fr : "Déesse",
-            en : "Goddess"
+        	fr : "Déesse",
+        	en : "Goddess"
+        },
+        "deesse-descr" : {
+            fr : "Elle représente la fertilité, la magie et le feminin sacré. Elle est forte et indépendante.",
+            en : "-"
         },
         /**
          * Ameliorations - Univers
@@ -219,13 +231,25 @@ define(["jquery"], function($){
             fr : "Terre",
             en : "Earth"
         },
+        "terre-descr" : {
+        	fr : "Au départ, fut la Terre. Lieu eternel de sagesse et d'equilibre. Le Dieu et la Déesse lui donne sa force à travers les âges.",
+        	en : "-"
+        },
         "lune" : {
             fr : "Lune",
             en : "Moon"
         },
+        "lune-descr" : {
+        	fr : "Sanctuaire de la Déesse. Elle garde en son sein la beauté et la grâce de toute femme.",
+        	en : "Moon"
+        },
         "soleil" : {
             fr : "Soleil",
             en : "Sun"
+        },
+        "soleil-descr" : {
+        	fr : "Symbole de puissance et sanctuaire du Dieu cornu. Son pouvoir illumine le monde.",
+        	en : "-"
         },
         /**
          * Ameliorations - Vie
@@ -234,17 +258,33 @@ define(["jquery"], function($){
             fr : "Ciel",
             en : "Sky"
         },
+        "ciel-descr" : {
+        	fr : "Centre spirituel de l'inconscient. Le Dieu et la Lune nous élève vers la beauté de l'immateriel.",
+        	en : "-"
+        },
         "foret" : {
-            fr : "Fôrets",
+            fr : "Forêts",
             en : "Forest"
+        },
+        "foret-descr" : {
+        	fr : "L'energie du monde circule dans ses veines et dans son corps. Le Dieu cornu en est son gardien, la Terre en est son berceau.",
+        	en : "-"
         },
         "volcan" : {
             fr : "Volcans",
             en : "Volcanoes"
         },
+        "volcan-descr" : {
+        	fr : "C'est dans le feu et les cendres que l'homme jaillit sur terre. C'est dans le feu et les cendres qu'il disparaitra. La Déesse peut donner, mais c'est par la Terre qu'elle nous reprendra.",
+        	en : "-"
+        },
         "ocean" : {
             fr : "Oceans",
             en : "Oceans"
+        },
+        "ocean-descr" : {
+        	fr : "Berceau de la vie. L'Ocean reflete la magie de la Lune et la grandeure de la Déesse.",
+        	en : "-"
         },
         /**
          * Ameliorations - Mort
@@ -252,6 +292,10 @@ define(["jquery"], function($){
         "gouffre" : {
             fr : "Gouffre",
             en : "-"
+        },
+        "gouffre-descr" : {
+        	fr : "-",
+        	en : "-"
         },
         "vide" : {
             fr : "Vide",
@@ -284,20 +328,28 @@ define(["jquery"], function($){
          * Quetes
          */
         "quete-1" : {
-        	fr : "Les debuts de la terre",
-        	en : "Les debuts de la terre"
+        	fr : "Au commencement...",
+        	en : "At Beginning..."
         },
         "quete-1-desc" : {
-        	fr : "Faites grandir la Terre et donnez-lui la force necessaire pour donner la vie",
-        	en : "Faites grandir la Terre et donnez-lui la force necessaire pour donner la vie"
+        	fr : "Ameliorez le Grand-Tout pour la première fois",
+        	en : "Ameliorez le Grand-Tout pour la première fois"
         },
         "quete-2" : {
-        	fr : "La lumiere eternelle",
-        	en : "La lumiere eternelle"
+        	fr : "Premier amour",
+        	en : "First love"
         },
         "quete-2-desc" : {
-        	fr : "Faites jaillir la lumiere du Soleil sur le monde",
-        	en : "Faites jaillir la lumiere du Soleil sur le monde"
+        	fr : "Donnez une chance à l'amour en ce monde",
+        	en : "Donnez une chance à l'amour en ce monde"
+        },
+        "quete-3" : {
+        	fr : "La création de l'univers",
+        	en : "La création de l'univers"
+        },
+        "quete-3-desc" : {
+        	fr : "Creez l'univers",
+        	en : "Creez l'univers"
         },
         
         /**

@@ -11,15 +11,15 @@ define(["jquery"], function($){
 			    conditions : [
 			         {
 			             name : "grandTout",
-			             level : 2
+			             level : 5
 			         },
 			         {
                          name : "dieu",
-                         level : 2
+                         level : 5
                      },
                      {
                          name : "deesse",
-                         level : 2
+                         level : 5
                      }
 			    ],
 				name : "univers",
@@ -65,27 +65,27 @@ define(["jquery"], function($){
 			    conditions : [
                      {
                          name : "dieu",
-                         level : 20
+                         level : 30
                      },
                      {
                          name : "deesse",
-                         level : 20
+                         level : 30
                      },
                      {
                          name : "terre",
-                         level : 30
+                         level : 20
                      },
                      {
                          name : "lune",
-                         level : 30
+                         level : 20
                      },
                      {
                          name : "chaos",
-                         level : 50
+                         level : 5
                      },
                      {
                          name : "foret",
-                         level : 50
+                         level : 5
                      }
                 ],
 				name : "concept",
