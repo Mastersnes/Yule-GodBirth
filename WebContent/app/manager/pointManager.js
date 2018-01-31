@@ -21,18 +21,18 @@ function($, _, Utils) {
 		};
 		
 		this.render = function() {
-		    $("croyance .text").html(Utils.format(this.points.croyance, true, this.Textes));
+		    $(this.el).find("croyance .text").html(Utils.format(this.points.croyance, true, this.Textes));
 		    
-		    $("illumination .text").html(Utils.format(this.points.illumination, true, this.Textes));
-		    if (this.points.illumination > 0) $("illumination").show();
+		    $(this.el).find("illumination .text").html(Utils.format(this.points.illumination, true, this.Textes));
+		    if (this.points.illumination > 0) $(this.el).find("illumination").show();
 
 		    var total = this.points.bien + this.points.mal;
 		    var bienPercent = Utils.toPercent(this.points.bien, total);
 		    
-		    $("jauge yang").css({
+		    $(this.el).find("jauge yang").css({
 		    	width : bienPercent + "%"
 		    });
-		    $("jauge yinyang").css({
+		    $(this.el).find("jauge yinyang").css({
 		    	left : (bienPercent - 2.25) + "%"
 		    });
 		};

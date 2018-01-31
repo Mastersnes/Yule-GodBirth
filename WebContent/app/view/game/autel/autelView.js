@@ -1,8 +1,9 @@
 'use strict';
 define(["jquery", 
         "app/utils/utils",
-        "text!app/template/game/autel/autel.html"], 
-        function($, Utils, page){
+        "text!app/template/game/autel/autel.html",
+        "app/view/game/autel/pierresView"], 
+        function($, Utils, page, PierresView){
     return function(parent){
         this.init = function(parent) {
         	this.el = $(".autel");
@@ -13,6 +14,8 @@ define(["jquery",
             
             this.pointManager = this.parent.pointManager;
             this.ameliorationView = this.parent.spaceView.ameliorationView;
+            
+            this.pierresView = new PierresView(this);
         };
         
         this.render = function() {
@@ -22,6 +25,8 @@ define(["jquery",
 					text : this.Textes
 			};
 			this.el.html(template(templateData));
+			
+			this.pierresView.render();
 			
 			this.refresh();
 			this.makeEvents();

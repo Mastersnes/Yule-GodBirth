@@ -34,7 +34,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			/**
 			 * En tout premier on affiche les grandes deités
 			 */
-            $(".ameliorations").show();
+			this.el.find(".ameliorations").show();
 		};
 		
 		this.unlockOnglet = function(ongletId, show) {
@@ -125,12 +125,12 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
         this.makeItemEvents = function() {
             var that = this;
             
-            $("item").on("click", function() {
+            $(this.el).find("item").on("click", function() {
             	that.descriptionView.currentItem = $(this).attr("id");
                 that.descriptionView.show($(this).attr("id"), true);
             });
             
-            $("item").hover(function() {
+            $(this.el).find("item").hover(function() {
             	$(this).removeClass('out').addClass('in');
             }, function() {
             	if (!that.descriptionView.currentItem)
