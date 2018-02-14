@@ -348,6 +348,91 @@ preload.evolution[step="5"] {
 	background-image: url("../img/game/ameliorations/evolution/4.png");
 }
 
+/**Amethyste**/
+preload.amethyste[step="1"] {
+	background-image: url("../img/game/autel/pierres/amethyste/amethyste.png");
+}
+preload.amethyste[step="2"] {
+	background-image: url("../img/game/autel/pierres/amethyste/1.png");
+}
+preload.amethyste[step="3"] {
+	background-image: url("../img/game/autel/pierres/amethyste/2.png");
+}
+preload.amethyste[step="4"] {
+	background-image: url("../img/game/autel/pierres/amethyste/3.png");
+}
+preload.amethyste[step="5"] {
+	background-image: url("../img/game/autel/pierres/amethyste/4.png");
+}
+
+/**Emeraude**/
+preload.emeraude[step="1"] {
+	background-image: url("../img/game/autel/pierres/emeraude/emeraude.png");
+}
+preload.emeraude[step="2"] {
+	background-image: url("../img/game/autel/pierres/emeraude/1.png");
+}
+preload.emeraude[step="3"] {
+	background-image: url("../img/game/autel/pierres/emeraude/2.png");
+}
+preload.emeraude[step="4"] {
+	background-image: url("../img/game/autel/pierres/emeraude/3.png");
+}
+preload.emeraude[step="5"] {
+	background-image: url("../img/game/autel/pierres/emeraude/4.png");
+}
+
+/**Onyx**/
+preload.onyx[step="1"] {
+	background-image: url("../img/game/autel/pierres/onyx/onyx.png");
+}
+preload.onyx[step="2"] {
+	background-image: url("../img/game/autel/pierres/onyx/1.png");
+}
+preload.onyx[step="3"] {
+	background-image: url("../img/game/autel/pierres/onyx/2.png");
+}
+preload.onyx[step="4"] {
+	background-image: url("../img/game/autel/pierres/onyx/3.png");
+}
+preload.onyx[step="5"] {
+	background-image: url("../img/game/autel/pierres/onyx/4.png");
+}
+
+/**Rubis**/
+preload.rubis[step="1"] {
+	background-image: url("../img/game/autel/pierres/rubis/rubis.png");
+}
+preload.rubis[step="2"] {
+	background-image: url("../img/game/autel/pierres/rubis/1.png");
+}
+preload.rubis[step="3"] {
+	background-image: url("../img/game/autel/pierres/rubis/2.png");
+}
+preload.rubis[step="4"] {
+	background-image: url("../img/game/autel/pierres/rubis/3.png");
+}
+preload.rubis[step="5"] {
+	background-image: url("../img/game/autel/pierres/rubis/4.png");
+}
+
+/**Saphir**/
+preload.saphir[step="1"] {
+	background-image: url("../img/game/autel/pierres/saphir/saphir.png");
+}
+preload.saphir[step="2"] {
+	background-image: url("../img/game/autel/pierres/saphir/1.png");
+}
+preload.saphir[step="3"] {
+	background-image: url("../img/game/autel/pierres/saphir/2.png");
+}
+preload.saphir[step="4"] {
+	background-image: url("../img/game/autel/pierres/saphir/3.png");
+}
+preload.saphir[step="5"] {
+	background-image: url("../img/game/autel/pierres/saphir/4.png");
+}
+
 /**Star**/
 preload.star[step="1"] {
 	background-image: url("../img/game/interface/star/1.png");

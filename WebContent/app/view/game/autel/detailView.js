@@ -11,6 +11,7 @@ define(["jquery",
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
             this.Pierres = parent.Pierres;
+            this.pointManager = parent.pointManager;
         };
         
         this.render = function() {
@@ -100,22 +101,26 @@ define(["jquery",
              */
             var gain = pierre.gains;
             
-            dom.find("#croyance-gain").html(gain.croyance + " %");
+            var prefix = gain.croyance > 0?"+":"-";
+            dom.find("#croyance-gain").html(prefix + gain.croyance + " %");
             if (gain.croyance) dom.find("#croyance").show();
             else dom.find("#croyance").hide();
             
             //Illumination
-            dom.find("#illumination-gain").html(gain.illumination + " %");
+            prefix = gain.illumination > 0?"+":"-";
+            dom.find("#illumination-gain").html(prefix + gain.illumination + " %");
             if (gain.illumination) dom.find("#illumination").show();
             else dom.find("#illumination").hide();
 
             //Bien
-            dom.find("#bien-gain").html(gain.bien + " %");
+            prefix = gain.bien > 0?"+":"-";
+            dom.find("#bien-gain").html(prefix + gain.bien + " %");
             if (gain.bien) dom.find("#bien").show();
             else dom.find("#bien").hide();
 
             //Mal
-            dom.find("#mal-gain").html(gain.mal + " %");
+            prefix = gain.mal > 0?"+":"-";
+            dom.find("#mal-gain").html(prefix + gain.mal + " %");
             if (gain.mal) dom.find("#mal").show();
             else dom.find("#mal").hide();
             
@@ -139,6 +144,7 @@ define(["jquery",
         	var that = this;
         	
         	this.el.find(".close-button, mask").click(function() {
+        		that.currentPierre = null;
                 that.close();
             });
         	this.el.find("#acheter").click(function() {

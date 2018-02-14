@@ -1,0 +1,279 @@
+/**
+* Amethyste
+**/
+.ameliorations item.amethyste span {
+	background-image: url("../img/game/autel/pierres/amethyste/amethyste.png");
+}
+.ameliorations item.amethyste.out span {
+	animation-name: amethyste-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+
+	-webkit-animation-name: amethyste-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: amethyste-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: amethyste-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.amethyste.in span {
+	animation-name: amethyste-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: amethyste-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: amethyste-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: amethyste-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes amethyste-in {
+    0% {background-image: url("../img/game/autel/pierres/amethyste/amethyste.png");}
+    25% {background-image: url("../img/game/autel/pierres/amethyste/1.png");}
+    50% {background-image: url("../img/game/autel/pierres/amethyste/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/amethyste/3.png");}
+    100% {background-image: url("../img/game/autel/pierres/amethyste/4.png");}
+}
+@keyframes amethyste-out {
+    0% {background-image: url("../img/game/autel/pierres/amethyste/4.png");}
+    25% {background-image: url("../img/game/autel/pierres/amethyste/3.png");}
+    50% {background-image: url("../img/game/autel/pierres/amethyste/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/amethyste/1.png");}
+    100% {background-image: url("../img/game/autel/pierres/amethyste/amethyste.png");}
+}
+
+/**
+* Emeraude
+**/
+.ameliorations item.emeraude span {
+	background-image: url("../img/game/autel/pierres/emeraude/emeraude.png");
+}
+.ameliorations item.emeraude.out span {
+	animation-name: emeraude-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+
+	-webkit-animation-name: emeraude-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: emeraude-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: emeraude-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.emeraude.in span {
+	animation-name: emeraude-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: emeraude-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: emeraude-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: emeraude-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes emeraude-in {
+    0% {background-image: url("../img/game/autel/pierres/emeraude/emeraude.png");}
+    25% {background-image: url("../img/game/autel/pierres/emeraude/1.png");}
+    50% {background-image: url("../img/game/autel/pierres/emeraude/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/emeraude/3.png");}
+    100% {background-image: url("../img/game/autel/pierres/emeraude/4.png");}
+}
+@keyframes emeraude-out {
+    0% {background-image: url("../img/game/autel/pierres/emeraude/4.png");}
+    25% {background-image: url("../img/game/autel/pierres/emeraude/3.png");}
+    50% {background-image: url("../img/game/autel/pierres/emeraude/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/emeraude/1.png");}
+    100% {background-image: url("../img/game/autel/pierres/emeraude/emeraude.png");}
+}
+
+/**
+* Onyx
+**/
+.ameliorations item.onyx span {
+	background-image: url("../img/game/autel/pierres/onyx/onyx.png");
+}
+.ameliorations item.onyx.out span {
+	animation-name: onyx-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+
+	-webkit-animation-name: onyx-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: onyx-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: onyx-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.onyx.in span {
+	animation-name: onyx-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: onyx-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: onyx-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: onyx-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes onyx-in {
+    0% {background-image: url("../img/game/autel/pierres/onyx/onyx.png");}
+    25% {background-image: url("../img/game/autel/pierres/onyx/1.png");}
+    50% {background-image: url("../img/game/autel/pierres/onyx/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/onyx/3.png");}
+    100% {background-image: url("../img/game/autel/pierres/onyx/4.png");}
+}
+@keyframes onyx-out {
+    0% {background-image: url("../img/game/autel/pierres/onyx/4.png");}
+    25% {background-image: url("../img/game/autel/pierres/onyx/3.png");}
+    50% {background-image: url("../img/game/autel/pierres/onyx/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/onyx/1.png");}
+    100% {background-image: url("../img/game/autel/pierres/onyx/onyx.png");}
+}
+
+/**
+* Rubis
+**/
+.ameliorations item.rubis span {
+	background-image: url("../img/game/autel/pierres/rubis/rubis.png");
+}
+.ameliorations item.rubis.out span {
+	animation-name: rubis-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+
+	-webkit-animation-name: rubis-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: rubis-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: rubis-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.rubis.in span {
+	animation-name: rubis-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: rubis-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: rubis-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: rubis-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes rubis-in {
+    0% {background-image: url("../img/game/autel/pierres/rubis/rubis.png");}
+    25% {background-image: url("../img/game/autel/pierres/rubis/1.png");}
+    50% {background-image: url("../img/game/autel/pierres/rubis/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/rubis/3.png");}
+    100% {background-image: url("../img/game/autel/pierres/rubis/4.png");}
+}
+@keyframes rubis-out {
+    0% {background-image: url("../img/game/autel/pierres/rubis/4.png");}
+    25% {background-image: url("../img/game/autel/pierres/rubis/3.png");}
+    50% {background-image: url("../img/game/autel/pierres/rubis/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/rubis/1.png");}
+    100% {background-image: url("../img/game/autel/pierres/rubis/rubis.png");}
+}
+
+/**
+* Saphir
+**/
+.ameliorations item.saphir span {
+	background-image: url("../img/game/autel/pierres/saphir/saphir.png");
+}
+.ameliorations item.saphir.out span {
+	animation-name: saphir-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+
+	-webkit-animation-name: saphir-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: saphir-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: saphir-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.saphir.in span {
+	animation-name: saphir-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: saphir-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: saphir-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: saphir-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes saphir-in {
+    0% {background-image: url("../img/game/autel/pierres/saphir/saphir.png");}
+    25% {background-image: url("../img/game/autel/pierres/saphir/1.png");}
+    50% {background-image: url("../img/game/autel/pierres/saphir/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/saphir/3.png");}
+    100% {background-image: url("../img/game/autel/pierres/saphir/4.png");}
+}
+@keyframes saphir-out {
+    0% {background-image: url("../img/game/autel/pierres/saphir/4.png");}
+    25% {background-image: url("../img/game/autel/pierres/saphir/3.png");}
+    50% {background-image: url("../img/game/autel/pierres/saphir/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/saphir/1.png");}
+    100% {background-image: url("../img/game/autel/pierres/saphir/saphir.png");}
+}

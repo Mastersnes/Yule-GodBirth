@@ -28,18 +28,21 @@ define(["jquery",
 			
 			this.pierresView.render();
 			
-			this.refresh();
 			this.makeEvents();
+			
+			/**
+			 * En tout premier on affiche les pierres primaires
+			 */
+			this.el.find(".ameliorations").show();
+        };
+        
+        this.loop = function(game) {
+        	this.pierresView.loop();
         };
         
         this.show = function() {
-        	this.render();
         	this.el.show();
         };
-        
-        this.refresh = function() {};
-        
-        this.loop = function(game) {};
         
         this.makeEvents = function() {
         	var that = this;

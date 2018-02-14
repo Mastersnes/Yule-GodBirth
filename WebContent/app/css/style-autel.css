@@ -11,3 +11,40 @@ autel {
     background-size: 100% 100%;
     background-image: url("../img/game/autel/fond.png");
 }
+
+autel > chasse {
+	display: block;
+	position: absolute;
+	width: 10%; height: 10%;
+	background-color: gray;
+	
+	transition: background-color 300ms;
+}
+autel.brille > chasse {
+	background-color: cyan;
+}
+
+autel > chasse:nth-child(1) {
+	left : 41%;
+	top : 5%;
+}
+autel > chasse:nth-child(2) {
+	left : 83%;
+	top : 36%;
+}
+autel > chasse:nth-child(3) {
+	left : 70%;
+	top : 78%;
+}
+autel > chasse:nth-child(4) {
+	left : 16%;
+	top : 77%;
+}
+autel > chasse:nth-child(5) {
+	left : 10%;
+	top : 36%;
+}
+autel > chasse:nth-child(6) {
+	left : 44%;
+	top : 46%;
+}

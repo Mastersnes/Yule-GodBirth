@@ -34,11 +34,12 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			/**
 			 * En tout premier on affiche les grandes deités
 			 */
-			this.el.find(".ameliorations").show();
+			$(this.el).find(".ameliorations").show();
 		};
 		
 		this.unlockOnglet = function(ongletId, show) {
-			if ($("onglet#"+ongletId).length > 0) return;
+			if ($(this.el).find("onglet#"+ongletId).length > 0) return;
+			
 			var onglet = Onglets.get(ongletId);
 			if (!onglet) return;
 			
@@ -55,8 +56,8 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 		};
 		
 		this.showItems = function(ongletId) {
-			$("onglet.active").removeClass("active");
-			$("onglet#"+ongletId).addClass("active");
+			$(this.el).find("onglet.active").removeClass("active");
+			$(this.el).find("onglet#"+ongletId).addClass("active");
 			
 			$(this.el).find("content").empty();
 			
@@ -83,7 +84,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 		};
 		
 		this.refreshItem = function(item) {
-			var itemDom = $("item#"+item.name);
+			var itemDom = $(this.el).find("item#"+item.name);
 			if (itemDom.length == 0) return;
 			itemDom.attr("title", this.Textes.get(item.name) + " (" + item.level + ")");
 			itemDom.attr("level", item.level);
@@ -141,7 +142,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
         this.makeOngletEvents = function(ongletId) {
         	var that = this;
         	
-        	$("onglet#"+ongletId).on("click", function() {
+        	$(this.el).find("onglet#"+ongletId).on("click", function() {
                 var ongletId = $(this).attr("id");
                 that.showItems(ongletId);
             });
