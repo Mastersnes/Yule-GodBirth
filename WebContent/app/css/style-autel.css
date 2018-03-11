@@ -16,12 +16,9 @@ autel > chasse {
 	display: block;
 	position: absolute;
 	width: 10%; height: 10%;
-	background-color: gray;
 	
-	transition: background-color 300ms;
-}
-autel.brille > chasse {
-	background-color: cyan;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 autel > chasse:nth-child(1) {

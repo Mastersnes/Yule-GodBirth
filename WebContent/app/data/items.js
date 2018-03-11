@@ -59,7 +59,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : 0
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * croyance) + 100000,
+	        				croyance : Math.round(0.5 * croyance) + 1,
 	        				illumination : 0,
                             bien : 0,
                             mal : 0
@@ -99,13 +99,13 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        				croyance : croyance,
 	        				illumination : 0,
                             bien : 0,
-                            mal : 2 * me
+                            mal : Math.round(5 * me)
 	        			},
 	        			click : {
 	        				croyance : Math.round(0.5 * croyance),
 	        				illumination : 0,
                             bien : 0,
-                            mal : Math.round(0.5 * me)
+                            mal : Math.round(5 * me)
 	        			}
 	        		};
 	        	};
@@ -135,13 +135,13 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			loop : {
 	        				croyance : me,
 	        				illumination : 0,
-                            bien : me,
+                            bien : Math.round(me * 3),
                             mal : 0
 	        			},
 	        			click : {
 	        				croyance : Math.round(0.5 * me),
 	        				illumination : 0,
-                            bien : Math.round(0.25 * me),
+	        				bien : Math.round(me * 3),
                             mal : 0
 	        			}
 	        		};
@@ -175,14 +175,14 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			loop : {
 	        				croyance : (dieu + deesse) * me,
 	        				illumination : 0,
-                            bien : me,
-                            mal : me
+                            bien : Math.round(2 * me),
+                            mal : Math.round(4 * me)
 	        			},
 	        			click : {
 	        				croyance : Math.round(0.5 * (dieu + deesse) * me),
 	        				illumination : 0,
-                            bien : Math.round(0.25 * me),
-                            mal : Math.round(0.40 * me)
+                            bien : Math.round(2 * me),
+                            mal : Math.round(4 * me)
 	        			}
 	        		};
 	        	};
@@ -210,13 +210,13 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			loop : {
 	        				croyance : Math.round(1.5 * deesse * me),
 	        				illumination : 0,
-                            bien : 2 * me,
+                            bien : Math.round(4 * me),
                             mal : 0
 	        			},
 	        			click : {
 	        				croyance : Math.round(0.5 * deesse * me),
 	        				illumination : 0,
-                            bien : Math.round(0.4 * me),
+                            bien : Math.round(4 * me),
                             mal : 0
 	        			}
 	        		};
@@ -233,7 +233,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(9857, 1.16 * lvl, 2)),
+                    	croyance : Math.round(Utils.pow(9859, 1.17 * lvl, 2)),
 	        			illumination : parseInt(lvl / 1.3)
                     };
                 };
@@ -243,16 +243,16 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(1.5 * dieu * me),
-	        				illumination : parseInt(0.3 * me),
+	        				croyance : Math.round(0.2 * dieu * me),
+	        				illumination : Math.round(0.3 * me),
                             bien : 0,
-                            mal : 2 * me
+                            mal : Math.round(5 * me)
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * dieu * me),
+	        				croyance : Math.round(0.02 * dieu * me),
 	        				illumination : 0,
                             bien : 0,
-                            mal : Math.round(0.4 * me)
+                            mal : Math.round(5 * me)
 	        			}
 	        		};
 	        	};
@@ -285,14 +285,14 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			loop : {
 	        				croyance : 2 * me * (dieu + lune),
 	        				illumination : 0,
-                            bien : dieu * me,
-                            mal : -1 * lune * me
+                            bien : Math.round(2 * dieu * me),
+                            mal : Math.round(-2 * lune * me)
 	        			},
 	        			click : {
 	        				croyance : Math.round(0.5 * me * (dieu + lune)),
 	        				illumination : 0,
-                            bien : Math.round(0.25 * dieu * me),
-                            mal : Math.round(-0.25 * lune * me)
+                            bien : Math.round(2 * dieu * me),
+                            mal : Math.round(-2 * lune * me)
 	        			}
 	        		};
 	        	};
@@ -321,14 +321,14 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			loop : {
 	        				croyance : me * 2 * (dieu + terre),
 	        				illumination : 0,
-                            bien : dieu * me,
-                            mal : -1 * terre * me
+                            bien : Math.round(2 * dieu * me),
+                            mal : Math.round(-2 * terre * me)
 	        			},
 	        			click : {
 	        				croyance : Math.round(me * 0.5 * (dieu + terre)),
 	        				illumination : 0,
-                            bien : Math.round(0.25 * dieu * me),
-                            mal : Math.round(-0.25 * terre * me)
+                            bien : Math.round(2 * dieu * me),
+                            mal : Math.round(-2 * terre * me)
 	        			}
 	        		};
 	        	};
@@ -357,13 +357,13 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			loop : {
 	        				croyance : 2 * me * (deesse + terre),
 	        				illumination : 0,
-                            bien : -1 * me * terre,
+                            bien : Math.round(-3 * me * terre),
                             mal : 0
 	        			},
 	        			click : {
 	        				croyance : Math.round(0.5 * me * (deesse + terre)),
 	        				illumination : 0,
-                            bien : Math.round(-0.25 * me * terre),
+                            bien : Math.round(-3 * me * terre),
                             mal : 0
 	        			}
 	        		};
@@ -393,13 +393,13 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			loop : {
 	        				croyance : 2 * me * (deesse + lune),
 	        				illumination : 0,
-                            bien : -1 * me * lune,
+                            bien : Math.round(-4 * me * lune),
                             mal : 0
 	        			},
 	        			click : {
 	        				croyance : Math.round(0.5 * me * (deesse + lune)),
 	        				illumination : 0,
-                            bien : Math.round(-0.25 * me * lune),
+                            bien : Math.round(-4 * me * lune),
                             mal : 0
 	        			}
 	        		};
@@ -435,13 +435,13 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        				croyance : Math.round(((dieu + terre) / soleil) * me),
 	        				illumination : 0,
                             bien : 0,
-                            mal : Math.round(-0.5 * (terre + soleil) * me)
+                            mal : Math.round(-4 * (terre + soleil) * me)
 	        			},
 	        			click : {
 	        				croyance : Math.round(((dieu + terre) / soleil) * me * 0.5),
 	        				illumination : 0,
                             bien : 0,
-                            mal : Math.round(-0.25 * (terre + soleil) * me)
+                            mal : Math.round(-4 * (terre + soleil) * me)
 	        			}
 	        		};
 	        	};
@@ -472,13 +472,13 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        				croyance : Math.round(((dieu + lune) / soleil) * me),
 	        				illumination : 0,
                             bien : 0,
-                            mal : Math.round(-0.5 * (lune + soleil) * me)
+                            mal : Math.round(-3 * (lune + soleil) * me)
 	        			},
 	        			click : {
 	        				croyance : Math.round(((dieu + lune) / soleil) * me * 0.5),
 	        				illumination : 0,
                             bien : 0,
-                            mal : Math.round(-0.25 * (lune + soleil) * me)
+                            mal : Math.round(-3 * (lune + soleil) * me)
 	        			}
 	        		};
 	        	};
@@ -508,14 +508,14 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			loop : {
 	        				croyance : Math.round(((deesse + terre) / soleil) * me),
 	        				illumination : 0,
-                            bien : -1 * terre * me,
-                            mal : soleil * me
+	        				bien : Math.round(-2 * terre * me),
+                            mal : Math.round(2 * soleil * me)
 	        			},
 	        			click : {
 	        				croyance : Math.round(((deesse + terre) / soleil) * me * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(-0.25 * terre * me),
-                            mal : Math.round(0.25 * soleil * me)
+                            bien : Math.round(-2 * terre * me),
+                            mal : Math.round(2 * soleil * me)
 	        			}
 	        		};
 	        	};
@@ -545,14 +545,14 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			loop : {
 	        				croyance : Math.round(((deesse + lune) / soleil) * me),
 	        				illumination : 0,
-                            bien : -1 * lune * me,
-                            mal : soleil * me
+	        				bien : Math.round(-3 * lune * me),
+                            mal : Math.round(2 * soleil * me)
 	        			},
 	        			click : {
 	        				croyance : Math.round(((deesse + lune) / soleil) * me * 0.8),
 	        				illumination : 0,
-                            bien : Math.round(-0.30 * lune * me),
-                            mal : Math.round(0.25 * soleil * me)
+                            bien : Math.round(-3 * lune * me),
+                            mal : Math.round(2 * soleil * me)
 	        			}
 	        		};
 	        	};
@@ -585,16 +585,16 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var lune = ameliorations.get("lune").level;
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(0.25 * me * (dieu + deesse + terre + lune)),
-	        				illumination : parseInt(0.5 * me),
-                            bien : 2 * me * (terre + lune),
-                            mal : -2 * me * (dieu + deesse)
+	        				croyance : Math.round(0.1 * me * (dieu + deesse + terre + lune)),
+	        				illumination : Math.round(0.5 * me),
+	        				bien : Math.round(3 * me * (terre + lune)),
+                            mal : Math.round(-3 * me * (dieu + deesse))
 	        			},
 	        			click : {
-	        				croyance : Math.round(1 * me * (dieu + deesse + terre + lune)),
+	        				croyance : Math.round(0.1 * me * (dieu + deesse + terre + lune)),
 	        				illumination : 0,
-                            bien : Math.round(1 * me * (terre + lune)),
-                            mal : Math.round(-1 * me * (dieu + deesse))
+                            bien : Math.round(3 * me * (terre + lune)),
+                            mal : Math.round(-3* me * (dieu + deesse))
 	        			}
 	        		};
 	        	};
@@ -623,16 +623,16 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var vide = ameliorations.get("vide").level;
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(0.25 * me * (terre + lune + ciel + vide)),
-	        				illumination : parseInt(0.8 * me),
+	        				croyance : Math.round(0.1 * me * (terre + lune + ciel + vide)),
+	        				illumination : Math.round(0.8 * me),
                             bien : 0,
-                            mal : -1 * me * (ciel + vide)
+                            mal : Math.round(-5 * me * (ciel + vide))
 	        			},
 	        			click : {
-	        				croyance : Math.round(1 * me * (terre + lune + ciel + vide)),
+	        				croyance : Math.round(0.1 * me * (terre + lune + ciel + vide)),
 	        				illumination : 0,
                             bien : 0,
-                            mal : Math.round(-1 * me * (ciel + vide))
+                            mal : Math.round(-5 * me * (ciel + vide))
 	        			}
 	        		};
 	        	};
@@ -661,16 +661,16 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var chaos = ameliorations.get("chaos").level;
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(0.25 * me * (soleil + terre + foret + chaos)),
-	        				illumination : parseInt(0.8 * me),
-                            bien : -2 * me * (foret + chaos),
-                            mal : 2 * me * (soleil + terre)
+	        				croyance : Math.round(0.1 * me * (soleil + terre + foret + chaos)),
+	        				illumination : Math.round(0.8 * me),
+	        				bien : Math.round(-6 * me * (foret + chaos)),
+                            mal : Math.round(6 * me * (soleil + terre))
 	        			},
 	        			click : {
-	        				croyance : Math.round(1 * me * (soleil + terre + foret + chaos)),
+	        				croyance : Math.round(0.1 * me * (soleil + terre + foret + chaos)),
 	        				illumination : 0,
-                            bien : Math.round(-1 * me * (foret + chaos)),
-                            mal : Math.round(1 * me * (soleil + terre))
+                            bien : Math.round(-6 * me * (foret + chaos)),
+                            mal : Math.round(6 * me * (soleil + terre))
 	        			}
 	        		};
 	        	};

@@ -10,7 +10,7 @@ define([ "jquery" ], function($) {
 				illumination : 0,
 			},
 			gains : {
-				croyance : 1,
+				croyance : 10,
 				illumination : 0,
 				bien : 0,
 				mal : 0
@@ -25,10 +25,10 @@ define([ "jquery" ], function($) {
 				illumination : 0,
 			},
 			gains : {
-				croyance : 2,
+				croyance : 20,
 				illumination : 0,
 				bien : 0,
-				mal : 0
+				mal : 10
 			}
 		},
 		"saphir" : {
@@ -40,9 +40,9 @@ define([ "jquery" ], function($) {
 				illumination : 0,
 			},
 			gains : {
-				croyance : 3,
+				croyance : 30,
 				illumination : 0,
-				bien : 0,
+				bien : 10,
 				mal : 0
 			}
 		},
@@ -55,10 +55,10 @@ define([ "jquery" ], function($) {
 				illumination : 0,
 			},
 			gains : {
-				croyance : 4,
+				croyance : -20,
 				illumination : 0,
 				bien : 0,
-				mal : 0
+				mal : 10
 			}
 		},
 		"emeraude" : {
@@ -70,10 +70,10 @@ define([ "jquery" ], function($) {
 				illumination : 0,
 			},
 			gains : {
-				croyance : 5,
+				croyance : 50,
 				illumination : 0,
-				bien : 0,
-				mal : 0
+				bien : 20,
+				mal : -10
 			}
 		}
 	};
@@ -83,7 +83,8 @@ define([ "jquery" ], function($) {
 		 * Permet d'appeler un WS
 		 */
 		get : function(key) {
-			return $.extend(true, {}, data[key]);
+			if (data[key]) return $.extend(true, {}, data[key]);
+			else return null;
 		},
 		list : function() {
 			return data;

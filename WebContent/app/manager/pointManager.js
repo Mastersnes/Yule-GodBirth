@@ -18,6 +18,13 @@ function($, _, Utils) {
 			        bien : 100,
 			        mal : 100
 			};
+			
+			this.avantages = {
+				croyance : 0,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			};
 		};
 		
 		this.render = function() {
@@ -25,6 +32,9 @@ function($, _, Utils) {
 		    
 		    $(this.el).find("illumination .text").html(Utils.format(this.points.illumination, true, this.Textes));
 		    if (this.points.illumination > 0) $(this.el).find("illumination").show();
+
+		    $(this.el).find("bien .text").html(this.points.bien);
+		    $(this.el).find("mal .text").html(this.points.mal);
 
 		    var total = this.points.bien + this.points.mal;
 		    var bienPercent = Utils.toPercent(this.points.bien, total);
@@ -41,15 +51,21 @@ function($, _, Utils) {
 		 * Ajoute les points
 		 */
 		this.addPoints = function(points) {
+			var avantages = this.avantages;
+			
 			var maxPoint = Math.pow(10, 12);
-		    if (points.croyance && points.croyance < maxPoint) this.points.croyance += points.croyance;
-		    if (points.illumination && points.illumination < maxPoint) this.points.illumination += points.illumination;
+		    if (points.croyance && points.croyance < maxPoint) {
+		    	this.points.croyance += points.croyance + parseInt(Utils.percent(points.croyance, avantages.croyance));
+		    }
+		    if (points.illumination && points.illumination < maxPoint) {
+		    	this.points.illumination += points.illumination + parseInt(Utils.percent(points.illumination, avantages.illumination));
+		    }
 		    if (points.bien && points.bien < maxPoint) {
-			    this.points.bien += points.bien;
+			    this.points.bien += points.bien + parseInt(Utils.percent(points.bien, avantages.bien));
 			    if (this.points.bien < 0) this.points.bien = 0;
 		    }
 		    if (points.mal && points.mal < maxPoint) {
-			    this.points.mal += points.mal;
+			    this.points.mal += points.mal + parseInt(Utils.percent(points.mal, avantages.mal));
 			    if (this.points.mal < 0) this.points.mal = 0;
 			}
 		    
@@ -83,12 +99,11 @@ function($, _, Utils) {
 		 * Condition de gameOver si le bien ou le mal prennent le pas l'un sur l'autre
 		 */
 		this.gameOver = function() {
-			var total = this.points.bien + this.points.mal;
-		    var bienPercent = Utils.toPercent(this.points.bien, total);
+			var perdu = this.points.bien * this.points.mal <= 0;
+			var bienGagne = this.points.bien > 4 * this.points.mal;
+			var malGagne = this.points.mal > 4 * this.points.bien;
 			
-			return ((this.points.bien * this.points.mal) <= 0) 
-			|| bienPercent > 90
-			|| bienPercent < 10;
+			return perdu || bienGagne || malGagne;
 		};
 		
 		this.init(parent);

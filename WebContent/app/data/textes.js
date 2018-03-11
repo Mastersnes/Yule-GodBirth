@@ -366,7 +366,59 @@ define(["jquery"], function($){
         "mille" : {
             fr : "Mille",
             en : "Thousand"
-        }
+        },
+        
+        /**
+         * Pierres
+         */
+        "pierreDejaPlace" : {
+        	fr : "La pierre est déjà placée sur l'autel",
+        	en : "The stone is already placed on the altar"
+        },
+        "retirerPierre" : {
+        	fr : "Retirer la pierre de l'autel ?",
+        	en : "Remove the stone from the altar?"
+        },
+        "amethyste" : {
+        	fr : "Améthyste",
+        	en : "Amethyst"
+        },
+        "amethyste-desc" : {
+        	fr : "-",
+        	en : "-"
+        },
+        "rubis" : {
+        	fr : "Rubis",
+        	en : "Ruby"
+        },
+        "rubis-desc" : {
+        	fr : "-",
+        	en : "-"
+        },
+        "saphir" : {
+        	fr : "Saphir",
+        	en : "Sapphire"
+        },
+        "saphir-desc" : {
+        	fr : "-",
+        	en : "-"
+        },
+        "onyx" : {
+        	fr : "Onyx",
+        	en : "Onyx"
+        },
+        "onyx-desc" : {
+        	fr : "-",
+        	en : "-"
+        },
+        "emeraude" : {
+        	fr : "Émeraude",
+        	en : "Emerald"
+        },
+        "emeraude-desc" : {
+        	fr : "-",
+        	en : "-"
+        },
 	};
 	
 	return {

@@ -7,6 +7,7 @@ define(["jquery",
         "app/manager/textManager",
         "app/manager/eventManager",
         "app/manager/pointManager",
+        "app/manager/recompenseManager",
         "app/view/game/space/spaceView",
         "app/view/game/quete/queteView",
         "app/view/game/autel/autelView",
@@ -14,7 +15,7 @@ define(["jquery",
         "app/view/game/endView"
         ],
 function($, _, Utils, page, 
-		SceneManager, TextManager, EventManager, PointManager, 
+		SceneManager, TextManager, EventManager, PointManager, RecompenseManager,
 		SpaceView, QueteView, AutelView, ConstellationView, EndView) {
 	'use strict';
 
@@ -27,6 +28,11 @@ function($, _, Utils, page,
 			this.pause = false;
 			this.endGame = false;
 			
+			/**
+			 * TODO : 
+			 * 	BUG : Le texte des cinematique est trop haut
+			 */
+			
 			this.render(load, code);
 			
 			// Manager
@@ -34,6 +40,7 @@ function($, _, Utils, page,
             this.textManager = new TextManager(this);
             this.eventManager = new EventManager(this);
             this.pointManager = new PointManager(this);
+            this.recompenseManager = new RecompenseManager(this);
 
             this.spaceView = new SpaceView(this);
             this.spaceView.render();

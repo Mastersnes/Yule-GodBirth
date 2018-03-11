@@ -7,7 +7,7 @@ define(["jquery",
     return function(parent){
         this.init = function(parent) {
         	this.el = $(".space");
-            this.maxFront = 3;
+            this.maxFront = 2;
             
             this.parent = parent;
             this.Textes = parent.Textes;
@@ -17,6 +17,7 @@ define(["jquery",
             this.textManager = parent.textManager;
             this.eventManager = parent.eventManager;
             this.pointManager = parent.pointManager;
+            this.recompenseManager = parent.recompenseManager;
             
             this.ameliorationView = new AmeliorationView(this);
             this.godView = new GodView(this);

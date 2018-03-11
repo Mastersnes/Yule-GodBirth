@@ -18,6 +18,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
             this.Items = Items;
             
             this.pointManager = parent.pointManager;
+            this.recompenseManager = parent.recompenseManager;
 		};
 
 		this.render = function() {
@@ -121,6 +122,8 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 				game.pointManager.addPoints(item.gain(0, Items).click);
 				this.refreshItem(item);
 			}
+			
+			this.recompenseManager.addClick();
 		};
         
         this.makeItemEvents = function() {

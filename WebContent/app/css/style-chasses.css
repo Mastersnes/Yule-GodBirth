@@ -1,0 +1,26 @@
+/**
+* Chasses
+**/
+autel > chasse.used:hover {
+	background-color: red;
+	cursor: pointer;
+}
+autel > chasse:not(.used) {
+	background-image: none;
+}
+
+autel > chasse.used[pierre=amethyste] {
+	background-image: url("../img/game/autel/pierres/amethyste/amethyste.png");
+}
+autel > chasse.used[pierre=rubis] {
+	background-image: url("../img/game/autel/pierres/rubis/rubis.png");
+}
+autel > chasse.used[pierre=saphir] {
+	background-image: url("../img/game/autel/pierres/saphir/saphir.png");
+}
+autel > chasse.used[pierre=onyx] {
+	background-image: url("../img/game/autel/pierres/onyx/onyx.png");
+}
+autel > chasse.used[pierre=emeraude] {
+	background-image: url("../img/game/autel/pierres/emeraude/emeraude.png");
+}

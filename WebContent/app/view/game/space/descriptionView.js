@@ -189,12 +189,12 @@ function($, _, Utils) {
 		    
 		    this.el.find(".close-button, mask").click(function() {
 		    	var itemId = that.currentItem;
-		    	$("item#"+itemId).removeClass('in').addClass('out');
                 that.close();
             });
 		};
 		
 		this.close = function() {
+			if (this.currentItem) $(this.parent.el).find("item#"+this.currentItem).removeClass('in').addClass('out');
 			this.currentItem = null;
             this.el.hide();
 		};

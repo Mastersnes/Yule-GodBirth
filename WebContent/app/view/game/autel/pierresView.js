@@ -73,7 +73,7 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
 			
 			var pierreDom = $("<item></item>");
 			pierreDom.attr("class", pierre.name);
-			pierreDom.attr("title", this.Textes.get(pierre.name));
+			pierreDom.attr("savedTitle", this.Textes.get(pierre.name));
 			pierreDom.attr("id", pierre.name);
 			if (this.complete.indexOf(pierre.name) == -1) {
 				pierreDom.attr("level", 0);
@@ -87,13 +87,31 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
 			var itemDom = $(this.el).find("item#"+pierre.name);
 			if (itemDom.length == 0) return;
 			
+			/**
+			 * Si la pierre est achetable, on l'indique
+			 */
 			if (this.checkAchetable(pierre)) {
 				if (!itemDom.hasClass("dispo")) itemDom.addClass("dispo");
 			}else itemDom.removeClass("dispo");
 			
+			/**
+			 * Si on a deja acheté la pierre
+			 */
 			if (this.complete.indexOf(pierre.name) > -1) {
 				itemDom.removeAttr("level");
 	        }
+			
+			/**
+			 * Si on a selectionné la pierre sur l'autel
+			 * On la desactive dans le menu
+			 */
+			if (this.parent.selectedPierres.contains(pierre.name)) {
+				if (!itemDom.hasClass("selected")) itemDom.addClass("selected");
+				itemDom.attr("title", this.Textes.get("pierreDejaPlace"));
+			}else {
+				itemDom.removeClass("selected");
+				itemDom.attr("title", itemDom.attr("savedTitle"));
+			}
 		};
 		
 		this.loop = function(game) {
@@ -127,18 +145,26 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
             
             $(this.el).find("item").on("click", function() {
             	var pierreId = $(this).attr("id");
-        		if (that.complete.indexOf(pierreId) == -1) {
+            	
+            	/**
+            	 * On on a pas encore acheté la pierre, on affiche l'ecran de detail
+            	 * Sinon, si on l'a deja acheté, on la selectionne
+            	 */
+            	if (that.complete.indexOf(pierreId) == -1) {
         			that.detailView.show(pierreId);
         		}else {
-        			if (!$("autel").hasClass("brille"))
-        			$("autel").addClass("brille");
+        			/**
+            		 * Si on a pas encore selectionnée la pierre, on la selectionne
+            		 */
+                	if (!that.parent.selectedPierres.contains(pierreId)) 
+                		that.parent.selectPierre(pierreId);
         		}
             });
             
             $(this.el).find("item").hover(function() {
             	$(this).removeClass('out').addClass('in');
             }, function() {
-            	if (!that.detailView.currentItem)
+            	if (!that.detailView.currentPierre)
             	$(this).removeClass('in').addClass('out');
             });
         };

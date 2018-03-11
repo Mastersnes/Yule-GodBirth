@@ -101,25 +101,25 @@ define(["jquery",
              */
             var gain = pierre.gains;
             
-            var prefix = gain.croyance > 0?"+":"-";
+            var prefix = gain.croyance > 0?"+":"";
             dom.find("#croyance-gain").html(prefix + gain.croyance + " %");
             if (gain.croyance) dom.find("#croyance").show();
             else dom.find("#croyance").hide();
             
             //Illumination
-            prefix = gain.illumination > 0?"+":"-";
+            prefix = gain.illumination > 0?"+":"";
             dom.find("#illumination-gain").html(prefix + gain.illumination + " %");
             if (gain.illumination) dom.find("#illumination").show();
             else dom.find("#illumination").hide();
 
             //Bien
-            prefix = gain.bien > 0?"+":"-";
+            prefix = gain.bien > 0?"+":"";
             dom.find("#bien-gain").html(prefix + gain.bien + " %");
             if (gain.bien) dom.find("#bien").show();
             else dom.find("#bien").hide();
 
             //Mal
-            prefix = gain.mal > 0?"+":"-";
+            prefix = gain.mal > 0?"+":"";
             dom.find("#mal-gain").html(prefix + gain.mal + " %");
             if (gain.mal) dom.find("#mal").show();
             else dom.find("#mal").hide();
@@ -136,7 +136,8 @@ define(["jquery",
         };
         
         this.close = function() {
-            this.currentItem = null;
+        	if (this.currentPierre) $(this.parent.el).find("item#"+this.currentPierre.name).removeClass('in').addClass('out');
+            this.currentPierre = null;
             this.el.hide();
         };
         
@@ -144,7 +145,6 @@ define(["jquery",
         	var that = this;
         	
         	this.el.find(".close-button, mask").click(function() {
-        		that.currentPierre = null;
                 that.close();
             });
         	this.el.find("#acheter").click(function() {

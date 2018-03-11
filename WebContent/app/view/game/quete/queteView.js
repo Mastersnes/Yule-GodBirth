@@ -48,6 +48,8 @@ define(["jquery",
         		var quete = quetes[index];
         		if (this.checkDraw(quete)) this.drawQuete(quete);
         	}
+        	
+        	this.makeQueteEvents();
         };
         
         /**
@@ -58,7 +60,6 @@ define(["jquery",
         	if (this.complete.indexOf(quete.name) > -1) return false;
         	
         	// Si au moins une des quete dependante n'est pas collectée, on n'affiche pas
-        	if (!quete.apparition) console.log(quete);
         	var checkQuete = quete.apparition.isComplete;
         	for (var indexComplete in checkQuete) {
         		var queteToCheck = checkQuete[indexComplete];
@@ -165,8 +166,14 @@ define(["jquery",
         		that.parent.showConstellation();
         	});
         	
+        	this.detailView.makeEvents();
+        };
+        
+        this.makeQueteEvents = function() {
+        	var that = this;
         	this.el.find("quete").click(function() {
         		var queteId = $(this).attr("id");
+        		console.log("clickQuete : ", queteId);
         		that.detailView.show(queteId);
         	});
 
@@ -175,8 +182,6 @@ define(["jquery",
         		var queteId = $(this).parent().attr("id");
         	    that.completeQuete(null, queteId);
         	});
-        	
-        	this.detailView.makeEvents();
         };
         
         this.init(parent);
