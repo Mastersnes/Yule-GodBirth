@@ -371,6 +371,18 @@ define(["jquery"], function($){
         /**
          * Pierres
          */
+        "primaire" : {
+          fr : "Primaire",
+          en : "Primaire"
+        },
+        "Solaire" : {
+            fr : "Solaire",
+            en : "Solar"
+        },
+        "lunaire" : {
+            fr : "Lunaire",
+            en : "Lunar"
+        },
         "pierreDejaPlace" : {
         	fr : "La pierre est déjà placée sur l'autel",
         	en : "The stone is already placed on the altar"
@@ -379,46 +391,14 @@ define(["jquery"], function($){
         	fr : "Retirer la pierre de l'autel ?",
         	en : "Remove the stone from the altar?"
         },
-        "amethyste" : {
-        	fr : "Améthyste",
-        	en : "Amethyst"
+        "diamant" : {
+        	fr : "Diamant",
+        	en : "Diamond"
         },
-        "amethyste-desc" : {
+        "diamant-desc" : {
         	fr : "-",
         	en : "-"
-        },
-        "rubis" : {
-        	fr : "Rubis",
-        	en : "Ruby"
-        },
-        "rubis-desc" : {
-        	fr : "-",
-        	en : "-"
-        },
-        "saphir" : {
-        	fr : "Saphir",
-        	en : "Sapphire"
-        },
-        "saphir-desc" : {
-        	fr : "-",
-        	en : "-"
-        },
-        "onyx" : {
-        	fr : "Onyx",
-        	en : "Onyx"
-        },
-        "onyx-desc" : {
-        	fr : "-",
-        	en : "-"
-        },
-        "emeraude" : {
-        	fr : "Émeraude",
-        	en : "Emerald"
-        },
-        "emeraude-desc" : {
-        	fr : "-",
-        	en : "-"
-        },
+        }
 	};
 	
 	return {

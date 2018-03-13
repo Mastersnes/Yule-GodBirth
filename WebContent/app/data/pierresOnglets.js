@@ -5,18 +5,28 @@ define(["jquery"], function($){
 			    start : true,
 			    conditions : [],
 				name : "primaire",
-			    pierres : ["amethyste", "rubis", "saphir"]
+			    pierres : ["diamant", "rubis", "emeraude", "saphir", "cristal-de-roche", "larme-apache"]
 			},
-			"autre" : {
+			"solaire" : {
 			    conditions : [
 				    {
 				    	name : "dieu",
 				    	level : 2
 				    }
 			    ],
-				name : "autre",
-			    pierres : ["onyx", "emeraude"]
-			}
+				name : "solaire",
+			    pierres : ["grenat", "onyx", "ambre", "hematite", "obsidienne", "pierre-de-soleil"]
+			},
+            "lunaire" : {
+                conditions : [
+                    {
+                        name : "deesse",
+                        level : 2
+                    }
+                ],
+                name : "lunaire",
+                pierres : ["amethyste", "lapis-lazuli", "selenite", "malachite", "azurite", "pierre-de-lune"]
+            }
 	};
 	
 	return {

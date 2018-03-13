@@ -93,7 +93,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		var deesse = ameliorations.get("deesse").level;
 	        		
-	        		var croyance = me + 0.5 * deesse;
+	        		var croyance = Math.round(me + 0.5 * deesse);
 	        		return {
 	        			loop : {
 	        				croyance : croyance,
