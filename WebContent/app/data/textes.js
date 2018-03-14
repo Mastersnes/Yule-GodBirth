@@ -396,9 +396,49 @@ define(["jquery"], function($){
         	en : "Diamond"
         },
         "diamant-desc" : {
-        	fr : "-",
-        	en : "-"
-        }
+        	fr : "Symbole de pureté et de perfection, il peut également amener la mort et la destruction dans son sillage...",
+        	en : "Symbol of purity and perfection, it can also bring death and destruction on its way..."
+        },
+        "rubis" : {
+        	fr : "Rubis",
+        	en : "Ruby"
+        },
+        "rubis-desc" : {
+        	fr : "Le Rubis représente le sang de notre Mère nature. Symbole de l'amour divin, il peut également renforcer la colère de son porteur.",
+        	en : "Ruby represents the blood of our Mother Nature. Symbol of divine love, it can also reinforce the anger of its wearer."
+        },
+        "emeraude" : {
+        	fr : "Émeraude",
+        	en : "Emerald"
+        },
+        "emeraude-desc" : {
+        	fr : "L'émeraude porte le symbole d'un espoir éternelle et d'une grande connaissance. Par sa couleur, il rappelle le renouveau du printemps et donc la renaissance.",
+        	en : "The emerald bears the symbol of eternal hope and great knowledge. By its colour, it recalls the revival of spring and therefore the rebirth."
+        },
+        "saphir" : {
+        	fr : "Saphir",
+        	en : "Sapphire"
+        },
+        "saphir-desc" : {
+        	fr : "Pierre de vérité et de justice. Au début du temps, un groupe de géant dérobèrent un morceau de ciel. Les dieux, fous de rage, les transformèrent en montagne, oubliant le bien volé. Ainsi le Saphir naquit...",
+        	en : "Stone of truth and justice. At the beginning of time, a group of giants stole a piece of sky. The gods, mad with rage, turned them into mountains, forgetting the stolen good. Thus the Sapphire was born..."
+        },
+		"larme-apache" : {
+			fr : "Larme d'Apache",
+			en : "Apache's tear"
+		},
+		"larme-apache-desc" : {
+			fr : "Cette puissante pierre est une Obsidienne particuliere. D'une grande pureté, elle sont en réalité des larmes ",
+			en : ""
+		},
+		"cristal-de-roche" : {
+			fr : "Cristal de Roche",
+			en : "Rock Crystal"
+		},
+		"cristal-de-roche-desc" : {
+			fr : "",
+			en : ""
+		}
 	};
 	
 	return {

@@ -15,7 +15,7 @@ define(["jquery"], function($){
 				    }
 			    ],
 				name : "solaire",
-			    pierres : ["grenat", "onyx", "ambre", "hematite", "obsidienne", "pierre-de-soleil"]
+			    pierres : ["grenat", "onyx", "ambre", "obsidienne", "hematite", "pierre-de-soleil"]
 			},
             "lunaire" : {
                 conditions : [
@@ -25,7 +25,7 @@ define(["jquery"], function($){
                     }
                 ],
                 name : "lunaire",
-                pierres : ["amethyste", "lapis-lazuli", "selenite", "malachite", "azurite", "pierre-de-lune"]
+                pierres : ["malachite", "amethyste", "lapis-lazuli", "selenite", "azurite", "pierre-de-lune"]
             }
 	};
 	
