@@ -14,11 +14,11 @@ function($, _, page) {
 		};
 		
 		this.show = function(ids, callback) {
-		    this.ids = ids;
+			this.ids = ids;
 			this.callback = callback;
 			this.current = -1;
 			
-			$("#popupText").show();
+			$(this.el).show();
 			this.visible = true;
 		};
 		
@@ -32,11 +32,12 @@ function($, _, page) {
 			if (this.current < this.ids.length) {
 			    var id = this.ids[this.current];
 				var value = this.Textes.get(id);
-				if (value) $("#popupText.text").html(value);
-				else $("#popupText.text").empty();
+				
+				if (value) $(this.el).html(value);
+				else $(this.el).empty();
 			}else {
 			    this.visible = false;
-				$("#popupText").hide();
+			    $(this.el).hide();
 				if (this.callback) {
 					this.callback.call();
 				}

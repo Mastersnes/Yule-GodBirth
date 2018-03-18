@@ -63,7 +63,7 @@ function($, _, Utils, page, Events) {
 		
 		this.show = function() {
 		    if (!this.currentEvent) return;
-		    this.parent.pause = true;
+		    //this.parent.pause = true;
 		    
 		    var that = this;
 		    

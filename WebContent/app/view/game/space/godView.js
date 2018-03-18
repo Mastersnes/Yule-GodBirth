@@ -17,10 +17,15 @@ define(["jquery",
             this.ameliorationView = parent.ameliorationView;
             this.gameView = parent.parent;
             
-            this.setType("dust", true);
+            this.initialization = true;
         };
         
         this.render = function() {
+        	if (this.initialization) {
+        		this.setType("dust", true);
+        		this.initialization = false;
+        	}
+        	
         	var godDom = $(this.el).find("god");
         	if (!godDom.hasClass(this.type.name)) godDom.attr("class", this.type.name);
         	godDom.attr("level", this.level);
