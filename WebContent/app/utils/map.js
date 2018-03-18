@@ -11,7 +11,8 @@ define(["jquery"], function($){
 		};
 		
 		this.remove = function(key) {
-			delete this.data[key];
+			var index = this.data.indexOf(key);
+			this.data.splice(index, 1);
 		};
 		
 		this.get = function(key) {

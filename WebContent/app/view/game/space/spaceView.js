@@ -7,7 +7,7 @@ define(["jquery",
     return function(parent){
         this.init = function(parent) {
         	this.el = $(".space");
-            this.maxFront = 2;
+            this.maxFront = 1;
             
             this.parent = parent;
             this.Textes = parent.Textes;

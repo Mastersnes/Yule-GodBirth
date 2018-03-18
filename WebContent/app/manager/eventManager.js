@@ -17,34 +17,38 @@ function($, _, Utils, page, Events) {
 			this.currentEvent = null;
 			this.typeEvents = [];
 			this.generalEvents = [];
+			this.uniquesEvent = [];
 		};
 		
 		this.loop = function() {
 		    var totalEvents = this.typeEvents.concat(this.generalEvents);
-		    if (totalEvents == 0) return;
-		    
-		    // Toute les secondes on a 1 chance sur 100 d'afficher un evenement
-		    var rand = Utils.rand(0, 100);
-		    if (rand == 0) {
-		    	var randEvent;
-		    	var limit = 0;
-		    	while (!this.checkEvent(randEvent) && limit < 100) {
-			        var randIndex = Utils.rand(0, totalEvents.length);
-			        randEvent = Events.get(totalEvents[randIndex]);
-			        limit++;
-		    	}
-		        
-	            this.currentEvent = randEvent;
-	            // Si l'evenement est unique, on l'ajoute à la liste  des evenements deja rencontrés
-	            if (this.currentEvent.unique) this.uniquesEvent.push(this.currentEvent.name);
-	            this.show();
+		    /**
+		     * On retire les evenements uniques deja eu lieu du total des evenements pour ne pas poluer le choix
+		     */
+		    for (var index in this.uniquesEvent) {
+		    	var eventName = this.uniquesEvent[index];
+		    	var eventIndex = totalEvents.indexOf(eventName);
+		    	totalEvents.splice(eventIndex, 1);
 		    }
+		    if (totalEvents.length == 0) return;
+		    
+	        var randIndex = Utils.rand(0, totalEvents.length);
+	        var randEvent = Events.get(totalEvents[randIndex]);
+	        
+	    	if (this.checkEvent(randEvent)) this.currentEvent = randEvent;
+            // Si l'evenement est unique, on l'ajoute à la liste  des evenements deja rencontrés
+            if (this.currentEvent) {
+            	if (this.currentEvent.unique) this.uniquesEvent.push(this.currentEvent.name);
+            	this.show();
+            }
 		};
 		
 		/**
 		 * Cette methode permet de verifier qu'une evenement est valable
 		 */
 		this.checkEvent = function(randEvent) {
+			if (this.currentEvent) return false;
+			
 			// Il ne peut pas être nulle
 			if (!randEvent) return false;
 			var isOk = true;
@@ -55,9 +59,12 @@ function($, _, Utils, page, Events) {
 			}
 			
 			// Si il est rare, il faut tomber sur sa rareté
-			if (randEvent.rarity) {
-				isOk = Utils.rand(0, randEvent.rarity) == 0;
-			}
+			var rarity = randEvent.rarity;
+			if (!rarity) rarity = 100;
+			
+			var result = Utils.rand(0, rarity);
+			isOk = result == 0;
+			
 			return isOk;
 		};
 		
@@ -81,7 +88,7 @@ function($, _, Utils, page, Events) {
 		};
 
 		this.hide = function() {
-		    this.parent.pause = false;
+			this.currentEvent = null;
 		    $(".popupEvent").hide();
 		};
 		

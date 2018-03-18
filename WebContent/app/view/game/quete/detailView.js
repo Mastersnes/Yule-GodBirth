@@ -26,7 +26,6 @@ define(["jquery",
         
         this.show = function(queteId) {
             this.currentQuete = this.Quetes.get(queteId);
-            console.log("showQuete : ", this.currentQuete);
             
             if (!this.currentQuete) return;
             

@@ -173,7 +173,6 @@ define(["jquery",
         	var that = this;
         	this.el.find("quete").click(function() {
         		var queteId = $(this).attr("id");
-        		console.log("clickQuete : ", queteId);
         		that.detailView.show(queteId);
         	});
 

@@ -4,6 +4,8 @@ define(["jquery"], function($){
 			"dust-event1" : {
 				name : "dust-event1",
 			    text : "test-dust-event1",
+			    rarity : 10,
+			    unique : true,
 			    actions : [
 			         {
 			             name : "oui",

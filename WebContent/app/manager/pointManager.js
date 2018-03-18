@@ -69,6 +69,11 @@ function($, _, Utils) {
 			    if (this.points.mal < 0) this.points.mal = 0;
 			}
 		    
+		    if (this.points.bien > 1000 && this.points.mal > 1000) {
+		    	this.points.bien = parseInt(this.points.bien / 10);
+		    	this.points.mal = parseInt(this.points.mal / 10);
+		    }
+		    
 		    this.render();
 		};
 		

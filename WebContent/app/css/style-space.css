@@ -14,7 +14,6 @@ space.back {
 	background-image: url("../img/game/space/back.jpg");
 }
 space.front {
-	z-index: 1;
 	pointer-events: none;
 }
 space.front[type="1"] {
