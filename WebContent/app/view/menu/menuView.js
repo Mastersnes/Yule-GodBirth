@@ -46,6 +46,7 @@ function($, _, Utils, Kongregate, Textes, Mediatheque, page, GameView, LoadView,
 			
 			setTimeout(function() {
 				$(".bebel").fadeOut("slow");
+				$(".preload").empty();
 			}, 1000);
 		};
 		
