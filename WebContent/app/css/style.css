@@ -52,11 +52,22 @@ button:focus {outline:0;}
 .stroke {
 	text-decoration: line-through;
 }
+.app-container {
+    position: absolute !important;
+    left: 0px !important; top : 0px !important;
+    width: 100% !important; height: 100% !important;
+    
+    background-color : white;
+    background-image: url("../img/menu/bebel.png");
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: 50% 50%;
+}
 .preload {
+	z-index: -5;
 	position: absolute !important;
-	left: -9999px !important;
-	top : -9999px !important;
-	width: 0%  !important; height: 0%  !important;
+	left: 0px !important; top : 0px !important;
+	width: 100% !important; height: 100% !important;
 }
 .d-block {
 	display: block !important;
