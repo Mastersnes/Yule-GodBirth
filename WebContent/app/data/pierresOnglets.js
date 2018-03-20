@@ -5,7 +5,7 @@ define(["jquery"], function($){
 			    start : true,
 			    conditions : [],
 				name : "primaire",
-			    pierres : ["diamant", "rubis", "emeraude", "saphir", "cristal-de-roche", "larme-apache"]
+			    pierres : ["diamant", "rubis", "emeraude", "saphir", "larme-apache", "cristal-de-roche"]
 			},
 			"solaire" : {
 			    conditions : [
