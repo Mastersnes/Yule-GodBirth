@@ -7,45 +7,60 @@ function($, _, Utils) {
 	'use strict';
 
 	return function(parent) {
-		this.init = function(parent) {
+	    this.init = function(parent) {
 			this.el = "";
 			this.parent = parent;
 			
-			this.kongregateUtils = parent.kongregateUtils;
-			
-			this.saveData = null;
+			this.saveData = {
+			        "points" : {
+			            "croyance" : null,
+			            "illumination" : null,
+			            "bien" : null,
+			            "mal" : null
+			        },
+			        "maxPoints" : {
+			            "croyance" : null,
+			            "illumination" : null,
+			            "bien" : null,
+			            "mal" : null
+			        },
+			        "quetesComplete" : [],
+			        "eventsComplete" : [],
+			        "compteurClick" : 0,
+			        "pierres" : {},
+			        "ameliorations" : {
+			            "grandTout" : 0, 
+			            "dieu" : 0, 
+			            "deesse" : 0,
+			            "terre" : 0,
+			            "lune" : 0,
+			            "soleil" : 0,
+			            "ciel" : 0,
+			            "foret" : 0,
+			            "volcan" : 0,
+			            "ocean" : 0,
+			            "gouffre" : 0,
+			            "vide" : 0,
+			            "chaos" : 0,
+			            "abysse" : 0,
+			            "amour" : 0,
+			            "connaissance" : 0,
+			            "evolution" : 0
+			        }
+			    };
 			this.getSave();
 		};
 		
 		this.checkSave = function() {
-		    var saves = [];
-		    
 		    var saveSession = window.localStorage.getItem(Utils.name);
-		    if (saveSession) {
-		        saves.push("session");
-		    }
-		    
-		    var saveKongregate = this.kongregateUtils.getScore("save-points");
-		    if (saveKongregate) {
-		        saves.push("kongregate");
-		    }
-		    
-		    return saves.length > 0 ? saves : null;
+		    return saveSession ? true : false;
 		};
 		
 		this.getSave = function(type) {
-		    if (!type) type = "session";
-
-		    // Chargement via navigateur
-		    if (type == session) {
-		        var saveSession = window.localStorage.getItem(Utils.name);
-		        this.saveData = JSON.parse(Utils.decode(saveSession));
-			}
-		    // Chargement via Kongregate
-		    else {
-		        var saveKongregate = this.kongregateUtils.getScore("points");
-		        this.saveData = JSON.parse(Utils.decode(saveKongregate));
-			}
+	        var saveSession = window.localStorage.getItem(Utils.name);
+	        if (saveSession) {
+	            this.saveData = JSON.parse(Utils.decode(saveSession));
+	        }
 		};
 
 		this.init(parent);
