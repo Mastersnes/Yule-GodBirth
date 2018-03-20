@@ -42,7 +42,7 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
 			var that = this;
 			var statId = Stats.get(key);
 			console.log("Get score", key, statId);
-			if (!(this.isLoad || this.username || statId)) return null;
+			if (!(this.isLoad && this.username && statId)) return null;
 			
 			Utils.load("https://api.kongregate.com/api/high_scores/lifetime/"+statId+".json", null, function(data) {
 				if (!data) return null;

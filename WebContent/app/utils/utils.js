@@ -1,7 +1,7 @@
 'use strict';
-define(["jquery", "sha"], function($, sha, clipboard){
+define(["jquery", "sha"], function($, sha){
 	return {
-		name : "bebelGoodWitch",
+		name : "bebelYuleGodBirth",
 		
 		/**
 		* Permet d'appeler un WS

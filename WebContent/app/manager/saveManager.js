@@ -3,7 +3,7 @@ define(["jquery",
         'underscore',
         "app/utils/utils"
         ],
-function($, _, Utils, page) {
+function($, _, Utils) {
 	'use strict';
 
 	return function(parent) {
@@ -17,8 +17,35 @@ function($, _, Utils, page) {
 			this.getSave();
 		};
 		
-		this.getSave = function() {
-			this.kongregateUtils.getStat("point");
+		this.checkSave = function() {
+		    var saves = [];
+		    
+		    var saveSession = window.localStorage.getItem(Utils.name);
+		    if (saveSession) {
+		        saves.push("session");
+		    }
+		    
+		    var saveKongregate = this.kongregateUtils.getScore("save-points");
+		    if (saveKongregate) {
+		        saves.push("kongregate");
+		    }
+		    
+		    return saves.length > 0 ? saves : null;
+		};
+		
+		this.getSave = function(type) {
+		    if (!type) type = "session";
+
+		    // Chargement via navigateur
+		    if (type == session) {
+		        var saveSession = window.localStorage.getItem(Utils.name);
+		        this.saveData = JSON.parse(Utils.decode(saveSession));
+			}
+		    // Chargement via Kongregate
+		    else {
+		        var saveKongregate = this.kongregateUtils.getScore("points");
+		        this.saveData = JSON.parse(Utils.decode(saveKongregate));
+			}
 		};
 
 		this.init(parent);
