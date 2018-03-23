@@ -6,7 +6,9 @@
     <div class="menu-cadre h-center">
     	<ul class="menu v-center">
     		<li id="new"><%=data.text.get("newGame")%></li>
-    		<li id="load"><%=data.text.get("loadGame")%></li>
+    		<% if(data.saveExist) { %>
+    		  <li id="load"><%=data.text.get("loadGame")%></li>
+    		<% } %>
     		<li id="option"><%=data.text.get("options")%></li>
     		<li id="credit"><%=data.text.get("credits")%></li>
     		<li class="hidden" id="partenaire"><%=data.text.get("partenaires")%></li>

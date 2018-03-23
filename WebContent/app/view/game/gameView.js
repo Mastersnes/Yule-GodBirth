@@ -19,19 +19,14 @@ function($, _, Utils, page,
 		SpaceView, QueteView, AutelView, ConstellationView, EndView) {
 	'use strict';
 
-	return function(parent, load, code, Textes, Mediatheque) {
-		this.init = function(parent, load, code, Textes, Mediatheque) {
+	return function(parent, load) {
+		this.init = function(parent, load) {
 		    this.el = $("#app");
-			this.Textes = Textes;
-			this.mediatheque = Mediatheque;
+			this.Textes = parent.Textes;
+			this.mediatheque = parent.Mediatheque;
 			this.kongregateUtils = parent.kongregateUtils;
 			this.pause = false;
 			this.endGame = false;
-			
-			/**
-			 * TODO : 
-			 * 	BUG : Le texte des cinematique est trop haut
-			 */
 			
 			this.render(load, code);
 			
@@ -41,6 +36,7 @@ function($, _, Utils, page,
             this.eventManager = new EventManager(this);
             this.pointManager = new PointManager(this);
             this.recompenseManager = new RecompenseManager(this);
+            this.saveManager = parent.saveManager;
 
             this.spaceView = new SpaceView(this);
             this.spaceView.render();

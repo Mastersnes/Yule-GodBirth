@@ -5,13 +5,14 @@ define(["jquery",
         "app/utils/kongregateUtils",
         "app/data/textes",
         "app/utils/mediatheque",
+        "app/manager/saveManager",
         "text!app/template/menu/menu.html",
         "app/view/game/gameView",
         "app/view/menu/loadView",
         "app/view/menu/optionView",
         "app/view/menu/creditView",
         "app/view/menu/partenaireView"], 
-function($, _, Utils, Kongregate, Textes, Mediatheque, page, GameView, LoadView, OptionView, CreditView, PartenaireView) {
+function($, _, Utils, Kongregate, Textes, Mediatheque, SaveManager, page, GameView, LoadView, OptionView, CreditView, PartenaireView) {
 	'use strict';
 
 	return function() {
@@ -20,6 +21,7 @@ function($, _, Utils, Kongregate, Textes, Mediatheque, page, GameView, LoadView,
             this.mediatheque = new Mediatheque();
             this.mediatheque.play("music/menu.mp3");
             this.kongregateUtils = new Kongregate(Textes);
+            this.saveManager = new SaveManager();
             
             var that = this;
 			if (window.location.href.indexOf("kongregate") > -1) {
@@ -36,8 +38,12 @@ function($, _, Utils, Kongregate, Textes, Mediatheque, page, GameView, LoadView,
 		this.render = function() {
 			_.templateSettings.variable = "data";
 			var template = _.template(page);
+			
+			var saveExists = this.saveManager.getSave() != null;
+			
 			var templateData = {
-					text : Textes
+					text : Textes,
+					saveExists : saveExists
 			};
 			this.el.html(template(templateData));
 			this.kongregateUtils.render();
@@ -53,10 +59,16 @@ function($, _, Utils, Kongregate, Textes, Mediatheque, page, GameView, LoadView,
 		this.makeEvents = function() {
 			var that = this;
 			$("#new").click(function() {
-				that.newGame();
+			    PopupUtils.confirm("eraseSave", function() {
+			        
+			    }, function() {
+			        
+			    })
+			    that.saveManager.eraseSave();
+				that.loadGame();
 			});
 			$("#load").click(function() {
-				new LoadView(that, Textes).show();
+			    that.loadGame();
 			});
 			$("#option").click(function() {
 				new OptionView(that, Textes).show();
@@ -73,11 +85,8 @@ function($, _, Utils, Kongregate, Textes, Mediatheque, page, GameView, LoadView,
 			});
 		};
 		
-		this.newGame = function() {
-			new GameView(this, false, null, Textes, this.mediatheque);
-		};
-		this.loadGame = function(code) {
-			new GameView(this, true, code, Textes, this.mediatheque);
+		this.loadGame = function() {
+			new GameView(this);
 		};
 		
 		this.init();

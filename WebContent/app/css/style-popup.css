@@ -49,7 +49,7 @@ mask {
 .popupText {
 	display: none;
 	position: absolute;
-	top : 3%;
+	top : 4%;
     z-index: 2000;
     
     text-align: center;
