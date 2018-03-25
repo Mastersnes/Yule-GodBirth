@@ -111,6 +111,174 @@ define([ "jquery" ], function($) {
 				bien : 0,
 				mal : 0
 			}
+		},
+		"onyx" : {
+			name : "onyx",
+			description : "onyx-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		"ambre" : {
+			name : "ambre",
+			description : "ambre-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		"obsidienne" : {
+			name : "obsidienne",
+			description : "obsidienne-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		"hematite" : {
+			name : "hematite",
+			description : "hematite-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		"pierre-de-soleil" : {
+			name : "pierre-de-soleil",
+			description : "pierre-de-soleil-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		/**
+		 * Lunaire
+		 */
+		"malachite" : {
+			name : "malachite",
+			description : "malachite-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		"amethyste" : {
+			name : "amethyste",
+			description : "amethyste-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		"lapis-lazuli" : {
+			name : "lapis-lazuli",
+			description : "lapis-lazuli-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		"selenite" : {
+			name : "selenite",
+			description : "selenite-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		"azurite" : {
+			name : "azurite",
+			description : "azurite-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
+		},
+		"pierre-de-lune" : {
+			name : "pierre-de-lune",
+			description : "pierre-de-lune-desc",
+			conditions : [],
+			prix : {
+				croyance : 1,
+				illumination : 0,
+			},
+			gains : {
+				croyance : 1,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			}
 		}
 	};
 

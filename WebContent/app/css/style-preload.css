@@ -352,55 +352,25 @@ preload.evolution[step="5"] {
 	background-image: url("../img/game/ameliorations/evolution/4.png");
 }
 
-/**Amethyste**/
-preload.amethyste[step="1"] {
-	background-image: url("../img/game/autel/pierres/amethyste/amethyste.png");
+/**
+* Pierres
+**/
+/** Primaire **/
+/**Diamant**/
+preload.diamant[step="1"] {
+	background-image: url("../img/game/autel/pierres/diamant/diamant.png");
 }
-preload.amethyste[step="2"] {
-	background-image: url("../img/game/autel/pierres/amethyste/1.png");
+preload.diamant[step="2"] {
+	background-image: url("../img/game/autel/pierres/diamant/1.png");
 }
-preload.amethyste[step="3"] {
-	background-image: url("../img/game/autel/pierres/amethyste/2.png");
+preload.diamant[step="3"] {
+	background-image: url("../img/game/autel/pierres/diamant/2.png");
 }
-preload.amethyste[step="4"] {
-	background-image: url("../img/game/autel/pierres/amethyste/3.png");
+preload.diamant[step="4"] {
+	background-image: url("../img/game/autel/pierres/diamant/3.png");
 }
-preload.amethyste[step="5"] {
-	background-image: url("../img/game/autel/pierres/amethyste/4.png");
-}
-
-/**Emeraude**/
-preload.emeraude[step="1"] {
-	background-image: url("../img/game/autel/pierres/emeraude/emeraude.png");
-}
-preload.emeraude[step="2"] {
-	background-image: url("../img/game/autel/pierres/emeraude/1.png");
-}
-preload.emeraude[step="3"] {
-	background-image: url("../img/game/autel/pierres/emeraude/2.png");
-}
-preload.emeraude[step="4"] {
-	background-image: url("../img/game/autel/pierres/emeraude/3.png");
-}
-preload.emeraude[step="5"] {
-	background-image: url("../img/game/autel/pierres/emeraude/4.png");
-}
-
-/**Onyx**/
-preload.onyx[step="1"] {
-	background-image: url("../img/game/autel/pierres/onyx/onyx.png");
-}
-preload.onyx[step="2"] {
-	background-image: url("../img/game/autel/pierres/onyx/1.png");
-}
-preload.onyx[step="3"] {
-	background-image: url("../img/game/autel/pierres/onyx/2.png");
-}
-preload.onyx[step="4"] {
-	background-image: url("../img/game/autel/pierres/onyx/3.png");
-}
-preload.onyx[step="5"] {
-	background-image: url("../img/game/autel/pierres/onyx/4.png");
+preload.diamant[step="5"] {
+	background-image: url("../img/game/autel/pierres/diamant/4.png");
 }
 
 /**Rubis**/
@@ -420,6 +390,23 @@ preload.rubis[step="5"] {
 	background-image: url("../img/game/autel/pierres/rubis/4.png");
 }
 
+/**Emeraude**/
+preload.emeraude[step="1"] {
+	background-image: url("../img/game/autel/pierres/emeraude/emeraude.png");
+}
+preload.emeraude[step="2"] {
+	background-image: url("../img/game/autel/pierres/emeraude/1.png");
+}
+preload.emeraude[step="3"] {
+	background-image: url("../img/game/autel/pierres/emeraude/2.png");
+}
+preload.emeraude[step="4"] {
+	background-image: url("../img/game/autel/pierres/emeraude/3.png");
+}
+preload.emeraude[step="5"] {
+	background-image: url("../img/game/autel/pierres/emeraude/4.png");
+}
+
 /**Saphir**/
 preload.saphir[step="1"] {
 	background-image: url("../img/game/autel/pierres/saphir/saphir.png");
@@ -436,6 +423,250 @@ preload.saphir[step="4"] {
 preload.saphir[step="5"] {
 	background-image: url("../img/game/autel/pierres/saphir/4.png");
 }
+
+/** Larme d'apache **/
+preload.larme-apache[step="1"] {
+	background-image: url("../img/game/autel/pierres/larme-apache/larme-apache.png");
+}
+preload.larme-apache[step="2"] {
+	background-image: url("../img/game/autel/pierres/larme-apache/1.png");
+}
+preload.larme-apache[step="3"] {
+	background-image: url("../img/game/autel/pierres/larme-apache/2.png");
+}
+preload.larme-apache[step="4"] {
+	background-image: url("../img/game/autel/pierres/larme-apache/3.png");
+}
+preload.larme-apache[step="5"] {
+	background-image: url("../img/game/autel/pierres/larme-apache/4.png");
+}
+
+/** Cristal de roche **/
+preload.cristal-de-roche[step="1"] {
+	background-image: url("../img/game/autel/pierres/cristal-de-roche/cristal-de-roche.png");
+}
+preload.cristal-de-roche[step="2"] {
+	background-image: url("../img/game/autel/pierres/cristal-de-roche/1.png");
+}
+preload.cristal-de-roche[step="3"] {
+	background-image: url("../img/game/autel/pierres/cristal-de-roche/2.png");
+}
+preload.cristal-de-roche[step="4"] {
+	background-image: url("../img/game/autel/pierres/cristal-de-roche/3.png");
+}
+preload.cristal-de-roche[step="5"] {
+	background-image: url("../img/game/autel/pierres/cristal-de-roche/4.png");
+}
+
+/** Solaire **/
+/** Grenat **/
+preload.grenat[step="1"] {
+	background-image: url("../img/game/autel/pierres/grenat/grenat.png");
+}
+preload.grenat[step="2"] {
+	background-image: url("../img/game/autel/pierres/grenat/1.png");
+}
+preload.grenat[step="3"] {
+	background-image: url("../img/game/autel/pierres/grenat/2.png");
+}
+preload.grenat[step="4"] {
+	background-image: url("../img/game/autel/pierres/grenat/3.png");
+}
+preload.grenat[step="5"] {
+	background-image: url("../img/game/autel/pierres/grenat/4.png");
+}
+
+/**Onyx**/
+preload.onyx[step="1"] {
+	background-image: url("../img/game/autel/pierres/onyx/onyx.png");
+}
+preload.onyx[step="2"] {
+	background-image: url("../img/game/autel/pierres/onyx/1.png");
+}
+preload.onyx[step="3"] {
+	background-image: url("../img/game/autel/pierres/onyx/2.png");
+}
+preload.onyx[step="4"] {
+	background-image: url("../img/game/autel/pierres/onyx/3.png");
+}
+preload.onyx[step="5"] {
+	background-image: url("../img/game/autel/pierres/onyx/4.png");
+}
+
+/** Ambre **/
+preload.ambre[step="1"] {
+	background-image: url("../img/game/autel/pierres/ambre/ambre.png");
+}
+preload.ambre[step="2"] {
+	background-image: url("../img/game/autel/pierres/ambre/1.png");
+}
+preload.ambre[step="3"] {
+	background-image: url("../img/game/autel/pierres/ambre/2.png");
+}
+preload.ambre[step="4"] {
+	background-image: url("../img/game/autel/pierres/ambre/3.png");
+}
+preload.ambre[step="5"] {
+	background-image: url("../img/game/autel/pierres/ambre/4.png");
+}
+
+/** Obsidienne **/
+preload.obsidienne[step="1"] {
+	background-image: url("../img/game/autel/pierres/obsidienne/obsidienne.png");
+}
+preload.obsidienne[step="2"] {
+	background-image: url("../img/game/autel/pierres/obsidienne/1.png");
+}
+preload.obsidienne[step="3"] {
+	background-image: url("../img/game/autel/pierres/obsidienne/2.png");
+}
+preload.obsidienne[step="4"] {
+	background-image: url("../img/game/autel/pierres/obsidienne/3.png");
+}
+preload.obsidienne[step="5"] {
+	background-image: url("../img/game/autel/pierres/obsidienne/4.png");
+}
+
+/** Hematite **/
+preload.hematite[step="1"] {
+	background-image: url("../img/game/autel/pierres/hematite/hematite.png");
+}
+preload.hematite[step="2"] {
+	background-image: url("../img/game/autel/pierres/hematite/1.png");
+}
+preload.hematite[step="3"] {
+	background-image: url("../img/game/autel/pierres/hematite/2.png");
+}
+preload.hematite[step="4"] {
+	background-image: url("../img/game/autel/pierres/hematite/3.png");
+}
+preload.hematite[step="5"] {
+	background-image: url("../img/game/autel/pierres/hematite/4.png");
+}
+
+/** Pierre de soleil **/
+preload.pierre-de-soleil[step="1"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-soleil/pierre-de-soleil.png");
+}
+preload.pierre-de-soleil[step="2"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-soleil/1.png");
+}
+preload.pierre-de-soleil[step="3"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-soleil/2.png");
+}
+preload.pierre-de-soleil[step="4"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-soleil/3.png");
+}
+preload.pierre-de-soleil[step="5"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-soleil/4.png");
+}
+
+/**Lunaire**/
+/** Malachite **/
+preload.malachite[step="1"] {
+	background-image: url("../img/game/autel/pierres/malachite/malachite.png");
+}
+preload.malachite[step="2"] {
+	background-image: url("../img/game/autel/pierres/malachite/1.png");
+}
+preload.malachite[step="3"] {
+	background-image: url("../img/game/autel/pierres/malachite/2.png");
+}
+preload.malachite[step="4"] {
+	background-image: url("../img/game/autel/pierres/malachite/3.png");
+}
+preload.malachite[step="5"] {
+	background-image: url("../img/game/autel/pierres/malachite/4.png");
+}
+
+/**Amethyste**/
+preload.amethyste[step="1"] {
+	background-image: url("../img/game/autel/pierres/amethyste/amethyste.png");
+}
+preload.amethyste[step="2"] {
+	background-image: url("../img/game/autel/pierres/amethyste/1.png");
+}
+preload.amethyste[step="3"] {
+	background-image: url("../img/game/autel/pierres/amethyste/2.png");
+}
+preload.amethyste[step="4"] {
+	background-image: url("../img/game/autel/pierres/amethyste/3.png");
+}
+preload.amethyste[step="5"] {
+	background-image: url("../img/game/autel/pierres/amethyste/4.png");
+}
+
+/** Lapis Lazuli **/
+preload.lapis-lazuli[step="1"] {
+	background-image: url("../img/game/autel/pierres/lapis-lazuli/lapis-lazuli.png");
+}
+preload.lapis-lazuli[step="2"] {
+	background-image: url("../img/game/autel/pierres/lapis-lazuli/1.png");
+}
+preload.lapis-lazuli[step="3"] {
+	background-image: url("../img/game/autel/pierres/lapis-lazuli/2.png");
+}
+preload.lapis-lazuli[step="4"] {
+	background-image: url("../img/game/autel/pierres/lapis-lazuli/3.png");
+}
+preload.lapis-lazuli[step="5"] {
+	background-image: url("../img/game/autel/pierres/lapis-lazuli/4.png");
+}
+
+/** Selenite **/
+preload.selenite[step="1"] {
+	background-image: url("../img/game/autel/pierres/selenite/selenite.png");
+}
+preload.selenite[step="2"] {
+	background-image: url("../img/game/autel/pierres/selenite/1.png");
+}
+preload.selenite[step="3"] {
+	background-image: url("../img/game/autel/pierres/selenite/2.png");
+}
+preload.selenite[step="4"] {
+	background-image: url("../img/game/autel/pierres/selenite/3.png");
+}
+preload.selenite[step="5"] {
+	background-image: url("../img/game/autel/pierres/selenite/4.png");
+}
+
+/** Azurite **/
+preload.azurite[step="1"] {
+	background-image: url("../img/game/autel/pierres/azurite/azurite.png");
+}
+preload.azurite[step="2"] {
+	background-image: url("../img/game/autel/pierres/azurite/1.png");
+}
+preload.azurite[step="3"] {
+	background-image: url("../img/game/autel/pierres/azurite/2.png");
+}
+preload.azurite[step="4"] {
+	background-image: url("../img/game/autel/pierres/azurite/3.png");
+}
+preload.azurite[step="5"] {
+	background-image: url("../img/game/autel/pierres/azurite/4.png");
+}
+
+/** Pierre de lune **/
+preload.pierre-de-lune[step="1"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-lune/pierre-de-lune.png");
+}
+preload.pierre-de-lune[step="2"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-lune/1.png");
+}
+preload.pierre-de-lune[step="3"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-lune/2.png");
+}
+preload.pierre-de-lune[step="4"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-lune/3.png");
+}
+preload.pierre-de-lune[step="5"] {
+	background-image: url("../img/game/autel/pierres/pierre-de-lune/4.png");
+}
+
+/**
+* ---------------------------------
+**/
 
 /**Star**/
 preload.star[step="1"] {

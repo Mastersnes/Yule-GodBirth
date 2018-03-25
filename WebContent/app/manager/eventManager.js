@@ -13,11 +13,12 @@ function($, _, Utils, page, Events) {
 			this.el = "#popupEvent";
 			this.parent = parent;
 			this.Textes = parent.Textes;
+			this.saveManager = parent.saveManager;
 			
 			this.currentEvent = null;
 			this.typeEvents = [];
-			this.generalEvents = [];
-			this.uniquesEvent = [];
+			this.generalEvents = this.saveManager.load("generalEvents");
+			this.uniquesEvents = this.saveManager.load("uniquesEvents");
 		};
 		
 		this.loop = function() {
@@ -25,8 +26,8 @@ function($, _, Utils, page, Events) {
 		    /**
 		     * On retire les evenements uniques deja eu lieu du total des evenements pour ne pas poluer le choix
 		     */
-		    for (var index in this.uniquesEvent) {
-		    	var eventName = this.uniquesEvent[index];
+		    for (var index in this.uniquesEvents) {
+		    	var eventName = this.uniquesEvents[index];
 		    	var eventIndex = totalEvents.indexOf(eventName);
 		    	totalEvents.splice(eventIndex, 1);
 		    }
@@ -38,7 +39,10 @@ function($, _, Utils, page, Events) {
 	    	if (this.checkEvent(randEvent)) this.currentEvent = randEvent;
             // Si l'evenement est unique, on l'ajoute à la liste  des evenements deja rencontrés
             if (this.currentEvent) {
-            	if (this.currentEvent.unique) this.uniquesEvent.push(this.currentEvent.name);
+            	if (this.currentEvent.unique) {
+            		this.uniquesEvents.push(this.currentEvent.name);
+            		this.saveManager.save("uniquesEvents", this.uniquesEvents);
+            	}
             	this.show();
             }
 		};
@@ -55,7 +59,7 @@ function($, _, Utils, page, Events) {
 			
 			// Si il est unique, il ne doit pas exister dans la liste des evenements deja rencontrés
 			if (randEvent.unique) {
-				isOk = this.uniquesEvent.indexOf(randEvent.name) < 0;
+				isOk = this.uniquesEvents.indexOf(randEvent.name) < 0;
 			}
 			
 			// Si il est rare, il faut tomber sur sa rareté
@@ -70,7 +74,9 @@ function($, _, Utils, page, Events) {
 		
 		this.show = function() {
 		    if (!this.currentEvent) return;
-		    //this.parent.pause = true;
+		    this.parent.spaceView.ameliorationView.descriptionView.close();
+		    this.parent.autelView.pierresView.detailView.close();
+		    this.parent.queteView.detailView.close();
 		    
 		    var that = this;
 		    
@@ -107,6 +113,7 @@ function($, _, Utils, page, Events) {
 		this.addEvents = function(events) {
 		    if (!events) return;
 		    this.generalEvents = this.generalEvents.concat(events);
+		    this.saveManager.save("generalEvents", this.generalEvents);
 		};
 		
 		this.makeEvents = function() {

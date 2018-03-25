@@ -14,6 +14,7 @@ define(["jquery",
             this.mediatheque = parent.mediatheque;
 
             // Manager
+            this.saveManager = parent.saveManager;
             this.textManager = parent.textManager;
             this.eventManager = parent.eventManager;
             this.pointManager = parent.pointManager;

@@ -10,6 +10,7 @@ define(["jquery",
             this.mediatheque = parent.mediatheque;
             
             //Manager
+            this.saveManager = parent.saveManager;
             this.textManager = parent.textManager;
             this.eventManager = parent.eventManager;
             this.pointManager = parent.pointManager;
@@ -17,13 +18,15 @@ define(["jquery",
             this.ameliorationView = parent.ameliorationView;
             this.gameView = parent.parent;
             
-            this.initialization = true;
+            this.initialisation = true;
+            this.initType = this.saveManager.load("godInitType");
+            this.initLevel = this.saveManager.load("godInitLevel");
         };
         
         this.render = function() {
-        	if (this.initialization) {
-        		this.setType("dust", true);
-        		this.initialization = false;
+        	if (this.initialisation) {
+        		this.setType(this.initType, this.initLevel);
+        		this.initialisation = false;
         	}
         	
         	var godDom = $(this.el).find("god");
@@ -56,9 +59,13 @@ define(["jquery",
             this.checkAnim();
         };
         
-        this.setType = function(type, first) {
-            this.type = GodType.get(type);
-            this.level = 1;
+        this.setType = function(type, level) {
+        	if (!level) level = 1;
+            
+        	this.saveManager.save("godInitType", type);
+        	
+        	this.type = GodType.get(type);
+            this.level = level;
             this.eventManager.setTypeEvents(this.type.events);
             this.textManager.show(this.type.text);
             
@@ -83,6 +90,7 @@ define(["jquery",
                     else this.level = this.type.nbr;
                 }
             }
+        	this.saveManager.load("godInitLevel", this.level);
         };
         
         this.init(parent);

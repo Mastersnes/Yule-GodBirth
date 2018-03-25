@@ -14,6 +14,7 @@ function($, _, Utils) {
             this.Items = parent.Items;
             this.refreshMax = false;
             
+            this.saveManager = parent.saveManager;
             this.pointManager = parent.pointManager;
 		};
 
@@ -172,6 +173,7 @@ function($, _, Utils) {
                 	if (that.pointManager.depenser(prixTotal)) {
                         if (item.level == 0) that.close();
                         item.level+=incr;
+                        that.saveManager.saveAmelioration(itemId, level);
                         $("item#"+itemId).attr("level", item.level);
                         
                         if (item.select) item.select(that.parent.parent.parent, that.parent, incr);

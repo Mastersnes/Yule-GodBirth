@@ -16,33 +16,25 @@ define(["jquery"], function($){
 			fr : "Nouvelle partie",
 			en : "New Game"
 		},
+		"eraseSave" : {
+			fr : "Attention, ceci effacera votre partie enregistrée !",
+			en : "Warning, this will erase your registered save !"
+		},
+		"continuerButton" : {
+			fr : "Continuer",
+			en : "Continue"
+		},
+		"cancelButton" : {
+			fr : "Annuler",
+			en : "Cancel"
+		},
 		"loadGame" : {
 			fr : "Charger une partie",
 			en : "Load game"
 		},
-		"fromCode" : {
-			fr : "Veuillez entrer votre code de sauvegarde :",
-			en : "Please enter your save code :"
-		},
-		"codeHolder" : {
-			fr : "Code de sauvegarde",
-			en : "Save code"
-		},
-		"codeError" : {
-			fr : "Code de sauvegarde invalide",
-			en : "Invalide save code"
-		},
 		"load" : {
 			fr : "Charger",
 			en : "Load"
-		},
-		"or" : {
-			fr : "…Ou…",
-			en : "…Or…"
-		},
-		"fromNavigateur" : {
-			fr : "Charger depuis la sauvegarde navigateur",
-			en : "Load from browser save"
 		},
 		"options" : {
 			fr : "Options",
@@ -122,6 +114,18 @@ define(["jquery"], function($){
             fr : "Et si vous voulez nous encouragez, allez faire un tour sur <a target='_blank' alt='Tipeee' href='https://www.tipeee.com/les-jeux-de-bebel/'>Tipeee</a>.",
             en : "And if you want to encourage us, join us on <a target='_blank' alt='Tipeee' href='https://www.tipeee.com/les-jeux-de-bebel/'>Tipeee</a>."
         },
+        
+        /**
+         * Popups
+         */
+		"yesButton" : {
+			fr : "Oui",
+			en : "Yes"
+		},
+		"noButton" : {
+			fr : "Non",
+			en : "No"
+		},
 		
 		/**
 		 * Jeu

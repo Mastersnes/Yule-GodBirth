@@ -9,30 +9,17 @@ define(["jquery",
         this.init = function(parent) {
         	this.el = $(".autel");
             
-        	/**
-        	 * TODO :
-        	 * 	BUG : Laisser le fond des ameliorations actif lorque la popup est ouverte
-        	 */
-        	
             this.parent = parent;
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
             
+            this.saveManager = this.parent.saveManager;
             this.pointManager = this.parent.pointManager;
             this.ameliorationView = this.parent.spaceView.ameliorationView;
             
             this.pierresView = new PierresView(this);
             
-            this.selectedPierres = new HashMap(
-            		{
-            			"haut" : null, 
-            			"gauche" : null,
-            			"droite" : null,
-            			"bas-gauche" : null,
-            			"bas-droite" : null,
-            			"centre" : null,
-            		}
-            );
+            this.selectedPierres = new HashMap(this.saveManager.load("selectedPierres"));
         };
         
         this.render = function() {
@@ -56,6 +43,8 @@ define(["jquery",
         };
         
         this.refresh = function() {
+        	this.saveManager.save("selectedPierres", this.selectedPierres.data);
+        	
         	var avantages = {
 				"croyance" : 0,
 				"illumination" : 0,
@@ -77,7 +66,7 @@ define(["jquery",
          * Raffraichit le total des avantages donné par les pierres selectionnées
          */
         this.refreshAvantages = function(avantages) {
-        	this.pointManager.avantages = avantages;
+        	this.pointManager.setAvantages(avantages);
         	
         	this.drawAvantage("bien", avantages);
         	this.drawAvantage("mal", avantages);

@@ -14,10 +14,11 @@ define(["jquery",
             this.mediatheque = parent.mediatheque;
             this.Quetes = Quetes;
             
+            this.saveManager = this.parent.saveManager;
             this.pointManager = this.parent.pointManager;
             this.ameliorationView = this.parent.spaceView.ameliorationView;
             
-            this.complete = [];
+            this.complete = this.saveManager.load("quetesComplete");
         };
         
         this.render = function() {
@@ -154,6 +155,8 @@ define(["jquery",
             
             if (!this.checkComplete(quete)) return false;
             this.complete.push(quete.name);
+            
+            this.saveManager.save("quetesComplete", this.complete);
             this.pointManager.addPoints(quete.gains);
             
             this.refresh();

@@ -17,10 +17,11 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
             this.mediatheque = parent.mediatheque;
             this.Pierres = Pierres;
             
+            this.saveManager = this.parent.saveManager;
             this.pointManager = this.parent.pointManager;
             this.ameliorationView = this.parent.ameliorationView;
             
-            this.complete = [];
+            this.complete = this.saveManager.load("pierresComplete");
 		};
 
 		this.render = function() {

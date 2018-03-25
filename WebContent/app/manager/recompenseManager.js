@@ -13,13 +13,15 @@ function($, _, Utils) {
 			this.Textes = parent.Textes;
 			
 			this.pointManager = parent.pointManager;
+			this.saveManager = parent.saveManager;
 			
-			this.compteurClick = 0;
+			this.compteurClick = this.saveManager.load("compteurClick");
 		};
 		
 		this.addClick = function() {
 			if (this.compteurClick >= 1000000000) return;
 			this.compteurClick++;
+			this.saveManager.save("compteurClick");
 			var recompense = {
 				croyance : 0,
 				illumination : 0,

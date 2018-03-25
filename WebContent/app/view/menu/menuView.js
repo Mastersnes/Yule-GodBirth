@@ -2,17 +2,17 @@
 define(["jquery",
         'underscore',
         "app/utils/utils",
+        "app/utils/popupUtils",
         "app/utils/kongregateUtils",
         "app/data/textes",
         "app/utils/mediatheque",
         "app/manager/saveManager",
         "text!app/template/menu/menu.html",
         "app/view/game/gameView",
-        "app/view/menu/loadView",
         "app/view/menu/optionView",
         "app/view/menu/creditView",
         "app/view/menu/partenaireView"], 
-function($, _, Utils, Kongregate, Textes, Mediatheque, SaveManager, page, GameView, LoadView, OptionView, CreditView, PartenaireView) {
+function($, _, Utils, PopupUtils, Kongregate, Textes, Mediatheque, SaveManager, page, GameView, OptionView, CreditView, PartenaireView) {
 	'use strict';
 
 	return function() {
@@ -22,6 +22,7 @@ function($, _, Utils, Kongregate, Textes, Mediatheque, SaveManager, page, GameVi
             this.mediatheque.play("music/menu.mp3");
             this.kongregateUtils = new Kongregate(Textes);
             this.saveManager = new SaveManager();
+            this.Textes = Textes;
             
             var that = this;
 			if (window.location.href.indexOf("kongregate") > -1) {
@@ -39,7 +40,7 @@ function($, _, Utils, Kongregate, Textes, Mediatheque, SaveManager, page, GameVi
 			_.templateSettings.variable = "data";
 			var template = _.template(page);
 			
-			var saveExists = this.saveManager.getSave() != null;
+			var saveExists = this.saveManager.checkSave();
 			
 			var templateData = {
 					text : Textes,
@@ -59,15 +60,18 @@ function($, _, Utils, Kongregate, Textes, Mediatheque, SaveManager, page, GameVi
 		this.makeEvents = function() {
 			var that = this;
 			$("#new").click(function() {
-			    PopupUtils.confirm("eraseSave", function() {
-			        
-			    }, function() {
-			        
-			    })
-			    that.saveManager.eraseSave();
-				that.loadGame();
+				console.log("save : ", that.saveManager.checkSave());
+			    if (that.saveManager.checkSave()) {
+					PopupUtils.confirm(Textes, "eraseSave", function() {
+				        that.saveManager.eraseSave();
+						that.loadGame();
+				    }, null, "continuerButton", "cancelButton");
+			    }else {
+			    	that.loadGame();
+			    }
 			});
 			$("#load").click(function() {
+				that.saveManager.loadSave();
 			    that.loadGame();
 			});
 			$("#option").click(function() {

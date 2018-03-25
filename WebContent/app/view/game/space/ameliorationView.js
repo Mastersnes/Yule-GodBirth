@@ -17,8 +17,11 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
             this.mediatheque = parent.mediatheque;
             this.Items = Items;
             
+            this.saveManager = parent.saveManager;
             this.pointManager = parent.pointManager;
             this.recompenseManager = parent.recompenseManager;
+            
+            this.saveManager.loadAmeliorations(this.Items);
 		};
 
 		this.render = function() {

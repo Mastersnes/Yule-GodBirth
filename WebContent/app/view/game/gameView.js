@@ -8,6 +8,7 @@ define(["jquery",
         "app/manager/eventManager",
         "app/manager/pointManager",
         "app/manager/recompenseManager",
+        "app/manager/didactitielManager",
         "app/view/game/space/spaceView",
         "app/view/game/quete/queteView",
         "app/view/game/autel/autelView",
@@ -15,12 +16,15 @@ define(["jquery",
         "app/view/game/endView"
         ],
 function($, _, Utils, page, 
-		SceneManager, TextManager, EventManager, PointManager, RecompenseManager,
-		SpaceView, QueteView, AutelView, ConstellationView, EndView) {
+		SceneManager, TextManager, 
+		EventManager, PointManager, 
+		RecompenseManager, DidactitielManager,
+		SpaceView, QueteView, 
+		AutelView, ConstellationView, EndView) {
 	'use strict';
 
-	return function(parent, load) {
-		this.init = function(parent, load) {
+	return function(parent) {
+		this.init = function(parent) {
 		    this.el = $("#app");
 			this.Textes = parent.Textes;
 			this.mediatheque = parent.Mediatheque;
@@ -28,15 +32,17 @@ function($, _, Utils, page,
 			this.pause = false;
 			this.endGame = false;
 			
-			this.render(load, code);
+			this.render();
 			
 			// Manager
+			this.saveManager = parent.saveManager;
+			
             this.scene = new SceneManager(this);
             this.textManager = new TextManager(this);
             this.eventManager = new EventManager(this);
             this.pointManager = new PointManager(this);
             this.recompenseManager = new RecompenseManager(this);
-            this.saveManager = parent.saveManager;
+            this.didactitielManager = new DidactitielManager(this);
 
             this.spaceView = new SpaceView(this);
             this.spaceView.render();
@@ -60,36 +66,26 @@ function($, _, Utils, page,
             }
 		};
 
-		this.render = function(load, code) {
+		this.render = function(load) {
 			_.templateSettings.variable = "data";
 			var template = _.template(page);
 			var templateData = {
 					text : this.Textes
 			};
 			this.el.html(template(templateData));
-			
-			var save;
-			if (code) save = JSON.parse(Utils.decode(code));
-			else if (load) {
-				var saveSession = window.localStorage.getItem(Utils.name);
-				if (saveSession) save = JSON.parse(Utils.decode(saveSession));
-			}
-			
-			if (save && save.lieu) {
-			    /**LOAD**/
-			} else {
-			    /**NEW_GAME**/
-			}
 		};
 		
 		this.loop = function() {
 		    if (!this.endGame) {
     		    if (!this.pause) {
+    		    	this.didactitielManager.loop();
         		    this.spaceView.loop(this);
         		    this.queteView.loop(this);
         		    this.autelView.loop(this);
         		    this.constellationView.loop(this);
                     this.eventManager.loop();
+                    
+                    this.saveManager.saveInSession();
                     
                     if (this.pointManager.gameOver()) {
                         this.gameOver();
@@ -140,6 +136,6 @@ function($, _, Utils, page,
             $(".text").bind('selectstart', function(){return false;});
         };
 		
-		this.init(parent, load, code, Textes, Mediatheque);
+		this.init(parent);
 	};
 });

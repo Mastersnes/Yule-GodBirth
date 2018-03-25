@@ -43,6 +43,32 @@ mask {
 	left: 0; top: 0;
 }
 
+.popup .button {
+	cursor: pointer;
+	width: inherit; height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    
+    background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url("../img/game/interface/bouton/on.png");
+}
+
+.popup .button span {
+	display: block;
+    margin-top: 4%;
+}
+
+.popup .button[disabled="disabled"] {
+	cursor: not-allowed;
+	
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url("../img/game/interface/bouton/off.png");
+}
+
 /**
 * Textes in game
 **/

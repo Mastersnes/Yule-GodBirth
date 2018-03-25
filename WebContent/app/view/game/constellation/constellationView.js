@@ -13,6 +13,7 @@ define(["jquery",
 
             // Manager
             this.textManager = parent.textManager;
+            this.saveManager = parent.saveManager;
             this.pointManager = parent.pointManager;
         };
         

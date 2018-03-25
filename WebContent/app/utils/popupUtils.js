@@ -6,15 +6,30 @@ define(["jquery",
 		/**
 		* Affiche une popup de confirmation
 		**/
-		confirm : function(texte, callbackSuccess, callbackCancel, texteYes, texteNo) {
-		    _.templateSettings.variable = "data";
-            var template = _.template(page);
+		confirm : function(Textes, textePopup, callbackSuccess, callbackCancel, texteYes, texteNo) {
+		    if (!texteYes) texteYes = Textes.get("yesButton");
+		    if (!texteNo) texteNo = Textes.get("noButton");
+			
+			var el = $("body > #popups");
+			_.templateSettings.variable = "data";
+            var template = _.template(confirmPage);
             var templateData = {
-                    textPopup : texte,
+            		text : Textes,
+            		textePopup : textePopup,
                     texteYes : texteYes,
-                    textNo : textNo
+                    texteNo : texteNo
             };
-            $(this.el).html(template(templateData));
+            el.html(template(templateData));
+            el.find(".popup").show();
+            
+            el.find(".yes").click(function() {
+            	el.find(".popup").hide();
+            	if (callbackSuccess) callbackSuccess();
+            });
+            el.find(".no").click(function() {
+            	el.find(".popup").hide();
+            	if (callbackCancel) callbackCancel();
+            });
 		}
 	};
 });

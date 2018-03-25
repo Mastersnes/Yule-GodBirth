@@ -11,20 +11,10 @@ function($, _, Utils) {
 			this.el = "#points";
 			this.parent = parent;
 			this.Textes = parent.Textes;
+			this.saveManager = parent.saveManager;
 			
-			this.points = {
-			        croyance : 0,
-			        illumination : 0,
-			        bien : 100,
-			        mal : 100
-			};
-			
-			this.avantages = {
-				croyance : 0,
-				illumination : 0,
-				bien : 0,
-				mal : 0
-			};
+			this.points = this.saveManager.load("points");
+			this.avantages = this.saveManager.load("avantages");
 		};
 		
 		this.render = function() {
@@ -33,8 +23,8 @@ function($, _, Utils) {
 		    $(this.el).find("illumination .text").html(Utils.format(this.points.illumination, true, this.Textes));
 		    if (this.points.illumination > 0) $(this.el).find("illumination").show();
 
-		    $(this.el).find("bien .text").html(this.points.bien);
-		    $(this.el).find("mal .text").html(this.points.mal);
+//		    $(this.el).find("bien .text").html(this.points.bien);
+//		    $(this.el).find("mal .text").html(this.points.mal);
 
 		    var total = this.points.bien + this.points.mal;
 		    var bienPercent = Utils.toPercent(this.points.bien, total);
@@ -45,6 +35,14 @@ function($, _, Utils) {
 		    $(this.el).find("jauge yinyang").css({
 		    	left : (bienPercent - 2.25) + "%"
 		    });
+		};
+		
+		/**
+		 * Definie les avantages
+		 */
+		this.setAvantages = function(avantages) {
+			this.avantages = avantages;
+			this.saveManager.save("avantages", this.avantages);
 		};
 		
 		/**
@@ -73,6 +71,9 @@ function($, _, Utils) {
 		    	this.points.bien = parseInt(this.points.bien / 10);
 		    	this.points.mal = parseInt(this.points.mal / 10);
 		    }
+		    
+		    this.saveManager.save("points", this.points);
+		    this.saveManager.saveMaxPoints(this.points);
 		    
 		    this.render();
 		};

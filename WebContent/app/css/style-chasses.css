@@ -9,18 +9,68 @@ autel > chasse:not(.used) {
 	background-image: none;
 }
 
-autel > chasse.used[pierre=amethyste] {
-	background-image: url("../img/game/autel/pierres/amethyste/amethyste.png");
+/**
+* Primaire
+**/
+autel > chasse.used[pierre=diamant] {
+	background-image: url("../img/game/autel/pierres/diamant/diamant.png");
 }
 autel > chasse.used[pierre=rubis] {
 	background-image: url("../img/game/autel/pierres/rubis/rubis.png");
 }
+autel > chasse.used[pierre=emeraude] {
+	background-image: url("../img/game/autel/pierres/emeraude/emeraude.png");
+}
 autel > chasse.used[pierre=saphir] {
 	background-image: url("../img/game/autel/pierres/saphir/saphir.png");
+}
+autel > chasse.used[pierre=larme-apache] {
+	background-image: url("../img/game/autel/pierres/larme-apache/larme-apache.png");
+}
+autel > chasse.used[pierre=cristal-de-roche] {
+	background-image: url("../img/game/autel/pierres/cristal-de-roche/cristal-de-roche.png");
+}
+
+/**
+* Solaire
+**/
+autel > chasse.used[pierre=grenat] {
+	background-image: url("../img/game/autel/pierres/grenat/grenat.png");
 }
 autel > chasse.used[pierre=onyx] {
 	background-image: url("../img/game/autel/pierres/onyx/onyx.png");
 }
-autel > chasse.used[pierre=emeraude] {
-	background-image: url("../img/game/autel/pierres/emeraude/emeraude.png");
+autel > chasse.used[pierre=ambre] {
+	background-image: url("../img/game/autel/pierres/ambre/ambre.png");
+}
+autel > chasse.used[pierre=obsidienne] {
+	background-image: url("../img/game/autel/pierres/obsidienne/obsidienne.png");
+}
+autel > chasse.used[pierre=hematite] {
+	background-image: url("../img/game/autel/pierres/hematite/hematite.png");
+}
+autel > chasse.used[pierre=pierre-de-soleil] {
+	background-image: url("../img/game/autel/pierres/pierre-de-soleil/pierre-de-soleil.png");
+}
+
+/**
+* Lunaire
+**/
+autel > chasse.used[pierre=malachite] {
+	background-image: url("../img/game/autel/pierres/malachite/malachite.png");
+}
+autel > chasse.used[pierre=amethyste] {
+	background-image: url("../img/game/autel/pierres/amethyste/amethyste.png");
+}
+autel > chasse.used[pierre=lapis-lazuli] {
+	background-image: url("../img/game/autel/pierres/lapis-lazuli/lapis-lazuli.png");
+}
+autel > chasse.used[pierre=selenite] {
+	background-image: url("../img/game/autel/pierres/selenite/selenite.png");
+}
+autel > chasse.used[pierre=azurite] {
+	background-image: url("../img/game/autel/pierres/azurite/azurite.png");
+}
+autel > chasse.used[pierre=pierre-de-lune] {
+	background-image: url("../img/game/autel/pierres/pierre-de-lune/pierre-de-lune.png");
 }

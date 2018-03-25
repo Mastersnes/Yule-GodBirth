@@ -1,10 +1,20 @@
 <div class="popup">
     <mask></mask>
     <div class="content">
-        <div class="text"><%= data.text.get(data.textPopup) %></div>
-        <div>
-            <span class="text yes"><%= data.text.get(data.textYes) %></span>
-            <span class="text no"><%= data.text.get(data.textNo) %></span>
+        <div class="text text-center row">
+	        <div class="col-md-12"><%= data.text.get(data.textePopup) %></div>
+	        <div class="col-md-12">
+	            <div class="col-md-6">
+	            	<div class="button yes">
+	            		<span><%= data.text.get(data.texteYes) %></span>
+	            	</div>
+	            </div>
+	            <div class="col-md-6">
+	            	<div class="button no">
+	            		<span><%= data.text.get(data.texteNo) %></span>
+	            	</div>
+	            </div>
+	        </div>
         </div>
     </div>
 </div>
