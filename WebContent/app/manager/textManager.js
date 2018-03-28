@@ -44,6 +44,10 @@ function($, _, page) {
 			}
 		};
 		
+		this.currentTextId = function() {
+			return this.ids[this.current];
+		};
+		
 		this.empty = function() {
 		    return !this.visible;
 		};

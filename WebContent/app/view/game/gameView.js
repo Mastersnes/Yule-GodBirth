@@ -42,7 +42,6 @@ function($, _, Utils, page,
             this.eventManager = new EventManager(this);
             this.pointManager = new PointManager(this);
             this.recompenseManager = new RecompenseManager(this);
-            this.didactitielManager = new DidactitielManager(this);
 
             this.spaceView = new SpaceView(this);
             this.spaceView.render();
@@ -57,7 +56,8 @@ function($, _, Utils, page,
             this.autelView.render();
 
             this.endView = new EndView(this);
-
+            
+            this.didactitielManager = new DidactitielManager(this);
 
 			if (!this.alreadyLoop) {
 			    this.alreadyLoop = true;
@@ -131,9 +131,16 @@ function($, _, Utils, page,
             this.queteView.makeEvents();
             this.autelView.makeEvents();
             this.constellationView.makeEvents();
+            this.didactitielManager.makeEvents();
             
-            $(".text").click(function() {return true;});
-            $(".text").bind('selectstart', function(){return false;});
+            $(".text").click(function(e) {
+            	e.preventDefault();
+            	return true;
+            });
+            $(".text").bind('selectstart', function(e){
+            	e.preventDefault();
+            	return false;
+            });
         };
 		
 		this.init(parent);

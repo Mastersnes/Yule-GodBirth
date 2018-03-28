@@ -442,6 +442,23 @@ define(["jquery"], function($){
 		"cristal-de-roche-desc" : {
 			fr : "",
 			en : ""
+		},
+		
+		
+		/**
+		 * Didactitiel
+		 */
+		"didactitiel1" : {
+			fr : "Bienvenue jeune maître ! Comment fut votre repos ? <br/> (Cliquez simplement pour passer à la suite)",
+			en : "-"
+		},
+		"didactitiel2" : {
+			fr : "Je me nomme Origine, je serais votre serviteur dans cette aventure.",
+			en : "-"
+		},
+		"didactitiel3" : {
+			fr : "Vous voyez cette barre tout en haut ? Il s'agit de l'equilibre de l'univers !",
+			en : "-"
 		}
 	};
 	
@@ -454,6 +471,13 @@ define(["jquery"], function($){
 		get : function(key) {
 			if (!this.local) {
 				this.local = navigator.language || navigator.userLanguage;
+				if (this.local) {
+					this.local = this.local.toLowerCase();
+					if (this.local.indexOf("fr") > -1) this.local = "fr";
+					else if (this.local.indexOf("en") > -1) this.local = "en";
+				}else {
+					this.local = "en";
+				}
 			}
 			var text = $.extend(true, {}, data[key]);
 			

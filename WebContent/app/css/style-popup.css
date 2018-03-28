@@ -75,7 +75,7 @@ mask {
 .popupText {
 	display: none;
 	position: absolute;
-	top : 4%;
+	top : 5%;
     z-index: 2000;
     
     text-align: center;

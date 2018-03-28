@@ -5,7 +5,7 @@ define(["jquery"], function($){
 				name : "dust",
 			    nbr : 5,
 				next : "egg",
-				text : ["cinematique-dust1", "", "cinematique-dust2"],
+				text : ["didactitiel1", "didactitiel2", "didactitiel3"],
 				events : {
                     typeEvents : ["dust-event1"],
                     newEvents : []
