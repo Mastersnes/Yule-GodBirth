@@ -59,7 +59,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : 0
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * croyance),
+	        				croyance : Math.round(0.5 * croyance) + 1000,
 	        				illumination : 0,
                             bien : 0,
                             mal : 0

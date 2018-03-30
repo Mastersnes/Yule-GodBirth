@@ -7,7 +7,7 @@ define(["jquery"], function($){
 				next : "egg",
 				text : ["didactitiel1", "didactitiel2", "didactitiel3"],
 				events : {
-                    typeEvents : ["dust-event1"],
+                    typeEvents : [],
                     newEvents : []
                 }
 			},
@@ -17,7 +17,7 @@ define(["jquery"], function($){
 				next : "baby",
 				text : ["cinematique-egg1", "", "cinematique-egg2"],
 				events : {
-	                typeEvents : ["egg-event1"],
+	                typeEvents : [],
 	                newEvents : []
 	            }
 			},
@@ -27,7 +27,7 @@ define(["jquery"], function($){
 				next : "child",
 				text : ["cinematique-baby1"],
 				events : {
-	                typeEvents : ["baby-event1"],
+	                typeEvents : [],
 	                newEvents : []
 	            }
 			},
@@ -35,7 +35,7 @@ define(["jquery"], function($){
                 name : "child",
                 text : ["cinematique-child1"],
                 events : {
-                    typeEvents : ["child-event1"],
+                    typeEvents : [],
                     newEvents : []
                 },
                 animations : [

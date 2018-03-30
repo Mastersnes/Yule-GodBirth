@@ -54,7 +54,6 @@ define(["jquery",
 
         this.click = function(game) {
         	this.ameliorationView.click(game);
-        	game.click();
         };
         
         this.makeEvents = function() {
