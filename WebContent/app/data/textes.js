@@ -459,6 +459,26 @@ define(["jquery"], function($){
 		"didactitiel3" : {
 			fr : "Vous voyez cette barre tout en haut ? Il s'agit de l'equilibre de l'univers !",
 			en : "-"
+		},
+		"didactitiel4" : {
+			fr : "Ni trop de bien, ni trop de mal. Vous devez maintenir l'harmonie.",
+			en : "-"
+		},
+		"didactitiel5" : {
+			fr : "N'ayez aucune crainte, je serai là pour vous aider. Voici de la croyance.",
+			en : "-"
+		},
+		"didactitiel6" : {
+			fr : "Cette energie rare se manifeste lorsqu'une entité dans l'univers croit en vous.",
+			en : "-"
+		},
+		"didactitiel7" : {
+			fr : "Pour le moment vous pouvez compter sur moi pour vous alimenter.",
+			en : "-"
+		},
+		"didactitiel8" : {
+			fr : "Pour commencer, il vous faudra grandir. Achetez donc votre premiere amelioration !",
+			en : "-"
 		}
 	};
 	

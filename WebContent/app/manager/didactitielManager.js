@@ -37,10 +37,10 @@ function($, _, Utils) {
 		this.click = function() {
 			switch (this.step) {
 				case 0 :
-					if (this.textManager.ids[this.textManager.current] == "didactitiel3") {
+					if (this.textManager.ids[this.textManager.current] == "didactitiel5") {
 						this.step = 1;
 						this.pointManager.addPoints({
-							croyance : 1,
+							croyance : 10,
 							illumination : 0,
 							bien : 0,
 							mal : 0

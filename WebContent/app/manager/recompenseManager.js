@@ -32,13 +32,11 @@ function($, _, Utils) {
 			/**
 			 * Tout les 100 cliques on gagne 1 point d'illumination
 			 */
-			if (this.compteurClick % 100 == 0) {
+			if (this.compteurClick % 500 == 0) {
 				recompense.illumination += 1;
 			}
 			
 			switch (this.compteurClick) {
-				case 10 :
-				case 50 :
 				case 500 :
 					recompense.croyance += this.compteurClick;
 					break;
