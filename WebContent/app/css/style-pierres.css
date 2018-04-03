@@ -847,59 +847,59 @@
 }
 
 /**
-* Selenite
+* Labradorite
 **/
-.ameliorations item.selenite span {
-	background-image: url("../img/game/autel/pierres/selenite/selenite.png");
+.ameliorations item.labradorite span {
+	background-image: url("../img/game/autel/pierres/labradorite/labradorite.png");
 }
-.ameliorations item.selenite.out span {
-	animation-name: selenite-out;
+.ameliorations item.labradorite.out span {
+	animation-name: labradorite-out;
     animation-duration: 0.25s;
     animation-fill-mode: both;
 
-	-webkit-animation-name: selenite-out;
+	-webkit-animation-name: labradorite-out;
     -webkit-animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
 
-	-moz-animation-name: selenite-out;
+	-moz-animation-name: labradorite-out;
     -moz-animation-duration: 0.25s;
     -moz-animation-fill-mode: both;
 
-	-o-animation-name: selenite-out;
+	-o-animation-name: labradorite-out;
     -o-animation-duration: 0.25s;
     -o-animation-fill-mode: both;
 }
-.ameliorations item.selenite.in span {
-	animation-name: selenite-in;
+.ameliorations item.labradorite.in span {
+	animation-name: labradorite-in;
     animation-duration: 0.25s;
     animation-fill-mode: both;
     
-    -webkit-animation-name: selenite-in;
+    -webkit-animation-name: labradorite-in;
     -webkit-animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
 
-	-moz-animation-name: selenite-in;
+	-moz-animation-name: labradorite-in;
     -moz-animation-duration: 0.25s;
     -moz-animation-fill-mode: both;
 
-	-o-animation-name: selenite-in;
+	-o-animation-name: labradorite-in;
     -o-animation-duration: 0.25s;
     -o-animation-fill-mode: both;
 }
 
-@keyframes selenite-in {
-    0% {background-image: url("../img/game/autel/pierres/selenite/selenite.png");}
-    25% {background-image: url("../img/game/autel/pierres/selenite/1.png");}
-    50% {background-image: url("../img/game/autel/pierres/selenite/2.png");}
-    75% {background-image: url("../img/game/autel/pierres/selenite/3.png");}
-    100% {background-image: url("../img/game/autel/pierres/selenite/4.png");}
+@keyframes labradorite-in {
+    0% {background-image: url("../img/game/autel/pierres/labradorite/labradorite.png");}
+    25% {background-image: url("../img/game/autel/pierres/labradorite/1.png");}
+    50% {background-image: url("../img/game/autel/pierres/labradorite/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/labradorite/3.png");}
+    100% {background-image: url("../img/game/autel/pierres/labradorite/4.png");}
 }
-@keyframes selenite-out {
-    0% {background-image: url("../img/game/autel/pierres/selenite/4.png");}
-    25% {background-image: url("../img/game/autel/pierres/selenite/3.png");}
-    50% {background-image: url("../img/game/autel/pierres/selenite/2.png");}
-    75% {background-image: url("../img/game/autel/pierres/selenite/1.png");}
-    100% {background-image: url("../img/game/autel/pierres/selenite/selenite.png");}
+@keyframes labradorite-out {
+    0% {background-image: url("../img/game/autel/pierres/labradorite/4.png");}
+    25% {background-image: url("../img/game/autel/pierres/labradorite/3.png");}
+    50% {background-image: url("../img/game/autel/pierres/labradorite/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/labradorite/1.png");}
+    100% {background-image: url("../img/game/autel/pierres/labradorite/labradorite.png");}
 }
 
 /**

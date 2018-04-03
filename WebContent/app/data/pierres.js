@@ -235,9 +235,9 @@ define([ "jquery" ], function($) {
 				mal : 0
 			}
 		},
-		"selenite" : {
-			name : "selenite",
-			description : "selenite-desc",
+		"labradorite" : {
+			name : "labradorite",
+			description : "labradorite-desc",
 			conditions : [],
 			prix : {
 				croyance : 1,

@@ -613,21 +613,21 @@ preload.lapis-lazuli[step="5"] {
 	background-image: url("../img/game/autel/pierres/lapis-lazuli/4.png");
 }
 
-/** Selenite **/
-preload.selenite[step="1"] {
-	background-image: url("../img/game/autel/pierres/selenite/selenite.png");
+/** Labradorite **/
+preload.labradorite[step="1"] {
+	background-image: url("../img/game/autel/pierres/labradorite/labradorite.png");
 }
-preload.selenite[step="2"] {
-	background-image: url("../img/game/autel/pierres/selenite/1.png");
+preload.labradorite[step="2"] {
+	background-image: url("../img/game/autel/pierres/labradorite/1.png");
 }
-preload.selenite[step="3"] {
-	background-image: url("../img/game/autel/pierres/selenite/2.png");
+preload.labradorite[step="3"] {
+	background-image: url("../img/game/autel/pierres/labradorite/2.png");
 }
-preload.selenite[step="4"] {
-	background-image: url("../img/game/autel/pierres/selenite/3.png");
+preload.labradorite[step="4"] {
+	background-image: url("../img/game/autel/pierres/labradorite/3.png");
 }
-preload.selenite[step="5"] {
-	background-image: url("../img/game/autel/pierres/selenite/4.png");
+preload.labradorite[step="5"] {
+	background-image: url("../img/game/autel/pierres/labradorite/4.png");
 }
 
 /** Azurite **/

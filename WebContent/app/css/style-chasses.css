@@ -65,8 +65,8 @@ autel > chasse.used[pierre=amethyste] {
 autel > chasse.used[pierre=lapis-lazuli] {
 	background-image: url("../img/game/autel/pierres/lapis-lazuli/lapis-lazuli.png");
 }
-autel > chasse.used[pierre=selenite] {
-	background-image: url("../img/game/autel/pierres/selenite/selenite.png");
+autel > chasse.used[pierre=labradorite] {
+	background-image: url("../img/game/autel/pierres/labradorite/labradorite.png");
 }
 autel > chasse.used[pierre=azurite] {
 	background-image: url("../img/game/autel/pierres/azurite/azurite.png");

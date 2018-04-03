@@ -71,7 +71,7 @@ define(["jquery", "sha"], function($, sha){
 		    return amount;
 		},
 		pow : function(multiple, base, puissance) {
-        	return multiple * Math.pow(base, puissance);
+        	return Math.round(multiple * Math.pow(base, puissance));
         }
 	};
 });

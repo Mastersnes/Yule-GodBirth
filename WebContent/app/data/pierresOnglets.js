@@ -25,7 +25,7 @@ define(["jquery"], function($){
                     }
                 ],
                 name : "lunaire",
-                pierres : ["malachite", "amethyste", "lapis-lazuli", "selenite", "azurite", "pierre-de-lune"]
+                pierres : ["malachite", "amethyste", "lapis-lazuli", "labradorite", "azurite", "pierre-de-lune"]
             }
 	};
 	

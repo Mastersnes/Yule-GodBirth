@@ -16,14 +16,14 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 				this.prix = function (lvl) {
 				    if(!lvl) lvl = this.level;
 					return {
-	        			croyance : Math.round(10 * Math.pow(lvl, 3.5)),
-	        			illumination : lvl<10 ? 0 : Math.round(1 * Math.pow(lvl, 1.3))
+	        			croyance : Utils.pow(10, lvl, 3.5),
+	        			illumination : lvl<10 ? 0 : Utils.pow(1, lvl, 1.3)
 	        		};
 			    };
 			    this.gain = function (incr, ameliorations) {
 	        		if (!incr) incr = 0;
 	        		var me = this.level+incr;
-	        		var croyance = Math.round(1 * Math.pow(1.099, me-1) + Math.pow(me-1, 1));
+	        		var croyance = Utils.pow(1, 1.099, me-1) + Math.pow(me-1, 1);
 	        		
 	        		return {
 	        			loop : {
@@ -58,16 +58,16 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 				this.prix = function (lvl) {
 				    if(!lvl) lvl = this.level;
 					return {
-						croyance : Math.round(20 * Math.pow(lvl, 3.54)),
-	        			illumination : lvl<8 ? 0 : Math.round(1.1 * Math.pow(lvl, 1.41))
+						croyance : Utils.pow(20, lvl, 3.54),
+	        			illumination : lvl<8 ? 0 : Utils.pow(1.1, lvl, 1.41)
 	        		};
 			    };
 			    this.gain = function (incr, ameliorations) {
 	        		if (!incr) incr = 0;
 	        		var me = this.level + incr;
 	        		
-	        		var croyance = Math.round(8 * Math.pow(1.0924, me-1) + Math.pow(me-1, 0.8));
-	        		var mal = Math.round(1 * Math.pow(1.027, me-1) + Math.pow(me-1, 1.55));
+	        		var croyance = Utils.pow(8, 1.0924, me-1) + Math.pow(me-1, 0.8);
+	        		var mal = Utils.pow(1, 1.027, me-1) + Math.pow(me-1, 1.55);
 	        		return {
 	        			loop : {
 	        				croyance : croyance,
@@ -98,16 +98,16 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 				this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
 					return {
-						croyance : Math.round(25 * Math.pow(lvl, 3.4)),
-	        			illumination : lvl<8 ? 0 : Math.round(1 * Math.pow(lvl, 1.4))
+						croyance : Utils.pow(25, lvl, 3.4),
+	        			illumination : lvl<8 ? 0 : Utils.pow(1, lvl, 1.4)
 	        		};
 			    };
 			    this.gain = function (incr, ameliorations) {
 	        		if (!incr) incr = 0;
 	        		var me = this.level + incr;
 	        		
-	        		var croyance = Math.round(5 * Math.pow(1.092, me-1) + Math.pow(me-1, 0.9));
-	        		var bien = Math.round(1 * Math.pow(1.028, me-1) + Math.pow(me-1, 1.5));
+	        		var croyance = Utils.pow(5, 1.092, me-1) + Math.pow(me-1, 0.9);
+	        		var bien = Utils.pow(1, 1.028, me-1) + Math.pow(me-1, 1.5);
 	        		return {
 	        			loop : {
 	        				croyance : croyance,
@@ -139,17 +139,17 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-						croyance : Math.round(3000 * Math.pow(lvl, 2.9)),
-	        			illumination : lvl<5 ? 0 : Math.round(2.5 * Math.pow(lvl, 1.35))
+						croyance : Utils.pow(3000, lvl, 2.9),
+	        			illumination : lvl<5 ? 0 : Utils.pow(2.5, lvl, 1.35)
 	        		};
                 };
                 this.gain = function (incr, ameliorations) {
 	        		if (!incr) incr = 0;
 	        		var me = this.level + incr;
 	        		
-	        		var croyance = Math.round(13 * Math.pow(1.0928, me-1) + Math.pow(me-1, 1.6));
-	        		var bien = Math.round(10 * Math.pow(1.06, me-1) + Math.pow(me-1, 1));
-	        		var mal = Math.round(12 * Math.pow(1.061, me-1) + Math.pow(me-1, 1.05));
+	        		var croyance = Utils.pow(13, 1.0928, me-1) + Math.pow(me-1, 1.6);
+	        		var bien = Utils.pow(10, 1.06, me-1) + Math.pow(me-1, 1);
+	        		var mal = Utils.pow(12, 1.061, me-1) + Math.pow(me-1, 1.05);
 	        		return {
 	        			loop : {
 	        				croyance : croyance,
@@ -168,7 +168,6 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.select = function(game, ameliorations) {
                 };
             },
-            // A FAIRE
             "lune" : new function() {
                 this.level = 0;
                 this.name = "lune";
@@ -178,25 +177,28 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(9440, 1.104 * lvl, 2)),
-	        			illumination : parseInt(lvl / 1.5)
-                    };
+						croyance : Utils.pow(3250, lvl, 2.6),
+	        			illumination : lvl<4 ? 0 : Utils.pow(2.2, lvl, 1.3)
+	        		};
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var deesse = ameliorations.get("deesse").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(10, 1.0924, me-1) + Math.pow(me-1, 1.8);
+	        		var illumination = Math.round(me * 0.1);
+	        		var bien = Utils.pow(20, 1.07, me-1) + Math.pow(me-1, 1.4);
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(1.5 * deesse * me),
-	        				illumination : 0,
-                            bien : Math.round(4 * me),
+	        				croyance : croyance,
+	        				illumination : illumination,
+                            bien : bien,
                             mal : 0
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * deesse * me),
-	        				illumination : 0,
-                            bien : Math.round(4 * me),
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
                             mal : 0
 	        			}
 	        		};
@@ -213,26 +215,29 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(9859, 1.17 * lvl, 2)),
-	        			illumination : parseInt(lvl / 1.3)
+                    	croyance : Utils.pow(4000, lvl, 2.85),
+	        			illumination : lvl<3?0 : Utils.pow(2.5, lvl, 1.45)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var dieu = ameliorations.get("dieu").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(15, 1.093, me-1) + Math.pow(me-1, 1.5);
+	        		var illumination = Math.round((me-1) * 0.25);
+	        		var mal = Utils.pow(30, 1.065, me-1) + Math.pow(me-1, 1.4);
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(0.2 * dieu * me),
-	        				illumination : Math.round(0.3 * me),
+	        				croyance : croyance,
+	        				illumination : illumination,
                             bien : 0,
-                            mal : Math.round(5 * me)
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.02 * dieu * me),
-	        				illumination : 0,
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
                             bien : 0,
-                            mal : Math.round(5 * me)
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -252,27 +257,29 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(756849, 1 * lvl, 1.3)),
-	        			illumination : parseInt(lvl / 1.2)
+                    	croyance : Utils.pow(2000000, lvl, 1.7),
+	        			illumination : Utils.pow(4, lvl, 1.5)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var dieu = ameliorations.get("dieu").level;
-	        		var lune = ameliorations.get("lune").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(50, 1.093, me-1) + Math.pow(me-1, 1.5);
+	        		var bien = Utils.pow(50, 1.045, me-1) + Math.pow(me-1, 1.2);
+	        		var mal = Utils.pow(-11, 1.051, me-1) + Math.pow(me-1, 1.21);
 	        		return {
 	        			loop : {
-	        				croyance : 2 * me * (dieu + lune),
+	        				croyance : croyance,
 	        				illumination : 0,
-                            bien : Math.round(2 * dieu * me),
-                            mal : Math.round(-2 * lune * me)
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * me * (dieu + lune)),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(2 * dieu * me),
-                            mal : Math.round(-2 * lune * me)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -288,27 +295,29 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(654253, 1.03 * lvl, 1.25)),
-	        			illumination : parseInt(lvl / 1.6)
+                    	croyance : Utils.pow(2405200, lvl, 1.65),
+	        			illumination : Utils.pow(4.5, lvl, 1.45)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var dieu = ameliorations.get("dieu").level;
-	        		var terre = ameliorations.get("terre").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(30, 1.105, me-1) + Math.pow(me-1, 1.4);
+	        		var bien = Utils.pow(40, 1.05, me-1) + Math.pow(me-1, 1.1);
+	        		var mal = Utils.pow(-13, 1.051, me-1) + Math.pow(me-1, 1.14);
 	        		return {
 	        			loop : {
-	        				croyance : me * 2 * (dieu + terre),
+	        				croyance : croyance,
 	        				illumination : 0,
-                            bien : Math.round(2 * dieu * me),
-                            mal : Math.round(-2 * terre * me)
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(me * 0.5 * (dieu + terre)),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(2 * dieu * me),
-                            mal : Math.round(-2 * terre * me)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -324,27 +333,29 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(847952, 1.05 * lvl, 1.4)),
-	        			illumination : parseInt(lvl / 1.8)
+                    	croyance : Utils.pow(2500000, lvl, 1.7),
+	        			illumination : Utils.pow(3, lvl, 1.6)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var deesse = ameliorations.get("deesse").level;
-	        		var terre = ameliorations.get("terre").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(70, 1.093, me-1) + Math.pow(me-1, 1.8);
+	        		var bien = Utils.pow(20, 1.05, me-1) + Math.pow(me-1, 1.1);
+	        		var mal = Utils.pow(-33, 1.045, me-1) + Math.pow(me-1, 1.21);
 	        		return {
 	        			loop : {
-	        				croyance : 2 * me * (deesse + terre),
+	        				croyance : croyance,
 	        				illumination : 0,
-                            bien : Math.round(-3 * me * terre),
-                            mal : 0
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * me * (deesse + terre)),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(-3 * me * terre),
-                            mal : 0
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -360,27 +371,29 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(564852, 1.1 * lvl, 1.3)),
-	        			illumination : parseInt(1.2 * lvl)
+                    	croyance : Utils.pow(1800000, lvl, 1.75),
+	        			illumination : Utils.pow(4.4, lvl, 1.42)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var deesse = ameliorations.get("deesse").level;
-	        		var lune = ameliorations.get("lune").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(40, 1.095, me-1) + Math.pow(me-1, 1.7);
+	        		var bien = Utils.pow(30, 1.051, me-1) + Math.pow(me-1, 1.2);
+	        		var mal = Utils.pow(-10, 1.05, me-1) + Math.pow(me-1, 1.7);
 	        		return {
 	        			loop : {
-	        				croyance : 2 * me * (deesse + lune),
+	        				croyance : croyance,
 	        				illumination : 0,
-                            bien : Math.round(-4 * me * lune),
-                            mal : 0
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * me * (deesse + lune)),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(-4 * me * lune),
-                            mal : 0
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -400,28 +413,29 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(875623, 1.3 * lvl, 1.3)),
-	        			illumination : parseInt(lvl / 1.85)
+                    	croyance : Utils.pow(1900000, lvl, 1.74),
+	        			illumination : Utils.pow(4.5, lvl, 1.41)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var dieu = ameliorations.get("dieu").level;
-	        		var terre = ameliorations.get("terre").level;
-	        		var soleil = ameliorations.get("soleil").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(10, 1.117, me-1) + Math.pow(me-1, 1.2);
+	        		var bien = Utils.pow(-10, 1.05, me-1) + Math.pow(me-1, 1.2);
+	        		var mal = Utils.pow(60, 1.045, me-1) + Math.pow(me-1, 1.2);
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(((dieu + terre) / soleil) * me),
+	        				croyance : croyance,
 	        				illumination : 0,
-                            bien : 0,
-                            mal : Math.round(-4 * (terre + soleil) * me)
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(((dieu + terre) / soleil) * me * 0.5),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : 0,
-                            mal : Math.round(-4 * (terre + soleil) * me)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -437,28 +451,29 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(777555, 1.2 * lvl, 1.35)),
-	        			illumination : parseInt(lvl / 2.2)
+                    	croyance : Utils.pow(2300000, lvl, 1.68),
+	        			illumination : Utils.pow(3, lvl, 1.7)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var dieu = ameliorations.get("dieu").level;
-	        		var lune = ameliorations.get("lune").level;
-	        		var soleil = ameliorations.get("soleil").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(80, 1.085, me-1) + Math.pow(me-1, 1.6);
+	        		var bien = Utils.pow(-15, 1.052, me-1) + Math.pow(me-1, 1.15);
+	        		var mal = Utils.pow(40, 1.04, me-1) + Math.pow(me-1, 1.3);
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(((dieu + lune) / soleil) * me),
+	        				croyance : croyance,
 	        				illumination : 0,
-                            bien : 0,
-                            mal : Math.round(-3 * (lune + soleil) * me)
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(((dieu + lune) / soleil) * me * 0.5),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : 0,
-                            mal : Math.round(-3 * (lune + soleil) * me)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -474,28 +489,29 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(895652, 1.5 * lvl, 1)),
-	        			illumination : parseInt(lvl / 2.5)
+                    	croyance : Utils.pow(2800000, lvl, 1.6),
+	        			illumination : Utils.pow(6, lvl, 1.3)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var deesse = ameliorations.get("deesse").level;
-	        		var terre = ameliorations.get("terre").level;
-	        		var soleil = ameliorations.get("soleil").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(80, 1.096, me-1) + Math.pow(me-1, 1.4);
+	        		var bien = Utils.pow(-30, 1.04, me-1) + Math.pow(me-1, 1.2);
+	        		var mal = Utils.pow(100, 1.023, me-1) + Math.pow(me-1, 1.23);
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(((deesse + terre) / soleil) * me),
+	        				croyance : croyance,
 	        				illumination : 0,
-	        				bien : Math.round(-2 * terre * me),
-                            mal : Math.round(2 * soleil * me)
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(((deesse + terre) / soleil) * me * 0.5),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(-2 * terre * me),
-                            mal : Math.round(2 * soleil * me)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -511,28 +527,29 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(999999, 1.4 * lvl, 1.4)),
-	        			illumination : parseInt(1.8 * lvl)
+                    	croyance : Utils.pow(1450000, lvl, 1.8),
+	        			illumination : Utils.pow(5, lvl, 1.4)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-	        		var deesse = ameliorations.get("deesse").level;
-	        		var lune = ameliorations.get("lune").level;
-	        		var soleil = ameliorations.get("soleil").level;
 	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(45, 1.094, me-1) + Math.pow(me-1, 1.6);
+	        		var bien = Utils.pow(-5, 1.06, me-1) + Math.pow(me-1, 1.5);
+	        		var mal = Utils.pow(30, 1.055, me-1) + Math.pow(me-1, 1.25);
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(((deesse + lune) / soleil) * me),
+	        				croyance : croyance,
 	        				illumination : 0,
-	        				bien : Math.round(-3 * lune * me),
-                            mal : Math.round(2 * soleil * me)
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(((deesse + lune) / soleil) * me * 0.8),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(-3 * lune * me),
-                            mal : Math.round(2 * soleil * me)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -552,29 +569,30 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(15000000, 1.1 * lvl, 1.1)),
-	        			illumination : Math.round(Utils.pow(1, 1.5 * lvl, 1.3))
+                    	croyance : Utils.pow(100000000, lvl, 1.4),
+	        			illumination : Utils.pow(120, lvl, 1.15)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-                	var me = this.level + incr;
-	        		var deesse = ameliorations.get("deesse").level;
-	        		var dieu = ameliorations.get("dieu").level;
-	        		var terre = ameliorations.get("terre").level;
-	        		var lune = ameliorations.get("lune").level;
+	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(400, 1.092, me-1) + Math.pow(me-1, 1.5);
+	        		var illumination = Math.round(me * 2);
+	        		var bien = Utils.pow(100, 1.073, me-1) + Math.pow(me-1, 1.35);
+	        		var mal = Utils.pow(101, 1.074, me-1) + Math.pow(me-1, 1.35);
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(0.1 * me * (dieu + deesse + terre + lune)),
-	        				illumination : Math.round(0.5 * me),
-	        				bien : Math.round(3 * me * (terre + lune)),
-                            mal : Math.round(-3 * me * (dieu + deesse))
+	        				croyance : croyance,
+	        				illumination : illumination,
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.1 * me * (dieu + deesse + terre + lune)),
-	        				illumination : 0,
-                            bien : Math.round(3 * me * (terre + lune)),
-                            mal : Math.round(-3* me * (dieu + deesse))
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -590,29 +608,30 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(16542458, 1.225 * lvl, 1.105)),
-	        			illumination : Math.round(Utils.pow(1, 1.4 * lvl, 1.2))
+                    	croyance : Utils.pow(150000000, lvl, 1.36),
+	        			illumination : Utils.pow(150, lvl, 1.15)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-                	var me = this.level + incr;
-	        		var terre = ameliorations.get("terre").level;
-	        		var lune = ameliorations.get("lune").level;
-	        		var ciel = ameliorations.get("ciel").level;
-	        		var vide = ameliorations.get("vide").level;
+	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(500, 1.08, me-1) + Math.pow(me-1, 2.5);
+	        		var illumination = Math.round(me * 2.2);
+	        		var bien = Utils.pow(110, 1.07, me-1) + Math.pow(me-1, 1.4);
+	        		var mal = Utils.pow(109, 1.069, me-1) + Math.pow(me-1, 1.4);
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(0.1 * me * (terre + lune + ciel + vide)),
-	        				illumination : Math.round(0.8 * me),
-                            bien : 0,
-                            mal : Math.round(-5 * me * (ciel + vide))
+	        				croyance : croyance,
+	        				illumination : illumination,
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.1 * me * (terre + lune + ciel + vide)),
-	        				illumination : 0,
-                            bien : 0,
-                            mal : Math.round(-5 * me * (ciel + vide))
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -628,29 +647,30 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(12345678, 1.3 * lvl, 1.25)),
-	        			illumination : Math.round(Utils.pow(1.5, 1.5 * lvl, 1.3))
+                    	croyance : Utils.pow(200000000, lvl, 1.335),
+	        			illumination : Utils.pow(200, lvl, 1.15)
                     };
                 };
                 this.gain = function (incr, ameliorations) {
                 	if (!incr) incr = 0;
-                	var me = this.level + incr;
-	        		var soleil = ameliorations.get("soleil").level;
-	        		var terre = ameliorations.get("terre").level;
-	        		var foret = ameliorations.get("foret").level;
-	        		var chaos = ameliorations.get("chaos").level;
+	        		var me = this.level + incr;
+	        		
+	        		var croyance = Utils.pow(500, 1.082, me-1) + Math.pow(me-1, 0.5);
+	        		var illumination = Math.round(me * 2.5);
+	        		var bien = Utils.pow(120, 1.06, me-1) + Math.pow(me-1, 1.8);
+	        		var mal = Utils.pow(120, 1.061, me-1) + Math.pow(me-1, 1.79);
 	        		return {
 	        			loop : {
-	        				croyance : Math.round(0.1 * me * (soleil + terre + foret + chaos)),
-	        				illumination : Math.round(0.8 * me),
-	        				bien : Math.round(-6 * me * (foret + chaos)),
-                            mal : Math.round(6 * me * (soleil + terre))
+	        				croyance : croyance,
+	        				illumination : illumination,
+                            bien : bien,
+                            mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.1 * me * (soleil + terre + foret + chaos)),
-	        				illumination : 0,
-                            bien : Math.round(-6 * me * (foret + chaos)),
-                            mal : Math.round(6 * me * (soleil + terre))
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
