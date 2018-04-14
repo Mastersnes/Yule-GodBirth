@@ -449,37 +449,41 @@ define(["jquery"], function($){
 		 * Didactitiel
 		 */
 		"didactitiel1" : {
-			fr : "Bienvenue jeune maître ! Comment fut votre repos ? <br/> (Cliquez simplement pour passer à la suite)",
+			fr : "Yule - La Naissance d'un dieu <br/> (Cliquez simplement pour passer à la suite)",
 			en : "-"
 		},
 		"didactitiel2" : {
-			fr : "Je me nomme Origine, je serais votre serviteur dans cette aventure.",
+			fr : "Bienvenue jeune maître ! Comment fut votre repos ? <br/> Je me nomme Origine, je serais votre serviteur dans cette aventure.",
 			en : "-"
 		},
 		"didactitiel3" : {
-			fr : "Vous voyez cette barre tout en haut ? Il s'agit de l'equilibre de l'univers !",
+			fr : "C'est un heureux jour qui se prepare ! <br/> Notre deesse s'apprete a enfanter un nouveau dieu !",
 			en : "-"
 		},
 		"didactitiel4" : {
-			fr : "Ni trop de bien, ni trop de mal. Vous devez maintenir l'harmonie.",
+			fr : "Vous pourriez les aider mais tout le monde vous a oublier, vous le Grand Tout...",
 			en : "-"
 		},
 		"didactitiel5" : {
-			fr : "N'ayez aucune crainte, je serai là pour vous aider. Voici de la croyance.",
+			fr : "Mais moi je crois encore en vous ! <br/> Servez-vous de cette croyance pour vous elever !",
 			en : "-"
 		},
 		"didactitiel6" : {
-			fr : "Cette energie rare se manifeste lorsqu'une entité dans l'univers croit en vous.",
+			fr : "Ah ! Je vous sens deja beaucoup plus present ! <br/> Voyez vous cette barre au dessus de l'espace ?",
 			en : "-"
 		},
 		"didactitiel7" : {
-			fr : "Pour le moment vous pouvez compter sur moi pour vous alimenter.",
+			fr : "Elle represente l'equilibre de l'univers ! <br/> Gardez toujours un oeil sur le cercle d'equilibre au centre !",
 			en : "-"
 		},
 		"didactitiel8" : {
-			fr : "Pour commencer, il vous faudra grandir. Achetez donc votre premiere amelioration !",
+			fr : "Ni trop de bien, ni trop de mal ! <br/> Maintenant essayer de vous familiariser avec ce systeme.",
 			en : "-"
-		}
+		},
+		"didactitiel9" : {
+			fr : "Je reviendrais vers vous lorsque le dieu sera parmi nous.",
+			en : "-"
+		},
 	};
 	
 	return {
