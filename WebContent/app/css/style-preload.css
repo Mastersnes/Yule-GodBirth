@@ -66,6 +66,38 @@ preload.god-child-tourneTete[step="2"] {
 	background-image: url("../img/game/god/child/tourneTete/2.png");
 }
 
+/**GODDESS**/
+preload.goddess-imbolc[step="1"] {
+	background-image: url("../img/game/goddess/imbolc/1.png");
+}
+preload.goddess-imbolc[step="2"] {
+	background-image: url("../img/game/goddess/imbolc/2.png");
+}
+preload.goddess-imbolc[step="3"] {
+	background-image: url("../img/game/goddess/imbolc/3.png");
+}
+preload.goddess-imbolc[step="4"] {
+	background-image: url("../img/game/goddess/imbolc/4.png");
+}
+preload.goddess-imbolc[step="5"] {
+	background-image: url("../img/game/goddess/imbolc/5.png");
+}
+preload.goddess-imbolc[step="6"] {
+	background-image: url("../img/game/goddess/imbolc/6.png");
+}
+preload.goddess-imbolc[step="7"] {
+	background-image: url("../img/game/goddess/imbolc/7.png");
+}
+preload.goddess-imbolc[step="8"] {
+	background-image: url("../img/game/goddess/imbolc/8.png");
+}
+preload.goddess-imbolc[step="9"] {
+	background-image: url("../img/game/goddess/imbolc/9.png");
+}
+preload.goddess-imbolc[step="10"] {
+	background-image: url("../img/game/goddess/imbolc/10.png");
+}
+
 /**Dieu**/
 preload.dieu[step="1"] {
 	background-image: url("../img/game/ameliorations/dieu/dieu.png");

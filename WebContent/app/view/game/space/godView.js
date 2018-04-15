@@ -32,6 +32,10 @@ define(["jquery",
         	var godDom = $(this.el).find("god");
         	if (!godDom.hasClass(this.type.name)) godDom.attr("class", this.type.name);
         	godDom.attr("level", this.level);
+
+        	var goddessDom = $(this.el).find("goddess");
+        	if (!goddessDom.hasClass(this.type.name)) goddessDom.attr("class", this.type.name);
+        	goddessDom.attr("level", this.level);
         };
         
         this.checkAnim = function() {
@@ -75,9 +79,18 @@ define(["jquery",
         this.makeEvents = function() {
         	var that = this;
         	$(this.el).find("god").click(function() {
-                that.textManager.next();
                 that.parent.click(that.gameView);
                 that.render();
+        	});
+        	$(this.el).find(".popupText").hover(function() {
+        		if (!$(this).find(".next").hasClass("hover"))
+        		$(this).find(".next").addClass("hover");
+        	}, function() {
+        		$(this).find(".next").removeClass("hover");
+        	});
+        	$(this.el).find(".popupText").click(function() {
+        		if (that.type.name == "dust") that.checkLevel();
+        		that.textManager.next();
         	});
         };
         
@@ -90,7 +103,7 @@ define(["jquery",
                     else this.level = this.type.nbr;
                 }
             }
-        	this.saveManager.load("godInitLevel", this.level);
+        	this.saveManager.save("godInitLevel", this.level);
         };
         
         this.init(parent);

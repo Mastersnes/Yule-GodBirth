@@ -75,17 +75,24 @@ mask {
 .popupText {
 	display: none;
 	position: absolute;
+	left : 12%;
 	top : 5%;
     z-index: 2000;
     
     text-align: center;
     
-    width: 100%;
+    width: 80%;
     height: auto;
     max-height: 100%;
     
-    pointer-events: none;
-}
-.popupText.text {
     color: ghostwhite;
+    cursor: pointer;
+}
+.popupText .next {
+	width: 15%;
+    margin-left: 78%;
+    font-size: 1.3em;
+}
+.popupText .next.hover {
+	color : red;
 }

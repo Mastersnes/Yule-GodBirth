@@ -33,8 +33,8 @@ function($, _, page) {
 			    var id = this.ids[this.current];
 				var value = this.Textes.get(id);
 				
-				if (value) $(this.el).html(value);
-				else $(this.el).empty();
+				if (value) $(this.el).find(".text").html(value);
+				else $(this.el).find(".text").empty();
 			}else {
 			    this.visible = false;
 			    $(this.el).hide();

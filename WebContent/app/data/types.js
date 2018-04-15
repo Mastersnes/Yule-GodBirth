@@ -5,7 +5,7 @@ define(["jquery"], function($){
 				name : "dust",
 			    nbr : 5,
 				next : "egg",
-				text : ["didactitiel1", "didactitiel2", "didactitiel3"],
+				text : ["didactitiel1", "didactitiel2", "didactitiel3", "didactitiel4", "didactitiel5"],
 				events : {
                     typeEvents : [],
                     newEvents : []
@@ -15,7 +15,7 @@ define(["jquery"], function($){
 			    name : "egg",
 			    nbr : 3,
 				next : "baby",
-				text : ["cinematique-egg1", "", "cinematique-egg2"],
+				text : [],
 				events : {
 	                typeEvents : [],
 	                newEvents : []
@@ -25,7 +25,7 @@ define(["jquery"], function($){
 				name : "baby",
 				nbr : 3,
 				next : "child",
-				text : ["cinematique-baby1"],
+				text : ["didactitiel-dieu1", "didactitiel-dieu2", "didactitiel-dieu3"],
 				events : {
 	                typeEvents : [],
 	                newEvents : []
@@ -33,7 +33,7 @@ define(["jquery"], function($){
 			},
             "child" : {
                 name : "child",
-                text : ["cinematique-child1"],
+                text : [],
                 events : {
                     typeEvents : [],
                     newEvents : []

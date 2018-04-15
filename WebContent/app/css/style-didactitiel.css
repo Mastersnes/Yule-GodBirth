@@ -10,17 +10,35 @@
 	position: absolute;
 }
 
-.block-ameliorations {
-	left: 0; top : 79%;
-	width: 100%; height: 21%;
+.block {
 	background-color: #333;
 	opacity: 0.7;
 }
-
 .fleche {
-	width: 100%; height: 20%;
-	
+	width: 5%; height: 5%;
 	background-repeat: no-repeat;
     background-size: 100% 100%;
 	background-image: url("../img/game/interface/fleche.png");
+}
+
+.block-ameliorations {
+	left: 0; top : 84%;
+	width: 100%; height: 16%;
+}
+.block-constellations {
+	left: 96%; top : 79%;
+	width: 4%; height: 5%;
+}
+.block-autel {
+	left: 69%; top : 26%;
+	width: 12%; height: 15%;
+}
+.fleche-barre-gauche {
+	left: 20%; top : 0%;
+}
+.fleche-barre-droite {
+	left: 75%; top : 0%;
+}
+.fleche-constellations {
+	left: 91%; top : 79%;
 }

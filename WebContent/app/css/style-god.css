@@ -7,14 +7,14 @@ god {
 	left: 0%;top: 0%;
 	width: 100%;height: 100%;
 
-	z-index: 2;
+	z-index: 3;
 	cursor: pointer;
     
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-god:not(.child) {
+god.dust, god.egg, god.baby {
 	animation-name: turn;
     animation-duration: 100s;
     animation-fill-mode: forwards;

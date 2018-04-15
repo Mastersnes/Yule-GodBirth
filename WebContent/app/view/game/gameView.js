@@ -31,6 +31,7 @@ function($, _, Utils, page,
 			this.kongregateUtils = parent.kongregateUtils;
 			this.pause = false;
 			this.endGame = false;
+			this.lieu = "space";
 			
 			this.render();
 			
@@ -104,6 +105,7 @@ function($, _, Utils, page,
         };
         
         this.showConstellation = function() {
+        	this.lieu = "constellation";
         	$(".constellation-star").hide();
         	$(".constellation").show();
         	
@@ -113,6 +115,7 @@ function($, _, Utils, page,
         };
         this.showStar = function(star) {
         	var cible = star.attr("cible");
+        	this.lieu = cible;
         	
         	$(".constellation").attr("cible", star.attr("class"));
         	$(".constellation").addClass("zoom");

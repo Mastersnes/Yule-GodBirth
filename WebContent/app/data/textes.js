@@ -126,6 +126,10 @@ define(["jquery"], function($){
 			fr : "Non",
 			en : "No"
 		},
+		"suivant" : {
+			fr : "Suivant >",
+			en : "Next >"
+		},
 		
 		/**
 		 * Jeu
@@ -449,7 +453,7 @@ define(["jquery"], function($){
 		 * Didactitiel
 		 */
 		"didactitiel1" : {
-			fr : "Yule - La Naissance d'un dieu <br/> (Cliquez simplement pour passer à la suite)",
+			fr : "Yule - La Naissance d'un dieu <br/> (Cliquez sur \"Suivant\" pour passer à la suite)",
 			en : "-"
 		},
 		"didactitiel2" : {
@@ -461,27 +465,39 @@ define(["jquery"], function($){
 			en : "-"
 		},
 		"didactitiel4" : {
-			fr : "Vous pourriez les aider mais tout le monde vous a oublier, vous le Grand Tout...",
+			fr : "Vous pourriez les aider mais plus personne ne croit en vous, le Grand-Tout...",
 			en : "-"
 		},
 		"didactitiel5" : {
-			fr : "Mais moi je crois encore en vous ! <br/> Servez-vous de cette croyance pour vous elever !",
+			fr : "Heureusement, je ne vous ai pas oublié ! <br/> Servez-vous de cette croyance pour vous elever !",
 			en : "-"
 		},
-		"didactitiel6" : {
-			fr : "Ah ! Je vous sens deja beaucoup plus present ! <br/> Voyez vous cette barre au dessus de l'espace ?",
+		"didactitiel-barre1" : {
+			fr : "Ah ! Je vous sens deja beaucoup plus present ! <br/> Voyez-vous cette barre au dessus de l'espace ?",
 			en : "-"
 		},
-		"didactitiel7" : {
+		"didactitiel-barre2" : {
 			fr : "Elle represente l'equilibre de l'univers ! <br/> Gardez toujours un oeil sur le cercle d'equilibre au centre !",
 			en : "-"
 		},
-		"didactitiel8" : {
+		"didactitiel-barre3" : {
 			fr : "Ni trop de bien, ni trop de mal ! <br/> Maintenant essayer de vous familiariser avec ce systeme.",
 			en : "-"
 		},
-		"didactitiel9" : {
+		"didactitiel-barre4" : {
 			fr : "Je reviendrais vers vous lorsque le dieu sera parmi nous.",
+			en : "-"
+		},
+		"didactitiel-dieu1" : {
+			fr : "Le dieu est née, c'est un grand jour ! Tout cela merite un petit cadeau !",
+			en : "-"
+		},
+		"didactitiel-dieu2" : {
+			fr : "Vous voyez cette constellation en bas à droite ? <br/> Vous y trouverez toutes sorte d'options.",
+			en : "-"
+		},
+		"didactitiel-dieu3" : {
+			fr : "Pour commencer, accedez à la constellation, puis accomplissez l'objectif.",
 			en : "-"
 		},
 	};
