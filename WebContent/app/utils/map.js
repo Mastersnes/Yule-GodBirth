@@ -10,6 +10,10 @@ define(["jquery"], function($){
 			this.data[key] = value;
 		};
 		
+		this.length = function() {
+			return this.data.length();
+		};
+		
 		this.remove = function(key) {
 			var index = this.data.indexOf(key);
 			this.data.splice(index, 1);

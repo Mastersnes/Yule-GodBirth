@@ -158,6 +158,7 @@ define(["jquery",
             
             this.saveManager.save("quetesComplete", this.complete);
             this.pointManager.addPoints(quete.gains);
+            if (quete.success) quete.success(this);
             
             this.refresh();
             return true;

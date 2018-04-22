@@ -472,6 +472,9 @@ define(["jquery"], function($){
 			fr : "Heureusement, je ne vous ai pas oublié ! <br/> Servez-vous de cette croyance pour vous elever !",
 			en : "-"
 		},
+		/**
+		 * Barre
+		 */
 		"didactitiel-barre1" : {
 			fr : "Ah ! Je vous sens deja beaucoup plus present ! <br/> Voyez-vous cette barre au dessus de l'espace ?",
 			en : "-"
@@ -481,13 +484,16 @@ define(["jquery"], function($){
 			en : "-"
 		},
 		"didactitiel-barre3" : {
-			fr : "Ni trop de bien, ni trop de mal ! <br/> Maintenant essayer de vous familiariser avec ce systeme.",
+			fr : "Malheureusement, depuis votre depart, le mal a pris le dessus...",
 			en : "-"
 		},
 		"didactitiel-barre4" : {
-			fr : "Je reviendrais vers vous lorsque le dieu sera parmi nous.",
+			fr : "Essayez de vous familiariser avec ce systeme.<br/> Je reviendrais vers vous lorsque le dieu sera parmi nous.",
 			en : "-"
 		},
+		/**
+		 * Constellation
+		 */
 		"didactitiel-dieu1" : {
 			fr : "Le dieu est née, c'est un grand jour ! Tout cela merite un petit cadeau !",
 			en : "-"
@@ -497,9 +503,35 @@ define(["jquery"], function($){
 			en : "-"
 		},
 		"didactitiel-dieu3" : {
-			fr : "Pour commencer, accedez à la constellation, puis accomplissez l'objectif.",
+			fr : "Pour commencer, accedez à la constellation, puis accomplissez l'objectif. Ensuite, revenez me voir.",
 			en : "-"
 		},
+		/**
+		 * Autel
+		 */
+		"didactitiel-autel1" : {
+			fr : "Felicitation, vous avez atteind votre premier objectif !.<br/> Offrons maintenant notre cadeau au nouveau née.",
+			en : "-"
+		},
+		"didactitiel-autel2" : {
+			fr : "Pour ce faire, retourner sur la constellation, achetez une pierre à l'autel puis posez là dessus.",
+			en : "-"
+		},
+		/**
+		 * Fin
+		 */
+		"didactitiel-pierrePose" : {
+			fr : "Bien joué ! Il ne vous reste plus qu'a poser la pierre sur l'autel.",
+			en : "-"
+		},
+		"didactitiel-fin1" : {
+			fr : "Bravo ! Vous êtes en bonne voie pour retablir l'equilibre de l'univers !",
+			en : "-"
+		},
+		"didactitiel-fin2" : {
+			fr : "Maintenant c'est à vous ! Bon courage ! le destin de l'univers est entre vos mains !",
+			en : "-"
+		}
 	};
 	
 	return {

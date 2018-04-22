@@ -17,6 +17,12 @@ define(["jquery"], function($){
 			    gains : {
 			    	croyance : 100,
 			    	illumination : 0
+			    },
+			    success : function(queteView) {
+			    	var game = queteView.parent;
+			    	game.showConstellation(function() {
+			    		game.showStar($("etoile.space-star"));
+			    	});
 			    }
 			},
 			"quete-2" : {

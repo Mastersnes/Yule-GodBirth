@@ -104,20 +104,23 @@ function($, _, Utils, page,
             this.endView.render();
         };
         
-        this.showConstellation = function() {
+        this.showConstellation = function(callback) {
         	this.lieu = "constellation";
         	$(".constellation-star").hide();
         	$(".constellation").show();
         	
         	setTimeout(function() {
         		$(".constellation").removeClass("zoom");
+        		if(callback) callback();
         	}, 10);
         };
         this.showStar = function(star) {
+        	$(".constellation-star").hide();
         	var cible = star.attr("cible");
         	this.lieu = cible;
         	
         	$(".constellation").attr("cible", star.attr("class"));
+        	if (!$(".constellation").hasClass("zoom"))
         	$(".constellation").addClass("zoom");
         	
         	var that = this;

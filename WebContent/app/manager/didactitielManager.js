@@ -12,6 +12,7 @@ function($, _, Utils) {
 			this.parent = parent;
 			this.Textes = parent.Textes;
 			
+			this.gameView = parent;
 			this.pointManager = parent.pointManager;
 			this.textManager = parent.textManager;
 			this.ameliorationView = parent.spaceView.ameliorationView;
@@ -83,6 +84,43 @@ function($, _, Utils) {
 				}
 			}
 			
+			/**
+			 * Troisieme etape, explication de l'autel
+			 */
+			if (this.step == 2) {
+				var queteView = this.parent.queteView;
+				if (queteView.complete.length > 0) {
+					this.step++;
+					this.textManager.show(["didactitiel-autel1", "didactitiel-autel2"]);
+					this.textManager.next();
+				}
+			}
+			
+			/**
+			 * Derniere etape, la pierre est posée
+			 */
+			if (this.step == 3) {
+				var autelView = this.parent.autelView;
+				var pierresView = autelView.pierresView;
+				if (pierresView.complete.length > 0) {
+					if (autelView.selectedPierres.get("haut")) {
+						this.step++;
+						var gameView = this.parent;
+						gameView.showConstellation(function() {
+							gameView.showStar($("etoile.space-star"));
+						});
+						this.textManager.show(["didactitiel-fin1", "didactitiel-fin2"]);
+						this.textManager.next();
+					}else {
+						var currentText = this.textManager.currentTextId();
+						if (currentText != "didactitiel-pierrePose") {
+							this.textManager.show(["didactitiel-pierrePose"]);
+							this.textManager.next();
+						}
+					}
+				}
+			}
+			
 			if (toShow) $(this.el).show();
 		};
 		
@@ -112,12 +150,22 @@ function($, _, Utils) {
 			/**
 			 * Le dieu est née ! Allons voir les objectif
 			 */
+			if (currentText == "didactitiel-dieu1") {
+				this.indication.barre = false;
+			}
 			if (currentText == "didactitiel-dieu2") {
 				this.indication.constellations = true;
 			}
 			if (currentText == "didactitiel-dieu3") {
 				this.blocker.constellations = false;
 				this.indication.constellations = false;
+			}
+			
+			/**
+			 * Acces à l'autel
+			 */
+			if (currentText == "didactitiel-autel2") {
+				this.blocker.autel = false;
 			}
 		};
 		
