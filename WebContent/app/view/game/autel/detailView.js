@@ -25,12 +25,17 @@ define(["jquery",
 			this.makeEvents();
         };
         
-        this.show = function(pierreId) {
+        this.show = function(pierreId, withoutMask) {
             this.currentPierre = this.Pierres.get(pierreId);
             
             if (!this.currentPierre) return;
             
             this.refresh();
+            if (withoutMask) {
+            	this.el.find("mask").hide();
+            }else {
+            	this.el.find("mask").show();
+            }
         	this.el.show();
         };
         

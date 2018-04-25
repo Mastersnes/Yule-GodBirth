@@ -76,6 +76,22 @@ function($, _, Utils) {
 			            "amour" : 0,
 			            "connaissance" : 0,
 			            "evolution" : 0
+			        },
+			        
+			        didactitiel : {
+			        	blocker : {
+							ameliorations : true,
+							constellations : true,
+							autel : true
+						},
+						indication : {
+							barre : false,
+							constellations : false
+						},
+						recompense : {
+							start : false
+						},
+						step : 0
 			        }
 			    };
 		};

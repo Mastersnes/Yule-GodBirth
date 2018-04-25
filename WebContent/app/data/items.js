@@ -34,13 +34,13 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		}
 	        		return {
 	        			loop : {
-	        				croyance : croyance,
+	        				croyance : croyance * 10000,
 	        				illumination : 0,
                             bien : 0,
                             mal : 0
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * croyance) + 10000,
+	        				croyance : Math.round(0.5 * croyance),
 	        				illumination : 0,
                             bien : 0,
                             mal : 0

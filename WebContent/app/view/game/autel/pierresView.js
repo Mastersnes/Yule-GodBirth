@@ -164,9 +164,18 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
             
             $(this.el).find("item").hover(function() {
             	$(this).removeClass('out').addClass('in');
+            	var pierreId = $(this).attr("id");
+            	if (that.complete.indexOf(pierreId) > -1) {
+            		that.detailView.show(pierreId, true);
+            	}
             }, function() {
-            	if (!that.detailView.currentPierre)
-            	$(this).removeClass('in').addClass('out');
+            	if (!that.detailView.currentPierre) {
+            		$(this).removeClass('in').addClass('out');
+            	}
+            	var pierreId = $(this).attr("id");
+            	if (that.complete.indexOf(pierreId) > -1) {
+            		that.detailView.close();
+            	}
             });
         };
         

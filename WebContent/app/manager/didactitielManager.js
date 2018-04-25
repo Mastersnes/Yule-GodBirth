@@ -16,21 +16,9 @@ function($, _, Utils) {
 			this.pointManager = parent.pointManager;
 			this.textManager = parent.textManager;
 			this.ameliorationView = parent.spaceView.ameliorationView;
+			this.saveManager = this.parent.saveManager;
 			
-			this.step = 0;
-			
-			this.blocker = {
-				ameliorations : true,
-				constellations : true,
-				autel : true
-			};
-			this.indication = {
-				barre : false,
-				constellations : false
-			};
-			this.recompense = {
-				start : false
-			};
+			this.data = this.saveManager.load("didactitiel");
 		};
 		
 		this.loop = function() {
@@ -41,19 +29,19 @@ function($, _, Utils) {
 			/**
 			 * Espace
 			 */
-			if (this.blocker.ameliorations && this.parent.lieu == "space") {
+			if (this.data.blocker.ameliorations && this.parent.lieu == "space") {
 				toShow = true;
 				$(this.el).find(".step.block-ameliorations").show();
 			}
-			if (this.blocker.constellations && this.parent.lieu == "space") {
+			if (this.data.blocker.constellations && this.parent.lieu == "space") {
 				toShow = true;
 				$(this.el).find(".step.block-constellations").show();
 			}
-			if (this.indication.barre && this.parent.lieu == "space") {
+			if (this.data.indication.barre && this.parent.lieu == "space") {
 				toShow = true;
 				$(this.el).find(".step.fleche-barre").show();
 			}
-			if (this.indication.constellations && this.parent.lieu == "space") {
+			if (this.data.indication.constellations && this.parent.lieu == "space") {
 				toShow = true;
 				$(this.el).find(".step.fleche-constellations").show();
 			}
@@ -61,7 +49,7 @@ function($, _, Utils) {
 			/**
 			 * Constellation
 			 */
-			if (this.blocker.autel && this.parent.lieu == "constellation") {
+			if (this.data.blocker.autel && this.parent.lieu == "constellation") {
 				toShow = true;
 				$(this.el).find(".step.block-autel").show();
 			}
@@ -69,16 +57,16 @@ function($, _, Utils) {
 			/**
 			 * Premiere etape, explication du click et des ameliorations
 			 */
-			if (this.step == 0) this.step++;
+			if (this.data.step == 0) this.data.step++;
 			
 			/**
 			 * Seconde etape, explication de la barre
 			 */
 			var grandTout = this.ameliorationView.Items.get("grandTout");
-			if (this.recompense.start && grandTout.level == 1) {
-				if (this.step == 1) {
-					this.step++;
-					this.indication.barre = true;
+			if (this.data.recompense.start && grandTout.level >= 1) {
+				if (this.data.step == 1) {
+					this.data.step++;
+					this.data.indication.barre = true;
 					this.textManager.show(["didactitiel-barre1", "didactitiel-barre2", "didactitiel-barre3", "didactitiel-barre4"]);
 					this.textManager.next();
 				}
@@ -87,10 +75,10 @@ function($, _, Utils) {
 			/**
 			 * Troisieme etape, explication de l'autel
 			 */
-			if (this.step == 2) {
+			if (this.data.step == 2) {
 				var queteView = this.parent.queteView;
 				if (queteView.complete.length > 0) {
-					this.step++;
+					this.data.step++;
 					this.textManager.show(["didactitiel-autel1", "didactitiel-autel2"]);
 					this.textManager.next();
 				}
@@ -99,12 +87,12 @@ function($, _, Utils) {
 			/**
 			 * Derniere etape, la pierre est posée
 			 */
-			if (this.step == 3) {
+			if (this.data.step == 3) {
 				var autelView = this.parent.autelView;
 				var pierresView = autelView.pierresView;
 				if (pierresView.complete.length > 0) {
 					if (autelView.selectedPierres.get("haut")) {
-						this.step++;
+						this.data.step++;
 						var gameView = this.parent;
 						gameView.showConstellation(function() {
 							gameView.showStar($("etoile.space-star"));
@@ -121,6 +109,8 @@ function($, _, Utils) {
 				}
 			}
 			
+			this.saveManager.save("didactitiel", this.data);
+			
 			if (toShow) $(this.el).show();
 		};
 		
@@ -130,8 +120,8 @@ function($, _, Utils) {
 			 * Pour commencer on donne 10 points au joueur
 			 */
 			if (currentText == "didactitiel5") {
-				if (!this.recompense.start) {
-					this.recompense.start = true;
+				if (!this.data.recompense.start) {
+					this.data.recompense.start = true;
 					this.pointManager.addPoints({
 						croyance : 10,
 						illumination : 0,
@@ -139,33 +129,44 @@ function($, _, Utils) {
 						mal : 0
 					});
 				}
-				this.blocker.ameliorations = false;
+				this.data.blocker.ameliorations = false;
 			}
 			/**
 			 * On cache les fleches apres lui avoir montrer la barre
 			 */
 			if (currentText == "didactitiel-barre3") {
-				this.indication.barre = false;
+				this.data.indication.barre = false;
 			}
 			/**
 			 * Le dieu est née ! Allons voir les objectif
 			 */
 			if (currentText == "didactitiel-dieu1") {
-				this.indication.barre = false;
+				this.data.indication.barre = false;
 			}
 			if (currentText == "didactitiel-dieu2") {
-				this.indication.constellations = true;
+				this.data.indication.constellations = true;
 			}
 			if (currentText == "didactitiel-dieu3") {
-				this.blocker.constellations = false;
-				this.indication.constellations = false;
+				this.data.blocker.constellations = false;
+				this.data.indication.constellations = false;
+			}
+			
+			var grandTout = this.ameliorationView.Items.get("grandTout");
+			if (grandTout.level > 5) {
+				this.data.step = 4;
+				this.data.blocker.ameliorations = false;
+				this.data.blocker.constellations = false;
+				this.data.blocker.autel = false;
+				
+				this.data.indication.barre = false;
+				this.data.indication.constellations = false;
 			}
 			
 			/**
 			 * Acces à l'autel
 			 */
 			if (currentText == "didactitiel-autel2") {
-				this.blocker.autel = false;
+				this.data.blocker.autel = false;
 			}
 		};
 		
