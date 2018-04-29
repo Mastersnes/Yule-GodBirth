@@ -80,3 +80,6 @@ button:focus {outline:0;}
     filter: FlipH;
     -ms-filter: "FlipH";
 }
+.innactive {
+	pointer-events: none;
+}

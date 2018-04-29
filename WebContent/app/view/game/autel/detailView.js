@@ -33,8 +33,20 @@ define(["jquery",
             this.refresh();
             if (withoutMask) {
             	this.el.find("mask").hide();
+            	this.el.find("#acheter").hide();
+            	this.el.find(".close-button").hide();
+            	this.el.find("#restrictions").hide();
+            	this.el.find("#prix").hide();
+            	this.el.find("#gain-titre").hide();
+            	this.el.addClass("innactive");
             }else {
             	this.el.find("mask").show();
+            	this.el.find("#acheter").show();
+            	this.el.find(".close-button").show();
+            	this.el.find("#restrictions").show();
+            	this.el.find("#prix").show();
+            	this.el.find("#gain-titre").show();
+            	this.el.removeClass("innactive");
             }
         	this.el.show();
         };
@@ -56,28 +68,24 @@ define(["jquery",
              * Conditions
              */
             var conditions = pierre.conditions;
-            if (!conditions || conditions.length == 0) dom.find("#restrictions").hide();
-            else {
-                dom.find("#restrictions > #list").empty();
-                dom.find("#restrictions").show();
-                for (var index in conditions) {
-                    var condition = conditions[index];
-                    
-                    var conditionDom = $("<div></div>");
-                    conditionDom.attr("class", "categorie");
-                    if (this.parent.checkCondition(condition)) conditionDom.addClass("ok");
-                    
-                    var conditionIcon = $("<span></span>");
-                    conditionIcon.attr("class", "icon");
-                    conditionDom.append(conditionIcon);
-                    
-                    var conditionText = $("<span></span>");
-                    conditionText.attr("class", "text");
-                    conditionText.append(this.Textes.get(condition.name)).append(" (" + condition.level + ")");
-                    conditionDom.append(conditionText);
-                    
-                    dom.find("#restrictions > #list").append(conditionDom);
-                }
+            dom.find("#restrictions > #list").empty();
+            for (var index in conditions) {
+                var condition = conditions[index];
+                
+                var conditionDom = $("<div></div>");
+                conditionDom.attr("class", "categorie");
+                if (this.parent.checkCondition(condition)) conditionDom.addClass("ok");
+                
+                var conditionIcon = $("<span></span>");
+                conditionIcon.attr("class", "icon");
+                conditionDom.append(conditionIcon);
+                
+                var conditionText = $("<span></span>");
+                conditionText.attr("class", "text");
+                conditionText.append(this.Textes.get(condition.name)).append(" (" + condition.level + ")");
+                conditionDom.append(conditionText);
+                
+                dom.find("#restrictions > #list").append(conditionDom);
             }
             
             /**

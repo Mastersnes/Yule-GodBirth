@@ -20,9 +20,12 @@ define(["jquery"], function($){
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
-			    	game.showConstellation(function() {
-			    		game.showStar($("etoile.space-star"));
-			    	});
+			    	var grandTout = game.spaceView.ameliorationView.Items.get("grandTout");
+			    	if (grandTout.level < 5) {
+				    	game.showConstellation(function() {
+				    		game.showStar($("etoile.space-star"));
+				    	});
+			    	}
 			    }
 			},
 			"quete-2" : {
