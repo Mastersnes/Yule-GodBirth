@@ -69,6 +69,10 @@ mask {
 	background-image: url("../img/game/interface/bouton/off.png");
 }
 
+.popup .button-center {
+	margin-left: 25%;
+}
+
 /**
 * Textes in game
 **/

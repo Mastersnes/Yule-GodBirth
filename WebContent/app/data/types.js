@@ -33,9 +33,11 @@ define(["jquery"], function($){
 			},
             "child" : {
                 name : "child",
-                text : ["cinematique-child1", "cinematique-child2", "cinematique-child3"],
+                nbr : 5,
+				next : "ado",
+                text : ["cinematique-child1", "cinematique-child2", "cinematique-child3", "cinematique-child4"],
                 events : {
-                    typeEvents : [],
+                    typeEvents : ["first-event"],
                     newEvents : []
                 },
                 animations : [
@@ -55,6 +57,14 @@ define(["jquery"], function($){
 	                	time : 800
 	                }
                 ]
+            },
+            "ado" : {
+                name : "ado",
+                text : [],
+                events : {
+                    typeEvents : [],
+                    newEvents : []
+                }
             }
 	};
 	

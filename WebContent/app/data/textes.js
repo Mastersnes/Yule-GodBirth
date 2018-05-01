@@ -537,7 +537,38 @@ define(["jquery"], function($){
 		 * Cinematiques
 		 */
 		"cinematique-child1" : {
-			fr : "",
+			fr : "Felicitation maître ! Le dieu a bien grandit et la deesse veille sur lui de son aura chaleureuse.",
+			en : "-"
+		},
+		"cinematique-child2" : {
+			fr : "Il est maintenant temps de prendre les bonnes decisions pour votre univers.",
+			en : "-"
+		},
+		"cinematique-child3" : {
+			fr : "Attention, chacune d'entre elle peut avoir une incidence bonne ou mauvaise sur la suite des evenements.",
+			en : "-"
+		},
+		"cinematique-child4" : {
+			fr : "Bon courage mon maître ! Vous saurez faire les bons choix !",
+			en : "-"
+		},
+		
+		/**
+		 * Evenements
+		 */
+		/**
+		 * Enfant
+		 */
+		"first-event" : {
+			fr : "Maître ! De nombreux representants de diverses galaxies demandent à vous voir. Souhaitez-vous les recevoir ?",
+			en : "-"
+		},
+		"first-event-ok" : {
+			fr : "Très bon choix maître ! Je vais les faire entrer.",
+			en : "-"
+		},
+		"first-event-ko" : {
+			fr : "Très bien... Peut-être n'est-ce pas le bon moment... Je vais leur demander de quitter les lieux.",
 			en : "-"
 		}
 	};

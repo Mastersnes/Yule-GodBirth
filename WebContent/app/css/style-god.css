@@ -87,13 +87,13 @@ god.baby {
 /**
 * Forme Enfant
 **/
-god.child[level="1"] {
+god.child {
     background-image: url("../img/game/god/child/1.png");
 }
-god.child[level="1"].cligne {
+god.child.cligne {
     background-image: url("../img/game/god/child/cligne/1.png");
 }
-god.child[level="1"].langue {
+god.child.langue {
     animation-name: child-langue;
     animation-duration: 0.5s;
     animation-fill-mode: both;
@@ -117,7 +117,7 @@ god.child[level="1"].langue {
     50% {background-image: url("../img/game/god/child/langue/3.png");}
     100% {background-image: url("../img/game/god/child/langue/4.png");}
 }
-god.child[level="1"].tourneTete {
+god.child.tourneTete {
     animation-name: child-tourne-tete;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
@@ -147,4 +147,11 @@ god.child[level="1"].tourneTete {
     68% {background-image: url("../img/game/god/child/tourneTete/2.png");}
     85% {background-image: url("../img/game/god/child/tourneTete/1.png");}
     100% {background-image: url("../img/game/god/child/1.png");}
+}
+
+/**
+* Adolescent
+**/
+god.ado {
+    background-image: url("../img/game/god/ado/1.png");
 }

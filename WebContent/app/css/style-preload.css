@@ -66,6 +66,10 @@ preload.god-child-tourneTete[step="2"] {
 	background-image: url("../img/game/god/child/tourneTete/2.png");
 }
 
+preload.god-ado[step="1"] {
+	background-image: url("../img/game/god/ado/1.png");
+}
+
 /**GODDESS**/
 preload.goddess-imbolc[step="1"] {
 	background-image: url("../img/game/goddess/imbolc/1.png");

@@ -14,6 +14,7 @@ function($, _, Utils, page, Events) {
 			this.parent = parent;
 			this.Textes = parent.Textes;
 			this.saveManager = parent.saveManager;
+			this.textManager = parent.textManager;
 			
 			this.currentEvent = null;
 			this.typeEvents = [];
@@ -22,6 +23,21 @@ function($, _, Utils, page, Events) {
 		};
 		
 		this.loop = function() {
+			// Si Origin parle
+			if (!this.textManager.empty()) return;
+			
+			// Si on a une popup info ouverte
+			if (this.parent.alertOpen) return;
+			
+			// Si le grand tout n'est pas encore au level 6
+			var ameliorationView = parent.spaceView.ameliorationView;
+			var grandToutLevel = 0;
+			if (ameliorationView) {
+				grandToutLevel = ameliorationView.Items.get("grandTout");
+			}
+			if (grandToutLevel < 6) return;
+			
+			// Sinon ok
 		    var totalEvents = this.typeEvents.concat(this.generalEvents);
 		    /**
 		     * On retire les evenements uniques deja eu lieu du total des evenements pour ne pas poluer le choix
@@ -31,6 +47,7 @@ function($, _, Utils, page, Events) {
 		    	var eventIndex = totalEvents.indexOf(eventName);
 		    	totalEvents.splice(eventIndex, 1);
 		    }
+		    console.log("events : ", totalEvents);
 		    if (totalEvents.length == 0) return;
 		    
 	        var randIndex = Utils.rand(0, totalEvents.length);

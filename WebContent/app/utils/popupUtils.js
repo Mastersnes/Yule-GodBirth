@@ -1,7 +1,8 @@
 'use strict';
 define(["jquery",
         'underscore',
-        "text!app/template/popups/confirm.html",], function($, _, confirmPage){
+        "text!app/template/popups/confirm.html",
+        "text!app/template/popups/alert.html"], function($, _, confirmPage, alertPage){
 	return {
 		/**
 		* Affiche une popup de confirmation
@@ -11,6 +12,8 @@ define(["jquery",
 		    if (!texteNo) texteNo = Textes.get("noButton");
 			
 			var el = $("body > #popups");
+			if ($(".scene > #popups").length > 0) el = $(".scene > #popups");
+			
 			_.templateSettings.variable = "data";
             var template = _.template(confirmPage);
             var templateData = {
@@ -29,6 +32,31 @@ define(["jquery",
             el.find(".no").click(function() {
             	el.find(".popup").hide();
             	if (callbackCancel) callbackCancel();
+            });
+		},
+		
+		/**
+		* Affiche une popup d'information
+		**/
+		alert : function(Textes, textePopup, texteOk, callbackSuccess) {
+		    if (!texteOk) texteOk = Textes.get("suivant");
+			
+		    var el = $("body > #popups");
+		    if ($(".scene > #popups").length > 0) el = $(".scene > #popups");
+			
+		    _.templateSettings.variable = "data";
+            var template = _.template(alertPage);
+            var templateData = {
+            		text : Textes,
+            		textePopup : textePopup,
+                    texteOk : texteOk
+            };
+            el.html(template(templateData));
+            el.find(".popup").show();
+            
+            el.find(".yes").click(function() {
+            	el.find(".popup").hide();
+            	if (callbackSuccess) callbackSuccess();
             });
 		}
 	};

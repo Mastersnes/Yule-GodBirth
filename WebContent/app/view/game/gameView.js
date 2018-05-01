@@ -2,6 +2,7 @@
 define(["jquery",
         'underscore',
         "app/utils/utils",
+        "app/utils/popupUtils",
         "text!app/template/game/game.html",
         "app/manager/sceneManager",
         "app/manager/textManager",
@@ -15,7 +16,7 @@ define(["jquery",
         "app/view/game/constellation/constellationView",
         "app/view/game/endView"
         ],
-function($, _, Utils, page, 
+function($, _, Utils, PopupUtils, page, 
 		SceneManager, TextManager, 
 		EventManager, PointManager, 
 		RecompenseManager, DidactitielManager,
@@ -32,6 +33,7 @@ function($, _, Utils, page,
 			this.pause = false;
 			this.endGame = false;
 			this.lieu = "space";
+			this.alertOpen = false;
 			
 			this.render();
 			
@@ -147,6 +149,17 @@ function($, _, Utils, page,
             	e.preventDefault();
             	return false;
             });
+        };
+        
+        /**
+         * Appel la fonction permettant d'afficher une information
+         */
+        this.alertPopup = function(texte) {
+        	var that = this;
+        	that.alertOpen = true;
+        	PopupUtils.alert(this.Textes, texte, "suivant", function() {
+        		that.alertOpen = false;
+        	});
         };
 		
 		this.init(parent);
