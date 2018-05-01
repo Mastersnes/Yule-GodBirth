@@ -34,7 +34,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		}
 	        		return {
 	        			loop : {
-	        				croyance : croyance * 10000,
+	        				croyance : croyance,
 	        				illumination : 0,
                             bien : 0,
                             mal : 0

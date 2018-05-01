@@ -6,7 +6,7 @@ define(["jquery"], function($){
 		 */
 		"bienvenue" : {
 			fr : "Bienvenue",
-			en : "Wellcome"
+			en : "Welcome"
 		},
 		"guest" : {
 			fr : "Invité",
@@ -530,6 +530,14 @@ define(["jquery"], function($){
 		},
 		"didactitiel-fin2" : {
 			fr : "Maintenant c'est à vous ! Bon courage ! le destin de l'univers est entre vos mains !",
+			en : "-"
+		},
+		
+		/**
+		 * Cinematiques
+		 */
+		"cinematique-child1" : {
+			fr : "",
 			en : "-"
 		}
 	};

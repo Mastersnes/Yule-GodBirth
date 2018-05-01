@@ -33,7 +33,7 @@ define(["jquery"], function($){
 			},
             "child" : {
                 name : "child",
-                text : [],
+                text : ["cinematique-child1", "cinematique-child2", "cinematique-child3"],
                 events : {
                     typeEvents : [],
                     newEvents : []
