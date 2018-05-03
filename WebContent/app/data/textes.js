@@ -557,10 +557,10 @@ define(["jquery"], function($){
 		 * Evenements
 		 */
 		/**
-		 * Enfant
+		 * Premier evenement
 		 */
 		"first-event" : {
-			fr : "Maître ! De nombreux representants de diverses galaxies demandent à vous voir. Souhaitez-vous les recevoir ?",
+			fr : "Maître ! De nombreux representants de diverses planetes demandent à vous voir. Souhaitez-vous les recevoir ?",
 			en : "-"
 		},
 		"first-event-ok" : {
@@ -570,7 +570,37 @@ define(["jquery"], function($){
 		"first-event-ko" : {
 			fr : "Très bien... Peut-être n'est-ce pas le bon moment... Je vais leur demander de quitter les lieux.",
 			en : "-"
-		}
+		},
+		/**
+		 * Pluie ?
+		 */
+		"pluie?-event" : {
+            fr : "Merci de me recevoir Grand Dieu !<br/>Malheureusement, il ne pleut plus depuis des années sur ma planete. Pourriez-vous intervenir ?",
+            en : "-"
+        },
+        "pluie?-event-ok" : {
+            fr : "Merci mon dieu, vous nous sauvez la vie ! Nous vous en serons eternellement reconnaissant !",
+            en : "-"
+        },
+        "pluie?-event-ko" : {
+            fr : "Notre perte est donc inevitable... Un dieu n'est-il pas censé proteger ses fideles ?",
+            en : "-"
+        },
+        /**
+         * Cadeau pour la pluie
+         */
+        "cadeau-pluie?-event" : {
+            fr : "Vous nous avez sauvé et, pour vous remercier, nous vous offrons un petit cadeau. Choisissez :",
+            en : "-"
+        },
+        "cadeau-pluie?-event-croyance" : {
+            fr : "Nous, les noystri, allons creer un temple à votre effigie et nous partageront votre parole dans l'univers !",
+            en : "-"
+        },
+        "cadeau-pluie?-event-illumination" : {
+            fr : "Nous, les noystri, allons nous orienter vers la voie de l'illumination. Nous suivrons vos enseignements pour nous elever !",
+            en : "-"
+        }
 	};
 	
 	return {

@@ -65,7 +65,6 @@ define(["jquery",
         
         this.setType = function(type, level) {
         	if (!level) level = 1;
-            
         	this.saveManager.save("godInitType", type);
         	
         	this.type = GodType.get(type);

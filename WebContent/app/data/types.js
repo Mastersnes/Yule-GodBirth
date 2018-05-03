@@ -37,8 +37,8 @@ define(["jquery"], function($){
 				next : "ado",
                 text : ["cinematique-child1", "cinematique-child2", "cinematique-child3", "cinematique-child4"],
                 events : {
-                    typeEvents : ["first-event"],
-                    newEvents : []
+                    typeEvents : [],
+                    newEvents : ["first-event"]
                 },
                 animations : [
 	                {

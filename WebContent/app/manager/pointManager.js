@@ -52,20 +52,28 @@ function($, _, Utils) {
 			var avantages = this.avantages;
 			
 			var maxPoint = Math.pow(10, 12);
-		    if (points.croyance && points.croyance < maxPoint) {
-		    	this.points.croyance += points.croyance + parseInt(Utils.percent(points.croyance, avantages.croyance));
+		    if (points.croyance) {
+		        if (points.croyance < maxPoint) {
+    		    	this.points.croyance += points.croyance + parseInt(Utils.percent(points.croyance, avantages.croyance));
+    		    }
 		    }
-		    if (points.illumination && points.illumination < maxPoint) {
-		    	this.points.illumination += points.illumination + parseInt(Utils.percent(points.illumination, avantages.illumination));
+		    if (points.illumination) {
+		        if (points.illumination < maxPoint) {
+    		    	this.points.illumination += points.illumination + parseInt(Utils.percent(points.illumination, avantages.illumination));
+    		    }
 		    }
-		    if (points.bien && points.bien < maxPoint) {
-			    this.points.bien += points.bien + parseInt(Utils.percent(points.bien, avantages.bien));
-			    if (this.points.bien < 0) this.points.bien = 0;
+		    if (points.bien) {
+    		    if (points.bien < maxPoint) {
+    			    this.points.bien += points.bien + parseInt(Utils.percent(points.bien, avantages.bien));
+    			    if (this.points.bien < 0) this.points.bien = 0;
+    		    }
 		    }
-		    if (points.mal && points.mal < maxPoint) {
-			    this.points.mal += points.mal + parseInt(Utils.percent(points.mal, avantages.mal));
-			    if (this.points.mal < 0) this.points.mal = 0;
-			}
+		    if (points.mal) {
+    		    if (points.mal < maxPoint) {
+    			    this.points.mal += points.mal + parseInt(Utils.percent(points.mal, avantages.mal));
+    			    if (this.points.mal < 0) this.points.mal = 0;
+    			}
+		    }
 		    
 		    if (this.points.bien > 1000000 && this.points.mal > 1000000) {
 		    	this.points.bien = parseInt(this.points.bien / 10);
@@ -77,6 +85,19 @@ function($, _, Utils) {
 		    
 		    this.render();
 		};
+		
+		/**
+         * Ajoute les points en pourcentage
+         */
+        this.addPointsPercent = function(points) {
+            var that = this;
+            this.addPoints({
+                croyance : parseInt(Utils.percent(that.points.croyance, points.croyance)),
+                illumination : parseInt(Utils.percent(that.points.illumination, points.illumination)),
+                bien : parseInt(Utils.percent(that.points.bien, points.bien)),
+                mal : parseInt(Utils.percent(that.points.mal, points.mal))
+            });
+        };
 		
 		/**
 		 * Verifie si l'on assez pour ce prix

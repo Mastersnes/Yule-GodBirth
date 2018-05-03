@@ -10,26 +10,34 @@ define(["jquery"], function($){
 			         {
 			             name : "yesButton",
 			             action : function(game) {
-			            	 game.pointManager.addPoints({
-		 						croyance : 1000,
+			                 var ameliorationView = game.spaceView.ameliorationView;
+			                 var grandTout = this.ameliorationView.Items.get("grandTout");
+			                 var deesse = this.ameliorationView.Items.get("deesse");
+			                 game.pointManager.addPoints({
+		 						croyance : parseInt(grandTout.gain.croyance.loop * 10),
 		 						illumination : 0,
-		 						bien : 50,
+		 						bien : parseInt(deesse.gain.bien.loop * 10),
 		 						mal : 0
 			            	 });
-			                 game.eventManager.addEvents(["pluie?-event", "eclipse?-event", "sacrifice?-event", "blessure?-event", "argent?-event"]);
+			                 
+			                 game.eventManager.addEvents(["pluie?-event", "eclipse?-event", "sacrifice?-event", "blessure?-event", "argent?-event", "vrai-dieu?-event"]);
 			                 game.alertPopup("first-event-ok");
 			             }
 			         },
 			         {
                          name : "noButton",
                          action : function(game) {
-                        	 game.pointManager.addPoints({
- 		 						croyance : 500,
- 		 						illumination : 0,
- 		 						bien : 0,
- 		 						mal : 50
- 			            	 });
-                        	 game.eventManager.addEvents(["secheresse!-event", "glaciation!-event", "sacrifice!-event", "epidemie!-event", "famine!-event"]);
+                             var ameliorationView = game.spaceView.ameliorationView;
+                             var grandTout = this.ameliorationView.Items.get("grandTout");
+                             var dieu = this.ameliorationView.Items.get("dieu");
+                             game.pointManager.addPoints({
+                                croyance : parseInt(grandTout.gain.croyance.loop * 5),
+                                illumination : 0,
+                                bien : 0,
+                                mal : parseInt(dieu.gain.mal.loop * 15)
+                             });
+                             
+                        	 game.eventManager.addEvents(["secheresse!-event", "glaciation!-event", "sacrifice!-event", "epidemie!-event", "famine!-event", "faux-dieu!-event"]);
                         	 game.alertPopup("first-event-ko");
                          }
                      }
@@ -42,22 +50,79 @@ define(["jquery"], function($){
 				name : "pluie?-event",
 			    text : "pluie?-event",
 			    rarity : 10,
-			    unique : false,
+			    unique : true,
 			    actions : [
 			         {
 			             name : "yesButton",
 			             action : function(game) {
+			                 var ameliorationView = game.spaceView.ameliorationView;
+                             var deesse = this.ameliorationView.Items.get("deesse");
+                             game.pointManager.addPoints({
+                                croyance : parseInt(deesse.gain.croyance.loop * 5),
+                                illumination : 0,
+                                bien : parseInt(deesse.gain.bien.loop * 20),
+                                mal : 0
+                             });
+                             
 			                 game.alertPopup("pluie?-event-ok");
+			                 game.eventManager.addEvents(["cadeau-pluie?-event"]);
 			             }
 			         },
 			         {
                          name : "noButton",
                          action : function(game) {
-                        	 game.alertPopup("pluie?-event-ko");
+                             var ameliorationView = game.spaceView.ameliorationView;
+                             var dieu = this.ameliorationView.Items.get("dieu");
+                             game.pointManager.addPoints({
+                                croyance : parseInt(dieu.gain.croyance.loop * 5),
+                                illumination : 0,
+                                bien : 0,
+                                mal : parseInt(dieu.gain.mal.loop * 20)
+                             });
+                             game.alertPopup("pluie?-event-ko");
+                             game.eventManager.addEvents(["secheresse!-event"]);
                          }
                      }
 			    ]
 			},
+			"cadeau-pluie?-event" : {
+                name : "cadeau-pluie?-event",
+                text : "cadeau-pluie?-event",
+                rarity : 20,
+                unique : false,
+                actions : [
+                     {
+                         name : "croyance",
+                         action : function(game) {
+                             var ameliorationView = game.spaceView.ameliorationView;
+                             var grandTout = this.ameliorationView.Items.get("grandTout");
+                             game.pointManager.addPoints({
+                                croyance : parseInt(grandTout.gain.croyance.loop * 10),
+                                illumination : 0,
+                                bien : 0,
+                                mal : 0
+                             });
+                             
+                             game.alertPopup("cadeau-pluie?-event-croyance");
+                         }
+                     },
+                     {
+                         name : "illumination",
+                         action : function(game) {
+                             var ameliorationView = game.spaceView.ameliorationView;
+                             var lune = this.ameliorationView.Items.get("lune");
+                             game.pointManager.addPoints({
+                                croyance : 0,
+                                illumination : 5 + parseInt(lune.gain.illumination.loop * 5),
+                                bien : 0,
+                                mal : 0
+                             });
+                             
+                             game.alertPopup("cadeau-pluie?-event-illumination");
+                         }
+                     }
+                ]
+            },
 			"eclipse?-event" : {
 				name : "eclipse?-event",
 			    text : "eclipse?-event",
@@ -138,6 +203,26 @@ define(["jquery"], function($){
                      }
 			    ]
 			},
+			"vrai-dieu?-event" : {
+                name : "vrai-dieu?-event",
+                text : "vrai-dieu?-event",
+                rarity : 10,
+                unique : false,
+                actions : [
+                     {
+                         name : "yesButton",
+                         action : function(game) {
+                             game.alertPopup("vrai-dieu?-event-ok");
+                         }
+                     },
+                     {
+                         name : "noButton",
+                         action : function(game) {
+                             game.alertPopup("vrai-dieu?-event-ko");
+                         }
+                     }
+                ]
+            },
 			/**
 			 * Sans Emissaires
 			 */
@@ -241,6 +326,26 @@ define(["jquery"], function($){
                      }
 			    ]
 			},
+			"faux-dieu!-event" : {
+                name : "faux-dieu!-event",
+                text : "faux-dieu!-event",
+                rarity : 10,
+                unique : false,
+                actions : [
+                     {
+                         name : "yesButton",
+                         action : function(game) {
+                             game.alertPopup("faux-dieu!-event-ok");
+                         }
+                     },
+                     {
+                         name : "noButton",
+                         action : function(game) {
+                             game.alertPopup("faux-dieu!-event-ko");
+                         }
+                     }
+                ]
+            },
 	};
 	
 	return {
