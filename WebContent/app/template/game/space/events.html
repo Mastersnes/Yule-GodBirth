@@ -1,14 +1,25 @@
 <div class="popup popupEvent">
     <mask></mask>
     <div class="content">
-        <div class="text"><%= data.text.get(data.event.text) %></div>
+        <div class="texte"><%= data.text.get(data.event.text) %></div>
         <ul class="choix texte popup-menu">
             <%
                 var actions = data.event.actions;
                 for (var actionIndex in actions) {
                 var action = actions[actionIndex];
             %>
-                <li index="<%=actionIndex%>"><%=data.text.get(action.name)%></li>
+                <li index="<%=actionIndex%>"><%=data.text.get(action.name)%> 
+                    <% if (action.prix) { %>
+                    (
+	                    <% if (action.prix.croyance) { %>
+	                        - <%=data.text.get(action.prix.croyance)%> % <%=data.text.get('croyance')%>
+	                        <% if (action.prix.illumination) %>,
+	                    <% } if (action.prix.illumination) { %>
+	                        - <%=data.text.get(action.prix.illumination)%> % <%=data.text.get('illumination')%>
+	                    <% } %>
+                    )
+                    <% } %>
+                </li>
             <%
                 }
             %>

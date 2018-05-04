@@ -575,7 +575,7 @@ define(["jquery"], function($){
 		 * Pluie ?
 		 */
 		"pluie?-event" : {
-            fr : "Merci de me recevoir Grand Dieu !<br/>Malheureusement, il ne pleut plus depuis des années sur ma planete. Pourriez-vous intervenir ?",
+            fr : "Merci de me recevoir jeune dieu !<br/>Malheureusement, il ne pleut plus depuis des années sur ma planete. Pourriez-vous intervenir ?",
             en : "-"
         },
         "pluie?-event-ok" : {
@@ -590,7 +590,7 @@ define(["jquery"], function($){
          * Cadeau pour la pluie
          */
         "cadeau-pluie?-event" : {
-            fr : "Vous nous avez sauvé et, pour vous remercier, nous vous offrons un petit cadeau. Choisissez :",
+            fr : "Vous nous avez sauvé et, pour vous remercier, nous vous offrons un petit cadeau.<br/>Choisissez :",
             en : "-"
         },
         "cadeau-pluie?-event-croyance" : {
@@ -600,7 +600,94 @@ define(["jquery"], function($){
         "cadeau-pluie?-event-illumination" : {
             fr : "Nous, les noystri, allons nous orienter vers la voie de l'illumination. Nous suivrons vos enseignements pour nous elever !",
             en : "-"
-        }
+        },
+        /**
+         * Eclipse ?
+         */
+        "eclipse?-event" : {
+            fr : "Bien le bonjour jeune dieu !<br/>Ah, Le jour... Il n'est pas bon pour mes affaires... Pourriez-vous, dans votre grande sagesse, creer une eclipse sur ma planète ?<br/> Je saurai vous recompenser...",
+            en : "-"
+        },
+        "eclipse?-event-ok" : {
+            fr : "Vous avez fait le bon choix, et vous ne le regretterez pas !",
+            en : "-"
+        },
+        "eclipse?-event-ko" : {
+            fr : "Vous n'avez aucune ambition, dieu pathetique...",
+            en : "-"
+        },
+        "eclipse-punition?-event" : {
+            fr : "Ce mortel vous a insulté... C'est impardonnable. Souhaitez-vous le tuer ?",
+            en : "-"
+        },
+        "letuer" : {
+            fr : "Le tuer",
+            en : "-"
+        },
+        "lelaisserpartir" : {
+            fr : "Le laisser partir",
+            en : "-"
+        },
+        "eclipse-punition?-event-ok" : {
+            fr : "Il l'avait sans doute merité mais etait-ce vraiment indispensable ?...",
+            en : "-"
+        },
+        "eclipse-punition?-event-ok" : {
+            fr : "Cela montre votre sagesse. Felicitation seigneur !",
+            en : "-"
+        },
+        
+        /**
+         * Sacrifice ?
+         */
+        "sacrifice?-event" : {
+            fr : "B...Bo...Bonjour euh... dieu ? Euh... En fait notre pretre... Il dit que c'est bien de sacrifier des gens...<br/>Vous trouvez ca cool non ?",
+            en : "-"
+        },
+        "sacrifice?-event-ok" : {
+            fr : "Hahaha chouette ! Eh euh josé, on continue le massacre hein ! euh Merci euh.. monsieur dieu.",
+            en : "-"
+        },
+        "sacrifice?-event-ko" : {
+            fr : "Ah ? Bah euh... D'accord... Bon bah on le fera plus alors... Au revoir monsieur le dieu.",
+            en : "-"
+        },
+        
+        /**
+         * Blessure ?
+         */
+        "blessure?-event" : {
+            fr : "Outch, ah... c'est top dur, laissez moi là... Courage, encore quelques pas !<br/> Cher dieu, je me suis couper au doigt, ca brule, je souffre tellement !<br/> Pourriez-vous me soigner ?",
+            en : "-"
+        },
+        "bisoumagique" : {
+            fr : "Faire un bisou magique",
+            en : "-"
+        },
+        "blessure?-event-ok" : {
+            fr : "Ahhhh, je me sens déjà mieux ! Merci beaucoup et à bientôt ! Euh... où est la sortie s'il vous plait ?",
+            en : "-"
+        },
+        "blessure?-event-ko" : {
+            fr : "Ahhhh non !!!! La douleur est beaucoup trop insupportable ! Je me sens defaillir !",
+            en : "-"
+        },
+
+        /**
+         * Argent ?
+         */
+        "argent?-event" : {
+            fr : "",
+            en : "-"
+        },
+        "argent?-event-ok" : {
+            fr : "",
+            en : "-"
+        },
+        "argent?-event-ko" : {
+            fr : "",
+            en : "-"
+        },
 	};
 	
 	return {

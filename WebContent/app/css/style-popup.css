@@ -27,12 +27,19 @@
 	font-family: serif;
 	text-align: center;
 	width: 100%;
-	color: #101010;
+	color: #f1efeb;
 }
 
 .popup .close-button {
     top: -4.5%;
     right: -2.5%;
+}
+
+.popup ul li {
+	color: #f1efeb;
+}
+.popup ul li a {
+	color: #337ab7;
 }
 
 mask {

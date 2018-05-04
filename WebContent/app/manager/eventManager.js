@@ -23,7 +23,10 @@ function($, _, Utils, page, Events) {
 		};
 		
 		this.loop = function() {
-			// Si Origin parle
+			//Si il y a deja un evenement en cours
+		    if (this.currentEvent) return;
+		    
+		    // Si Origin parle
 			if (!this.textManager.empty()) return;
 			
 			// Si on a une popup info ouverte
@@ -68,8 +71,6 @@ function($, _, Utils, page, Events) {
 		 * Cette methode permet de verifier qu'une evenement est valable
 		 */
 		this.checkEvent = function(randEvent) {
-			if (this.currentEvent) return false;
-			
 			// Il ne peut pas être nulle
 			if (!randEvent) return false;
 			var isOk = true;
@@ -81,6 +82,7 @@ function($, _, Utils, page, Events) {
 			
 			// Si il est rare, il faut tomber sur sa rareté
 			var rarity = randEvent.rarity;
+			if (rarity == 0) return true;
 			if (!rarity) rarity = 100;
 			
 			var result = Utils.rand(0, rarity);

@@ -23,8 +23,8 @@ function($, _, Utils) {
 		    $(this.el).find("illumination .text").html(Utils.format(this.points.illumination, true, this.Textes));
 		    if (this.points.illumination > 0) $(this.el).find("illumination").show();
 
-//		    $(this.el).find("bien .text").html(this.points.bien);
-//		    $(this.el).find("mal .text").html(this.points.mal);
+		    $(this.el).find("bien .text").html(this.points.bien);
+		    $(this.el).find("mal .text").html(this.points.mal);
 
 		    var total = this.points.bien + this.points.mal;
 		    var bienPercent = Utils.toPercent(this.points.bien, total);
@@ -121,6 +121,16 @@ function($, _, Utils) {
 		    }
 		    return false;
 		};
+		
+		this.depenserPercent = function(prix) {
+		    var that = this;
+             var prix = {
+                 croyance : parseInt(Utils.percent(that.points.croyance, prix.croyance)),
+                 illumination : parseInt(Utils.percent(that.points.illumination, prix.illumination))
+             };
+		    
+            return this.depenser(prix);
+        };
 		
 		/**
 		 * Condition de gameOver si le bien ou le mal prennent le pas l'un sur l'autre
