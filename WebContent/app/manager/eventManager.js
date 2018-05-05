@@ -17,6 +17,10 @@ function($, _, Utils, page, Events) {
 			this.textManager = parent.textManager;
 			
 			this.currentEvent = null;
+			this.eventOpen = false;
+			this.timer = 0;
+			this.toShowNow = null;
+			
 			this.typeEvents = [];
 			this.generalEvents = this.saveManager.load("generalEvents");
 			this.uniquesEvents = this.saveManager.load("uniquesEvents");
@@ -24,7 +28,10 @@ function($, _, Utils, page, Events) {
 		
 		this.loop = function() {
 			//Si il y a deja un evenement en cours
-		    if (this.currentEvent) return;
+		    if (this.currentEvent) return this.checkTimer();
+
+		    //Si la popup est deja ouverte, on stop tout
+			if (this.eventOpen) return;
 		    
 		    // Si Origin parle
 			if (!this.textManager.empty()) return;
@@ -40,7 +47,14 @@ function($, _, Utils, page, Events) {
 			}
 			if (grandToutLevel < 6) return;
 			
-			// Sinon ok
+			// Si un evenement doit être affiché en priorité
+			if (this.toShowNow) {
+				this.currentEvent = Events.get(this.toShowNow);
+				this.show();
+				return;
+			}
+			
+			// Sinon, on cherche aleatoirement un evenement
 		    var totalEvents = this.typeEvents.concat(this.generalEvents);
 		    /**
 		     * On retire les evenements uniques deja eu lieu du total des evenements pour ne pas poluer le choix
@@ -59,12 +73,36 @@ function($, _, Utils, page, Events) {
 	    	if (this.checkEvent(randEvent)) this.currentEvent = randEvent;
             // Si l'evenement est unique, on l'ajoute à la liste  des evenements deja rencontrés
             if (this.currentEvent) {
-            	if (this.currentEvent.unique) {
-            		this.uniquesEvents.push(this.currentEvent.name);
-            		this.saveManager.save("uniquesEvents", this.uniquesEvents);
-            	}
-            	this.show();
+            	this.showTimer();
             }
+		};
+		
+		/**
+		 * Si il y a un evenement en cours, il ne reste que x secondes
+		 */
+		this.checkTimer = function() {
+			if (this.eventOpen) {
+				return;
+			}
+			
+			var that = this;
+			this.timer++;
+			if (this.timer > 5) {
+				$(".scene #event-timer").removeClass("start");
+				$(".scene #event-timer").fadeOut("fast", function() {
+					that.currentEvent = null;
+				});
+			}
+		};
+		
+		/**
+		 * Affiche un sablier permettant d'afficher l'event en cours
+		 */
+		this.showTimer = function() {
+			this.timer = 0;
+			$(".scene #event-timer").fadeIn("fast", function() {
+				$(".scene #event-timer").addClass("start");
+			});
 		};
 		
 		/**
@@ -93,6 +131,12 @@ function($, _, Utils, page, Events) {
 		
 		this.show = function() {
 		    if (!this.currentEvent) return;
+		    this.eventOpen = true;
+		    if (this.currentEvent.unique) {
+        		this.uniquesEvents.push(this.currentEvent.name);
+        		this.saveManager.save("uniquesEvents", this.uniquesEvents);
+        	}
+		    
 		    this.parent.spaceView.ameliorationView.descriptionView.close();
 		    this.parent.autelView.pierresView.detailView.close();
 		    this.parent.queteView.detailView.close();
@@ -114,6 +158,7 @@ function($, _, Utils, page, Events) {
 
 		this.hide = function() {
 			this.currentEvent = null;
+			this.eventOpen = false;
 		    $(".popupEvent").hide();
 		};
 		
@@ -135,12 +180,28 @@ function($, _, Utils, page, Events) {
 		    this.saveManager.save("generalEvents", this.generalEvents);
 		};
 		
+		/**
+		 * Permet de prioriser un evenement
+		 */
+		this.showNow = function(event) {
+			this.toShowNow = event;
+		};
+		
 		this.makeEvents = function() {
 		    var that = this;
 		    $(".choix li").click(function() {
 		        var index = parseInt($(this).attr("index"));
 		        that.currentEvent.actions[index].action(that.parent);
 		        that.hide();
+		    });
+		};
+		
+		this.makeGeneralEvents = function() {
+			var that = this;
+			$(".scene #event-timer").click(function() {
+				$(".scene #event-timer").removeClass("start");
+				$(".scene #event-timer").fadeOut("fast");
+				that.show();
 		    });
 		};
 

@@ -13,6 +13,10 @@ define(["jquery",
 			    actions : [
 			         {
 			             name : "yesButton",
+			             prix : {
+                             croyance : 1,
+                             illumination : 2
+                         },
 			             action : function(game) {
 			                 game.pointManager.addPointsPercent({
 		 						croyance : 10,

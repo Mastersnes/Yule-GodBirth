@@ -1,0 +1,77 @@
+
+/**
+* Evenements
+**/
+.popupEvent .icon {
+	width: 5%;
+}
+
+.scene .event-timer {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+    z-index: 10;
+    right: 0%; top: 16%;
+    
+    width: 4%; height: 5%;
+
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("../img/game/interface/croix/0.png");
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+.scene .event-timer:hover {
+	transform: scale(1.2);
+}
+.scene .event-timer.start {
+	animation-name: close-turn;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+	-webkit-animation-name: close-turn;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: close-turn;
+    -moz-animation-duration: 5s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: close-turn;
+    -o-animation-duration: 5s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+
+@keyframes timer-start {
+    0% {background-image: url("../img/game/interface/croix/0.png");}
+    5% {background-image: url("../img/game/interface/croix/1.png");}
+    9% {background-image: url("../img/game/interface/croix/2.png");}
+    14% {background-image: url("../img/game/interface/croix/3.png");}
+    18% {background-image: url("../img/game/interface/croix/4.png");}
+    23% {background-image: url("../img/game/interface/croix/5.png");}
+    27% {background-image: url("../img/game/interface/croix/6.png");}
+    32% {background-image: url("../img/game/interface/croix/7.png");}
+    36% {background-image: url("../img/game/interface/croix/8.png");}
+    41% {background-image: url("../img/game/interface/croix/9.png");}
+    45% {background-image: url("../img/game/interface/croix/10.png");}
+    50% {background-image: url("../img/game/interface/croix/11.png");}
+    54% {background-image: url("../img/game/interface/croix/12.png");}
+    59% {background-image: url("../img/game/interface/croix/13.png");}
+    63% {background-image: url("../img/game/interface/croix/14.png");}
+    68% {background-image: url("../img/game/interface/croix/15.png");}
+    72% {background-image: url("../img/game/interface/croix/16.png");}
+    77% {background-image: url("../img/game/interface/croix/17.png");}
+    81% {background-image: url("../img/game/interface/croix/18.png");}
+    86% {background-image: url("../img/game/interface/croix/19.png");}
+    90% {background-image: url("../img/game/interface/croix/20.png");}
+    95% {background-image: url("../img/game/interface/croix/21.png");}
+    100% {background-image: url("../img/game/interface/croix/0.png");}
+}

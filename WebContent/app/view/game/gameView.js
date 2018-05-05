@@ -140,6 +140,7 @@ function($, _, Utils, PopupUtils, page,
             this.autelView.makeEvents();
             this.constellationView.makeEvents();
             this.didactitielManager.makeEvents();
+            this.eventManager.makeGeneralEvents();
             
             $(".text").click(function(e) {
             	e.preventDefault();

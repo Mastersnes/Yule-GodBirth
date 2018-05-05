@@ -12,10 +12,14 @@
                     <% if (action.prix) { %>
                     (
 	                    <% if (action.prix.croyance) { %>
-	                        - <%=data.text.get(action.prix.croyance)%> % <%=data.text.get('croyance')%>
-	                        <% if (action.prix.illumination) %>,
+	                        <span class="categorie croyance">
+	                        	- <%=data.text.get(action.prix.croyance)%> % <span class="icon"></span>
+	                        </span>
+	                        <% if (action.prix.illumination) %>&nbsp;
 	                    <% } if (action.prix.illumination) { %>
-	                        - <%=data.text.get(action.prix.illumination)%> % <%=data.text.get('illumination')%>
+	                        <span class="categorie illumination">
+	                        	- <%=data.text.get(action.prix.illumination)%> % <span class="icon"></span>
+	                        </span>
 	                    <% } %>
                     )
                     <% } %>

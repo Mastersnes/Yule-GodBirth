@@ -32,7 +32,6 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
 		};
 		
 		this.score = function(key, value) {
-			console.log("score", key, value);
 			if (!this.isLoad) return;
 			
 			this.kongregate.stats.submit(key, value);
@@ -41,7 +40,6 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
 		this.getScore = function(key) {
 			var that = this;
 			var statId = Stats.get(key);
-			console.log("Get score", key, statId);
 			if (!(this.isLoad && this.username && statId)) return null;
 			
 			Utils.load("https://api.kongregate.com/api/high_scores/lifetime/"+statId+".json", null, function(data) {

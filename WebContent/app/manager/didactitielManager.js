@@ -153,6 +153,7 @@ function($, _, Utils) {
 			
 			var grandTout = this.ameliorationView.Items.get("grandTout");
 			if (grandTout.level > 5) {
+				this.parent.kongregateUtils.score("tutorialEnd", 1);
 				this.data.step = 4;
 				this.data.blocker.ameliorations = false;
 				this.data.blocker.constellations = false;

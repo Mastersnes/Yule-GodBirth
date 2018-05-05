@@ -575,7 +575,7 @@ define(["jquery"], function($){
 		 * Pluie ?
 		 */
 		"pluie?-event" : {
-            fr : "Merci de me recevoir jeune dieu !<br/>Malheureusement, il ne pleut plus depuis des années sur ma planete. Pourriez-vous intervenir ?",
+            fr : "Merci de me recevoir jeune dieu !<br/>Malheureusement, il ne pleut plus depuis des années sur ma planete.<br/>Pourriez-vous intervenir ?",
             en : "-"
         },
         "pluie?-event-ok" : {
@@ -632,7 +632,7 @@ define(["jquery"], function($){
             fr : "Il l'avait sans doute merité mais etait-ce vraiment indispensable ?...",
             en : "-"
         },
-        "eclipse-punition?-event-ok" : {
+        "eclipse-punition?-event-ko" : {
             fr : "Cela montre votre sagesse. Felicitation seigneur !",
             en : "-"
         },

@@ -39,6 +39,7 @@ function($, _, Utils) {
 			            "mal" : 100
 			        },
 			        "compteurClick" : 0,
+			        "successComplete" : [],
 			        
 			        "godInitType" : "dust",
 			        "godInitLevel" : 0,
@@ -160,7 +161,6 @@ function($, _, Utils) {
 			var ameliorations = this.saveData.ameliorations;
 			for (var index in ameliorations) {
 				var level = ameliorations[index];
-				console.log("chargement amelioration : ", index, level);
 				Items.get(index).level = level;
 			}
 		};
@@ -169,7 +169,6 @@ function($, _, Utils) {
 		 * Permet de sauvegarder le level d'une amelioration
 		 */
 		this.saveAmelioration = function(key, value) {
-			console.log("sauvegarde de amelioration : ", key, value);
 			this.saveData.ameliorations[key] = value;
 		};
 		

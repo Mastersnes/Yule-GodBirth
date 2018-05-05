@@ -80,8 +80,13 @@ function($, _, Utils) {
 		    	this.points.mal = parseInt(this.points.mal / 10);
 		    }
 		    
-		    this.saveManager.save("points", this.points);
+		    this.saveManager.save("points", this.points);		    
 		    this.saveManager.saveMaxPoints(this.points);
+		    
+		    this.parent.kongregateUtils.score("maxCroyance", this.points.croyance);
+		    this.parent.kongregateUtils.score("maxIllumination", this.points.illumination);
+		    this.parent.kongregateUtils.score("maxBien", this.points.bien);
+		    this.parent.kongregateUtils.score("maxMal", this.points.mal);
 		    
 		    this.render();
 		};

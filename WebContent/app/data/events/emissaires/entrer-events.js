@@ -113,7 +113,7 @@ define(["jquery"], function($){
                               });
                               
                               game.alertPopup("eclipse?-event-ko");
-                              game.eventManager.addEvents(["eclipse-punition?-event"]);
+                              game.eventManager.showNow("eclipse-punition?-event");
                           }
                      }
 			    ]

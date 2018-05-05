@@ -156,6 +156,8 @@ define(["jquery",
             if (!this.checkComplete(quete)) return false;
             this.complete.push(quete.name);
             
+            this.parent.kongregateUtils.score(quete.name, 1);
+            
             this.saveManager.save("quetesComplete", this.complete);
             this.pointManager.addPoints(quete.gains);
             if (quete.success) quete.success(this);

@@ -60,7 +60,6 @@ function($, _, Utils, PopupUtils, Kongregate, Textes, Mediatheque, SaveManager, 
 		this.makeEvents = function() {
 			var that = this;
 			$("#new").click(function() {
-				console.log("save : ", that.saveManager.checkSave());
 			    if (that.saveManager.checkSave()) {
 					PopupUtils.confirm(Textes, "eraseSave", function() {
 				        that.saveManager.eraseSave();
