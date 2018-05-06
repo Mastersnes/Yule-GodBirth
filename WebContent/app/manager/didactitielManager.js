@@ -8,7 +8,7 @@ function($, _, Utils) {
 
 	return function(parent) {
 		this.init = function(parent) {
-			this.el = "#didactitiel";
+			this.el = ".didactitiel";
 			this.parent = parent;
 			this.Textes = parent.Textes;
 			
@@ -49,7 +49,7 @@ function($, _, Utils) {
 			/**
 			 * Constellation
 			 */
-			if (this.data.blocker.autel && this.parent.lieu == "constellation" && !$(".constellation").hasClass("zoom")) {
+			if (this.data.blocker.autel && this.parent.lieu == "constellation") {
 				toShow = true;
 				$(this.el).find(".step.block-autel").show();
 			}

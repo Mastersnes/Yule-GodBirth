@@ -124,6 +124,7 @@ function($, _, Utils, PopupUtils, page,
         };
         this.showStar = function(star) {
         	if (this.lieu != "constellation") return;
+        	console.log("here2");
         	
         	$(".constellation-star").hide();
         	var cible = star.attr("cible");
