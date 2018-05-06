@@ -73,10 +73,9 @@ quetes > quete collecte.complete:hover {
 }
 
 @keyframes quete-select {
-    0% {background-image: url("../img/game/interface/quetes/active.png");}
+    0%, 100% {background-image: url("../img/game/interface/quetes/active.png");}
     20% {background-image: url("../img/game/interface/quetes/1.png");}
     40% {background-image: url("../img/game/interface/quetes/2.png");}
     60% {background-image: url("../img/game/interface/quetes/3.png");}
     80% {background-image: url("../img/game/interface/quetes/4.png");}
-    100% {background-image: url("../img/game/interface/quetes/active.png");}
 }

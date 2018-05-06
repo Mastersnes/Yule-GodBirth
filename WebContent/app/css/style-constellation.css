@@ -47,11 +47,10 @@ etoile:hover {
     -o-animation-iteration-count: infinite;
 }
 @keyframes star-anim {
-    0% {background-image: url("../img/game/interface/star/1.png");}
+    0%, 100% {background-image: url("../img/game/interface/star/1.png");}
     25% {background-image: url("../img/game/interface/star/2.png");}
     50% {background-image: url("../img/game/interface/star/3.png");}
     75% {background-image: url("../img/game/interface/star/4.png");}
-    100% {background-image: url("../img/game/interface/star/1.png");}
 }
 
 etoile.space-star {
@@ -62,4 +61,7 @@ etoile.quete-star {
 }
 etoile.autel-star {
 	top: 30%;left: 70%;
+}
+etoile.success-star {
+	top: 35%;left: 40%;
 }

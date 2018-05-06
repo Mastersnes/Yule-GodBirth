@@ -17,21 +17,12 @@ function($, _, Utils) {
 			
 			this.compteurClick = this.saveManager.load("compteurClick");
 			this.complete = this.saveManager.load("successComplete");
-			
-			/**
-			 * On revalide les success pour eviter toute perte
-			 */
-			for (var success in this.complete) {
-				this.addSuccess(success);
-			}
 		};
 		
 		this.addClick = function() {
-			if (this.compteurClick >= 1000000000) {
-				this.addSuccess("success-maxClick");
-				return;
-			}
+			if (this.compteurClick >= 1000000000) return;
 			this.compteurClick++;
+			console.log("click : ", this.compteurClick);
 			
 			this.parent.kongregateUtils.score("compteurClick", this.compteurClick);
 			this.saveManager.save("compteurClick", this.compteurClick);
@@ -96,7 +87,7 @@ function($, _, Utils) {
 					recompense.illumination += 5000;
 					break;
 				case 999000000 :
-					this.addSuccess("success-999000000click");
+					this.addSuccess("success-maxClick");
 					recompense.croyance += this.compteurClick;
 					recompense.illumination += 10000;
 					break;
@@ -105,7 +96,18 @@ function($, _, Utils) {
 			this.pointManager.addPoints(recompense);
 		};
 		
+		/**
+		 * On revalide les success pour eviter toute perte
+		 */
+		this.reloadSuccess = function() {
+			for (var index in this.complete) {
+				var success = this.complete[index];
+				this.addSuccess(success);
+			}
+		};
+		
 		this.addSuccess = function(success) {
+			console.log("success : ", success);
 			this.parent.kongregateUtils.score(success, 1);
 			if (this.complete.indexOf(success) > -1) return;
 			

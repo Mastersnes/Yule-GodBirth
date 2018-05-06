@@ -140,13 +140,9 @@ god.child.tourneTete {
 }
 
 @keyframes child-tourne-tete {
-    0% {background-image: url("../img/game/god/child/1.png");}
-    17% {background-image: url("../img/game/god/child/tourneTete/1.png");}
-    35% {background-image: url("../img/game/god/child/tourneTete/2.png");}
-    50% {background-image: url("../img/game/god/child/tourneTete/2.png");}
-    68% {background-image: url("../img/game/god/child/tourneTete/2.png");}
-    85% {background-image: url("../img/game/god/child/tourneTete/1.png");}
-    100% {background-image: url("../img/game/god/child/1.png");}
+    0%, 100% {background-image: url("../img/game/god/child/1.png");}
+    17%, 85% {background-image: url("../img/game/god/child/tourneTete/1.png");}
+    35%, 50%, 68% {background-image: url("../img/game/god/child/tourneTete/2.png");}
 }
 
 /**

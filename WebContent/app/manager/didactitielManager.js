@@ -49,7 +49,7 @@ function($, _, Utils) {
 			/**
 			 * Constellation
 			 */
-			if (this.data.blocker.autel && this.parent.lieu == "constellation") {
+			if (this.data.blocker.autel && this.parent.lieu == "constellation" && !$(".constellation").hasClass("zoom")) {
 				toShow = true;
 				$(this.el).find(".step.block-autel").show();
 			}

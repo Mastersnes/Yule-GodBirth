@@ -13,6 +13,7 @@ define(["jquery",
         "app/view/game/space/spaceView",
         "app/view/game/quete/queteView",
         "app/view/game/autel/autelView",
+        "app/view/game/success/successView",
         "app/view/game/constellation/constellationView",
         "app/view/game/endView"
         ],
@@ -21,7 +22,7 @@ function($, _, Utils, PopupUtils, page,
 		EventManager, PointManager, 
 		RecompenseManager, DidactitielManager,
 		SpaceView, QueteView, 
-		AutelView, ConstellationView, EndView) {
+		AutelView, SuccessView, ConstellationView, EndView) {
 	'use strict';
 
 	return function(parent) {
@@ -58,9 +59,14 @@ function($, _, Utils, PopupUtils, page,
             this.autelView = new AutelView(this);
             this.autelView.render();
 
+            this.successView = new SuccessView(this);
+            this.successView.render();
+
             this.endView = new EndView(this);
             
             this.didactitielManager = new DidactitielManager(this);
+            
+            this.recompenseManager.reloadSuccess();
 
 			if (!this.alreadyLoop) {
 			    this.alreadyLoop = true;
@@ -114,9 +120,11 @@ function($, _, Utils, PopupUtils, page,
         	setTimeout(function() {
         		$(".constellation").removeClass("zoom");
         		if(callback) callback();
-        	}, 10);
+        	}, 20);
         };
         this.showStar = function(star) {
+        	if (this.lieu != "constellation") return;
+        	
         	$(".constellation-star").hide();
         	var cible = star.attr("cible");
         	this.lieu = cible;

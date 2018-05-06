@@ -71,6 +71,7 @@ preload.god-ado[step="1"] {
 }
 
 /**GODDESS**/
+/**IMBOLC**/
 preload.goddess-imbolc[step="1"] {
 	background-image: url("../img/game/goddess/imbolc/1.png");
 }
@@ -100,6 +101,37 @@ preload.goddess-imbolc[step="9"] {
 }
 preload.goddess-imbolc[step="10"] {
 	background-image: url("../img/game/goddess/imbolc/10.png");
+}
+/**OSTARA**/
+preload.goddess-ostara[step="1"] {
+	background-image: url("../img/game/goddess/ostara/1.png");
+}
+preload.goddess-ostara[step="2"] {
+	background-image: url("../img/game/goddess/ostara/2.png");
+}
+preload.goddess-ostara[step="3"] {
+	background-image: url("../img/game/goddess/ostara/3.png");
+}
+preload.goddess-ostara[step="4"] {
+	background-image: url("../img/game/goddess/ostara/4.png");
+}
+preload.goddess-ostara[step="5"] {
+	background-image: url("../img/game/goddess/ostara/5.png");
+}
+preload.goddess-ostara[step="6"] {
+	background-image: url("../img/game/goddess/ostara/6.png");
+}
+preload.goddess-ostara[step="7"] {
+	background-image: url("../img/game/goddess/ostara/7.png");
+}
+preload.goddess-ostara[step="8"] {
+	background-image: url("../img/game/goddess/ostara/8.png");
+}
+preload.goddess-ostara[step="9"] {
+	background-image: url("../img/game/goddess/ostara/9.png");
+}
+preload.goddess-ostara[step="10"] {
+	background-image: url("../img/game/goddess/ostara/10.png");
 }
 
 /**Dieu**/

@@ -161,7 +161,7 @@ a {
 }
 
 @keyframes close-turn {
-    0% {background-image: url("../img/game/interface/croix/0.png");}
+    0%, 100% {background-image: url("../img/game/interface/croix/0.png");}
     5% {background-image: url("../img/game/interface/croix/1.png");}
     9% {background-image: url("../img/game/interface/croix/2.png");}
     14% {background-image: url("../img/game/interface/croix/3.png");}
@@ -183,5 +183,4 @@ a {
     86% {background-image: url("../img/game/interface/croix/19.png");}
     90% {background-image: url("../img/game/interface/croix/20.png");}
     95% {background-image: url("../img/game/interface/croix/21.png");}
-    100% {background-image: url("../img/game/interface/croix/0.png");}
 }

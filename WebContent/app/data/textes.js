@@ -142,6 +142,10 @@ define(["jquery"], function($){
         	fr : "Autel",
         	en : "Autel"
         },
+        "success" : {
+        	fr : "Succès",
+        	en : "Success"
+        },
 		"croyance" : {
 			fr : "Croyance",
 			en : "Croyance"
@@ -551,6 +555,50 @@ define(["jquery"], function($){
 		"cinematique-child4" : {
 			fr : "Bon courage mon maître ! Vous saurez faire les bons choix !",
 			en : "-"
+		},
+		
+		/**
+		 * Success
+		 */
+		"success-500click" : {
+			fr : "500 Clics",
+			en : "500 Clicks"
+		},
+		"success-1000click" : {
+			fr : "1K Clics",
+			en : "1K Clicks"
+		},
+		"success-5000click" : {
+			fr : "5K Clics",
+			en : "5K Clicks"
+		},
+		"success-10000click" : {
+			fr : "10KClics",
+			en : "10K Clicks"
+		},
+		"success-50000click" : {
+			fr : "50K Clics",
+			en : "50K Clicks"
+		},
+		"success-1000000click" : {
+			fr : "1M Clics",
+			en : "1M Clicks"
+		},
+		"success-50000000click" : {
+			fr : "50M Clics",
+			en : "50M Clicks"
+		},
+		"success-100000000click" : {
+			fr : "100M Clics",
+			en : "100M Clicks"
+		},
+		"success-500000000click" : {
+			fr : "500M Clics",
+			en : "500M Clicks"
+		},
+		"success-maxClick" : {
+			fr : "Un max de clics",
+			en : "Max of clicks"
 		},
 		
 		/**
