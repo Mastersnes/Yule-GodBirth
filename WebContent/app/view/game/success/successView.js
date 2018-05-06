@@ -55,14 +55,19 @@ define(["jquery",
          */
         this.drawSuccess = function(success, complete) {
         	var successDom = $("<success></success>");
-        	successDom.attr("id", success);
-        	successDom.attr("title", this.Textes.get(success));
-        	successDom.addClass(success);
-        	if (complete) successDom.addClass("completed");
+        	if (complete){
+        		successDom.attr("title", this.Textes.get(success));
+        		successDom.addClass(success);
+        		successDom.addClass("completed");
+        	}
         	
         	var successTitre = $("<div></div>");
         	successTitre.addClass("text");
-        	successTitre.html(this.Textes.get(success));
+        	if (complete) {
+        		successTitre.html(this.Textes.get(success));
+        	}else {
+        		successTitre.html("?");
+        	}
         	successDom.append(successTitre);
         	
         	var successIcon = $("<div></div>");

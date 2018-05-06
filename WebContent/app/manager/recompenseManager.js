@@ -21,7 +21,7 @@ function($, _, Utils) {
 		
 		this.addClick = function() {
 			if (this.compteurClick >= 1000000000) return;
-			this.compteurClick++;
+			this.compteurClick+=100;
 			console.log("click : ", this.compteurClick);
 			
 			this.parent.kongregateUtils.score("compteurClick", this.compteurClick);
@@ -77,17 +77,14 @@ function($, _, Utils) {
 					recompense.illumination += 500;
 					break;
 				case 100000000 :
-					this.addSuccess("success-100000000click");
 					recompense.croyance += this.compteurClick;
 					recompense.illumination += 1000;
 					break;
 				case 500000000 :
-					this.addSuccess("success-500000000click");
 					recompense.croyance += this.compteurClick;
 					recompense.illumination += 5000;
 					break;
 				case 999000000 :
-					this.addSuccess("success-maxClick");
 					recompense.croyance += this.compteurClick;
 					recompense.illumination += 10000;
 					break;

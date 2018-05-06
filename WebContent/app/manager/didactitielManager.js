@@ -109,6 +109,11 @@ function($, _, Utils) {
 				}
 			}
 			
+			if (this.data.indication.event) {
+				toShow = true;
+				$(this.el).find(".step.fleche-event").show();
+			}
+			
 			this.saveManager.save("didactitiel", this.data);
 			
 			if (toShow) $(this.el).show();
@@ -150,11 +155,24 @@ function($, _, Utils) {
 				this.data.blocker.constellations = false;
 				this.data.indication.constellations = false;
 			}
+			/**
+			 * Acces à l'autel
+			 */
+			if (currentText == "didactitiel-autel2") {
+				this.data.blocker.autel = false;
+			}
+			
+			if (currentText == "cinematique-child4" || currentText == "cinematique-child5") {
+				var inGeneralEvent = this.parent.eventManager.generalEvents.indexOf("first-event") > -1;
+				var inUniqueEvent = this.parent.eventManager.uniquesEvents.indexOf("first-event") > -1;
+				if (!(inGeneralEvent || inUniqueEvent)) {
+					this.parent.eventManager.addEvents("first-event");
+					this.data.indication.event = true;
+				}
+			}
 			
 			var grandTout = this.ameliorationView.Items.get("grandTout");
 			if (grandTout.level > 5) {
-				this.parent.kongregateUtils.score("tutorialEnd", 1);
-				this.data.step = 4;
 				this.data.blocker.ameliorations = false;
 				this.data.blocker.constellations = false;
 				this.data.blocker.autel = false;
@@ -162,12 +180,13 @@ function($, _, Utils) {
 				this.data.indication.barre = false;
 				this.data.indication.constellations = false;
 			}
-			
-			/**
-			 * Acces à l'autel
-			 */
-			if (currentText == "didactitiel-autel2") {
-				this.data.blocker.autel = false;
+			if (grandTout.level > 6) {
+				var inGeneralEvent = this.parent.eventManager.generalEvents.indexOf("first-event") > -1;
+				var inUniqueEvent = this.parent.eventManager.uniquesEvents.indexOf("first-event") > -1;
+				if (!(inGeneralEvent || inUniqueEvent)) {
+					this.parent.eventManager.addEvents("first-event");
+				}
+				this.data.indication.event = false;
 			}
 		};
 		

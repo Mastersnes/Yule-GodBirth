@@ -15,16 +15,12 @@ successList {
 successList > success {
 	position: relative !important;
 	display: inline-block;
-	width: 12%; height: 12%;
+	width: 12%; height: 14%;
 	margin-top: 3%;
 	margin-left: 1%;
 }
 successList > success:not(.completed) .icon {
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    -o-filter: grayscale(1);
-    -ms-filter: grayscale(1);
+    background-image: url("../img/game/success/vide.png") !important;
     cursor: not-allowed;
 }
 
@@ -40,7 +36,6 @@ successList > success .icon {
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	
-	border: 1px solid;
 	overflow: hidden;
 }
 

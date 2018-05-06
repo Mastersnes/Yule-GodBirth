@@ -10,6 +10,7 @@ define(["jquery",
 			    text : "first-event",
 			    rarity : 1,
 			    unique : true,
+			    timer : -1,
 			    actions : [
 			         {
 			             name : "yesButton",

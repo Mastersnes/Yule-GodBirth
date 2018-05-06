@@ -553,6 +553,10 @@ define(["jquery"], function($){
 			en : "-"
 		},
 		"cinematique-child4" : {
+			fr : "Lorsque le sablier du destin apparait, cliquez-dessus pour prendre vos decisions.",
+			en : "-"
+		},
+		"cinematique-child5" : {
 			fr : "Bon courage mon maître ! Vous saurez faire les bons choix !",
 			en : "-"
 		},
@@ -587,18 +591,6 @@ define(["jquery"], function($){
 		"success-50000000click" : {
 			fr : "50M Clics",
 			en : "50M Clicks"
-		},
-		"success-100000000click" : {
-			fr : "100M Clics",
-			en : "100M Clicks"
-		},
-		"success-500000000click" : {
-			fr : "500M Clics",
-			en : "500M Clicks"
-		},
-		"success-maxClick" : {
-			fr : "Un max de clics",
-			en : "Max of clicks"
 		},
 		
 		/**

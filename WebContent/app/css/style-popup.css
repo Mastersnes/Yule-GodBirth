@@ -86,13 +86,13 @@ mask {
 .popupText {
 	display: none;
 	position: absolute;
-	left : 12%;
+	left : 15%;
 	top : 5%;
     z-index: 2000;
     
     text-align: center;
     
-    width: 80%;
+    width: 75%;
     height: auto;
     max-height: 100%;
     

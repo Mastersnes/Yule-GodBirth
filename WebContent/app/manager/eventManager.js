@@ -33,9 +33,6 @@ function($, _, Utils, page, Events) {
 		    //Si la popup est deja ouverte, on stop tout
 			if (this.eventOpen) return;
 		    
-		    // Si Origin parle
-			if (!this.textManager.empty()) return;
-			
 			// Si on a une popup info ouverte
 			if (this.parent.alertOpen) return;
 			
@@ -87,7 +84,9 @@ function($, _, Utils, page, Events) {
 			
 			var that = this;
 			this.timer++;
-			if (this.timer > 5) {
+			var timerMax = 5;
+			if (this.currentEvent.timer) timerMax = this.currentEvent;
+			if (this.timer > timerMax && timerMax != -1) {
 				$(".scene #event-timer").removeClass("start");
 				$(".scene #event-timer").fadeOut("fast", function() {
 					that.currentEvent = null;
@@ -199,6 +198,7 @@ function($, _, Utils, page, Events) {
 		this.makeGeneralEvents = function() {
 			var that = this;
 			$(".scene #event-timer").click(function() {
+				that.parent.didactitielManager.data.indication.event = false;
 				$(".scene #event-timer").removeClass("start");
 				$(".scene #event-timer").fadeOut("fast");
 				that.show();

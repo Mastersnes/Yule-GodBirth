@@ -35,10 +35,10 @@ define(["jquery"], function($){
                 name : "child",
                 nbr : 5,
 				next : "ado",
-                text : ["cinematique-child1", "cinematique-child2", "cinematique-child3", "cinematique-child4"],
+                text : ["cinematique-child1", "cinematique-child2", "cinematique-child3", "cinematique-child4", "cinematique-child5"],
                 events : {
                     typeEvents : [],
-                    newEvents : ["first-event"]
+                    newEvents : []
                 },
                 animations : [
 	                {

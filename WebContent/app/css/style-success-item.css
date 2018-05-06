@@ -3,7 +3,7 @@
 * Liste des Succes
 **/
 successList > success.success-500click .icon {
-	background-image: url("../img/game/ameliorations/dieu/dieu.png");
+	background-image: url("../img/game/success/500.png");
 }
 successList > success.success-1000click .icon {
 	background-image: url("../img/game/ameliorations/deesse/deesse.png");
@@ -22,13 +22,4 @@ successList > success.success-1000000click .icon {
 }
 successList > success.success-50000000click .icon {
 	background-image: url("../img/game/ameliorations/gouffre/gouffre.png");
-}
-successList > success.success-100000000click .icon {
-	background-image: url("../img/game/ameliorations/grandTout/grandTout.png");
-}
-successList > success.success-500000000click .icon {
-	background-image: url("../img/game/ameliorations/connaissance/connaissance.png");
-}
-successList > success.success-maxClick .icon {
-	background-image: url("../img/game/ameliorations/evolution/evolution.png");
 }

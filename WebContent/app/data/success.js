@@ -6,10 +6,7 @@ define(["jquery"], function($){
 	            "success-10000click", 
 	            "success-50000click",
 	            "success-1000000click",
-	            "success-50000000click",
-	            "success-100000000click",
-	            "success-500000000click",
-	            "success-maxClick"];
+	            "success-50000000click"];
 	
 	return {
 		/**

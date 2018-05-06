@@ -87,7 +87,8 @@ function($, _, Utils) {
 						},
 						indication : {
 							barre : false,
-							constellations : false
+							constellations : false,
+							event : false
 						},
 						recompense : {
 							start : false
