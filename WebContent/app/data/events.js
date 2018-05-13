@@ -1,6 +1,9 @@
 'use strict';
 define(["jquery", 
-        "app/data/events/emissaires-events"], function($, EmissairesEvents){
+        "app/data/events/emissaires-events",
+        "app/data/events/peuple-events",
+        "app/data/events/pegre-events",
+        "app/data/events/boss-events"], function($, EmissairesEvents, PeupleEvents, PegreEvents, BossEvents){
 	var data = {
 	        /**
 	         * Evenements generaux
@@ -8,16 +11,12 @@ define(["jquery",
 			"first-event" : {
 				name : "first-event",
 			    text : "first-event",
-			    rarity : 1,
+			    rarity : 0,
 			    unique : true,
 			    timer : -1,
 			    actions : [
 			         {
 			             name : "yesButton",
-			             prix : {
-                             croyance : 1,
-                             illumination : 2
-                         },
 			             action : function(game) {
 			                 game.pointManager.addPointsPercent({
 		 						croyance : 10,
@@ -45,28 +44,15 @@ define(["jquery",
                          }
                      }
 			    ]
-			},
-			"eveil-cthulhu-1!-event" : {
-                name : "eveil-cthulhu-1!-event",
-                text : "eveil-cthulhu-1!-event",
-                rarity : 10,
-                unique : true,
-                actions : [
-                     {
-                         name : "yesButton",
-                         action : function(game) {}
-                     },
-                     {
-                         name : "noButton",
-                         action : function(game) {}
-                     }
-                ]
-            }
+			}
 	};
 	
 	return {
 		get : function(key) {
 			var event = EmissairesEvents.get(key);
+			if (!event) PeupleEvents.get(key);
+			if (!event) PegreEvents.get(key);
+			if (!event) BossEvents.get(key);
 		    if (!event) event = data[key];
 		    
 		    return event;

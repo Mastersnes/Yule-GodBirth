@@ -1,9 +1,9 @@
 'use strict';
 define(["jquery"], function($){
+	/**
+	 * Question des emissaires
+	 */
 	var data = {
-			/**
-			 * Question des emissaires
-			 */
 			"pluie?-event" : {
 				name : "pluie?-event",
 			    text : "pluie?-event",
@@ -13,12 +13,12 @@ define(["jquery"], function($){
 			         {
 			             name : "yesButton",
 			             prix : {
-                             croyance : 30,
+                             croyance : 10,
                              illumination : 0
                          },
 			             action : function(game) {
                              game.pointManager.addPointsPercent({
-                                croyance : 5,
+                                croyance : 0,
                                 illumination : 0,
                                 bien : 10,
                                 mal : 0
@@ -32,7 +32,7 @@ define(["jquery"], function($){
                          name : "noButton",
                          action : function(game) {
                              game.pointManager.addPointsPercent({
-                                croyance : 2,
+                                croyance : 0,
                                 illumination : 0,
                                 bien : 0,
                                 mal : 15
@@ -46,7 +46,7 @@ define(["jquery"], function($){
 			"cadeau-pluie?-event" : {
                 name : "cadeau-pluie?-event",
                 text : "cadeau-pluie?-event",
-                rarity : 20,
+                rarity : 50,
                 unique : true,
                 actions : [
                      {
@@ -81,7 +81,7 @@ define(["jquery"], function($){
 			"eclipse?-event" : {
 				name : "eclipse?-event",
 			    text : "eclipse?-event",
-			    rarity : 10,
+			    rarity : 20,
 			    unique : true,
 			    actions : [
 			         {
@@ -92,7 +92,7 @@ define(["jquery"], function($){
                          },
 			             action : function(game) {
                              game.pointManager.addPointsPercent({
-                                croyance : 10,
+                                croyance : 0,
                                 illumination : 0,
                                 bien : 0,
                                 mal : 10
@@ -106,7 +106,7 @@ define(["jquery"], function($){
                          name : "noButton",
                          action : function(game) {
                              game.pointManager.addPointsPercent({
-                                 croyance : 0,
+                                 croyance : 10,
                                  illumination : 0,
                                  bien : 5,
                                  mal : 0
@@ -147,7 +147,7 @@ define(["jquery"], function($){
                              game.pointManager.addPointsPercent({
                                  croyance : 1,
                                  illumination : 0,
-                                 bien : 1,
+                                 bien : 10,
                                  mal : 0
                               });
                              game.pointManager.addPoints({
@@ -166,14 +166,14 @@ define(["jquery"], function($){
 			"sacrifice?-event" : {
 				name : "sacrifice?-event",
 			    text : "sacrifice?-event",
-			    rarity : 10,
+			    rarity : 20,
 			    unique : true,
 			    actions : [
 			         {
 			             name : "yesButton",
 			             action : function(game) {
 			                 game.pointManager.addPointsPercent({
-                                 croyance : 10,
+                                 croyance : 20,
                                  illumination : 0,
                                  bien : 0,
                                  mal : 30
@@ -188,7 +188,7 @@ define(["jquery"], function($){
                              game.pointManager.addPointsPercent({
                                  croyance : 3,
                                  illumination : 0,
-                                 bien : 10,
+                                 bien : 15,
                                  mal : 0
                               });
                              
@@ -201,7 +201,7 @@ define(["jquery"], function($){
 			"blessure?-event" : {
 				name : "blessure?-event",
 			    text : "blessure?-event",
-			    rarity : 50,
+			    rarity : 100,
 			    unique : false,
 			    actions : [
 			         {
@@ -212,7 +212,7 @@ define(["jquery"], function($){
                          },
 			             action : function(game) {
 			                 game.pointManager.addPointsPercent({
-                                 croyance : 1,
+                                 croyance : 0,
                                  illumination : 0,
                                  bien : 5,
                                  mal : 0
@@ -239,18 +239,24 @@ define(["jquery"], function($){
 				name : "argent?-event",
 			    text : "argent?-event",
 			    rarity : 50,
-			    unique : false,
+			    unique : true,
 			    actions : [
 			         {
 			             name : "yesButton",
+			             prix : {
+                             croyance : 10,
+                             illumination : 0
+                         },
 			             action : function(game) {
 			                 game.alertPopup("argent?-event-ok");
+			                 game.eventManager.addEvents(["mafia-intergalactique!-event"]);
 			             }
 			         },
 			         {
                          name : "noButton",
                          action : function(game) {
                         	 game.alertPopup("argent?-event-ko");
+                        	 game.eventManager.addEvents(["crime-dieu1!-event"]);
                          }
                      }
 			    ]
@@ -259,19 +265,21 @@ define(["jquery"], function($){
 			"vrai-dieu?-event" : {
                 name : "vrai-dieu?-event",
                 text : "vrai-dieu?-event",
-                rarity : 10,
-                unique : false,
+                rarity : 30,
+                unique : true,
                 actions : [
                      {
                          name : "yesButton",
                          action : function(game) {
                              game.alertPopup("vrai-dieu?-event-ok");
+                             game.eventManager.addEvents(["soupcon1!-event"]);
                          }
                      },
                      {
                          name : "noButton",
                          action : function(game) {
                              game.alertPopup("vrai-dieu?-event-ko");
+                             game.eventManager.addEvents(["rebellion1!-event"]);
                          }
                      }
                 ]

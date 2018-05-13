@@ -792,3 +792,12 @@ preload.close-preload[step="18"] {background-image: url("../img/game/interface/c
 preload.close-preload[step="19"] {background-image: url("../img/game/interface/croix/19.png");}
 preload.close-preload[step="20"] {background-image: url("../img/game/interface/croix/20.png");}
 preload.close-preload[step="21"] {background-image: url("../img/game/interface/croix/21.png");}
+
+/**
+* Event Timer
+**/
+preload.timer-preload[step="1"] {background-image: url("../img/game/interface/event-timer/1.png");}
+preload.timer-preload[step="2"] {background-image: url("../img/game/interface/event-timer/2.png");}
+preload.timer-preload[step="3"] {background-image: url("../img/game/interface/event-timer/3.png");}
+preload.timer-preload[step="4"] {background-image: url("../img/game/interface/event-timer/4.png");}
+preload.timer-preload[step="5"] {background-image: url("../img/game/interface/event-timer/5.png");}

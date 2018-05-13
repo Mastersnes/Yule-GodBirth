@@ -3,7 +3,7 @@ define(["jquery",
         "app/data/events/emissaires/entrer-events",
         "app/data/events/emissaires/refus-events"], function($, EmissaireEntreEvents, EmissaireRefusEvents){
 	/**
-	 * Evenements liés aux emissaires
+	 * Evenements lies aux emissaires
 	 */
     var data = {};
 	

@@ -1,25 +1,35 @@
 'use strict';
 define(["jquery"], function($){
+	/**
+	 * Si on refuse d'entendre les emissaires
+	 * TODO
+	 */
 	var data = {
 			/**
-			 * Si on refuse d'entendre les emissaires
+			 * Peut aussi arriver si on refuse de faire tomber la pluie
 			 */
 			"secheresse!-event" : {
 				name : "secheresse!-event",
 			    text : "secheresse!-event",
 			    rarity : 10,
-			    unique : false,
+			    unique : true,
 			    actions : [
 			         {
-			             name : "yesButton",
+			             name : "faire-pleuvoir",
+			             prix : {
+			            	croyance : 20,
+			            	illumination : 0
+			             },
 			             action : function(game) {
 			                 game.alertPopup("secheresse!-event-ok");
+			                 game.eventManager.addEvents(["culte-eau-event"]);
 			             }
 			         },
 			         {
                          name : "noButton",
                          action : function(game) {
                         	 game.alertPopup("secheresse!-event-ko");
+                        	 game.eventManager.addEvents(["culte-feu-event"]);
                          }
                      }
 			    ]
@@ -27,8 +37,8 @@ define(["jquery"], function($){
 			"glaciation!-event" : {
 				name : "glaciation!-event",
 			    text : "glaciation!-event",
-			    rarity : 10,
-			    unique : false,
+			    rarity : 20,
+			    unique : true,
 			    actions : [
 			         {
 			             name : "yesButton",

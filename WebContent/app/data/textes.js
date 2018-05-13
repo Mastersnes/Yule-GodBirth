@@ -649,7 +649,7 @@ define(["jquery"], function($){
             en : "-"
         },
         "eclipse?-event-ok" : {
-            fr : "Vous avez fait le bon choix, et vous ne le regretterez pas !",
+            fr : "Vous avez fait le bon choix mon dieu !",
             en : "-"
         },
         "eclipse?-event-ko" : {
@@ -717,16 +717,68 @@ define(["jquery"], function($){
          * Argent ?
          */
         "argent?-event" : {
-            fr : "",
+            fr : "Bonjour cher dieu ! J'ai, euh, comment dire... besoin de votre aide !<br/> Rendez-moi riche et je vous assure que vous ne le regretterez pas !",
             en : "-"
         },
         "argent?-event-ok" : {
-            fr : "",
+            fr : "Magnifique ! Je suis riche ! Ahaha ! Voilà le vrai pouvoir ! Merci à vous grand dieu !",
             en : "-"
         },
         "argent?-event-ko" : {
-            fr : "",
+            fr : "Très bien... Comme vous le desirez... Sachez tout de même que ça ne s'arretera pas là !",
             en : "-"
+        },
+        
+        /**
+         * Vrai dieu ?
+         */
+        "vrai-dieu?-event" : {
+            fr : "Bonjour ! Bon... Je n'irais pas par quatres chemins. Êtes-vous un vrai dieu ?",
+            en : "-"
+        },
+        "vrai-dieu?-event-ok" : {
+            fr : "Incroyable ! Ils existent réellement ? J'ai vraiment du mal à y croire !",
+            en : "-"
+        },
+        "vrai-dieu?-event-ko" : {
+            fr : "Hum... Oui, c'est bien ce que je pensais...",
+            en : "-"
+        },
+        
+        /**
+         * Secheresse ?
+         */
+        "secheresse!-event" : {
+            fr : "Maître ! Il semblerait qu'une partie de l'univers soit devenue desertique.<br/> Voulez-vous intervenir ?",
+            en : "-"
+        },
+        "faire-pleuvoir" : {
+            fr : "Faire pleuvoir",
+            en : "-"
+        },
+        "secheresse!-event-ok" : {
+            fr : "Les choses semblent s'ameliorer et la vie recommence à apparaitre.",
+            en : "-"
+        },
+        "secheresse!-event-ko" : {
+            fr : "Le desert galactique s'etend mais certaine formes de vie semble s'y aclimater...",
+            en : "-"
+        },
+
+        /**
+         * Glaciation ?
+         */
+        "glaciation!-event" : {
+        	fr : "Maître ! Un nuage stellaire gele toute une partie de l'univers ! Voulez-vous intervenir ?",
+        	en : "-"
+        },
+        "glaciation!-event-ok" : {
+        	fr : "",
+        	en : "-"
+        },
+        "glaciation!-event-ko" : {
+        	fr : "",
+        	en : "-"
         },
 	};
 	
