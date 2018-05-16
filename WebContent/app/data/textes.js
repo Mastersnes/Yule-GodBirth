@@ -773,11 +773,11 @@ define(["jquery"], function($){
         	en : "-"
         },
         "glaciation!-event-ok" : {
-        	fr : "",
+        	fr : "Nous avons evité une catastrophe ! Les blocs de glace commence à fondre doucement.",
         	en : "-"
         },
         "glaciation!-event-ko" : {
-        	fr : "",
+        	fr : "La glace s'etend... Esperont que les choses se reglent d'elles même...",
         	en : "-"
         },
 	};

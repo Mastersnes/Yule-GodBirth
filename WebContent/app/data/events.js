@@ -44,7 +44,103 @@ define(["jquery",
                          }
                      }
 			    ]
-			}
+			},
+        	"culte-eau-event" : {
+        	    name : "culte-eau-event",
+        	    text : "culte-eau-event",
+        	    rarity : 10,
+        	    unique : true,
+        	    actions : [
+        	               {
+        	                   name : "yesButton",
+        	                   action : function(game) {}
+        	               },
+        	               {
+        	                   name : "noButton",
+        	                   action : function(game) {}
+        	               }
+        	               ]
+        	},
+            "culte-feu-event" : {
+                name : "culte-feu-event",
+                text : "culte-feu-event",
+                rarity : 10,
+                unique : true,
+                actions : [
+                           {
+                               name : "yesButton",
+                               action : function(game) {}
+                           },
+                           {
+                               name : "noButton",
+                               action : function(game) {}
+                           }
+                           ]
+            },
+            "culte-glace-event" : {
+                name : "culte-glace-event",
+                text : "culte-glace-event",
+                rarity : 10,
+                unique : true,
+                actions : [
+                           {
+                               name : "yesButton",
+                               action : function(game) {}
+                           },
+                           {
+                               name : "noButton",
+                               action : function(game) {}
+                           }
+                           ]
+            },
+            "un-monde-feu-event" : {
+                name : "un-monde-feu-event",
+                text : "un-monde-feu-event",
+                rarity : 10,
+                unique : true,
+                actions : [
+                           {
+                               name : "yesButton",
+                               action : function(game) {}
+                           },
+                           {
+                               name : "noButton",
+                               action : function(game) {}
+                           }
+                           ]
+            },
+            "un-monde-glace-event" : {
+                name : "un-monde-glace-event",
+                text : "un-monde-glace-event",
+                rarity : 10,
+                unique : true,
+                actions : [
+                           {
+                               name : "yesButton",
+                               action : function(game) {}
+                           },
+                           {
+                               name : "noButton",
+                               action : function(game) {}
+                           }
+                           ]
+            },
+            "deux-monde-feu-glace-event" : {
+                name : "deux-monde-feu-glace-event",
+                text : "deux-monde-feu-glace-event",
+                rarity : 10,
+                unique : true,
+                actions : [
+                           {
+                               name : "yesButton",
+                               action : function(game) {}
+                           },
+                           {
+                               name : "noButton",
+                               action : function(game) {}
+                           }
+                           ]
+            }
 	};
 	
 	return {

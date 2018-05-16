@@ -175,6 +175,8 @@ function($, _, Utils, page, Events) {
 		 */
 		this.addEvents = function(events) {
 		    if (!events) return;
+		    if (this.generalEvents.indexOf(events) > -1) return;
+		    if (this.uniquesEvents.indexOf(events) > -1) return;
 		    this.generalEvents = this.generalEvents.concat(events);
 		    this.saveManager.save("generalEvents", this.generalEvents);
 		};

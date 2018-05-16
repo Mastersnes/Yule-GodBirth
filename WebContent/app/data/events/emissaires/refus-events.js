@@ -30,6 +30,14 @@ define(["jquery"], function($){
                          action : function(game) {
                         	 game.alertPopup("secheresse!-event-ko");
                         	 game.eventManager.addEvents(["culte-feu-event"]);
+                        	 
+                        	 // Si on a deja laissé s'etendre la glace, on finira avec deux mondes
+                        	 if (game.eventManager.contains("un-monde-glace-event") > -1) {
+                        	     game.eventManager.removeEvents(["un-monde-glace-event"]);
+                        	     game.eventManager.addEvents(["deux-monde-feu-glace-event"]);
+                        	 }else {
+                        	     game.eventManager.addEvents(["un-monde-feu-event"]);
+                        	 }
                          }
                      }
 			    ]
@@ -44,12 +52,21 @@ define(["jquery"], function($){
 			             name : "yesButton",
 			             action : function(game) {
 			                 game.alertPopup("glaciation!-event-ok");
+			                 game.eventManager.addEvents(["culte-eau-event"]);
 			             }
 			         },
 			         {
                          name : "noButton",
                          action : function(game) {
                         	 game.alertPopup("glaciation!-event-ko");
+                        	 game.eventManager.addEvents(["culte-glace-event"]);
+                        	 // Si on a deja laissé s'etendre le feu, on finira avec deux mondes
+                        	 if (game.eventManager.contains("un-monde-feu-event") > -1) {
+                                 game.eventManager.removeEvents(["un-monde-feu-event"]);
+                                 game.eventManager.addEvents(["deux-monde-feu-glace-event"]);
+                             }else {
+                                 game.eventManager.addEvents(["un-monde-glace-event"]);
+                             }
                          }
                      }
 			    ]
