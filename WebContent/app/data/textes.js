@@ -749,7 +749,7 @@ define(["jquery"], function($){
          * Secheresse ?
          */
         "secheresse!-event" : {
-            fr : "Maître ! Il semblerait qu'une partie de l'univers soit devenue desertique.<br/> Voulez-vous intervenir ?",
+            fr : "Maître ! Il semblerait qu'une planete entiere soit devenue desertique.<br/> Voulez-vous intervenir ?",
             en : "-"
         },
         "faire-pleuvoir" : {
@@ -769,7 +769,7 @@ define(["jquery"], function($){
          * Glaciation ?
          */
         "glaciation!-event" : {
-        	fr : "Maître ! Un nuage stellaire gele toute une partie de l'univers ! Voulez-vous intervenir ?",
+        	fr : "Maître ! Un nuage stellaire gele toute une planete ! Voulez-vous intervenir ?",
         	en : "-"
         },
         "glaciation!-event-ok" : {
@@ -779,6 +779,30 @@ define(["jquery"], function($){
         "glaciation!-event-ko" : {
         	fr : "La glace s'etend... Esperont que les choses se reglent d'elles même...",
         	en : "-"
+        },
+
+        /**
+         * Sacrifice !
+         */
+        "sacrifice!-event" : {
+            fr : "C'est une catastrophe ! Une planete de l'espace A42-22C sacrifie nombre de leurs habitant en votre nom ! Que devons-nous faire ?",
+            en : "-"
+        },
+        "arreter-massacre" : {
+            fr : "Arreter ce massacre !",
+            en : "-"
+        },
+        "sacrifice!-event-ok" : {
+            fr : "Impossible de les arreter maître ! Ils ont completement perdus la raison et ne nous ecoute plus !",
+            en : "-"
+        },
+        "laisserfaire" : {
+            fr : "Laisser faire",
+            en : "-"
+        },
+        "sacrifice!-event-ko" : {
+            fr : "Comment ?! Euh... Tr... Très bien maître...",
+            en : "-"
         },
 	};
 	

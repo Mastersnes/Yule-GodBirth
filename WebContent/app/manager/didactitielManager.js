@@ -163,9 +163,8 @@ function($, _, Utils) {
 			}
 			
 			if (currentText == "cinematique-child4" || currentText == "cinematique-child5") {
-				var inGeneralEvent = this.parent.eventManager.generalEvents.indexOf("first-event") > -1;
-				var inUniqueEvent = this.parent.eventManager.uniquesEvents.indexOf("first-event") > -1;
-				if (!(inGeneralEvent || inUniqueEvent)) {
+				var containsEvent = this.parent.eventManager.contains("first-event") > -1;
+				if (!containsEvent) {
 					this.parent.eventManager.addEvents("first-event");
 					this.data.indication.event = true;
 				}

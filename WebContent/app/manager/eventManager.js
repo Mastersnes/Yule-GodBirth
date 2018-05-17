@@ -61,7 +61,6 @@ function($, _, Utils, page, Events) {
 		    	var eventIndex = totalEvents.indexOf(eventName);
 		    	totalEvents.splice(eventIndex, 1);
 		    }
-		    console.log("events : ", totalEvents);
 		    if (totalEvents.length == 0) return;
 		    
 	        var randIndex = Utils.rand(0, totalEvents.length);
@@ -145,6 +144,7 @@ function($, _, Utils, page, Events) {
 		    _.templateSettings.variable = "data";
             var template = _.template(page);
             var templateData = {
+                    me : this,
                     text : that.Textes,
                     event : that.currentEvent
             };
@@ -175,8 +175,7 @@ function($, _, Utils, page, Events) {
 		 */
 		this.addEvents = function(events) {
 		    if (!events) return;
-		    if (this.generalEvents.indexOf(events) > -1) return;
-		    if (this.uniquesEvents.indexOf(events) > -1) return;
+		    if (this.contains(events)) return;
 		    this.generalEvents = this.generalEvents.concat(events);
 		    this.saveManager.save("generalEvents", this.generalEvents);
 		};
@@ -206,6 +205,31 @@ function($, _, Utils, page, Events) {
 				that.show();
 		    });
 		};
+		
+		this.contains = function(event) {
+		    return this.generalEvents.indexOf(event) > -1 || this.uniquesEvent.indexOf(event) > -1;
+		};
+		
+		this.removeEvents = function(event) {
+		    this.generalEvents.splice(this.generalEvents.indexOf(event), 1);
+		};
+		
+		/**
+		 * Verifie si une action doit apparaitre et etre proposée
+		 */
+		this.checkActionAffichable = function(action) {
+		    var conditions = action.conditions;
+            if (!conditions || conditions.length == 0) return true;
+            
+            var ameliorationView = parent.spaceView.ameliorationView;
+            
+            for (var index in conditions) {
+                var condition = conditions[index];
+                var itemRestrict = ameliorationView.Items.get(condition.name);
+                if (itemRestrict.level < condition.level) return false;
+            }
+            return true;
+        };
 
 		this.init(parent);
 	};

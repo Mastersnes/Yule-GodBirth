@@ -21,6 +21,12 @@ define(["jquery"], function($){
 			            	illumination : 0
 			             },
 			             action : function(game) {
+			                 game.pointManager.addPointsPercent({
+                                croyance : 0,
+                                illumination : 0,
+                                bien : 20,
+                                mal : 0
+                             });
 			                 game.alertPopup("secheresse!-event-ok");
 			                 game.eventManager.addEvents(["culte-eau-event"]);
 			             }
@@ -50,7 +56,17 @@ define(["jquery"], function($){
 			    actions : [
 			         {
 			             name : "yesButton",
+			             prix : {
+                            croyance : 30,
+                            illumination : 0
+                         },
 			             action : function(game) {
+			                 game.pointManager.addPointsPercent({
+                                croyance : 0,
+                                illumination : 0,
+                                bien : 20,
+                                mal : 0
+                             });
 			                 game.alertPopup("glaciation!-event-ok");
 			                 game.eventManager.addEvents(["culte-eau-event"]);
 			             }
@@ -74,23 +90,46 @@ define(["jquery"], function($){
 			"sacrifice!-event" : {
 				name : "sacrifice!-event",
 			    text : "sacrifice!-event",
-			    rarity : 10,
-			    unique : false,
+			    rarity : 30,
+			    unique : true,
 			    actions : [
 			         {
-			             name : "yesButton",
+			             name : "arreter-massacre",
 			             action : function(game) {
 			                 game.alertPopup("sacrifice!-event-ok");
+			                 game.eventManager.showNow("sacrifice!-event-2");
 			             }
 			         },
 			         {
-                         name : "noButton",
+                         name : "laisserfaire",
                          action : function(game) {
+                             game.pointManager.addPointsPercent({
+                                 croyance : 0,
+                                 illumination : 0,
+                                 bien : 0,
+                                 mal : 20
+                              });
                         	 game.alertPopup("sacrifice!-event-ko");
                          }
                      }
 			    ]
 			},
+			"sacrifice!-event-2" : {
+                name : "sacrifice!-event-2",
+                text : "sacrifice!-event-2",
+                rarity : -1,
+                unique : true,
+                actions : [
+                     {
+                         name : "yesButton",
+                         action : function(game) {}
+                     },
+                     {
+                         name : "noButton",
+                         action : function(game) {}
+                     }
+                ]
+            },
 			"epidemie!-event" : {
 				name : "epidemie!-event",
 			    text : "epidemie!-event",

@@ -7,6 +7,7 @@
                 var actions = data.event.actions;
                 for (var actionIndex in actions) {
                 var action = actions[actionIndex];
+                if (!data.me.checkActionAffichable(action)) continue;
             %>
                 <li index="<%=actionIndex%>"><%=data.text.get(action.name)%> 
                     <% if (action.prix) { %>
