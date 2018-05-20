@@ -2,7 +2,6 @@
 define(["jquery"], function($){
 	/**
 	 * Si on refuse d'entendre les emissaires
-	 * TODO
 	 */
 	var data = {
 			/**
@@ -37,7 +36,7 @@ define(["jquery"], function($){
                         	 game.alertPopup("secheresse!-event-ko");
                         	 game.eventManager.addEvents(["culte-feu-event"]);
                         	 
-                        	 // Si on a deja laissé s'etendre la glace, on finira avec deux mondes
+                        	 // Si on a deja laissï¿½ s'etendre la glace, on finira avec deux mondes
                         	 if (game.eventManager.contains("un-monde-glace-event") > -1) {
                         	     game.eventManager.removeEvents(["un-monde-glace-event"]);
                         	     game.eventManager.addEvents(["deux-monde-feu-glace-event"]);
@@ -76,7 +75,7 @@ define(["jquery"], function($){
                          action : function(game) {
                         	 game.alertPopup("glaciation!-event-ko");
                         	 game.eventManager.addEvents(["culte-glace-event"]);
-                        	 // Si on a deja laissé s'etendre le feu, on finira avec deux mondes
+                        	 // Si on a deja laissï¿½ s'etendre le feu, on finira avec deux mondes
                         	 if (game.eventManager.contains("un-monde-feu-event") > -1) {
                                  game.eventManager.removeEvents(["un-monde-feu-event"]);
                                  game.eventManager.addEvents(["deux-monde-feu-glace-event"]);
@@ -90,13 +89,12 @@ define(["jquery"], function($){
 			"sacrifice!-event" : {
 				name : "sacrifice!-event",
 			    text : "sacrifice!-event",
-			    rarity : 30,
+			    rarity : 50,
 			    unique : true,
 			    actions : [
 			         {
 			             name : "arreter-massacre",
 			             action : function(game) {
-			                 game.alertPopup("sacrifice!-event-ok");
 			                 game.eventManager.showNow("sacrifice!-event-2");
 			             }
 			         },
@@ -110,6 +108,7 @@ define(["jquery"], function($){
                                  mal : 20
                               });
                         	 game.alertPopup("sacrifice!-event-ko");
+                        	 game.eventManager.addEvents(["colere-faucheuse-1!-event"]);
                          }
                      }
 			    ]
@@ -121,50 +120,172 @@ define(["jquery"], function($){
                 unique : true,
                 actions : [
                      {
-                         name : "yesButton",
-                         action : function(game) {}
+                         name : "envoyerdieudeesse",
+                         prix : {
+                             croyance : 10,
+                             illumination : 0
+                         },
+                         conditions : [
+          			         {
+                                 name : "dieu",
+                                 level : 5
+                             },
+                             {
+                                 name : "deesse",
+                                 level : 5
+                             }
+          			     ], 
+                         action : function(game) {
+                        	 game.alertPopup("sacrifice!-event-2-ok");
+                        	 game.eventManager.addEvents(["folie-1?-event"]);
+                         }
                      },
                      {
-                         name : "noButton",
-                         action : function(game) {}
+                         name : "tuezles",
+                         prix : {
+                             croyance : 15,
+                             illumination : 1
+                         },
+                         action : function(game) {
+                        	 game.pointManager.addPointsPercent({
+                                 croyance : 0,
+                                 illumination : 0,
+                                 bien : 0,
+                                 mal : 10
+                              });
+                        	 game.alertPopup("sacrifice!-event-2-tuer");
+                         }
+                     },
+                     {
+                         name : "tantpis",
+                         action : function(game) {
+                        	 game.alertPopup("sacrifice!-event-2-ko");
+                        	 game.eventManager.addEvents(["colere-faucheuse-1!-event"]);
+                         }
                      }
                 ]
             },
 			"epidemie!-event" : {
 				name : "epidemie!-event",
 			    text : "epidemie!-event",
-			    rarity : 10,
-			    unique : false,
+			    rarity : 30,
+			    unique : true,
 			    actions : [
 			         {
-			             name : "yesButton",
+			             name : "etudier",
+			             prix : {
+                             croyance : 5,
+                             illumination : 0
+                         },
 			             action : function(game) {
-			                 game.alertPopup("epidemie!-event-ok");
+			                 game.alertPopup("epidemie!-event-etude");
+			                 game.eventManager.addEvents(["zombie-etude-1!-event"]);
 			             }
 			         },
 			         {
-                         name : "noButton",
+                         name : "brulertous",
                          action : function(game) {
-                        	 game.alertPopup("epidemie!-event-ko");
+                        	 game.eventManager.showNow("epidemie!-event-bruler");
+                         }
+                     },
+			         {
+                         name : "soigner",
+                         prix : {
+                             croyance : 20,
+                             illumination : 0
+                         },
+                         conditions : [
+	                       {
+	                           name : "lune",
+	                           level : 1
+	                       }
+	    			     ], 
+                         action : function(game) {
+                        	 game.pointManager.addPointsPercent({
+                                 croyance : 0,
+                                 illumination : 0,
+                                 bien : 20,
+                                 mal : 0
+                              });
+                        	 game.alertPopup("epidemie!-event-soin");
+                         }
+                     },
+			         {
+                         name : "laisserfaire",
+                         action : function(game) {
+                        	 game.alertPopup("epidemie!-event-laisser");
+                        	 game.eventManager.addEvents(["zombie-invasion-1!-event"]);
                          }
                      }
 			    ]
 			},
+			"epidemie!-event-bruler" : {
+				name : "epidemie!-event-bruler",
+				text : "epidemie!-event-bruler",
+				rarity : -1,
+				unique : true,
+				actions : [
+				           {
+				        	   name : "brulertousinsiste",
+				        	   prix : {
+		                            croyance : 10,
+		                            illumination : 0
+		                       },
+				        	   action : function(game) {
+				        		   game.pointManager.addPointsPercent({
+		                                 croyance : 0,
+		                                 illumination : 0,
+		                                 bien : 0,
+		                                 mal : 10
+		                              });
+				        		   game.alertPopup("epidemie!-event-bruler-ok");
+				        	   }
+				           },
+				           {
+				        	   name : "brulermalades",
+				        	   action : function(game) {
+				        		   game.pointManager.addPointsPercent({
+		                                 croyance : 0,
+		                                 illumination : 0,
+		                                 bien : 5,
+		                                 mal : 5
+		                              });
+				        		   game.alertPopup("epidemie!-event-bruler-brulermalades");
+				        	   }
+				           }
+				           ]
+			},
 			"famine!-event" : {
 				name : "famine!-event",
 			    text : "famine!-event",
-			    rarity : 10,
-			    unique : false,
+			    rarity : 30,
+			    unique : true,
 			    actions : [
 			         {
 			             name : "yesButton",
+			             prix : {
+	                            croyance : 5,
+	                            illumination : 0
+	                       },
 			             action : function(game) {
+			            	 game.pointManager.addPointsPercent({
+                                 croyance : 0,
+                                 illumination : 0,
+                                 bien : 5,
+                                 mal : 0
+                              });
 			                 game.alertPopup("famine!-event-ok");
 			             }
 			         },
 			         {
                          name : "noButton",
                          action : function(game) {
+                        	 game.pointManager.addPointsPercent({
+                                 croyance : 0,
+                                 illumination : 0,
+                                 bien : 0,
+                                 mal : 5
+                              });
                         	 game.alertPopup("famine!-event-ko");
                          }
                      }
@@ -173,19 +294,37 @@ define(["jquery"], function($){
 			"faux-dieu!-event" : {
                 name : "faux-dieu!-event",
                 text : "faux-dieu!-event",
-                rarity : 10,
-                unique : false,
+                rarity : 50,
+                unique : true,
                 actions : [
                      {
-                         name : "yesButton",
+                         name : "spectacle",
+                         prix : {
+	                            croyance : 5,
+	                            illumination : 0
+	                       },
+                       conditions : [
+  	                       {
+  	                           name : "terre",
+  	                           level : 1
+  	                       }
+  	    			     ],
                          action : function(game) {
                              game.alertPopup("faux-dieu!-event-ok");
                          }
                      },
                      {
-                         name : "noButton",
+                         name : "tuerresponsable",
                          action : function(game) {
-                             game.alertPopup("faux-dieu!-event-ko");
+                             game.alertPopup("faux-dieu!-event-tuer");
+                             game.eventManager.addEvents(["rebellion1!-event"]);
+                         }
+                     },
+                     {
+                         name : "dementir",
+                         action : function(game) {
+                             game.alertPopup("faux-dieu!-event-dementir");
+                             game.eventManager.addEvents(["soupcon1!-event"]);
                          }
                      }
                 ]

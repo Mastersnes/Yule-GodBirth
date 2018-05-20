@@ -35,7 +35,7 @@ define(["jquery"], function($){
                 name : "child",
                 nbr : 5,
 				next : "ado",
-                text : ["cinematique-child1", "cinematique-child2", "cinematique-child3", "cinematique-child4", "cinematique-child5"],
+                text : ["cinematique-imbolc", "cinematique-child1", "cinematique-child2", "cinematique-child3", "cinematique-child4", "cinematique-child5"],
                 events : {
                     typeEvents : [],
                     newEvents : []
@@ -60,7 +60,7 @@ define(["jquery"], function($){
             },
             "ado" : {
                 name : "ado",
-                text : [],
+                text : ["cinematique-ostara"],
                 events : {
                     typeEvents : [],
                     newEvents : []

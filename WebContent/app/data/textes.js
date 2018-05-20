@@ -540,6 +540,10 @@ define(["jquery"], function($){
 		/**
 		 * Cinematiques
 		 */
+		"cinematique-imbolc" : {
+			fr : "Imbolc",
+			en : "-"
+		},
 		"cinematique-child1" : {
 			fr : "Felicitation maître ! Le dieu a bien grandit et la deesse veille sur lui de son aura chaleureuse.",
 			en : "-"
@@ -558,6 +562,14 @@ define(["jquery"], function($){
 		},
 		"cinematique-child5" : {
 			fr : "Bon courage mon maître ! Vous saurez faire les bons choix !",
+			en : "-"
+		},
+		
+		/**
+		 * Ado
+		 */
+		"cinematique-ostara" : {
+			fr : "Ostara",
 			en : "-"
 		},
 		
@@ -792,10 +804,6 @@ define(["jquery"], function($){
             fr : "Arreter ce massacre !",
             en : "-"
         },
-        "sacrifice!-event-ok" : {
-            fr : "Impossible de les arreter maître ! Ils ont completement perdus la raison et ne nous ecoute plus !",
-            en : "-"
-        },
         "laisserfaire" : {
             fr : "Laisser faire",
             en : "-"
@@ -803,6 +811,142 @@ define(["jquery"], function($){
         "sacrifice!-event-ko" : {
             fr : "Comment ?! Euh... Tr... Très bien maître...",
             en : "-"
+        },
+        
+        /**
+         * Sacrifice 2 !
+         */
+        "sacrifice!-event-2" : {
+            fr : "Impossible de les arreter maître ! Ils ont completement perdus la raison et ne nous ecoute plus !",
+            en : "-"
+        },
+        "envoyerdieudeesse" : {
+        	fr : "Envoyer le dieu et la deesse",
+        	en : "-"
+        },
+        "sacrifice!-event-2-ok" : {
+            fr : "Ils semblent se calmer... Mais d'où provenait cette folie ?",
+            en : "-"
+        },
+        "tuezles" : {
+        	fr : "Tuez-les !",
+        	en : "-"
+        },
+        "sacrifice!-event-2-tuer" : {
+            fr : "Cela me semble extreme mais soit ! Il en sera fait selon vos ordres !",
+            en : "-"
+        },
+        "tantpis" : {
+        	fr : "Tant pis...",
+        	en : "-"
+        },
+        "sacrifice!-event-2-ko" : {
+        	fr : "Bien... Nous verrons bien où cela nous menera...",
+        	en : "-"
+        },
+        
+        /**
+         * Epidemie !
+         */
+        "epidemie!-event" : {
+            fr : "Une maladie rare commence à se rependre sur une planete. Que devons nous faire ?",
+            en : "-"
+        },
+        "etudier" : {
+        	fr : "L'etudier",
+        	en : "-"
+        },
+        "epidemie!-event-etude" : {
+            fr : "Bien maître. Nous commençont l'etude !",
+            en : "-"
+        },
+        "brulertous" : {
+        	fr : "Bruler tous !",
+        	en : "-"
+        },
+        "soigner" : {
+        	fr : "Soignez les",
+        	en : "-"
+        },
+        "epidemie!-event-soin" : {
+	        fr : "Felicitation maître ! Nous avons pu soigner tout le monde !",
+	        en : "-"
+    	},
+    	"epidemie!-event-laisser" : {
+	        fr : "Bien... Ils arriveront bien à s'en sortir seul après tout...",
+	        en : "-"
+    	},
+    	
+    	/**
+    	 * Bruler les gens de l'epidemie
+    	 */
+    	"epidemie!-event-bruler" : {
+            fr : "Mais... Maître ! Il y a encore des gens sur cette planete !",
+            en : "-"
+        },
+        "brulertousinsiste" : {
+        	fr : "J'ai dis : Bruler tous !",
+        	en : "-"
+        },
+        "epidemie!-event-bruler-ok" : {
+            fr : "Bien maître. À vos ordre...",
+            en : "-"
+        },
+        "brulermalades" : {
+        	fr : "Bruler uniquement les malades",
+        	en : "-"
+        },
+        "epidemie!-event-bruler-brulermalades" : {
+        	fr : "Bien maître. Je pense malheureusement que nous n'ayons pas le choix...",
+        	en : "-"
+        },
+        
+        /**
+         * Famine !
+         */
+        "famine!-event" : {
+            fr : "Maître ! Les gens ont faim. Ne devrions nous pas ameliorer leurs recoltes ?",
+            en : "-"
+        },
+        "famine!-event-ok" : {
+            fr : "Merci maître, cela leur sera certainement très utile !",
+            en : "-"
+        },
+        "famine!-event-ko" : {
+            fr : "Bien maître. Pourquoi s'embeter pour si peu après tout ?",
+            en : "-"
+        },
+        
+        /**
+         * Faux dieu !
+         */
+        "faux-dieu!-event" : {
+            fr : "Certaines personnes commencent à pretendre que vous êtes un faux dieu !",
+            en : "-"
+        },
+        "spectacle" : {
+        	fr : "Faire un spectacle",
+        	en : "-"
+        },
+        "faux-dieu!-event-spectacle" : {
+            fr : "Il ont été très impressionné par vos pouvoirs !",
+            en : "-"
+        },
+        "tuerresponsable" : {
+        	fr : "Tuer les responsables",
+        	en : "-"
+        },
+        "faux-dieu!-event-tuer" : {
+        	fr : "Les responsables ont été éliminé mais il semble qu'ils soient devenus des martyrs !<br/> Les gens se revoltent contre votre autorité !",
+        	en : "-"
+        },
+        "dementir" : {
+        	fr : "Dementir",
+        	en : "-"
+        },
+        "faux-dieu!-event-dementir" : {
+        	fr : "Ils ne vous croient pas ! Il va falloir leur prouver...",
+        	en : "-"
         },
 	};
 	

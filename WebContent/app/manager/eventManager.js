@@ -207,7 +207,7 @@ function($, _, Utils, page, Events) {
 		};
 		
 		this.contains = function(event) {
-		    return this.generalEvents.indexOf(event) > -1 || this.uniquesEvent.indexOf(event) > -1;
+			return this.generalEvents.indexOf(event) > -1 || this.uniquesEvents.indexOf(event) > -1;
 		};
 		
 		this.removeEvents = function(event) {
