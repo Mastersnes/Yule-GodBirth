@@ -37,7 +37,7 @@
 	left: 0%;
 }
 
-.constellation, .space, .quete, .autel, .success {
+.constellation, .space, .quete, .autel, .success, .options, .artefacts {
 	position: absolute;
 	left: 0; top: 0;
 	width: 100%;
@@ -45,7 +45,7 @@
 	
 	transition: transform 1s ease-in-out;
 }
-.constellation, .quete, .autel, .success {
+.constellation, .quete, .autel, .success, .options, .artefacts {
 	display: none;
 }
 
@@ -62,5 +62,11 @@
 	transform: scale(2) translate(-25%, 15%);
 }
 .constellation.zoom[cible="success-star"] {
+	transform: scale(2) translate(7%, 13%);
+}
+.constellation.zoom[cible="options-star"] {
+	transform: scale(2) translate(7%, 13%);
+}
+.constellation.zoom[cible="artefacts-star"] {
 	transform: scale(2) translate(7%, 13%);
 }

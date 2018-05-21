@@ -14,6 +14,8 @@ define(["jquery",
         "app/view/game/quete/queteView",
         "app/view/game/autel/autelView",
         "app/view/game/success/successView",
+        "app/view/game/options/optionsInGameView",
+        "app/view/game/artefacts/artefactsView",
         "app/view/game/constellation/constellationView",
         "app/view/game/endView"
         ],
@@ -22,7 +24,9 @@ function($, _, Utils, PopupUtils, page,
 		EventManager, PointManager, 
 		RecompenseManager, DidactitielManager,
 		SpaceView, QueteView, 
-		AutelView, SuccessView, ConstellationView, EndView) {
+		AutelView, SuccessView,
+		OptionsInGameView, ArtefactsView,
+		ConstellationView, EndView) {
 	'use strict';
 
 	return function(parent) {
@@ -62,6 +66,12 @@ function($, _, Utils, PopupUtils, page,
             this.successView = new SuccessView(this);
             this.successView.render();
 
+            this.optionsView = new OptionsInGameView(this);
+            this.optionsView.render();
+            
+            this.artefactsView = new ArtefactsView(this);
+            this.artefactsView.render();
+
             this.endView = new EndView(this);
             
             this.didactitielManager = new DidactitielManager(this);
@@ -91,6 +101,7 @@ function($, _, Utils, PopupUtils, page,
         		    this.spaceView.loop(this);
         		    this.queteView.loop(this);
         		    this.autelView.loop(this);
+        		    this.successView.loop(this);
         		    this.constellationView.loop(this);
                     this.eventManager.loop();
                     

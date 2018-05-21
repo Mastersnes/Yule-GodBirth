@@ -58,6 +58,8 @@ function($, _, Utils) {
             			"gauche" : null,
             			"centre" : null
             		},
+            		
+            		"inventaire" : [],
 
 			        "ameliorations" : {
 			            "grandTout" : 0, 
