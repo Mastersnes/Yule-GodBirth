@@ -49,9 +49,8 @@ function($, _, Utils) {
 			/**
 			 * Constellation
 			 */
-			if (this.data.blocker.autel && this.parent.lieu == "constellation") {
-				toShow = true;
-				$(this.el).find(".step.block-autel").show();
+			if (!this.data.blocker.autel) {
+				$("etoile.autel-star").show();
 			}
 			
 			/**
@@ -162,16 +161,22 @@ function($, _, Utils) {
 				this.data.blocker.autel = false;
 			}
 			
+			/**
+			 * Affichage du premier evenement
+			 */
 			if (currentText == "cinematique-child4" || currentText == "cinematique-child5") {
-				var containsEvent = this.parent.eventManager.contains("first-event") > -1;
-				if (!containsEvent) {
-					this.parent.eventManager.addEvents("first-event");
-					this.data.indication.event = true;
-				}
+				this.parent.eventManager.addEvents(["first-event"]);
+				this.data.indication.event = true;
+				$("etoile.artefacts-star").show();
+			}
+			
+			if (this.parent.eventManager.eventOpen) {
+				this.data.indication.event = false;
 			}
 			
 			var grandTout = this.ameliorationView.Items.get("grandTout");
-			if (grandTout.level > 5) {
+			if (grandTout.level >= 4) $("etoile.success-star").show();
+			if (grandTout.level >= 5) {
 				this.data.blocker.ameliorations = false;
 				this.data.blocker.constellations = false;
 				this.data.blocker.autel = false;
@@ -180,12 +185,9 @@ function($, _, Utils) {
 				this.data.indication.constellations = false;
 			}
 			if (grandTout.level > 6) {
-				var inGeneralEvent = this.parent.eventManager.generalEvents.indexOf("first-event") > -1;
-				var inUniqueEvent = this.parent.eventManager.uniquesEvents.indexOf("first-event") > -1;
-				if (!(inGeneralEvent || inUniqueEvent)) {
-					this.parent.eventManager.addEvents("first-event");
-				}
+				this.parent.eventManager.addEvents(["first-event"]);
 				this.data.indication.event = false;
+				$("etoile").show();
 			}
 		};
 		

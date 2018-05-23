@@ -22,6 +22,7 @@ function($, _, Utils) {
 		    
 		    $(this.el).find("illumination .text").html(Utils.format(this.points.illumination, true, this.Textes));
 		    if (this.points.illumination > 0) $(this.el).find("illumination").show();
+		    else $(this.el).find("illumination").hide();
 
 		    $(this.el).find("bien .text").html(this.points.bien);
 		    $(this.el).find("mal .text").html(this.points.mal);
@@ -40,8 +41,8 @@ function($, _, Utils) {
 		/**
 		 * Definie les avantages
 		 */
-		this.setAvantages = function(avantages) {
-			this.avantages = avantages;
+		this.setAvantages = function(avantages, id) {
+			this.avantages[id] = avantages;
 			this.saveManager.save("avantages", this.avantages);
 		};
 		
@@ -49,7 +50,20 @@ function($, _, Utils) {
 		 * Ajoute les points
 		 */
 		this.addPoints = function(points) {
-			var avantages = this.avantages;
+			var avantages = {
+					"croyance" : 0,
+					"illumination" : 0,
+					"bien" : 0,
+					"mal" : 0
+			};
+			
+			for (var indexAvantage in this.avantages) {
+				var currentAvantage = this.avantages[indexAvantage];
+				avantages.croyance += currentAvantage.croyance;
+				avantages.illumination += currentAvantage.illumination;
+				avantages.bien += currentAvantage.bien;
+				avantages.mal += currentAvantage.mal;
+			}
 			
 			var maxPoint = Math.pow(10, 12);
 		    if (points.croyance) {
@@ -95,7 +109,7 @@ function($, _, Utils) {
          * Ajoute les points en pourcentage
          */
         this.addPointsPercent = function(points) {
-            var that = this;
+        	var that = this;
             this.addPoints({
                 croyance : parseInt(Utils.percent(that.points.croyance, points.croyance)),
                 illumination : parseInt(Utils.percent(that.points.illumination, points.illumination)),

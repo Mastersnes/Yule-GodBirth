@@ -135,7 +135,6 @@ function($, _, Utils, PopupUtils, page,
         };
         this.showStar = function(star) {
         	if (this.lieu != "constellation") return;
-        	console.log("here2");
         	
         	$(".constellation-star").hide();
         	var cible = star.attr("cible");
@@ -175,11 +174,12 @@ function($, _, Utils, PopupUtils, page,
         /**
          * Appel la fonction permettant d'afficher une information
          */
-        this.alertPopup = function(texte) {
+        this.alertPopup = function(texte, callback) {
         	var that = this;
         	that.alertOpen = true;
         	PopupUtils.alert(this.Textes, texte, "suivant", function() {
         		that.alertOpen = false;
+        		if (callback) callback();
         	});
         };
 		

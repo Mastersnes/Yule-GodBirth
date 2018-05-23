@@ -61,6 +61,7 @@ function($, _, Utils, page, Events) {
 		    	var eventIndex = totalEvents.indexOf(eventName);
 		    	totalEvents.splice(eventIndex, 1);
 		    }
+		    //console.log("totalEvents", totalEvents);
 		    if (totalEvents.length == 0) return;
 		    
 	        var randIndex = Utils.rand(0, totalEvents.length);
@@ -108,6 +109,7 @@ function($, _, Utils, page, Events) {
 		 */
 		this.checkEvent = function(randEvent) {
 			// Il ne peut pas être nulle
+			console.log("randEvent", randEvent);
 			if (!randEvent) return false;
 			var isOk = true;
 			
@@ -174,9 +176,13 @@ function($, _, Utils, page, Events) {
 		 * Ajoute des evenements à la liste des evenements generaux
 		 */
 		this.addEvents = function(events) {
-		    if (!events) return;
-		    if (this.contains(events)) return;
-		    this.generalEvents = this.generalEvents.concat(events);
+		    if (!events || event.lenght == 0) return;
+		    for (var indexEvent in events) {
+		    	var eventToAdd = events[indexEvent];
+		    	if (!this.contains(eventToAdd)) {
+		    		this.generalEvents.push(eventToAdd);
+		    	}
+		    }
 		    this.saveManager.save("generalEvents", this.generalEvents);
 		};
 		
@@ -207,7 +213,7 @@ function($, _, Utils, page, Events) {
 		};
 		
 		this.contains = function(event) {
-			return this.generalEvents.indexOf(event) > -1 || this.uniquesEvents.indexOf(event) > -1;
+			return (this.generalEvents.indexOf(event) > -1) || (this.uniquesEvents.indexOf(event) > -1);
 		};
 		
 		this.removeEvents = function(event) {

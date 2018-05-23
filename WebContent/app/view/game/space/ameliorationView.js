@@ -224,7 +224,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
          * Verifie si un onglet doit etre afficher
          */
         this.checkOngletAffichable = function(conditions) {
-            if (!conditions || conditions.length == 0) return true;
+        	if (!conditions || conditions.length == 0) return true;
             
             for (var index in conditions) {
                 var condition = conditions[index];

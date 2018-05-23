@@ -2,6 +2,9 @@
 /**
 * Liste des artefacts
 **/
-artefactsList > artefact.example .icon {
+artefactsList > artefact.torque .icon {
+	background-image: url("../img/game/success/500.png");
+}
+artefactsList > artefact.corne-abondance .icon {
 	background-image: url("../img/game/success/500.png");
 }

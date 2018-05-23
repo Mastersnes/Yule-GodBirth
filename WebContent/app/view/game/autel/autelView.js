@@ -66,7 +66,7 @@ define(["jquery",
          * Raffraichit le total des avantages donné par les pierres selectionnées
          */
         this.refreshAvantages = function(avantages) {
-        	this.pointManager.setAvantages(avantages);
+        	this.pointManager.setAvantages(avantages, "pierres");
         	
         	this.drawAvantage("bien", avantages);
         	this.drawAvantage("mal", avantages);

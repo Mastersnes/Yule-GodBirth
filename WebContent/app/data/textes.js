@@ -146,6 +146,10 @@ define(["jquery"], function($){
         	fr : "Succès",
         	en : "Success"
         },
+        "artefacts" : {
+        	fr : "Artefacts",
+        	en : "-"
+        },
 		"croyance" : {
 			fr : "Croyance",
 			en : "Croyance"
@@ -541,7 +545,7 @@ define(["jquery"], function($){
 		 * Cinematiques
 		 */
 		"cinematique-imbolc" : {
-			fr : "Imbolc",
+			fr : "Imbolc - Purification du corps et de l'esprit",
 			en : "-"
 		},
 		"cinematique-child1" : {
@@ -569,7 +573,7 @@ define(["jquery"], function($){
 		 * Ado
 		 */
 		"cinematique-ostara" : {
-			fr : "Ostara",
+			fr : "Ostara - Renouveau de la vie et de la terre",
 			en : "-"
 		},
 		
@@ -603,6 +607,30 @@ define(["jquery"], function($){
 		"success-50000000click" : {
 			fr : "50M Clics",
 			en : "50M Clicks"
+		},
+		
+		/**
+		 * Artefacts
+		 */
+		"gainArtefact" : {
+			fr : "Félicitation, vous avez gagné l'artefact : {?} !<br/> Voyagez dans la constellation pour consulter les details.",
+			en : "-"
+		},
+		"torque" : {
+			fr : "Torque",
+			en : "-"
+		},
+		"torque-desc" : {
+			fr : "Torque Description",
+			en : "-"
+		},
+		"corne-abondance" : {
+			fr : "Corne d'abondance",
+			en : "-"
+		},
+		"corne-abondance-desc" : {
+			fr : "Corne d'abondance Description",
+			en : "-"
 		},
 		
 		/**

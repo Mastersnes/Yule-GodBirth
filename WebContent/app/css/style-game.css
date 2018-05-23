@@ -56,17 +56,17 @@
 	transform: scale(2) translate(25%, 25%);
 }
 .constellation.zoom[cible="quete-star"] {
-	transform: scale(2) translate(-25%, -25%);
+	transform: scale(2) translate(15%, 12%);
 }
 .constellation.zoom[cible="autel-star"] {
-	transform: scale(2) translate(-25%, 15%);
+	transform: scale(2) translate(2%, 22%);
 }
 .constellation.zoom[cible="success-star"] {
-	transform: scale(2) translate(7%, 13%);
+	transform: scale(2) translate(-9%, 1%);
 }
 .constellation.zoom[cible="options-star"] {
-	transform: scale(2) translate(7%, 13%);
+	transform: scale(2) translate(-3%, -18%);
 }
 .constellation.zoom[cible="artefacts-star"] {
-	transform: scale(2) translate(7%, 13%);
+	transform: scale(2) translate(6%, -6%);
 }

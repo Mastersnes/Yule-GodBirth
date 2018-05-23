@@ -21,8 +21,8 @@ function($, _, Utils) {
 		
 		this.addClick = function() {
 			if (this.compteurClick >= 1000000000) return;
-			this.compteurClick+=100;
-			console.log("click : ", this.compteurClick);
+			
+			this.compteurClick++;
 			
 			this.parent.kongregateUtils.score("compteurClick", this.compteurClick);
 			this.saveManager.save("compteurClick", this.compteurClick);

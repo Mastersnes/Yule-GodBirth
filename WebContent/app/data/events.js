@@ -26,7 +26,9 @@ define(["jquery",
 			            	 });
 			                 
 			                 game.eventManager.addEvents(["pluie?-event", "eclipse?-event", "sacrifice?-event", "blessure?-event", /**"argent?-event", "vrai-dieu?-event"**/]);
-			                 game.alertPopup("first-event-ok");
+			                 game.alertPopup("first-event-ok", function() {
+			                	 game.artefactsView.add("corne-abondance");
+			                 });
 			             }
 			         },
 			         {
@@ -40,7 +42,9 @@ define(["jquery",
                              });
                              
                         	 game.eventManager.addEvents(["secheresse!-event", "glaciation!-event", "sacrifice!-event", "epidemie!-event", "famine!-event", "faux-dieu!-event"]);
-                        	 game.alertPopup("first-event-ko");
+                        	 game.alertPopup("first-event-ko", function() {
+                        		 game.artefactsView.add("torque");
+                        	 });
                          }
                      }
 			    ]

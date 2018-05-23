@@ -1,12 +1,24 @@
 'use strict';
 define([ "jquery" ], function($) {
 	var data = {
-		"example" : {
-			name : "example",
-			description : "example-desc",
-			avantages : {
-				croyance : 0,
+		"torque" : {
+			name : "torque",
+			description : "torque-desc",
+			gains : {
+				croyance : 5,
 				illumination : 0,
+				bien : 0,
+				mal : 5
+			},
+		},
+		"corne-abondance" : {
+			name : "corne-abondance",
+			description : "corne-abondance-desc",
+			gains : {
+				croyance : 10,
+				illumination : 0,
+				bien : 5,
+				mal : 0
 			},
 		}
 	};

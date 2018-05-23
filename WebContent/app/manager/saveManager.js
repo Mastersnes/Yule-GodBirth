@@ -26,12 +26,7 @@ function($, _, Utils) {
 			            "bien" : 100,
 			            "mal" : 100
 			        },
-			        "avantages" : {
-			            "croyance" : 0,
-			            "illumination" : 0,
-			            "bien" : 0,
-			            "mal" : 0
-			        },
+			        "avantages" : [],
 			        "maxPoints" : {
 			            "croyance" : 0,
 			            "illumination" : 0,
