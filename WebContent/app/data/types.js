@@ -33,7 +33,7 @@ define(["jquery"], function($){
 			},
             "imbolc" : {
                 name : "imbolc",
-                nbr : 5,
+                nbr : 1,
 				next : "ostara",
                 text : ["cinematique-imbolc", "cinematique-imbolc1", "cinematique-imbolc2", "cinematique-imbolc3", "cinematique-imbolc4", "cinematique-imbolc5"],
                 events : {
@@ -60,7 +60,19 @@ define(["jquery"], function($){
             },
             "ostara" : {
                 name : "ostara",
+                nbr : 1,
+				next : "beltane",
                 text : ["cinematique-ostara"],
+                events : {
+                    typeEvents : [],
+                    newEvents : []
+                }
+            },
+            "beltane" : {
+                name : "beltane",
+                nbr : 1,
+				next : "litha",
+                text : ["cinematique-beltane"],
                 events : {
                     typeEvents : [],
                     newEvents : []

@@ -165,8 +165,9 @@ function($, _, Utils) {
 			 * Affichage du premier evenement
 			 */
 			if (currentText == "cinematique-imbolc4" || currentText == "cinematique-imbolc5") {
-				this.parent.eventManager.addEvents(["first-event"]);
-				this.data.indication.event = true;
+				if (this.parent.eventManager.addEvents(["first-event"])) {
+					this.data.indication.event = true;
+				}
 				$("etoile.artefacts-star").show();
 			}
 			

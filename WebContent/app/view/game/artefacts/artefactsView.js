@@ -53,7 +53,7 @@ define(["jquery",
         	var artefactsList = Artefacts.list();
         	for (var index in artefactsList) {
         		var artefact = artefactsList[index];
-        		this.drawArtefact(artefact, this.checkHad(artefact), avantages);
+        		this.drawArtefact(artefact, this.checkHad(artefact.name), avantages);
         	}
         	
         	this.pointManager.setAvantages(avantages, "artefacts");
@@ -62,17 +62,17 @@ define(["jquery",
         /**
          * Verifie si l'artefact est possédé
          */
-        this.checkHad = function(artefact) {
-        	return this.inventaire.indexOf(artefact) > -1;
+        this.checkHad = function(artefactName) {
+        	return this.inventaire.indexOf(artefactName) > -1;
         };
         
         /**
          * Affiche un artefact
          */
         this.drawArtefact = function(artefact, possess, avantages) {
+        	console.log("drawArtefact : ", artefact, possess, avantages, this.inventaire);
         	if (!possess) return;
         	var artefactDom = $("<artefact></artefact>");
-    		artefactDom.attr("title", this.Textes.get(artefact.name));
     		artefactDom.attr("id", artefact.name);
     		artefactDom.addClass(artefact.name);
         	
@@ -99,9 +99,9 @@ define(["jquery",
         this.add = function(artefact) {
         	if (this.inventaire.indexOf(artefact) > -1) return;
         	this.inventaire.push(artefact);
-        	if (!that.parent.alertOpen) {
+        	if (!this.parent.alertOpen) {
         		var gainText = this.Textes.get("gainArtefact");
-        		gainText = gainText.replaceAll("{?}", this.Textes.get(artefact));
+        		gainText = gainText.replace("{?}", this.Textes.get(artefact));
         		this.parent.alertPopup(gainText);
         	}
         };

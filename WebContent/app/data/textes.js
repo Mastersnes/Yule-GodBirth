@@ -576,6 +576,14 @@ define(["jquery"], function($){
 			fr : "Ostara - Renouveau de la vie et de la terre",
 			en : "-"
 		},
+
+		/**
+		 * Adulte - Beltane
+		 */
+		"cinematique-beltane" : {
+			fr : "Beltane - L'unification de deux âmes",
+			en : "-"
+		},
 		
 		/**
 		 * Success

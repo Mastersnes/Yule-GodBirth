@@ -151,3 +151,10 @@ god.imbolc.tourneTete {
 god.ostara {
     background-image: url("../img/game/god/ostara/1.png");
 }
+
+/**
+* Adulte - Beltane
+**/
+god.beltane {
+    background-image: url("../img/game/god/beltane/1.png");
+}

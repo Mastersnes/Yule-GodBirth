@@ -46,6 +46,7 @@ function($, _, Utils, page, Events) {
 			
 			// Si un evenement doit être affiché en priorité
 			if (this.toShowNow) {
+				this.toShowNow = null;
 				this.currentEvent = Events.get(this.toShowNow);
 				this.show();
 				return;
@@ -109,7 +110,6 @@ function($, _, Utils, page, Events) {
 		 */
 		this.checkEvent = function(randEvent) {
 			// Il ne peut pas être nulle
-			console.log("randEvent", randEvent);
 			if (!randEvent) return false;
 			var isOk = true;
 			
@@ -176,14 +176,17 @@ function($, _, Utils, page, Events) {
 		 * Ajoute des evenements à la liste des evenements generaux
 		 */
 		this.addEvents = function(events) {
-		    if (!events || event.lenght == 0) return;
+		    if (!events || event.lenght == 0) return false;
+		    var oneEventAdded = false;
 		    for (var indexEvent in events) {
 		    	var eventToAdd = events[indexEvent];
 		    	if (!this.contains(eventToAdd)) {
+		    		oneEventAdded = true;
 		    		this.generalEvents.push(eventToAdd);
 		    	}
 		    }
 		    this.saveManager.save("generalEvents", this.generalEvents);
+		    return oneEventAdded;
 		};
 		
 		/**

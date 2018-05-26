@@ -92,3 +92,42 @@ goddess.ostara {
     40%, 55% {background-image: url("../img/game/goddess/ostara/9.png");}
     45%, 50% {background-image: url("../img/game/goddess/ostara/10.png");}
 }
+
+goddess.beltane {
+	background-image: url("../img/game/goddess/beltane/1.png");
+    animation-name: beltane-anim;
+    animation-duration: 100s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+    -webkit-animation-name: beltane-anim;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+	-moz-animation-name: beltane-anim;
+    -moz-animation-duration: 100s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: beltane-anim;
+    -o-animation-duration: 100s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+
+@keyframes beltane-anim {
+    0% {
+    	transform: rotate(0deg) scale(1);
+    }
+    50% {
+     	transform: rotate(180deg) scale(0.2);
+    }
+    100% {
+    	transform: rotate(360deg) scale(1);
+    }
+}
