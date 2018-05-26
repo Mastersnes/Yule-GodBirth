@@ -24,18 +24,18 @@ define(["jquery"], function($){
 			"baby" : {
 				name : "baby",
 				nbr : 3,
-				next : "child",
+				next : "imbolc",
 				text : ["didactitiel-dieu1", "didactitiel-dieu2", "didactitiel-dieu3"],
 				events : {
 	                typeEvents : [],
 	                newEvents : []
 	            }
 			},
-            "child" : {
-                name : "child",
+            "imbolc" : {
+                name : "imbolc",
                 nbr : 5,
-				next : "ado",
-                text : ["cinematique-imbolc", "cinematique-child1", "cinematique-child2", "cinematique-child3", "cinematique-child4", "cinematique-child5"],
+				next : "ostara",
+                text : ["cinematique-imbolc", "cinematique-imbolc1", "cinematique-imbolc2", "cinematique-imbolc3", "cinematique-imbolc4", "cinematique-imbolc5"],
                 events : {
                     typeEvents : [],
                     newEvents : []
@@ -58,8 +58,8 @@ define(["jquery"], function($){
 	                }
                 ]
             },
-            "ado" : {
-                name : "ado",
+            "ostara" : {
+                name : "ostara",
                 text : ["cinematique-ostara"],
                 events : {
                     typeEvents : [],

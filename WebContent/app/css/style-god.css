@@ -87,67 +87,67 @@ god.baby {
 /**
 * Forme Enfant
 **/
-god.child {
-    background-image: url("../img/game/god/child/1.png");
+god.imbolc {
+    background-image: url("../img/game/god/imbolc/1.png");
 }
-god.child.cligne {
-    background-image: url("../img/game/god/child/cligne/1.png");
+god.imbolc.cligne {
+    background-image: url("../img/game/god/imbolc/cligne/1.png");
 }
-god.child.langue {
-    animation-name: child-langue;
+god.imbolc.langue {
+    animation-name: imbolc-langue;
     animation-duration: 0.5s;
     animation-fill-mode: both;
 
-	-webkit-animation-name: child-langue;
+	-webkit-animation-name: imbolc-langue;
     -webkit-animation-duration: 0.5s;
     -webkit-animation-fill-mode: both;
 
-	-moz-animation-name: child-langue;
+	-moz-animation-name: imbolc-langue;
     -moz-animation-duration: 0.5s;
     -moz-animation-fill-mode: both;
 
-	-o-animation-name: child-langue;
+	-o-animation-name: imbolc-langue;
     -o-animation-duration: 0.5s;
     -o-animation-fill-mode: both;
 }
 
-@keyframes child-langue {
-    0% {background-image: url("../img/game/god/child/langue/1.png");}
-    25% {background-image: url("../img/game/god/child/langue/2.png");}
-    50% {background-image: url("../img/game/god/child/langue/3.png");}
-    100% {background-image: url("../img/game/god/child/langue/4.png");}
+@keyframes imbolc-langue {
+    0% {background-image: url("../img/game/god/imbolc/langue/1.png");}
+    25% {background-image: url("../img/game/god/imbolc/langue/2.png");}
+    50% {background-image: url("../img/game/god/imbolc/langue/3.png");}
+    100% {background-image: url("../img/game/god/imbolc/langue/4.png");}
 }
-god.child.tourneTete {
-    animation-name: child-tourne-tete;
+god.imbolc.tourneTete {
+    animation-name: imbolc-tourne-tete;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 
-	-webkit-animation-name: child-tourne-tete;
+	-webkit-animation-name: imbolc-tourne-tete;
     -webkit-animation-duration: 0.8s;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-timing-function: ease-in-out;
 
-	-moz-animation-name: child-tourne-tete;
+	-moz-animation-name: imbolc-tourne-tete;
     -moz-animation-duration: 0.8s;
     -moz-animation-fill-mode: forwards;
     -moz-animation-timing-function: ease-in-out;
 
-	-o-animation-name: child-tourne-tete;
+	-o-animation-name: imbolc-tourne-tete;
     -o-animation-duration: 0.8s;
     -o-animation-fill-mode: forwards;
     -o-animation-timing-function: ease-in-out;
 }
 
-@keyframes child-tourne-tete {
-    0%, 100% {background-image: url("../img/game/god/child/1.png");}
-    17%, 85% {background-image: url("../img/game/god/child/tourneTete/1.png");}
-    35%, 50%, 68% {background-image: url("../img/game/god/child/tourneTete/2.png");}
+@keyframes imbolc-tourne-tete {
+    0%, 100% {background-image: url("../img/game/god/imbolc/1.png");}
+    17%, 85% {background-image: url("../img/game/god/imbolc/tourneTete/1.png");}
+    35%, 50%, 68% {background-image: url("../img/game/god/imbolc/tourneTete/2.png");}
 }
 
 /**
-* Adolescent
+* Adolescent - Ostara
 **/
-god.ado {
-    background-image: url("../img/game/god/ado/1.png");
+god.ostara {
+    background-image: url("../img/game/god/ostara/1.png");
 }

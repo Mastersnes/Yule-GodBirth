@@ -14,7 +14,7 @@ goddess {
     background-size: 100% 100%;
 }
 
-goddess.child {
+goddess.imbolc {
     animation-name: imbolc-anim;
     animation-duration: 50s;
     animation-fill-mode: forwards;
@@ -54,7 +54,7 @@ goddess.child {
     100% {background-image: url("../img/game/goddess/imbolc/1.png");}
 }
 
-goddess.ado {
+goddess.ostara {
     animation-name: ostara-anim;
     animation-duration: 50s;
     animation-fill-mode: forwards;

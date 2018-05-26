@@ -548,29 +548,29 @@ define(["jquery"], function($){
 			fr : "Imbolc - Purification du corps et de l'esprit",
 			en : "-"
 		},
-		"cinematique-child1" : {
+		"cinematique-imbolc1" : {
 			fr : "Felicitation maître ! Le dieu a bien grandit et la deesse veille sur lui de son aura chaleureuse.",
 			en : "-"
 		},
-		"cinematique-child2" : {
+		"cinematique-imbolc2" : {
 			fr : "Il est maintenant temps de prendre les bonnes decisions pour votre univers.",
 			en : "-"
 		},
-		"cinematique-child3" : {
+		"cinematique-imbolc3" : {
 			fr : "Attention, chacune d'entre elle peut avoir une incidence bonne ou mauvaise sur la suite des evenements.",
 			en : "-"
 		},
-		"cinematique-child4" : {
+		"cinematique-imbolc4" : {
 			fr : "Lorsque le sablier du destin apparait, cliquez-dessus pour prendre vos decisions.",
 			en : "-"
 		},
-		"cinematique-child5" : {
+		"cinematique-imbolc5" : {
 			fr : "Bon courage mon maître ! Vous saurez faire les bons choix !",
 			en : "-"
 		},
 		
 		/**
-		 * Ado
+		 * Ado - Ostara
 		 */
 		"cinematique-ostara" : {
 			fr : "Ostara - Renouveau de la vie et de la terre",
