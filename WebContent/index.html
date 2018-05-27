@@ -49,11 +49,15 @@
 		<div class="app-container">
 			<div id="app"></div>
 			<script>
+			try {	
 				require(['app/config/config.js'], function () {
 					require(['app/view/menu/menuView'], function (main) {
 					    new main();
 					});
 				});
+			} catch (error) {
+				location.reload();
+			}
 			</script>
 		</div>
 		<a class="hidden" href="honeybot" title="Lien pour Robot">Lien pour Robot</a>
@@ -110,15 +114,6 @@
 			<preload rel="preload" class="goddess-ostara" step="10"></preload>
 
 			<preload rel="preload" class="goddess-beltane" step="1"></preload>
-			<preload rel="preload" class="goddess-beltane" step="2"></preload>
-			<preload rel="preload" class="goddess-beltane" step="3"></preload>
-			<preload rel="preload" class="goddess-beltane" step="4"></preload>
-			<preload rel="preload" class="goddess-beltane" step="5"></preload>
-			<preload rel="preload" class="goddess-beltane" step="6"></preload>
-			<preload rel="preload" class="goddess-beltane" step="7"></preload>
-			<preload rel="preload" class="goddess-beltane" step="8"></preload>
-			<preload rel="preload" class="goddess-beltane" step="9"></preload>
-			<preload rel="preload" class="goddess-beltane" step="10"></preload>
 			
 			<preload rel="preload" class="dieu" step="1"></preload>
 			<preload rel="preload" class="dieu" step="2"></preload>

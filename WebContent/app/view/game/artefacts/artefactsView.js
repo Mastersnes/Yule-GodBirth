@@ -70,7 +70,6 @@ define(["jquery",
          * Affiche un artefact
          */
         this.drawArtefact = function(artefact, possess, avantages) {
-        	console.log("drawArtefact : ", artefact, possess, avantages, this.inventaire);
         	if (!possess) return;
         	var artefactDom = $("<artefact></artefact>");
     		artefactDom.attr("id", artefact.name);

@@ -174,13 +174,13 @@ function($, _, Utils, PopupUtils, page,
         /**
          * Appel la fonction permettant d'afficher une information
          */
-        this.alertPopup = function(texte, callback) {
+        this.alertPopup = function(texte, callback, noButton) {
         	var that = this;
         	that.alertOpen = true;
         	PopupUtils.alert(this.Textes, texte, "suivant", function() {
         		that.alertOpen = false;
         		if (callback) callback();
-        	});
+        	}, noButton);
         };
 		
 		this.init(parent);

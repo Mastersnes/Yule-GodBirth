@@ -21,6 +21,9 @@ define(["jquery"], function($){
 	                newEvents : []
 	            }
 			},
+			/**
+			 * Level 3 : Yule
+			 */
 			"baby" : {
 				name : "baby",
 				nbr : 3,
@@ -31,9 +34,12 @@ define(["jquery"], function($){
 	                newEvents : []
 	            }
 			},
+			/**
+			 * Level 10 : Imbolc
+			 */
             "imbolc" : {
                 name : "imbolc",
-                nbr : 1,
+                nbr : 5,
 				next : "ostara",
                 text : ["cinematique-imbolc", "cinematique-imbolc1", "cinematique-imbolc2", "cinematique-imbolc3", "cinematique-imbolc4", "cinematique-imbolc5"],
                 events : {
@@ -58,9 +64,12 @@ define(["jquery"], function($){
 	                }
                 ]
             },
+            /**
+             * Level 15 : Ostara
+             */
             "ostara" : {
                 name : "ostara",
-                nbr : 1,
+                nbr : 5,
 				next : "beltane",
                 text : ["cinematique-ostara"],
                 events : {
@@ -68,11 +77,77 @@ define(["jquery"], function($){
                     newEvents : []
                 }
             },
+            /**
+             * Level 20 : Beltane
+             */
             "beltane" : {
                 name : "beltane",
-                nbr : 1,
+                nbr : 5,
 				next : "litha",
                 text : ["cinematique-beltane"],
+                events : {
+                    typeEvents : [],
+                    newEvents : []
+                }
+            },
+            /**
+             * Level 25 : Litha
+             */
+            "litha" : {
+                name : "litha",
+                nbr : 5,
+				next : "lammas",
+                text : ["cinematique-litha"],
+                events : {
+                    typeEvents : [],
+                    newEvents : []
+                }
+            },
+            /**
+             * Level 30 : Lammas
+             */
+            "lammas" : {
+                name : "lammas",
+                nbr : 5,
+				next : "mabon",
+                text : ["cinematique-lammas"],
+                events : {
+                    typeEvents : [],
+                    newEvents : []
+                }
+            },
+            /**
+             * Level 35 : Mabon
+             */
+            "mabon" : {
+                name : "mabon",
+                nbr : 5,
+				next : "samhain",
+                text : ["cinematique-mabon"],
+                events : {
+                    typeEvents : [],
+                    newEvents : []
+                }
+            },
+            /**
+             * Level 40 : Samhain
+             */
+            "samhain" : {
+                name : "samhain",
+                nbr : 5,
+				next : "yule-fin",
+                text : ["cinematique-samhain"],
+                events : {
+                    typeEvents : [],
+                    newEvents : []
+                }
+            },
+            /**
+             * Level 45 : Yule Fin
+             */
+            "yule-fin" : {
+                name : "yule-fin",
+                text : ["cinematique-yule-fin"],
                 events : {
                     typeEvents : [],
                     newEvents : []

@@ -38,9 +38,9 @@ define(["jquery",
 		/**
 		* Affiche une popup d'information
 		**/
-		alert : function(Textes, textePopup, texteOk, callbackSuccess) {
+		alert : function(Textes, textePopup, texteOk, callbackSuccess, noButton) {
 		    if (!texteOk) texteOk = Textes.get("suivant");
-			
+		    
 		    var el = $("body > #popups");
 		    if ($(".scene > #popups").length > 0) el = $(".scene > #popups");
 			
@@ -54,7 +54,15 @@ define(["jquery",
             el.html(template(templateData));
             el.find(".popup").show();
             
-            el.find(".yes").click(function() {
+            if (noButton) {
+            	el.find(".popup .buttons").hide();
+            	el.find(".popup .close-button").show();
+		    }else {
+            	el.find(".popup .buttons").show();
+            	el.find(".popup .close-button").hide();
+		    }
+            
+            el.find(".yes, .close-button").click(function() {
             	el.find(".popup").hide();
             	if (callbackSuccess) callbackSuccess();
             });

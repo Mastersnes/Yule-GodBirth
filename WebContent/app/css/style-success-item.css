@@ -2,24 +2,24 @@
 /**
 * Liste des Succes
 **/
+successList > success.success-100click .icon {
+	background-image: url("../img/game/success/100.png");
+}
 successList > success.success-500click .icon {
 	background-image: url("../img/game/success/500.png");
 }
 successList > success.success-1000click .icon {
-	background-image: url("../img/game/ameliorations/deesse/deesse.png");
+	background-image: url("../img/game/success/1000.png");
 }
 successList > success.success-5000click .icon {
-	background-image: url("../img/game/ameliorations/amour/amour.png");
+	background-image: url("../img/game/success/5000.png");
 }
 successList > success.success-10000click .icon {
-	background-image: url("../img/game/ameliorations/ciel/ciel.png");
+	background-image: url("../img/game/success/10000.png");
 }
 successList > success.success-50000click .icon {
-	background-image: url("../img/game/ameliorations/ocean/ocean.png");
+	background-image: url("../img/game/success/50000.png");
 }
-successList > success.success-1000000click .icon {
-	background-image: url("../img/game/ameliorations/volcan/volcan.png");
-}
-successList > success.success-50000000click .icon {
-	background-image: url("../img/game/ameliorations/gouffre/gouffre.png");
+successList > success.success-100000click .icon {
+	background-image: url("../img/game/success/100000.png");
 }

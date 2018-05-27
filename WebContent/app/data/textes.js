@@ -588,6 +588,10 @@ define(["jquery"], function($){
 		/**
 		 * Success
 		 */
+		"success-100click" : {
+			fr : "100 Clics",
+			en : "100 Clicks"
+		},
 		"success-500click" : {
 			fr : "500 Clics",
 			en : "500 Clicks"
@@ -608,13 +612,9 @@ define(["jquery"], function($){
 			fr : "50K Clics",
 			en : "50K Clicks"
 		},
-		"success-1000000click" : {
-			fr : "1M Clics",
-			en : "1M Clicks"
-		},
-		"success-50000000click" : {
-			fr : "50M Clics",
-			en : "50M Clicks"
+		"success-100000click" : {
+			fr : "100K Clics",
+			en : "100K Clicks"
 		},
 		
 		/**

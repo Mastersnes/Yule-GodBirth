@@ -24,14 +24,14 @@ function($, _, Utils) {
 			            "croyance" : 0,
 			            "illumination" : 0,
 			            "bien" : 100,
-			            "mal" : 100
+			            "mal" : 200
 			        },
 			        "avantages" : [],
 			        "maxPoints" : {
 			            "croyance" : 0,
 			            "illumination" : 0,
 			            "bien" : 100,
-			            "mal" : 100
+			            "mal" : 200
 			        },
 			        "compteurClick" : 0,
 			        "successComplete" : [],

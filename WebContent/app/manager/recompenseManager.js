@@ -41,56 +41,27 @@ function($, _, Utils) {
 				recompense.illumination += 1;
 			}
 			
-			switch (this.compteurClick) {
-				case 500 :
-					this.addSuccess("success-500click");
-					recompense.croyance += this.compteurClick;
-					break;
-				case 1000 :
-					this.addSuccess("success-1000click");
-					recompense.croyance += this.compteurClick;
-					recompense.illumination += 1;
-					break;
-				case 5000 :
-					this.addSuccess("success-5000click");
-					recompense.croyance += this.compteurClick;
-					recompense.illumination += 5;
-					break;
-				case 10000 :
-					this.addSuccess("success-10000click");
-					recompense.croyance += this.compteurClick;
-					recompense.illumination += 10;
-					break;
-				case 50000 :
-					this.addSuccess("success-50000click");
-					recompense.croyance += this.compteurClick;
-					recompense.illumination += 50;
-					break;
-				case 1000000 :
-					this.addSuccess("success-1000000click");
-					recompense.croyance += this.compteurClick;
-					recompense.illumination += 100;
-					break;
-				case 50000000 :
-					this.addSuccess("success-50000000click");
-					recompense.croyance += this.compteurClick;
-					recompense.illumination += 500;
-					break;
-				case 100000000 :
-					recompense.croyance += this.compteurClick;
-					recompense.illumination += 1000;
-					break;
-				case 500000000 :
-					recompense.croyance += this.compteurClick;
-					recompense.illumination += 5000;
-					break;
-				case 999000000 :
-					recompense.croyance += this.compteurClick;
-					recompense.illumination += 10000;
-					break;
-			}
+			this.checkClickSuccess(100, this.compteurClick, 1, recompense);
+			this.checkClickSuccess(500, this.compteurClick, 10, recompense);
+			this.checkClickSuccess(1000, this.compteurClick, 50, recompense);
+			this.checkClickSuccess(5000, this.compteurClick, 100, recompense);
+			this.checkClickSuccess(10000, this.compteurClick, 500, recompense);
+			this.checkClickSuccess(50000, this.compteurClick, 1000, recompense);
+			this.checkClickSuccess(100000, this.compteurClick, 10000, recompense);
 			
 			this.pointManager.addPoints(recompense);
+		};
+		
+		/**
+		 * Verifie si le succes doit etre ajouté
+		 */
+		this.checkClickSuccess = function(limit, gainCroyance, gainIllumination, recompense) {
+			if (this.compteurClick >= limit) {
+				if (this.addSuccess("success-"+limit+"click")) {
+					recompense.croyance += gainCroyance;
+					recompense.illumination += gainIllumination;
+				}
+			}
 		};
 		
 		/**
@@ -104,9 +75,8 @@ function($, _, Utils) {
 		};
 		
 		this.addSuccess = function(success) {
-			console.log("success : ", success);
 			this.parent.kongregateUtils.score(success, 1);
-			if (this.complete.indexOf(success) > -1) return;
+			if (this.complete.indexOf(success) > -1) return false;
 			
 			this.complete.push(success);
 			this.saveManager.save("successComplete", this.complete);
@@ -115,7 +85,8 @@ function($, _, Utils) {
 		    this.parent.autelView.pierresView.detailView.close();
 		    this.parent.queteView.detailView.close();
 		    
-			this.parent.alertPopup(success);
+			this.parent.alertPopup(success, null, true);
+			return true;
 		};
 		
 		this.init(parent);
