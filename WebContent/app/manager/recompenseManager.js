@@ -56,36 +56,47 @@ function($, _, Utils) {
 		 * Verifie si le succes doit etre ajouté
 		 */
 		this.checkClickSuccess = function(limit, gainCroyance, gainIllumination, recompense) {
-			if (this.compteurClick >= limit) {
+			if (this.compteurClick == limit) {
 				if (this.addSuccess("success-"+limit+"click")) {
 					recompense.croyance += gainCroyance;
 					recompense.illumination += gainIllumination;
 				}
 			}
 		};
+
+		this.reloadSuccess = function() {
+			this.checkClickSuccessInit(100);
+			this.checkClickSuccessInit(500);
+			this.checkClickSuccessInit(1000);
+			this.checkClickSuccessInit(5000);
+			this.checkClickSuccessInit(10000);
+			this.checkClickSuccessInit(50000);
+			this.checkClickSuccessInit(100000);
+		};
 		
 		/**
-		 * On revalide les success pour eviter toute perte
+		 * Verifie si le succes doit etre ajouté à l'initialisation
 		 */
-		this.reloadSuccess = function() {
-			for (var index in this.complete) {
-				var success = this.complete[index];
-				this.addSuccess(success);
+		this.checkClickSuccessInit = function(limit) {
+			if (this.compteurClick >= limit) {
+				this.addSuccess("success-"+limit+"click", true);
 			}
 		};
 		
-		this.addSuccess = function(success) {
+		this.addSuccess = function(success, withoutMessage) {
 			this.parent.kongregateUtils.score(success, 1);
 			if (this.complete.indexOf(success) > -1) return false;
 			
 			this.complete.push(success);
 			this.saveManager.save("successComplete", this.complete);
 			
-			this.parent.spaceView.ameliorationView.descriptionView.close();
-		    this.parent.autelView.pierresView.detailView.close();
-		    this.parent.queteView.detailView.close();
-		    
-			this.parent.alertPopup(success, null, true);
+			if (!withoutMessage) {
+				this.parent.spaceView.ameliorationView.descriptionView.close();
+			    this.parent.autelView.pierresView.detailView.close();
+			    this.parent.queteView.detailView.close();
+			    
+				this.parent.alertPopup(success, null, true);
+			}
 			return true;
 		};
 		

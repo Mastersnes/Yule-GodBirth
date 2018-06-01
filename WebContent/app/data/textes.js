@@ -310,20 +310,32 @@ define(["jquery"], function($){
             en : "-"
         },
         "gouffre-descr" : {
-        	fr : "-",
+        	fr : "Repere de monstres cruels ou berceau de sinistres histoires, le Gouffre enferme un secret que nul ne voudrait revoir.",
         	en : "-"
         },
         "vide" : {
             fr : "Vide",
             en : "-"
         },
+        "vide-desc" : {
+        	fr : "C'est là, dans le Vide, que debute les choses et qu'elles terminent.<br/>C'est aussi là, dans le Vide, que se cache les maux les plus perfides.",
+        	en : "-"
+        },
         "chaos" : {
             fr : "Chaos",
             en : "-"
         },
+        "chaos-descr" : {
+        	fr : "Le Chaos engendre l'odre et l'ordre, inévitablement, engendre le Chaos. Dans toute chose il existe et toutes chose il consumera...",
+        	en : "-"
+        },
         "abysse" : {
             fr : "Abysses",
             en : "-"
+        },
+        "abysse-descr" : {
+        	fr : "C'est là, au milieu des profondeurs et des Abymes, que se terrent les entités les plus infames...<br/> Ne serait-ce qu'y penser, et votre âme sombre déjà dans des abysses sans fond.",
+        	en : "-"
         },
         /**
          * Ameliorations - Concept
@@ -332,13 +344,25 @@ define(["jquery"], function($){
             fr : "Amour",
             en : "Love"
         },
+        "amour-descr" : {
+        	fr : "Moteur de l'univers, il est la representation abstraite du cycle de la déesse et du dieu. Ni bonne, ni mauvaise, seulement eternelle.",
+        	en : "-"
+        },
         "connaissance" : {
             fr : "Connaissance",
             en : "Knowledge"
         },
+        "connaissance-descr" : {
+        	fr : "Le savoir est une force supreme permettant de comprendre les rouages de l'univers. Entre de mauvaise main, elle marque la fin de toute chose...",
+        	en : "-"
+        },
         "evolution" : {
             fr : "Evolution",
             en : "Evolution"
+        },
+        "evolution-descr" : {
+        	fr : "De l'enfant vient l'adulte, de la foudre vient l'orage. Les choses sont en perpetuelles evolutions et paradoxalement en perpetuel recomencement.<br/> La fin de ce cycle, marquera le debut d'un nouveau...",
+        	en : "-"
         },
         /**
          * Quetes
@@ -391,7 +415,7 @@ define(["jquery"], function($){
           fr : "Primaire",
           en : "Primaire"
         },
-        "Solaire" : {
+        "solaire" : {
             fr : "Solaire",
             en : "Solar"
         },
@@ -444,7 +468,7 @@ define(["jquery"], function($){
 			en : "Apache's tear"
 		},
 		"larme-apache-desc" : {
-			fr : "Cette puissante pierre est une Obsidienne particuliere. D'une grande pureté, elle sont en réalité des larmes ",
+			fr : "Cette puissante pierre est une Obsidienne particuliere.<br/>D'une grande pureté, elle sont en réalité les larmes de jeunes femmes pleurant leur amour disparus.",
 			en : ""
 		},
 		"cristal-de-roche" : {
@@ -452,10 +476,113 @@ define(["jquery"], function($){
 			en : "Rock Crystal"
 		},
 		"cristal-de-roche-desc" : {
-			fr : "",
+			fr : "Essence de la terre, il emplifie la puissance des pierres environnante.",
 			en : ""
 		},
 		
+		/**
+		 * Solaire
+		 */
+		"grenat" : {
+			fr : "Grenat",
+			en : "-"
+		},
+		"grenat-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"onyx" : {
+			fr : "Onyx",
+			en : "-"
+		},
+		"onyx-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"ambre" : {
+			fr : "Ambre",
+			en : "-"
+		},
+		"ambre-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"obsidienne" : {
+			fr : "Obsidienne",
+			en : "-"
+		},
+		"obsidienne-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"hematite" : {
+			fr : "Hematite",
+			en : "-"
+		},
+		"hematite-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"pierre-de-soleil" : {
+			fr : "Pierre de Soleil",
+			en : "-"
+		},
+		"pierre-de-soleil-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		
+		/**
+		 * Lunaire
+		 */
+		"malachite" : {
+			fr : "Malachite",
+			en : "-"
+		},
+		"malachite-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"amethyste" : {
+			fr : "Amethyste",
+			en : "-"
+		},
+		"amethyste-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"lapis-lazuli" : {
+			fr : "Lapis Lazuli",
+			en : "-"
+		},
+		"lapis-lazuli-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"labradorite" : {
+			fr : "Labradorite",
+			en : "-"
+		},
+		"labradorite-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"azurite" : {
+			fr : "Azurite",
+			en : "-"
+		},
+		"azurite-desc" : {
+			fr : "-",
+			en : "-"
+		},
+		"pierre-de-lune" : {
+			fr : "Pierre de Lune",
+			en : "-"
+		},
+		"pierre-de-lune-desc" : {
+			fr : "-",
+			en : "-"
+		},
 		
 		/**
 		 * Didactitiel
