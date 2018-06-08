@@ -279,7 +279,40 @@ define([ "jquery" ], function($) {
 				bien : 0,
 				mal : 0
 			}
-		}
+		},
+		/**
+		 * Secretes
+		 */
+        "ringwoodite" : {
+            name : "ringwoodite",
+            description : "ringwoodite-desc",
+            conditions : [],
+            prix : {
+                croyance : 1,
+                illumination : 0,
+            },
+            gains : {
+                croyance : 1,
+                illumination : 0,
+                bien : 0,
+                mal : 0
+            }
+        },
+        "hypatia" : {
+            name : "hypatia",
+            description : "hypatia-desc",
+            conditions : [],
+            prix : {
+                croyance : 1,
+                illumination : 0,
+            },
+            gains : {
+                croyance : 1,
+                illumination : 0,
+                bien : 0,
+                mal : 0
+            }
+        }
 	};
 
 	return {

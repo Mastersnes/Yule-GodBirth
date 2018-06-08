@@ -423,6 +423,10 @@ define(["jquery"], function($){
             fr : "Lunaire",
             en : "Lunar"
         },
+        "secrete" : {
+            fr : "Secrete",
+            en : "Secret"
+        },
         "pierreDejaPlace" : {
         	fr : "La pierre est déjà placée sur l'autel",
         	en : "The stone is already placed on the altar"
@@ -476,7 +480,7 @@ define(["jquery"], function($){
 			en : "Rock Crystal"
 		},
 		"cristal-de-roche-desc" : {
-			fr : "Essence de la terre, il emplifie la puissance des pierres environnante.",
+			fr : "Essence du monde, elle amplifie la puissance des pierres qui l'entoure et symbolise l'elevation de l'âme.",
 			en : ""
 		},
 		
@@ -485,39 +489,39 @@ define(["jquery"], function($){
 		 */
 		"grenat" : {
 			fr : "Grenat",
-			en : "-"
+			en : "Garnet"
 		},
 		"grenat-desc" : {
-			fr : "-",
+			fr : "Pierre du courage, elle represente les epreuves que doit franchir le heros dans sa quete eternelle.",
 			en : "-"
 		},
 		"onyx" : {
 			fr : "Onyx",
-			en : "-"
+			en : "Onyx"
 		},
 		"onyx-desc" : {
-			fr : "-",
+			fr : "Tantôt symbole de discorde, Tantôt pierre protectrice, l'onyx represente la volonté et l'intuition.",
 			en : "-"
 		},
 		"ambre" : {
 			fr : "Ambre",
-			en : "-"
+			en : "Amber"
 		},
 		"ambre-desc" : {
-			fr : "-",
+			fr : "Larme des premiers arbres peuplant la terre, l'ambre contient la lumiére du monde. Sa bienveillance amene sagesse et serenité.",
 			en : "-"
 		},
 		"obsidienne" : {
 			fr : "Obsidienne",
-			en : "-"
+			en : "Obsidian"
 		},
 		"obsidienne-desc" : {
-			fr : "-",
+			fr : "Cette puissante pierre a autant le pouvoir d'ouvrir les chairs que de les refermer.<br/> Elle protege et aide à combattre les idées négatives, ou à les amplifier...",
 			en : "-"
 		},
 		"hematite" : {
 			fr : "Hematite",
-			en : "-"
+			en : "Hematite"
 		},
 		"hematite-desc" : {
 			fr : "-",
@@ -583,6 +587,25 @@ define(["jquery"], function($){
 			fr : "-",
 			en : "-"
 		},
+		/**
+		 * Secrete
+		 */
+		"ringwoodite" : {
+            fr : "Ringwoodite",
+            en : "Ringwoodite"
+        },
+        "ringwoodite-desc" : {
+            fr : "-",
+            en : "-"
+        },
+        "hypatia" : {
+            fr : "Hypatia",
+            en : "Hypatia"
+        },
+        "hypatia-desc" : {
+            fr : "-",
+            en : "-"
+        },
 		
 		/**
 		 * Didactitiel
