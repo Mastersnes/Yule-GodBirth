@@ -516,7 +516,7 @@ define(["jquery"], function($){
 			en : "Obsidian"
 		},
 		"obsidienne-desc" : {
-			fr : "Cette puissante pierre a autant le pouvoir d'ouvrir les chairs que de les refermer.<br/> Elle protege et aide à combattre les idées négatives, ou à les amplifier...",
+			fr : "Cette puissante pierre possede autant le pouvoir d'ouvrir les chairs que de les refermer.<br/> Elle protege et aide à combattre les idées négatives, ou les amplifies...",
 			en : "-"
 		},
 		"hematite" : {
@@ -524,15 +524,15 @@ define(["jquery"], function($){
 			en : "Hematite"
 		},
 		"hematite-desc" : {
-			fr : "-",
+			fr : "Pierre de sang, elle suit les progrès de l'humanité depuis ses debuts. Elle est un symbole de dynamisme et de vitalité.",
 			en : "-"
 		},
 		"pierre-de-soleil" : {
 			fr : "Pierre de Soleil",
-			en : "-"
+			en : "Sunstone"
 		},
 		"pierre-de-soleil-desc" : {
-			fr : "-",
+			fr : "Lumiere dans la tempete, elle guide les hommes vers la grandeur du soleil. Mais gare aux fous qui pourraient s'y bruler !",
 			en : "-"
 		},
 		
@@ -541,50 +541,50 @@ define(["jquery"], function($){
 		 */
 		"malachite" : {
 			fr : "Malachite",
-			en : "-"
+			en : "Malachite"
 		},
 		"malachite-desc" : {
-			fr : "-",
+			fr : "Symbole de beauté, la légende raconte qu'elle permettrait la comprehension du langage animal.",
 			en : "-"
 		},
 		"amethyste" : {
 			fr : "Amethyste",
-			en : "-"
+			en : "Amethyst"
 		},
 		"amethyste-desc" : {
-			fr : "-",
+			fr : "La Pierre des dieux par son symbole d'intelligence et de sagesse. L'amethyste aide à dissiper toutes mauvaises pensées et protege ainsi sont porteur.",
 			en : "-"
 		},
 		"lapis-lazuli" : {
 			fr : "Lapis Lazuli",
-			en : "-"
+			en : "Lapis Lazuli"
 		},
 		"lapis-lazuli-desc" : {
-			fr : "-",
+			fr : "Pierre de protection et de bonne humeur par excellence, le lapis-lazuli serait un morceau de ciel étoilé tombé des cieux.",
 			en : "-"
 		},
 		"labradorite" : {
 			fr : "Labradorite",
-			en : "-"
+			en : "Labradorite"
 		},
 		"labradorite-desc" : {
-			fr : "-",
+			fr : "Prison minérale contenant le feu de l'aurore boreale.<br/>La labradorite est une pierre d'equilibre renfermant l'esprit des ancetres.",
 			en : "-"
 		},
 		"azurite" : {
 			fr : "Azurite",
-			en : "-"
+			en : "Azurite"
 		},
 		"azurite-desc" : {
-			fr : "-",
+			fr : "Pierre de protection par excellence, l'azurite permet également de se connecter à la sagesse superieur.",
 			en : "-"
 		},
 		"pierre-de-lune" : {
 			fr : "Pierre de Lune",
-			en : "-"
+			en : "Moonstone"
 		},
 		"pierre-de-lune-desc" : {
-			fr : "-",
+			fr : "Pierre de pureté et de feminité, elle est constitué de lumiere solaire et reflete l'imensité du cosmos.",
 			en : "-"
 		},
 		/**
@@ -595,7 +595,7 @@ define(["jquery"], function($){
             en : "Ringwoodite"
         },
         "ringwoodite-desc" : {
-            fr : "-",
+            fr : "Caché au centre du monde, un nouvel ocean bien plus grand et bien plus ancien sommeil...<br/> Entendez-le gronder, il ne cherche qu'a remonter...",
             en : "-"
         },
         "hypatia" : {
@@ -603,7 +603,7 @@ define(["jquery"], function($){
             en : "Hypatia"
         },
         "hypatia-desc" : {
-            fr : "-",
+            fr : "Noyau stellaire d'une comete eteinte depuis des millions d'années.<br/> L'histoire de notre cosmos debute et se termine ainsi...",
             en : "-"
         },
 		
