@@ -74,6 +74,10 @@ preload.god-beltane[step="1"] {
 	background-image: url("../img/game/god/beltane/1.png");
 }
 
+preload.god-litha[step="1"] {
+	background-image: url("../img/game/god/litha/1.png");
+}
+
 /**GODDESS**/
 /**IMBOLC**/
 preload.goddess-imbolc[step="1"] {
@@ -140,6 +144,10 @@ preload.goddess-ostara[step="10"] {
 /**BELTANE**/
 preload.goddess-beltane[step="1"] {
 	background-image: url("../img/game/goddess/beltane/1.png");
+}
+/**LITHA**/
+preload.goddess-litha[step="1"] {
+	background-image: url("../img/game/goddess/litha/1.png");
 }
 
 /**Dieu**/

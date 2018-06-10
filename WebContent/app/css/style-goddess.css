@@ -131,3 +131,42 @@ goddess.beltane {
     	transform: rotate(360deg) scale(1);
     }
 }
+
+goddess.litha {
+	background-image: url("../img/game/goddess/litha/1.png");
+    animation-name: litha-anim;
+    animation-duration: 100s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+    -webkit-animation-name: litha-anim;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+	-moz-animation-name: litha-anim;
+    -moz-animation-duration: 100s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: litha-anim;
+    -o-animation-duration: 100s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+
+@keyframes litha-anim {
+    0% {
+    	transform: rotate(0deg) scale(1);
+    }
+    50% {
+     	transform: rotate(180deg) scale(0.9);
+    }
+    100% {
+    	transform: rotate(360deg) scale(1);
+    }
+}

@@ -158,3 +158,10 @@ god.ostara {
 god.beltane {
     background-image: url("../img/game/god/beltane/1.png");
 }
+
+/**
+* Mariage - Litha
+**/
+god.litha {
+    background-image: url("../img/game/god/litha/1.png");
+}
