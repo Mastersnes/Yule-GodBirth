@@ -17,7 +17,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 				    if(!lvl) lvl = this.level;
 					return {
 	        			croyance : Math.round(Utils.pow(10, lvl, 3.5)),
-	        			illumination : Math.round(lvl<10 ? 0 : Utils.pow(1, lvl, 1.3))
+	        			illumination : Math.round(lvl<10 ? 0 : Utils.pow(1, lvl, 3))
 	        		};
 			    };
 			    this.gain = function (incr, ameliorations) {
@@ -65,8 +65,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 				this.prix = function (lvl) {
 				    if(!lvl) lvl = this.level;
 					return {
-						croyance : Math.round(Utils.pow(20, lvl, 3.54)),
-	        			illumination : Math.round(lvl<8 ? 0 : Utils.pow(1.1, lvl, 1.41))
+						croyance : Math.round(Utils.pow(50, lvl, 3)),
+	        			illumination : Math.round(lvl<5 ? 0 : Utils.pow(50, lvl, 1.8))
 	        		};
 			    };
 			    this.gain = function (incr, ameliorations) {
@@ -112,8 +112,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 				this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
 					return {
-						croyance : Math.round(Utils.pow(25, lvl, 3.4)),
-	        			illumination : Math.round(lvl<8 ? 0 : Utils.pow(1, lvl, 1.4))
+						croyance : Math.round(Utils.pow(80, lvl, 2.9)),
+	        			illumination : Math.round(lvl<5 ? 0 : Utils.pow(30, lvl, 1.95))
 	        		};
 			    };
 			    this.gain = function (incr, ameliorations) {
@@ -160,8 +160,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-						croyance : Math.round(Utils.pow(3000, lvl, 2.9)),
-	        			illumination : Math.round(lvl<5 ? 0 : Utils.pow(2.5, lvl, 1.35))
+						croyance : Math.round(Utils.pow(7000, lvl, 2.001)),
+	        			illumination : Math.round(lvl<3 ? 0 : Utils.pow(120, lvl, 1.8))
 	        		};
                 };
                 this.gain = function (incr, ameliorations) {
@@ -204,8 +204,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-						croyance : Math.round(Utils.pow(3250, lvl, 2.6)),
-	        			illumination : Math.round(lvl<4 ? 0 : Utils.pow(2.2, lvl, 1.3))
+						croyance : Math.round(Utils.pow(6700, lvl, 1.9857)),
+	        			illumination : Math.round(lvl<3 ? 0 : Utils.pow(110, lvl, 1.82))
 	        		};
                 };
                 this.gain = function (incr, ameliorations) {
@@ -248,8 +248,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(4000, lvl, 2.85)),
-	        			illumination : Math.round(lvl<4?0 : Utils.pow(2.5, lvl, 1.45))
+                    	croyance : Math.round(Utils.pow(7500, lvl, 2.003)),
+	        			illumination : Math.round(lvl<4?0 : Utils.pow(150, lvl, 1.78))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -296,8 +296,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(2000000, lvl, 1.7)),
-	        			illumination : Math.round(Utils.pow(4, lvl, 1.5))
+                    	croyance : Math.round(Utils.pow(120000, lvl, 1.43)),
+	        			illumination : Math.round(Utils.pow(800, lvl, 1.4))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -340,8 +340,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(2405200, lvl, 1.65)),
-	        			illumination : Math.round(Utils.pow(4.5, lvl, 1.45))
+                    	croyance : Math.round(Utils.pow(130000, lvl, 1.415)),
+	        			illumination : Math.round(Utils.pow(900, lvl, 1.4))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -384,8 +384,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(2500000, lvl, 1.7)),
-	        			illumination : Math.round(Utils.pow(3, lvl, 1.6))
+                    	croyance : Math.round(Utils.pow(150000, lvl, 1.38)),
+	        			illumination : Math.round(Utils.pow(1200, lvl, 1.35))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -428,8 +428,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(1800000, lvl, 1.75)),
-	        			illumination : Math.round(Utils.pow(4.4, lvl, 1.42))
+                    	croyance : Math.round(Utils.pow(120000, lvl, 1.39)),
+	        			illumination : Math.round(Utils.pow(800, lvl, 1.45))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -476,8 +476,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(1900000, lvl, 1.74)),
-	        			illumination : Math.round(Utils.pow(4.5, lvl, 1.41))
+                    	croyance : Math.round(Utils.pow(130000, lvl, 1.39)),
+	        			illumination : Math.round(Utils.pow(1500, lvl, 1.25))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -520,8 +520,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(2300000, lvl, 1.68)),
-	        			illumination : Math.round(Utils.pow(3, lvl, 1.7))
+                    	croyance : Math.round(Utils.pow(110000, lvl, 1.43)),
+	        			illumination : Math.round(Utils.pow(500, lvl, 1.58))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -564,8 +564,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(2800000, lvl, 1.6)),
-	        			illumination : Math.round(Utils.pow(6, lvl, 1.3))
+                    	croyance : Math.round(Utils.pow(200000, lvl, 1.26)),
+	        			illumination : Math.round(Utils.pow(600, lvl, 1.45))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -608,8 +608,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(1450000, lvl, 1.8)),
-	        			illumination : Math.round(Utils.pow(5, lvl, 1.4))
+                    	croyance : Math.round(Utils.pow(100000, lvl, 1.48)),
+	        			illumination : Math.round(Utils.pow(300, lvl, 1.73))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -656,8 +656,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(100000000, lvl, 1.4)),
-	        			illumination : Math.round(Utils.pow(120, lvl, 1.15))
+                    	croyance : Math.round(Utils.pow(3333333, lvl, 0.8)),
+	        			illumination : Math.round(Utils.pow(3333, lvl, 1.2))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -700,8 +700,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(150000000, lvl, 1.36)),
-	        			illumination : Math.round(Utils.pow(150, lvl, 1.15))
+                    	croyance : Math.round(Utils.pow(6666666, lvl, 0.7)),
+	        			illumination : Math.round(Utils.pow(6666, lvl, 1.06))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
@@ -744,8 +744,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(200000000, lvl, 1.335)),
-	        			illumination : Math.round(Utils.pow(200, lvl, 1.15))
+                    	croyance : Math.round(Utils.pow(9999999, lvl, 0.66)),
+	        			illumination : Math.round(Utils.pow(9999, lvl, 0.99))
                     };
                 };
                 this.gain = function (incr, ameliorations) {
