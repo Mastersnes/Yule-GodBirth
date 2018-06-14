@@ -1,6 +1,9 @@
 'use strict';
 define(["jquery"], function($){
 	var data = {
+	        /**
+	         * Commencement
+	         */
 			"dust" : {
 				name : "dust",
 			    nbr : 5,
@@ -11,6 +14,9 @@ define(["jquery"], function($){
                     newEvents : []
                 }
 			},
+			/**
+			 * Level 0
+			 */
 			"egg" : {
 			    name : "egg",
 			    nbr : 3,
@@ -26,20 +32,20 @@ define(["jquery"], function($){
 			 */
 			"baby" : {
 				name : "baby",
-				nbr : 3,
+				nbr : 5,
 				next : "imbolc",
-				text : ["didactitiel-dieu1", "didactitiel-dieu2", "didactitiel-dieu3"],
+				text : [],
 				events : {
 	                typeEvents : [],
 	                newEvents : []
 	            }
 			},
 			/**
-			 * Level 10 : Imbolc
+			 * Level 8 : Imbolc
 			 */
             "imbolc" : {
                 name : "imbolc",
-                nbr : 5,
+                nbr : 7,
 				next : "ostara",
                 text : ["cinematique-imbolc", "cinematique-imbolc1", "cinematique-imbolc2", "cinematique-imbolc3", "cinematique-imbolc4", "cinematique-imbolc5"],
                 events : {
@@ -69,7 +75,7 @@ define(["jquery"], function($){
              */
             "ostara" : {
                 name : "ostara",
-                nbr : 5,
+                nbr : 10,
 				next : "beltane",
                 text : ["cinematique-ostara"],
                 events : {
@@ -78,11 +84,11 @@ define(["jquery"], function($){
                 }
             },
             /**
-             * Level 20 : Beltane
+             * Level 25 : Beltane
              */
             "beltane" : {
                 name : "beltane",
-                nbr : 5,
+                nbr : 15,
 				next : "litha",
                 text : ["cinematique-beltane"],
                 events : {
@@ -91,11 +97,11 @@ define(["jquery"], function($){
                 }
             },
             /**
-             * Level 25 : Litha
+             * Level 40 : Litha
              */
             "litha" : {
                 name : "litha",
-                nbr : 5,
+                nbr : 15,
 				next : "lammas",
                 text : ["cinematique-litha"],
                 events : {
@@ -104,11 +110,11 @@ define(["jquery"], function($){
                 }
             },
             /**
-             * Level 30 : Lammas
+             * Level 55 : Lammas
              */
             "lammas" : {
                 name : "lammas",
-                nbr : 5,
+                nbr : 15,
 				next : "mabon",
                 text : ["cinematique-lammas"],
                 events : {
@@ -117,11 +123,11 @@ define(["jquery"], function($){
                 }
             },
             /**
-             * Level 35 : Mabon
+             * Level 70 : Mabon
              */
             "mabon" : {
                 name : "mabon",
-                nbr : 5,
+                nbr : 15,
 				next : "samhain",
                 text : ["cinematique-mabon"],
                 events : {
@@ -130,11 +136,11 @@ define(["jquery"], function($){
                 }
             },
             /**
-             * Level 40 : Samhain
+             * Level 85 : Samhain
              */
             "samhain" : {
                 name : "samhain",
-                nbr : 5,
+                nbr : 15,
 				next : "yule-fin",
                 text : ["cinematique-samhain"],
                 events : {
@@ -143,7 +149,7 @@ define(["jquery"], function($){
                 }
             },
             /**
-             * Level 45 : Yule Fin
+             * Level 100 : Yule Fin
              */
             "yule-fin" : {
                 name : "yule-fin",

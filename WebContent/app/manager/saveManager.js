@@ -90,7 +90,10 @@ function($, _, Utils) {
 						recompense : {
 							start : false
 						},
-						step : 0
+						step : {
+						    name : "debut",
+						    index : 0
+						}
 			        }
 			    };
 		};

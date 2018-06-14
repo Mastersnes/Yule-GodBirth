@@ -20,8 +20,8 @@ define(["jquery"], function($){
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
-			    	var grandTout = game.spaceView.ameliorationView.Items.get("grandTout");
-			    	if (grandTout.level < 5) {
+			    	var didactitielStep = game.didactitielManager.data.step;
+			    	if (didactitielStep.name == "quete" && didactitielStep.index == 0) {
 				    	game.showConstellation(function() {
 				    		game.showStar($("etoile.space-star"));
 				    	});

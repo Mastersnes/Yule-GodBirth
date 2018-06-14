@@ -132,10 +132,6 @@ function($, _, Utils, page, Events) {
 		this.show = function() {
 		    if (!this.currentEvent) return;
 		    this.eventOpen = true;
-		    if (this.currentEvent.unique) {
-        		this.uniquesEvents.push(this.currentEvent.name);
-        		this.saveManager.save("uniquesEvents", this.uniquesEvents);
-        	}
 		    
 		    this.parent.spaceView.ameliorationView.descriptionView.close();
 		    this.parent.autelView.pierresView.detailView.close();
@@ -158,6 +154,10 @@ function($, _, Utils, page, Events) {
 		};
 
 		this.hide = function() {
+		    if (this.currentEvent.unique) {
+                this.uniquesEvents.push(this.currentEvent.name);
+                this.saveManager.save("uniquesEvents", this.uniquesEvents);
+            }
 			this.currentEvent = null;
 			this.eventOpen = false;
 		    $(".popupEvent").hide();
@@ -176,7 +176,7 @@ function($, _, Utils, page, Events) {
 		 * Ajoute des evenements à la liste des evenements generaux
 		 */
 		this.addEvents = function(events) {
-		    if (!events || event.lenght == 0) return false;
+		    if (!events || events.lenght == 0) return false;
 		    var oneEventAdded = false;
 		    for (var indexEvent in events) {
 		    	var eventToAdd = events[indexEvent];
