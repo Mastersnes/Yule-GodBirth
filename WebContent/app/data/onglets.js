@@ -11,15 +11,15 @@ define(["jquery"], function($){
 			    conditions : [
 			         {
 			             name : "grandTout",
-			             level : 5
+			             level : 3
 			         },
 			         {
                          name : "dieu",
-                         level : 5
+                         level : 3
                      },
                      {
                          name : "deesse",
-                         level : 5
+                         level : 3
                      }
 			    ],
 				name : "univers",
@@ -29,15 +29,15 @@ define(["jquery"], function($){
 			    conditions : [
                      {
                          name : "terre",
-                         level : 10
+                         level : 5
                      },
                      {
                          name : "soleil",
-                         level : 10
+                         level : 5
                      },
                      {
                          name : "deesse",
-                         level : 10
+                         level : 5
                      }
                 ],
 				name : "vie",
@@ -47,15 +47,15 @@ define(["jquery"], function($){
 			    conditions : [
                      {
                          name : "lune",
-                         level : 10
+                         level : 5
                      },
                      {
                          name : "soleil",
-                         level : 10
+                         level : 5
                      },
                      {
                          name : "dieu",
-                         level : 10
+                         level : 5
                      }
                 ],
 				name : "mort",
@@ -63,22 +63,6 @@ define(["jquery"], function($){
 			},
 			"concept" : {
 			    conditions : [
-                     {
-                         name : "dieu",
-                         level : 30
-                     },
-                     {
-                         name : "deesse",
-                         level : 30
-                     },
-                     {
-                         name : "terre",
-                         level : 20
-                     },
-                     {
-                         name : "lune",
-                         level : 20
-                     },
                      {
                          name : "chaos",
                          level : 5
