@@ -74,7 +74,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(7, me, 0.55) + Utils.pow(8, me, 1.15));
-	        		var mal = Math.round(Utils.pow(1, 1.027, me-1) + Math.pow(me-1, 1.55));
+	        		var mal = Math.round(me * 1.2);
 	        		var illumination = 0;
 	        		var bien = 0;
 	        		
@@ -90,10 +90,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * croyance),
+	        				croyance : Math.round(0.1 * croyance),
 	        				illumination : 0,
                             bien : 0,
-                            mal : Math.round(0.5 * mal)
+                            mal : Math.round(0.1 * mal)
 	        			}
 	        		};
 	        	};
@@ -121,7 +121,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(8, me, 0.6) + Utils.pow(5, me, 1.155));
-	        		var bien = Math.round(Utils.pow(1, 1.028, me-1) + Math.pow(me-1, 1.5));
+	        		var bien = Math.round(me);
 	        		var illumination = 0;
 	        		var mal = 0;
 	        		
@@ -137,9 +137,9 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : 0
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * croyance),
+	        				croyance : Math.round(0.1 * croyance),
 	        				illumination : 0,
-                            bien : Math.round(0.5 * bien),
+                            bien : Math.round(0.1 * bien),
                             mal : 0
 	        			}
 	        		};
@@ -169,8 +169,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(9, me, 0.7) + Utils.pow(8, me, 1.2));
-	        		var bien = Math.round(Utils.pow(10, 1.06, me-1) + Math.pow(me-1, 1));
-	        		var mal = Math.round(Utils.pow(12, 1.061, me-1) + Math.pow(me-1, 1.05));
+	        		var bien = -Math.round(me * 0.2);
+	        		var mal = Math.round(me * 1.5);
 	        		var illumination = 0;
 	        		
 	        		if (me <= 0) {
@@ -185,10 +185,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.5 * croyance),
+	        				croyance : Math.round(0.1 * croyance),
 	        				illumination : 0,
-                            bien : Math.round(0.5 * bien),
-                            mal : Math.round(0.5 * bien)
+                            bien : Math.round(0.1 * bien),
+                            mal : Math.round(0.1 * bien)
 	        			}
 	        		};
 	        	};
@@ -213,8 +213,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(8.5, me, 1.2) + Utils.pow(7.5, me, 0.9));
-	        		var illumination = Math.round(me * 0.1);
-	        		var bien = Math.round(Utils.pow(20, 1.07, me-1) + Math.pow(me-1, 1.4));
+	        		var illumination = Math.round(me / 13);
+	        		var bien = Math.round(me * 2.5);
 	        		var mal = 0;
 	        		
 	        		if (me <= 0) {
@@ -229,9 +229,9 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : 0
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
-	        				illumination : Math.round(illumination * 0.5),
-                            bien : Math.round(bien * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
+	        				illumination : Math.round(illumination * 0.1),
+                            bien : Math.round(bien * 0.1),
                             mal : 0
 	        			}
 	        		};
@@ -257,8 +257,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(9, me, 0.68) + Utils.pow(9, me, 1.215));
-	        		var illumination = Math.round((me-1) * 0.25);
-	        		var mal = Math.round(Utils.pow(30, 1.065, me-1) + Math.pow(me-1, 1.4));
+	        		var illumination = Math.round(me / 10);
+	        		var mal = Math.round(me * 2.7);
 	        		var bien = 0;
 	        		
 	        		if (me <= 0) {
@@ -273,10 +273,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
-	        				illumination : Math.round(illumination * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
+	        				illumination : Math.round(illumination * 0.1),
                             bien : 0,
-                            mal : Math.round(mal * 0.5)
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -305,8 +305,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(10, me, 0.65) + Utils.pow(10, me, 1.214));
-	        		var bien = Math.round(Utils.pow(50, 1.045, me-1) + Math.pow(me-1, 1.2));
-	        		var mal = Math.round(Utils.pow(-11, 1.051, me-1) + Math.pow(me-1, 1.21));
+	        		var bien = Math.round(me * 2);
+	        		var mal = -Math.round(me * 0.3);
 	        		var illumination = 0;
 	        		
 	        		if (me <= 0) {
@@ -321,10 +321,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -349,8 +349,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(12, me, 0.67) + Utils.pow(10, me, 1.215));
-	        		var bien = Math.round(Utils.pow(40, 1.05, me-1) + Math.pow(me-1, 1.1));
-	        		var mal = Math.round(Utils.pow(-13, 1.051, me-1) + Math.pow(me-1, 1.14));
+	        		var bien = Math.round(me * 1.4);
+	        		var mal = -Math.round(me * 0.4);
 	        		var illumination = 0;
 	        		
 	        		if (me <= 0) {
@@ -365,10 +365,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -393,8 +393,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(16, me, 0.67) + Utils.pow(9, me, 1.214));
-	        		var bien = Math.round(Utils.pow(20, 1.05, me-1) + Math.pow(me-1, 1.1));
-	        		var mal = Math.round(Utils.pow(-33, 1.045, me-1) + Math.pow(me-1, 1.21));
+	        		var bien = -Math.round(me * 0.5);
+	        		var mal = Math.round(me * 2.2);
 	        		var illumination = 0;
 	        		
 	        		if (me <= 0) {
@@ -409,10 +409,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -437,8 +437,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(10, me, 0.65) + Utils.pow(11, me, 1.19));
-	        		var bien = Math.round(Utils.pow(30, 1.051, me-1) + Math.pow(me-1, 1.2));
-	        		var mal = Math.round(Utils.pow(-10, 1.05, me-1) + Math.pow(me-1, 1.7));
+	        		var bien = Math.round(me * 2.3);
+	        		var mal = Math.round(me * 0.8);
 	        		var illumination = 0;
 	        		
 	        		if (me <= 0) {
@@ -453,10 +453,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -485,8 +485,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(10, me, 0.4) + Utils.pow(11, me, 1.21));
-	        		var bien = Math.round(Utils.pow(-10, 1.05, me-1) + Math.pow(me-1, 1.2));
-	        		var mal = Math.round(Utils.pow(60, 1.045, me-1) + Math.pow(me-1, 1.2));
+	        		var bien = -Math.round(me * 1.2);
+	        		var mal = Math.round(me * 2.4);
 	        		var illumination = 0;
 	        		
 	        		if (me <= 0) {
@@ -501,10 +501,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -529,8 +529,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(5, me, 0.4) + Utils.pow(10, me, 1.225));
-	        		var bien = Math.round(Utils.pow(-15, 1.052, me-1) + Math.pow(me-1, 1.15));
-	        		var mal = Math.round(Utils.pow(40, 1.04, me-1) + Math.pow(me-1, 1.3));
+	        		var bien = -Math.round(me * 0.9);
+	        		var mal = Math.round(me * 1.8);
 	        		var illumination = 0;
 	        		
 	        		if (me <= 0) {
@@ -545,10 +545,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -573,8 +573,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(15, me, 0.5) + Utils.pow(13, me, 1.1));
-	        		var bien = Math.round(Utils.pow(-30, 1.04, me-1) + Math.pow(me-1, 1.2));
-	        		var mal = Math.round(Utils.pow(100, 1.023, me-1) + Math.pow(me-1, 1.23));
+	        		var bien = -Math.round(me * 1.5);
+	        		var mal = Math.round(2.9);
 	        		var illumination = 0;
 	        		
 	        		if (me <= 0) {
@@ -589,10 +589,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -617,8 +617,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(3, me, 0.5) + Utils.pow(7, me, 1.315));
-	        		var bien = Math.round(Utils.pow(-5, 1.06, me-1) + Math.pow(me-1, 1.5));
-	        		var mal = Math.round(Utils.pow(30, 1.055, me-1) + Math.pow(me-1, 1.25));
+	        		var bien = -Math.round(me * 1.3);
+	        		var mal = Math.round(me * 2.5);
 	        		var illumination = 0;
 	        		
 	        		if (me <= 0) {
@@ -633,10 +633,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
+	        				croyance : Math.round(croyance * 0.1),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -665,9 +665,9 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(13, me, 0.7) + Utils.pow(10, me, 1.3));
-	        		var illumination = Math.round(me * 2);
-	        		var bien = Math.round(Utils.pow(100, 1.073, me-1) + Math.pow(me-1, 1.35));
-	        		var mal = Math.round(Utils.pow(101, 1.074, me-1) + Math.pow(me-1, 1.35));
+	        		var illumination = Math.round(me / 5);
+	        		var bien = Math.round(me * 4);
+	        		var mal = Math.round(me * 1.3);
 	        		
 	        		if (me <= 0) {
 	        			croyance = 0; illumination = 0;
@@ -681,10 +681,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
-	        				illumination : Math.round(illumination * 0.5),
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+	        				croyance : Math.round(croyance * 0.1),
+	        				illumination : Math.round(illumination * 0.1),
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -709,9 +709,9 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(13, me, 0.6) + Utils.pow(13, me, 1.2));
-	        		var illumination = Math.round(me * 2.2);
-	        		var bien = Math.round(Utils.pow(110, 1.07, me-1) + Math.pow(me-1, 1.4));
-	        		var mal = Math.round(Utils.pow(109, 1.069, me-1) + Math.pow(me-1, 1.4));
+	        		var illumination = Math.round(me / 3);
+	        		var bien = -Math.round(me * 2.4);
+	        		var mal = -Math.round(me * 1.2);
 	        		
 	        		if (me <= 0) {
 	        			croyance = 0; illumination = 0;
@@ -725,10 +725,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
-	        				illumination : Math.round(illumination * 0.5),
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+	        				croyance : Math.round(croyance * 0.1),
+	        				illumination : Math.round(illumination * 0.1),
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
@@ -753,9 +753,9 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		var me = this.level + incr;
 	        		
 	        		var croyance = Math.round(Utils.pow(14, me, 0.8) + Utils.pow(15, me, 1.15));
-	        		var illumination = Math.round(me * 2.5);
-	        		var bien = Math.round(Utils.pow(120, 1.06, me-1) + Math.pow(me-1, 1.8));
-	        		var mal = Math.round(Utils.pow(120, 1.061, me-1) + Math.pow(me-1, 1.79));
+	        		var illumination = Math.round(me / 1.5);
+	        		var bien = Math.round(me * 2.6);
+	        		var mal = Math.round(me * 1.6);
 	        		
 	        		if (me <= 0) {
 	        			croyance = 0; illumination = 0;
@@ -769,10 +769,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.5),
-	        				illumination : Math.round(illumination * 0.5),
-                            bien : Math.round(bien * 0.5),
-                            mal : Math.round(mal * 0.5)
+	        				croyance : Math.round(croyance * 0.1),
+	        				illumination : Math.round(illumination * 0.1),
+                            bien : Math.round(bien * 0.1),
+                            mal : Math.round(mal * 0.1)
 	        			}
 	        		};
 	        	};
