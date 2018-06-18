@@ -92,6 +92,12 @@ define([ "jquery" ], function($) {
 				illumination : 10,
 				bien : 0,
 				mal : 0
+			},
+			bonusCentre : {
+			    croyance : 100,
+                illumination : 100,
+                bien : 100,
+                mal : 100
 			}
 		},
 		/**

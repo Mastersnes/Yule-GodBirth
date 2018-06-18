@@ -52,41 +52,27 @@ define(["jquery",
 				"mal" : 0
 			};
         	
-        	this.drawChasse("haut", avantages);
-        	this.drawChasse("gauche", avantages);
-        	this.drawChasse("droite", avantages);
-        	this.drawChasse("bas-gauche", avantages);
-        	this.drawChasse("bas-droite", avantages);
-        	this.drawChasse("centre", avantages);
+        	var bonusCentre = {
+    	        "croyance" : 0,
+                "illumination" : 0,
+                "bien" : 0,
+                "mal" : 0
+        	};
+        	
+        	this.drawChasse("centre", avantages, bonusCentre);
+        	this.drawChasse("haut", avantages, bonusCentre);
+        	this.drawChasse("gauche", avantages, bonusCentre);
+        	this.drawChasse("droite", avantages, bonusCentre);
+        	this.drawChasse("bas-gauche", avantages, bonusCentre);
+        	this.drawChasse("bas-droite", avantages, bonusCentre);
         	
         	this.refreshAvantages(avantages);
         };
         
         /**
-         * Raffraichit le total des avantages donné par les pierres selectionnées
-         */
-        this.refreshAvantages = function(avantages) {
-        	this.pointManager.setAvantages(avantages, "pierres");
-        	
-        	this.drawAvantage("bien", avantages);
-        	this.drawAvantage("mal", avantages);
-        	this.drawAvantage("croyance", avantages);
-        	this.drawAvantage("illumination", avantages);
-        };
-        
-        /**
-         * Affiche la nouvelle valeur de l'avantage
-         */
-        this.drawAvantage = function(id, avantages) {
-        	var signe = "";
-        	if (avantages[id] != 0) signe = avantages[id]>0?"+":"-";
-        	this.el.find("#avantages " + id + " .text").html(signe + avantages[id] + "%");
-        };
-        
-        /**
          * Permet de dessiner la pierre presente dans une chasse
          */
-        this.drawChasse = function(id, avantages) {
+        this.drawChasse = function(id, avantages, bonusCentre) {
         	var pierreId = this.selectedPierres.get(id);
         	var pierre = this.pierresView.Pierres.get(pierreId);
         	if (pierre) {
@@ -94,15 +80,41 @@ define(["jquery",
         		this.el.find("chasse#"+id).attr("pierre", pierreId);
         		this.el.find("chasse#"+id).attr("title", this.Textes.get("retirerPierre"));
         		
-        		avantages.croyance += pierre.gains.croyance;
-        		avantages.illumination += pierre.gains.illumination;
-        		avantages.bien += pierre.gains.bien;
-        		avantages.mal += pierre.gains.mal;
+        		avantages.croyance += pierre.gains.croyance + Utils.percent(pierre.gains.croyance, bonusCentre.croyance);
+        		avantages.illumination += pierre.gains.illumination + Utils.percent(pierre.gains.illumination, bonusCentre.illumination);
+        		avantages.bien += pierre.gains.bien + Utils.percent(pierre.gains.bien, bonusCentre.bien);
+        		avantages.mal += pierre.gains.mal + Utils.percent(pierre.gains.mal, bonusCentre.mal);
+        		
+        		if (id == "centre" && pierre.bonusCentre) {
+    		        bonusCentre = pierre.bonusCentre;
+        		}
+        		
         	}else {
         		this.el.find("chasse#"+id).removeClass("used");
         		this.el.find("chasse#"+id).removeAttr("pierre");
         		this.el.find("chasse#"+id).removeAttr("title");
         	}
+        };
+        
+        /**
+         * Raffraichit le total des avantages donné par les pierres selectionnées
+         */
+        this.refreshAvantages = function(avantages) {
+            this.pointManager.setAvantages(avantages, "pierres");
+            
+            this.drawAvantage("bien", avantages);
+            this.drawAvantage("mal", avantages);
+            this.drawAvantage("croyance", avantages);
+            this.drawAvantage("illumination", avantages);
+        };
+        
+        /**
+         * Affiche la nouvelle valeur de l'avantage
+         */
+        this.drawAvantage = function(id, avantages) {
+            var signe = "";
+            if (avantages[id] != 0) signe = avantages[id]>0?"+":"-";
+            this.el.find("#avantages " + id + " .text").html(signe + avantages[id] + "%");
         };
         
         this.loop = function(game) {
