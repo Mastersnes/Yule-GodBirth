@@ -8,88 +8,94 @@ define([ "jquery" ], function($) {
 			name : "diamant",
 			description : "diamant-desc",
 			conditions : [],
-			prix : {
-				croyance : 100,
-				illumination : 0,
-			},
 			gains : {
 				croyance : 10,
 				illumination : 0,
 				bien : 0,
 				mal : 0
-			}
+			},
+            bonusCentre : {
+                croyance : 0,
+                illumination : 0,
+                bien : 0,
+                mal : 0
+            }
 		},
 		"rubis" : {
 			name : "rubis",
 			description : "rubis-desc",
 			conditions : [],
-			prix : {
-				croyance : 500,
-				illumination : 1,
-			},
 			gains : {
-				croyance : 15,
+				croyance : 30,
 				illumination : 0,
-				bien : 5,
-				mal : 10
-			}
+				bien : 10,
+				mal : 20
+			},
+            bonusCentre : {
+                croyance : 30,
+                illumination : 0,
+                bien : 0,
+                mal : 100
+            }
 		},
 		"emeraude" : {
 			name : "emeraude",
 			description : "emeraude-desc",
 			conditions : [],
-			prix : {
-				croyance : 1000,
-				illumination : 2,
-			},
 			gains : {
-				croyance : 15,
+				croyance : 20,
 				illumination : 0,
 				bien : 10,
 				mal : 10
-			}
+			},
+            bonusCentre : {
+                croyance : 50,
+                illumination : 50,
+                bien : 0,
+                mal : 0
+            }
 		},
 		"saphir" : {
 			name : "saphir",
 			description : "saphir-desc",
 			conditions : [],
-			prix : {
-				croyance : 5000,
-				illumination : 5,
-			},
 			gains : {
-				croyance : 20,
+				croyance : 30,
 				illumination : 0,
 				bien : 10,
 				mal : -10
-			}
+			},
+            bonusCentre : {
+                croyance : 0,
+                illumination : 30,
+                bien : 100,
+                mal : 0
+            }
 		},
 		"larme-apache" : {
 			name : "larme-apache",
 			description : "larme-apache-desc",
 			conditions : [],
-			prix : {
-				croyance : 10000,
-				illumination : 10,
-			},
 			gains : {
 				croyance : 20,
-				illumination : 5,
+				illumination : 10,
 				bien : 20,
-				mal : -15
-			}
+				mal : -10
+			},
+            bonusCentre : {
+                croyance : 150,
+                illumination : 0,
+                bien : 50,
+                mal : 50
+            }
 		},
 		"cristal-de-roche" : {
 			name : "cristal-de-roche",
 			description : "cristal-de-roche-desc",
 			conditions : [],
-			prix : {
-				croyance : 100000,
-				illumination : 100,
-			},
 			gains : {
 				croyance : 30,
-				illumination : 10,
+				illumination : 0,
 				bien : 0,
 				mal : 0
 			},
@@ -107,91 +113,103 @@ define([ "jquery" ], function($) {
 			name : "grenat",
 			description : "grenat-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
+				croyance : 50,
 				illumination : 0,
 				bien : 0,
-				mal : 0
-			}
+				mal : 20
+			},
+            bonusCentre : {
+                croyance : 20,
+                illumination : 0,
+                bien : 0,
+                mal : 110
+            }
 		},
 		"onyx" : {
 			name : "onyx",
 			description : "onyx-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
+				croyance : -20,
 				illumination : 0,
-				bien : 0,
-				mal : 0
-			}
+				bien : -20,
+				mal : 30
+			},
+            bonusCentre : {
+                croyance : 10,
+                illumination : 10,
+                bien : -20,
+                mal : 80
+            }
 		},
 		"ambre" : {
 			name : "ambre",
 			description : "ambre-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
+				croyance : 30,
 				illumination : 0,
 				bien : 0,
-				mal : 0
-			}
+				mal : 10
+			},
+            bonusCentre : {
+                croyance : 0,
+                illumination : 0,
+                bien : 0,
+                mal : 0
+            }
 		},
 		"obsidienne" : {
 			name : "obsidienne",
 			description : "obsidienne-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
-				illumination : 0,
-				bien : 0,
-				mal : 0
-			}
+				croyance : 20,
+				illumination : 20,
+				bien : -30,
+				mal : 30
+			},
+            bonusCentre : {
+                croyance : 100,
+                illumination : -50,
+                bien : -50,
+                mal : 50
+            }
 		},
 		"hematite" : {
 			name : "hematite",
 			description : "hematite-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
-				illumination : 0,
-				bien : 0,
-				mal : 0
-			}
+				croyance : 10,
+				illumination : -10,
+				bien : -10,
+				mal : 30
+			},
+            bonusCentre : {
+                croyance : 50,
+                illumination : 20,
+                bien : 0,
+                mal : 100
+            }
 		},
 		"pierre-de-soleil" : {
 			name : "pierre-de-soleil",
 			description : "pierre-de-soleil-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
-				illumination : 0,
-				bien : 0,
-				mal : 0
-			}
+				croyance : 20,
+				illumination : 30,
+				bien : -50,
+				mal : 50
+			},
+            bonusCentre : {
+                croyance : 100,
+                illumination : 0,
+                bien : -100,
+                mal : 100
+            }
 		},
 		/**
 		 * Lunaire
@@ -200,91 +218,103 @@ define([ "jquery" ], function($) {
 			name : "malachite",
 			description : "malachite-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
-				illumination : 0,
-				bien : 0,
+				croyance : 45,
+				illumination : 5,
+				bien : 20,
 				mal : 0
-			}
+			},
+            bonusCentre : {
+                croyance : 0,
+                illumination : 10,
+                bien : 110,
+                mal : 0
+            }
 		},
 		"amethyste" : {
 			name : "amethyste",
 			description : "amethyste-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
-				illumination : 0,
-				bien : 0,
-				mal : 0
-			}
+				croyance : 10,
+				illumination : 10,
+				bien : 20,
+				mal : -30
+			},
+            bonusCentre : {
+                croyance : 10,
+                illumination : 10,
+                bien : 20,
+                mal : -80
+            }
 		},
 		"lapis-lazuli" : {
 			name : "lapis-lazuli",
 			description : "lapis-lazuli-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
+				croyance : 30,
 				illumination : 0,
-				bien : 0,
+				bien : 10,
 				mal : 0
-			}
+			},
+            bonusCentre : {
+                croyance : 0,
+                illumination : 0,
+                bien : 0,
+                mal : 0
+            }
 		},
 		"labradorite" : {
 			name : "labradorite",
 			description : "labradorite-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
-				illumination : 0,
-				bien : 0,
-				mal : 0
-			}
+				croyance : 30,
+				illumination : 10,
+				bien : 30,
+				mal : -30
+			},
+            bonusCentre : {
+                croyance : -50,
+                illumination : 50,
+                bien : 50,
+                mal : -50
+            }
 		},
 		"azurite" : {
 			name : "azurite",
 			description : "azurite-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
-				illumination : 0,
-				bien : 0,
-				mal : 0
-			}
+				croyance : -10,
+				illumination : 10,
+				bien : 10,
+				mal : 30
+			},
+            bonusCentre : {
+                croyance : 20,
+                illumination : 50,
+                bien : 0,
+                mal : 100
+            }
 		},
 		"pierre-de-lune" : {
 			name : "pierre-de-lune",
 			description : "pierre-de-lune-desc",
 			conditions : [],
-			prix : {
-				croyance : 1,
-				illumination : 0,
-			},
 			gains : {
-				croyance : 1,
-				illumination : 0,
-				bien : 0,
-				mal : 0
-			}
+				croyance : 0,
+				illumination : 50,
+				bien : 50,
+				mal : -50
+			},
+            bonusCentre : {
+                croyance : 0,
+                illumination : 100,
+                bien : -100,
+                mal : 100
+            }
 		},
 		/**
 		 * Secretes
@@ -293,30 +323,34 @@ define([ "jquery" ], function($) {
             name : "ringwoodite",
             description : "ringwoodite-desc",
             conditions : [],
-            prix : {
-                croyance : 1,
-                illumination : 0,
-            },
             gains : {
-                croyance : 1,
+                croyance : 500,
                 illumination : 0,
-                bien : 0,
-                mal : 0
+                bien : 200,
+                mal : 200
+            },
+            bonusCentre : {
+                croyance : -50,
+                illumination : -100,
+                bien : -100,
+                mal : -50
             }
         },
         "hypatia" : {
             name : "hypatia",
             description : "hypatia-desc",
             conditions : [],
-            prix : {
-                croyance : 1,
-                illumination : 0,
-            },
             gains : {
-                croyance : 1,
-                illumination : 0,
-                bien : 0,
+                croyance : 0,
+                illumination : 200,
+                bien : 200,
                 mal : 0
+            },
+            bonusCentre : {
+                croyance : -200,
+                illumination : -100,
+                bien : 50,
+                mal : -50
             }
         }
 	};

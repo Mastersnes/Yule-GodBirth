@@ -92,7 +92,7 @@ define(["jquery",
              * PRIX
              */
             var pointPossede = this.pointManager.points;
-            var prix = pierre.prix;
+            var prix = this.parent.calculPrix();
             dom.find("#croyance-prix > span").html(Utils.format(prix.croyance, true, this.Textes));
             if (prix.croyance) {
             	dom.find("#croyance-prix").show();

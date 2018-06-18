@@ -31,7 +31,7 @@ define(["jquery"], function($){
                 conditions : [
                     {
                         name : "grandTout",
-                        level : 50
+                        level : 30
                     }
                 ],
                 name : "secrete",

@@ -225,7 +225,19 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
         		if (!this.checkCondition(ameliorationToCheck)) return false;
         	}
         	
-        	return this.pointManager.checkOk(pierre.prix);
+        	return this.pointManager.checkOk(this.calculPrix());
+        };
+        
+        /**
+         * Le prix des pierres augmente en fonction du nombre de pierre acheté
+         */
+        this.calculPrix = function() {
+            var nbPierre = this.complete.length + 1;
+            var croyance = Math.round(Utils.pow(50, 2.2, nbPierre));
+            return {
+                croyance : croyance,
+                illumination : nbPierre <= 1 ? 0 : Math.round(croyance / 100)
+            }
         };
 
         /**
@@ -233,7 +245,7 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
          */
         this.acheter = function(pierre) {
         	if (!this.checkAchetable(pierre)) return false;
-        	if (!this.pointManager.depenser(pierre.prix)) return false;
+        	if (!this.pointManager.depenser(this.calculPrix())) return false;
         	this.complete.push(pierre.name);
         	this.refreshPierre(pierre);
         	
