@@ -59,12 +59,12 @@ define(["jquery",
                 "mal" : 0
         	};
         	
-        	this.drawChasse("centre", avantages, bonusCentre);
-        	this.drawChasse("haut", avantages, bonusCentre);
-        	this.drawChasse("gauche", avantages, bonusCentre);
-        	this.drawChasse("droite", avantages, bonusCentre);
-        	this.drawChasse("bas-gauche", avantages, bonusCentre);
-        	this.drawChasse("bas-droite", avantages, bonusCentre);
+        	this.drawChasse("centre", avantages);
+        	this.drawChasse("haut", avantages);
+        	this.drawChasse("gauche", avantages);
+        	this.drawChasse("droite", avantages);
+        	this.drawChasse("bas-gauche", avantages);
+        	this.drawChasse("bas-droite", avantages);
         	
         	this.refreshAvantages(avantages);
         };
@@ -72,7 +72,7 @@ define(["jquery",
         /**
          * Permet de dessiner la pierre presente dans une chasse
          */
-        this.drawChasse = function(id, avantages, bonusCentre) {
+        this.drawChasse = function(id, avantages) {
         	var pierreId = this.selectedPierres.get(id);
         	var pierre = this.pierresView.Pierres.get(pierreId);
         	if (pierre) {
@@ -80,21 +80,62 @@ define(["jquery",
         		this.el.find("chasse#"+id).attr("pierre", pierreId);
         		this.el.find("chasse#"+id).attr("title", this.Textes.get("retirerPierre"));
         		
-        		avantages.croyance += pierre.gains.croyance + Utils.percent(pierre.gains.croyance, bonusCentre.croyance);
-        		avantages.illumination += pierre.gains.illumination + Utils.percent(pierre.gains.illumination, bonusCentre.illumination);
-        		avantages.bien += pierre.gains.bien + Utils.percent(pierre.gains.bien, bonusCentre.bien);
-        		avantages.mal += pierre.gains.mal + Utils.percent(pierre.gains.mal, bonusCentre.mal);
+        		var gain = this.gereBonusMalus(id, pierre);
         		
-        		if (id == "centre" && pierre.bonusCentre) {
-    		        bonusCentre = pierre.bonusCentre;
-        		}
-        		
+        		avantages.croyance += gain.croyance;
+        		avantages.illumination += gain.illumination;
+        		avantages.bien += gain.bien;
+        		avantages.mal += gain.mal;
         	}else {
         		this.el.find("chasse#"+id).removeClass("used");
         		this.el.find("chasse#"+id).removeAttr("pierre");
         		this.el.find("chasse#"+id).removeAttr("title");
         	}
         };
+        
+        /**
+         * Ajoute les bonus et malus en fonction des pierres presentes sur l'autel
+         */
+        this.gereBonusMalus = function(position, pierre) {
+            var gain = {
+                    croyance : pierre.gains.croyance,
+                    illumination : pierre.gains.illumination,
+                    bien : pierre.gains.bien,
+                    mal : pierre.gains.mal
+            };
+            
+            for (var goodStone in pierre.good) {
+                if (this.selectedPierres.contains(goodStone)) {
+                    gain.croyance = Math.round(gain.croyance * 1.3);
+                    gain.illumination = Math.round(gain.illumination * 1.3);
+                    gain.bien = Math.round(gain.bien * 1.3);
+                    gain.mal = Math.round(gain.mal * 1.3);
+                }
+            }
+            
+            for (var badStone in pierre.bad) {
+                if (this.selectedPierres.contains(badStone)) {
+                    gain.croyance = Math.round(gain.croyance * 0.5);
+                    gain.illumination = Math.round(gain.illumination * 0.5);
+                    gain.bien = Math.round(gain.bien * 0.5);
+                    gain.mal = Math.round(gain.mal * 0.5);
+                }
+            }
+            
+            if (position != "centre") {
+                var centerStoneId = this.selectedPierres.get("centre");
+                var centerStone = this.pierresView.Pierres.get(centerStoneId)
+                if (centerStone) {
+                    var bonusCenter = centerStone.bonusCentre;
+                    gain.croyance += Utils.percent(gain.croyance, bonusCentre.croyance);
+                    gain.illumination += Utils.percent(gain.illumination, bonusCentre.illumination);
+                    gain.bien += Utils.percent(gain.bien, bonusCentre.bien);
+                    gain.mal += Utils.percent(gain.mal, bonusCentre.mal);
+                }
+            }
+            
+            return gain;
+        }
         
         /**
          * Raffraichit le total des avantages donné par les pierres selectionnées

@@ -19,7 +19,9 @@ define([ "jquery" ], function($) {
                 illumination : 0,
                 bien : 0,
                 mal : 0
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"rubis" : {
 			name : "rubis",
@@ -36,7 +38,9 @@ define([ "jquery" ], function($) {
                 illumination : 0,
                 bien : 0,
                 mal : 100
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"emeraude" : {
 			name : "emeraude",
@@ -53,7 +57,9 @@ define([ "jquery" ], function($) {
                 illumination : 50,
                 bien : 0,
                 mal : 0
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"saphir" : {
 			name : "saphir",
@@ -70,7 +76,9 @@ define([ "jquery" ], function($) {
                 illumination : 30,
                 bien : 100,
                 mal : 0
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"larme-apache" : {
 			name : "larme-apache",
@@ -87,7 +95,9 @@ define([ "jquery" ], function($) {
                 illumination : 0,
                 bien : 50,
                 mal : 50
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"cristal-de-roche" : {
 			name : "cristal-de-roche",
@@ -104,7 +114,9 @@ define([ "jquery" ], function($) {
                 illumination : 100,
                 bien : 100,
                 mal : 100
-			}
+			},
+            good : [],
+            bad : []
 		},
 		/**
 		 * Solaire
@@ -124,7 +136,9 @@ define([ "jquery" ], function($) {
                 illumination : 0,
                 bien : 0,
                 mal : 110
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"onyx" : {
 			name : "onyx",
@@ -141,7 +155,9 @@ define([ "jquery" ], function($) {
                 illumination : 10,
                 bien : -20,
                 mal : 80
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"ambre" : {
 			name : "ambre",
@@ -175,7 +191,9 @@ define([ "jquery" ], function($) {
                 illumination : -50,
                 bien : -50,
                 mal : 50
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"hematite" : {
 			name : "hematite",
@@ -192,7 +210,9 @@ define([ "jquery" ], function($) {
                 illumination : 20,
                 bien : 0,
                 mal : 100
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"pierre-de-soleil" : {
 			name : "pierre-de-soleil",
@@ -209,7 +229,9 @@ define([ "jquery" ], function($) {
                 illumination : 0,
                 bien : -100,
                 mal : 100
-            }
+            },
+            good : [],
+            bad : []
 		},
 		/**
 		 * Lunaire
@@ -229,7 +251,9 @@ define([ "jquery" ], function($) {
                 illumination : 10,
                 bien : 110,
                 mal : 0
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"amethyste" : {
 			name : "amethyste",
@@ -246,7 +270,9 @@ define([ "jquery" ], function($) {
                 illumination : 10,
                 bien : 20,
                 mal : -80
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"lapis-lazuli" : {
 			name : "lapis-lazuli",
@@ -263,7 +289,9 @@ define([ "jquery" ], function($) {
                 illumination : 0,
                 bien : 0,
                 mal : 0
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"labradorite" : {
 			name : "labradorite",
@@ -280,7 +308,9 @@ define([ "jquery" ], function($) {
                 illumination : 50,
                 bien : 50,
                 mal : -50
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"azurite" : {
 			name : "azurite",
@@ -297,7 +327,9 @@ define([ "jquery" ], function($) {
                 illumination : 50,
                 bien : 0,
                 mal : 100
-            }
+            },
+            good : [],
+            bad : []
 		},
 		"pierre-de-lune" : {
 			name : "pierre-de-lune",
@@ -314,7 +346,9 @@ define([ "jquery" ], function($) {
                 illumination : 100,
                 bien : -100,
                 mal : 100
-            }
+            },
+            good : [],
+            bad : []
 		},
 		/**
 		 * Secretes
@@ -334,7 +368,9 @@ define([ "jquery" ], function($) {
                 illumination : -100,
                 bien : -100,
                 mal : -50
-            }
+            },
+            good : [],
+            bad : []
         },
         "hypatia" : {
             name : "hypatia",
@@ -351,7 +387,9 @@ define([ "jquery" ], function($) {
                 illumination : -100,
                 bien : 50,
                 mal : -50
-            }
+            },
+            good : [],
+            bad : []
         }
 	};
 
