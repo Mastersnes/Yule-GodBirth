@@ -50,10 +50,21 @@
 			<div id="app"></div>
 			<script>
 			try {	
-				require(['app/config/config.js'], function () {
-					require(['app/view/menu/menuView'], function (main) {
-					    new main();
-					});
+			    require.config({
+	                waitSeconds : 60,
+	                baseUrl: "",
+	                paths: {
+	                    "jquery": "lib/jquery-3.1.1.min",
+	                    "underscore": "lib/underscore.min",
+	                    "text": "lib/text.min",
+	                    "sha": "lib/js-sha256.min",
+	                    "kongregate": "lib/kongregate"
+	                },
+	                urlArgs: "version=" + (new Date()).getTime()
+	            });
+			    
+				require(['app/view/menu/menuView'], function (main) {
+				    new main();
 				});
 			} catch (error) {
 				location.reload();
