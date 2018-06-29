@@ -5,10 +5,10 @@ define([ "jquery" ], function($) {
 			name : "torque",
 			description : "torque-desc",
 			gains : {
-				croyance : 5,
+				croyance : 10,
 				illumination : 0,
 				bien : 0,
-				mal : 5
+				mal : 10
 			},
 		},
 		"corne-abondance" : {
@@ -17,7 +17,7 @@ define([ "jquery" ], function($) {
 			gains : {
 				croyance : 10,
 				illumination : 0,
-				bien : 5,
+				bien : 10,
 				mal : 0
 			},
 		}
