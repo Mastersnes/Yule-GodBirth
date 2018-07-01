@@ -124,9 +124,9 @@ define(["jquery",
             
             if (position != "centre") {
                 var centerStoneId = this.selectedPierres.get("centre");
-                var centerStone = this.pierresView.Pierres.get(centerStoneId)
+                var centerStone = this.pierresView.Pierres.get(centerStoneId);
                 if (centerStone) {
-                    var bonusCenter = centerStone.bonusCentre;
+                    var bonusCentre = centerStone.bonusCentre;
                     gain.croyance += Utils.percent(gain.croyance, bonusCentre.croyance);
                     gain.illumination += Utils.percent(gain.illumination, bonusCentre.illumination);
                     gain.bien += Utils.percent(gain.bien, bonusCentre.bien);
@@ -135,7 +135,7 @@ define(["jquery",
             }
             
             return gain;
-        }
+        };
         
         /**
          * Raffraichit le total des avantages donné par les pierres selectionnées

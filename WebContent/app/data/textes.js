@@ -747,6 +747,10 @@ define(["jquery",
 		/**
 		 * Success
 		 */
+		"gainSuccess" : {
+			fr : "Félicitation, vous avez gagné le succes : {?} !<br/> Voyagez dans la constellation pour consulter les details.",
+			en : "Congratulation, you earn the success : {?} !<br/> Travel to the constelation to consult the details."
+		},
 		"success-100click" : {
 			fr : "100 Clics",
 			en : "100 Clicks"
@@ -781,14 +785,14 @@ define(["jquery",
 		 */
 		"gainArtefact" : {
 			fr : "Félicitation, vous avez gagné l'artefact : {?} !<br/> Voyagez dans la constellation pour consulter les details.",
-			en : "-"
+			en : "Congratulation, you earn the artefact : {?} !<br/> Travel to the constelation to consult the details."
 		},
 		"torque" : {
 			fr : "Torque",
 			en : "-"
 		},
 		"torque-desc" : {
-			fr : "Torque Description",
+			fr : "Symbole des grands guerrier. Il est l'objet essentiel à tout dieu en apprentissage !",
 			en : "-"
 		},
 		"corne-abondance" : {
@@ -796,7 +800,39 @@ define(["jquery",
 			en : "-"
 		},
 		"corne-abondance-desc" : {
-			fr : "Corne d'abondance Description",
+			fr : "Corne d'abondance et de joie. Elle apportera le bonheur à son posseseur et son entourage !",
+			en : "-"
+		},
+		"carte-membre-mafia" : {
+			fr : "Carte de membre de la mafia intergalactique",
+			en : "-"
+		},
+		"carte-membre-mafia-desc" : {
+			fr : "Vous êtes désormais un membre permanent de la mafia intergalactique ! Félicitation !",
+			en : "-"
+		},
+		"idole-feu" : {
+			fr : "Idole de feu",
+			en : "-"
+		},
+		"idole-feu-desc" : {
+			fr : "Une étrange statuette representant une créature enflammée.",
+			en : "-"
+		},
+		"idole-glace" : {
+			fr : "Idole de glace",
+			en : "-"
+		},
+		"idole-glace-desc" : {
+			fr : "Une étrange statuette representant une créature piégée dans la glace.",
+			en : "-"
+		},
+		"idole-mort" : {
+			fr : "Idole de mort",
+			en : "-"
+		},
+		"idole-mort-desc" : {
+			fr : "Une étrange statuette representant une créature ensanglantée.",
 			en : "-"
 		},
 	};

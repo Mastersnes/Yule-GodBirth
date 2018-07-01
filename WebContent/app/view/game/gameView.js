@@ -32,7 +32,8 @@ function($, _, Utils, PopupUtils, page,
 	return function(parent) {
 		this.init = function(parent) {
 		    this.el = $("#app");
-			this.Textes = parent.Textes;
+			this.parent = parent;
+		    this.Textes = parent.Textes;
 			this.mediatheque = parent.Mediatheque;
 			this.kongregateUtils = parent.kongregateUtils;
 			this.pause = false;

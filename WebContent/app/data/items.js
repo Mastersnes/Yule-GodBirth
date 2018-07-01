@@ -40,7 +40,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : 0
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.1 * croyance),
+	        				croyance : Math.round(0.5 * croyance),
 	        				illumination : 0,
                             bien : 0,
                             mal : 0
@@ -90,10 +90,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.1 * croyance),
+	        				croyance : Math.round(0.5 * croyance),
 	        				illumination : 0,
                             bien : 0,
-                            mal : Math.round(0.1 * mal)
+                            mal : Math.round(0.5 * mal)
 	        			}
 	        		};
 	        	};
@@ -137,9 +137,9 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : 0
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.1 * croyance),
-	        				illumination : Math.round(0.1 * illumination),
-                            bien : Math.round(0.1 * bien),
+	        				croyance : Math.round(0.5 * croyance),
+	        				illumination : Math.round(0.5 * illumination),
+                            bien : Math.round(0.5 * bien),
                             mal : 0
 	        			}
 	        		};
@@ -185,10 +185,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(0.1 * croyance),
+	        				croyance : Math.round(0.5 * croyance),
 	        				illumination : 0,
-                            bien : Math.round(0.1 * bien),
-                            mal : Math.round(0.1 * bien)
+                            bien : Math.round(0.5 * bien),
+                            mal : Math.round(0.5 * bien)
 	        			}
 	        		};
 	        	};
@@ -229,9 +229,9 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : 0
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
-	        				illumination : Math.round(illumination * 0.1),
-                            bien : Math.round(bien * 0.1),
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
                             mal : 0
 	        			}
 	        		};
@@ -273,10 +273,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
-	        				illumination : Math.round(illumination * 0.1),
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
                             bien : 0,
-                            mal : Math.round(mal * 0.1)
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -321,10 +321,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -365,10 +365,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
-	        				illumination : Math.round(illumination * 0.1),
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -409,10 +409,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -453,10 +453,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -501,10 +501,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -545,10 +545,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -589,10 +589,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
-	        				illumination : Math.round(illumination * 0.1),
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -633,10 +633,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
+	        				croyance : Math.round(croyance * 0.5),
 	        				illumination : 0,
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -681,10 +681,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
-	        				illumination : Math.round(illumination * 0.1),
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -725,10 +725,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
-	        				illumination : Math.round(illumination * 0.1),
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};
@@ -769,10 +769,10 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                             mal : mal
 	        			},
 	        			click : {
-	        				croyance : Math.round(croyance * 0.1),
-	        				illumination : Math.round(illumination * 0.1),
-                            bien : Math.round(bien * 0.1),
-                            mal : Math.round(mal * 0.1)
+	        				croyance : Math.round(croyance * 0.5),
+	        				illumination : Math.round(illumination * 0.5),
+                            bien : Math.round(bien * 0.5),
+                            mal : Math.round(mal * 0.5)
 	        			}
 	        		};
 	        	};

@@ -24,9 +24,13 @@ function($, _, Utils, page, Events) {
 			this.typeEvents = [];
 			this.generalEvents = this.saveManager.load("generalEvents");
 			this.uniquesEvents = this.saveManager.load("uniquesEvents");
+			this.rebellion = this.saveManager.load("rebellion");
 		};
 		
 		this.loop = function() {
+			// Si la rebellion est trop forte, on ajoute l'evenement
+			if (this.rebellion >= 100) this.addEvents(["rebellion-1-event"]);
+			
 			//Si il y a deja un evenement en cours
 		    if (this.currentEvent) return this.checkTimer();
 

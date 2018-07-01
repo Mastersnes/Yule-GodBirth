@@ -4,100 +4,72 @@ define(["jquery"], function($){
 	 * Si on refuse d'entendre les emissaires
 	 */
 	var data = {
-			/**
-			 * Peut aussi arriver si on refuse de faire tomber la pluie
-			 */
-			"secheresse!-event" : {
-				name : "secheresse!-event",
-			    text : "secheresse!-event",
+			"refus-secheresse-event" : {
+				name : "refus-secheresse-event",
+			    text : "refus-secheresse-event",
 			    rarity : 10,
 			    unique : true,
 			    actions : [
 			         {
-			             name : "faire-pleuvoir",
-			             prix : {
-			            	croyance : 20,
-			            	illumination : 0
-			             },
-			             action : function(game) {
-			                 game.pointManager.addPointsPercent({
-                                croyance : 0,
-                                illumination : 0,
-                                bien : 20,
-                                mal : 0
-                             });
-			                 game.alertPopup("secheresse!-event-ok");
-			                 game.eventManager.addEvents(["culte-eau-event"]);
-			             }
-			         },
-			         {
-                         name : "noButton",
+                         name : "pas-probleme",
                          action : function(game) {
-                        	 game.alertPopup("secheresse!-event-ko");
-                        	 game.eventManager.addEvents(["culte-feu-event"]);
-                        	 
-                        	 // Si on a deja laiss� s'etendre la glace, on finira avec deux mondes
-                        	 if (game.eventManager.contains("un-monde-glace-event") > -1) {
-                        	     game.eventManager.removeEvents(["un-monde-glace-event"]);
-                        	     game.eventManager.addEvents(["deux-monde-feu-glace-event"]);
-                        	 }else {
-                        	     game.eventManager.addEvents(["un-monde-feu-event"]);
-                        	 }
+                        	 game.pointManager.addPointsPercent({
+                                 croyance : 0,
+                                 illumination : 0,
+                                 bien : 0,
+                                 mal : 20
+                              });
+                        	 game.eventManager.addEvents(["demonfeu-1-event"]);
+                        	 game.alertPopup("refus-secheresse-event-ko");
+                         }
+                     },
+                     {
+                         name : "enqueter",
+                         action : function(game) {
+                        	 game.eventManager.addEvents(["demonfeu-1-event"]);
+                        	 game.alertPopup("refus-secheresse-event-ok", function() {
+                        		 game.artefactsView.add("idole-feu");
+                        	 });
                          }
                      }
 			    ]
 			},
-			"glaciation!-event" : {
-				name : "glaciation!-event",
-			    text : "glaciation!-event",
+			"refus-glaciation-event" : {
+				name : "refus-glaciation-event",
+			    text : "refus-glaciation-event",
 			    rarity : 20,
 			    unique : true,
 			    actions : [
 			         {
-			             name : "yesButton",
-			             prix : {
-                            croyance : 30,
-                            illumination : 0
-                         },
-			             action : function(game) {
-			                 game.pointManager.addPointsPercent({
-                                croyance : 0,
-                                illumination : 0,
-                                bien : 20,
-                                mal : 0
-                             });
-			                 game.alertPopup("glaciation!-event-ok");
-			                 game.eventManager.addEvents(["culte-eau-event"]);
-			             }
-			         },
-			         {
-                         name : "noButton",
+                         name : "pas-probleme",
                          action : function(game) {
-                        	 game.alertPopup("glaciation!-event-ko");
-                        	 game.eventManager.addEvents(["culte-glace-event"]);
-                        	 // Si on a deja laiss� s'etendre le feu, on finira avec deux mondes
-                        	 if (game.eventManager.contains("un-monde-feu-event") > -1) {
-                                 game.eventManager.removeEvents(["un-monde-feu-event"]);
-                                 game.eventManager.addEvents(["deux-monde-feu-glace-event"]);
-                             }else {
-                                 game.eventManager.addEvents(["un-monde-glace-event"]);
-                             }
+                        	 game.pointManager.addPointsPercent({
+                                 croyance : 0,
+                                 illumination : 0,
+                                 bien : 0,
+                                 mal : 20
+                              });
+                        	 game.eventManager.addEvents(["demonglace-1-event"]);
+                        	 game.alertPopup("refus-glaciation-event-ko");
+                         }
+                     },
+                     {
+                         name : "enqueter",
+                         action : function(game) {
+                        	 game.eventManager.addEvents(["demonglace-1-event"]);
+                        	 game.alertPopup("refus-glaciation-event-ok", function() {
+                        		 game.artefactsView.add("idole-glace");
+                        	 });
                          }
                      }
 			    ]
 			},
-			"sacrifice!-event" : {
-				name : "sacrifice!-event",
-			    text : "sacrifice!-event",
+			"refus-sacrifice-event" : {
+				name : "refus-sacrifice-event",
+			    text : "refus-sacrifice-event",
 			    rarity : 50,
 			    unique : true,
 			    actions : [
-			         {
-			             name : "arreter-massacre",
-			             action : function(game) {
-			                 game.eventManager.showNow("sacrifice!-event-2");
-			             }
-			         },
 			         {
                          name : "laisserfaire",
                          action : function(game) {
@@ -107,64 +79,61 @@ define(["jquery"], function($){
                                  bien : 0,
                                  mal : 20
                               });
-                        	 game.alertPopup("sacrifice!-event-ko");
-                        	 game.eventManager.addEvents(["colere-faucheuse-1!-event"]);
+                             game.eventManager.addEvents(["croisade-galactique-1-event"]);
+                        	 game.alertPopup("refus-sacrifice-event-ko");
                          }
-                     }
+                     },
+                     {
+			             name : "recompenser",
+			             action : function(game) {
+			            	 game.pointManager.addPointsPercent({
+                                 croyance : 10,
+                                 illumination : 0,
+                                 bien : 0,
+                                 mal : 20
+                              });
+                             game.eventManager.addEvents(["croisade-galactique-1-event"]);
+                        	 game.alertPopup("refus-sacrifice-event-recompense");
+			             }
+			         },
+                     {
+			             name : "arreter-massacre",
+			             action : function(game) {
+			                 game.eventManager.showNow("refus-sacrifice-event-2");
+			             }
+			         }
 			    ]
 			},
-			"sacrifice!-event-2" : {
-                name : "sacrifice!-event-2",
-                text : "sacrifice!-event-2",
+			"refus-sacrifice-event-2" : {
+                name : "refus-sacrifice-event-2",
+                text : "refus-sacrifice-event-2",
                 rarity : -1,
                 unique : true,
                 actions : [
                      {
-                         name : "envoyerdieudeesse",
-                         prix : {
-                             croyance : 10,
-                             illumination : 0
-                         },
-                         conditions : [
-          			         {
-                                 name : "dieu",
-                                 level : 5
-                             },
-                             {
-                                 name : "deesse",
-                                 level : 5
-                             }
-          			     ], 
-                         action : function(game) {
-                        	 game.alertPopup("sacrifice!-event-2-ok");
-                        	 game.eventManager.addEvents(["folie-1?-event"]);
-                         }
-                     },
-                     {
                          name : "tuezles",
-                         prix : {
-                             croyance : 15,
-                             illumination : 1
-                         },
                          action : function(game) {
                         	 game.pointManager.addPointsPercent({
                                  croyance : 0,
                                  illumination : 0,
                                  bien : 0,
-                                 mal : 10
+                                 mal : 30
                               });
-                        	 game.alertPopup("sacrifice!-event-2-tuer");
+                        	 game.alertPopup("refus-sacrifice-event-2-tuer");
                          }
                      },
                      {
                          name : "tantpis",
                          action : function(game) {
-                        	 game.alertPopup("sacrifice!-event-2-ko");
-                        	 game.eventManager.addEvents(["colere-faucheuse-1!-event"]);
+                        	 game.eventManager.addEvents(["croisade-galactique-1-event"]);
+                        	 game.alertPopup("refus-sacrifice-event-2-tantpis");
                          }
                      }
                 ]
             },
+            /**
+             * --------------------------
+             */
 			"epidemie!-event" : {
 				name : "epidemie!-event",
 			    text : "epidemie!-event",

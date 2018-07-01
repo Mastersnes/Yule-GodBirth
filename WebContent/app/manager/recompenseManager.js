@@ -95,7 +95,10 @@ function($, _, Utils) {
 			    this.parent.autelView.pierresView.detailView.close();
 			    this.parent.queteView.detailView.close();
 			    
-				this.parent.alertPopup(success, null, true);
+			    var gainText = this.Textes.get("gainSuccess");
+        		gainText = gainText.replace("{?}", this.Textes.get(success));
+			    
+				this.parent.alertPopup(gainText, null, true);
 			}
 			return true;
 		};

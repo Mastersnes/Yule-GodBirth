@@ -37,6 +37,12 @@
 	left: 0%;
 }
 
+.options .text {
+	font-size: 3vh !important;
+    text-align: center;
+    color: beige;
+}
+
 .constellation, .space, .quete, .autel, .success, .options, .artefacts {
 	position: absolute;
 	left: 0; top: 0;

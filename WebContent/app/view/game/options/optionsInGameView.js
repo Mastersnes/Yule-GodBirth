@@ -2,7 +2,7 @@
 define(["jquery", 
         "app/utils/utils",
         "text!app/template/game/options/optionsInGame.html"], 
-        function($, Utils, page, Options){
+        function($, Utils, page){
     return function(parent){
         this.init = function(parent) {
         	this.el = $(".options");
@@ -10,7 +10,6 @@ define(["jquery",
             this.parent = parent;
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
-            this.Options = Options;
         };
         
         this.render = function() {
@@ -21,7 +20,6 @@ define(["jquery",
 			};
 			this.el.html(template(templateData));
 			
-			this.refresh();
 			this.makeEvents();
         };
         
@@ -30,15 +28,31 @@ define(["jquery",
         	this.el.show();
         };
         
-        this.refresh = function() {
-        	
-        };
-        
         this.makeEvents = function() {
         	var that = this;
         	this.el.find(".goto").click(function() {
         		that.parent.showConstellation();
         	});
+			this.el.find(".flag.fr").click(function() {
+				that.Textes.local = "fr";
+				that.parent.parent.render();
+			});
+			this.el.find(".flag.en").click(function() {
+				that.Textes.local = "en";
+				console.log("parent : ", that.parent);
+				console.log("parent parent : ", that.parent.parent);
+				that.parent.parent.render();
+			});
+			this.el.find("#fullscreen").click(function() {
+				var elem = $("body")[0];
+				if (elem.requestFullscreen) {
+				  elem.requestFullscreen();
+				} else if (elem.mozRequestFullScreen) {
+				  elem.mozRequestFullScreen();
+				} else if (elem.webkitRequestFullscreen) {
+				  elem.webkitRequestFullscreen();
+				}
+			});
         };
         
         this.init(parent);

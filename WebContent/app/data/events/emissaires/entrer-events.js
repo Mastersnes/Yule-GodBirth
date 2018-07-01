@@ -4,28 +4,23 @@ define(["jquery"], function($){
 	 * Question des emissaires
 	 */
 	var data = {
-			"pluie?-event" : {
-				name : "pluie?-event",
-			    text : "pluie?-event",
+			"entrer-pluie-event" : {
+				name : "entrer-pluie-event",
+			    text : "entrer-pluie-event",
 			    rarity : 10,
 			    unique : true,
 			    actions : [
 			         {
 			             name : "yesButton",
-			             prix : {
-                             croyance : 10,
-                             illumination : 0
-                         },
 			             action : function(game) {
                              game.pointManager.addPointsPercent({
-                                croyance : 0,
+                                croyance : 10,
                                 illumination : 0,
                                 bien : 10,
                                 mal : 0
                              });
                              
-			                 game.alertPopup("pluie?-event-ok");
-			                 game.eventManager.addEvents(["cadeau-pluie?-event"]);
+			                 game.alertPopup("entrer-pluie-event-ok");
 			             }
 			         },
 			         {
@@ -37,99 +32,50 @@ define(["jquery"], function($){
                                 bien : 0,
                                 mal : 15
                              });
-                             game.alertPopup("pluie?-event-ko");
-                             game.eventManager.addEvents(["secheresse!-event"]);
+                             game.eventManager.rebellion++;
+                             game.alertPopup("entrer-pluie-event-ko");
                          }
                      }
 			    ]
 			},
-			"cadeau-pluie?-event" : {
-                name : "cadeau-pluie?-event",
-                text : "cadeau-pluie?-event",
-                rarity : 50,
-                unique : true,
-                actions : [
-                     {
-                         name : "croyance",
-                         action : function(game) {
-                             game.pointManager.addPointsPercent({
-                                croyance : 50,
-                                illumination : 0,
-                                bien : 0,
-                                mal : 0
-                             });
-                             
-                             game.alertPopup("cadeau-pluie?-event-croyance");
-                         }
-                     },
-                     {
-                         name : "illumination",
-                         action : function(game) {
-                             game.pointManager.addPoints({
-                                croyance : 0,
-                                illumination : 5,
-                                bien : 0,
-                                mal : 0
-                             });
-                             
-                             game.alertPopup("cadeau-pluie?-event-illumination");
-                         }
-                     }
-                ]
-            },
             
-			"eclipse?-event" : {
-				name : "eclipse?-event",
-			    text : "eclipse?-event",
+			"entrer-eclipse-event" : {
+				name : "entrer-eclipse-event",
+			    text : "entrer-eclipse-event",
 			    rarity : 20,
 			    unique : true,
 			    actions : [
 			         {
 			             name : "yesButton",
-			             prix : {
-                             croyance : 20,
-                             illumination : 0
-                         },
 			             action : function(game) {
                              game.pointManager.addPointsPercent({
-                                croyance : 0,
+                                croyance : 10,
                                 illumination : 0,
                                 bien : 0,
-                                mal : 10
+                                mal : 0
                              });
                              
-                             game.alertPopup("eclipse?-event-ok");
-                             game.eventManager.addEvents(["eveil-cthulhu-1!-event"]);
+                             game.alertPopup("entrer-eclipse-event-ok");
+                             game.eventManager.addEvents(["cthulhu-1-event"]);
                          }
 			         },
 			         {
                          name : "noButton",
                          action : function(game) {
-                             game.pointManager.addPointsPercent({
-                                 croyance : 10,
-                                 illumination : 0,
-                                 bien : 5,
-                                 mal : 0
-                              });
-                              
-                              game.alertPopup("eclipse?-event-ko");
-                              game.eventManager.showNow("eclipse-punition?-event");
+                              game.alertPopup("entrer-eclipse-event-ko");
+                              game.eventManager.showNow("entrer-eclipse-punition-event");
                           }
                      }
 			    ]
 			},
-            "eclipse-punition?-event" : {
-                name : "eclipse-punition?-event",
-                text : "eclipse-punition?-event",
+            "entrer-eclipse-punition-event" : {
+                name : "entrer-eclipse-punition-event",
+                text : "entrer-eclipse-punition-event",
                 rarity : 0,
                 unique : true,
                 actions : [
                      {
                          name : "letuer",
-                         prix : {
-                             croyance : 1,
-                             illumination : 0
-                         },
                          action : function(game) {
                              game.pointManager.addPointsPercent({
                                  croyance : 0,
@@ -138,34 +84,36 @@ define(["jquery"], function($){
                                  mal : 30
                               });
                              
-                             game.alertPopup("eclipse-punition?-event-ok");
+                             game.alertPopup("entrer-eclipse-punition-event-tuer");
+                             game.eventManager.addEvents(["cthulhu-1-event"]);
                          }
                      },
                      {
                          name : "lelaisserpartir",
                          action : function(game) {
-                             game.pointManager.addPointsPercent({
-                                 croyance : 1,
-                                 illumination : 0,
-                                 bien : 10,
-                                 mal : 0
-                              });
                              game.pointManager.addPoints({
                                   croyance : 0,
                                   illumination : 1,
                                   bien : 0,
                                   mal : 0
                                });
+                             game.pointManager.addPointsPercent({
+                                 croyance : -10,
+                                 illumination : 10,
+                                 bien : 10,
+                                 mal : 0
+                              });
                              
-                             game.alertPopup("eclipse-punition?-event-ko");
+                             game.eventManager.rebellion++;
+                             game.alertPopup("entrer-eclipse-punition-event-partir");
                          }
                      }
                 ]
             },
             
-			"sacrifice?-event" : {
-				name : "sacrifice?-event",
-			    text : "sacrifice?-event",
+			"entrer-sacrifice-event" : {
+				name : "entrer-sacrifice-event",
+			    text : "entrer-sacrifice-event",
 			    rarity : 20,
 			    unique : true,
 			    actions : [
@@ -179,45 +127,56 @@ define(["jquery"], function($){
                                  mal : 30
                               });
                              
-                             game.alertPopup("sacrifice?-event-ok");
+			                 game.eventManager.addEvents("croisade-galactique-1-event");
+                             game.alertPopup("entrer-sacrifice-event-ok");
 			             }
 			         },
 			         {
                          name : "noButton",
                          action : function(game) {
                              game.pointManager.addPointsPercent({
-                                 croyance : 3,
+                                 croyance : 10,
                                  illumination : 0,
                                  bien : 15,
                                  mal : 0
                               });
                              
-                             game.alertPopup("sacrifice?-event-ko");
+                             game.alertPopup("entrer-sacrifice-event-ko");
+                         }
+                     },
+			         {
+                         name : "tuerpretre",
+                         action : function(game) {
+                             game.pointManager.addPointsPercent({
+                                 croyance : 0,
+                                 illumination : 0,
+                                 bien : 0,
+                                 mal : 20
+                              });
+                             
+                             game.eventManager.rebellion++;
+                             game.alertPopup("entrer-sacrifice-event-tuer");
                          }
                      }
 			    ]
 			},
 			
-			"blessure?-event" : {
-				name : "blessure?-event",
-			    text : "blessure?-event",
+			"entrer-blessure-event" : {
+				name : "entrer-blessure-event",
+			    text : "entrer-blessure-event",
 			    rarity : 100,
 			    unique : false,
 			    actions : [
 			         {
 			             name : "bisoumagique",
-			             prix : {
-                             croyance : 5,
-                             illumination : 0
-                         },
 			             action : function(game) {
 			                 game.pointManager.addPointsPercent({
                                  croyance : 0,
                                  illumination : 0,
-                                 bien : 5,
+                                 bien : 10,
                                  mal : 0
                               });
-			                 game.alertPopup("blessure?-event-ok");
+			                 game.alertPopup("entrer-blessure-event-ok");
 			             }
 			         },
 			         {
@@ -227,59 +186,58 @@ define(["jquery"], function($){
                                  croyance : 0,
                                  illumination : 0,
                                  bien : 0,
-                                 mal : 8
+                                 mal : 10
                               });
-                        	 game.alertPopup("blessure?-event-ko");
+                             game.eventManager.rebellion++;
+                        	 game.alertPopup("entrer-blessure-event-ko");
                          }
                      }
 			    ]
 			},
 			
-			"argent?-event" : {
-				name : "argent?-event",
-			    text : "argent?-event",
+			"entrer-argent-event" : {
+				name : "entrer-argent-event",
+			    text : "entrer-argent-event",
 			    rarity : 50,
 			    unique : true,
 			    actions : [
 			         {
 			             name : "yesButton",
-			             prix : {
-                             croyance : 10,
-                             illumination : 0
-                         },
 			             action : function(game) {
-			                 game.alertPopup("argent?-event-ok");
-			                 game.eventManager.addEvents(["mafia-intergalactique!-event"]);
+			            	 game.eventManager.addEvents(["mafia-intergalactique-1-event"]);
+			                 game.alertPopup("entrer-argent-event-ok", function() {
+			                	 game.artefactsView.add("carte-membre-mafia");
+			                 });
 			             }
 			         },
 			         {
                          name : "noButton",
                          action : function(game) {
-                        	 game.alertPopup("argent?-event-ko");
-                        	 game.eventManager.addEvents(["crime-dieu1!-event"]);
+                        	 game.eventManager.addEvents(["mafia-intergalactique-1-event"]);
+                        	 game.alertPopup("entrer-argent-event-ko");
                          }
                      }
 			    ]
 			},
 			
-			"vrai-dieu?-event" : {
-                name : "vrai-dieu?-event",
-                text : "vrai-dieu?-event",
+			"entrer-vraidieu-event" : {
+                name : "entrer-vraidieu-event",
+                text : "entrer-vraidieu-event",
                 rarity : 30,
                 unique : true,
                 actions : [
                      {
                          name : "yesButton",
                          action : function(game) {
-                             game.alertPopup("vrai-dieu?-event-ok");
-                             game.eventManager.addEvents(["soupcon1!-event"]);
+                             game.alertPopup("entrer-vraidieu-event-ok");
+                             game.eventManager.addEvents(["epreuve-1-event"]);
                          }
                      },
                      {
                          name : "noButton",
                          action : function(game) {
-                             game.alertPopup("vrai-dieu?-event-ko");
-                             game.eventManager.addEvents(["rebellion1!-event"]);
+                             game.alertPopup("entrer-vraidieu-event-ko");
+                             game.eventManager.rebellion++;
                          }
                      }
                 ]

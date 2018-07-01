@@ -43,6 +43,7 @@ function($, _, Utils) {
 			        
 			        "generalEvents" : [],
 			        "uniquesEvents" : [],
+			        "rebellion" : 0,
 			        
 			        "pierresComplete" : [],
 			        "selectedPierres" : {

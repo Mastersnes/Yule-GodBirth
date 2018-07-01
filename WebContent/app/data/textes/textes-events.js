@@ -8,63 +8,53 @@ define(["jquery"], function($){
 		 * Premier evenement
 		 */
 		"first-event" : {
-			fr : "Maître ! De nombreux representants de diverses planetes demandent à vous voir. Souhaitez-vous les recevoir ?",
+			fr : "Maître ! Vos fideles demandent à vous voir. Souhaitez-vous les recevoir ?",
 			en : "-"
 		},
 		"first-event-ok" : {
-			fr : "Très bon choix maître ! Je vais les faire entrer.",
+			fr : "Très bien maître ! Je vais les faire entrer.",
 			en : "-"
 		},
 		"first-event-ko" : {
-			fr : "Très bien... Peut-être n'est-ce pas le bon moment... Je vais leur demander de quitter les lieux.",
+			fr : "Très bien. Je vais leur demander de quitter les lieux.",
 			en : "-"
 		},
+		
 		/**
-		 * Pluie ?
+		 * Entrer des emissaires
 		 */
-		"pluie?-event" : {
-            fr : "Merci de me recevoir jeune dieu !<br/>Malheureusement, il ne pleut plus depuis des années sur ma planete.<br/>Pourriez-vous intervenir ?",
+		/**
+		 * Pluie
+		 */
+		"entrer-pluie-event" : {
+            fr : "Merci de me recevoir jeune dieu !<br/>Malheureusement, il ne pleut plus depuis des années chez moi.<br/>Pourriez-vous intervenir ?",
             en : "-"
         },
-        "pluie?-event-ok" : {
+        "entrer-pluie-event-ok" : {
             fr : "Merci mon dieu, vous nous sauvez la vie ! Nous vous en serons eternellement reconnaissant !",
             en : "-"
         },
-        "pluie?-event-ko" : {
+        "entrer-pluie-event-ko" : {
             fr : "Notre perte est donc inevitable... Un dieu n'est-il pas censé proteger ses fideles ?",
             en : "-"
         },
+        
         /**
-         * Cadeau pour la pluie
+         * Eclipse
          */
-        "cadeau-pluie?-event" : {
-            fr : "Vous nous avez sauvé et, pour vous remercier, nous vous offrons un petit cadeau.<br/>Choisissez :",
+        "entrer-eclipse-event" : {
+            fr : "Bien le bonjour jeune dieu !<br/>Ah, Le jour... Il n'est pas bon pour mes affaires... Pourriez-vous, dans votre grande sagesse, creer une eclipse ?<br/> Je saurai vous recompenser...",
             en : "-"
         },
-        "cadeau-pluie?-event-croyance" : {
-            fr : "Nous, les noystri, allons creer un temple à votre effigie et nous partageront votre parole dans l'univers !",
-            en : "-"
-        },
-        "cadeau-pluie?-event-illumination" : {
-            fr : "Nous, les noystri, allons nous orienter vers la voie de l'illumination. Nous suivrons vos enseignements pour nous elever !",
-            en : "-"
-        },
-        /**
-         * Eclipse ?
-         */
-        "eclipse?-event" : {
-            fr : "Bien le bonjour jeune dieu !<br/>Ah, Le jour... Il n'est pas bon pour mes affaires... Pourriez-vous, dans votre grande sagesse, creer une eclipse sur ma planète ?<br/> Je saurai vous recompenser...",
-            en : "-"
-        },
-        "eclipse?-event-ok" : {
+        "entrer-eclipse-event-ok" : {
             fr : "Vous avez fait le bon choix mon dieu !",
             en : "-"
         },
-        "eclipse?-event-ko" : {
+        "entrer-eclipse-event-ko" : {
             fr : "Vous n'avez aucune ambition, dieu pathetique...",
             en : "-"
         },
-        "eclipse-punition?-event" : {
+        "entrer-eclipse-punition-event" : {
             fr : "Ce mortel vous a insulté... C'est impardonnable. Souhaitez-vous le tuer ?",
             en : "-"
         },
@@ -72,172 +62,187 @@ define(["jquery"], function($){
             fr : "Le tuer",
             en : "-"
         },
+        "entrer-eclipse-punition-event-tuer" : {
+            fr : "L'homme se tord dans de terrible souffrance. Dans ses cris de douleurs vous comprenez à peine quelques mots : <i>Notre vrai maître me vengera...</i>.",
+            en : "-"
+        },
         "lelaisserpartir" : {
             fr : "Le laisser partir",
             en : "-"
         },
-        "eclipse-punition?-event-ok" : {
-            fr : "Il l'avait sans doute merité mais etait-ce vraiment indispensable ?...",
-            en : "-"
-        },
-        "eclipse-punition?-event-ko" : {
-            fr : "Cela montre votre sagesse. Felicitation seigneur !",
+        "entrer-eclipse-punition-event-partir" : {
+            fr : "L'homme s'en va avec un air daidaigneux... Esperont ne plus jamais le revoir...",
             en : "-"
         },
         
         /**
          * Sacrifice ?
          */
-        "sacrifice?-event" : {
+        "entrer-sacrifice-event" : {
             fr : "B...Bo...Bonjour euh... dieu ? Euh... En fait notre pretre... Il dit que c'est bien de sacrifier des gens...<br/>Vous trouvez ca cool non ?",
             en : "-"
         },
-        "sacrifice?-event-ok" : {
-            fr : "Hahaha chouette ! Eh euh josé, on continue le massacre hein ! euh Merci euh.. monsieur dieu.",
+        "entrer-sacrifice-event-ok" : {
+            fr : "Hahaha chouette ! Eh euh josé, on continue le massacre hein ! Euh merci euh.. monsieur dieu.",
             en : "-"
         },
-        "sacrifice?-event-ko" : {
-            fr : "Ah ? Bah euh... D'accord... Bon bah on le fera plus alors... Au revoir monsieur le dieu.",
+        "entrer-sacrifice-event-ko" : {
+            fr : "Ah ? Bah euh... Dommage... Bon bah on le fera plus alors... Au revoir monsieur le dieu.",
             en : "-"
+        },
+        "tuerpretre" : {
+        	fr : "Tuer le pretre",
+        	en : "-"
+        },
+        "entrer-sacrifice-event-tuer" : {
+        	fr : "José ? José ? Non !!! Comment avez vous pu ? Joséééééé !!!!!!",
+        	en : "-"
         },
         
         /**
-         * Blessure ?
+         * Blessure
          */
-        "blessure?-event" : {
-            fr : "Outch, ah... c'est top dur, laissez moi là... Courage, encore quelques pas !<br/> Cher dieu, je me suis couper au doigt, ca brule, je souffre tellement !<br/> Pourriez-vous me soigner ?",
+        "entrer-blessure-event" : {
+            fr : "Outch, ah... c'est trop dur, laissez moi là... Allez, encore quelques pas !<br/> Cher dieu... Je me suis couper au doigt, ca brûle, je souffre tellement !<br/> Pourriez-vous me soigner ?",
             en : "-"
         },
         "bisoumagique" : {
             fr : "Faire un bisou magique",
             en : "-"
         },
-        "blessure?-event-ok" : {
-            fr : "Ahhhh, je me sens déjà mieux ! Merci beaucoup et à bientôt ! Euh... où est la sortie s'il vous plait ?",
+        "entrer-blessure-event-ok" : {
+            fr : "Ahhhh, je me sens beaucoup mieux ! Merci beaucoup et à bientôt ! Euh... où est la sortie s'il vous plait ?",
             en : "-"
         },
-        "blessure?-event-ko" : {
+        "entrer-blessure-event-ko" : {
             fr : "Ahhhh non !!!! La douleur est beaucoup trop insupportable ! Je me sens defaillir !",
             en : "-"
         },
 
         /**
-         * Argent ?
+         * Argent
          */
-        "argent?-event" : {
-            fr : "Bonjour cher dieu ! J'ai, euh, comment dire... besoin de votre aide !<br/> Rendez-moi riche et je vous assure que vous ne le regretterez pas !",
+        "entrer-argent-event" : {
+            fr : "Bonjour cher dieu ! J'ai, hum, comment dire... besoin de votre aide !<br/> Rendez-moi riche et je vous assure que vous ne le regretterez pas !",
             en : "-"
         },
-        "argent?-event-ok" : {
+        "entrer-argent-event-ok" : {
             fr : "Magnifique ! Je suis riche ! Ahaha ! Voilà le vrai pouvoir ! Merci à vous grand dieu !",
             en : "-"
         },
-        "argent?-event-ko" : {
+        "entrer-argent-event-ko" : {
             fr : "Très bien... Comme vous le desirez... Sachez tout de même que ça ne s'arretera pas là !",
             en : "-"
         },
         
         /**
-         * Vrai dieu ?
+         * Vrai dieu
          */
-        "vrai-dieu?-event" : {
+        "entrer-vraidieu-event" : {
             fr : "Bonjour ! Bon... Je n'irais pas par quatres chemins. Êtes-vous un vrai dieu ?",
             en : "-"
         },
-        "vrai-dieu?-event-ok" : {
+        "entrer-vraidieu-event-ok" : {
             fr : "Incroyable ! Ils existent réellement ? J'ai vraiment du mal à y croire !",
             en : "-"
         },
-        "vrai-dieu?-event-ko" : {
+        "entrer-vraidieu-event-ko" : {
             fr : "Hum... Oui, c'est bien ce que je pensais...",
             en : "-"
         },
         
         /**
-         * Secheresse ?
+         * Refus des emissaires
          */
-        "secheresse!-event" : {
+        /**
+         * Secheresse
+         */
+        "refus-secheresse-event" : {
             fr : "Maître ! Il semblerait qu'une planete entiere soit devenue desertique.<br/> Voulez-vous intervenir ?",
             en : "-"
         },
-        "faire-pleuvoir" : {
-            fr : "Faire pleuvoir",
+        "pas-probleme" : {
+            fr : "Pas mon probleme",
             en : "-"
         },
-        "secheresse!-event-ok" : {
-            fr : "Les choses semblent s'ameliorer et la vie recommence à apparaitre.",
+        "refus-secheresse-event-ko" : {
+            fr : "Le desert s'etend mais certaine formes de vie semble s'y aclimater...",
             en : "-"
         },
-        "secheresse!-event-ko" : {
-            fr : "Le desert galactique s'etend mais certaine formes de vie semble s'y aclimater...",
-            en : "-"
+        "enqueter" : {
+        	fr : "Enqueter",
+        	en : "-"
+        },
+        "refus-secheresse-event-ok" : {
+        	fr : "Nous avons decouvert une vieille idole d'un peuple inconnu... Etrange...",
+        	en : "-"
         },
 
         /**
-         * Glaciation ?
+         * Glaciation
          */
-        "glaciation!-event" : {
+        "refus-glaciation-event" : {
         	fr : "Maître ! Un nuage stellaire gele toute une planete ! Voulez-vous intervenir ?",
         	en : "-"
         },
-        "glaciation!-event-ok" : {
-        	fr : "Nous avons evité une catastrophe ! Les blocs de glace commence à fondre doucement.",
+        "refus-glaciation-event-ko" : {
+        	fr : "La glace s'etend... Esperont que les choses se reglent d'elles-même...",
         	en : "-"
         },
-        "glaciation!-event-ko" : {
-        	fr : "La glace s'etend... Esperont que les choses se reglent d'elles même...",
+        "refus-glaciation-event-ok" : {
+        	fr : "Nous avons decouvert une vieille idole d'un peuple inconnu... Tout cela me glace le sang...",
         	en : "-"
         },
 
         /**
-         * Sacrifice !
+         * Sacrifice
          */
-        "sacrifice!-event" : {
-            fr : "C'est une catastrophe ! Une planete de l'espace A42-22C sacrifie nombre de leurs habitant en votre nom ! Que devons-nous faire ?",
-            en : "-"
-        },
-        "arreter-massacre" : {
-            fr : "Arreter ce massacre !",
+        "refus-sacrifice-event" : {
+            fr : "C'est une catastrophe ! Un peuple sacrifie nombre de ses gens en votre nom ! Que devons-nous faire ?",
             en : "-"
         },
         "laisserfaire" : {
             fr : "Laisser faire",
             en : "-"
         },
-        "sacrifice!-event-ko" : {
-            fr : "Comment ?! Euh... Tr... Très bien maître...",
+        "refus-sacrifice-event-ko" : {
+            fr : "Votre grandeur n'en sera que plus belle !",
+            en : "-"
+        },
+        "recompenser" : {
+        	fr : "Recompenser les",
+        	en : "-"
+        },
+        "refus-sacrifice-event-recompense" : {
+            fr : "Votre peuple aprecit le geste. Ils continueront pour votre gloire.",
+            en : "-"
+        },
+        "arreter-massacre" : {
+            fr : "Arreter ce massacre !",
             en : "-"
         },
         
         /**
-         * Sacrifice 2 !
+         * Sacrifice 2
          */
-        "sacrifice!-event-2" : {
-            fr : "Impossible de les arreter maître ! Ils ont completement perdus la raison et ne nous ecoute plus !",
-            en : "-"
-        },
-        "envoyerdieudeesse" : {
-        	fr : "Envoyer le dieu et la deesse",
-        	en : "-"
-        },
-        "sacrifice!-event-2-ok" : {
-            fr : "Ils semblent se calmer... Mais d'où provenait cette folie ?",
+        "refus-sacrifice-event-2" : {
+            fr : "Impossible de les arreter ! Ils ont completement perdus la raison et ne nous ecoute plus !",
             en : "-"
         },
         "tuezles" : {
         	fr : "Tuez-les !",
         	en : "-"
         },
-        "sacrifice!-event-2-tuer" : {
-            fr : "Cela me semble extreme mais soit ! Il en sera fait selon vos ordres !",
+        "refus-sacrifice-event-2-tuer" : {
+            fr : "Bien ! Il en sera fait selon vos ordres !",
             en : "-"
         },
         "tantpis" : {
         	fr : "Tant pis...",
         	en : "-"
         },
-        "sacrifice!-event-2-ko" : {
-        	fr : "Bien... Nous verrons bien où cela nous menera...",
+        "refus-sacrifice-event-2-tantpis" : {
+        	fr : "Bien, Nous verrons bien où cela nous menera...",
         	en : "-"
         },
         
