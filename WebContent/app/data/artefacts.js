@@ -20,6 +20,56 @@ define([ "jquery" ], function($) {
 				bien : 10,
 				mal : 0
 			},
+		},
+		"3eme-oeil" : {
+			name : "3eme-oeil",
+			description : "3eme-oeil-desc",
+			gains : {
+				croyance : 0,
+				illumination : 0,
+				bien : 0,
+				mal : 0
+			},
+		},
+		"carte-membre-mafia" : {
+			name : "carte-membre-mafia",
+			description : "carte-membre-mafia-desc",
+			gains : {
+				croyance : 10,
+				illumination : 0,
+				bien : 0,
+				mal : 15
+			},
+		},
+		"idole-feu" : {
+			name : "idole-feu",
+			description : "idole-feu-desc",
+			gains : {
+				croyance : 15,
+				illumination : 2,
+				bien : 0,
+				mal : 10
+			},
+		},
+		"idole-glace" : {
+			name : "idole-glace",
+			description : "idole-glace-desc",
+			gains : {
+				croyance : 10,
+				illumination : 3,
+				bien : 10,
+				mal : 0
+			},
+		},
+		"idole-mort" : {
+			name : "idole-mort",
+			description : "idole-mort-desc",
+			gains : {
+				croyance : 20,
+				illumination : 1,
+				bien : 10,
+				mal : 10
+			},
 		}
 	};
 

@@ -10,6 +10,8 @@ define(["jquery",
             this.parent = parent;
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
+            this.saveManager = parent.saveManager;
+            this.data = this.saveManager.load("options");
         };
         
         this.render = function() {
@@ -21,6 +23,14 @@ define(["jquery",
 			this.el.html(template(templateData));
 			
 			this.makeEvents();
+        };
+        
+        this.refresh = function() {
+        	if (this.data["notation-courte"]) {
+        		$("#notation").text(this.Textes.get("passer-notation-longue"));
+        	} else {
+        		$("#notation").text(this.Textes.get("passer-notation-courte"));
+        	}
         };
         
         this.show = function() {
@@ -52,6 +62,11 @@ define(["jquery",
 				} else if (elem.webkitRequestFullscreen) {
 				  elem.webkitRequestFullscreen();
 				}
+			});
+			this.el.find("#notation").click(function() {
+				that.data["notation-courte"] = !that.data["notation-courte"];
+				that.saveManager.save("options", that.data);
+				that.refresh();
 			});
         };
         

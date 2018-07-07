@@ -49,6 +49,14 @@ define(["jquery",
 			fr : "Plein &eacutecran (appuyez sur echap pour revenir)",
 			en : "Fullscreen (press escape for return)"
 		},
+		"passer-notation-courte" : {
+			fr : "Passer en notation courte (K=Mille, M=Million, G=Milliard)",
+			en : "-"
+		},
+		"passer-notation-longue" : {
+			fr : "Passer en notation longue",
+			en : "-"
+		},
 		"credits" : {
 			fr : "Credits",
 			en : "Credits"
@@ -801,6 +809,14 @@ define(["jquery",
 		},
 		"corne-abondance-desc" : {
 			fr : "Corne d'abondance et de joie. Elle apportera le bonheur à son posseseur et son entourage !",
+			en : "-"
+		},
+		"3eme-oeil" : {
+			fr : "3eme Oeil",
+			en : "-"
+		},
+		"3eme-oeil-desc" : {
+			fr : "Qui possede le 3eme oeil permet de comprendre l'equilibre complexe de l'univers.",
 			en : "-"
 		},
 		"carte-membre-mafia" : {

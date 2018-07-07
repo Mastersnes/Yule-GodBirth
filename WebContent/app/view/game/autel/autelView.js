@@ -147,6 +147,9 @@ define(["jquery",
             this.drawAvantage("mal", avantages);
             this.drawAvantage("croyance", avantages);
             this.drawAvantage("illumination", avantages);
+            if (avantages.illumination != 0) {
+            	this.el.find("#avantages illumination").show();
+            }
         };
         
         /**
@@ -154,7 +157,7 @@ define(["jquery",
          */
         this.drawAvantage = function(id, avantages) {
             var signe = "";
-            if (avantages[id] != 0) signe = avantages[id]>0?"+":"-";
+            if (avantages[id] != 0) signe = avantages[id]>0?"+":"";
             this.el.find("#avantages " + id + " .text").html(signe + avantages[id] + "%");
         };
         

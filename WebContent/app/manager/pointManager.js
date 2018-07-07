@@ -24,9 +24,11 @@ function($, _, Utils) {
 		    if (this.points.illumination > 0) $(this.el).find("illumination").show();
 		    else $(this.el).find("illumination").hide();
 
-		    $(this.el).find("bien .text").html(Utils.format(this.points.bien, true, this.Textes));
-		    $(this.el).find("mal .text").html(Utils.format(this.points.mal, true, this.Textes));
-
+		    if (this.parent.artefactsView.checkHad("3eme-oeil")) {
+			    $(this.el).find("bien .text").html(Utils.format(this.points.bien, true, this.Textes));
+			    $(this.el).find("mal .text").html(Utils.format(this.points.mal, true, this.Textes));
+		    }
+		    
 		    var total = this.points.bien + this.points.mal;
 		    var bienPercent = Utils.toPercent(this.points.bien, total);
 		    

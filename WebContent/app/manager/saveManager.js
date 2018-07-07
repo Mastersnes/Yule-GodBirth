@@ -56,6 +56,9 @@ function($, _, Utils) {
             		},
             		
             		"inventaire" : [],
+            		"options" : {
+            			"notation-courte" : true
+            		},
 
 			        "ameliorations" : {
 			            "grandTout" : 0, 

@@ -229,15 +229,15 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
         };
         
         /**
-         * Le prix des pierres augmente en fonction du nombre de pierre acheté
+         * Le prix des pierres augmente en fonction du nombre de pierre achetï¿½
          */
         this.calculPrix = function() {
             var nbPierre = this.complete.length + 1;
-            var croyance = Math.round(Utils.pow(50, 2.2, nbPierre));
+            var croyance = Math.round(Utils.pow(100, 2.3, nbPierre));
             return {
                 croyance : croyance,
-                illumination : nbPierre <= 1 ? 0 : Math.round(croyance / 100)
-            }
+                illumination : nbPierre <= 1 ? 0 : Math.round(croyance / 50)
+            };
         };
 
         /**
