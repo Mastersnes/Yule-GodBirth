@@ -6,7 +6,7 @@ define([ "jquery" ], function($) {
 			description : "torque-desc",
 			gains : {
 				croyance : 10,
-				illumination : 0,
+				illumination : 10,
 				bien : 0,
 				mal : 10
 			},
@@ -16,7 +16,7 @@ define([ "jquery" ], function($) {
 			description : "corne-abondance-desc",
 			gains : {
 				croyance : 10,
-				illumination : 0,
+				illumination : 10,
 				bien : 10,
 				mal : 0
 			},
@@ -26,7 +26,7 @@ define([ "jquery" ], function($) {
 			description : "3eme-oeil-desc",
 			gains : {
 				croyance : 0,
-				illumination : 0,
+				illumination : 20,
 				bien : 0,
 				mal : 0
 			},
@@ -36,7 +36,7 @@ define([ "jquery" ], function($) {
 			description : "carte-membre-mafia-desc",
 			gains : {
 				croyance : 10,
-				illumination : 0,
+				illumination : 5,
 				bien : 0,
 				mal : 15
 			},
@@ -46,7 +46,7 @@ define([ "jquery" ], function($) {
 			description : "idole-feu-desc",
 			gains : {
 				croyance : 15,
-				illumination : 2,
+				illumination : 10,
 				bien : 0,
 				mal : 10
 			},
@@ -56,7 +56,7 @@ define([ "jquery" ], function($) {
 			description : "idole-glace-desc",
 			gains : {
 				croyance : 10,
-				illumination : 3,
+				illumination : 10,
 				bien : 10,
 				mal : 0
 			},
@@ -66,7 +66,7 @@ define([ "jquery" ], function($) {
 			description : "idole-mort-desc",
 			gains : {
 				croyance : 20,
-				illumination : 1,
+				illumination : 10,
 				bien : 10,
 				mal : 10
 			},

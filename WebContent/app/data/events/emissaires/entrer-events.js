@@ -93,13 +93,13 @@ define(["jquery"], function($){
                          action : function(game) {
                              game.pointManager.addPoints({
                                   croyance : 0,
-                                  illumination : 1,
+                                  illumination : 10,
                                   bien : 0,
                                   mal : 0
                                });
                              game.pointManager.addPointsPercent({
                                  croyance : -10,
-                                 illumination : 10,
+                                 illumination : 50,
                                  bien : 10,
                                  mal : 0
                               });

@@ -376,45 +376,53 @@ define(["jquery",
         /**
          * Quetes
          */
-        "quete-1" : {
+        "quete-start" : {
         	fr : "Au commencement...",
         	en : "At Beginning..."
         },
-        "quete-1-desc" : {
+        "quete-start-desc" : {
         	fr : "Ameliorez le Grand-Tout pour la première fois",
-        	en : "Ameliorez le Grand-Tout pour la première fois"
+        	en : "Upgrade the great everything for the first time"
         },
-        "quete-2" : {
+        "quete-amour" : {
         	fr : "Premier amour",
         	en : "First love"
         },
-        "quete-2-desc" : {
+        "quete-amour-desc" : {
         	fr : "Donnez une chance à l'amour en ce monde",
-        	en : "Donnez une chance à l'amour en ce monde"
+        	en : "Give a chance to love in this world"
         },
-        "quete-3" : {
+        "quete-univers" : {
         	fr : "La création de l'univers",
-        	en : "La création de l'univers"
+        	en : "Universe creation"
         },
-        "quete-3-desc" : {
+        "quete-univers-desc" : {
         	fr : "Creez l'univers",
-        	en : "Creez l'univers"
+        	en : "Create the universe"
         },
-        
-        /**
-         * Notations
-         */
-        "milliards" : {
-            fr : "Milliards",
-            en : "Billions"
+        "quete-vie" : {
+        	fr : "La création de la vie",
+        	en : "The life creation"
         },
-        "millions" : {
-            fr : "Millions",
-            en : "Millions"
+        "quete-vie-desc" : {
+        	fr : "Creez la vie",
+        	en : "Create the life"
         },
-        "mille" : {
-            fr : "Mille",
-            en : "Thousand"
+        "quete-mort" : {
+        	fr : "La création de la mort",
+        	en : "The death creation"
+        },
+        "quete-mort-desc" : {
+        	fr : "Creez la mort",
+        	en : "Create the death"
+        },
+        "quete-concept" : {
+        	fr : "Humanité",
+        	en : "Humanity"
+        },
+        "quete-concept-desc" : {
+        	fr : "Creez les concepts humain",
+        	en : "Create the human concept"
         },
         
         /**

@@ -10,7 +10,7 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : 10,
-				illumination : 0,
+				illumination : 10,
 				bien : 0,
 				mal : 0
 			},
@@ -86,7 +86,7 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : 20,
-				illumination : 10,
+				illumination : 20,
 				bien : 20,
 				mal : -10
 			},
@@ -152,7 +152,7 @@ define([ "jquery" ], function($) {
 			},
             bonusCentre : {
                 croyance : 10,
-                illumination : 10,
+                illumination : 20,
                 bien : -20,
                 mal : 80
             },
@@ -220,7 +220,7 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : 20,
-				illumination : 30,
+				illumination : 40,
 				bien : -50,
 				mal : 50
 			},
@@ -242,7 +242,7 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : 45,
-				illumination : 5,
+				illumination : 15,
 				bien : 20,
 				mal : 0
 			},
@@ -261,7 +261,7 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : 10,
-				illumination : 10,
+				illumination : 20,
 				bien : 20,
 				mal : -30
 			},
@@ -299,7 +299,7 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : 30,
-				illumination : 10,
+				illumination : 20,
 				bien : 30,
 				mal : -30
 			},
@@ -318,7 +318,7 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : -10,
-				illumination : 10,
+				illumination : 20,
 				bien : 10,
 				mal : 30
 			},
@@ -337,7 +337,7 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : 0,
-				illumination : 50,
+				illumination : 60,
 				bien : 50,
 				mal : -50
 			},
