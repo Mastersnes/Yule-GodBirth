@@ -51,7 +51,8 @@ function($, _, Utils) {
 		/**
 		 * Ajoute les points
 		 */
-		this.addPoints = function(points) {
+		this.addPoints = function(points, multiplier) {
+			if(!multiplier) multiplier = 1;
 			var avantages = {
 					"croyance" : 0,
 					"illumination" : 0,
@@ -70,23 +71,23 @@ function($, _, Utils) {
 			var maxPoint = Math.pow(10, 12);
 		    if (points.croyance) {
 		        if (points.croyance < maxPoint) {
-    		    	this.points.croyance += points.croyance + parseInt(Utils.percent(points.croyance, avantages.croyance));
+    		    	this.points.croyance += (points.croyance + parseInt(Utils.percent(points.croyance, avantages.croyance))) * multiplier;
     		    }
 		    }
 		    if (points.illumination) {
 		        if (points.illumination < maxPoint) {
-    		    	this.points.illumination += points.illumination + parseInt(Utils.percent(points.illumination, avantages.illumination));
+    		    	this.points.illumination += (points.illumination + parseInt(Utils.percent(points.illumination, avantages.illumination))) * multiplier;
     		    }
 		    }
 		    if (points.bien) {
     		    if (points.bien < maxPoint) {
-    			    this.points.bien += points.bien + parseInt(Utils.percent(points.bien, avantages.bien));
+    			    this.points.bien += (points.bien + parseInt(Utils.percent(points.bien, avantages.bien))) * multiplier;
     			    if (this.points.bien < 0) this.points.bien = 0;
     		    }
 		    }
 		    if (points.mal) {
     		    if (points.mal < maxPoint) {
-    			    this.points.mal += points.mal + parseInt(Utils.percent(points.mal, avantages.mal));
+    			    this.points.mal += (points.mal + parseInt(Utils.percent(points.mal, avantages.mal))) * multiplier;
     			    if (this.points.mal < 0) this.points.mal = 0;
     			}
 		    }

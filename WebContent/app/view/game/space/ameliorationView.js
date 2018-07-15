@@ -99,7 +99,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			}else itemDom.removeClass("dispo");
 		};
 		
-		this.loop = function(game) {
+		this.loop = function(game, multiplier) {
 		    var listOnglet = Onglets.list();
 		    for (var index in listOnglet) {
                 var onglet = listOnglet[index];
@@ -111,7 +111,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 		    var listItem = Items.list();
 		    for (var index in listItem) {
 		        var item = listItem[index];
-		        game.pointManager.addPoints(item.gain(0, Items).loop);
+		        game.pointManager.addPoints(item.gain(0, Items).loop, multiplier);
 		        this.refreshItem(item);
 		    }
 		    

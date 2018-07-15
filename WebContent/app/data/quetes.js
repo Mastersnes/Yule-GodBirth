@@ -73,7 +73,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 5000,
-			    	illumination : 1000
+			    	illumination : 500
 			    }
 			},
 			"quete-vie" : {
@@ -98,8 +98,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 100000,
-			    	illumination : 5000
+			    	croyance : 10000,
+			    	illumination : 1000
 			    }
 			},
 			"quete-mort" : {
@@ -124,7 +124,7 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 100000,
+			    	croyance : 50000,
 			    	illumination : 5000
 			    }
 			},
@@ -146,7 +146,7 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 1000000,
+			    	croyance : 100000,
 			    	illumination : 10000
 			    }
 			}
