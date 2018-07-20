@@ -11,6 +11,7 @@ define(["jquery",
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
             this.Quetes = parent.Quetes;
+            this.pointManager = parent.pointManager;
         };
         
         this.render = function() {
@@ -79,22 +80,23 @@ define(["jquery",
              */
             var gain = quete.gains;
             
-            dom.find("#croyance-gain").html(Utils.format(gain.croyance, true, this.Textes));
+            var notationCourte = this.pointManager.isNotationCourte();
+            dom.find("#croyance-gain").html(Utils.format(gain.croyance, notationCourte, this.Textes));
             if (gain.croyance) dom.find("#croyance").show();
             else dom.find("#croyance").hide();
             
             //Illumination
-            dom.find("#illumination-gain").html(Utils.format(gain.illumination, true, this.Textes));
+            dom.find("#illumination-gain").html(Utils.format(gain.illumination, notationCourte, this.Textes));
             if (gain.illumination) dom.find("#illumination").show();
             else dom.find("#illumination").hide();
 
             //Bien
-            dom.find("#bien-gain").html(Utils.format(gain.bien, true, this.Textes));
+            dom.find("#bien-gain").html(Utils.format(gain.bien, notationCourte, this.Textes));
             if (gain.bien) dom.find("#bien").show();
             else dom.find("#bien").hide();
 
             //Mal
-            dom.find("#mal-gain").html(Utils.format(gain.mal, true, this.Textes));
+            dom.find("#mal-gain").html(Utils.format(gain.mal, notationCourte, this.Textes));
             if (gain.mal) dom.find("#mal").show();
             else dom.find("#mal").hide();
             

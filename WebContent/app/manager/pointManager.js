@@ -18,15 +18,16 @@ function($, _, Utils) {
 		};
 		
 		this.render = function() {
-		    $(this.el).find("croyance .text").html(Utils.format(this.points.croyance, true, this.Textes));
+			var notationCourte = this.isNotationCourte();
+		    $(this.el).find("croyance .text").html(Utils.format(this.points.croyance, notationCourte, this.Textes));
 		    
-		    $(this.el).find("illumination .text").html(Utils.format(this.points.illumination, true, this.Textes));
+		    $(this.el).find("illumination .text").html(Utils.format(this.points.illumination, notationCourte, this.Textes));
 		    if (this.points.illumination > 0) $(this.el).find("illumination").show();
 		    else $(this.el).find("illumination").hide();
 
 		    if (this.parent.artefactsView.checkHad("3eme-oeil")) {
-			    $(this.el).find("bien .text").html(Utils.format(this.points.bien, true, this.Textes));
-			    $(this.el).find("mal .text").html(Utils.format(this.points.mal, true, this.Textes));
+			    $(this.el).find("bien .text").html(Utils.format(this.points.bien, notationCourte, this.Textes));
+			    $(this.el).find("mal .text").html(Utils.format(this.points.mal, notationCourte, this.Textes));
 		    }
 		    
 		    var total = this.points.bien + this.points.mal;
@@ -38,6 +39,10 @@ function($, _, Utils) {
 		    $(this.el).find("jauge yinyang").css({
 		    	left : (bienPercent - 2.25) + "%"
 		    });
+		};
+		
+		this.isNotationCourte = function() {
+			return this.saveManager.load("options")["notation-courte"];
 		};
 		
 		/**

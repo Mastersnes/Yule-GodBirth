@@ -52,7 +52,7 @@ define(["jquery", "sha"], function($, sha){
 			return $.extend(true, {}, value);
 		},
 		format : function(amount, court, Texte) {
-		    if (!court) return;
+		    if (!court) return amount;
 			var abs = Math.abs(amount);
 		    if (abs >= 1000000000) {
 		        var formatAmount = Math.round(amount / 10000000)/100;
