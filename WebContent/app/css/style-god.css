@@ -165,3 +165,10 @@ god.beltane {
 god.litha {
     background-image: url("../img/game/god/litha/1.png");
 }
+
+/**
+* Faiblesse - Lammas
+**/
+god.lammas {
+    background-image: url("../img/game/god/lammas/1.png");
+}

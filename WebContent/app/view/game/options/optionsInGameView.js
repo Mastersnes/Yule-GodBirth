@@ -21,6 +21,7 @@ define(["jquery",
 					text : this.Textes
 			};
 			this.el.html(template(templateData));
+			this.refresh();
 			
 			this.makeEvents();
         };

@@ -756,7 +756,15 @@ define(["jquery",
 		 * Mariage - Litha
 		 */
 		"cinematique-litha" : {
-			fr : "Litha - ???",
+			fr : "Litha - Mariage du ciel et de la terre",
+			en : "-"
+		},
+
+		/**
+		 * Faiblesse - Lammas
+		 */
+		"cinematique-lammas" : {
+			fr : "Lammas - Le déclin du guerrier",
 			en : "-"
 		},
 		

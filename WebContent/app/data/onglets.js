@@ -63,12 +63,36 @@ define(["jquery"], function($){
 			},
 			"concept" : {
 			    conditions : [
+					 {
+					     name : "dieu",
+					     level : 20
+					 },
                      {
-                         name : "chaos",
-                         level : 5
+                         name : "deesse",
+                         level : 20
+                     },
+                     {
+                         name : "terre",
+                         level : 10
+                     },
+                     {
+                         name : "lune",
+                         level : 10
                      },
                      {
                          name : "foret",
+                         level : 5
+                     },
+                     {
+                         name : "ciel",
+                         level : 5
+                     },
+                     {
+                         name : "vide",
+                         level : 5
+                     },
+                     {
+                         name : "chaos",
                          level : 5
                      }
                 ],

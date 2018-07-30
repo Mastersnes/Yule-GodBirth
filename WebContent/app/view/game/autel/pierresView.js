@@ -236,7 +236,7 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
             var croyance = Math.round(Utils.pow(100, 2.3, nbPierre));
             return {
                 croyance : croyance,
-                illumination : nbPierre <= 1 ? 0 : Math.round(croyance / 50)
+                illumination : nbPierre <= 1 ? 0 : Math.round(croyance / 10)
             };
         };
 

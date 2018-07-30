@@ -46,8 +46,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 1000,
-			    	illumination : 100
+			    	croyance : 500,
+			    	illumination : 10
 			    }
 			},
 			"quete-univers" : {
@@ -72,8 +72,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 5000,
-			    	illumination : 500
+			    	croyance : 1000,
+			    	illumination : 100
 			    }
 			},
 			"quete-vie" : {
@@ -98,8 +98,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 10000,
-			    	illumination : 1000
+			    	croyance : 3000,
+			    	illumination : 200
 			    }
 			},
 			"quete-mort" : {
@@ -124,8 +124,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 50000,
-			    	illumination : 5000
+			    	croyance : 3000,
+			    	illumination : 200
 			    }
 			},
 			"quete-concept" : {
@@ -137,17 +137,41 @@ define(["jquery"], function($){
 				},
 			    conditions : [
 				     {
-				    	 name : "chaos",
-				    	 level : 5
-			         },
-			         {
-				    	 name : "foret",
-				    	 level : 5
-			         }
+					     name : "dieu",
+					     level : 20
+					 },
+                     {
+                         name : "deesse",
+                         level : 20
+                     },
+                     {
+                         name : "terre",
+                         level : 10
+                     },
+                     {
+                         name : "lune",
+                         level : 10
+                     },
+                     {
+                         name : "foret",
+                         level : 5
+                     },
+                     {
+                         name : "ciel",
+                         level : 5
+                     },
+                     {
+                         name : "vide",
+                         level : 5
+                     },
+                     {
+                         name : "chaos",
+                         level : 5
+                     }
 				],
 			    gains : {
-			    	croyance : 100000,
-			    	illumination : 10000
+			    	croyance : 7000,
+			    	illumination : 500
 			    }
 			}
 	};
