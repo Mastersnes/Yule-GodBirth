@@ -192,6 +192,10 @@ define(["jquery",
         	// Si la pierre est deja placée, on n'y touche pas
         	if (this.selectedPierres.contains(pierreId)) return;
         	
+        	if (this.selectedPierres.length() == 6) {
+        		this.parent.recompenseManager.addSuccess("success-autel");
+        	}
+        	
         	var firstEmptyKey = this.selectedPierres.getFirstEmptyKey();
         	this.selectedPierres.put(firstEmptyKey, pierreId);
         	this.refresh();

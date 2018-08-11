@@ -2,8 +2,8 @@
 * Chasses
 **/
 autel > chasse.used:hover {
-	background-color: red;
 	cursor: pointer;
+    opacity: .5;
 }
 autel > chasse:not(.used) {
 	background-image: none;

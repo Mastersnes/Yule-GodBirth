@@ -11,7 +11,12 @@ define(["jquery"], function($){
 		};
 		
 		this.length = function() {
-			return this.data.length();
+			var taille = 0;
+			for (var index in this.data) {
+				var item = this.data[index];
+				if (item) taille++;
+			}
+			return taille;
 		};
 		
 		this.remove = function(key) {

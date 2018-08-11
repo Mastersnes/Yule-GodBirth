@@ -384,14 +384,6 @@ define(["jquery",
         	fr : "Ameliorez le Grand-Tout pour la première fois",
         	en : "Upgrade the great everything for the first time"
         },
-        "quete-amour" : {
-        	fr : "Premier amour",
-        	en : "First love"
-        },
-        "quete-amour-desc" : {
-        	fr : "Donnez une chance à l'amour en ce monde",
-        	en : "Give a chance to love in this world"
-        },
         "quete-univers" : {
         	fr : "La création de l'univers",
         	en : "Universe creation"
@@ -423,6 +415,63 @@ define(["jquery",
         "quete-concept-desc" : {
         	fr : "Creez les concepts humain",
         	en : "Create the human concept"
+        },
+        
+        "quete-imbolc" : {
+        	fr : "Imbolc",
+        	en : "Imbolc"
+        },
+        "quete-imbolc-desc" : {
+        	fr : "Atteignez Imbolc",
+        	en : "Reach Imbolc"
+        },
+        "quete-ostara" : {
+        	fr : "Ostara",
+        	en : "Ostara"
+        },
+        "quete-ostara-desc" : {
+        	fr : "Atteignez Ostara",
+        	en : "Reach Ostara"
+        },
+        "quete-beltane" : {
+        	fr : "Beltane",
+        	en : "Beltane"
+        },
+        "quete-beltane-desc" : {
+        	fr : "Atteignez Beltane",
+        	en : "Reach Beltane"
+        },
+        "quete-litha" : {
+        	fr : "Litha",
+        	en : "Litha"
+        },
+        "quete-litha-desc" : {
+        	fr : "Atteignez Litha",
+        	en : "Reach Litha"
+        },
+        "quete-lammas" : {
+        	fr : "Lammas",
+        	en : "Lammas"
+        },
+        "quete-lammas-desc" : {
+        	fr : "Atteignez Lammas",
+        	en : "Reach Lammas"
+        },
+        "quete-mabon" : {
+        	fr : "Mabon",
+        	en : "Mabon"
+        },
+        "quete-mabon-desc" : {
+        	fr : "Atteignez Mabon",
+        	en : "Reach Mabon"
+        },
+        "quete-samhain" : {
+        	fr : "Samhain",
+        	en : "Samhain"
+        },
+        "quete-samhain-desc" : {
+        	fr : "Atteignez Samhain",
+        	en : "Reach Samhain"
         },
         
         /**
@@ -779,30 +828,130 @@ define(["jquery",
 			fr : "100 Clics",
 			en : "100 Clicks"
 		},
+		"success-100click-descr" : {
+			fr : "Effectuer un total de 100 clics",
+			en : "Do a total of 100 clicks"
+		},
 		"success-500click" : {
 			fr : "500 Clics",
 			en : "500 Clicks"
+		},
+		"success-500click-descr" : {
+			fr : "Effectuer un total de 500 clics",
+			en : "Do a total of 500 clicks"
 		},
 		"success-1000click" : {
 			fr : "1K Clics",
 			en : "1K Clicks"
 		},
+		"success-1000click-descr" : {
+			fr : "Effectuer un total de 1000 clics !",
+			en : "Do a total of 1000 clicks !"
+		},
 		"success-5000click" : {
 			fr : "5K Clics",
 			en : "5K Clicks"
+		},
+		"success-5000click-descr" : {
+			fr : "Effectuer un total de 5000 clics ! Incroyable !",
+			en : "Do a total of 5000 clicks ! Awesome !"
 		},
 		"success-10000click" : {
 			fr : "10KClics",
 			en : "10K Clicks"
 		},
+		"success-10000click-descr" : {
+			fr : "Effectuer un total de 10000 clics... Vous n'avez que ca à faire ?",
+			en : "Do a total of 100 clicks... Don't you have anything else to do ?"
+		},
 		"success-50000click" : {
 			fr : "50K Clics",
 			en : "50K Clicks"
+		},
+		"success-50000click-descr" : {
+			fr : "Effectuer un total de 50000 clics !!! Il faut arreter maintenant oO",
+			en : "Do a total of 50000 clicks !!! You have to stop now oO"
 		},
 		"success-100000click" : {
 			fr : "100K Clics",
 			en : "100K Clicks"
 		},
+		"success-100000click-descr" : {
+			fr : "Effectuer un total de 100000 clics !!! Top of the pop !",
+			en : "Do a total of 100000 clicks !!! Top of the pop !"
+		},
+		"success-amour" : {
+        	fr : "Premier amour",
+        	en : "First love"
+        },
+        "success-amour-descr" : {
+        	fr : "Amener le Dieu et la Deesse au niveau 5.",
+        	en : "Make the God and Goddess to be at level 5."
+        },
+		"success-imbolc" : {
+        	fr : "Imbolc",
+        	en : "Imbolc"
+        },
+        "success-imbolc-descr" : {
+        	fr : "Atteindre Imbolc.",
+        	en : "Reach Imbolc."
+        },
+		"success-ostara" : {
+        	fr : "Ostara",
+        	en : "Ostara"
+        },
+        "success-ostara-descr" : {
+        	fr : "Atteindre Ostara.",
+        	en : "Reach Ostara."
+        },
+		"success-beltane" : {
+        	fr : "Beltane",
+        	en : "Beltane"
+        },
+        "success-beltane-descr" : {
+        	fr : "Atteindre Beltane.",
+        	en : "Reach Beltane."
+        },
+		"success-litha" : {
+        	fr : "Litha",
+        	en : "Litha"
+        },
+        "success-litha-descr" : {
+        	fr : "Atteindre Litha.",
+        	en : "Reach Litha."
+        },
+		"success-lammas" : {
+        	fr : "Lammas",
+        	en : "Lammas"
+        },
+        "success-lammas-descr" : {
+        	fr : "Atteindre Lammas.",
+        	en : "Reach Lammas."
+        },
+		"success-mabon" : {
+        	fr : "Mabon",
+        	en : "Mabon"
+        },
+        "success-mabon-descr" : {
+        	fr : "Atteindre Mabon.",
+        	en : "Reach Mabon."
+        },
+		"success-samhain" : {
+        	fr : "Samhain",
+        	en : "Samhain"
+        },
+        "success-samhain-descr" : {
+        	fr : "Atteindre Samhain.",
+        	en : "Reach Samhain."
+        },
+        "success-autel" : {
+        	fr : "Remplir l'autel",
+        	en : "Fill the altar"
+        },
+        "success-autel-descr" : {
+        	fr : "Placer 6 pierres sur l'autel.",
+        	en : "Put 6 stones on the altar."
+        },
 		
 		/**
 		 * Artefacts

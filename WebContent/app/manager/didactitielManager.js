@@ -79,7 +79,7 @@ function($, _, Utils) {
 			}
 			
 			/**
-			 * Troisieme etape, lorsque le dieu née, on demande de realiser la quete
+			 * Troisieme etape, lorsque le dieu nï¿½e, on demande de realiser la quete
 			 */
 			if (this.data.step.name == "barre" && godType.name == "baby" && godType.level == 1) {
 			    this.data.step.name = "quete";
@@ -138,7 +138,7 @@ function($, _, Utils) {
 			 */
 			if (currentText == "didactitiel5") {
                 this.pointManager.addPoints({
-                    croyance : 10,
+                    croyance : 3,
                     illumination : 0,
                     bien : 0,
                     mal : 0
@@ -202,7 +202,8 @@ function($, _, Utils) {
 			if (grandTout.level > 1) {
 			    this.data.indication.barre = false;
 			}
-			if (grandTout.level > 3) {
+			var queteView = this.parent.queteView;
+            if (grandTout.level > 4 || queteView.complete.length > 0) {
 			    $("etoile.success-star").show();
 			    $("etoile.autel-star").show();
 			    this.data.blocker.constellations = false;

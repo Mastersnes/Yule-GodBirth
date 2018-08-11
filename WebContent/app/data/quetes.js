@@ -28,28 +28,6 @@ define(["jquery"], function($){
 			    	}
 			    }
 			},
-			"quete-amour" : {
-			    name : "quete-amour",
-			    description : "quete-amour-desc",
-				apparition : {
-					 isComplete : [],
-				     ameliorations : []
-				},
-			    conditions : [
-				     {
-				    	 name : "dieu",
-				    	 level : 2
-			         },
-			         {
-				    	 name : "deesse",
-				    	 level : 2
-			         }
-				],
-			    gains : {
-			    	croyance : 500,
-			    	illumination : 10
-			    }
-			},
 			"quete-univers" : {
 			    name : "quete-univers",
 			    description : "quete-univers-desc",
@@ -72,8 +50,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 1000,
-			    	illumination : 100
+			    	croyance : 500,
+			    	illumination : 50
 			    }
 			},
 			"quete-vie" : {
@@ -98,8 +76,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 3000,
-			    	illumination : 200
+			    	croyance : 1000,
+			    	illumination : 100
 			    }
 			},
 			"quete-mort" : {
@@ -124,8 +102,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gains : {
-			    	croyance : 3000,
-			    	illumination : 200
+			    	croyance : 1000,
+			    	illumination : 100
 			    }
 			},
 			"quete-concept" : {
@@ -170,8 +148,162 @@ define(["jquery"], function($){
                      }
 				],
 			    gains : {
-			    	croyance : 7000,
+			    	croyance : 3000,
+			    	illumination : 300
+			    }
+			},
+			"quete-imbolc" : {
+			    name : "quete-imbolc",
+			    description : "quete-imbolc-desc",
+				apparition : {
+					 isComplete : ["quete-start"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+					     name : "grandTout",
+					     level : 8
+					 }
+				],
+			    gains : {
+			    	croyance : 1500,
+			    	illumination : 150
+			    },
+			    success : function(queteView) {
+			    	var game = queteView.parent;
+			    	game.recompenseManager.addSuccess("success-imbolc");
+			    }
+			},
+			"quete-ostara" : {
+			    name : "quete-ostara",
+			    description : "quete-ostara-desc",
+				apparition : {
+					 isComplete : ["quete-imbolc"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+					     name : "grandTout",
+					     level : 15
+					 }
+				],
+			    gains : {
+			    	croyance : 5000,
 			    	illumination : 500
+			    },
+			    success : function(queteView) {
+			    	var game = queteView.parent;
+			    	game.recompenseManager.addSuccess("success-ostara");
+			    }
+			},
+			"quete-beltane" : {
+			    name : "quete-beltane",
+			    description : "quete-beltane-desc",
+				apparition : {
+					 isComplete : ["quete-ostara"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+					     name : "grandTout",
+					     level : 25
+					 }
+				],
+			    gains : {
+			    	croyance : 10000,
+			    	illumination : 800
+			    },
+			    success : function(queteView) {
+			    	var game = queteView.parent;
+			    	game.recompenseManager.addSuccess("success-beltane");
+			    }
+			},
+			"quete-litha" : {
+			    name : "quete-litha",
+			    description : "quete-litha-desc",
+				apparition : {
+					 isComplete : ["quete-beltane"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+					     name : "grandTout",
+					     level : 40
+					 }
+				],
+			    gains : {
+			    	croyance : 20000,
+			    	illumination : 1200
+			    },
+			    success : function(queteView) {
+			    	var game = queteView.parent;
+			    	game.recompenseManager.addSuccess("success-litha");
+			    }
+			},
+			"quete-lammas" : {
+			    name : "quete-lammas",
+			    description : "quete-lammas-desc",
+				apparition : {
+					 isComplete : ["quete-litha"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+					     name : "grandTout",
+					     level : 55
+					 }
+				],
+			    gains : {
+			    	croyance : 30000,
+			    	illumination : 1500
+			    },
+			    success : function(queteView) {
+			    	var game = queteView.parent;
+			    	game.recompenseManager.addSuccess("success-lammas");
+			    }
+			},
+			"quete-mabon" : {
+			    name : "quete-mabon",
+			    description : "quete-mabon-desc",
+				apparition : {
+					 isComplete : ["quete-lammas"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+					     name : "grandTout",
+					     level : 70
+					 }
+				],
+			    gains : {
+			    	croyance : 40000,
+			    	illumination : 2000
+			    },
+			    success : function(queteView) {
+			    	var game = queteView.parent;
+			    	game.recompenseManager.addSuccess("success-mabon");
+			    }
+			},
+			"quete-samhain" : {
+			    name : "quete-samhain",
+			    description : "quete-samhain-desc",
+				apparition : {
+					 isComplete : ["quete-mabon"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+					     name : "grandTout",
+					     level : 85
+					 }
+				],
+			    gains : {
+			    	croyance : 50000,
+			    	illumination : 3000
+			    },
+			    success : function(queteView) {
+			    	var game = queteView.parent;
+			    	game.recompenseManager.addSuccess("success-samhain");
 			    }
 			}
 	};

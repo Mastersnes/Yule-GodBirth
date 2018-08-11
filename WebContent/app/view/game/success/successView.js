@@ -56,7 +56,7 @@ define(["jquery",
         this.drawSuccess = function(success, complete) {
         	var successDom = $("<success></success>");
         	if (complete){
-        		successDom.attr("title", this.Textes.get(success));
+        		successDom.attr("title", this.Textes.get(success + "-descr"));
         		successDom.addClass(success);
         		successDom.addClass("completed");
         	}

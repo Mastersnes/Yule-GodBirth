@@ -23,3 +23,6 @@ successList > success.success-50000click .icon {
 successList > success.success-100000click .icon {
 	background-image: url("../img/game/success/100000.png");
 }
+successList > success.success-amour .icon {
+	background-image: url("../img/game/success/amour.png");
+}
