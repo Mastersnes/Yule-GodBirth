@@ -1,10 +1,9 @@
 'use strict';
 define(["jquery", 
-        "app/data/events/emissaires-events",
-        "app/data/events/boss-events"], function($, EmissairesEvents, BossEvents){
+        "app/data/events/imbolc/imbolc-events"], function($, ImbolcEvents){
 	var data = {
 	        /**
-	         * Evenements generaux
+	         * Premier evenement
 	         */
 			"first-event" : {
 				name : "first-event",
@@ -23,7 +22,7 @@ define(["jquery",
 		 						mal : 0
 			            	 });
 			                 
-			                 game.eventManager.addEvents(["entrer-pluie-event", "entrer-eclipse-event", "entrer-sacrifice-event", "entrer-blessure-event", "entrer-argent-event", "entrer-vraidieu-event"]);
+			                 game.eventManager.addEvents(ImbolcEvents.list("accueil"));
 			                 game.alertPopup("first-event-ok", function() {
 			                	 game.artefactsView.add("corne-abondance");
 			                 });
@@ -40,7 +39,7 @@ define(["jquery",
                              });
                              
                              game.eventManager.rebellion++;
-                        	 game.eventManager.addEvents(["refus-secheresse-event", "refus-glaciation-event", "refus-sacrifice-event", "refus-epidemie-event", "refus-fauxdieu-event"]);
+                        	 game.eventManager.addEvents(ImbolcEvents.list("refus"));
                         	 game.alertPopup("first-event-ko", function() {
                         		 game.artefactsView.add("torque");
                         	 });
@@ -52,8 +51,7 @@ define(["jquery",
 	
 	return {
 		get : function(key) {
-			var event = EmissairesEvents.get(key);
-			if (!event) BossEvents.get(key);
+			var event = ImbolcEvents.get(key);
 		    if (!event) event = data[key];
 		    
 		    return event;

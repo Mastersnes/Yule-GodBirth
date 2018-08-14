@@ -51,7 +51,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 500,
-			    	illumination : 50
+			    	illumination : 100
 			    }
 			},
 			"quete-vie" : {
@@ -77,7 +77,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 1000,
-			    	illumination : 100
+			    	illumination : 500
 			    }
 			},
 			"quete-mort" : {
@@ -103,7 +103,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 1000,
-			    	illumination : 100
+			    	illumination : 500
 			    }
 			},
 			"quete-concept" : {
@@ -148,8 +148,8 @@ define(["jquery"], function($){
                      }
 				],
 			    gains : {
-			    	croyance : 3000,
-			    	illumination : 300
+			    	croyance : 5000,
+			    	illumination : 2000
 			    }
 			},
 			"quete-imbolc" : {
@@ -167,7 +167,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 1500,
-			    	illumination : 150
+			    	illumination : 200
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -189,7 +189,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 5000,
-			    	illumination : 500
+			    	illumination : 1000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -211,7 +211,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 10000,
-			    	illumination : 800
+			    	illumination : 2000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -233,7 +233,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 20000,
-			    	illumination : 1200
+			    	illumination : 3000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -255,7 +255,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 30000,
-			    	illumination : 1500
+			    	illumination : 5000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -277,7 +277,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 40000,
-			    	illumination : 2000
+			    	illumination : 8000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -299,7 +299,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 50000,
-			    	illumination : 3000
+			    	illumination : 10000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;

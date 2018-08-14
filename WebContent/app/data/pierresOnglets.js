@@ -11,7 +11,7 @@ define(["jquery"], function($){
 			    conditions : [
 				    {
 				    	name : "dieu",
-				    	level : 8
+				    	level : 5
 				    }
 			    ],
 				name : "solaire",
@@ -21,7 +21,7 @@ define(["jquery"], function($){
                 conditions : [
                     {
                         name : "deesse",
-                        level : 8
+                        level : 5
                     }
                 ],
                 name : "lunaire",
