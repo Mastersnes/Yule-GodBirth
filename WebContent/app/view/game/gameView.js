@@ -119,6 +119,10 @@ function($, _, Utils, PopupUtils, page,
 		    }
         };
         
+        this.gainLoop = function(multiplier) {
+        	this.spaceView.ameliorationView.loop(this, multiplier);
+        };
+        
         this.gameOver = function() {
             this.endGame = true;
             this.endView.render();

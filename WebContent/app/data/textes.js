@@ -29,6 +29,10 @@ define(["jquery",
 			fr : "Annuler",
 			en : "Cancel"
 		},
+		"enquete-button" : {
+			fr : "Enqueter",
+			en : "Investigate"
+		},
 		"loadGame" : {
 			fr : "Charger une partie",
 			en : "Load game"
@@ -134,6 +138,14 @@ define(["jquery",
 		"noButton" : {
 			fr : "Non",
 			en : "No"
+		},
+		"acceptButton" : {
+			fr : "Accepter",
+			en : "Accept"
+		},
+		"refusButton" : {
+			fr : "Refuser",
+			en : "Refuse"
 		},
 		"suivant" : {
 			fr : "Suivant >",
@@ -984,28 +996,12 @@ define(["jquery",
 			fr : "Qui possede le 3eme oeil permet de comprendre l'equilibre complexe de l'univers.",
 			en : "-"
 		},
-		"carte-membre-mafia" : {
-			fr : "Carte de membre de la mafia intergalactique",
-			en : "-"
-		},
-		"carte-membre-mafia-desc" : {
-			fr : "Vous êtes désormais un membre permanent de la mafia intergalactique ! Félicitation !",
-			en : "-"
-		},
 		"idole-feu" : {
 			fr : "Idole de feu",
 			en : "-"
 		},
 		"idole-feu-desc" : {
 			fr : "Une étrange statuette representant une créature enflammée.",
-			en : "-"
-		},
-		"idole-glace" : {
-			fr : "Idole de glace",
-			en : "-"
-		},
-		"idole-glace-desc" : {
-			fr : "Une étrange statuette representant une créature piégée dans la glace.",
 			en : "-"
 		},
 		"idole-mort" : {

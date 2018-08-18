@@ -31,16 +31,6 @@ define([ "jquery" ], function($) {
 				mal : 0
 			},
 		},
-		"carte-membre-mafia" : {
-			name : "carte-membre-mafia",
-			description : "carte-membre-mafia-desc",
-			gains : {
-				croyance : 10,
-				illumination : 5,
-				bien : 0,
-				mal : 15
-			},
-		},
 		"idole-feu" : {
 			name : "idole-feu",
 			description : "idole-feu-desc",
@@ -49,16 +39,6 @@ define([ "jquery" ], function($) {
 				illumination : 10,
 				bien : 0,
 				mal : 10
-			},
-		},
-		"idole-glace" : {
-			name : "idole-glace",
-			description : "idole-glace-desc",
-			gains : {
-				croyance : 10,
-				illumination : 10,
-				bien : 10,
-				mal : 0
 			},
 		},
 		"idole-mort" : {
