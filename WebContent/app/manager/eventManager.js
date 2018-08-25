@@ -73,7 +73,6 @@ function($, _, Utils, page, Events) {
 	        var randEvent = Events.get(totalEvents[randIndex]);
 	        
 	    	if (this.checkEvent(randEvent)) this.currentEvent = randEvent;
-            // Si l'evenement est unique, on l'ajoute à la liste  des evenements deja rencontrés
             if (this.currentEvent) {
             	this.showTimer();
             }
@@ -231,15 +230,19 @@ function($, _, Utils, page, Events) {
 		 * Verifie si une action doit apparaitre et etre proposée
 		 */
 		this.checkActionAffichable = function(action) {
-		    var conditions = action.conditions;
-            if (!conditions || conditions.length == 0) return true;
+			var conditions = action.conditions;
+			if (!conditions || conditions.length == 0) return true;
             
             var ameliorationView = parent.spaceView.ameliorationView;
             
             for (var index in conditions) {
                 var condition = conditions[index];
+                
                 var itemRestrict = ameliorationView.Items.get(condition.name);
-                if (itemRestrict.level < condition.level) return false;
+                // Si la condition porte sur une amelioration
+                if (itemRestrict && itemRestrict.level < condition.level) return false;
+                // Sinon, elle porte sur un artefact
+                else if (!parent.artefactsView.checkHad(condition.name)) return false;
             }
             return true;
         };

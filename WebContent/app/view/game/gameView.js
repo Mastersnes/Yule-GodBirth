@@ -120,6 +120,7 @@ function($, _, Utils, PopupUtils, page,
         };
         
         this.gainLoop = function(multiplier) {
+        	console.log("gain : ", multiplier);
         	this.spaceView.ameliorationView.loop(this, multiplier);
         };
         

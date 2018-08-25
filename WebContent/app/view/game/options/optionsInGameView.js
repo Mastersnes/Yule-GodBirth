@@ -50,8 +50,6 @@ define(["jquery",
 			});
 			this.el.find(".flag.en").click(function() {
 				that.Textes.local = "en";
-				console.log("parent : ", that.parent);
-				console.log("parent parent : ", that.parent.parent);
 				that.parent.parent.render();
 			});
 			this.el.find("#fullscreen").click(function() {

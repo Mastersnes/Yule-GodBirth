@@ -1,5 +1,9 @@
 'use strict';
-define(["jquery","app/utils/utils"], function($, Utils){
+define(["jquery","app/utils/utils",
+        "app/data/events/imbolc/tyrannie-events",
+        "app/data/events/imbolc/croisade-events",
+        "app/data/events/imbolc/epreuve-events"
+        ], function($, Utils, TyrannieEvents, CroisadeEvents, EpreuveEvents){
 	/**
 	 * Question des emissaires
 	 */
@@ -9,14 +13,15 @@ define(["jquery","app/utils/utils"], function($, Utils){
 			    text : "accueil-pluie-event",
 			    rarity : 10,
 			    unique : true,
+			    starter : true,
 			    actions : [
 			         {
 			             name : "yesButton",
 			             action : function(game) {
                              game.gainLoop({
-                            	 croyance : 10,
+                            	 croyance : 15,
                             	 illumination : 5,
-                            	 bien : 10,
+                            	 bien : 5,
                             	 mal : 0
                              });
                              
@@ -30,7 +35,7 @@ define(["jquery","app/utils/utils"], function($, Utils){
                             	 croyance : 0,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 10
+                            	 mal : 5
                              });
                         	 game.eventManager.rebellion++;
                              game.alertPopup("accueil-pluie-event-ko");
@@ -44,18 +49,19 @@ define(["jquery","app/utils/utils"], function($, Utils){
 			    text : "accueil-sacrifice-event",
 			    rarity : 15,
 			    unique : true,
+			    starter : true,
 			    actions : [
 			         {
 			             name : "acceptButton",
 			             action : function(game) {
                              game.gainLoop({
-                            	 croyance : 10,
+                            	 croyance : 15,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 20
+                            	 mal : 10
                              });
                              
-                             game.eventManager.addEvents(CroisadeEvents.list());
+                             game.eventManager.addEvents(CroisadeEvents.start());
 			                 game.alertPopup("accueil-sacrifice-event-accept");
 			             }
 			         },
@@ -64,8 +70,8 @@ define(["jquery","app/utils/utils"], function($, Utils){
                          action : function(game) {
                         	 game.gainLoop({
                             	 croyance : 0,
-                            	 illumination : 10,
-                            	 bien : 20,
+                            	 illumination : 15,
+                            	 bien : 10,
                             	 mal : 0
                              });
                         	 game.eventManager.rebellion++;
@@ -79,9 +85,9 @@ define(["jquery","app/utils/utils"], function($, Utils){
                             	 croyance : 20,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 30
+                            	 mal : 15
                              });
-                        	 game.eventManager.addEvents(CroisadeEvents.list());
+                        	 game.eventManager.addEvents(CroisadeEvents.start());
                              game.alertPopup("accueil-sacrifice-event-tuer-pretre");
                          }
                      }
@@ -93,6 +99,7 @@ define(["jquery","app/utils/utils"], function($, Utils){
 			    text : "accueil-blessure-event",
 			    rarity : 30,
 			    unique : false,
+			    starter : true,
 			    actions : [
 			         {
 			             name : "accueil-blessure-event-ok-button",
@@ -101,7 +108,7 @@ define(["jquery","app/utils/utils"], function($, Utils){
 				            	 game.gainLoop({
 	                            	 croyance : 0,
 	                            	 illumination : 0,
-	                            	 bien : 10,
+	                            	 bien : 5,
 	                            	 mal : 0
 	                             });
 				                 game.alertPopup("accueil-blessure-event-ok");
@@ -109,7 +116,7 @@ define(["jquery","app/utils/utils"], function($, Utils){
                             	 game.gainLoop({
                                 	 croyance : 5,
                                 	 illumination : 5,
-                                	 bien : 20,
+                                	 bien : 15,
                                 	 mal : 0
                                  });
     			                 game.alertPopup("accueil-blessure2-event-ok");
@@ -124,14 +131,14 @@ define(["jquery","app/utils/utils"], function($, Utils){
 	                            	 croyance : 0,
 	                            	 illumination : 0,
 	                            	 bien : 0,
-	                            	 mal : 10
+	                            	 mal : 5
 	                             });
                         	 }else {
 	                        	 game.gainLoop({
 	                            	 croyance : 0,
 	                            	 illumination : 0,
 	                            	 bien : 0,
-	                            	 mal : 20
+	                            	 mal : 10
 	                             });
                         	 }
                         	 game.eventManager.rebellion++;
@@ -146,11 +153,12 @@ define(["jquery","app/utils/utils"], function($, Utils){
 			    text : "accueil-riche-event",
 			    rarity : 25,
 			    unique : true,
+			    starter : true,
 			    actions : [
 			         {
 			             name : "yesButton",
 			             action : function(game) {
-			            	 game.eventManager.addEvents(TyranieEvents.list());
+			            	 game.eventManager.addEvents(TyrannieEvents.start());
 			                 game.alertPopup("accueil-riche-event-ok");
 			             }
 			         },
@@ -176,7 +184,7 @@ define(["jquery","app/utils/utils"], function($, Utils){
 		                            	 croyance : 0,
 		                            	 illumination : 0,
 		                            	 bien : 0,
-		                            	 mal : 20
+		                            	 mal : 10
 		                             });
 				        		   game.eventManager.rebellion++;
 				        		   game.alertPopup("accueil-riche-event-tuer");
@@ -188,7 +196,7 @@ define(["jquery","app/utils/utils"], function($, Utils){
 				        		   game.gainLoop({
 		                            	 croyance : 0,
 		                            	 illumination : 25,
-		                            	 bien : 20,
+		                            	 bien : 15,
 		                            	 mal : 0
 		                             });
 				        		   game.alertPopup("accueil-riche-event-partir");
@@ -202,11 +210,12 @@ define(["jquery","app/utils/utils"], function($, Utils){
 			    text : "accueil-question-event",
 			    rarity : 40,
 			    unique : true,
+			    starter : true,
 			    actions : [
 			         {
 			             name : "yesButton",
 			             action : function(game) {
-			            	 game.eventManager.addEvents(EpreuveEvents.list());
+			            	 game.eventManager.addEvents(EpreuveEvents.start());
 			                 game.alertPopup("accueil-question-event-ok");
 			             }
 			         },
@@ -229,13 +238,17 @@ define(["jquery","app/utils/utils"], function($, Utils){
 	
 	return {
 		get : function(key) {
-			return data[key];
+			var event = TyrannieEvents.get(key);
+		    if (!event) event = CroisadeEvents.get(key);
+		    if (!event) event = EpreuveEvents.get(key);
+            if (!event) event = data[key];
+            return event;
 		},
-		list : function(key) {
+		start : function(key) {
 			var names = [];
 			for (var index in data) {
 				var elmt = data[index];
-				if (elmt)names.push(elmt.name);
+				if (elmt && elmt.starter) names.push(elmt.name);
 			}
 			
 			return names;

@@ -64,7 +64,7 @@ function($, _, Utils) {
 					mal : 1
 			};
 			if(multiplierParam) {
-				if (multiplierParam.croyance) multiplier = multiplierParam;
+				if (multiplierParam.croyance == undefined) multiplier = multiplierParam;
 				else {
 					multiplier.croyance = multiplierParam;
 					multiplier.illumination = multiplierParam;
@@ -91,23 +91,23 @@ function($, _, Utils) {
 			var maxPoint = Math.pow(10, 12);
 		    if (points.croyance) {
 		        if (points.croyance < maxPoint) {
-    		    	this.points.croyance += (points.croyance + parseInt(Utils.percent(points.croyance, avantages.croyance))) * multiplier.croyance;
+    		    	this.points.croyance += ((points.croyance + parseInt(Utils.percent(points.croyance, avantages.croyance))) * multiplier.croyance);
     		    }
 		    }
 		    if (points.illumination) {
 		        if (points.illumination < maxPoint) {
-    		    	this.points.illumination += (points.illumination + parseInt(Utils.percent(points.illumination, avantages.illumination))) * multiplier.illumination;
+    		    	this.points.illumination += ((points.illumination + parseInt(Utils.percent(points.illumination, avantages.illumination))) * multiplier.illumination);
     		    }
 		    }
 		    if (points.bien) {
     		    if (points.bien < maxPoint) {
-    			    this.points.bien += (points.bien + parseInt(Utils.percent(points.bien, avantages.bien))) * multiplier.bien;
+    			    this.points.bien += ((points.bien + parseInt(Utils.percent(points.bien, avantages.bien))) * multiplier.bien);
     			    if (this.points.bien < 0) this.points.bien = 0;
     		    }
 		    }
 		    if (points.mal) {
     		    if (points.mal < maxPoint) {
-    			    this.points.mal += (points.mal + parseInt(Utils.percent(points.mal, avantages.mal))) * multiplier.mal;
+    			    this.points.mal += ((points.mal + parseInt(Utils.percent(points.mal, avantages.mal))) * multiplier.mal);
     			    if (this.points.mal < 0) this.points.mal = 0;
     			}
 		    }
@@ -179,8 +179,8 @@ function($, _, Utils) {
 		 */
 		this.gameOver = function() {
 			var perdu = this.points.bien * this.points.mal <= 0;
-			var bienGagne = this.points.bien > 4 * this.points.mal;
-			var malGagne = this.points.mal > 4 * this.points.bien;
+			var bienGagne = this.points.bien > (5 * this.points.mal);
+			var malGagne = this.points.mal > (5 * this.points.bien);
 			
 			return perdu || bienGagne || malGagne;
 		};

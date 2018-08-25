@@ -1,6 +1,6 @@
 'use strict';
 define(["jquery",
-        "app/data/textes/textes-events",], function($, EventsTextes){
+        "app/data/textes/textes-events"], function($, EventsTextes){
 	var data = {
 		/**
 		 * Plateformes
@@ -28,10 +28,6 @@ define(["jquery",
 		"cancelButton" : {
 			fr : "Annuler",
 			en : "Cancel"
-		},
-		"enquete-button" : {
-			fr : "Enqueter",
-			en : "Investigate"
 		},
 		"loadGame" : {
 			fr : "Charger une partie",
@@ -982,11 +978,11 @@ define(["jquery",
 		},
 		"corne-abondance" : {
 			fr : "Corne d'abondance",
-			en : "-"
+			en : "Horn of plenty"
 		},
 		"corne-abondance-desc" : {
 			fr : "Corne d'abondance et de joie. Elle apportera le bonheur à son posseseur et son entourage !",
-			en : "-"
+			en : "Horn of plenty and joy. It will bring happiness to it's owner and his entourage !"
 		},
 		"3eme-oeil" : {
 			fr : "3eme Oeil",

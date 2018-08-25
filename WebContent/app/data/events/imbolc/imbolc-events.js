@@ -1,7 +1,8 @@
 'use strict';
 define(["jquery", 
         "app/data/events/imbolc/accueil-events",
-        "app/data/events/imbolc/refus-events"], function($, AccueilEvents, RefusEvents){
+        "app/data/events/imbolc/refus-events"], 
+        function($, AccueilEvents, RefusEvents){
 	/**
 	 * Evenements lies à imbolc
 	 */
@@ -15,9 +16,9 @@ define(["jquery",
             
             return event;
 		},
-		list : function(key) {
-		    if (key == "accueil") return AccueilEvents.list();
-		    else return RefusEvents.list();
+		start : function(key) {
+		    if (key == "accueil") return AccueilEvents.start();
+		    else return RefusEvents.start();
 		}
 	};
 });

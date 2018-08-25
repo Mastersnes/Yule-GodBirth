@@ -9,6 +9,9 @@ define(["jquery"], function($){
 		this.put = function(key, value) {
 			this.data[key] = value;
 		};
+		this.push = function(key) {
+			this.data[key] = key;
+		};
 		
 		this.length = function() {
 			var taille = 0;
@@ -20,8 +23,10 @@ define(["jquery"], function($){
 		};
 		
 		this.remove = function(key) {
-			var index = this.data.indexOf(key);
-			this.data.splice(index, 1);
+			var retour = this.data.splice(key, 1);
+			if (retour && retour.length > 1) return true;
+			
+			delete this.data[key];
 		};
 		
 		this.get = function(key) {

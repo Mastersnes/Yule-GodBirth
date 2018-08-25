@@ -1,10 +1,11 @@
 'use strict';
 define(["jquery", 
         "app/utils/utils",
+        "app/utils/map",
         "text!app/template/game/artefacts/artefacts.html",
         "app/data/artefacts",
         "app/view/game/artefacts/detailView"], 
-        function($, Utils, page, Artefacts, DetailView){
+        function($, Utils, HashMap, page, Artefacts, DetailView){
     return function(parent){
         this.init = function(parent) {
         	this.el = $(".artefacts");
@@ -16,7 +17,7 @@ define(["jquery",
             this.saveManager = parent.saveManager;
             this.pointManager = this.parent.pointManager;
             
-            this.inventaire = this.saveManager.load("inventaire");
+            this.inventaire = new HashMap(this.saveManager.load("inventaire"));
         };
         
         this.render = function() {
@@ -63,7 +64,7 @@ define(["jquery",
          * Verifie si l'artefact est possédé
          */
         this.checkHad = function(artefactName) {
-        	return this.inventaire.indexOf(artefactName) > -1;
+        	return this.inventaire.contains(artefactName);
         };
         
         /**
@@ -96,13 +97,23 @@ define(["jquery",
          * Ajoute l'artefact à la liste et affiche une popup d'alerte
          */
         this.add = function(artefact) {
-        	if (this.inventaire.indexOf(artefact) > -1) return;
+        	if (this.inventaire.contains(artefact)) return;
         	this.inventaire.push(artefact);
+        	this.saveManager.save("inventaire", this.inventaire.data);
         	if (!this.parent.alertOpen) {
         		var gainText = this.Textes.get("gainArtefact");
         		gainText = gainText.replace("{?}", this.Textes.get(artefact));
         		this.parent.alertPopup(gainText);
         	}
+        };
+
+        /**
+         * Retire l'artefact de la liste
+         */
+        this.remove = function(artefact) {
+        	if (!this.inventaire.contains(artefact)) return;
+        	this.inventaire.remove(artefact);
+        	this.saveManager.save("inventaire", this.inventaire.data);
         };
         
         this.makeEvents = function() {

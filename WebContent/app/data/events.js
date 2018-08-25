@@ -15,7 +15,7 @@ define(["jquery",
 			         {
 			             name : "yesButton",
 			             action : function(game) {
-			                 game.eventManager.addEvents(ImbolcEvents.list("accueil"));
+			                 game.eventManager.addEvents(ImbolcEvents.start("accueil"));
 			                 game.alertPopup("first-event-ok", function() {
 			                	 game.artefactsView.add("corne-abondance");
 			                 });
@@ -25,7 +25,7 @@ define(["jquery",
                          name : "noButton",
                          action : function(game) {
                              game.eventManager.rebellion++;
-                        	 game.eventManager.addEvents(ImbolcEvents.list("refus"));
+                        	 game.eventManager.addEvents(ImbolcEvents.start("refus"));
                         	 game.alertPopup("first-event-ko", function() {
                         		 game.artefactsView.add("torque");
                         	 });

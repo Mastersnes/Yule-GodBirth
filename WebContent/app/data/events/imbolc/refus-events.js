@@ -1,5 +1,10 @@
 'use strict';
-define(["jquery"], function($){
+define(["jquery",
+        "app/data/events/imbolc/demons-events",
+        "app/data/events/imbolc/croisade-events",
+        "app/data/events/imbolc/zombie-events",
+        "app/data/events/imbolc/epreuve-events",
+        ], function($, DemonsEvents, CroisadeEvents, ZombieEvents, EpreuveEvents){
 	/**
 	 * Si on refuse d'entendre les emissaires
 	 */
@@ -7,8 +12,9 @@ define(["jquery"], function($){
 			"refus-desert-event" : {
 				name : "refus-desert-event",
 			    text : "refus-desert-event",
-			    rarity : 30,
+			    rarity : 20,
 			    unique : true,
+			    starter : true,
 			    actions : [
 			         {
 			             name : "refus-desert-event-refus-button",
@@ -17,16 +23,16 @@ define(["jquery"], function($){
                             	 croyance : 0,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 15
+                            	 mal : 10
                              });
-			            	 game.eventManager.addEvents(DemonsFeuEvents.list());
+			            	 game.eventManager.addEvents(DemonsEvents.start());
 			                 game.alertPopup("refus-desert-event-refus");
 			             }
 			         },
 			         {
                          name : "refus-desert-event-enquete-button",
                          action : function(game) {
-                        	 game.eventManager.addEvents(DemonsFeuEvents.list());
+                        	 game.eventManager.addEvents(DemonsEvents.start());
                         	 game.alertPopup("refus-desert-event-enquete", function() {
                         		 game.artefactsView.add("idole-feu");
                         	 });
@@ -40,17 +46,18 @@ define(["jquery"], function($){
 				text : "refus-sacrifice-event",
 				rarity : 25,
 				unique : true,
+			    starter : true,
 				actions : [
 				           {
 				        	   name : "refus-sacrifice-event-recompense-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
-				        			   croyance : 15,
+				        			   croyance : 20,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 25
+				        			   mal : 20
 				        		   });
-				        		   game.eventManager.addEvents(CroisadeEvents.list());
+				        		   game.eventManager.addEvents(CroisadeEvents.start());
 				        		   game.alertPopup("refus-sacrifice-event-recompense");
 				        	   }
 				           },
@@ -75,7 +82,7 @@ define(["jquery"], function($){
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 30
+				        			   mal : 20
 				        		   });
 				        		   game.alertPopup("refus-sacrifice-event-tuer");
 				        	   }
@@ -105,9 +112,9 @@ define(["jquery"], function($){
 				        			   croyance : 15,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 25
+				        			   mal : 20
 				        		   });
-				        		   game.eventManager.addEvents(CroisadeEvents.list());
+				        		   game.eventManager.addEvents(CroisadeEvents.start());
 				        		   game.alertPopup("refus-sacrifice-event-recompense");
 				        	   }
 				           }
@@ -117,13 +124,14 @@ define(["jquery"], function($){
 			"refus-maladie-event" : {
 				name : "refus-maladie-event",
 				text : "refus-maladie-event",
-				rarity : 40,
+				rarity : 30,
 				unique : true,
+			    starter : true,
 				actions : [
 				           {
 				        	   name : "enquete-button",
 				        	   action : function(game) {
-				        		   game.eventManager.addEvents(ZombieEvents.list());
+				        		   game.eventManager.addEvents(ZombieEvents.start());
 				        		   game.alertPopup("refus-maladie-event-enquete", function() {
 				        			   game.artefactsView.add("idole-mort");
 				        		   });
@@ -138,7 +146,7 @@ define(["jquery"], function($){
 				           {
 				        	   name : "refus-maladie-event-laisser-button",
 				        	   action : function(game) {
-				        		   game.eventManager.addEvents(ZombieEvents.list());
+				        		   game.eventManager.addEvents(ZombieEvents.start());
 				        		   game.alertPopup("refus-maladie-event-laisser");
 				        	   }
 				           }
@@ -163,7 +171,7 @@ define(["jquery"], function($){
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 30
+				        			   mal : 20
 				        		   });
 				        		   game.alertPopup("refus-maladie-event-bruler");
 				        	   }
@@ -185,8 +193,51 @@ define(["jquery"], function($){
 		                        		 bien : 0,
 		                        		 mal : 0
 		                        	 });
-				        		   game.eventManager.addEvents(ZombieEvents.list());
-				        		   game.alertPopup("refus-maladie-event-changer");
+				        		   game.eventManager.addEvents(ZombieEvents.start());
+				        		   game.alertPopup("refus-maladie-event-laisser");
+				        	   }
+				           }
+				           ]
+			},
+			
+			"refus-question-event" : {
+				name : "refus-question-event",
+				text : "refus-question-event",
+				rarity : 40,
+				unique : true,
+			    starter : true,
+				actions : [
+				           {
+				        	   name : "ignore-button",
+				        	   action : function(game) {
+				        		   game.eventManager.rebellion++;
+				        		   game.pointManager.addPointsPercent({
+		                        		 croyance : -50,
+		                        		 illumination : 0,
+		                        		 bien : 0,
+		                        		 mal : 0
+		                        	 });
+				        		   game.alertPopup("refus-question-event-ignore");
+				        	   }
+				           },
+				           {
+				        	   name : "refus-question-event-punir-button",
+				        	   action : function(game) {
+				        		   game.gainLoop({
+				        			   croyance : 30,
+				        			   illumination : 0,
+				        			   bien : 0,
+				        			   mal : 20
+				        		   });
+				        		   game.eventManager.rebellion++;
+				        		   game.alertPopup("refus-question-event-punir");
+				        	   }
+				           },
+				           {
+				        	   name : "refus-question-event-dementir-button",
+				        	   action : function(game) {
+				        		   game.eventManager.addEvents(EpreuveEvents.start());
+				        		   game.alertPopup("refus-question-event-dementir");
 				        	   }
 				           }
 				           ]
@@ -195,13 +246,18 @@ define(["jquery"], function($){
 	
 	return {
 		get : function(key) {
-			return data[key];
+			var event = DemonsEvents.get(key);
+		    if (!event) event = CroisadeEvents.get(key);
+		    if (!event) event = ZombieEvents.get(key);
+		    if (!event) event = EpreuveEvents.get(key);
+            if (!event) event = data[key];
+            return event;
 		},
-		list : function(key) {
+		start : function(key) {
 			var names = [];
 			for (var index in data) {
 				var elmt = data[index];
-				if (elmt)names.push(elmt.name);
+				if (elmt && elmt.starter) names.push(elmt.name);
 			}
 			
 			return names;
