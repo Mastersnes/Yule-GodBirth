@@ -97,7 +97,7 @@ define(["jquery","app/utils/utils",
 			"accueil-blessure-event" : {
 				name : "accueil-blessure-event",
 			    text : "accueil-blessure-event",
-			    rarity : 30,
+			    rarity : 50,
 			    unique : false,
 			    starter : true,
 			    actions : [

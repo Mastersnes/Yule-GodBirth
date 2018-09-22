@@ -96,11 +96,6 @@ define(["jquery"], function($){
 	};
 	
 	return {
-		local : null,
-		
-		/**
-		* Permet d'appeler un WS
-		**/
 		get : function(key) {
 			return data[key];
 		}

@@ -78,26 +78,56 @@ define(["jquery"], function($){
 			en : "Capital falls in piece, Killing both demons and inhabitants..."
 		},
 		"demons-village-event-tuer-button" : {
-			fr : "",
-			en : ""
+			fr : "Tuer les démons",
+			en : "Kill the demons"
 		},
 		"demons-village-event-tuer" : {
-			fr : "",
-			en : ""
+			fr : "Toute les créatures tombent, inerte... Le peuple vous aclame ! Vous avez sauvé la capital !",
+			en : "All the creatures fall down, inert... People acclaim you ! You saved the capital !"
 		},
 		"demons-village-event-stop-button" : {
-			fr : "",
-			en : ""
+			fr : "<bonus>[Torque]-Stopper le combat</bonus>",
+			en : "<bonus>[Torque]-Stop the battle</bonus>"
 		},
 		"demons-village-event-stop" : {
-			fr : "",
-			en : ""
+			fr : "Les gens, aussi bien humain que démon, perdent toute envie de se battre.<br/>Les armes tombent au sol et les démons commencent à quitter les lieux...",
+			en : "People, both human and demon, lose all desire to fight.<br/>Weapons fall to the ground and demons begin to leave the place..."
+		},
+
+		/**
+		 * Desert
+		 */
+		"demons-desert-event" : {
+			fr : "Le desert s'etend de plus en plus, les démons de feu gagnent du terrain !",
+			en : "The desert is spreading more and more, the fire demons are gaining ground!"
+		},
+		"demons-desert-event-vie-button" : {
+			fr : "<bonus>[Idole de feu]-Ramener la vie</bonus>",
+			en : "<bonus>[Idol of fire]-Bring life back</bonus>"
+		},
+		"demons-desert-event-vie" : {
+			fr : "Les démons reconnaissent leur idole. Ils se prosternent devant vous, vous jurant fidélité !<br/> Vous êtes désormais leur dieu !",
+			en : "Demons recognize their idols. They bow down before you, swearing allegiance to you !<br/> You are now their god !"
+		},
+		"demons-desert-event-innonder-button" : {
+			fr : "Faire un déluge",
+			en : "Make a flood"
+		},
+		"demons-desert-event-innonder" : {
+			fr : "Il plu durant 1 an au bout duquel les désert retrouvèrent peu à peu leur état d'origine.<br/>Beaucoup périrent sous les inondations...",
+			en : "It rained during 1 year at the end of which the desert gradually returned to its original state.<br/>Much died under the floods..."
+		},
+		"demons-desert-event-laisser-button" : {
+			fr : "Laisser",
+			en : "Leave as it is"
+		},
+		"demons-desert-event-laisser" : {
+			fr : "Le désert continua à s’étendre, tuant et asséchant les nombreux village...",
+			en : "The desert continued to spread, killing and draining the many villages..."
 		},
 	};
 	
 	return {
-		local : null,
-		
 		get : function(key) {
 			return data[key];
 		}

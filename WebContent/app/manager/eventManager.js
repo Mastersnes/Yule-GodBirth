@@ -25,11 +25,16 @@ function($, _, Utils, page, Events) {
 			this.generalEvents = this.saveManager.load("generalEvents");
 			this.uniquesEvents = this.saveManager.load("uniquesEvents");
 			this.rebellion = this.saveManager.load("rebellion");
+			this.epidemie = this.saveManager.load("epidemie");
 		};
 		
 		this.loop = function() {
 			// Si la rebellion est trop forte, on ajoute l'evenement
-			if (this.rebellion >= 100) this.addEvents(["rebellion-1-event"]);
+			if (this.rebellion >= 100) this.addEvents(["rebellion-start-event"]);
+			
+			// Si l'epidemie est trop forte, on ajoute l'evenement
+			if (this.epidemie >= 2) this.addEvents(["zombie-step-event-2"]);
+			if (this.epidemie >= 10) this.addEvents(["zombie-step-event-3"]);
 			
 			//Si il y a deja un evenement en cours
 		    if (this.currentEvent) return this.checkTimer();
@@ -40,13 +45,14 @@ function($, _, Utils, page, Events) {
 			// Si on a une popup info ouverte
 			if (this.parent.alertOpen) return;
 			
-			// Si le grand tout n'est pas encore au level 6
-			var ameliorationView = parent.spaceView.ameliorationView;
-			var grandToutLevel = 0;
-			if (ameliorationView) {
-				grandToutLevel = ameliorationView.Items.get("grandTout");
-			}
-			if (grandToutLevel < 6) return;
+			//TODO : remettre apres !
+//			// Si le grand tout n'est pas encore au level 6
+//			var ameliorationView = parent.spaceView.ameliorationView;
+//			var grandToutLevel = 0;
+//			if (ameliorationView) {
+//				grandToutLevel = ameliorationView.Items.get("grandTout");
+//			}
+//			if (grandToutLevel < 6) return;
 			
 			// Si un evenement doit être affiché en priorité
 			if (this.toShowNow) {
@@ -66,7 +72,6 @@ function($, _, Utils, page, Events) {
 		    	var eventIndex = totalEvents.indexOf(eventName);
 		    	totalEvents.splice(eventIndex, 1);
 		    }
-		    //console.log("totalEvents", totalEvents);
 		    if (totalEvents.length == 0) return;
 		    
 	        var randIndex = Utils.rand(0, totalEvents.length);
@@ -92,8 +97,9 @@ function($, _, Utils, page, Events) {
 			if (this.currentEvent.timer) timerMax = this.currentEvent;
 			if (this.timer > timerMax && timerMax != -1) {
 				$(".scene #event-timer").removeClass("start");
+				var lastCurrentEvent = this.currentEvent;
 				$(".scene #event-timer").fadeOut("fast", function() {
-					that.currentEvent = null;
+					if (that.currentEvent == lastCurrentEvent) that.currentEvent = null;
 				});
 			}
 		};
@@ -105,6 +111,9 @@ function($, _, Utils, page, Events) {
 			this.timer = 0;
 			$(".scene #event-timer").fadeIn("fast", function() {
 				$(".scene #event-timer").addClass("start");
+				$(".scene .event-timer-new").fadeIn("fast", function() {
+					$(".scene .event-timer-new").fadeOut(1500);
+				});
 			});
 		};
 		
@@ -122,6 +131,7 @@ function($, _, Utils, page, Events) {
 			}
 			
 			// Si il est rare, il faut tomber sur sa rareté
+			return true;
 			var rarity = randEvent.rarity;
 			if (rarity == 0) return true;
 			if (!rarity) rarity = 100;
@@ -203,7 +213,8 @@ function($, _, Utils, page, Events) {
 		    var that = this;
 		    $(".choix li").click(function() {
 		        var index = parseInt($(this).attr("index"));
-		        that.currentEvent.actions[index].action(that.parent);
+		        if (that.currentEvent) that.currentEvent.actions[index].action(that.parent);
+		        else console.log("Erreur l'evenement est null");
 		        that.hide();
 		    });
 		};
@@ -222,7 +233,7 @@ function($, _, Utils, page, Events) {
 			return (this.generalEvents.indexOf(event) > -1) || (this.uniquesEvents.indexOf(event) > -1);
 		};
 		
-		this.removeEvents = function(event) {
+		this.removeEvent = function(event) {
 		    this.generalEvents.splice(this.generalEvents.indexOf(event), 1);
 		};
 		

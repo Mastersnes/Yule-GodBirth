@@ -172,3 +172,17 @@ god.litha {
 god.lammas {
     background-image: url("../img/game/god/lammas/1.png");
 }
+
+/**
+* Vieillesse - Mabon
+**/
+god.mabon {
+    background-image: url("../img/game/god/mabon/1.png");
+}
+
+/**
+* Mort - Samhain
+**/
+god.samhain {
+    background-image: none;
+}

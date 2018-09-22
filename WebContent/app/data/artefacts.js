@@ -50,6 +50,16 @@ define([ "jquery" ], function($) {
 				bien : 10,
 				mal : 10
 			},
+		},
+		"saint-graal" : {
+			name : "saint-graal",
+			description : "saint-graal-desc",
+			gains : {
+				croyance : 20,
+				illumination : 30,
+				bien : 10,
+				mal : 30
+			},
 		}
 	};
 

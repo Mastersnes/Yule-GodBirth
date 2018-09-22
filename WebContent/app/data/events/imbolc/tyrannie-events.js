@@ -16,7 +16,7 @@ define(["jquery"], function($){
 			            	var names = [];
 			     			for (var index in data) {
 			     				var elmt = data[index];
-			     				if (elmt && elmt.name != this.name)names.push(elmt.name);
+			     				if (elmt && elmt.name != this.name && elmt.starter)names.push(elmt.name);
 			     			}
 			            	
 			     			game.eventManager.addEvents(names);
@@ -31,6 +31,7 @@ define(["jquery"], function($){
 				text : "tyrannie-soeur-event",
 				rarity : 20,
 				unique : true,
+				starter : true,
 				actions : [
 				           {
 				        	   name : "acceptButton",
@@ -65,6 +66,7 @@ define(["jquery"], function($){
 				text : "tyrannie-fete-event",
 				rarity : 30,
 				unique : true,
+				starter : true,
 				actions : [
 				           {
 				        	   name : "tyrannie-fete-event-participe-button",
@@ -128,6 +130,7 @@ define(["jquery"], function($){
 				text : "tyrannie-esclave-event",
 				rarity : 40,
 				unique : true,
+				starter : true,
 				actions : [
 				           {
 				        	   name : "tyrannie-esclave-event-encourage-button",

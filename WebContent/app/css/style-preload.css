@@ -82,6 +82,10 @@ preload.god-lammas[step="1"] {
 	background-image: url("../img/game/god/lammas/1.png");
 }
 
+preload.god-mabon[step="1"] {
+	background-image: url("../img/game/god/mabon/1.png");
+}
+
 /**GODDESS**/
 /**IMBOLC**/
 preload.goddess-imbolc[step="1"] {
@@ -156,6 +160,41 @@ preload.goddess-litha[step="1"] {
 /**LAMMAS**/
 preload.goddess-lammas[step="1"] {
 	background-image: url("../img/game/goddess/lammas/1.png");
+}
+/**MABON**/
+preload.goddess-mabon[step="1"] {
+	background-image: url("../img/game/goddess/mabon/1.png");
+}
+preload.goddess-mabon[step="2"] {
+	background-image: url("../img/game/goddess/mabon/2.png");
+}
+preload.goddess-mabon[step="3"] {
+	background-image: url("../img/game/goddess/mabon/3.png");
+}
+preload.goddess-mabon[step="4"] {
+	background-image: url("../img/game/goddess/mabon/4.png");
+}
+preload.goddess-mabon[step="5"] {
+	background-image: url("../img/game/goddess/mabon/5.png");
+}
+preload.goddess-mabon[step="6"] {
+	background-image: url("../img/game/goddess/mabon/6.png");
+}
+preload.goddess-mabon[step="7"] {
+	background-image: url("../img/game/goddess/mabon/7.png");
+}
+preload.goddess-mabon[step="8"] {
+	background-image: url("../img/game/goddess/mabon/8.png");
+}
+preload.goddess-mabon[step="9"] {
+	background-image: url("../img/game/goddess/mabon/9.png");
+}
+preload.goddess-mabon[step="10"] {
+	background-image: url("../img/game/goddess/mabon/10.png");
+}
+/**SAMHAIN**/
+preload.goddess-samhain[step="1"] {
+	background-image: url("../img/game/goddess/samhain/1.png");
 }
 
 /**Dieu**/

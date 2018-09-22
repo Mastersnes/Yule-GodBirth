@@ -16,7 +16,7 @@ define(["jquery"], function($){
 			            	var names = [];
 			     			for (var index in data) {
 			     				var elmt = data[index];
-			     				if (elmt && elmt.name != this.name)names.push(elmt.name);
+			     				if (elmt && elmt.name != this.name && elmt.starter)names.push(elmt.name);
 			     			}
 			            	
 			     			game.eventManager.addEvents(names);
@@ -31,6 +31,7 @@ define(["jquery"], function($){
 			    text : "demons-attaque-event",
 			    rarity : 25,
 			    unique : true,
+			    starter : true,
 			    actions : [
 			         {
 			             name : "acceptButton",
@@ -119,6 +120,7 @@ define(["jquery"], function($){
 			    text : "demons-village-event",
 			    rarity : 30,
 			    unique : true,
+			    starter : true,
 			    actions : [
 			         {
 			             name : "demons-village-event-detruire-button",
@@ -159,9 +161,66 @@ define(["jquery"], function($){
                             	 bien : 30,
                             	 mal : 0
                              });
-			                 game.alertPopup("demons-village-event-stop");
+			                 game.alertPopup("demons-village-event-stop", function() {
+			                	 game.artefactsView.remove("torque");
+			                 });
 			             },
 			             conditions : [{name : "torque"}]
+			         }
+			    ]
+			},
+			
+			"demons-desert-event" : {
+				name : "demons-desert-event",
+			    text : "demons-desert-event",
+			    rarity : 30,
+			    unique : true,
+			    starter : true,
+			    actions : [
+			         {
+			             name : "demons-desert-event-vie-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+                            	 croyance : 30,
+                            	 illumination : 20,
+                            	 bien : 15,
+                            	 mal : 0
+                             });
+			                 game.alertPopup("demons-desert-event-vie", function() {
+			                	 game.artefactsView.remove("idole-feu");
+			                 });
+			             },
+			             conditions : [{name : "idole-feu"}]
+			         },
+			         {
+			             name : "demons-desert-event-innonder-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+                            	 croyance : 20,
+                            	 illumination : 0,
+                            	 bien : 0,
+                            	 mal : 10
+                             });
+			            	 game.alertPopup("demons-desert-event-innonder");
+			             }
+			         },
+			         {
+			             name : "demons-desert-event-laisser-button",
+			             action : function(game) {
+			            	 game.pointManager.addPointsPercent({
+                        		 croyance : -30,
+                        		 illumination : -10,
+                        		 bien : 0,
+                        		 mal : 0
+                        	 });
+			            	 game.gainLoop({
+                            	 croyance : 0,
+                            	 illumination : 0,
+                            	 bien : 0,
+                            	 mal : 20
+                             });
+			                 game.alertPopup("demons-desert-event-laisser");
+			             }
 			         }
 			    ]
 			},

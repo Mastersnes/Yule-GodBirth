@@ -39,8 +39,10 @@ define(["jquery",
         	var successList = Success.list();
         	for (var index in successList) {
         		var success = successList[index];
-        		this.drawSuccess(success, this.checkComplete(success));
+        		this.drawSuccess(success, this.checkComplete(success), this.checkNew(success));
         	}
+        	
+        	this.recompenseManager.newList.length = 0;
         };
         
         /**
@@ -49,17 +51,25 @@ define(["jquery",
         this.checkComplete = function(success) {
         	return this.recompenseManager.complete.indexOf(success) > -1;
         };
+
+        /**
+         * Verifie si le succes est nouveau
+         */
+        this.checkNew = function(success) {
+        	return this.recompenseManager.newList.indexOf(success) > -1;
+        };
         
         /**
          * Affiche le success
          */
-        this.drawSuccess = function(success, complete) {
+        this.drawSuccess = function(success, complete, isNew) {
         	var successDom = $("<success></success>");
         	if (complete){
         		successDom.attr("title", this.Textes.get(success + "-descr"));
         		successDom.addClass(success);
         		successDom.addClass("completed");
         	}
+        	if (isNew) successDom.addClass("new");
         	
         	var successTitre = $("<div></div>");
         	successTitre.addClass("text");

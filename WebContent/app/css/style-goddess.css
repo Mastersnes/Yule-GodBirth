@@ -209,3 +209,81 @@ goddess.lammas {
     	transform: rotate(360deg) scale(1);
     }
 }
+
+goddess.mabon {
+    animation-name: mabon-anim;
+    animation-duration: 50s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+    -webkit-animation-name: mabon-anim;
+    -webkit-animation-duration: 50s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+	-moz-animation-name: mabon-anim;
+    -moz-animation-duration: 50s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: mabon-anim;
+    -o-animation-duration: 50s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+
+@keyframes mabon-anim {
+    0%, 95%, 100% {background-image: url("../img/game/goddess/mabon/1.png");}
+    5%, 90% {background-image: url("../img/game/goddess/mabon/2.png");}
+    10%, 85% {background-image: url("../img/game/goddess/mabon/3.png");}
+    15%, 80% {background-image: url("../img/game/goddess/mabon/4.png");}
+    20%, 75% {background-image: url("../img/game/goddess/mabon/5.png");}
+    25%, 70% {background-image: url("../img/game/goddess/mabon/6.png");}
+    30%, 65% {background-image: url("../img/game/goddess/mabon/7.png");}
+    35%, 60% {background-image: url("../img/game/goddess/mabon/8.png");}
+    40%, 55% {background-image: url("../img/game/goddess/mabon/9.png");}
+    45%, 50% {background-image: url("../img/game/goddess/mabon/10.png");}
+}
+
+goddess.samhain {
+	background-image: url("../img/game/goddess/samhain/1.png");
+    animation-name: samhain-anim;
+    animation-duration: 100s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+    -webkit-animation-name: samhain-anim;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+	-moz-animation-name: samhain-anim;
+    -moz-animation-duration: 100s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: samhain-anim;
+    -o-animation-duration: 100s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+
+@keyframes samhain-anim {
+    0% {
+    	transform: rotate(0deg);
+    }
+    50% {
+     	transform: rotate(180deg);
+    }
+    100% {
+    	transform: rotate(360deg);
+    }
+}

@@ -17,6 +17,7 @@ function($, _, Utils) {
 			
 			this.compteurClick = this.saveManager.load("compteurClick");
 			this.complete = this.saveManager.load("successComplete");
+			this.newList = [];
 		};
 		
 		this.addClick = function() {
@@ -88,6 +89,7 @@ function($, _, Utils) {
 			if (this.complete.indexOf(success) > -1) return false;
 			
 			this.complete.push(success);
+			this.newList.push(success);
 			this.saveManager.save("successComplete", this.complete);
 			
 			if (!withoutMessage) {

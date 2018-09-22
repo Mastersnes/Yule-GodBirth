@@ -824,6 +824,22 @@ define(["jquery",
 			fr : "Lammas - Le déclin du guerrier",
 			en : "-"
 		},
+
+		/**
+		 * Vieillesse - Mabon
+		 */
+		"cinematique-lammas" : {
+			fr : "Mabon - La sagesse de l'eternel",
+			en : "-"
+		},
+
+		/**
+		 * Mort - Samhain
+		 */
+		"cinematique-samhain" : {
+			fr : "Samhain - La fin d'un cycle",
+			en : "-"
+		},
 		
 		/**
 		 * Success
@@ -970,11 +986,11 @@ define(["jquery",
 		},
 		"torque" : {
 			fr : "Torque",
-			en : "-"
+			en : "Torque"
 		},
 		"torque-desc" : {
 			fr : "Symbole des grands guerrier. Il est l'objet essentiel à tout dieu en apprentissage !",
-			en : "-"
+			en : "Symbol of the great warrior. He is the essential object of every learning god !"
 		},
 		"corne-abondance" : {
 			fr : "Corne d'abondance",
@@ -994,11 +1010,11 @@ define(["jquery",
 		},
 		"idole-feu" : {
 			fr : "Idole de feu",
-			en : "-"
+			en : "Idol of fire"
 		},
 		"idole-feu-desc" : {
 			fr : "Une étrange statuette representant une créature enflammée.",
-			en : "-"
+			en : "A strange statuette representing an inflamed creature."
 		},
 		"idole-mort" : {
 			fr : "Idole de mort",
@@ -1007,6 +1023,14 @@ define(["jquery",
 		"idole-mort-desc" : {
 			fr : "Une étrange statuette representant une créature ensanglantée.",
 			en : "-"
+		},
+		"saint-graal" : {
+			fr : "Saint Graal",
+			en : "Holy Grail"
+		},
+		"saint-graal-desc" : {
+			fr : "Un calice sacré ayant contenu le sang du dieu. Sa puissance divine donne à son possesseur les pleins pouvoirs.",
+			en : "A sacred chalice that contained the blood of the god. His divine power gives his possessor full powers."
 		},
 	};
 	

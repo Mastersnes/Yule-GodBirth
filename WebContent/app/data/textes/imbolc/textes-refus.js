@@ -11,10 +11,6 @@ define(["jquery",
 			fr : "Maitre ! Il semblerait que tout un village se soit transformé en desert ! Que doit-on faire ?",
 			en : "Master ! It seems that whole a village has been transformed into a desert ! What should we do ?"
 		},
-		"refus-desert-event-refus-button" : {
-			fr : "Pas mon probléme",
-			en : "Not my problem"
-		},
 		"refus-desert-event-refus" : {
 			fr : "Ainsi, Le desert continua à s'étendre...",
 			en : "Thus, The desert continued to expand..."
@@ -142,14 +138,9 @@ define(["jquery",
 	};
 	
 	return {
-		local : null,
-		
-		/**
-		* Permet d'appeler un WS
-		**/
 		get : function(key) {
 			var text = TextesDemons.get(key);
-			var text = TextesZombie.get(key);
+			if (!text) text = TextesZombie.get(key);
 			if (!text) text = data[key];
 			return text;
 		}

@@ -24,6 +24,11 @@ successList > success:not(.completed) .icon {
     cursor: not-allowed;
 }
 
+successList > success.new {
+    background-image: url("../img/game/success/vide.png") !important;
+    cursor: not-allowed;
+}
+
 successList > success .icon {
 	position: absolute;
     top: 0; left: 0;

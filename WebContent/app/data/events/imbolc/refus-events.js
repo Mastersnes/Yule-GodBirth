@@ -17,7 +17,7 @@ define(["jquery",
 			    starter : true,
 			    actions : [
 			         {
-			             name : "refus-desert-event-refus-button",
+			             name : "pasMonProbleme-button",
 			             action : function(game) {
 			            	 game.gainLoop({
                             	 croyance : 0,

@@ -3,8 +3,8 @@
 * Liste des artefacts
 **/
 artefactsList > artefact.torque .icon {
-	background-image: url("../img/game/success/500.png");
+	background-image: url("../img/game/artefact/torque.png");
 }
-artefactsList > artefact.corne-abondance .icon {
-	background-image: url("../img/game/success/500.png");
+artefactsList > artefact.graal .icon {
+	background-image: url("../img/game/artefact/graal.png");
 }

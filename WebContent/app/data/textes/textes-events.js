@@ -12,15 +12,14 @@ define(["jquery",
 			"ignore-button" : {
 				fr : "Ignorer",
 				en : "Ignore"
-			}
+			},
+			"pasMonProbleme-button" : {
+				fr : "Pas mon probléme",
+				en : "Not my problem"
+			},
 	};
 	
 	return {
-		local : null,
-		
-		/**
-		* Permet d'appeler un WS
-		**/
 		get : function(key) {
 			var text = TextesImbolc.get(key);
 			if (!text) text = data[key];

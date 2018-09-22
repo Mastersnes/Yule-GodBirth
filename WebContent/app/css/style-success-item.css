@@ -23,6 +23,40 @@ successList > success.success-50000click .icon {
 successList > success.success-100000click .icon {
 	background-image: url("../img/game/success/100000.png");
 }
+/**
+*Amour
+**/
 successList > success.success-amour .icon {
 	background-image: url("../img/game/success/amour.png");
+}
+/**
+* Dieu
+**/
+successList > success.success-imbolc .icon {
+	background-image: url("../img/game/success/imbolc.png");
+}
+successList > success.success-ostara .icon {
+	background-image: url("../img/game/success/ostara.png");
+}
+successList > success.success-beltane .icon {
+	background-image: url("../img/game/success/beltane.png");
+}
+successList > success.success-litha .icon {
+	background-image: url("../img/game/success/litha.png");
+}
+successList > success.success-lammas .icon {
+	background-image: url("../img/game/success/lammas.png");
+}
+successList > success.success-mabon .icon {
+	background-image: url("../img/game/success/mabon.png");
+}
+successList > success.success-samhain .icon {
+	background-image: url("../img/game/success/samhain.png");
+}
+
+/**
+* Autre
+**/
+successList > success.success-autel .icon {
+	background-image: url("../img/game/success/autel.png");
 }

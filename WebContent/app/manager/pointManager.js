@@ -64,7 +64,7 @@ function($, _, Utils) {
 					mal : 1
 			};
 			if(multiplierParam) {
-				if (multiplierParam.croyance == undefined) multiplier = multiplierParam;
+				if (multiplierParam.croyance != undefined) multiplier = multiplierParam;
 				else {
 					multiplier.croyance = multiplierParam;
 					multiplier.illumination = multiplierParam;

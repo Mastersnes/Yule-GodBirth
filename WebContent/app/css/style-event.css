@@ -24,6 +24,18 @@
 .scene .event-timer:hover {
 	transform: scale(1.2);
 }
+.scene .event-timer-new {
+	display: none;
+	position: absolute;
+    z-index: 9;
+    right: -2.5%; top: 12.5%;
+    width: 10%; height: 13%;
+	
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("../img/game/interface/event-timer/new.png");
+}
+
 .scene .event-timer.start {
 	animation-name: timer-action;
     animation-duration: 7s;

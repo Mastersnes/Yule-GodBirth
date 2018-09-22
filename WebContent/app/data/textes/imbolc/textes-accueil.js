@@ -121,11 +121,6 @@ define(["jquery",
 	};
 	
 	return {
-		local : null,
-		
-		/**
-		* Permet d'appeler un WS
-		**/
 		get : function(key) {
 			var text = TextesTyrannie.get(key);
 			if (!text) text = data[key];

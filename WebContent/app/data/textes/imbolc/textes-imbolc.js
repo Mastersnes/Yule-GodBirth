@@ -24,16 +24,11 @@ define(["jquery",
 	};
 	
 	return {
-		local : null,
-		
-		/**
-		* Permet d'appeler un WS
-		**/
 		get : function(key) {
 			var text = TextesAccueil.get(key);
-			if (!text) TextesRefus.get(key);
-			if (!text) TextesCroisade.get(key);
-			if (!text) TextesEpreuve.get(key);
+			if (!text) text = TextesRefus.get(key);
+			if (!text) text = TextesCroisade.get(key);
+			if (!text) text = TextesEpreuve.get(key);
 			if (!text) text = data[key];
 			return text;
 		}
