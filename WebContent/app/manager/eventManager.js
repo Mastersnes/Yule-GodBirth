@@ -109,11 +109,11 @@ function($, _, Utils, page, Events) {
 		 */
 		this.showTimer = function() {
 			this.timer = 0;
+			$(".scene .event-timer-new").fadeIn("fast", function() {
+				$(".scene .event-timer-new").fadeOut(1500);
+			});
 			$(".scene #event-timer").fadeIn("fast", function() {
 				$(".scene #event-timer").addClass("start");
-				$(".scene .event-timer-new").fadeIn("fast", function() {
-					$(".scene .event-timer-new").fadeOut(1500);
-				});
 			});
 		};
 		
