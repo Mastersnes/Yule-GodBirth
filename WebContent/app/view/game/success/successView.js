@@ -69,7 +69,6 @@ define(["jquery",
         		successDom.addClass(success);
         		successDom.addClass("completed");
         	}
-        	if (isNew) successDom.addClass("new");
         	
         	var successTitre = $("<div></div>");
         	successTitre.addClass("text");
@@ -83,6 +82,13 @@ define(["jquery",
         	var successIcon = $("<div></div>");
         	successIcon.addClass("icon");
         	successDom.append(successIcon);
+
+        	if (isNew) {
+	        	var successIcon = $("<div></div>");
+	        	successIcon.addClass("new");
+	        	successDom.append(successIcon);
+	        	successDom.addClass("new-success");
+        	}
         	
         	this.el.find("successList").append(successDom);
         };

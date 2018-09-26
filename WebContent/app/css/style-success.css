@@ -24,15 +24,11 @@ successList > success:not(.completed) .icon {
     cursor: not-allowed;
 }
 
-successList > success.new {
-    background-image: url("../img/game/success/vide.png") !important;
-    cursor: not-allowed;
-}
-
 successList > success .icon {
 	position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
+    z-index: 0;
     
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -54,4 +50,60 @@ successList > success .text {
     text-align: center;
     color: beige;
     background-color: black;
+}
+
+successList > success .new {
+    position: absolute;
+    top: -80%;
+    left: -80%;
+    width: 260%;
+    height: 260%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../img/game/success/new/1.png) !important;
+    
+    animation-name: new-success-anim;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+	-webkit-animation-name: new-success-anim;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: new-success-anim;
+    -moz-animation-duration: 3s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: new-success-anim;
+    -o-animation-duration: 3s;
+    -o-animation-fill-mode: both;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+@keyframes new-success-anim {
+    0% {background-image: url("../img/game/success/new/1.png");}
+    12% {background-image: url("../img/game/success/new/2.png");}
+    24% {background-image: url("../img/game/success/new/3.png");}
+    36% {background-image: url("../img/game/success/new/4.png");}
+    48% {background-image: url("../img/game/success/new/5.png");}
+    60% {background-image: url("../img/game/success/new/4.png");}
+    72% {background-image: url("../img/game/success/new/3.png");}
+    84% {background-image: url("../img/game/success/new/2.png");}
+    96% {background-image: url("../img/game/success/new/1.png");}
+}
+
+success.new-success > div.new {
+	z-index: 10 !important;
+}
+success.new-success > div.icon {
+	z-index: 11 !important;
+}
+success.new-success > div.text {
+	z-index: 12 !important;
 }
