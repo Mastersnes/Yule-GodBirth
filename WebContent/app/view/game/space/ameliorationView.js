@@ -140,8 +140,10 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
             $(this.el).find("item").hover(function() {
             	$(this).removeClass('out').addClass('in');
             }, function() {
-            	if (!that.descriptionView.currentItem)
-            	$(this).removeClass('in').addClass('out');
+            	if (!that.descriptionView.currentItem) {
+            		console.log("here3");
+            		$(this).removeClass('in').addClass('out');
+            	}
             });
         };
         

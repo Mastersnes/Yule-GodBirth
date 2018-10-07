@@ -8,9 +8,9 @@ define(["jquery",
             this.mediatheque = parent.mediatheque;
             
             var that = this;
-            $(window).resize(function() {
-                that.resize();
-            });
+            $(window).on('debouncedresize resize', function() {
+            	that.resize();
+  			});
             
             this.resize();
         };

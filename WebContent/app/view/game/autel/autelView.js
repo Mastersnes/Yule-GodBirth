@@ -176,6 +176,8 @@ define(["jquery",
         		if (!$(this).hasClass("used")) return;
         		
         		var emplacement = $(this).attr("id");
+        		that.pierresView.removePierre(that.selectedPierres.get(emplacement));
+        		
         		that.selectedPierres.put(emplacement, null);
         		that.refresh();
         	});

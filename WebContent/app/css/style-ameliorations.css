@@ -51,7 +51,7 @@
     transition: all 300ms;
 }
 
-.ameliorations item[level="0"] > span, .ameliorations item.selected > span {
+.ameliorations item[level="0"] > span {
 	filter: grayscale(1);
     -webkit-filter: grayscale(1);
     -moz-filter: grayscale(1);
@@ -61,6 +61,7 @@
 
 .ameliorations item.selected {
 	cursor: not-allowed;
+	border: 1px solid #5a5a16;
 }
 
 .ameliorations item.dispo {

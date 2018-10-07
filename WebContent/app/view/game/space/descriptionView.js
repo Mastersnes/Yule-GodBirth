@@ -197,7 +197,10 @@ function($, _, Utils) {
 		};
 		
 		this.close = function() {
-			if (this.currentItem) $(this.parent.el).find("item#"+this.currentItem).removeClass('in').addClass('out');
+			if (this.currentItem) { 
+				console.log("here4");
+				$(this.parent.el).find("item#"+this.currentItem).removeClass('in').addClass('out');
+			}
 			this.currentItem = null;
             this.el.hide();
 		};

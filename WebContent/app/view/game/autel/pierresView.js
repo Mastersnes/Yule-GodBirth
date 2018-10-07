@@ -115,6 +115,12 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
 			}
 		};
 		
+		this.removePierre = function(pierreId) {
+			if (pierreId) {
+				$(this.el).find("item#"+pierreId).removeClass('in').addClass('out');
+			}
+		};
+		
 		this.loop = function(game) {
 		    var listOnglet = PierresOnglets.list();
 		    for (var index in listOnglet) {
@@ -169,12 +175,14 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
             		that.detailView.show(pierreId, true);
             	}
             }, function() {
-            	if (!that.detailView.currentPierre) {
-            		$(this).removeClass('in').addClass('out');
-            	}
             	var pierreId = $(this).attr("id");
+            	var isSelected = that.parent.selectedPierres.contains(pierreId);
             	if (that.complete.indexOf(pierreId) > -1) {
-            		that.detailView.close();
+            		that.detailView.close(isSelected);
+            	}else {
+            		if (!that.detailView.currentPierre) {
+                		$(this).removeClass('in').addClass('out');
+                	}
             	}
             });
         };

@@ -149,8 +149,10 @@ define(["jquery",
             this.refresh();
         };
         
-        this.close = function() {
-        	if (this.currentPierre) $(this.parent.el).find("item#"+this.currentPierre.name).removeClass('in').addClass('out');
+        this.close = function(isSelected) {
+        	if (this.currentPierre && !isSelected) {
+        		$(this.parent.el).find("item#"+this.currentPierre.name).removeClass('in').addClass('out');
+        	}
             this.currentPierre = null;
             this.el.hide();
         };
