@@ -828,7 +828,7 @@ define(["jquery",
 		/**
 		 * Vieillesse - Mabon
 		 */
-		"cinematique-lammas" : {
+		"cinematique-mabon" : {
 			fr : "Mabon - La sagesse de l'eternel",
 			en : "-"
 		},
