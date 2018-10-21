@@ -149,7 +149,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 5000,
-			    	illumination : 2000
+			    	illumination : 3000
 			    }
 			},
 			"quete-imbolc" : {
@@ -167,7 +167,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 1500,
-			    	illumination : 200
+			    	illumination : 500
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -189,7 +189,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 5000,
-			    	illumination : 1000
+			    	illumination : 2000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -211,7 +211,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 10000,
-			    	illumination : 2000
+			    	illumination : 3000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -233,7 +233,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 20000,
-			    	illumination : 3000
+			    	illumination : 5000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -255,7 +255,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 30000,
-			    	illumination : 5000
+			    	illumination : 8000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -277,7 +277,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 40000,
-			    	illumination : 8000
+			    	illumination : 10000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -299,7 +299,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 50000,
-			    	illumination : 10000
+			    	illumination : 30000
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;

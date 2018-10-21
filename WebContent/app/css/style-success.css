@@ -52,7 +52,7 @@ successList > success .text {
     background-color: black;
 }
 
-successList > success .new {
+successList > success .new, artefactslist > artefact .new {
     position: absolute;
     top: -80%;
     left: -80%;
@@ -98,12 +98,12 @@ successList > success .new {
     96% {background-image: url("../img/game/success/new/1.png");}
 }
 
-success.new-success > div.new {
+success.new-success > div.new, artefact.new-artefact > div.new {
 	z-index: 10 !important;
 }
-success.new-success > div.icon {
+success.new-success > div.icon, artefact.new-artefact > div.icon {
 	z-index: 11 !important;
 }
-success.new-success > div.text {
+success.new-success > div.text, artefact.new-artefact > div.text {
 	z-index: 12 !important;
 }

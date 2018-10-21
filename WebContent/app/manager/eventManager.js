@@ -45,14 +45,13 @@ function($, _, Utils, page, Events) {
 			// Si on a une popup info ouverte
 			if (this.parent.alertOpen) return;
 			
-			//TODO : remettre apres !
 //			// Si le grand tout n'est pas encore au level 6
-//			var ameliorationView = parent.spaceView.ameliorationView;
-//			var grandToutLevel = 0;
-//			if (ameliorationView) {
-//				grandToutLevel = ameliorationView.Items.get("grandTout");
-//			}
-//			if (grandToutLevel < 6) return;
+			var ameliorationView = parent.spaceView.ameliorationView;
+			var grandToutLevel = 0;
+			if (ameliorationView) {
+				grandToutLevel = ameliorationView.Items.get("grandTout");
+			}
+			if (grandToutLevel < 6) return;
 			
 			// Si un evenement doit être affiché en priorité
 			if (this.toShowNow) {
@@ -131,7 +130,6 @@ function($, _, Utils, page, Events) {
 			}
 			
 			// Si il est rare, il faut tomber sur sa rareté
-			return true;
 			var rarity = randEvent.rarity;
 			if (rarity == 0) return true;
 			if (!rarity) rarity = 100;

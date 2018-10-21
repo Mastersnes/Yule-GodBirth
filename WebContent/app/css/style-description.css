@@ -24,6 +24,9 @@
 .popup-game .text {
 	font-size: 2.5vh;
 }
+.popup-game .text.button {
+	font-size: 2vh;
+}
 .popup-game .categorie {
 	width: 20% !important;
 	padding: 0% 2% 1% 2%;

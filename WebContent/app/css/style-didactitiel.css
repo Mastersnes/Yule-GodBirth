@@ -19,6 +19,67 @@
 	background-repeat: no-repeat;
     background-size: 100% 100%;
 	background-image: url("../img/game/interface/fleche.png");
+	
+	transition: transform 0.5s ease-in-out;
+	animation-name: fleche-anim;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+	-webkit-animation-name: fleche-anim;
+    -webkit-animation-duration: 0.7s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: fleche-anim;
+    -moz-animation-duration: 0.7s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: fleche-anim;
+    -o-animation-duration: 0.7s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+
+@keyframes fleche-anim {
+    0%, 100% {transform: translate(10%, 0);}
+    50% {transform: translate(-10%, 0);}
+}
+
+.fleche.flipH {
+	animation-name: fleche-anim-droite;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+	-webkit-animation-name: fleche-anim-droite;
+    -webkit-animation-duration: 0.7s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: fleche-anim-droite;
+    -moz-animation-duration: 0.7s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: fleche-anim-droite;
+    -o-animation-duration: 0.7s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+
+@keyframes fleche-anim-droite {
+    0%, 100% {transform: scaleX(-1) translate(10%, 0);}
+    50% {transform: scaleX(-1) translate(-10%, 0);}
 }
 
 .block-ameliorations {
@@ -30,14 +91,14 @@
 	width: 4%; height: 5%;
 }
 .fleche-barre-gauche {
-	left: 20%; top : 0%;
+	left: 19.5%; top : 0%;
 }
 .fleche-barre-droite {
-	left: 75%; top : 0%;
+	left: 75.5%; top : 0%;
 }
 .fleche-constellations {
-	left: 91%; top : 79%;
+	left: 90.5%; top : 79%;
 }
 .fleche-event {
-	left: 91%; top : 16%;
+	left: 89.5%; top : 16%;
 }

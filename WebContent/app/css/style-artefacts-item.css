@@ -5,9 +5,15 @@
 artefactsList > artefact.torque .icon {
 	background-image: url("../img/game/artefact/torque.png");
 }
-artefactsList > artefact.graal .icon {
+artefactsList > artefact.saint-graal .icon {
 	background-image: url("../img/game/artefact/graal.png");
 }
 artefactsList > artefact.corne-abondance .icon {
 	background-image: url("../img/game/artefact/corne.png");
+}
+artefactsList > artefact.idole-feu .icon {
+	background-image: url("../img/game/artefact/feu.png");
+}
+artefactsList > artefact.idole-mort .icon {
+	background-image: url("../img/game/artefact/mort.png");
 }

@@ -5,19 +5,19 @@ define([ "jquery" ], function($) {
 			name : "torque",
 			description : "torque-desc",
 			gains : {
-				croyance : 10,
-				illumination : 10,
+				croyance : 200,
+				illumination : 50,
 				bien : 0,
-				mal : 10
+				mal : 50
 			},
 		},
 		"corne-abondance" : {
 			name : "corne-abondance",
 			description : "corne-abondance-desc",
 			gains : {
-				croyance : 10,
-				illumination : 10,
-				bien : 10,
+				croyance : 150,
+				illumination : 100,
+				bien : 70,
 				mal : 0
 			},
 		},
@@ -25,8 +25,8 @@ define([ "jquery" ], function($) {
 			name : "3eme-oeil",
 			description : "3eme-oeil-desc",
 			gains : {
-				croyance : 0,
-				illumination : 20,
+				croyance : 200,
+				illumination : 200,
 				bien : 0,
 				mal : 0
 			},
@@ -35,30 +35,30 @@ define([ "jquery" ], function($) {
 			name : "idole-feu",
 			description : "idole-feu-desc",
 			gains : {
-				croyance : 15,
-				illumination : 10,
+				croyance : 200,
+				illumination : 100,
 				bien : 0,
-				mal : 10
+				mal : 100
 			},
 		},
 		"idole-mort" : {
 			name : "idole-mort",
 			description : "idole-mort-desc",
 			gains : {
-				croyance : 20,
-				illumination : 10,
-				bien : 10,
-				mal : 10
+				croyance : 300,
+				illumination : 200,
+				bien : 70,
+				mal : 150
 			},
 		},
 		"saint-graal" : {
 			name : "saint-graal",
 			description : "saint-graal-desc",
 			gains : {
-				croyance : 20,
-				illumination : 30,
-				bien : 10,
-				mal : 30
+				croyance : 100,
+				illumination : 300,
+				bien : 50,
+				mal : 100
 			},
 		}
 	};

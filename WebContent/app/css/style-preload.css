@@ -868,8 +868,8 @@ preload.timer-preload[step="5"] {background-image: url("../img/game/interface/ev
 /**
 * Success New
 **/
-preload.success-new[step="1"] {background-image: url("../img/game/sucess/new/1.png");}
-preload.success-new[step="2"] {background-image: url("../img/game/sucess/new/2.png");}
-preload.success-new[step="3"] {background-image: url("../img/game/sucess/new/3.png");}
-preload.success-new[step="4"] {background-image: url("../img/game/sucess/new/4.png");}
-preload.success-new[step="5"] {background-image: url("../img/game/sucess/new/5.png");}
+preload.success-new[step="1"] {background-image: url("../img/game/success/new/1.png");}
+preload.success-new[step="2"] {background-image: url("../img/game/success/new/2.png");}
+preload.success-new[step="3"] {background-image: url("../img/game/success/new/3.png");}
+preload.success-new[step="4"] {background-image: url("../img/game/success/new/4.png");}
+preload.success-new[step="5"] {background-image: url("../img/game/success/new/5.png");}

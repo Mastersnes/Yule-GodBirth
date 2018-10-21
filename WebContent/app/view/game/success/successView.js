@@ -84,9 +84,9 @@ define(["jquery",
         	successDom.append(successIcon);
 
         	if (isNew) {
-	        	var successIcon = $("<div></div>");
-	        	successIcon.addClass("new");
-	        	successDom.append(successIcon);
+	        	var successNew = $("<div></div>");
+	        	successNew.addClass("new");
+	        	successDom.append(successNew);
 	        	successDom.addClass("new-success");
         	}
         	

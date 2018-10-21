@@ -18,6 +18,7 @@ define(["jquery",
             this.pointManager = this.parent.pointManager;
             
             this.inventaire = new HashMap(this.saveManager.load("inventaire"));
+            this.newList = [];
         };
         
         this.render = function() {
@@ -54,10 +55,11 @@ define(["jquery",
         	var artefactsList = Artefacts.list();
         	for (var index in artefactsList) {
         		var artefact = artefactsList[index];
-        		this.drawArtefact(artefact, this.checkHad(artefact.name), avantages);
+        		this.drawArtefact(artefact, this.checkHad(artefact.name), avantages, this.checkNew(success));
         	}
         	
         	this.pointManager.setAvantages(avantages, "artefacts");
+        	this.newList.length = 0;
         };
         
         /**
@@ -66,11 +68,18 @@ define(["jquery",
         this.checkHad = function(artefactName) {
         	return this.inventaire.contains(artefactName);
         };
+
+        /**
+         * Verifie si l'artefact est nouveau
+         */
+        this.checkNew = function(artefactName) {
+        	return this.newList.indexOf(success) > -1;
+        };
         
         /**
          * Affiche un artefact
          */
-        this.drawArtefact = function(artefact, possess, avantages) {
+        this.drawArtefact = function(artefact, possess, avantages, isNew) {
         	if (!possess) return;
         	var artefactDom = $("<artefact></artefact>");
     		artefactDom.attr("id", artefact.name);
@@ -84,6 +93,13 @@ define(["jquery",
         	var artefactIcon = $("<div></div>");
         	artefactIcon.addClass("icon");
         	artefactDom.append(artefactIcon);
+        	
+        	if (isNew) {
+	        	var artefactNew = $("<div></div>");
+	        	artefactNew.addClass("new");
+	        	artefactDom.append(artefactNew);
+	        	artefactDom.addClass("new-artefact");
+        	}
         	
         	this.el.find("artefactsList").append(artefactDom);
         	
@@ -99,6 +115,8 @@ define(["jquery",
         this.add = function(artefact) {
         	if (this.inventaire.contains(artefact)) return;
         	this.inventaire.push(artefact);
+        	this.newList.push(success);
+        	
         	this.saveManager.save("inventaire", this.inventaire.data);
         	if (!this.parent.alertOpen) {
         		var gainText = this.Textes.get("gainArtefact");

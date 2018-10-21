@@ -27,16 +27,16 @@ define(["jquery"], function($){
                 name : "lunaire",
                 pierres : ["malachite", "amethyste", "lapis-lazuli", "labradorite", "azurite", "pierre-de-lune"]
             }
-//			,"secrete" : {
-//                conditions : [
-//                    {
-//                        name : "grandTout",
-//                        level : 30
-//                    }
-//                ],
-//                name : "secrete",
-//                pierres : ["ringwoodite", "hypatia"]
-//            }
+			,"secrete" : {
+                conditions : [
+                    {
+                        name : "grandTout",
+                        level : 30
+                    }
+                ],
+                name : "secrete",
+                pierres : ["ringwoodite", "hypatia"]
+            }
 	};
 	
 	return {
