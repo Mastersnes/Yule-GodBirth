@@ -100,9 +100,9 @@ mask {
     cursor: pointer;
 }
 .popupText .next {
-	width: 15%;
+	width: auto;
     margin-left: 78%;
-    font-size: 1.3em;
+    font-size: 3vh;
 }
 .popupText .next.hover {
 	color : red;

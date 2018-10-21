@@ -8,3 +8,6 @@ artefactsList > artefact.torque .icon {
 artefactsList > artefact.graal .icon {
 	background-image: url("../img/game/artefact/graal.png");
 }
+artefactsList > artefact.corne-abondance .icon {
+	background-image: url("../img/game/artefact/corne.png");
+}

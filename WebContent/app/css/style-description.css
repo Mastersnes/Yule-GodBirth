@@ -18,11 +18,11 @@
 
 .popup-game .titre {
 	font-weight: bold;
-	font-size: 2.5vh;
+	font-size: 3vh;
 	color: #9379e0;
 }
 .popup-game .text {
-	font-size: 2vh;
+	font-size: 2.5vh;
 }
 .popup-game .categorie {
 	width: 20% !important;

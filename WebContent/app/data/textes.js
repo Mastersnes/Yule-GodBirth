@@ -144,8 +144,8 @@ define(["jquery",
 			en : "Refuse"
 		},
 		"suivant" : {
-			fr : "Suivant >",
-			en : "Next >"
+			fr : "Suivant",
+			en : "Next"
 		},
 		
 		/**
