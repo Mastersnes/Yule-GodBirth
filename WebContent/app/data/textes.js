@@ -1000,11 +1000,11 @@ define(["jquery",
 			fr : "Corne d'abondance et de joie. Elle apportera le bonheur à son posseseur et son entourage !",
 			en : "Horn of plenty and joy. It will bring happiness to it's owner and his entourage !"
 		},
-		"3eme-oeil" : {
+		"troisieme-oeil" : {
 			fr : "3eme Oeil",
 			en : "-"
 		},
-		"3eme-oeil-desc" : {
+		"troisieme-oeil-desc" : {
 			fr : "Qui possede le 3eme oeil permet de comprendre l'equilibre complexe de l'univers.",
 			en : "-"
 		},

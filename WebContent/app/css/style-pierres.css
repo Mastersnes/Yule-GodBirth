@@ -1013,3 +1013,115 @@
     75% {background-image: url("../img/game/autel/pierres/pierre-de-lune/1.png");}
     100% {background-image: url("../img/game/autel/pierres/pierre-de-lune/pierre-de-lune.png");}
 }
+
+/**
+* Ringwoodite
+**/
+.ameliorations item.ringwoodite span {
+	background-image: url("../img/game/autel/pierres/ringwoodite/ringwoodite.png");
+}
+.ameliorations item.ringwoodite.out span {
+	animation-name: ringwoodite-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+
+	-webkit-animation-name: ringwoodite-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: ringwoodite-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: ringwoodite-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.ringwoodite.in span {
+	animation-name: ringwoodite-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: ringwoodite-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: ringwoodite-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: ringwoodite-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes ringwoodite-in {
+    0% {background-image: url("../img/game/autel/pierres/ringwoodite/ringwoodite.png");}
+    25% {background-image: url("../img/game/autel/pierres/ringwoodite/1.png");}
+    50% {background-image: url("../img/game/autel/pierres/ringwoodite/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/ringwoodite/3.png");}
+    100% {background-image: url("../img/game/autel/pierres/ringwoodite/4.png");}
+}
+@keyframes ringwoodite-out {
+    0% {background-image: url("../img/game/autel/pierres/ringwoodite/4.png");}
+    25% {background-image: url("../img/game/autel/pierres/ringwoodite/3.png");}
+    50% {background-image: url("../img/game/autel/pierres/ringwoodite/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/ringwoodite/1.png");}
+    100% {background-image: url("../img/game/autel/pierres/ringwoodite/ringwoodite.png");}
+}
+
+/**
+* Hypatia
+**/
+.ameliorations item.hypatia span {
+	background-image: url("../img/game/autel/pierres/hypatia/hypatia.png");
+}
+.ameliorations item.hypatia.out span {
+	animation-name: hypatia-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+
+	-webkit-animation-name: hypatia-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: hypatia-out;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: hypatia-out;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+.ameliorations item.hypatia.in span {
+	animation-name: hypatia-in;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    
+    -webkit-animation-name: hypatia-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+
+	-moz-animation-name: hypatia-in;
+    -moz-animation-duration: 0.25s;
+    -moz-animation-fill-mode: both;
+
+	-o-animation-name: hypatia-in;
+    -o-animation-duration: 0.25s;
+    -o-animation-fill-mode: both;
+}
+
+@keyframes hypatia-in {
+    0% {background-image: url("../img/game/autel/pierres/hypatia/hypatia.png");}
+    25% {background-image: url("../img/game/autel/pierres/hypatia/1.png");}
+    50% {background-image: url("../img/game/autel/pierres/hypatia/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/hypatia/3.png");}
+    100% {background-image: url("../img/game/autel/pierres/hypatia/4.png");}
+}
+@keyframes hypatia-out {
+    0% {background-image: url("../img/game/autel/pierres/hypatia/4.png");}
+    25% {background-image: url("../img/game/autel/pierres/hypatia/3.png");}
+    50% {background-image: url("../img/game/autel/pierres/hypatia/2.png");}
+    75% {background-image: url("../img/game/autel/pierres/hypatia/1.png");}
+    100% {background-image: url("../img/game/autel/pierres/hypatia/hypatia.png");}
+}

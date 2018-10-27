@@ -21,9 +21,9 @@ define([ "jquery" ], function($) {
 				mal : 0
 			},
 		},
-		"3eme-oeil" : {
-			name : "3eme-oeil",
-			description : "3eme-oeil-desc",
+		"troisieme-oeil" : {
+			name : "troisieme-oeil",
+			description : "troisieme-oeil-desc",
 			gains : {
 				croyance : 200,
 				illumination : 200,

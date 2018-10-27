@@ -141,7 +141,6 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
             	$(this).removeClass('out').addClass('in');
             }, function() {
             	if (!that.descriptionView.currentItem) {
-            		console.log("here3");
             		$(this).removeClass('in').addClass('out');
             	}
             });

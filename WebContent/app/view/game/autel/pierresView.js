@@ -241,10 +241,10 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
          */
         this.calculPrix = function() {
             var nbPierre = this.complete.length + 1;
-            var croyance = Math.round(Utils.pow(100, 2.3, nbPierre));
+            var croyance = Math.round(Utils.pow(150, 2.5, nbPierre));
             return {
                 croyance : croyance,
-                illumination : nbPierre <= 1 ? 0 : Math.round(croyance / 10)
+                illumination : nbPierre <= 1 ? 0 : Math.round(croyance / 8)
             };
         };
 

@@ -55,7 +55,7 @@ define(["jquery",
         	var artefactsList = Artefacts.list();
         	for (var index in artefactsList) {
         		var artefact = artefactsList[index];
-        		this.drawArtefact(artefact, this.checkHad(artefact.name), avantages, this.checkNew(success));
+        		this.drawArtefact(artefact, this.checkHad(artefact.name), avantages, this.checkNew(artefact.name));
         	}
         	
         	this.pointManager.setAvantages(avantages, "artefacts");
@@ -73,7 +73,7 @@ define(["jquery",
          * Verifie si l'artefact est nouveau
          */
         this.checkNew = function(artefactName) {
-        	return this.newList.indexOf(success) > -1;
+        	return this.newList.indexOf(artefactName) > -1;
         };
         
         /**
@@ -115,9 +115,10 @@ define(["jquery",
         this.add = function(artefact) {
         	if (this.inventaire.contains(artefact)) return;
         	this.inventaire.push(artefact);
-        	this.newList.push(success);
-        	
+        	this.newList.push(artefact);
         	this.saveManager.save("inventaire", this.inventaire.data);
+        	console.log("add : ", this.inventaire.data);
+        	console.log("save : ", this.saveManager.load("inventaire"));
         	if (!this.parent.alertOpen) {
         		var gainText = this.Textes.get("gainArtefact");
         		gainText = gainText.replace("{?}", this.Textes.get(artefact));

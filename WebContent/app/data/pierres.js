@@ -9,8 +9,8 @@ define([ "jquery" ], function($) {
 			description : "diamant-desc",
 			conditions : [],
 			gains : {
-				croyance : 100,
-				illumination : 100,
+				croyance : 50,
+				illumination : 50,
 				bien : 0,
 				mal : 0
 			},
@@ -30,14 +30,14 @@ define([ "jquery" ], function($) {
 			gains : {
 				croyance : 100,
 				illumination : 0,
-				bien : 50,
-				mal : 80
+				bien : 0,
+				mal : 50
 			},
             bonusCentre : {
-                croyance : 50,
+                croyance : 100,
                 illumination : 0,
                 bien : 0,
-                mal : 110
+                mal : 100
             },
             good : [],
             bad : []
@@ -47,14 +47,14 @@ define([ "jquery" ], function($) {
 			description : "emeraude-desc",
 			conditions : [],
 			gains : {
-				croyance : 150,
-				illumination : 0,
-				bien : 40,
-				mal : 40
+				croyance : 50,
+				illumination : 50,
+				bien : 100,
+				mal : 100
 			},
             bonusCentre : {
-                croyance : 200,
-                illumination : 150,
+                croyance : 50,
+                illumination : 50,
                 bien : 0,
                 mal : 0
             },
@@ -66,15 +66,15 @@ define([ "jquery" ], function($) {
 			description : "saphir-desc",
 			conditions : [],
 			gains : {
-				croyance : 250,
-				illumination : 0,
+				croyance : 0,
+				illumination : 100,
 				bien : 50,
-				mal : -50
+				mal : 0
 			},
             bonusCentre : {
                 croyance : 0,
                 illumination : 100,
-                bien : 110,
+                bien : 100,
                 mal : 0
             },
             good : [],
@@ -85,16 +85,16 @@ define([ "jquery" ], function($) {
 			description : "larme-apache-desc",
 			conditions : [],
 			gains : {
-				croyance : 150,
-				illumination : 150,
-				bien : 150,
-				mal : -100
+				croyance : 50,
+				illumination : 50,
+				bien : -50,
+				mal : -50
 			},
             bonusCentre : {
-                croyance : 160,
-                illumination : 0,
-                bien : 60,
-                mal : 60
+                croyance : 0,
+                illumination : 100,
+                bien : 50,
+                mal : 50
             },
             good : [],
             bad : []
@@ -104,16 +104,16 @@ define([ "jquery" ], function($) {
 			description : "cristal-de-roche-desc",
 			conditions : [],
 			gains : {
-				croyance : 100,
+				croyance : 150,
 				illumination : 0,
-				bien : 0,
-				mal : 0
+				bien : 100,
+				mal : 100
 			},
 			bonusCentre : {
-			    croyance : 110,
-                illumination : 110,
-                bien : 110,
-                mal : 110
+			    croyance : 100,
+                illumination : 100,
+                bien : 100,
+                mal : 100
 			},
             good : [],
             bad : []
@@ -128,14 +128,14 @@ define([ "jquery" ], function($) {
 			gains : {
 				croyance : 200,
 				illumination : 0,
-				bien : 0,
+				bien : -25,
 				mal : 100
 			},
             bonusCentre : {
                 croyance : 100,
                 illumination : 0,
-                bien : 0,
-                mal : 120
+                bien : -50,
+                mal : 100
             },
             good : [],
             bad : []
@@ -145,16 +145,16 @@ define([ "jquery" ], function($) {
 			description : "onyx-desc",
 			conditions : [],
 			gains : {
-				croyance : -100,
+				croyance : 100,
 				illumination : 0,
-				bien : -100,
-				mal : 150
+				bien : -50,
+				mal : 50
 			},
             bonusCentre : {
                 croyance : 50,
-                illumination : 100,
-                bien : -100,
-                mal : 100
+                illumination : -50,
+                bien : -50,
+                mal : 50
             },
             good : [],
             bad : []
@@ -164,16 +164,16 @@ define([ "jquery" ], function($) {
 			description : "ambre-desc",
 			conditions : [],
 			gains : {
-				croyance : 100,
-				illumination : 0,
-				bien : 0,
-				mal : 80
+				croyance : 200,
+				illumination : 50,
+				bien : -25,
+				mal : 150
 			},
             bonusCentre : {
-                croyance : 0,
-                illumination : 0,
-                bien : 0,
-                mal : 0
+                croyance : 50,
+                illumination : 50,
+                bien : 50,
+                mal : 50
             }
 		},
 		"obsidienne" : {
@@ -182,15 +182,15 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : 100,
-				illumination : 100,
-				bien : -120,
-				mal : 120
+				illumination : 50,
+				bien : -100,
+				mal : 100
 			},
             bonusCentre : {
-                croyance : 110,
-                illumination : -100,
-                bien : -60,
-                mal : 60
+                croyance : -50,
+                illumination : -50,
+                bien : -100,
+                mal : 100
             },
             good : [],
             bad : []
@@ -200,16 +200,16 @@ define([ "jquery" ], function($) {
 			description : "hematite-desc",
 			conditions : [],
 			gains : {
-				croyance : 50,
+				croyance : 300,
 				illumination : -50,
-				bien : -20,
-				mal : 20
+				bien : -100,
+				mal : 100
 			},
             bonusCentre : {
                 croyance : 100,
-                illumination : 50,
-                bien : 0,
-                mal : 110
+                illumination : -50,
+                bien : -50,
+                mal : 200
             },
             good : [],
             bad : []
@@ -219,16 +219,16 @@ define([ "jquery" ], function($) {
 			description : "pierre-de-soleil-desc",
 			conditions : [],
 			gains : {
-				croyance : 50,
-				illumination : 50,
-				bien : -60,
-				mal : 60
+				croyance : 300,
+				illumination : 0,
+				bien : -200,
+				mal : 200
 			},
             bonusCentre : {
-                croyance : 110,
+                croyance : 200,
                 illumination : 0,
-                bien : -110,
-                mal : 110
+                bien : 0,
+                mal : 200
             },
             good : [],
             bad : []
@@ -241,16 +241,16 @@ define([ "jquery" ], function($) {
 			description : "malachite-desc",
 			conditions : [],
 			gains : {
-				croyance : 100,
-				illumination : 50,
+				croyance : -50,
+				illumination : 100,
 				bien : 50,
-				mal : 0
+				mal : 50
 			},
             bonusCentre : {
-                croyance : 0,
-                illumination : 50,
-                bien : 120,
-                mal : 0
+                croyance : -50,
+                illumination : -50,
+                bien : 100,
+                mal : -100
             },
             good : [],
             bad : []
@@ -260,16 +260,16 @@ define([ "jquery" ], function($) {
 			description : "amethyste-desc",
 			conditions : [],
 			gains : {
-				croyance : 50,
+				croyance : 0,
 				illumination : 100,
-				bien : 50,
+				bien : 100,
 				mal : -50
 			},
             bonusCentre : {
                 croyance : 50,
                 illumination : 50,
-                bien : 60,
-                mal : -90
+                bien : 50,
+                mal : 50
             },
             good : [],
             bad : []
@@ -279,16 +279,16 @@ define([ "jquery" ], function($) {
 			description : "lapis-lazuli-desc",
 			conditions : [],
 			gains : {
-				croyance : 150,
-				illumination : 0,
-				bien : 20,
-				mal : 0
+				croyance : -50,
+				illumination : 150,
+				bien : 150,
+				mal : -200
 			},
             bonusCentre : {
                 croyance : 0,
-                illumination : 0,
-                bien : 0,
-                mal : 0
+                illumination : 100,
+                bien : 100,
+                mal : -50
             },
             good : [],
             bad : []
@@ -299,15 +299,15 @@ define([ "jquery" ], function($) {
 			conditions : [],
 			gains : {
 				croyance : 50,
-				illumination : 40,
+				illumination : 100,
 				bien : 50,
-				mal : -50
+				mal : 50
 			},
             bonusCentre : {
-                croyance : -100,
-                illumination : 100,
-                bien : 100,
-                mal : -100
+                croyance : -50,
+                illumination : 50,
+                bien : 50,
+                mal : -50
             },
             good : [],
             bad : []
@@ -317,16 +317,16 @@ define([ "jquery" ], function($) {
 			description : "azurite-desc",
 			conditions : [],
 			gains : {
-				croyance : -50,
-				illumination : 50,
-				bien : 30,
-				mal : 50
+				croyance : -100,
+				illumination : 200,
+				bien : 150,
+				mal : -200
 			},
             bonusCentre : {
-                croyance : 60,
-                illumination : 60,
-                bien : 0,
-                mal : 110
+                croyance : -50,
+                illumination : 100,
+                bien : 200,
+                mal : -50
             },
             good : [],
             bad : []
@@ -336,16 +336,16 @@ define([ "jquery" ], function($) {
 			description : "pierre-de-lune-desc",
 			conditions : [],
 			gains : {
-				croyance : 0,
-				illumination : 200,
-				bien : 100,
-				mal : -100
+				croyance : -50,
+				illumination : 300,
+				bien : 200,
+				mal : -200
 			},
             bonusCentre : {
                 croyance : 0,
-                illumination : 110,
-                bien : -110,
-                mal : 110
+                illumination : 200,
+                bien : 200,
+                mal : 0
             },
             good : [],
             bad : []
@@ -365,9 +365,9 @@ define([ "jquery" ], function($) {
             },
             bonusCentre : {
                 croyance : -100,
-                illumination : -110,
-                bien : -110,
-                mal : -110
+                illumination : -100,
+                bien : -100,
+                mal : -100
             },
             good : [],
             bad : []
@@ -377,15 +377,15 @@ define([ "jquery" ], function($) {
             description : "hypatia-desc",
             conditions : [],
             gains : {
-                croyance : 0,
+                croyance : -100,
                 illumination : 500,
                 bien : 200,
                 mal : 200
             },
             bonusCentre : {
-                croyance : -200,
+                croyance : -100,
                 illumination : -100,
-                bien : 100,
+                bien : -100,
                 mal : -100
             },
             good : [],

@@ -17,3 +17,6 @@ artefactsList > artefact.idole-feu .icon {
 artefactsList > artefact.idole-mort .icon {
 	background-image: url("../img/game/artefact/mort.png");
 }
+artefactsList > artefact.troisieme-oeil .icon {
+	background-image: url("../img/game/artefact/3eoeil.png");
+}

@@ -25,7 +25,7 @@ function($, _, Utils) {
 		    if (this.points.illumination > 0) $(this.el).find("illumination").show();
 		    else $(this.el).find("illumination").hide();
 
-		    if (this.parent.artefactsView.checkHad("3eme-oeil")) {
+		    if (this.parent.artefactsView.checkHad("troisieme-oeil")) {
 			    $(this.el).find("bien .text").html(Utils.format(this.points.bien, notationCourte, this.Textes));
 			    $(this.el).find("mal .text").html(Utils.format(this.points.mal, notationCourte, this.Textes));
 		    }

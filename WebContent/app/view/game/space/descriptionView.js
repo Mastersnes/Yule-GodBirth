@@ -198,7 +198,6 @@ function($, _, Utils) {
 		
 		this.close = function() {
 			if (this.currentItem) { 
-				console.log("here4");
 				$(this.parent.el).find("item#"+this.currentItem).removeClass('in').addClass('out');
 			}
 			this.currentItem = null;

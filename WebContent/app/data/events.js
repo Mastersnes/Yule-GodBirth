@@ -18,6 +18,9 @@ define(["jquery",
 			                 game.eventManager.addEvents(ImbolcEvents.start("accueil"));
 			                 game.alertPopup("first-event-ok", function() {
 			                	 game.artefactsView.add("corne-abondance");
+			                	 game.artefactsView.add("troisieme-oeil");
+			                	 game.artefactsView.add("idole-feu");
+			                	 game.artefactsView.add("idole-mort");
 			                 });
 			             }
 			         },

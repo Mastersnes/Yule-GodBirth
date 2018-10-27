@@ -795,6 +795,40 @@ preload.pierre-de-lune[step="5"] {
 	background-image: url("../img/game/autel/pierres/pierre-de-lune/4.png");
 }
 
+/** Ringwoodite **/
+preload.ringwoodite[step="1"] {
+	background-image: url("../img/game/autel/pierres/ringwoodite/ringwoodite.png");
+}
+preload.ringwoodite[step="2"] {
+	background-image: url("../img/game/autel/pierres/ringwoodite/1.png");
+}
+preload.ringwoodite[step="3"] {
+	background-image: url("../img/game/autel/pierres/ringwoodite/2.png");
+}
+preload.ringwoodite[step="4"] {
+	background-image: url("../img/game/autel/pierres/ringwoodite/3.png");
+}
+preload.ringwoodite[step="5"] {
+	background-image: url("../img/game/autel/pierres/ringwoodite/4.png");
+}
+
+/** Hypatia **/
+preload.hypatia[step="1"] {
+	background-image: url("../img/game/autel/pierres/hypatia/hypatia.png");
+}
+preload.hypatia[step="2"] {
+	background-image: url("../img/game/autel/pierres/hypatia/1.png");
+}
+preload.hypatia[step="3"] {
+	background-image: url("../img/game/autel/pierres/hypatia/2.png");
+}
+preload.hypatia[step="4"] {
+	background-image: url("../img/game/autel/pierres/hypatia/3.png");
+}
+preload.hypatia[step="5"] {
+	background-image: url("../img/game/autel/pierres/hypatia/4.png");
+}
+
 /**
 * ---------------------------------
 **/

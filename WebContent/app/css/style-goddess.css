@@ -172,7 +172,9 @@ goddess.litha {
 }
 
 goddess.lammas {
-	background-image: url("../img/game/goddess/lammas/1.png");
+	width: 50%; height: 65%;
+    left: 25%; top: 10%;
+	background-image: url("../img/game/goddess/lammas/ble.png");
     animation-name: lammas-anim;
     animation-duration: 100s;
     animation-fill-mode: forwards;
