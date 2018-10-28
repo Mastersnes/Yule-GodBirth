@@ -19,6 +19,7 @@ define(["jquery",
             this.ameliorationView = this.parent.spaceView.ameliorationView;
             
             this.complete = this.saveManager.load("quetesComplete");
+            this.newList = [];
         };
         
         this.render = function() {
@@ -138,12 +139,23 @@ define(["jquery",
         		this.refreshQuete(quete);
         	}
         	
+        	if (this.newList.length > 0) {
+        		this.newList.length = 0;
+        		this.parent.alertPopup("newQuete", null, true);
+        	}
+        	
         	this.detailView.loop();
         };
         
         this.refreshQuete = function(quete) {
         	var queteDom = $("quete#"+quete.name);
-        	if (this.checkComplete(quete)) queteDom.find("collecte").addClass("complete");
+        	if (this.checkComplete(quete)) {
+        		if (quete.name != "quete-start" && !queteDom.find("collecte").hasClass("complete")) {
+        			this.newList.push(quete.name);
+        		}
+        		
+        		queteDom.find("collecte").addClass("complete");
+        	}
         	else queteDom.find("collecte").removeClass("complete");
         };
         

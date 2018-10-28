@@ -252,6 +252,8 @@ goddess.mabon {
 }
 
 goddess.samhain {
+	width: 80%; height: 90%;
+    left: 10%; top: 0%;
 	background-image: url("../img/game/goddess/samhain/1.png");
     animation-name: samhain-anim;
     animation-duration: 100s;

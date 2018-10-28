@@ -384,6 +384,10 @@ define(["jquery",
         /**
          * Quetes
          */
+        "newQuete" : {
+        	fr : "Félicitation, vous avez accomplis un nouvel objectif !<br/> Voyagez dans la constellation pour consulter les details.",
+        	en : "-"
+        },
         "quete-start" : {
         	fr : "Au commencement...",
         	en : "At Beginning..."

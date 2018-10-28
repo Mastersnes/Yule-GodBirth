@@ -10,7 +10,7 @@ define(["jquery"], function($){
 			"zombie-start-event" : {
 				name : "zombie-start-event",
 			    text : "zombie-start-event",
-			    rarity : 30,
+			    rarity : 40,
 			    unique : true,
 			    actions : [
 			         {
@@ -32,7 +32,7 @@ define(["jquery"], function($){
 			"zombie-fou-event" : {
 				name : "zombie-fou-event",
 				text : "zombie-fou-event",
-				rarity : 20,
+				rarity : 30,
 				unique : true,
 				epidemie : 1,
 				actions : [
@@ -67,7 +67,7 @@ define(["jquery"], function($){
 			"zombie-taverne-event" : {
 				name : "zombie-taverne-event",
 				text : "zombie-taverne-event",
-				rarity : 30,
+				rarity : 40,
 				unique : true,
 				epidemie : 1,
 				actions : [
@@ -128,7 +128,7 @@ define(["jquery"], function($){
 			"zombie-enfant-event" : {
 				name : "zombie-enfant-event",
 				text : "zombie-enfant-event",
-				rarity : 20,
+				rarity : 30,
 				unique : true,
 				epidemie : 1,
 				actions : [
@@ -163,7 +163,7 @@ define(["jquery"], function($){
 			"zombie-blessure-event" : {
 				name : "zombie-blessure-event",
 				text : "zombie-blessure-event",
-				rarity : 30,
+				rarity : 40,
 				unique : false,
 				epidemie : 1,
 				actions : [
@@ -195,7 +195,7 @@ define(["jquery"], function($){
 			"zombie-step-event-2" : {
 				name : "zombie-step-event-2",
 			    text : "zombie-step-event-2",
-			    rarity : 10,
+			    rarity : 30,
 			    unique : true,
 			    actions : [
 			         {
@@ -216,7 +216,7 @@ define(["jquery"], function($){
 			"zombie-groupe-event" : {
 				name : "zombie-groupe-event",
 				text : "zombie-groupe-event",
-				rarity : 30,
+				rarity : 35,
 				unique : true,
 				epidemie : 2,
 				actions : [
@@ -251,7 +251,7 @@ define(["jquery"], function($){
 			"zombie-cata-event" : {
 				name : "zombie-cata-event",
 				text : "zombie-cata-event",
-				rarity : 30,
+				rarity : 40,
 				unique : true,
 				epidemie : 2,
 				actions : [
@@ -286,7 +286,7 @@ define(["jquery"], function($){
 			"zombie-guerre-event" : {
 				name : "zombie-guerre-event",
 				text : "zombie-guerre-event",
-				rarity : 30,
+				rarity : 40,
 				unique : true,
 				epidemie : 2,
 				actions : [
@@ -332,7 +332,7 @@ define(["jquery"], function($){
 			"zombie-step-event-3" : {
 				name : "zombie-step-event-3",
 				text : "zombie-step-event-3",
-				rarity : 20,
+				rarity : 30,
 				unique : true,
 				actions : [
 				           {

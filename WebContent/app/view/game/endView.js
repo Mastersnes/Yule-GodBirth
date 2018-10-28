@@ -15,7 +15,7 @@ function($, _, Utils, page, SceneManager) {
             this.mediatheque = parent.mediatheque;
 		};
 
-		this.render = function() {
+		this.render = function(gagne) {
 			_.templateSettings.variable = "data";
 			var template = _.template(page);
 			var templateData = {

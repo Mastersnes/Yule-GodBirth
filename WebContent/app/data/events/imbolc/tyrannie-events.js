@@ -7,7 +7,7 @@ define(["jquery"], function($){
 			"tyrannie-start-event" : {
 				name : "tyrannie-start-event",
 			    text : "tyrannie-start-event",
-			    rarity : 40,
+			    rarity : 50,
 			    unique : true,
 			    actions : [
 			         {
@@ -29,7 +29,7 @@ define(["jquery"], function($){
 			"tyrannie-soeur-event" : {
 				name : "tyrannie-soeur-event",
 				text : "tyrannie-soeur-event",
-				rarity : 20,
+				rarity : 40,
 				unique : true,
 				starter : true,
 				actions : [
@@ -64,7 +64,7 @@ define(["jquery"], function($){
 			"tyrannie-fete-event" : {
 				name : "tyrannie-fete-event",
 				text : "tyrannie-fete-event",
-				rarity : 30,
+				rarity : 40,
 				unique : true,
 				starter : true,
 				actions : [
@@ -128,7 +128,7 @@ define(["jquery"], function($){
 			"tyrannie-esclave-event" : {
 				name : "tyrannie-esclave-event",
 				text : "tyrannie-esclave-event",
-				rarity : 40,
+				rarity : 50,
 				unique : true,
 				starter : true,
 				actions : [

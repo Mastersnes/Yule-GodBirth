@@ -11,7 +11,7 @@ define(["jquery","app/utils/utils",
 			"accueil-pluie-event" : {
 				name : "accueil-pluie-event",
 			    text : "accueil-pluie-event",
-			    rarity : 10,
+			    rarity : 15,
 			    unique : true,
 			    starter : true,
 			    actions : [
@@ -47,7 +47,7 @@ define(["jquery","app/utils/utils",
 			"accueil-sacrifice-event" : {
 				name : "accueil-sacrifice-event",
 			    text : "accueil-sacrifice-event",
-			    rarity : 15,
+			    rarity : 20,
 			    unique : true,
 			    starter : true,
 			    actions : [
@@ -97,7 +97,7 @@ define(["jquery","app/utils/utils",
 			"accueil-blessure-event" : {
 				name : "accueil-blessure-event",
 			    text : "accueil-blessure-event",
-			    rarity : 50,
+			    rarity : 150,
 			    unique : false,
 			    starter : true,
 			    actions : [
@@ -151,7 +151,7 @@ define(["jquery","app/utils/utils",
 			"accueil-riche-event" : {
 				name : "accueil-riche-event",
 			    text : "accueil-riche-event",
-			    rarity : 25,
+			    rarity : 40,
 			    unique : true,
 			    starter : true,
 			    actions : [
@@ -208,7 +208,7 @@ define(["jquery","app/utils/utils",
 			"accueil-question-event" : {
 				name : "accueil-question-event",
 			    text : "accueil-question-event",
-			    rarity : 40,
+			    rarity : 50,
 			    unique : true,
 			    starter : true,
 			    actions : [

@@ -11,11 +11,11 @@ define(["jquery"], function($){
 			    conditions : [
 				     {
 				    	 name : "grandTout",
-				    	 level : 1
+				    	 level : 3
 				     }
 				],
 			    gains : {
-			    	croyance : 100,
+			    	croyance : 200,
 			    	illumination : 10
 			    },
 			    success : function(queteView) {

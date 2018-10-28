@@ -11,8 +11,9 @@ define(["jquery",
             $(window).on('debouncedresize resize', function() {
             	that.resize();
   			});
-            
-            this.resize();
+            $(document).ready(function() {
+            	that.resize();
+            });
         };
         
         /**

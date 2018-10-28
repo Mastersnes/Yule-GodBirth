@@ -51,6 +51,9 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        	    for (var i=0; i<incr; i++) {
 	        	    	game.spaceView.godView.checkLevel();
 	        	    }
+	        	    if (this.level >= 100) {
+	        	    	game.gameOver(true);
+	        	    }
 	        	};
 			},
 			"dieu" : new function() {

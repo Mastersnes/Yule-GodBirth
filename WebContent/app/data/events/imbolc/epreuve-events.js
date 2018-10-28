@@ -7,7 +7,7 @@ define(["jquery"], function($){
 			"epreuve-start-event" : {
 				name : "epreuve-start-event",
 			    text : "epreuve-start-event",
-			    rarity : 40,
+			    rarity : 50,
 			    unique : true,
 			    actions : [
 			         {
@@ -23,7 +23,7 @@ define(["jquery"], function($){
 			"epreuve-1-event" : {
 				name : "epreuve-1-event",
 			    text : "epreuve-1-event",
-			    rarity : 30,
+			    rarity : 40,
 			    unique : true,
 			    actions : [
 			         {
@@ -59,7 +59,7 @@ define(["jquery"], function($){
 			"epreuve-2-event" : {
 				name : "epreuve-2-event",
 			    text : "epreuve-2-event",
-			    rarity : 30,
+			    rarity : 40,
 			    unique : true,
 			    actions : [
 			         {
@@ -128,7 +128,7 @@ define(["jquery"], function($){
 			"epreuve-3-event" : {
 				name : "epreuve-3-event",
 			    text : "epreuve-3-event",
-			    rarity : 30,
+			    rarity : 40,
 			    unique : true,
 			    actions : [
 			         {
@@ -163,7 +163,7 @@ define(["jquery"], function($){
 			"epreuve-4-event" : {
 				name : "epreuve-4-event",
 			    text : "epreuve-4-event",
-			    rarity : 30,
+			    rarity : 40,
 			    unique : true,
 			    actions : [
 			         {
@@ -228,7 +228,7 @@ define(["jquery"], function($){
 			"epreuve-5-event" : {
 				name : "epreuve-5-event",
 			    text : "epreuve-5-event",
-			    rarity : 30,
+			    rarity : 40,
 			    unique : true,
 			    actions : [
 			         {

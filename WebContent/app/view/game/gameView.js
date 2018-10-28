@@ -4,7 +4,6 @@ define(["jquery",
         "app/utils/utils",
         "app/utils/popupUtils",
         "text!app/template/game/game.html",
-        "app/manager/sceneManager",
         "app/manager/textManager",
         "app/manager/eventManager",
         "app/manager/pointManager",
@@ -19,8 +18,7 @@ define(["jquery",
         "app/view/game/constellation/constellationView",
         "app/view/game/endView"
         ],
-function($, _, Utils, PopupUtils, page, 
-		SceneManager, TextManager, 
+function($, _, Utils, PopupUtils, page, TextManager, 
 		EventManager, PointManager, 
 		RecompenseManager, DidactitielManager,
 		SpaceView, QueteView, 
@@ -44,9 +42,8 @@ function($, _, Utils, PopupUtils, page,
 			this.render();
 			
 			// Manager
+			parent.scene.resize();
 			this.saveManager = parent.saveManager;
-			
-            this.scene = new SceneManager(this);
             this.textManager = new TextManager(this);
             this.eventManager = new EventManager(this);
             this.pointManager = new PointManager(this);
@@ -125,7 +122,7 @@ function($, _, Utils, PopupUtils, page,
         
         this.gameOver = function() {
             this.endGame = true;
-            this.endView.render();
+            this.endView.render(true);
         };
         
         this.showConstellation = function(callback) {

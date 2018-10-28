@@ -1,6 +1,7 @@
 /*global define */
 define(["jquery",
         'underscore',
+        "app/manager/sceneManager",
         "app/utils/utils",
         "app/utils/popupUtils",
         "app/utils/kongregateUtils",
@@ -12,12 +13,15 @@ define(["jquery",
         "app/view/menu/optionView",
         "app/view/menu/creditView",
         "app/view/menu/partenaireView"], 
-function($, _, Utils, PopupUtils, Kongregate, Textes, Mediatheque, SaveManager, page, GameView, OptionView, CreditView, PartenaireView) {
+function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque, SaveManager, page, GameView, OptionView, CreditView, PartenaireView) {
 	'use strict';
 
 	return function() {
 		this.init = function() {
 		    this.el = $("#app");
+		    
+		    this.scene = new SceneManager(this);
+		    
             this.mediatheque = new Mediatheque();
             this.mediatheque.play("music/menu.mp3");
             this.kongregateUtils = new Kongregate(Textes);

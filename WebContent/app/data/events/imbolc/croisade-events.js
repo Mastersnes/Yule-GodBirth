@@ -7,7 +7,7 @@ define(["jquery"], function($){
 			"croisade-start-event" : {
 				name : "croisade-start-event",
 			    text : "croisade-start-event",
-			    rarity : 40,
+			    rarity : 50,
 			    unique : true,
 			    actions : [
 			         {
@@ -23,7 +23,7 @@ define(["jquery"], function($){
 			"croisade-benediction-event" : {
 				name : "croisade-benediction-event",
 			    text : "croisade-benediction-event",
-			    rarity : 30,
+			    rarity : 40,
 			    unique : true,
 			    starter : true,
 			    actions : [
@@ -66,7 +66,7 @@ define(["jquery"], function($){
 			"croisade-attaques-event" : {
 				name : "croisade-attaques-event",
 			    text : "croisade-attaques-event",
-			    rarity : 35,
+			    rarity : 50,
 			    unique : true,
 			    starter : true,
 			    actions : [
@@ -132,7 +132,7 @@ define(["jquery"], function($){
 			"croisade-graal-event" : {
 				name : "croisade-graal-event",
 			    text : "croisade-graal-event",
-			    rarity : 40,
+			    rarity : 50,
 			    unique : true,
 			    starter : true,
 			    actions : [

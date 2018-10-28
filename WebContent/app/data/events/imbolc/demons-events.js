@@ -7,7 +7,7 @@ define(["jquery"], function($){
 			"demons-start-event" : {
 				name : "demons-start-event",
 			    text : "demons-start-event",
-			    rarity : 40,
+			    rarity : 50,
 			    unique : true,
 			    actions : [
 			         {
@@ -29,7 +29,7 @@ define(["jquery"], function($){
 			"demons-attaque-event" : {
 				name : "demons-attaque-event",
 			    text : "demons-attaque-event",
-			    rarity : 25,
+			    rarity : 35,
 			    unique : true,
 			    starter : true,
 			    actions : [
@@ -64,7 +64,7 @@ define(["jquery"], function($){
 			"demons-attaque-event-2" : {
 				name : "demons-attaque-event-2",
 				text : "demons-attaque-event-2",
-				rarity : 20,
+				rarity : 30,
 				unique : true,
 				actions : [
 				           {
@@ -118,7 +118,7 @@ define(["jquery"], function($){
 			"demons-village-event" : {
 				name : "demons-village-event",
 			    text : "demons-village-event",
-			    rarity : 30,
+			    rarity : 40,
 			    unique : true,
 			    starter : true,
 			    actions : [
@@ -173,7 +173,7 @@ define(["jquery"], function($){
 			"demons-desert-event" : {
 				name : "demons-desert-event",
 			    text : "demons-desert-event",
-			    rarity : 30,
+			    rarity : 40,
 			    unique : true,
 			    starter : true,
 			    actions : [

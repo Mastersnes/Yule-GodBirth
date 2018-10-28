@@ -92,12 +92,14 @@ function($, _, Utils) {
 		    if (points.croyance) {
 		        if (points.croyance < maxPoint) {
     		    	this.points.croyance += ((points.croyance + parseInt(Utils.percent(points.croyance, avantages.croyance))) * multiplier.croyance);
-    		    }
+    		    	if (this.points.croyance < 0) this.points.croyance = 0;
+		        }
 		    }
 		    if (points.illumination) {
 		        if (points.illumination < maxPoint) {
     		    	this.points.illumination += ((points.illumination + parseInt(Utils.percent(points.illumination, avantages.illumination))) * multiplier.illumination);
-    		    }
+    		    	if (this.points.illumination < 0) this.points.illumination = 0;
+		        }
 		    }
 		    if (points.bien) {
     		    if (points.bien < maxPoint) {

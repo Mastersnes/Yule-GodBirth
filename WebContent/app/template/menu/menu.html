@@ -2,18 +2,22 @@
 </div>
 
 <div class="page menu-page">
-	<div class="username text hidden"></div>
-    <div class="menu-cadre h-center">
-    	<ul class="menu v-center">
-    		<li id="new"><%=data.text.get("newGame")%></li>
-    		<% if(data.saveExists) { %>
-    		  <li id="load"><%=data.text.get("loadGame")%></li>
-    		<% } %>
-    		<li id="option"><%=data.text.get("options")%></li>
-    		<li id="credit"><%=data.text.get("credits")%></li>
-    		<li class="hidden" id="partenaire"><%=data.text.get("partenaires")%></li>
-    		<li class="login hidden" id="login">Login</li>
-    	</ul>
+    <div class="scene">
+		<div class="username text hidden"></div>
+	    <div class="menu-cadre h-center">
+	    	<ul class="menu v-center">
+	    		<li id="new"><%=data.text.get("newGame")%></li>
+	    		<% if(data.saveExists) { %>
+	    		  <li id="load"><%=data.text.get("loadGame")%></li>
+	    		<% } %>
+	    		<li id="option"><%=data.text.get("options")%></li>
+	    		<li id="credit"><%=data.text.get("credits")%></li>
+	    		<li class="hidden" id="partenaire"><%=data.text.get("partenaires")%></li>
+	    		<li class="login hidden" id="login">Login</li>
+	    	</ul>
+	    </div>
+	    
+	    <div id="popups"></div>
     </div>
 </div>
 <div class="footer">

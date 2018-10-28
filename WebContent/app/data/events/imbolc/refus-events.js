@@ -12,7 +12,7 @@ define(["jquery",
 			"refus-desert-event" : {
 				name : "refus-desert-event",
 			    text : "refus-desert-event",
-			    rarity : 20,
+			    rarity : 30,
 			    unique : true,
 			    starter : true,
 			    actions : [
@@ -44,7 +44,7 @@ define(["jquery",
 			"refus-sacrifice-event" : {
 				name : "refus-sacrifice-event",
 				text : "refus-sacrifice-event",
-				rarity : 25,
+				rarity : 35,
 				unique : true,
 			    starter : true,
 				actions : [
@@ -124,7 +124,7 @@ define(["jquery",
 			"refus-maladie-event" : {
 				name : "refus-maladie-event",
 				text : "refus-maladie-event",
-				rarity : 30,
+				rarity : 40,
 				unique : true,
 			    starter : true,
 				actions : [
@@ -203,7 +203,7 @@ define(["jquery",
 			"refus-question-event" : {
 				name : "refus-question-event",
 				text : "refus-question-event",
-				rarity : 40,
+				rarity : 50,
 				unique : true,
 			    starter : true,
 				actions : [
