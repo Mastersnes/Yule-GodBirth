@@ -36,7 +36,7 @@ function($, _, Utils) {
 			        "compteurClick" : 0,
 			        "successComplete" : [],
 			        
-			        "godInitType" : "dust",
+			        "godInitType" : "mabon",
 			        "godInitLevel" : 0,
 			        
 			        "quetesComplete" : [],
