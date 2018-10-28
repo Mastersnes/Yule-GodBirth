@@ -55,7 +55,7 @@ function($, _, Utils) {
             			"centre" : null
             		},
             		
-            		"inventaire" : [],
+            		"inventaire" : {},
             		"options" : {
             			"notation-courte" : true
             		},
@@ -133,6 +133,7 @@ function($, _, Utils) {
 		 * Permet de sauvegarder en memoire
 		 */
 		this.saveInSession = function() {
+			console.log("saveBoucle", this.saveData);
 			var saveJeton = Utils.encode(JSON.stringify(this.saveData));
 		    window.localStorage.setItem(Utils.name, saveJeton);
 		};
@@ -150,6 +151,8 @@ function($, _, Utils) {
 		 */
 		this.save = function(key, value) {
 			this.saveData[key] = value;
+			if (key == "inventaire") 
+				console.log("save : ", value, this.saveData);
 		};
 
 		/**
