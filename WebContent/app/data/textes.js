@@ -123,6 +123,29 @@ define(["jquery",
             fr : "Et si vous voulez nous encouragez, allez faire un tour sur <a target='_blank' alt='Tipeee' href='https://www.tipeee.com/les-jeux-de-bebel/'>Tipeee</a>.",
             en : "And if you want to encourage us, join us on <a target='_blank' alt='Tipeee' href='https://www.tipeee.com/les-jeux-de-bebel/'>Tipeee</a>."
         },
+        /**
+         * Game Finish
+         */
+		"gameFinish-1" : {
+		    fr : "Au loin dans l'univers, une grande energie naquit.<br/>Le dieu n'etait pas mort. Il était revenu à la vie !",
+		    en : "Far away in the universe, great energy was born.<br/>The god was not dead. He was back to life !"
+		},
+		"gameFinish-2" : {
+            fr : "Grâce à votre enseignement, il parvint à maintenir l'equilibre de l'univers pour le reste des temps.",
+            en : "Thanks to your teaching, he managed to maintain the equilibrium of the universe for the rest of the time."
+        },
+        "gameFinish-3" : {
+        	fr : "<br/>Félicitation ! Vous avez sauvé l'univers !",
+        	en : "<br/>Congratulations ! You saved the universe!"
+        },
+        "gameFinish-4" : {
+            fr : "Decouvrez nos autres jeux sur <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>.",
+            en : "Discover our other games on <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>."
+        },
+        "gameFinish-5" : {
+            fr : "Et si vous voulez nous encouragez, allez faire un tour sur <a target='_blank' alt='Tipeee' href='https://www.tipeee.com/les-jeux-de-bebel/'>Tipeee</a>.",
+            en : "And if you want to encourage us, join us on <a target='_blank' alt='Tipeee' href='https://www.tipeee.com/les-jeux-de-bebel/'>Tipeee</a>."
+        },
         
         /**
          * Popups

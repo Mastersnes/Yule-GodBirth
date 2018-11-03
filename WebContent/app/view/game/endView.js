@@ -19,7 +19,8 @@ function($, _, Utils, page, SceneManager) {
 			_.templateSettings.variable = "data";
 			var template = _.template(page);
 			var templateData = {
-					text : this.Textes
+					text : this.Textes,
+					gagne : gagne
 			};
 			this.el.html(template(templateData));
 			
