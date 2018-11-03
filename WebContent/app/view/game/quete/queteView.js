@@ -171,7 +171,7 @@ define(["jquery",
             this.parent.kongregateUtils.score(quete.name, 1);
             
             this.saveManager.save("quetesComplete", this.complete);
-            this.pointManager.addPoints(quete.gains);
+            this.pointManager.addPoints(quete.gains, null, "click");
             if (quete.success) quete.success(this);
             
             this.refresh();

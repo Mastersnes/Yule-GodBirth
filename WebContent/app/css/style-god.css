@@ -6,12 +6,16 @@ god {
 	position: absolute;
 	left: 0%;top: 0%;
 	width: 100%;height: 100%;
-
-	z-index: 3;
-	cursor: pointer;
     
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+#godContainer {
+	position: absolute;
+	width: 100%;height: 100%;
+	z-index: 3;
+	cursor: pointer;
 }
 
 god.dust, god.egg, god.baby {

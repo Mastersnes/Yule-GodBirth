@@ -51,8 +51,8 @@ define(["jquery", "sha"], function($, sha){
 		clone : function(value) {
 			return $.extend(true, {}, value);
 		},
-		format : function(amount, court, Texte) {
-		    if (!court) return amount;
+		format : function(amount, court, Texte, naround) {
+		    if (!court) return naround?amount:Math.round(amount);
 			var abs = Math.abs(amount);
 		    if (abs >= 1000000000) {
 		        var formatAmount = Math.round(amount / 10000000)/100;
@@ -66,7 +66,7 @@ define(["jquery", "sha"], function($, sha){
 		        var formatAmount = Math.round(amount / 10)/100;
 		        return formatAmount + " K";
 		    }
-		    return amount;
+		    return naround?amount:Math.round(amount);
 		},
 		pow : function(multiple, base, puissance) {
         	return Math.round(multiple * Math.pow(base, puissance));

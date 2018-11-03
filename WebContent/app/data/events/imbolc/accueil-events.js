@@ -23,7 +23,7 @@ define(["jquery","app/utils/utils",
                             	 illumination : 5,
                             	 bien : 5,
                             	 mal : 0
-                             });
+                             }, "quete");
                              
 			                 game.alertPopup("accueil-pluie-event-ok");
 			             }
@@ -36,7 +36,7 @@ define(["jquery","app/utils/utils",
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 5
-                             });
+                             }, "quete");
                         	 game.eventManager.rebellion++;
                              game.alertPopup("accueil-pluie-event-ko");
                          }
@@ -59,7 +59,7 @@ define(["jquery","app/utils/utils",
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 10
-                             });
+                             }, "quete");
                              
                              game.eventManager.addEvents(CroisadeEvents.start());
 			                 game.alertPopup("accueil-sacrifice-event-accept");
@@ -73,7 +73,7 @@ define(["jquery","app/utils/utils",
                             	 illumination : 15,
                             	 bien : 10,
                             	 mal : 0
-                             });
+                             }, "quete");
                         	 game.eventManager.rebellion++;
                              game.alertPopup("accueil-sacrifice-event-refus");
                          }
@@ -86,7 +86,7 @@ define(["jquery","app/utils/utils",
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 15
-                             });
+                             }, "quete");
                         	 game.eventManager.addEvents(CroisadeEvents.start());
                              game.alertPopup("accueil-sacrifice-event-tuer-pretre");
                          }
@@ -110,7 +110,7 @@ define(["jquery","app/utils/utils",
 	                            	 illumination : 0,
 	                            	 bien : 5,
 	                            	 mal : 0
-	                             });
+	                             }, "quete");
 				                 game.alertPopup("accueil-blessure-event-ok");
                              }else {
                             	 game.gainLoop({
@@ -118,7 +118,7 @@ define(["jquery","app/utils/utils",
                                 	 illumination : 5,
                                 	 bien : 15,
                                 	 mal : 0
-                                 });
+                                 }, "quete");
     			                 game.alertPopup("accueil-blessure2-event-ok");
                              }
 			             }
@@ -132,14 +132,14 @@ define(["jquery","app/utils/utils",
 	                            	 illumination : 0,
 	                            	 bien : 0,
 	                            	 mal : 5
-	                             });
+	                             }, "quete");
                         	 }else {
 	                        	 game.gainLoop({
 	                            	 croyance : 0,
 	                            	 illumination : 0,
 	                            	 bien : 0,
 	                            	 mal : 10
-	                             });
+	                             }, "quete");
                         	 }
                         	 game.eventManager.rebellion++;
                              game.alertPopup("accueil-blessure-event-ko");
@@ -185,7 +185,7 @@ define(["jquery","app/utils/utils",
 		                            	 illumination : 0,
 		                            	 bien : 0,
 		                            	 mal : 10
-		                             });
+		                             }, "quete");
 				        		   game.eventManager.rebellion++;
 				        		   game.alertPopup("accueil-riche-event-tuer");
 				        	   }
@@ -198,7 +198,7 @@ define(["jquery","app/utils/utils",
 		                            	 illumination : 25,
 		                            	 bien : 15,
 		                            	 mal : 0
-		                             });
+		                             }, "quete");
 				        		   game.alertPopup("accueil-riche-event-partir");
 				        	   }
 				           }
@@ -227,7 +227,7 @@ define(["jquery","app/utils/utils",
                         		 illumination : -20,
                         		 bien : 0,
                         		 mal : 0
-                        	 });
+                        	 }, "quete");
                         	 game.eventManager.rebellion++;
                         	 game.alertPopup("accueil-question-event-ko");
                          }

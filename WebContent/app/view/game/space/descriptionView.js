@@ -104,7 +104,7 @@ function($, _, Utils) {
             var pointPossede = this.pointManager.points;
             var prix = this.parent.calculPrix(item, level);
             if (prix) {
-                dom.find("#croyance-prix > span").html(Utils.format(prix.croyance, notationCourte, this.Textes));
+                dom.find("#croyance-prix > span").html(Utils.format(prix.croyance, notationCourte, this.Textes, true));
                 if (prix.croyance) {
                 	dom.find("#croyance-prix").show();
                 	if (pointPossede.croyance >= prix.croyance) dom.find("#croyance-prix").addClass("ok");
@@ -112,7 +112,7 @@ function($, _, Utils) {
                 }
                 else dom.find("#croyance-prix").hide();
     
-                dom.find("#illumination-prix > span").html(Utils.format(prix.illumination, notationCourte, this.Textes));
+                dom.find("#illumination-prix > span").html(Utils.format(prix.illumination, notationCourte, this.Textes, true));
                 if (prix.illumination) {
                 	dom.find("#illumination-prix").show();
                 	if (pointPossede.illumination >= prix.illumination) dom.find("#illumination-prix").addClass("ok");
@@ -126,26 +126,26 @@ function($, _, Utils) {
              */
             var gain = item.gain(incr, this.parent.Items);
             //Croyance
-            dom.find("#croyance-loop span").html(Utils.format(gain.loop.croyance, notationCourte, this.Textes));
-            dom.find("#croyance-click span").html(Utils.format(gain.click.croyance, notationCourte, this.Textes));
+            dom.find("#croyance-loop span").html(Utils.format(gain.loop.croyance, notationCourte, this.Textes, true));
+            dom.find("#croyance-click span").html(Utils.format(gain.click.croyance, notationCourte, this.Textes, true));
             if (gain.loop.croyance || gain.click.croyance) dom.find("#croyance").show();
             else dom.find("#croyance").hide();
             
             //Illumination
-            dom.find("#illumination-loop span").html(Utils.format(gain.loop.illumination, notationCourte, this.Textes));
-            dom.find("#illumination-click span").html(Utils.format(gain.click.illumination, notationCourte, this.Textes));
+            dom.find("#illumination-loop span").html(Utils.format(gain.loop.illumination, notationCourte, this.Textes, true));
+            dom.find("#illumination-click span").html(Utils.format(gain.click.illumination, notationCourte, this.Textes, true));
             if (gain.loop.illumination || gain.click.illumination) dom.find("#illumination").show();
             else dom.find("#illumination").hide();
 
             //Bien
-            dom.find("#bien-loop span").html(Utils.format(gain.loop.bien, notationCourte, this.Textes));
-            dom.find("#bien-click span").html(Utils.format(gain.click.bien, notationCourte, this.Textes));
+            dom.find("#bien-loop span").html(Utils.format(gain.loop.bien, notationCourte, this.Textes, true));
+            dom.find("#bien-click span").html(Utils.format(gain.click.bien, notationCourte, this.Textes, true));
             if (gain.loop.bien || gain.click.bien) dom.find("#bien").show();
             else dom.find("#bien").hide();
 
             //Mal
-            dom.find("#mal-loop span").html(Utils.format(gain.loop.mal, notationCourte, this.Textes));
-            dom.find("#mal-click span").html(Utils.format(gain.click.mal, notationCourte, this.Textes));
+            dom.find("#mal-loop span").html(Utils.format(gain.loop.mal, notationCourte, this.Textes, true));
+            dom.find("#mal-click span").html(Utils.format(gain.click.mal, notationCourte, this.Textes, true));
             if (gain.loop.mal || gain.click.mal) dom.find("#mal").show();
             else dom.find("#mal").hide();
         };

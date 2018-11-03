@@ -1,7 +1,7 @@
 <div>
     <div id="points" class="points">
         <bien title="<%=data.text.get('bien')%>">
-            <div class="img"></div><div class="text"></div>
+            <div class="img"></div><div class="text"></div><div class="icon"></div>
         </bien>
         <jauge title="<%=data.text.get('equilibre')%>">
         	<yang></yang>
@@ -9,13 +9,13 @@
         	<yin></yin>
         	</jauge>
         <mal title="<%=data.text.get('mal')%>">
-            <div class="text"></div><div class="img"></div>
+            <div class="icon"></div><div class="text"></div><div class="img"></div>
         </mal>
         <croyance title="<%=data.text.get('croyance')%>">
-            <div class="img"></div><div class="text"></div>
+            <div class="img"></div><div class="text"></div><div class="icon"></div>
         </croyance>
         <illumination title="<%=data.text.get('illumination')%>">
-            <div class="text"></div><div class="img"></div>
+            <div class="icon"></div><div class="text"></div><div class="img"></div>
         </illumination>
     </div>
     
@@ -28,7 +28,9 @@
     <space class="front" type="1"></space>
 
     <goddess></goddess>
-    <god></god>
+    <div id="godContainer">
+    	<god></god>
+    </div>
     
     <div id="ameliorations"></div>
     

@@ -24,7 +24,7 @@ define(["jquery",
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 10
-                             });
+                             }, "quete");
 			            	 game.eventManager.addEvents(DemonsEvents.start());
 			                 game.alertPopup("refus-desert-event-refus");
 			             }
@@ -56,7 +56,7 @@ define(["jquery",
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 20
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.addEvents(CroisadeEvents.start());
 				        		   game.alertPopup("refus-sacrifice-event-recompense");
 				        	   }
@@ -83,7 +83,7 @@ define(["jquery",
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 20
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("refus-sacrifice-event-tuer");
 				        	   }
 				           },
@@ -95,7 +95,7 @@ define(["jquery",
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("refus-sacrifice-event-seisme");
 				        	   },
 				        	   conditions : [
@@ -113,7 +113,7 @@ define(["jquery",
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 20
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.addEvents(CroisadeEvents.start());
 				        		   game.alertPopup("refus-sacrifice-event-recompense");
 				        	   }
@@ -166,13 +166,13 @@ define(["jquery",
 		                        		 illumination : -30,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.gainLoop({
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 20
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("refus-maladie-event-bruler");
 				        	   }
 				           },
@@ -192,7 +192,7 @@ define(["jquery",
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.eventManager.addEvents(ZombieEvents.start());
 				        		   game.alertPopup("refus-maladie-event-laisser");
 				        	   }
@@ -216,7 +216,7 @@ define(["jquery",
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.alertPopup("refus-question-event-ignore");
 				        	   }
 				           },
@@ -228,7 +228,7 @@ define(["jquery",
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 20
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.rebellion++;
 				        		   game.alertPopup("refus-question-event-punir");
 				        	   }

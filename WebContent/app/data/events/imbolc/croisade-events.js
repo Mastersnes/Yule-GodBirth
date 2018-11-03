@@ -35,7 +35,7 @@ define(["jquery"], function($){
 	                        	 illumination : 0,
 	                        	 bien : 0,
 	                        	 mal : 20
-	                        });
+	                        }, "quete");
 			            	game.eventManager.addEvents(["croisade-attaques-event"]);
 			     			game.alertPopup("croisade-benediction-event-accept");
 			             }
@@ -48,13 +48,13 @@ define(["jquery"], function($){
                         		 illumination : 0,
                         		 bien : 0,
                         		 mal : 0
-                        	});
+                        	}, "quete");
 			            	game.gainLoop({
 	                        	 croyance : 0,
 	                        	 illumination : 0,
 	                        	 bien : 20,
 	                        	 mal : 0
-	                        });
+	                        }, "quete");
 			            	game.eventManager.rebellion++;
 			            	game.eventManager.addEvents(["croisade-attaques-event"]);
 			     			game.alertPopup("croisade-benediction-event-refus");
@@ -78,13 +78,13 @@ define(["jquery"], function($){
                         		 illumination : -20,
                         		 bien : 0,
                         		 mal : 0
-                        	});
+                        	}, "quete");
 			            	game.gainLoop({
 	                        	 croyance : 0,
 	                        	 illumination : 0,
 	                        	 bien : 0,
 	                        	 mal : 20
-	                        });
+	                        }, "quete");
 			            	game.eventManager.rebellion++;
 			            	game.eventManager.addEvents(["croisade-graal-event"]);
 			     			game.alertPopup("croisade-attaques-event-tuer-village");
@@ -98,13 +98,13 @@ define(["jquery"], function($){
                         		 illumination : 0,
                         		 bien : 0,
                         		 mal : 0
-                        	});
+                        	}, "quete");
 			            	game.gainLoop({
 	                        	 croyance : 0,
 	                        	 illumination : 0,
 	                        	 bien : 0,
 	                        	 mal : 20
-	                        });
+	                        }, "quete");
 			            	game.eventManager.rebellion++;
 			            	game.eventManager.addEvents(["croisade-graal-event"]);
 			     			game.alertPopup("croisade-attaques-event-tuer-soldat");
@@ -118,7 +118,7 @@ define(["jquery"], function($){
 	                        	 illumination : 30,
 	                        	 bien : 20,
 	                        	 mal : 0
-	                        });
+	                        }, "quete");
 			            	game.eventManager.addEvents(["croisade-graal-event"]);
 			            	game.alertPopup("croisade-attaques-event-stop", function() {
 			        			   game.artefactsView.remove("torque");
@@ -144,13 +144,13 @@ define(["jquery"], function($){
                         		 illumination : -30,
                         		 bien : 0,
                         		 mal : 0
-                        	});
+                        	}, "quete");
 			            	game.gainLoop({
 	                        	 croyance : 0,
 	                        	 illumination : 0,
 	                        	 bien : 0,
 	                        	 mal : 20
-	                        });
+	                        }, "quete");
 			     			game.alertPopup("croisade-graal-event-ensevelir");
 			             }
 			         },
@@ -162,7 +162,7 @@ define(["jquery"], function($){
 	                        	 illumination : 0,
 	                        	 bien : 0,
 	                        	 mal : 20
-	                        });
+	                        }, "quete");
 			     			game.alertPopup("croisade-graal-event-attaque", function() {
 			     				game.artefactsView.add("saint-graal");
 			     			});

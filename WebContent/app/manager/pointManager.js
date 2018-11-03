@@ -56,7 +56,14 @@ function($, _, Utils) {
 		/**
 		 * Ajoute les points
 		 */
-		this.addPoints = function(points, multiplierParam) {
+		this.addPoints = function(points, multiplierParam, from) {
+			var gainsPertes = {
+					"croyance" : 0,
+					"illumination" : 0
+			};
+			if (points.croyance == 0 && points.illumination == 0 && points.bien == 0 && points.mal == 0) return gainsPertes;
+			
+			
 			var multiplier = {
 					croyance : 1,
 					illumination : 1,
@@ -88,32 +95,11 @@ function($, _, Utils) {
 				avantages.mal += currentAvantage.mal;
 			}
 			
-			var maxPoint = Math.pow(10, 12);
-		    if (points.croyance) {
-		        if (points.croyance < maxPoint) {
-    		    	this.points.croyance += ((points.croyance + parseInt(Utils.percent(points.croyance, avantages.croyance))) * multiplier.croyance);
-    		    	if (this.points.croyance < 0) this.points.croyance = 0;
-		        }
-		    }
-		    if (points.illumination) {
-		        if (points.illumination < maxPoint) {
-    		    	this.points.illumination += ((points.illumination + parseInt(Utils.percent(points.illumination, avantages.illumination))) * multiplier.illumination);
-    		    	if (this.points.illumination < 0) this.points.illumination = 0;
-		        }
-		    }
-		    if (points.bien) {
-    		    if (points.bien < maxPoint) {
-    			    this.points.bien += ((points.bien + parseInt(Utils.percent(points.bien, avantages.bien))) * multiplier.bien);
-    			    if (this.points.bien < 0) this.points.bien = 0;
-    		    }
-		    }
-		    if (points.mal) {
-    		    if (points.mal < maxPoint) {
-    			    this.points.mal += ((points.mal + parseInt(Utils.percent(points.mal, avantages.mal))) * multiplier.mal);
-    			    if (this.points.mal < 0) this.points.mal = 0;
-    			}
-		    }
-		    
+			gainsPertes.croyance = this.incrementPoints(points, avantages, multiplier, "croyance", from);
+			gainsPertes.illumination = this.incrementPoints(points, avantages, multiplier, "illumination", from);
+			this.incrementPoints(points, avantages, multiplier, "bien", from);
+			this.incrementPoints(points, avantages, multiplier, "mal", from);
+			
 		    if (this.points.bien > 1000000 && this.points.mal > 1000000) {
 		    	this.points.bien = parseInt(this.points.bien / 10);
 		    	this.points.mal = parseInt(this.points.mal / 10);
@@ -128,19 +114,96 @@ function($, _, Utils) {
 		    this.parent.kongregateUtils.score("maxMal", this.points.mal);
 		    
 		    this.render();
+		    
+		    return gainsPertes;
+		};
+		
+		this.incrementPoints = function(points, avantages, multiplier, key, from) {
+			if (!points[key]) return 0;
+			if (points[key] > Math.pow(10, 12)) return 0;
+			
+			var gainPerte = 0;
+			if (points[key] < 0) {
+				gainPerte += (points[key] * multiplier[key]);
+			}else {
+				gainPerte += ((points[key] + parseInt(Utils.percent(points[key], avantages[key]))) * multiplier[key]);
+			}
+			
+			if (from == "quete") this.launchAnimQuete(gainPerte, key);
+			
+			this.points[key] += gainPerte;
+			if (this.points[key] < 0) this.points[key] = 0;
+			
+			return gainPerte;
+		};
+		
+		/**
+		 * Si on vient des quetes, on affiche l'animation de gain/perte
+		 */
+		this.launchAnimQuete = function(gainPerte, key) {
+			var that = this;
+			if (gainPerte > 0) {
+				$(this.el).find(key).addClass("gain");
+				$(this.el).find(key).find(".icon").html("+");
+			}else if (gainPerte < 0) {
+				$(this.el).find(key).addClass("perte");
+				$(this.el).find(key).find(".icon").html("-");
+			}
+			setTimeout(function() {
+				$(that.el).find(key).removeClass("gain");
+				$(that.el).find(key).removeClass("perte");
+            }, 500);
+		};
+
+		/**
+		 * Si on vient des clicks
+		 */
+		this.launchAnimClick = function(gainsPertes) {
+			var mouse = this.parent.currentMousePos;
+			if (mouse.x == -1) return;
+			
+			var clickDom = $("#app").find("clickanim.hidden").first();
+			if (clickDom.length == 0) return;
+			clickDom.css({
+				left: mouse.x,
+				top: mouse.y
+			});
+			
+			var signe;
+			if (gainsPertes.croyance != 0) {
+				signe = gainsPertes.croyance>0?"+":"-";
+				clickDom.find("croyance").show();
+				clickDom.find("croyance .text").html(signe + gainsPertes.croyance);
+			}else clickDom.find("croyance").hide();
+			if (gainsPertes.illumination != 0) {
+				signe = gainsPertes.illumination>0?"+":"-";
+				clickDom.find("illumination").show();
+				clickDom.find("illumination .text").html(signe + gainsPertes.illumination);
+			}else clickDom.find("illumination").hide();
+			
+			clickDom.removeClass("hidden");
+			$("#app").append(clickDom);
+			
+			setTimeout(function() {
+				clickDom.addClass("goTop");
+            }, 30);
+			setTimeout(function() {
+				clickDom.removeClass("goTop");
+				clickDom.addClass("hidden");
+            }, 500);
 		};
 		
 		/**
          * Ajoute les points en pourcentage
          */
-        this.addPointsPercent = function(points) {
+        this.addPointsPercent = function(points, from) {
         	var that = this;
             this.addPoints({
                 croyance : parseInt(Utils.percent(that.points.croyance, points.croyance)),
                 illumination : parseInt(Utils.percent(that.points.illumination, points.illumination)),
                 bien : parseInt(Utils.percent(that.points.bien, points.bien)),
                 mal : parseInt(Utils.percent(that.points.mal, points.mal))
-            });
+            }, null, from);
         };
 		
 		/**

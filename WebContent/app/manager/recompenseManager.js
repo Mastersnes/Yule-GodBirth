@@ -50,7 +50,7 @@ function($, _, Utils) {
 			this.checkClickSuccess(50000, this.compteurClick, 1000, recompense);
 			this.checkClickSuccess(100000, this.compteurClick, 10000, recompense);
 			
-			this.pointManager.addPoints(recompense);
+			this.pointManager.addPoints(recompense, null, "quete");
 		};
 		
 		/**

@@ -77,7 +77,7 @@ define(["jquery",
 
         this.makeEvents = function() {
         	var that = this;
-        	$(this.el).find("god").click(function() {
+        	$(this.el).find("#godContainer").click(function() {
                 that.parent.click(that.gameView);
                 that.render();
         	});

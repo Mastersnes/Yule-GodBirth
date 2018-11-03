@@ -16,15 +16,15 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 				this.prix = function (lvl) {
 				    if(!lvl) lvl = this.level;
 					return {
-	        			croyance : Math.round(Utils.pow(3, lvl, 3.19)),
-	        			illumination : Math.round(lvl<10 ? 0 : Utils.pow(1, lvl, 3))
+	        			croyance : 1,//Math.round(Utils.pow(3, lvl, 3.19)),
+	        			illumination : 0//Math.round(lvl<10 ? 0 : Utils.pow(1, lvl, 3))
 	        		};
 			    };
 			    this.gain = function (incr, ameliorations) {
 			    	if (!incr) incr = 0;
 	        		var me = this.level + incr;
 	        		var croyance = Math.round(0.5 * me);
-	        		var illumination = 0;
+	        		var illumination = me>=5 ? me/50 : 0;
 	        		var bien = 0;
 	        		var mal = 0;
 	        		
@@ -41,7 +41,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        			},
 	        			click : {
 	        				croyance : Math.round(0.25 * croyance),
-	        				illumination : 0,
+	        				illumination : Math.round(illumination*10)/10,
                             bien : 0,
                             mal : 0
 	        			}

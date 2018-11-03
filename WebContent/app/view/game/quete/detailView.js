@@ -81,22 +81,22 @@ define(["jquery",
             var gain = quete.gains;
             
             var notationCourte = this.pointManager.isNotationCourte();
-            dom.find("#croyance-gain").html(Utils.format(gain.croyance, notationCourte, this.Textes));
+            dom.find("#croyance-gain").html(Utils.format(gain.croyance, notationCourte, this.Textes, true));
             if (gain.croyance) dom.find("#croyance").show();
             else dom.find("#croyance").hide();
             
             //Illumination
-            dom.find("#illumination-gain").html(Utils.format(gain.illumination, notationCourte, this.Textes));
+            dom.find("#illumination-gain").html(Utils.format(gain.illumination, notationCourte, this.Textes, true));
             if (gain.illumination) dom.find("#illumination").show();
             else dom.find("#illumination").hide();
 
             //Bien
-            dom.find("#bien-gain").html(Utils.format(gain.bien, notationCourte, this.Textes));
+            dom.find("#bien-gain").html(Utils.format(gain.bien, notationCourte, this.Textes, true));
             if (gain.bien) dom.find("#bien").show();
             else dom.find("#bien").hide();
 
             //Mal
-            dom.find("#mal-gain").html(Utils.format(gain.mal, notationCourte, this.Textes));
+            dom.find("#mal-gain").html(Utils.format(gain.mal, notationCourte, this.Textes, true));
             if (gain.mal) dom.find("#mal").show();
             else dom.find("#mal").hide();
             

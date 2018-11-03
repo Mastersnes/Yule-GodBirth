@@ -94,7 +94,7 @@ define(["jquery",
             var notationCourte = this.pointManager.isNotationCourte();
             var pointPossede = this.pointManager.points;
             var prix = this.parent.calculPrix();
-            dom.find("#croyance-prix > span").html(Utils.format(prix.croyance, notationCourte, this.Textes));
+            dom.find("#croyance-prix > span").html(Utils.format(prix.croyance, notationCourte, this.Textes, true));
             if (prix.croyance) {
             	dom.find("#croyance-prix").show();
             	if (pointPossede.croyance >= prix.croyance) dom.find("#croyance-prix").addClass("ok");
@@ -102,7 +102,7 @@ define(["jquery",
             }
             else dom.find("#croyance-prix").hide();
 
-            dom.find("#illumination-prix > span").html(Utils.format(prix.illumination, notationCourte, this.Textes));
+            dom.find("#illumination-prix > span").html(Utils.format(prix.illumination, notationCourte, this.Textes, true));
             if (prix.illumination) {
             	dom.find("#illumination-prix").show();
             	if (pointPossede.illumination >= prix.illumination) dom.find("#illumination-prix").addClass("ok");

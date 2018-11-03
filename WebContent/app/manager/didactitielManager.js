@@ -142,7 +142,7 @@ function($, _, Utils) {
                     illumination : 0,
                     bien : 0,
                     mal : 0
-                });
+                }, null, "quete");
                 this.data.blocker.ameliorations = false;
 			}
 			

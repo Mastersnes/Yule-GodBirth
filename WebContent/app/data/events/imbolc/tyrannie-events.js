@@ -41,7 +41,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 15,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("tyrannie-soeur-event-accept");
 				        	   }
 				           },			    
@@ -53,7 +53,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 10
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.rebellion++;
 				        		   game.alertPopup("tyrannie-soeur-event-refus");
 				        	   }
@@ -76,13 +76,13 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.pointManager.addPointsPercent({
 		                        		 croyance : 0,
 		                        		 illumination : -30,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.alertPopup("tyrannie-fete-event-participe");
 				        	   }
 				           },
@@ -102,7 +102,7 @@ define(["jquery"], function($){
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.alertPopup("tyrannie-fete-event-annule");
 				        	   }
 				           },
@@ -115,7 +115,7 @@ define(["jquery"], function($){
 				        			   illumination : 20,
 				        			   bien : 0,
 				        			   mal : 15
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("tyrannie-fete-event-boire", function() {
 				        			   game.artefactsView.remove("corne-abondance");
 				        		   });
@@ -140,7 +140,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 10,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.rebellion++;
 				        		   game.alertPopup("tyrannie-esclave-event-encourage");
 				        	   }
@@ -153,7 +153,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 10
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("tyrannie-esclave-event-taire");
 				        	   }
 				           }

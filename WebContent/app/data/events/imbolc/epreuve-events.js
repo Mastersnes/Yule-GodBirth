@@ -34,7 +34,7 @@ define(["jquery"], function($){
 			        			 illumination : 10,
 			        			 bien : 0,
 			        			 mal : 0
-			        		});
+			        		}, "quete");
 			     			game.eventManager.addEvents(["epreuve-2-event"]);
 			     			game.alertPopup("epreuve-1-event-pleuvoir");
 			             }
@@ -48,7 +48,7 @@ define(["jquery"], function($){
 	                       		illumination : 0,
 	                       		bien : 0,
 	                       		mal : 0
-	                       	});
+	                       	}, "quete");
 			            	game.eventManager.addEvents(["epreuve-2-event"]);
 			            	game.alertPopup("epreuve-1-event-no");
 			             }
@@ -71,7 +71,7 @@ define(["jquery"], function($){
 	                       		illumination : 0,
 	                       		bien : 0,
 	                       		mal : 0
-	                       	});
+	                       	}, "quete");
 			     			game.eventManager.addEvents(["epreuve-3-event"]);
 			     			game.alertPopup("epreuve-2-event-amour");
 			             }
@@ -85,13 +85,13 @@ define(["jquery"], function($){
 			        			 illumination : 0,
 			        			 bien : 0,
 			        			 mal : 10
-			        		});
+			        		}, "quete");
 			            	game.pointManager.addPointsPercent({
 	                       		croyance : -30,
 	                       		illumination : -10,
 	                       		bien : 0,
 	                       		mal : 0
-	                       	});
+	                       	}, "quete");
 			     			game.eventManager.addEvents(["epreuve-3-event"]);
 			     			game.alertPopup("epreuve-2-event-mort");
 			             }
@@ -104,7 +104,7 @@ define(["jquery"], function($){
 			        			 illumination : 0,
 			        			 bien : 0,
 			        			 mal : 10
-			        		});
+			        		}, "quete");
 			     			game.eventManager.addEvents(["epreuve-3-event"]);
 			     			game.alertPopup("epreuve-2-event-42");
 			             }
@@ -117,7 +117,7 @@ define(["jquery"], function($){
 	                       		illumination : 0,
 	                       		bien : 0,
 	                       		mal : 0
-	                       	});
+	                       	}, "quete");
 			     			game.eventManager.addEvents(["epreuve-3-event"]);
 			     			game.alertPopup("epreuve-2-event-D");
 			             }
@@ -152,7 +152,7 @@ define(["jquery"], function($){
 			        			 illumination : 10,
 			        			 bien : 10,
 			        			 mal : 0
-			        		});
+			        		}, "quete");
 			     			game.eventManager.addEvents(["epreuve-4-event"]);
 			     			game.alertPopup("epreuve-3-event-refus");
 			             }
@@ -175,7 +175,7 @@ define(["jquery"], function($){
 	                       		illumination : -10,
 	                       		bien : 0,
 	                       		mal : 0
-	                       	});
+	                       	}, "quete");
 			     			game.alertPopup("epreuve-4-event-2");
 			             }
 			         },
@@ -187,7 +187,7 @@ define(["jquery"], function($){
 			        			 illumination : 20,
 			        			 bien : 0,
 			        			 mal : 0
-			        		});
+			        		}, "quete");
 			     			game.eventManager.addEvents(["epreuve-5-event"]);
 			     			game.alertPopup("epreuve-4-event-6");
 			             }
@@ -200,13 +200,13 @@ define(["jquery"], function($){
 		                       	illumination : -10,
 		                       	bien : 0,
 		                       	mal : 0
-		                     });
+		                     }, "quete");
 			            	 game.gainLoop({
 			        			 croyance : 0,
 			        			 illumination : 0,
 			        			 bien : 0,
 			        			 mal : 10
-			        		});
+			        		}, "quete");
 			     			game.alertPopup("epreuve-4-event-151");
 			             }
 			         },
@@ -218,7 +218,7 @@ define(["jquery"], function($){
 		                       	illumination : 0,
 		                       	bien : 0,
 		                       	mal : 0
-		                    });
+		                    }, "quete");
 			     			game.alertPopup("epreuve-4-event-milliard");
 			             }
 			         }
@@ -239,7 +239,7 @@ define(["jquery"], function($){
 			        			 illumination : 40,
 			        			 bien : 0,
 			        			 mal : 0
-			        		});
+			        		}, "quete");
 
 			     			game.alertPopup("epreuve-5-event-yes", function() {
 			     				game.artefactsView.add("troisieme-oeil");
@@ -254,7 +254,7 @@ define(["jquery"], function($){
 			        			 illumination : 30,
 			        			 bien : 0,
 			        			 mal : 0
-			        		});
+			        		}, "quete");
 			            	 
 			     			game.alertPopup("epreuve-5-event-no");
 			             }

@@ -99,8 +99,9 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			}else itemDom.removeClass("dispo");
 		};
 		
-		this.loop = function(game, multiplier) {
-		    var listOnglet = Onglets.list();
+		this.loop = function(game, multiplier, from) {
+		    if (!from) from = "loop";
+			var listOnglet = Onglets.list();
 		    for (var index in listOnglet) {
                 var onglet = listOnglet[index];
                 if (this.checkOngletAffichable(onglet.conditions)) {
@@ -111,7 +112,7 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 		    var listItem = Items.list();
 		    for (var index in listItem) {
 		        var item = listItem[index];
-		        game.pointManager.addPoints(item.gain(0, Items).loop, multiplier);
+		        game.pointManager.addPoints(item.gain(0, Items).loop, multiplier, from);
 		        this.refreshItem(item);
 		    }
 		    
@@ -120,11 +121,20 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 
 		this.click = function(game) {
 			var listItem = Items.list();
+			var total = {
+				"croyance" : 0,
+				"illumination" : 0
+			};
 			for (var index in listItem) {
 				var item = listItem[index];
-				game.pointManager.addPoints(item.gain(0, Items).click);
+				var gainsPertes = game.pointManager.addPoints(item.gain(0, Items).click, null, "click");
+				
+				total.croyance += gainsPertes.croyance;
+				total.illumination += gainsPertes.illumination;
+				
 				this.refreshItem(item);
 			}
+			game.pointManager.launchAnimClick(total);
 			
 			this.recompenseManager.addClick();
 		};

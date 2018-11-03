@@ -41,7 +41,7 @@ define(["jquery"], function($){
                             	 illumination : 10,
                             	 bien : 0,
                             	 mal : 0
-                             });
+                             }, "quete");
 			            	 game.eventManager.addEvents(["demons-attaque-event-2"]);
 			                 game.alertPopup("demons-attaque-event-accept");
 			             }
@@ -54,7 +54,7 @@ define(["jquery"], function($){
                         		 illumination : 0,
                         		 bien : 0,
                         		 mal : 0
-                        	 });
+                        	 }, "quete");
 			            	 game.eventManager.rebellion++;
 			                 game.alertPopup("demons-attaque-event-refus");
 			             }
@@ -75,13 +75,13 @@ define(["jquery"], function($){
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.gainLoop({
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 15
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("demons-attaque-event-torture", function() {
 				        			   game.alertPopup("demons-attaque-event-torture-2");
 				        		   });
@@ -95,7 +95,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 15
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("demons-attaque-event-tuer");
 				        	   }
 				           },
@@ -107,7 +107,7 @@ define(["jquery"], function($){
 				        			   illumination : 10,
 				        			   bien : 15,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.rebellion++;
 				        		   game.alertPopup("demons-attaque-event-partir");
 				        	   }
@@ -130,13 +130,13 @@ define(["jquery"], function($){
                         		 illumination : -10,
                         		 bien : 0,
                         		 mal : 0
-                        	 });
+                        	 }, "quete");
 			            	 game.gainLoop({
                             	 croyance : 0,
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 30
-                             });
+                             }, "quete");
 			                 game.alertPopup("demons-village-event-detruire");
 			             }
 			         },
@@ -148,7 +148,7 @@ define(["jquery"], function($){
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 30
-                             });
+                             }, "quete");
 			                 game.alertPopup("demons-village-event-tuer");
 			             }
 			         },
@@ -160,7 +160,7 @@ define(["jquery"], function($){
                             	 illumination : 20,
                             	 bien : 30,
                             	 mal : 0
-                             });
+                             }, "quete");
 			                 game.alertPopup("demons-village-event-stop", function() {
 			                	 game.artefactsView.remove("torque");
 			                 });
@@ -185,7 +185,7 @@ define(["jquery"], function($){
                             	 illumination : 20,
                             	 bien : 15,
                             	 mal : 0
-                             });
+                             }, "quete");
 			                 game.alertPopup("demons-desert-event-vie", function() {
 			                	 game.artefactsView.remove("idole-feu");
 			                 });
@@ -200,7 +200,7 @@ define(["jquery"], function($){
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 10
-                             });
+                             }, "quete");
 			            	 game.alertPopup("demons-desert-event-innonder");
 			             }
 			         },
@@ -212,13 +212,13 @@ define(["jquery"], function($){
                         		 illumination : -10,
                         		 bien : 0,
                         		 mal : 0
-                        	 });
+                        	 }, "quete");
 			            	 game.gainLoop({
                             	 croyance : 0,
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 20
-                             });
+                             }, "quete");
 			                 game.alertPopup("demons-desert-event-laisser");
 			             }
 			         }

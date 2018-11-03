@@ -51,13 +51,13 @@ define(["jquery"], function($){
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.gainLoop({
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 10
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("zombie-fou-event-tuer");
 				        	   }
 				           }
@@ -86,7 +86,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.epidemie+=5;
 				        		   game.alertPopup("zombie-taverne-event-boire");
 				        	   }
@@ -99,7 +99,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 5,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.epidemie++;
 				        		   game.alertPopup("zombie-taverne-event-enferme");
 				        	   }
@@ -112,13 +112,13 @@ define(["jquery"], function($){
 		                        		 illumination : -10,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.gainLoop({
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 10
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("zombie-taverne-event-tuer");
 				        	   }
 				           }
@@ -140,7 +140,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 10
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.epidemie++;
 				        		   game.alertPopup("zombie-enfant-event-no");
 				        	   }
@@ -153,7 +153,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 10,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("zombie-enfant-event-yes");
 				        	   }
 				           }
@@ -182,7 +182,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 10,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("accueil-blessure2-event-ok");
 				        	   }
 				           }
@@ -228,7 +228,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 20,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.eventManager.epidemie+=3;
 				        		   game.alertPopup("zombie-groupe-event-enfermer");
 				        	   }
@@ -241,7 +241,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 20
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("zombie-groupe-event-tuer");
 				        	   }
 				           }
@@ -270,13 +270,13 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 20
-				        		   });
+				        		   }, "quete");
 				        		   game.pointManager.addPointsPercent({
 		                        		 croyance : 0,
 		                        		 illumination : -20,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.alertPopup("zombie-cata-event-tuer");
 				        	   }
 				           }
@@ -312,13 +312,13 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 20
-				        		   });
+				        		   }, "quete");
 				        		   game.pointManager.addPointsPercent({
 		                        		 croyance : -30,
 		                        		 illumination : -20,
 		                        		 bien : 0,
 		                        		 mal : 0
-		                        	 });
+		                        	 }, "quete");
 				        		   game.alertPopup("zombie-guerre-event-tuer");
 				        	   }
 				           }
@@ -344,7 +344,7 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 50
-				        		   });
+				        		   }, "quete");
 				        	   }
 				           },
 				           {
@@ -355,13 +355,13 @@ define(["jquery"], function($){
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 30
-				        		   });
+				        		   }, "quete");
 				        		   game.pointManager.addPointsPercent({
 				        			   croyance : -100,
 				        			   illumination : -100,
 				        			   bien : 0,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("zombie-step-event-3-bruler");
 				        	   }
 				           },
@@ -373,7 +373,7 @@ define(["jquery"], function($){
 				        			   illumination : -100,
 				        			   bien : 0,
 				        			   mal : 0
-				        		   });
+				        		   }, "quete");
 				        		   game.alertPopup("zombie-step-event-3-invoquer", function() {
 				        			   game.artefactsView.remove("idole-mort");
 				        			   

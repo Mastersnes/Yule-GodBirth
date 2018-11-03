@@ -38,6 +38,10 @@ function($, _, Utils, PopupUtils, page, TextManager,
 			this.endGame = false;
 			this.lieu = "space";
 			this.alertOpen = false;
+			this.currentMousePos = {
+					x: -1,
+					y: -1
+			};
 			
 			this.render();
 			
@@ -116,8 +120,8 @@ function($, _, Utils, PopupUtils, page, TextManager,
 		    }
         };
         
-        this.gainLoop = function(multiplier) {
-        	this.spaceView.ameliorationView.loop(this, multiplier);
+        this.gainLoop = function(multiplier, from) {
+        	this.spaceView.ameliorationView.loop(this, multiplier, from);
         };
         
         this.gameOver = function() {
@@ -170,6 +174,10 @@ function($, _, Utils, PopupUtils, page, TextManager,
             $(".text").bind('selectstart', function(e){
             	e.preventDefault();
             	return false;
+            });
+            $(document).mousemove(function(event) {
+                that.currentMousePos.x = event.pageX;
+                that.currentMousePos.y = event.pageY;
             });
         };
         
