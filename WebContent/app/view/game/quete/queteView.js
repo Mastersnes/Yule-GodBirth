@@ -114,7 +114,9 @@ define(["jquery",
         	queteDom.addClass("h-center");
         	
         	var queteCheck = $("<collecte></collecte>");
-        	if (this.checkComplete(quete)) queteCheck.addClass("complete");
+        	if (this.checkComplete(quete)) {
+        		queteCheck.addClass("complete");
+        	}
         	queteDom.append(queteCheck);
 
         	var queteContent = $("<content></content>");
@@ -189,15 +191,9 @@ define(["jquery",
         
         this.makeQueteEvents = function() {
         	var that = this;
-        	this.el.find("quete").click(function() {
-        		var queteId = $(this).attr("id");
-        		that.detailView.show(queteId);
-        	});
-
-        	this.el.find("collecte").click(function(e) {
-        		e.stopPropagation();
+        	this.el.find("quete collecte").click(function() {
         		var queteId = $(this).parent().attr("id");
-        	    that.completeQuete(null, queteId);
+        		that.detailView.show(queteId);
         	});
         };
         

@@ -117,7 +117,14 @@ function($, _, Utils, PopupUtils, page, TextManager,
                 setTimeout(function() {
                     that.loop();
                 }, 1000);
+                setTimeout(function() {
+                    that.renderLoop();
+                }, 100);
 		    }
+        };
+        
+        this.renderLoop = function() {
+        	
         };
         
         this.gainLoop = function(multiplier, from) {
