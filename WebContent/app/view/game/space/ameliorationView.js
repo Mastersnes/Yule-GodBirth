@@ -101,22 +101,30 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 		
 		this.loop = function(game, multiplier, from) {
 		    if (!from) from = "loop";
-			var listOnglet = Onglets.list();
-		    for (var index in listOnglet) {
-                var onglet = listOnglet[index];
-                if (this.checkOngletAffichable(onglet.conditions)) {
-                    this.unlockOnglet(onglet.name, onglet.start);
-                }
-            }
-		    
+
 		    var listItem = Items.list();
 		    for (var index in listItem) {
 		        var item = listItem[index];
 		        game.pointManager.addPoints(item.gain(0, Items).loop, multiplier, from);
-		        this.refreshItem(item);
 		    }
-		    
-		    this.descriptionView.loop(game);
+		};
+
+		this.renderLoop = function(game) {
+			var listOnglet = Onglets.list();
+			for (var index in listOnglet) {
+				var onglet = listOnglet[index];
+				if (this.checkOngletAffichable(onglet.conditions)) {
+					this.unlockOnglet(onglet.name, onglet.start);
+				}
+			}
+			
+			var listItem = Items.list();
+			for (var index in listItem) {
+				var item = listItem[index];
+				this.refreshItem(item);
+			}
+			
+			this.descriptionView.loop(game);
 		};
 
 		this.click = function(game) {

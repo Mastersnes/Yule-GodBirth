@@ -5,6 +5,10 @@ define(["jquery"], function($){
 		 * Tyrannie
 		 * Start
 		 */
+		"tyrannie-start-event-titre" : {
+			fr : "La cité du vice",
+			en : "-"
+		},
 		"tyrannie-start-event" : {
 			fr : "Au bout du monde, près des montagnes bordant le ciel, une grande et somptueuse cité fut créée par un homme d'une richesse infinie...",
 			en : "At the end of the world, near the moutains that border the sky, a large and sumptuous city was created by a man of infinite wealth..."
@@ -17,6 +21,10 @@ define(["jquery"], function($){
 		/**
 		 * Soeur
 		 */
+		"tyrannie-soeur-event-titre" : {
+			fr : "Les horreurs du plaisir",
+			en : "-"
+		},
 		"tyrannie-soeur-event" : {
 			fr : "Mon dieu ! Ma sœur a été enfermé dans un harem à Baia !<br/>Nulle ne sait ce qu'il lui font ! Liberez-la, je vous en supplie !",
 			en : "My god ! My sister was locked up in a harem in Baia !<br/>No one knows what they're doing to her ! Set her free, please !"
@@ -33,6 +41,10 @@ define(["jquery"], function($){
 		/**
 		 * Fete
 		 */
+		"tyrannie-fete-event-titre" : {
+			fr : "Fiesta",
+			en : "Fiesta"
+		},
 		"tyrannie-fete-event" : {
 			fr : "Seigneur ! Nous organisons une superbe fête en votre honneur à Baia !<br/>Tout sera permis !",
 			en : "Lord ! We organize a great party for you at Baia !<br/>Everything will be permise !"
@@ -73,6 +85,10 @@ define(["jquery"], function($){
 		/**
 		 * Esclave
 		 */
+		"tyrannie-esclave-event-titre" : {
+			fr : "Soulevement",
+			en : "-"
+		},
 		"tyrannie-esclave-event" : {
 			fr : "Un groupe d'esclave s'est rebellé dans la ville de Baia ! Ils veulent leur liberté !",
 			en : "A group of slaves rebelled in city of Baia ! They want their freedom !"

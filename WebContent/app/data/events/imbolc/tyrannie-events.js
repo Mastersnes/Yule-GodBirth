@@ -1,5 +1,6 @@
 'use strict';
-define(["jquery"], function($){
+define(["jquery",
+        "app/data/events/imbolc/demi-dieu-events"], function($, DemiDieuEvents){
 	/**
 	 * Tyrannie
 	 */
@@ -84,6 +85,7 @@ define(["jquery"], function($){
 		                        		 mal : 0
 		                        	 }, "quete");
 				        		   game.alertPopup("tyrannie-fete-event-participe");
+				        		   game.eventManager.addEvents(DemiDieuEvents.start());
 				        	   }
 				           },
 				           {
@@ -116,6 +118,7 @@ define(["jquery"], function($){
 				        			   bien : 0,
 				        			   mal : 15
 				        		   }, "quete");
+				        		   game.eventManager.addEvents(DemiDieuEvents.start());
 				        		   game.alertPopup("tyrannie-fete-event-boire", function() {
 				        			   game.artefactsView.remove("corne-abondance");
 				        		   });

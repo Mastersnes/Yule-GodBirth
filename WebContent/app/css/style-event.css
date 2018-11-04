@@ -6,6 +6,11 @@
 	width: 5%;
 }
 
+.popupEvent .content {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
 .scene .event-timer {
 	display: none;
 	cursor: pointer;

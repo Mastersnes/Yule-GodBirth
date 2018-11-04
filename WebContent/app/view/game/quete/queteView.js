@@ -135,15 +135,17 @@ define(["jquery",
         };
         
         this.loop = function(game) {
+        	if (this.newList.length > 0) {
+        		this.newList.length = 0;
+        		this.parent.alertPopup("newQuete", null, true);
+        	}
+        };
+
+        this.renderLoop = function(game) {
         	var quetes = Quetes.list();
         	for (var index in quetes) {
         		var quete = quetes[index];
         		this.refreshQuete(quete);
-        	}
-        	
-        	if (this.newList.length > 0) {
-        		this.newList.length = 0;
-        		this.parent.alertPopup("newQuete", null, true);
         	}
         	
         	this.detailView.loop();

@@ -11,9 +11,8 @@ define(["jquery",
         "text!app/template/menu/menu.html",
         "app/view/game/gameView",
         "app/view/menu/optionView",
-        "app/view/menu/creditView",
-        "app/view/menu/partenaireView"], 
-function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque, SaveManager, page, GameView, OptionView, CreditView, PartenaireView) {
+        "app/view/menu/creditView"], 
+function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque, SaveManager, page, GameView, OptionView, CreditView) {
 	'use strict';
 
 	return function() {
@@ -83,11 +82,8 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 			$("#credit").click(function() {
 				new CreditView(Textes).show();
 			});
-			$("#partenaire").click(function() {
-				new PartenaireView(Textes).show();
-			});
 			
-			$("#login").click(function() {
+			$("logo").click(function() {
 				that.kongregateUtils.login();
 			});
 		};

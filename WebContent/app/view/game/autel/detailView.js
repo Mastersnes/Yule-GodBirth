@@ -146,7 +146,7 @@ define(["jquery",
         };
         
         this.loop = function(game) {
-            this.refresh();
+        	this.refresh();
         };
         
         this.close = function(isSelected) {

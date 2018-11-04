@@ -84,6 +84,7 @@ function($, _, Utils, PopupUtils, page, TextManager,
 			    this.alreadyLoop = true;
                 this.makeEvents();
                 this.loop();
+                this.renderLoop();
             }
 		};
 
@@ -102,8 +103,6 @@ function($, _, Utils, PopupUtils, page, TextManager,
     		    	this.didactitielManager.loop();
         		    this.spaceView.loop(this);
         		    this.queteView.loop(this);
-        		    this.autelView.loop(this);
-        		    this.successView.loop(this);
         		    this.constellationView.loop(this);
                     this.eventManager.loop();
                     
@@ -117,14 +116,23 @@ function($, _, Utils, PopupUtils, page, TextManager,
                 setTimeout(function() {
                     that.loop();
                 }, 1000);
-                setTimeout(function() {
-                    that.renderLoop();
-                }, 100);
 		    }
         };
         
         this.renderLoop = function() {
-        	
+        	var that = this;
+        	if (!this.endGame) {
+    		    if (!this.pause) {
+        		    this.spaceView.renderLoop(this);
+        		    this.queteView.renderLoop(this);
+        		    this.autelView.loop(this);
+        		    this.successView.loop(this);
+    		    }
+    		    
+    		    setTimeout(function() {
+                    that.renderLoop();
+                }, 100);
+        	}
         };
         
         this.gainLoop = function(multiplier, from) {

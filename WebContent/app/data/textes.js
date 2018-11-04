@@ -95,10 +95,6 @@ define(["jquery",
             en : "Mute"
         },
         
-		"partenaires" : {
-			fr : "Partenaires",
-			en : "Partners"
-		},
 		"copyright-licence" : {
 			fr : "Cette oeuvre est sous license ",
 			en : "This work is licensed by "

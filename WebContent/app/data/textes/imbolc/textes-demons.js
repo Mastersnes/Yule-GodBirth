@@ -5,6 +5,10 @@ define(["jquery"], function($){
 		 * Demons
 		 * Start
 		 */
+		"demons-start-event-titre" : {
+			fr : "Les demons de feu",
+			en : "Fire daemons"
+		},
 		"demons-start-event" : {
 			fr : "Loin à l'est, de nombreux villages sont en cendre... Les hommes prennent les arme contre des créatures de l'enfer !",
 			en : "Far away a the east, lot of villages burn to ash... Mens takes up arms  against hell creatures !"
@@ -17,6 +21,10 @@ define(["jquery"], function($){
 		/**
 		 * Attaque
 		 */
+		"demons-attaque-event-titre" : {
+			fr : "Contre-attaque",
+			en : "Counter-attack"
+		},
 		"demons-attaque-event" : {
 			fr : "Maître ! Nous allons organiser une attaque contre ces créatures de feu !<br/>Nous souhaiterions votre benediction !",
 			en : "Master ! We're going to organize an attack against this fire creatures !<br/>We would like to have your benediction !"
@@ -28,6 +36,10 @@ define(["jquery"], function($){
 		"demons-attaque-event-refus" : {
 			fr : "Le combat se termina en bain de sang... Nos hommes, sans espoirs, périrent dans les flammes...",
 			en : "The fight ends in a bloodbath... Our mens, whithout hopes, perished in the flames..."
+		},
+		"demons-attaque-event-2-titre" : {
+			fr : "La capture",
+			en : "Capture"
 		},
 		"demons-attaque-event-2" : {
 			fr : "Seigneur ! Nous avons capturer l'un des leurs ! Malheureusement, il ne veut pas parler...",
@@ -65,6 +77,10 @@ define(["jquery"], function($){
 		/**
 		 * Village
 		 */
+		"demons-village-event-titre" : {
+			fr : "Capitale en feu",
+			en : "Fire on capital"
+		},
 		"demons-village-event" : {
 			fr : "Maître ! Les démons de feu sont aux portes de la capitale ! Que pouvons-nous faire ?!",
 			en : "Master ! Fire demons are at the gates of capital ! What can we do ?"
@@ -97,6 +113,10 @@ define(["jquery"], function($){
 		/**
 		 * Desert
 		 */
+		"demons-desert-event-titre" : {
+			fr : "Desert de feu",
+			en : "Desert of fire"
+		},
 		"demons-desert-event" : {
 			fr : "Le desert s'etend de plus en plus, les démons de feu gagnent du terrain !",
 			en : "The desert is spreading more and more, the fire demons are gaining ground!"

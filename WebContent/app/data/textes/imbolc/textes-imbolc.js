@@ -9,6 +9,10 @@ define(["jquery",
 			/**
 			 * Premier evenement
 			 */
+			"first-event-titre" : {
+				fr : "Les début d'un dieu",
+				en : "Beginning og a god"
+			},
 			"first-event" : {
 				fr : "Maître ! Vos fideles demandent à vous parler. Souhaitez-vous les recevoir ?",
 				en : "Master ! Your faithful ask to talk to you. Do you want to receive them ?"

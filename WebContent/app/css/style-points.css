@@ -180,4 +180,5 @@ clickanim .img {
 clickanim .text {
 	display: inline-block;
     font-size: 2vh;
+    margin: 0 0 0 0;
 }

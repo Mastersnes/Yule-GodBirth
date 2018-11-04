@@ -7,6 +7,10 @@ define(["jquery",
 		 * Imbolc - Refus
 		 * Demon de feu
 		 */
+		"refus-desert-event-titre" : {
+			fr : "Un village en cendre !",
+			en : "-"
+		},
 		"refus-desert-event" : {
 			fr : "Maitre ! Il semblerait que tout un village se soit transformé en desert ! Que doit-on faire ?",
 			en : "Master ! It seems that whole a village has been transformed into a desert ! What should we do ?"
@@ -23,6 +27,10 @@ define(["jquery",
 		/**
 		 * Sacrifice
 		 */
+		"refus-sacrifice-event-titre" : {
+			fr : "Une coulée de sang",
+			en : "-"
+		},
 		"refus-sacrifice-event" : {
 			fr : "Maître ! Un village sacrifie ses habitants en votre nom ! Que devons nous faire ?",
 			en : "Master ! A village sacrifices its inhabitants in your name ! What should we do ?"
@@ -63,6 +71,10 @@ define(["jquery",
 		/**
 		 * Maladie
 		 */
+		"refus-maladie-event-titre" : {
+			fr : "Un mal sombre",
+			en : "-"
+		},
 		"refus-maladie-event" : {
 			fr : "Maitre ! C'est terrible ! Une maladie inconnue decime un village entier ! Que pouvons nous faire ?",
 			en : "Master ! It's terrible ! An unknown illness decimates an entire village ! What could we do ?"
@@ -82,6 +94,10 @@ define(["jquery",
 		"refus-maladie-event-bruler-button" : {
 			fr : "Brûlez-tout",
 			en : "Burn everything"
+		},
+		"refus-maladie-event-2-titre" : {
+			fr : "Le prix d'une vie",
+			en : "-"
 		},
 		"refus-maladie-event-2" : {
 			fr : "Maitre ! Mais il reste encore des gens sain !",
@@ -111,6 +127,10 @@ define(["jquery",
 		/**
 		 * Question
 		 */
+		"refus-question-event-titre" : {
+			fr : "Imposteur ?",
+			en : "-"
+		},
 		"refus-question-event" : {
 			fr : "Maitre ! Certaines personnes pensent que vous n'êtes pas un vrai dieu !",
 			en : "Master ! Some peoples think that you're not really a god !"

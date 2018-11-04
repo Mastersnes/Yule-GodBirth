@@ -27,8 +27,6 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
 			$(".username").html(this.Textes.get("bienvenue") + " " + username);
 			
 			$(".username").removeClass("hidden");
-			if (isGuest) $("#login").removeClass("hidden");
-			else $("#login").addClass("hidden");
 		};
 		
 		this.score = function(key, value) {
@@ -55,8 +53,8 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
 		};
 		
 		this.login = function() {
-			console.log("login");
 			if (!this.isLoad) return;
+			if (!this.isGuest) return;
 			
 			var that = this;
 			this.kongregate.services.addEventListener('login', function(){

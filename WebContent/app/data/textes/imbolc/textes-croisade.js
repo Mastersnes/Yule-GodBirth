@@ -5,6 +5,10 @@ define(["jquery"], function($){
 		 * Croisade
 		 * Start
 		 */
+		"croisade-start-event-titre" : {
+			fr : "Guerre sacrée",
+			en : "Holy war"
+		},
 		"croisade-start-event" : {
 			fr : "Des quatre coins du monde, son nom doit retentir ! Les fous et les hérétiques qui ignore son existence doivent être punis !",
 			en : "From all over the world, his name must ring out! Fools and heretics who don't know it exists must be punished!"
@@ -17,6 +21,10 @@ define(["jquery"], function($){
 		/**
 		 * Benediction 
 		 */
+		"croisade-benediction-event-titre" : {
+			fr : "Feu sacré",
+			en : "Holy fire"
+		},
 		"croisade-benediction-event" : {
 			fr : "Seigneur, ces hérétique nient votre existence ! Ils doivent périrent dans les flammes !",
 			en : "Lord, these heretics deny your existence! They must have perished in the flames!"
@@ -33,6 +41,10 @@ define(["jquery"], function($){
 		/**
 		 * Attaques
 		 */
+		"croisade-attaques-event-titre" : {
+			fr : "Croisade",
+			en : "Crusade"
+		},
 		"croisade-attaques-event" : {
 			fr : "De toutes part, des villages se font attaquer par l'armée divine. Des milliers d'innocents meurent en votre nom...",
 			en : "On all sides, villages are being attacked by the divine army. Thousands of innocent people die in your name..."
@@ -65,6 +77,10 @@ define(["jquery"], function($){
 		/**
 		 * Graal
 		 */
+		"croisade-graal-event-titre" : {
+			fr : "Etrange grotte",
+			en : "-"
+		},
 		"croisade-graal-event" : {
 			fr : "Maître ! Nos éclaireurs rapporte qu'un groupe d’hérétique se cache dans une grotte gardée secrète... enfin jusqu'à aujourd'hui !",
 			en : "Master! Our scouts report a group of heretics hiding in a secret cave... at least until today!"

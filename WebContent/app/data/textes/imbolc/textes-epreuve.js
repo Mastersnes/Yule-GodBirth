@@ -5,6 +5,10 @@ define(["jquery"], function($){
 		 * Epreuve
 		 * Start
 		 */
+		"epreuve-start-event-titre" : {
+			fr : "Epreuve",
+			en : "-"
+		},
 		"epreuve-start-event" : {
 			fr : "Bien monsieur... Alors comme cela, vous dites être un dieu ? Dans ce cas, il va falloir nous le prouver !",
 			en : "Well sir... So you say you're a god? Then you'll have to prove it to us."
@@ -17,6 +21,10 @@ define(["jquery"], function($){
 		/**
 		 * Faire pleuvoir
 		 */
+		"epreuve-1-event-titre" : {
+			fr : "Epreuve de l'eau",
+			en : "-"
+		},
 		"epreuve-1-event" : {
 			fr : "Première épreuve : Dans cette première épreuve, vous devrez simplement faire pleuvoir. Allez-y j'attend...",
 			en : "First test : In this first trial, you will simply have to make it rain. Come on, I'll wait..."
@@ -37,6 +45,10 @@ define(["jquery"], function($){
 		/**
 		 * Question
 		 */
+		"epreuve-2-event-titre" : {
+			fr : "Epreuve du savoir",
+			en : "-"
+		},
 		"epreuve-2-event" : {
 			fr : "Seconde épreuve : Tout simplement, une question ! Quel est la réponse à la grande question de l'univers, de la vie, et de tout le reste...",
 			en : "Second test : Quite simply, a question! What is the answer to the great question of the universe, life, and everything else..."
@@ -77,6 +89,10 @@ define(["jquery"], function($){
 		/**
 		 * Tuer roger
 		 */
+		"epreuve-3-event-titre" : {
+			fr : "Epreuve du feu",
+			en : "-"
+		},
 		"epreuve-3-event" : {
 			fr : "Troisième épreuve : Tuez Roger ! (désolé Roger... c'est tombé sur toi...)",
 			en : "Third test : Kill Roger! (sorry Roger... it fell on you...)"
@@ -97,6 +113,10 @@ define(["jquery"], function($){
 		/**
 		 * Etoiles
 		 */
+		"epreuve-4-event-titre" : {
+			fr : "Epreuve de l'infini",
+			en : "-"
+		},
 		"epreuve-4-event" : {
 			fr : "Quatrième épreuve : Encore une question ! Combien y a-t-il d'étoiles dans le ciel ?",
 			en : "Fourth test : One more question! How many stars are in the sky?"
@@ -137,8 +157,12 @@ define(["jquery"], function($){
 		/**
 		 * Artefact
 		 */
+		"epreuve-5-event-titre" : {
+			fr : "Epreuve du vide",
+			en : "-"
+		},
 		"epreuve-5-event" : {
-			fr : "Dernière épreuve : C'est facile ! Vous devez simplement perdre un artefact aléatoire.",
+			fr : "Dernière épreuve : C'est facile ! Vous devez simplement abandonner un artefact aléatoire.",
 			en : "Last test : It's easy! You just have to lose a random artifact."
 		},
 		"epreuve-5-event-yes" : {
@@ -146,8 +170,8 @@ define(["jquery"], function($){
 			en : "You really are a god, that's a certainty now! We will be your followers forever!"
 		},
 		"epreuve-5-event-no" : {
-			fr : "Je comprend que vous ne souhaitiez pas perdre vos précieux bien mais vous remportez tout de même les épreuves ! Félicitation !",
-			en : "I understand that you did not want to lose your precious good but you still win the tests! Congratulations!"
+			fr : "Je comprend que vous ne souhaitiez pas perdre vos précieux bien mais vous remportez tout de même le lot de consolation !",
+			en : "I understand that you did not want to lose your precious good but you still win the consolation present !"
 		},
 	};
 	

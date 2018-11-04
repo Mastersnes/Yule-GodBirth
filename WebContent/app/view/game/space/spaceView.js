@@ -51,6 +51,10 @@ define(["jquery",
             this.godView.loop();
             this.ameliorationView.loop(game);
         };
+        
+        this.renderLoop = function(game) {
+            this.ameliorationView.renderLoop(game);
+        };
 
         this.click = function(game) {
         	this.ameliorationView.click(game);

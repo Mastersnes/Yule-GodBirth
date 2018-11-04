@@ -6,6 +6,10 @@ define(["jquery",
 		 * Imbolc - Accueil
 		 * Pluie
 		 */
+		"accueil-pluie-event-titre" : {
+			fr : "Un jour de pluie",
+			en : "Rain day"
+		},
 		"accueil-pluie-event" : {
 			fr : "Bonjour mon dieu. Nous sommes une pauvre famille de paysan qui luttont pour survivre.<br/>Pourriez-vous faire tomber la pluie pour ameliorer les recoltes ?<br/>Aidez-nous, je vous en prie !",
 			en : "Hello my god. We are a poor peasant family wich are strugling to survive.<br/>Could you make the rain down to improve our crops ?<br/>I beg of you, please help us !"
@@ -22,6 +26,10 @@ define(["jquery",
 		/**
 		 * Sacrifice
 		 */
+		"accueil-sacrifice-event-titre" : {
+			fr : "Une coulée de sang",
+			en : "A blood ???"
+		},
 		"accueil-sacrifice-event" : {
 			fr : "Cher maitre ! Acceptez ce sacrifice humain comme preuve de notre foi.<br/>Apportez-nous en retour votre soutien ! Ainsi soit-il...",
 			en : "Dear Master ! Accept this human sacrifice as proof of our faith.<br/>In return, give us your support ! May it be..."
@@ -46,6 +54,10 @@ define(["jquery",
 		/**
 		 * Blessure
 		 */
+		"accueil-blessure-event-titre" : {
+			fr : "Ca doit faire mal !",
+			en : "It's seems bad !"
+		},
 		"accueil-blessure-event" : {
 			fr : "Arrrghh ! Mon dieu ! Je vous en supplie, aidez-moi ! Je souffre !!!",
 			en : "Arrrghh ! My god ! Please, help me ! I'm suffering !!!"
@@ -70,6 +82,10 @@ define(["jquery",
 		/**
 		 * Riche
 		 */
+		"accueil-riche-event-titre" : {
+			fr : "Une richesse infinie",
+			en : "-"
+		},
 		"accueil-riche-event" : {
 			fr : "Cher dieu, les affaires ne vont pas fort en ce moment.<br/>J'aimerai être le plus riche des hommes !<br/>Je saurai vous recompenser...",
 			en : "Dear god, business is not going well rencently. I would like to be the richest man !<br/>I would know how to reward you..."
@@ -81,6 +97,10 @@ define(["jquery",
 		"accueil-riche-event-ko" : {
 			fr : "Dieu pathetique... Vous n'avez aucune ambition !",
 			en : "pathetic god... You don't have any ambition"
+		},
+		"accueil-riche-event-2-titre" : {
+			fr : "Impardonnable",
+			en : "-"
 		},
 		"accueil-riche-event-2" : {
 			fr : "Ce mortel vous a insulté ! Souhaitez-vous le punir ?",
@@ -106,6 +126,10 @@ define(["jquery",
 		/**
 		 * Question
 		 */
+		"accueil-question-event-titre" : {
+			fr : "Imposteur ?",
+			en : "-"
+		},
 		"accueil-question-event" : {
 			fr : "Bonjour ! Bon, je n'irais pas par quatres chemins... êtes-vous un vrai dieu ?",
 			en : "Hello ! Well, i won't beat around the bush... Are you a really god ?"

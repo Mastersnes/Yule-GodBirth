@@ -5,6 +5,10 @@ define(["jquery"], function($){
 		 * Zombie
 		 * Start
 		 */
+		"zombie-start-event-titre" : {
+			fr : "Un bruit dans la nuit",
+			en : "-"
+		},
 		"zombie-start-event" : {
 			fr : "Au milieu de la nuit, au cœur de la forêt, un homme marche.",
 			en : "In the middle of the night, in the heart of the forest, a man walks."
@@ -17,6 +21,10 @@ define(["jquery"], function($){
 		/**
 		 * Fou
 		 */
+		"zombie-fou-event-titre" : {
+			fr : "Fou furieux",
+			en : "Crazy man"
+		},
 		"zombie-fou-event" : {
 			fr : "Maître ! Un homme complètement fou se met à attaquer tout le monde sauvagement ! Nous devons l’arrêter !",
 			en : "Master! A crazy man starts attacking everyone savagely! We have to stop him!"
@@ -37,6 +45,10 @@ define(["jquery"], function($){
 		/**
 		 * Taverne
 		 */
+		"zombie-taverne-event-titre" : {
+			fr : "Une biere siouplait !",
+			en : "-"
+		},
 		"zombie-taverne-event" : {
 			fr : "La bataille fait rage dans la taverne ! Les gros bras tape sur les fortes têtes !<br/>Et déjà certains commencent à mordre comme des animaux !",
 			en : "The battle rages in the tavern! The big arms bang on the strong heads !<br/>And already some start biting like animals !"
@@ -73,6 +85,10 @@ define(["jquery"], function($){
 		/**
 		 * Enfant
 		 */
+		"zombie-enfant-event-titre" : {
+			fr : "Un monstre !",
+			en : "Monster !"
+		},
 		"zombie-enfant-event" : {
 			fr : "Mon dieu ! Mon enfant s'est fait mordre par une créature sauvage dans la foret ! Aidez-le, je vous en pris !",
 			en : "Oh, my God! My child got bit by a wild creature in the forest! Help him, please!"
@@ -89,6 +105,10 @@ define(["jquery"], function($){
 		/**
 		 * Blessure
 		 */
+		"zombie-blessure-event-titre" : {
+			fr : "Outch",
+			en : "Outch"
+		},
 		"zombie-blessure-event" : {
 			fr : "Arrrghh ! Mon dieu ! Je me suis encore blessé, aidez-moi ! S'il vous plait !!!",
 			en : "Arrrghh! Oh, my God! I hurt myself again, help me! Please!!!!"
@@ -97,6 +117,10 @@ define(["jquery"], function($){
 		/**
 		 * Etape 2
 		 */
+		"zombie-step-event-2-titre" : {
+			fr : "Epidemie",
+			en : "-"
+		},
 		"zombie-step-event-2" : {
 			fr : "De plus en plus de malades s'amoncellent dans les rues, errant dans les allées sombre, s'attaquant à quiconque croise leur chemin...",
 			en : "More and more sick people are piling up in the streets, wandering in the dark alleys, attacking anyone who crosses their path..."
@@ -105,6 +129,10 @@ define(["jquery"], function($){
 		/**
 		 * Groupe
 		 */
+		"zombie-groupe-event-titre" : {
+			fr : "Sauvage",
+			en : "Savage"
+		},
 		"zombie-groupe-event" : {
 			fr : "Maître ! Un groupe d'homme sauvage sème la terreur dans la région !<br/>Ils mordent tout le monde sans raison !",
 			en : "Master ! A group of wild men sows terror in the region !<br/>They bite everyone for no reason !"
@@ -129,6 +157,10 @@ define(["jquery"], function($){
 		/**
 		 * Village cata
 		 */
+		"zombie-cata-event-titre" : {
+			fr : "Dans les nuages",
+			en : "-"
+		},
 		"zombie-cata-event" : {
 			fr : "Maître ! Un village à l'est semble complètement paralysé ! Les habitants restent à regarder dans le vide, sans but...",
 			en : "Master! A village in the east seems completely paralyzed! The inhabitants remain to look into the emptiness, without goal..."
@@ -145,6 +177,10 @@ define(["jquery"], function($){
 		/**
 		 * Village guerre
 		 */
+		"zombie-guerre-event-titre" : {
+			fr : "Guerre des morts",
+			en : "Death War"
+		},
 		"zombie-guerre-event" : {
 			fr : "Maître ! De nombreux villages s'attaquent entre eux sauvagement et sans raison !",
 			en : "Master! Many villages attack each other savagely and for no reason!"
@@ -170,6 +206,10 @@ define(["jquery"], function($){
 		 * Niveau 3
 		 * Apocalypse
 		 */
+		"zombie-step-event-3-titre" : {
+			fr : "Apocalypse",
+			en : "Apocalypse"
+		},
 		"zombie-step-event-3" : {
 			fr : "C'est la fin... Les morts marchent sur le monde qui vie ses derniers instants...",
 			en : "This is the end... The dead walk on the world that lives its last moments..."
