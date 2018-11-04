@@ -77,7 +77,7 @@ define(["jquery"], function($){
                 name : "ostara",
                 nbr : 10,
 				next : "beltane",
-                text : ["cinematique-ostara"],
+                text : ["cinematique-ostara", "cinematique-ostara-1", "cinematique-ostara-2"],
                 events : {
                     typeEvents : [],
                     newEvents : []
@@ -90,7 +90,7 @@ define(["jquery"], function($){
                 name : "beltane",
                 nbr : 15,
 				next : "litha",
-                text : ["cinematique-beltane"],
+                text : ["cinematique-beltane", "cinematique-beltane-1", "cinematique-beltane-2"],
                 events : {
                     typeEvents : [],
                     newEvents : []
@@ -103,7 +103,7 @@ define(["jquery"], function($){
                 name : "litha",
                 nbr : 15,
 				next : "lammas",
-                text : ["cinematique-litha"],
+                text : ["cinematique-litha","cinematique-litha-1","cinematique-litha-2"],
                 events : {
                     typeEvents : [],
                     newEvents : []
@@ -116,7 +116,7 @@ define(["jquery"], function($){
                 name : "lammas",
                 nbr : 15,
 				next : "mabon",
-                text : ["cinematique-lammas"],
+                text : ["cinematique-lammas","cinematique-lammas-1","cinematique-lammas-2"],
                 events : {
                     typeEvents : [],
                     newEvents : []
@@ -129,7 +129,7 @@ define(["jquery"], function($){
                 name : "mabon",
                 nbr : 15,
 				next : "samhain",
-                text : ["cinematique-mabon"],
+                text : ["cinematique-mabon","cinematique-mabon-1","cinematique-mabon-2"],
                 events : {
                     typeEvents : [],
                     newEvents : []
@@ -142,7 +142,7 @@ define(["jquery"], function($){
                 name : "samhain",
                 nbr : 15,
 				next : "yule-fin",
-                text : ["cinematique-samhain"],
+                text : ["cinematique-samhain","cinematique-samhain-1","cinematique-samhain-2"],
                 events : {
                     typeEvents : [],
                     newEvents : []

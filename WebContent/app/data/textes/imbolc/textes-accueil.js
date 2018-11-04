@@ -31,8 +31,8 @@ define(["jquery",
 			en : "A blood ???"
 		},
 		"accueil-sacrifice-event" : {
-			fr : "Cher maitre ! Acceptez ce sacrifice humain comme preuve de notre foi.<br/>Apportez-nous en retour votre soutien ! Ainsi soit-il...",
-			en : "Dear Master ! Accept this human sacrifice as proof of our faith.<br/>In return, give us your support ! May it be..."
+			fr : "Cher maitre ! Acceptez ce sacrifice humain comme preuve de notre foi.<br/>Apportez-nous en retour votre soutien !",
+			en : "Dear Master ! Accept this human sacrifice as proof of our faith.<br/>In return, give us your support !"
 		},
 		"accueil-sacrifice-event-accept" : {
 			fr : "Nous continuerons à vous servir comme il se doit maitre. Votre bonté est grande.",

@@ -823,12 +823,28 @@ define(["jquery",
 			fr : "Ostara - Renouveau de la vie et de la terre",
 			en : "-"
 		},
+		"cinematique-ostara-1" : {
+			fr : "Notre dieu à bien grandit maintenant ! Félicitation, vous êtes sur la bonne voie !",
+			en : "-"
+		},
+		"cinematique-ostara-2" : {
+			fr : "De nouvelles responsabilités s'offrent à vous, n'oubliez pas de faire les bon choix !",
+			en : "-"
+		},
 
 		/**
 		 * Adulte - Beltane
 		 */
 		"cinematique-beltane" : {
 			fr : "Beltane - L'unification de deux âmes",
+			en : "-"
+		},
+		"cinematique-beltane-1" : {
+			fr : "Oh ! Nous nous retrouvons de nouveau ! Cela fait longtemps maintenant !",
+			en : "-"
+		},
+		"cinematique-beltane-2" : {
+			fr : "Ah l'amour ! N'est-ce pas magnifique ? Notre dieu a rencontré sa deesse !<br/>Une belle histoire commence...",
 			en : "-"
 		},
 
@@ -839,12 +855,28 @@ define(["jquery",
 			fr : "Litha - Mariage du ciel et de la terre",
 			en : "-"
 		},
+		"cinematique-litha-1" : {
+			fr : "Bienvenue ! Nous sommes heureux de vous voir !",
+			en : "-"
+		},
+		"cinematique-litha-2" : {
+			fr : "C'est un grand jour aujourd'hui ! Le dieu et la deesse se marient !<br/> Vous avez pensé au cadeau ?",
+			en : "-"
+		},
 
 		/**
 		 * Faiblesse - Lammas
 		 */
 		"cinematique-lammas" : {
 			fr : "Lammas - Le déclin du guerrier",
+			en : "-"
+		},
+		"cinematique-lammas-1" : {
+			fr : "Que de travail en ce moment, les prieres n'en finissent plus...",
+			en : "-"
+		},
+		"cinematique-lammas-2" : {
+			fr : "Notre dieu se fatigue, un peu de repos lui ferait le plus grand bien !",
 			en : "-"
 		},
 
@@ -855,12 +887,28 @@ define(["jquery",
 			fr : "Mabon - La sagesse de l'eternel",
 			en : "-"
 		},
+		"cinematique-mabon-1" : {
+			fr : "L'hiver arrive, tout doucement. Le dieu est très fatigué en ce moment.",
+			en : "-"
+		},
+		"cinematique-mabon-2" : {
+			fr : "Le repos ne suffit plus a lui redonner sa force d'antan...<br/>Vivement le printemps !",
+			en : "-"
+		},
 
 		/**
 		 * Mort - Samhain
 		 */
 		"cinematique-samhain" : {
 			fr : "Samhain - La fin d'un cycle",
+			en : "-"
+		},
+		"cinematique-samhain-1" : {
+			fr : "Triste jour... Nous sommes en deuil aujourd'hui. Notre dieu s'en est allé...",
+			en : "-"
+		},
+		"cinematique-samhain-2" : {
+			fr : "La deesse le pleure continuellement. Nous restons auprès d'elle pour la soutenir.",
 			en : "-"
 		},
 		

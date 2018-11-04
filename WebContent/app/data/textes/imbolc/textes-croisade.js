@@ -100,6 +100,14 @@ define(["jquery"], function($){
 		"croisade-graal-event-attaque" : {
 			fr : "Les hérétiques furent défait. Dans les décombres, on découvrit un étrange calice...",
 			en : "The heretics were defeated. In the rubble, a strange chalice was discovered..."
+		},
+		"croisade-graal-event-laisser-button" : {
+			fr : "Les laisser vivre",
+			en : "Let them alive"
+		},
+		"croisade-graal-event-laisser" : {
+			fr : "Les croisés s'en allerent, laissant la grotte intact.<br/>On perdit toute trace des heretiques de la grotte...",
+			en : "-"
 		}
 	};
 	
