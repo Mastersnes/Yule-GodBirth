@@ -62,10 +62,6 @@ define(["jquery",
 			fr : "Arrrghh ! Mon dieu ! Je vous en supplie, aidez-moi ! Je souffre !!!",
 			en : "Arrrghh ! My god ! Please, help me ! I'm suffering !!!"
 		},
-		"accueil-blessure-event-ok-button" : {
-			fr : "Le guerir",
-			en : "Heal him"
-		},
 		"accueil-blessure-event-ok" : {
 			fr : "Merci beaucoup seigneur ! Cette coupure au petit doigt etait reellement horrible !",
 			en : "Thanks my lord ! This cut to my little finger was really horrible !"
@@ -106,17 +102,9 @@ define(["jquery",
 			fr : "Ce mortel vous a insulté ! Souhaitez-vous le punir ?",
 			en : "This mortal insulted you ! Do you want to punish him ?"
 		},
-		"accueil-riche-event-tuer-button" : {
-			fr : "Le tuer",
-			en : "Kill him"
-		},
 		"accueil-riche-event-tuer" : {
 			fr : "L'homme s'ecroule, sans même s'en rendre compte...",
 			en : "The man collapse, without realizing it..."
-		},
-		"accueil-riche-event-partir-button" : {
-			fr : "Le laisser partir",
-			en : "Let him go"
 		},
 		"accueil-riche-event-partir" : {
 			fr : "À jamais, dieu de pacotille !",

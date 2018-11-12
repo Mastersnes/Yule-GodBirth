@@ -17,6 +17,18 @@ define(["jquery",
 				fr : "Pas mon probléme",
 				en : "Not my problem"
 			},
+			"accueil-riche-event-tuer-button" : {
+				fr : "Le tuer",
+				en : "Kill him"
+			},
+			"accueil-blessure-event-ok-button" : {
+				fr : "Le guerir",
+				en : "Heal him"
+			},
+			"accueil-riche-event-partir-button" : {
+				fr : "Le laisser partir",
+				en : "Let him go"
+			},
 	};
 	
 	return {

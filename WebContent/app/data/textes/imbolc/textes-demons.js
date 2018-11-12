@@ -57,17 +57,9 @@ define(["jquery"], function($){
 			fr : "« Nous sommes revenus pour conquerir ce monde et reprendre ce qui nous revient de droit ! ». Puis il finit par mourir sous la torture...",
 			en : "« We came back to conquer this world and take back what is rightfully ours ! ». Then he ends up, dying under torture..."
 		},
-		"demons-attaque-event-tuer-button" : {
-			fr : "Le tuer",
-			en : "Kill him"
-		},
 		"demons-attaque-event-tuer" : {
 			fr : "D'un simple geste, le démon vole en éclat ! Vos fidèles sont très impressionné !",
 			en : "With a simple gesture, the demons flies in pieces ! Your faithful are very impressed !"
-		},
-		"demons-attaque-event-partir-button" : {
-			fr : "Le laisser partir",
-			en : "Let him go"
 		},
 		"demons-attaque-event-partir" : {
 			fr : "Vous laisser le démon s'en retourner parmi les siens. Vos fidèles vous regarde, désabusés. Ils ont l'impression d'avoir été trahis...",
@@ -136,10 +128,6 @@ define(["jquery"], function($){
 		"demons-desert-event-innonder" : {
 			fr : "Il plu durant 1 an au bout duquel les désert retrouvèrent peu à peu leur état d'origine.<br/>Beaucoup périrent sous les inondations...",
 			en : "It rained during 1 year at the end of which the desert gradually returned to its original state.<br/>Much died under the floods..."
-		},
-		"demons-desert-event-laisser-button" : {
-			fr : "Laisser",
-			en : "Leave as it is"
 		},
 		"demons-desert-event-laisser" : {
 			fr : "Le désert continua à s’étendre, tuant et asséchant les nombreux village...",

@@ -88,7 +88,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "demons-attaque-event-tuer-button",
+				        	   name : "accueil-riche-event-tuer-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 15,
@@ -100,7 +100,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "demons-attaque-event-partir-button",
+				        	   name : "accueil-riche-event-partir-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 0,
@@ -205,7 +205,7 @@ define(["jquery"], function($){
 			             }
 			         },
 			         {
-			             name : "demons-desert-event-laisser-button",
+			             name : "ignore-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
                         		 croyance : -30,

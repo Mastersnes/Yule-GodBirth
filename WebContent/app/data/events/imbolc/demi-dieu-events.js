@@ -24,6 +24,116 @@ define(["jquery"], function($){
 			             }
 			         }			    
 			    ]
+			},
+			
+			"demi-dieu-eau-event" : {
+				name : "demi-dieu-eau-event",
+			    text : "demi-dieu-eau-event",
+			    rarity : 50,
+			    unique : true,
+			    starter : true,
+			    actions : [
+			         {
+			             name : "acceptButton",
+			             action : function(game) {
+			            	 game.gainLoop({
+                            	 croyance : 20,
+                            	 illumination : 0,
+                            	 bien : 0,
+                            	 mal : 0
+                             }, "quete");
+			                 game.alertPopup("demi-dieu-eau-event-accept");
+			             }
+			         },
+			         {
+			             name : "refusButton",
+			             action : function(game) {
+			            	 game.gainLoop({
+                            	 croyance : 0,
+                            	 illumination : 0,
+                            	 bien : 10,
+                            	 mal : 0
+                             }, "quete");
+			            	 game.pointManager.addPointsPercent({
+                        		 croyance : -5,
+                        		 illumination : 0,
+                        		 bien : 0,
+                        		 mal : 0
+                        	 }, "quete");
+			                 game.alertPopup("demi-dieu-eau-event-refus");
+			             }
+			         }
+			    ]
+			},
+			
+			"demi-dieu-vin-event" : {
+				name : "demi-dieu-vin-event",
+			    text : "demi-dieu-vin-event",
+			    rarity : 100,
+			    unique : true,
+			    starter : true,
+			    actions : [
+			         {
+			             name : "acceptButton",
+			             action : function(game) {
+			            	 game.gainLoop({
+                            	 croyance : 20,
+                            	 illumination : 0,
+                            	 bien : 0,
+                            	 mal : 10
+                             }, "quete");
+			            	 game.eventManager.addEvents(["demi-dieu-scene-event"]);
+			                 game.alertPopup("demi-dieu-vin-event-accept");
+			             }
+			         },
+			         {
+			             name : "refusButton",
+			             action : function(game) {
+			            	 game.gainLoop({
+                            	 croyance : 0,
+                            	 illumination : 0,
+                            	 bien : 10,
+                            	 mal : 0
+                             }, "quete");
+			                 game.alertPopup("demi-dieu-vin-event-refus");
+			             }
+			         }
+			    ]
+			},
+			
+			"demi-dieu-scene-event" : {
+				name : "demi-dieu-scene-event",
+			    text : "demi-dieu-scene-event",
+			    rarity : 150,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "acceptButton",
+			             action : function(game) {
+			            	 game.gainLoop({
+                            	 croyance : 30,
+                            	 illumination : 0,
+                            	 bien : 10,
+                            	 mal : 0
+                             }, "quete");
+			            	 game.eventManager.addEvents(["demi-dieu-passion-event"]);
+			                 game.alertPopup("demi-dieu-scene-event-accept");
+			             }
+			         },
+			         {
+			             name : "refusButton",
+			             action : function(game) {
+			            	 game.gainLoop({
+                            	 croyance : 0,
+                            	 illumination : 0,
+                            	 bien : 0,
+                            	 mal : 10
+                             }, "quete");
+			            	 game.eventManager.addEvents(["demi-dieu-passion-late-event"]);
+			                 game.alertPopup("demi-dieu-scene-event-refus");
+			             }
+			         }
+			    ]
 			}
 	};
 	
