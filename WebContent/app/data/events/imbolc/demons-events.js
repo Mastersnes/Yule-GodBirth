@@ -100,7 +100,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "accueil-riche-event-partir-button",
+				        	   name : "laisser-partir-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 0,

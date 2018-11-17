@@ -169,6 +169,10 @@ define(["jquery"], function($){
 			fr : "Vous êtes réellement un dieu, C'est une certitude à présent ! Nous serons éternellement vos fidèles !",
 			en : "You really are a god, that's a certainty now! We will be your followers forever!"
 		},
+		"epreuve-5-event-yes-2" : {
+			fr : "Prenez ce cadeau pour preuve de notre foi !",
+			en : "Take this present to prove our faith !"
+		},
 		"epreuve-5-event-no" : {
 			fr : "Je comprend que vous ne souhaitiez pas perdre vos précieux bien mais vous remportez tout de même le lot de consolation !",
 			en : "I understand that you did not want to lose your precious good but you still win the consolation present !"

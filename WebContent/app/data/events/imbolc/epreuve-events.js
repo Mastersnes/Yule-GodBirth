@@ -242,7 +242,10 @@ define(["jquery"], function($){
 			        		}, "quete");
 
 			     			game.alertPopup("epreuve-5-event-yes", function() {
-			     				game.artefactsView.add("troisieme-oeil");
+			     				game.artefactsView.remove(null);
+			     				game.alertPopup("epreuve-5-event-yes-2", function() {
+			     					game.artefactsView.add("troisieme-oeil");
+			     				});
 			     			});
 			             }
 			         },

@@ -116,7 +116,6 @@ define(["jquery"], function($){
                             	 bien : 10,
                             	 mal : 0
                              }, "quete");
-			            	 game.eventManager.addEvents(["demi-dieu-passion-event"]);
 			                 game.alertPopup("demi-dieu-scene-event-accept");
 			             }
 			         },
@@ -129,7 +128,6 @@ define(["jquery"], function($){
                             	 bien : 0,
                             	 mal : 10
                              }, "quete");
-			            	 game.eventManager.addEvents(["demi-dieu-passion-late-event"]);
 			                 game.alertPopup("demi-dieu-scene-event-refus");
 			             }
 			         }

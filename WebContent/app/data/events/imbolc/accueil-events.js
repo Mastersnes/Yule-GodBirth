@@ -102,7 +102,7 @@ define(["jquery","app/utils/utils",
 			    starter : true,
 			    actions : [
 			         {
-			             name : "accueil-blessure-event-ok-button",
+			             name : "guerir-button",
 			             action : function(game) {
                              if (Utils.rand(0, 10) < 5) {
 				            	 game.gainLoop({
@@ -178,7 +178,7 @@ define(["jquery","app/utils/utils",
 				unique : true,
 				actions : [
 				           {
-				        	   name : "accueil-riche-event-tuer-button",
+				        	   name : "le-tuer-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 		                            	 croyance : 0,
@@ -191,7 +191,7 @@ define(["jquery","app/utils/utils",
 				        	   }
 				           },
 				           {
-				        	   name : "accueil-riche-event-partir-button",
+				        	   name : "laisser-partir-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 		                            	 croyance : 0,

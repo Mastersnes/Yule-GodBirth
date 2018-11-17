@@ -128,6 +128,7 @@ define(["jquery",
          * Retire l'artefact de la liste
          */
         this.remove = function(artefact) {
+        	if (!artefact) artefact = this.inventaire.getFirst();
         	if (!this.inventaire.contains(artefact)) return;
         	this.inventaire.remove(artefact);
         	this.saveManager.save("inventaire", this.inventaire.data);

@@ -1,6 +1,7 @@
 'use strict';
 define(["jquery",
-        "app/data/textes/imbolc/textes-imbolc"], function($, TextesImbolc){
+        "app/data/textes/imbolc/textes-imbolc",
+        "app/data/textes/ostara/textes-ostara"], function($, TextesImbolc, TextesOstara){
 	var data = {
 			/**
 			 * Boutons standard
@@ -8,6 +9,10 @@ define(["jquery",
 			"enquete-button" : {
 				fr : "Enqueter",
 				en : "Investigate"
+			},
+			"intervenir-button" : {
+				fr : "Intervenir",
+				en : "-"
 			},
 			"ignore-button" : {
 				fr : "Ignorer",
@@ -17,23 +22,40 @@ define(["jquery",
 				fr : "Pas mon probléme",
 				en : "Not my problem"
 			},
-			"accueil-riche-event-tuer-button" : {
+			"le-tuer-button" : {
 				fr : "Le tuer",
 				en : "Kill him"
 			},
-			"accueil-blessure-event-ok-button" : {
+			"les-tuer-button" : {
+				fr : "Tous les tuer",
+				en : "Kill them all"
+			},
+			"guerir-button" : {
 				fr : "Le guerir",
 				en : "Heal him"
 			},
-			"accueil-riche-event-partir-button" : {
+			"laisser-partir-button" : {
 				fr : "Le laisser partir",
 				en : "Let him go"
+			},
+			"enfermer-button" : {
+				fr : "Les enfermer",
+				en : "Lock them up"
+			},
+			"les-arreter-button" : {
+				fr : "Les arreter",
+				en : "Stop them"
+			},
+			"laisser-tomber-button" : {
+				fr : "Laisser tomber",
+				en : "Give up"
 			},
 	};
 	
 	return {
 		get : function(key) {
 			var text = TextesImbolc.get(key);
+			if (!text) text = TextesOstara.get(key);
 			if (!text) text = data[key];
 			return text;
 		}

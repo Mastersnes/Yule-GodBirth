@@ -911,6 +911,10 @@ define(["jquery",
 			fr : "La deesse le pleure continuellement. Nous restons auprès d'elle pour la soutenir.",
 			en : "-"
 		},
+		"cinematique-samhain-3" : {
+			fr : "Pourrez-vous gerer seul les multiples demandes qui proviennent du monde humain ?",
+			en : "-"
+		},
 		
 		/**
 		 * Success

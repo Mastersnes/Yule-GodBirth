@@ -44,7 +44,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "zombie-fou-event-tuer-button",
+				        	   name : "le-tuer-button",
 				        	   action : function(game) {
 				        		   game.pointManager.addPointsPercent({
 		                        		 croyance : -30,
@@ -92,7 +92,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "zombie-taverne-event-enferme-button",
+				        	   name : "enfermer-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 0,
@@ -105,7 +105,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "zombie-taverne-event-tuer-button",
+				        	   name : "les-tuer-button",
 				        	   action : function(game) {
 				        		   game.pointManager.addPointsPercent({
 		                        		 croyance : -20,
@@ -221,7 +221,7 @@ define(["jquery"], function($){
 				epidemie : 2,
 				actions : [
 				           {
-				        	   name : "zombie-groupe-event-enfermer-button",
+				        	   name : "enfermer-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 0,
@@ -234,7 +234,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "zombie-groupe-event-tuer-button",
+				        	   name : "les-tuer-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 0,
@@ -298,7 +298,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "zombie-guerre-event-arreter-button",
+				        	   name : "les-arreter-button",
 				        	   action : function(game) {
 				        		   game.eventManager.epidemie+=2;
 				        		   game.alertPopup("zombie-guerre-event-arreter");
@@ -336,7 +336,7 @@ define(["jquery"], function($){
 				unique : true,
 				actions : [
 				           {
-				        	   name : "zombie-step-event-3-laisser-button",
+				        	   name : "laisser-tomber-button",
 				        	   action : function(game) {
 				        		   game.alertPopup("zombie-step-event-3-laisser");
 				        		   game.gainLoop({

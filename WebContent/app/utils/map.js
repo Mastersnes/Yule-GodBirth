@@ -32,6 +32,12 @@ define(["jquery"], function($){
 		this.get = function(key) {
 			return this.data[key];
 		};
+
+		this.getFirst = function() {
+			for (var index in this.data) {
+				return index;
+			}
+		};
 		
 		this.getKey = function(value) {
 			for (var index in this.data) {

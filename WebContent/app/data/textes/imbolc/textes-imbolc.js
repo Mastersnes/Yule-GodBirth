@@ -24,6 +24,18 @@ define(["jquery",
 			"first-event-ko" : {
 				fr : "Très bien. Je vais leur demander de quitter les lieux.",
 				en : "Alright Master. I'll ask them to leave this place."
+			},
+			
+			/**
+			 * Rebellion
+			 */
+			"rebellion-start-event-titre" : {
+				fr : "Rebellion !",
+				en : "-"
+			},
+			"rebellion-start-event" : {
+				fr : "Maitre ! Les mortel vous meprisent ! Tout est perdu, plus personne ne croit en vous désormais...",
+				en : "-"
 			}
 	};
 	

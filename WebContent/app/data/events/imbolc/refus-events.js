@@ -144,7 +144,7 @@ define(["jquery",
 				        	   }
 				           },
 				           {
-				        	   name : "refus-maladie-event-laisser-button",
+				        	   name : "ignore-button",
 				        	   action : function(game) {
 				        		   game.eventManager.addEvents(ZombieEvents.start());
 				        		   game.alertPopup("refus-maladie-event-laisser");

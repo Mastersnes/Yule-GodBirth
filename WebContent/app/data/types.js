@@ -80,7 +80,7 @@ define(["jquery"], function($){
                 text : ["cinematique-ostara", "cinematique-ostara-1", "cinematique-ostara-2"],
                 events : {
                     typeEvents : [],
-                    newEvents : []
+                    newEvents : ["ostara-start-event"]
                 }
             },
             /**
@@ -142,7 +142,7 @@ define(["jquery"], function($){
                 name : "samhain",
                 nbr : 15,
 				next : "yule-fin",
-                text : ["cinematique-samhain","cinematique-samhain-1","cinematique-samhain-2"],
+                text : ["cinematique-samhain", "cinematique-samhain-1", "cinematique-samhain-2", "cinematique-samhain-3"],
                 events : {
                     typeEvents : [],
                     newEvents : []

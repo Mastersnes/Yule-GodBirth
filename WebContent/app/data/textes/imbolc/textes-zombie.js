@@ -65,17 +65,9 @@ define(["jquery"], function($){
 			fr : "Avec vos encouragement tout le village participa à la plus grande bagarre de taverne du siècle. On ne retrouva plus personne le lendemain...",
 			en : "With your encouragement the whole village participated in the biggest tavern fight of the century. No one was found the next day..."
 		},
-		"zombie-taverne-event-enferme-button" : {
-			fr : "Les enfermer",
-			en : "Lock them up"
-		},
 		"zombie-taverne-event-enferme" : {
 			fr : "On enferma les responsables de la bagarre : des hommes complètement fous et agressif. Ici ils ne feraient plus de mal...",
 			en : "Those responsible for the fight were locked up: completely mad and aggressive men. Here they wouldn't do any more harm..."
-		},
-		"zombie-taverne-event-tuer-button" : {
-			fr : "Tous les tuer",
-			en : "Kill Them all"
 		},
 		"zombie-taverne-event-tuer" : {
 			fr : "La taverne fut ensevelie emportant avec elle les hommes qu'elle comptait. On construisit un tombeau à cet endroit...<br>Certaines légendes disent que l'on peut y entendre le râle des mort la nuit...",
@@ -137,17 +129,9 @@ define(["jquery"], function($){
 			fr : "Maître ! Un groupe d'homme sauvage sème la terreur dans la région !<br/>Ils mordent tout le monde sans raison !",
 			en : "Master ! A group of wild men sows terror in the region !<br/>They bite everyone for no reason !"
 		},
-		"zombie-groupe-event-enfermer-button" : {
-			fr : "Les enfermer",
-			en : "Lock them up"
-		},
 		"zombie-groupe-event-enfermer" : {
 			fr : "Les sauvages restèrent calme quelques temps dans leur geôle. Ainsi on les libéra dans une lointaine contrée...",
 			en : "The savages remained calm for some time in their gaol. So they were set free in a faraway land..."
-		},
-		"zombie-groupe-event-tuer-button" : {
-			fr : "Les tuer",
-			en : "Kill them all"
 		},
 		"zombie-groupe-event-tuer" : {
 			fr : "Les sauvages disparurent sur l'instant. On entendit plus jamais parler d'eux...",
@@ -189,10 +173,6 @@ define(["jquery"], function($){
 			fr : "Le massacre continua encore et encore. De nombreuses personnes disparurent mais leur cadavre ne furent jamais retrouvé...",
 			en : "The slaughter went on and on. Many people disappeared but their bodies were never found..."
 		},
-		"zombie-guerre-event-arreter-button" : {
-			fr : "Les arreter",
-			en : "Stop them"
-		},
 		"zombie-guerre-event-arreter" : {
 			fr : "Les villages en guerre se trouvèrent bloqué. Les habitant en quarantaine continuèrent à se massacrer un temps puis stoppèrent les combat.<br/>La situation était maîtrisée...",
 			en : "The villages at war were blocked. The quarantined inhabitants continued to massacre each other for a time and then stopped the fighting.<br/>The situation was under control..."
@@ -213,10 +193,6 @@ define(["jquery"], function($){
 		"zombie-step-event-3" : {
 			fr : "C'est la fin... Les morts marchent sur le monde qui vie ses derniers instants...",
 			en : "This is the end... The dead walk on the world that lives its last moments..."
-		},
-		"zombie-step-event-3-laisser-button" : {
-			fr : "Laisser tomber",
-			en : "Give up"
 		},
 		"zombie-step-event-3-laisser" : {
 			fr : "Le monde sombra dans le néant ne laissant que des cadavres puant... Plus rien ne resta que vous et votre pouvoir...",

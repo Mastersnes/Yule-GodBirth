@@ -76,26 +76,6 @@ define(["jquery"], function($){
 		"demi-dieu-scene-event-refus" : {
 			fr : "Ohh c'est dommage, ca aurait été chouette que tu sois là papa...",
 			en : "-"	
-		},
-		
-		/**
-		 * Passion retard
-		 */
-		"demi-dieu-passion-late-event-titre" : {
-			fr : "Trahison",
-			en : "-"
-		},
-		"demi-dieu-passion-late-event" : {
-			fr : "Maitre ! C'est votre fils ! Il a été accusé de sorcellerie ! Ils veulent le tuer !",
-			en : "-"
-		},
-		"demi-dieu-scene-event-accept" : {
-			fr : "-",
-			en : "-"
-		},
-		"demi-dieu-scene-event-refus" : {
-			fr : "-",
-			en : "-"	
 		}
 	};
 	

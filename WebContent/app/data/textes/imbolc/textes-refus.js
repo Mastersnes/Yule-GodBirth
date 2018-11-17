@@ -83,10 +83,6 @@ define(["jquery",
 			fr : "Tout est mort sur place et certains cadavres semblent avoir disparus.<br/>Les villages proches parlent de créatures humanoïdes...",
 			en : "All is dead here and somes corpses seems to have disappeared.<br/>Nearby villages talk of humanoid creatures..."
 		},
-		"refus-maladie-event-laisser-button" : {
-			fr : "Laisser",
-			en : "Let it"
-		},
 		"refus-maladie-event-laisser" : {
 			fr : "Dans les jours qui suivirent, le mal s'étendis aux villages environnant.<br/>Certains parlèrent de créatures humanoïdes...",
 			en : "In the following days, the illness spread to nearby villages.<br/>Some peoples talked about humanoid creatures..."

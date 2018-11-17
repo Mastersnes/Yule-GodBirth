@@ -26,6 +26,7 @@ function($, _, Utils, page, Events) {
 			this.uniquesEvents = this.saveManager.load("uniquesEvents");
 			this.rebellion = this.saveManager.load("rebellion");
 			this.epidemie = this.saveManager.load("epidemie");
+			this.sagesse = this.saveManager.load("sagesse");
 		};
 		
 		this.loop = function() {
