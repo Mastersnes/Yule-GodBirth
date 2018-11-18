@@ -110,8 +110,30 @@ define(["jquery","app/utils/utils"
 			    starter: true,
 			    actions : [
 			         {
-			             name : "continuerButton",
+			             name : "lune-etude1-event-aider-button",
 			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 10,
+			            		 illumination : 5,
+			            		 bien : 0,
+			            		 mal : 0
+			            	 }, "quete");
+			            	 game.alertPopup("lune-etude1-event-help");
+			             }
+			         },
+			         {
+			             name : "ignore-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 5,
+			            		 illumination : 10,
+			            		 bien : 0,
+			            		 mal : 10
+			            	 }, "quete");
+			            	 game.eventManager.sagesse++;
+			            	 game.alertPopup("lune-etude1-event-nohelp", function() {
+			            		 game.alertPopup("lune-etude1-event-nohelp-2");
+			            	 });
 			             }
 			         }
 			    ]
@@ -121,8 +143,8 @@ define(["jquery","app/utils/utils"
 			 * Magie de la lune
 			 */
 			"lune-magie1-event" : {
-				name : "lune-etude1-event",
-			    text : "lune-etude1-event",
+				name : "lune-magie1-event",
+			    text : "lune-magie1-event",
 			    rarity : 60,
 			    unique : true,
 			    starter: true,

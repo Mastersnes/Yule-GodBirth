@@ -68,12 +68,40 @@ define(["jquery"],
 			 * Etude de la lune
 			 */
 			"lune-etude1-event-titre" : {
-				fr : "",
-				en : ""
+				fr : "Les secrets de l'Univers",
+				en : "Secrets of Universe"
 			},
 			"lune-etude1-event" : {
-				fr : "",
-				en : ""
+				fr : "De nombreux hommes à travers le monde cherche à percer les secrets de l'univers.<br/>Torique ? Infinie ? Ils se trompent tellement... Devrions-nous les aider ?",
+				en : "Many people around the world are trying to unlock the secrets of the universe. <br/>Toric? Infinite? They are so wrong... Should we help them?"
+			},
+			"lune-etude1-event-aider-button" : {
+				fr : "Les aider",
+				en : "Help them"
+			},
+			"lune-etude1-event-help" : {
+				fr : "De nombreux mystères furent révéler à une femme choisie au hasard parmi la population terrestre.<br/>Elle fut chargée de révéler la vérité a ses semblable... Une nouvelle ère de savoir commença !",
+				en : "Many mysteries were revealed to a woman chosen at random from the earthly population.<br/>She was charged with revealing the truth to her fellow men... A new era of knowledge began !"
+			},
+			"lune-etude1-event-nohelp" : {
+				fr : "Les hommes ne perdirent pas espoirs. De nombreux peuples s’allièrent afin de chercher la vérité dans les manifestations spatiales.",
+				en : "The men did not lose hope. Many peoples joined forces to seek the truth in space manifestations."
+			},
+			"lune-etude1-event-nohelp-2" : {
+				fr : "A chaque événement, l'Humanité avançait, et la sagesse commune grandissait. Une ère de curiosité avait commencé.",
+				en : "At each event, Humanity advanced, and common wisdom grew. An era of curiosity had begun."
+			},
+			
+			/**
+			 * Magie de la lune
+			 */
+			"lune-magie1-event-titre" : {
+				fr : "-",
+				en : "-"
+			},
+			"lune-magie1-event" : {
+				fr : "-",
+				en : "-"
 			},
 	};
 	
