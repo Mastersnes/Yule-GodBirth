@@ -1,10 +1,9 @@
 'use strict';
 define(["jquery",
-        "app/data/textes/imbolc/textes-accueil",
-        "app/data/textes/imbolc/textes-refus",
-        "app/data/textes/imbolc/textes-croisade",
-        "app/data/textes/imbolc/textes-epreuve"], 
-        function($, TextesAccueil, TextesRefus, TextesCroisade, TextesEpreuve){
+        "app/data/textes/ostara/textes-guerre",
+        "app/data/textes/ostara/textes-nature",
+        "app/data/textes/ostara/textes-lune"], 
+        function($, TextesGuerre, TextesNature, TextesLune){
 	var data = {
 			/**
 			 * Premier evenement
@@ -21,10 +20,9 @@ define(["jquery",
 	
 	return {
 		get : function(key) {
-			var text = TextesAccueil.get(key);
-			if (!text) text = TextesRefus.get(key);
-			if (!text) text = TextesCroisade.get(key);
-			if (!text) text = TextesEpreuve.get(key);
+			var text = TextesGuerre.get(key);
+			if (!text) text = TextesNature.get(key);
+			if (!text) text = TextesLune.get(key);
 			if (!text) text = data[key];
 			return text;
 		}

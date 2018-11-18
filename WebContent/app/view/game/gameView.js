@@ -139,9 +139,9 @@ function($, _, Utils, PopupUtils, page, TextManager,
         	this.spaceView.ameliorationView.loop(this, multiplier, from);
         };
         
-        this.gameOver = function() {
-            this.endGame = true;
-            this.endView.render(true);
+        this.gameOver = function(gagne) {
+        	this.endGame = true;
+            this.endView.render(gagne);
         };
         
         this.showConstellation = function(callback) {

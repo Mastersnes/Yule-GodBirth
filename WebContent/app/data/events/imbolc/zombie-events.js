@@ -338,13 +338,9 @@ define(["jquery"], function($){
 				           {
 				        	   name : "laisser-tomber-button",
 				        	   action : function(game) {
-				        		   game.alertPopup("zombie-step-event-3-laisser");
-				        		   game.gainLoop({
-				        			   croyance : 0,
-				        			   illumination : 0,
-				        			   bien : 0,
-				        			   mal : 50
-				        		   }, "quete");
+				        		   game.alertPopup("zombie-step-event-3-laisser", function() {
+				        			   game.gameOver();
+				        		   });
 				        	   }
 				           },
 				           {
@@ -362,7 +358,15 @@ define(["jquery"], function($){
 				        			   bien : 0,
 				        			   mal : 0
 				        		   }, "quete");
-				        		   game.alertPopup("zombie-step-event-3-bruler");
+				        		   game.alertPopup("zombie-step-event-3-bruler", function() {
+				        			   for (var index in data) {
+						     				var elmt = data[index];
+						     				if (elmt) {
+						     					game.eventManager.epidemie = 0;
+						     					game.eventManager.removeEvent(elmt.name);
+						     				}
+						     			}
+				        		   });
 				        	   }
 				           },
 				           {

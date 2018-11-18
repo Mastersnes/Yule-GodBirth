@@ -20,3 +20,6 @@ artefactsList > artefact.idole-mort .icon {
 artefactsList > artefact.troisieme-oeil .icon {
 	background-image: url("../img/game/artefact/3eoeil.png");
 }
+artefactsList > artefact.fragment-lunaire .icon {
+	background-image: url("../img/game/artefact/fragment-lunaire.png");
+}

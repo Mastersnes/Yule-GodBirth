@@ -1,10 +1,9 @@
 'use strict';
 define(["jquery","app/utils/utils",
         "app/data/events/ostara/guerre-events",
-        "app/data/events/ostara/croyance-events",
         "app/data/events/ostara/nature-events",
         "app/data/events/ostara/lune-events"
-        ], function($, Utils, GuerreEvents, CroyanceEvents, NatureEvents, LuneEvents){
+        ], function($, Utils, GuerreEvents, NatureEvents, LuneEvents){
 	/**
 	 * Ostara
 	 */
@@ -25,7 +24,6 @@ define(["jquery","app/utils/utils",
                             	 mal : 0
                              }, "quete");
                              game.eventManager.addEvents(GuerreEvents.start());
-                             game.eventManager.addEvents(CroyanceEvents.start());
                              game.eventManager.addEvents(NatureEvents.start());
                              game.eventManager.addEvents(LuneEvents.start());
 			             }
@@ -36,7 +34,10 @@ define(["jquery","app/utils/utils",
 	
 	return {
 		get : function(key) {
-			var event = data[key];
+			var event = GuerreEvents.get(key);
+		    if (!event) event = NatureEvents.get(key);
+		    if (!event) event = LuneEvents.get(key);
+            if (!event) event = data[key];
             return event;
 		},
 		start : function(key) {

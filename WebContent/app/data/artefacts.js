@@ -5,7 +5,7 @@ define([ "jquery" ], function($) {
 			name : "torque",
 			description : "torque-desc",
 			gains : {
-				croyance : 200,
+				croyance : 100,
 				illumination : 50,
 				bien : 0,
 				mal : 50
@@ -45,8 +45,8 @@ define([ "jquery" ], function($) {
 			name : "idole-mort",
 			description : "idole-mort-desc",
 			gains : {
-				croyance : 300,
-				illumination : 200,
+				croyance : 200,
+				illumination : 100,
 				bien : 70,
 				mal : 150
 			},
@@ -56,9 +56,19 @@ define([ "jquery" ], function($) {
 			description : "saint-graal-desc",
 			gains : {
 				croyance : 100,
-				illumination : 300,
+				illumination : 200,
 				bien : 50,
 				mal : 100
+			},
+		},
+		"fragment-lunaire" : {
+			name : "fragment-lunaire",
+			description : "fragment-lunaire-desc",
+			gains : {
+				croyance : 150,
+				illumination : 150,
+				bien : 100,
+				mal : 0
 			},
 		}
 	};
