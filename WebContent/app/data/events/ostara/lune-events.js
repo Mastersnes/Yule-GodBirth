@@ -150,9 +150,89 @@ define(["jquery","app/utils/utils"
 			    starter: true,
 			    actions : [
 			         {
-			             name : "continuerButton",
+			             name : "ignore-button",
 			             action : function(game) {
+			            	 game.pointManager.addPointsPercent({
+			            		 croyance : -10,
+			            		 illumination : -20,
+			            		 bien : 0,
+			            		 mal : 0
+			            	}, "quete");
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 10
+			            	 }, "quete");
+			            	 game.alertPopup("lune-magie1-event-ko");
 			             }
+			         },
+			         {
+			             name : "enquete-button",
+			             action : function(game) {
+			            	 game.eventManager.addEvents(["lune-magie2-event"]);
+			            	 game.alertPopup("lune-magie1-event-ok");
+			             }
+			         }
+			    ]
+			},
+			
+			"lune-magie2-event" : {
+				name : "lune-magie2-event",
+			    text : "lune-magie2-event",
+			    rarity : 100,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "ignore-button",
+			             action : function(game) {
+			            	 game.pointManager.addPointsPercent({
+			            		 croyance : -10,
+			            		 illumination : -20,
+			            		 bien : 0,
+			            		 mal : 0
+			            	}, "quete");
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 10
+			            	 }, "quete");
+			            	 game.alertPopup("lune-magie1-event-ko");
+			             }
+			         },
+			         {
+			        	 name : "lune-magie2-event-sauver1-button",
+			        	 action : function(game) {
+			        		 game.pointManager.addPointsPercent({
+			            		 croyance : 0,
+			            		 illumination : -80,
+			            		 bien : 0,
+			            		 mal : 0
+			            	}, "quete");
+			            	 game.gainLoop({
+			            		 croyance : 20,
+			            		 illumination : 0,
+			            		 bien : 10,
+			            		 mal : 0
+			            	 }, "quete");
+			        		 game.alertPopup("lune-magie2-event-sauver1");
+			        	 }
+			         },
+			         {
+			        	 name : "lune-magie2-event-sauver2-button",
+			        	 action : function(game) {
+			        		 game.gainLoop({
+			            		 croyance : 10,
+			            		 illumination : 20,
+			            		 bien : 10,
+			            		 mal : 0
+			            	 }, "quete");
+			        		 game.alertPopup("lune-magie2-event-sauver2", function() {
+			        			 game.artefactsView.remove("saint-graal");
+			        		 });
+			        	 },
+			        	 conditions : [{name : "saint-graal"}]
 			         }
 			    ]
 			}

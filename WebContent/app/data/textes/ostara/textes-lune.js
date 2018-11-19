@@ -73,7 +73,7 @@ define(["jquery"],
 			},
 			"lune-etude1-event" : {
 				fr : "De nombreux hommes à travers le monde cherche à percer les secrets de l'univers.<br/>Torique ? Infinie ? Ils se trompent tellement... Devrions-nous les aider ?",
-				en : "Many people around the world are trying to unlock the secrets of the universe. <br/>Toric? Infinite? They are so wrong... Should we help them?"
+				en : "Many people around the world are trying to unlock the secrets of the universe. <br/>Toric? Infinite? They are so wrong... Should we help them ?"
 			},
 			"lune-etude1-event-aider-button" : {
 				fr : "Les aider",
@@ -96,12 +96,45 @@ define(["jquery"],
 			 * Magie de la lune
 			 */
 			"lune-magie1-event-titre" : {
-				fr : "-",
-				en : "-"
+				fr : "Un soupçon de magie",
+				en : "A hint of magic"
 			},
 			"lune-magie1-event" : {
-				fr : "-",
-				en : "-"
+				fr : "Maître, la magie du monde faiblis peu à peu.<br/>Il semblerait que le monde humain ne permette plus de faire la passerelle avec le monde immatériel.<br/>Que pouvons-nous faire ?",
+				en : "Master, the magic of the world is gradually weakening.<br/>It seems that the human world no longer allows us to build bridges with the immaterial world.<br/>What can we do ?"
+			},
+			"lune-magie1-event-ko" : {
+				fr : "Très vite, la magie disparu du monde des humains.<br/>La lune, autrefois étincelante, n’était plus qu'une boule de poussière dans le ciel étoilé...",
+				en : "Very quickly, the magic disappeared from the human world.<br/>The moon, once sparkling, was nothing more than a ball of dust in the starry sky..."
+			},
+			"lune-magie1-event-ok" : {
+				fr : "Nous avons déjà commencé maître ! Nous découvrirons bientôt la raison !",
+				en : "We have already started master! We will soon discover the reason!"
+			},
+			
+			"lune-magie2-event-titre" : {
+				fr : "l'amour d'une déesse",
+				en : "the love of a goddess"
+			},
+			"lune-magie2-event" : {
+				fr : "C'est la lune, mon seigneur, elle perd de sa force. Bientôt la magie n'existera plus dans le monde humain !",
+				en : "It is the moon, my lord, it loses its strength. Soon magic will no longer exist in the human world!"
+			},
+			"lune-magie2-event-sauver1-button" : {
+				fr : "Offrir votre pouvoir",
+				en : "Offer your power"
+			},
+			"lune-magie2-event-sauver1" : {
+				fr : "Aussitôt, la lune retrouva son éclat d'antan. Ne pouvant vous résoudre à la perdre, vous sacrifiâtes une partie de vos pouvoirs divins...<br/>Plus jamais vous ne la laisserai faillir, quitte à en perdre votre immortalité !",
+				en : "Immediately, the moon regained its former glory. Unable to resolve to lose it, you sacrificed part of your divine powers...<br/>Never again will you let it fail, even if it means losing your immortality !"
+			},
+			"lune-magie2-event-sauver2-button" : {
+				fr : "<bonus>[Saint Graal]-Sauver la lune</bonus>",
+				en : "<bonus>[Holy Grail]-Save the moon</bonus>"
+			},
+			"lune-magie2-event-sauver2" : {
+				fr : "La puissance contenu dans la coupe suffit à raviver l'éclat perdu de l'astre divin.<br/>Sa splendeur éternelle s’éleva dans la galaxie pour le reste des temps...",
+				en : "The power contained in the cup is enough to revive the lost shine of the divine star.<br/>Its eternal splendor rose in the galaxy for the rest of time..."
 			},
 	};
 	
