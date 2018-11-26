@@ -46,7 +46,7 @@ function($, _, Utils, page, Events) {
 			// Si on a une popup info ouverte
 			if (this.parent.alertOpen) return;
 			
-//			// Si le grand tout n'est pas encore au level 6
+			// Si le grand tout n'est pas encore au level 6
 			var ameliorationView = parent.spaceView.ameliorationView;
 			var grandToutLevel = 0;
 			if (ameliorationView) {
@@ -56,8 +56,8 @@ function($, _, Utils, page, Events) {
 			
 			// Si un evenement doit être affiché en priorité
 			if (this.toShowNow) {
-				this.toShowNow = null;
 				this.currentEvent = Events.get(this.toShowNow);
+				this.toShowNow = null;
 				this.show();
 				return;
 			}
@@ -142,7 +142,7 @@ function($, _, Utils, page, Events) {
 		};
 		
 		this.show = function() {
-		    if (!this.currentEvent) return;
+			if (!this.currentEvent) return;
 		    this.eventOpen = true;
 		    
 		    this.parent.spaceView.ameliorationView.descriptionView.close();

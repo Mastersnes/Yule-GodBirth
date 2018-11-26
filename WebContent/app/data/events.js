@@ -1,7 +1,8 @@
 'use strict';
 define(["jquery", 
         "app/data/events/imbolc/imbolc-events", 
-        "app/data/events/ostara/ostara-events"], function($, ImbolcEvents, OstaraEvents){
+        "app/data/events/ostara/ostara-events", 
+        "app/data/events/beltane/beltane-events"], function($, ImbolcEvents, OstaraEvents, BeltaneEvents){
 	var data = {
 	        /**
 	         * Premier evenement
@@ -40,6 +41,7 @@ define(["jquery",
 		get : function(key) {
 			var event = ImbolcEvents.get(key);
 			if (!event) event = OstaraEvents.get(key);
+			if (!event) event = BeltaneEvents.get(key);
 		    if (!event) event = data[key];
 		    
 		    return event;

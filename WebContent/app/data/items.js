@@ -16,8 +16,8 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 				this.prix = function (lvl) {
 				    if(!lvl) lvl = this.level;
 					return {
-	        			croyance : Math.round(Utils.pow(3, lvl, 3.19)),
-	        			illumination : Math.round(lvl<10 ? 0 : Utils.pow(1, lvl, 3))
+	        			croyance : 1,//Math.round(Utils.pow(3, lvl, 3.19)),
+	        			illumination : 0//Math.round(lvl<10 ? 0 : Utils.pow(1, lvl, 3))
 	        		};
 			    };
 			    this.gain = function (incr, ameliorations) {

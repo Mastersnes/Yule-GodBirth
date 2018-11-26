@@ -7,7 +7,7 @@ define(["jquery"],
 			 */
 			"nature-abeille-event-titre" : {
 				fr : "Un bourdonnement lointain...",
-				en : "A distant buzzing...."
+				en : "A distant buzzing..."
 			},
 			"nature-abeille-event" : {
 				fr : "Maître ! Il semblerait que toute les abeilles aient disparuent ! Que pouvons nous faire ?",

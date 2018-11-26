@@ -1,7 +1,8 @@
 'use strict';
 define(["jquery",
         "app/data/textes/imbolc/textes-imbolc",
-        "app/data/textes/ostara/textes-ostara"], function($, TextesImbolc, TextesOstara){
+        "app/data/textes/ostara/textes-ostara",
+        "app/data/textes/beltane/textes-beltane"], function($, TextesImbolc, TextesOstara, TextesBeltane){
 	var data = {
 			/**
 			 * Boutons standard
@@ -56,6 +57,7 @@ define(["jquery",
 		get : function(key) {
 			var text = TextesImbolc.get(key);
 			if (!text) text = TextesOstara.get(key);
+			if (!text) text = TextesBeltane.get(key);
 			if (!text) text = data[key];
 			return text;
 		}
