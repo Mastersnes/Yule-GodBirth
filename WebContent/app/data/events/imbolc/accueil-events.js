@@ -251,7 +251,6 @@ define(["jquery","app/utils/utils",
 				if (elmt && elmt.starter) names.push(elmt.name);
 			}
 			
-			return ["accueil-riche-event"];
 			return names;
 		}
 	};
