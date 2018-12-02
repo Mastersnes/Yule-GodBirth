@@ -11,7 +11,7 @@ define(["jquery","app/utils/utils",
 			"ostara-start-event" : {
 				name : "ostara-start-event",
 			    text : "ostara-start-event",
-			    rarity : 50,
+			    rarity : 5,
 			    unique : true,
 			    actions : [
 			         {

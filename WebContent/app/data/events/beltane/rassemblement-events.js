@@ -17,7 +17,7 @@ define(["jquery","app/utils/utils"
 			             name : "continuerButton",
 			             action : function(game) {
 			            	 game.eventManager.addEvents(["rassemblement-mars-event",
-			            	                              "rassemblement-titan-event",
+			            	                              "rassemblement-io-event",
 			            	                              "rassemblement-saturnus-event",
 			            	                              "rassemblement-triton-event",
 			            	                              "rassemblement-pluton-event"]);
@@ -27,7 +27,7 @@ define(["jquery","app/utils/utils"
 			},
 			
 			/**
-			 * Mars
+			 * Mars - Colonie miniere
 			 */
 			"rassemblement-mars-event" : {
 				name : "rassemblement-mars-event",
@@ -39,8 +39,9 @@ define(["jquery","app/utils/utils"
 			             name : "rassemblement-button",
 			             action : function(game) {
 			            	 game.alertPopup("rassemblement-mars-event-contact", function() {
-			            		   game.alertPopup("rassemblement-mars-event-contact2");
-			            		   game.eventManager.showNow("rassemblement-mars2-event");
+			            		   game.alertPopup("rassemblement-mars-event-contact2", function() {
+			            			   game.eventManager.showNow("rassemblement-mars2-event");
+			            		   });
 			            		});
 			             }
 			         }
@@ -53,32 +54,160 @@ define(["jquery","app/utils/utils"
 			    unique : true,
 			    actions : [
 			         {
-			             name : "rassemblement-contact-button",
+			             name : "rassemblement-mars2-event-ko-button",
 			             action : function(game) {
-			            	 
+			            	 game.alertPopup("rassemblement-mars2-event-ko");
+			             }
+			         },
+			         {
+			             name : "rassemblement-mars2-event-ok-button",
+			             action : function(game) {
+			            	 game.pointManager.addPointsPercent({
+			            		 croyance : -80,
+			            		 illumination : -80,
+			            		 bien : 0,
+			            		 mal : 0
+			            	}, "quete");
+			            	 game.eventManager.sagesse+=0.5;
+			            	 game.alertPopup("rassemblement-mars2-event-ok");
+			             }
+			         },
+			         {
+			             name : "menacer-button",
+			             action : function(game) {
+			            	 game.pointManager.addPointsPercent({
+			            		 croyance : -30,
+			            		 illumination : -10,
+			            		 bien : 0,
+			            		 mal : 0
+			            	}, "quete");
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 10
+			            	}, "quete");
+			            	 game.eventManager.rebellion++;
+			            	 game.alertPopup("rassemblement-mars2-event-menace", function() {
+			            		 game.eventManager.showNow("rassemblement-mars3-event");
+			            	 });
+			             }
+			         }
+			    ]
+			},
+			"rassemblement-mars3-event" : {
+				name : "rassemblement-mars3-event",
+			    text : "rassemblement-mars3-event",
+			    rarity : -1,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "les-tuer-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 10
+			            	}, "quete");
+			            	 game.eventManager.sagesse--;
+			            	 game.alertPopup("rassemblement-mars3-event-tuer");
+			             }
+			         },
+			         {
+			        	 name : "laisser-tomber-button",
+			        	 action : function(game) {
+			        		 game.eventManager.rebellion-=0.5;
+			        		 game.alertPopup("rassemblement-mars3-event-ignore");
+			        	 }
+			         }
+			    ]
+			},
+			
+			/**
+			 * Io - Capitale energetique
+			 */
+			"rassemblement-io-event" : {
+				name : "rassemblement-io-event",
+			    text : "rassemblement-io-event",
+			    rarity : 30,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "rassemblement-button",
+			             action : function(game) {
+			            	 game.eventManager.addEvents(["rassemblement-io2-event"]);
+			            	 game.alertPopup("rassemblement-io-event-contact");
+			             }
+			         }
+			    ]
+			},
+			"rassemblement-io2-event" : {
+				name : "rassemblement-io2-event",
+			    text : "rassemblement-io2-event",
+			    rarity : 40,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "acceptButton",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 10,
+			            		 illumination : 0,
+			            		 bien : 5,
+			            		 mal : 0
+			            	}, "quete");
+			            	 game.eventManager.sagesse+=0.5;
+			            	 game.alertPopup("rassemblement-io2-event-ok");
+			             }
+			         },
+			         {
+			             name : "refusButton",
+			             action : function(game) {
+			            	 game.eventManager.sagesse-=0.5;
+			            	 game.pointManager.addPointsPercent({
+			            		 croyance : -20,
+			            		 illumination : -10,
+			            		 bien : 0,
+			            		 mal : 0
+			            	}, "quete");
+			            	 game.alertPopup("rassemblement-io2-event-ko", function() {
+			            		 game.eventManager.showNow("rassemblement-io3-event");
+			            	 });
+			             }
+			         }
+			    ]
+			},
+			"rassemblement-io3-event" : {
+				name : "rassemblement-io3-event",
+			    text : "rassemblement-io3-event",
+			    rarity : -1,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "menacer-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 20
+			            	 }, "quete");
+			            	 game.eventManager.rebellion++;
+			            	 game.alertPopup("rassemblement-io3-event-menace");
+			             }
+			         },
+			         {
+			             name : "laisser-tomber-button",
+			             action : function(game) {
+			            	 game.alertPopup("rassemblement-io3-event-ko");
 			             }
 			         }
 			    ]
 			},
 			
 			/**
-			 * Titan
-			 */
-			"rassemblement-titan-event" : {
-				name : "rassemblement-titan-event",
-			    text : "rassemblement-titan-event",
-			    rarity : 30,
-			    unique : true,
-			    actions : [
-			         {
-			             name : "continuerButton",
-			             action : function(game) {}
-			         }
-			    ]
-			},
-			
-			/**
-			 * Saturnus
+			 * Saturnus - Centre de l'intelligence spatiale
 			 */
 			"rassemblement-saturnus-event" : {
 				name : "rassemblement-saturnus-event",
@@ -87,14 +216,71 @@ define(["jquery","app/utils/utils"
 			    unique : true,
 			    actions : [
 			         {
-			             name : "continuerButton",
-			             action : function(game) {}
+			             name : "rassemblement-button",
+			             action : function(game) {
+			            	 game.alertPopup("rassemblement-saturnus-event-contact", function() {
+			            		 game.eventManager.showNow("rassemblement-saturnus2-event");
+			            	 });
+			             }
+			         }
+			    ]
+			},
+			"rassemblement-saturnus2-event" : {
+				name : "rassemblement-saturnus2-event",
+			    text : "rassemblement-saturnus2-event",
+			    rarity : -1,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "menacer-button",
+			             action : function(game) {
+			            	 game.pointManager.addPointsPercent({
+			            		 croyance : -20,
+			            		 illumination : -10,
+			            		 bien : 0,
+			            		 mal : 0
+			            	}, "quete");
+			            	 game.eventManager.rebellion++;
+			            	 game.alertPopup("rassemblement-saturnus2-event-menace");
+			             }
+			         },
+			         {
+			             name : "rassemblement-saturnus2-event-connaissance-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 50,
+			            		 bien : 0,
+			            		 mal : 0
+			            	 }, "quete");
+			            	 game.eventManager.sagesse++;
+			            	 game.alertPopup("rassemblement-saturnus2-event-connaissance", function() {
+			            		 game.artefactsView.remove("troisieme-oeil");
+			            	 });
+			             },
+			        	 conditions : [{name : "troisieme-oeil"}]
+			         },
+			         {
+			             name : "rassemblement-saturnus2-event-mystere-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 50,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 0
+			            	 }, "quete");
+			            	 game.eventManager.sagesse++;
+			            	 game.alertPopup("rassemblement-saturnus2-event-mystere", function() {
+			            		 game.artefactsView.remove("fragment-lunaire");
+			            	 });
+			             },
+			        	 conditions : [{name : "fragment-lunaire"}]
 			         }
 			    ]
 			},
 			
 			/**
-			 * Triton
+			 * Triton - Bastion armé
 			 */
 			"rassemblement-triton-event" : {
 				name : "rassemblement-triton-event",
@@ -103,14 +289,91 @@ define(["jquery","app/utils/utils"
 			    unique : true,
 			    actions : [
 			         {
-			             name : "continuerButton",
-			             action : function(game) {}
+			             name : "rassemblement-button",
+			             action : function(game) {
+			            	 game.alertPopup("rassemblement-triton-event-contact", function() {
+			            		 game.eventManager.showNow("rassemblement-triton2-event");
+			            	 });
+			             }
+			         }
+			    ]
+			},
+			"rassemblement-triton2-event" : {
+				name : "rassemblement-triton2-event",
+			    text : "rassemblement-triton2-event",
+			    rarity : -1,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "menacer-button",
+			             action : function(game) {
+			            	 game.eventManager.rebellion++;
+			            	 game.alertPopup("rassemblement-triton2-event-menace", function() {
+			            		 game.eventManager.showNow("rassemblement-triton3-event");
+			            	 });
+			             }
+			         },
+			         {
+			             name : "rassemblement-triton2-event-torque-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 20,
+			            		 illumination : 10,
+			            		 bien : 0,
+			            		 mal : 0
+			            	 }, "quete");
+			            	 game.eventManager.sagesse++;
+			            	 game.alertPopup("rassemblement-triton-event-contact", function() {
+			            		 game.artefactsView.remove("torque");
+			            	 });
+			             },
+			        	 conditions : [{name : "torque"}]
+			         }
+			    ]
+			},
+			"rassemblement-triton3-event" : {
+				name : "rassemblement-triton3-event",
+			    text : "rassemblement-triton3-event",
+			    rarity : -1,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "les-tuer-button",
+			             action : function(game) {
+			            	game.pointManager.addPointsPercent({
+			            		 croyance : -50,
+			            		 illumination : -30,
+			            		 bien : 0,
+			            		 mal : 0
+			            	}, "quete");
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 30
+			            	}, "quete");
+			            	game.eventManager.sagesse--;
+			            	game.alertPopup("rassemblement-mars3-event-tuer");
+			             }
+			         },
+			         {
+			             name : "rassemblement-triton3-event-tuer-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 15
+			            	}, "quete");
+			            	game.eventManager.rebellion++;
+			            	game.alertPopup("rassemblement-triton3-event-tuer");
+			             }
 			         }
 			    ]
 			},
 			
 			/**
-			 * Pluton
+			 * Pluton - Prison planétaire
 			 */
 			"rassemblement-pluton-event" : {
 				name : "rassemblement-pluton-event",

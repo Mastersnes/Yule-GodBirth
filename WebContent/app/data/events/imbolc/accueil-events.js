@@ -159,6 +159,12 @@ define(["jquery","app/utils/utils",
 			             name : "yesButton",
 			             action : function(game) {
 			            	 game.eventManager.addEvents(TyrannieEvents.start());
+			            	 game.pointManager.addPointsPercent({
+			            		 croyance : -50,
+			            		 illumination : -50,
+			            		 bien : 0,
+			            		 mal : 0
+			            	}, "quete");
 			                 game.alertPopup("accueil-riche-event-ok");
 			             }
 			         },

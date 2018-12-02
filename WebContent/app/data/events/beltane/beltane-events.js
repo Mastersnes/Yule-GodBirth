@@ -10,7 +10,7 @@ define(["jquery","app/utils/utils",
 			"beltane-start-event" : {
 				name : "beltane-start-event",
 			    text : "beltane-start-event",
-			    rarity : 50,
+			    rarity : 5,
 			    unique : true,
 			    actions : [
 			         {

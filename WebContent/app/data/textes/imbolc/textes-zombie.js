@@ -207,8 +207,8 @@ define(["jquery"], function($){
 			en : "The world went down in flames and all souls disappeared.<br/>Fortunately, life didn't take long to reappear..."
 		},
 		"zombie-step-event-3-invoquer-button" : {
-			fr : "<bonus>Idole de mort-Révoquer la mort</bonus>",
-			en : "<bonus>Death Idol-Revoke Death</bonus>"
+			fr : "<bonus>[Idole de mort]-Révoquer la mort</bonus>",
+			en : "<bonus>[Death Idol]-Revoke Death</bonus>"
 		},
 		"zombie-step-event-3-invoquer" : {
 			fr : "Faucheuse, maîtresse des morts ! Reprend tes ouailles en ton sein et retourne-en à la terre ! Ainsi soit-il !",
