@@ -16,7 +16,7 @@ define(["jquery"],
 			
 			"rassemblement-button" : {
 				fr : "Demander le rassemblement",
-				en : "-"
+				en : "Request the gathering"
 			},
 			"menacer-button" : {
 				fr : "Menacer",
@@ -242,11 +242,44 @@ define(["jquery"],
 			 */
 			"rassemblement-pluton-event-titre" : {
 				fr : "Rassemblement - Pluton",
-				en : "Gathering - Pluton"
+				en : "Gathering - Pluto"
 			},
 			"rassemblement-pluton-event" : {
-				fr : "",
-				en : ""
+				fr : "Voici Pluton, la planète pénitentiaire. Tout les plus grand criminels que compte l'humanité sont enfermé ici pour le restant de leurs jours...",
+				en : "This is Pluto, the prison planet. All the greatest criminals in humanity are locked up here for the rest of their lives..."
+			},
+			"rassemblement-pluton-event-contact" : {
+				fr : "Salut captain ! C'est moi le chef ici et c'est à moi que vous parlerez !<br/>Devenir vos petit pantins ? Bof ça nous enchante pas vraiment.",
+				en : "Hi, captain! I'm the boss here and you'll be talking to me !<br/>Become your little puppets ? Well, we're not really happy about it."
+			},
+			"rassemblement-pluton-event-laisser" : {
+				fr : "Pluton continua à accueillir chaque jour des prisonniers venant de toute part du système.",
+				en : "Pluto continued to receive prisoners from all over the system every day."
+			},
+			
+			"rassemblement-pluton2-event-titre" : {
+				fr : "Pluton - Mauvaise graine",
+				en : "Pluto - Bad seed"
+			},
+			"rassemblement-pluton2-event" : {
+				fr : "Mais si vous nous faites tous sortir de là, nous serons vos plus fidèles soldats ! À condition qu'on y retourne jamais bien entendu !<br/>Alors marché conclut ?",
+				en : "But if you get us all out of here, we'll be your most loyal soldiers ! Provided that we never go back, of course !<br/>So deal made ?"
+			},
+			"rassemblement-pluton2-event-accept" : {
+				fr : "Vous ordonnâtes ainsi la libération des pires criminelles du système.<br/>Les massacres ne tardèrent pas à arriver puis se calmèrent avec le temps...",
+				en : "You thus ordered the release of the worst criminals in the system.<br/>The massacres soon arrived and then calmed down over time..."
+			},
+			"rassemblement-pluton2-event-refus" : {
+				fr : "Rahh j'en était sûr... Nous n'aurons pas besoin de vous de toute façon pour s’échapper de ce trou à rat. Et ce jour là...",
+				en : "Rahh I was sure of it... We won't need you anyway to escape from this rat hole. And that day..."
+			},
+			"rassemblement-pluton2-event-raser-button" : {
+				fr : "Raser la planete",
+				en : "Destroy the planet"
+			},
+			"rassemblement-pluton2-event-raser" : {
+				fr : "La planète explosa aussitôt dans un torrent de flamme.",
+				en : "The planet immediately exploded in a torrent of flame."
 			},
 	};
 	

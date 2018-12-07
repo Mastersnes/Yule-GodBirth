@@ -2,7 +2,11 @@
 define(["jquery", 
         "app/data/events/imbolc/imbolc-events", 
         "app/data/events/ostara/ostara-events", 
-        "app/data/events/beltane/beltane-events"], function($, ImbolcEvents, OstaraEvents, BeltaneEvents){
+        "app/data/events/beltane/beltane-events", 
+        "app/data/events/litha/litha-events", 
+        "app/data/events/lammas/lammas-events", 
+        "app/data/events/mabon/mabon-events"], 
+        function($, ImbolcEvents, OstaraEvents, BeltaneEvents, LithaEvents, LammasEvents, MabonEvents){
 	var data = {
 	        /**
 	         * Premier evenement
@@ -42,6 +46,9 @@ define(["jquery",
 			var event = ImbolcEvents.get(key);
 			if (!event) event = OstaraEvents.get(key);
 			if (!event) event = BeltaneEvents.get(key);
+			if (!event) event = LithaEvents.get(key);
+			if (!event) event = LammasEvents.get(key);
+			if (!event) event = MabonEvents.get(key);
 		    if (!event) event = data[key];
 		    
 		    return event;

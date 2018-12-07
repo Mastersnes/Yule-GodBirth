@@ -382,8 +382,66 @@ define(["jquery","app/utils/utils"
 			    unique : true,
 			    actions : [
 			         {
-			             name : "continuerButton",
-			             action : function(game) {}
+			             name : "rassemblement-button",
+			             action : function(game) {
+			            	 game.alertPopup("rassemblement-pluton-event-contact", function() {
+			            		 game.eventManager.showNow("rassemblement-pluton2-event");
+			            	 });
+			             }
+			         },
+			         {
+			             name : "laisser-tomber-button",
+			             action : function(game) {
+			            	 game.alertPopup("rassemblement-pluton-event-laisser");
+			             }
+			         }
+			    ]
+			},
+			
+			"rassemblement-pluton2-event" : {
+				name : "rassemblement-pluton2-event",
+			    text : "rassemblement-pluton2-event",
+			    rarity : -1,
+			    unique : true,
+			    actions : [
+			         {
+			             name : "acceptButton",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 10,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 20
+			            	}, "quete");
+			            	game.eventManager.rebellion+=0.5;
+			            	game.eventManager.sagesse+=0.5;
+			            	game.alertPopup("rassemblement-pluton2-event-accept");
+			             }
+			         },
+			         {
+			             name : "refusButton",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 5,
+			            		 mal : 0
+			            	}, "quete");
+			            	game.eventManager.rebellion++;
+			            	game.alertPopup("rassemblement-pluton2-event-refus");
+			             }
+			         },
+			         {
+			             name : "rassemblement-pluton2-event-raser-button",
+			             action : function(game) {
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 20
+			            	}, "quete");
+			            	game.alertPopup("rassemblement-pluton2-event-raser");
+			             }
 			         }
 			    ]
 			}

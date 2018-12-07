@@ -2,7 +2,11 @@
 define(["jquery",
         "app/data/textes/imbolc/textes-imbolc",
         "app/data/textes/ostara/textes-ostara",
-        "app/data/textes/beltane/textes-beltane"], function($, TextesImbolc, TextesOstara, TextesBeltane){
+        "app/data/textes/beltane/textes-beltane",
+        "app/data/textes/litha/textes-litha",
+        "app/data/textes/lammas/textes-lammas",
+        "app/data/textes/mabon/textes-mabon"], 
+        function($, TextesImbolc, TextesOstara, TextesBeltane, TextesLitha, TextesLammas, TextesMabon){
 	var data = {
 			/**
 			 * Boutons standard
@@ -58,6 +62,9 @@ define(["jquery",
 			var text = TextesImbolc.get(key);
 			if (!text) text = TextesOstara.get(key);
 			if (!text) text = TextesBeltane.get(key);
+			if (!text) text = TextesLitha.get(key);
+			if (!text) text = TextesLammas.get(key);
+			if (!text) text = TextesMabon.get(key);
 			if (!text) text = data[key];
 			return text;
 		}
