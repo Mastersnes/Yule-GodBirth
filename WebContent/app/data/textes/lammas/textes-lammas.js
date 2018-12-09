@@ -126,7 +126,7 @@ define(["jquery"
 				en : "Will you be an actor or a puppet of this mechanism ? Don't answer here...<br/>Response simply in a fair way to the choices your universe offers you. We will meet again, my goodness..."
 			},
 			"lammas-disparition3-event-lumiere9" : {
-				fr : "Vous ouvrez les yeux dans votre palais... Jamais vous n'auriez pensé qu'une entité puisse dépassé l'entendement même des dieux.",
+				fr : "Vous ouvrez les yeux dans votre palais... Jamais vous n'auriez pensé qu'une entité puisse dépasser l'entendement même des dieux.",
 				en : "You open your eyes in your palace... You would never have thought that an entity could surpass the very understanding of the gods."
 			}
 	};
