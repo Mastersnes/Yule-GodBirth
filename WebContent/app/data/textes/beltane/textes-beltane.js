@@ -8,16 +8,16 @@ define(["jquery",
 			 * Premier evenement
 			 */
 			"beltane-start-event-titre" : {
-				fr : "Vers l'infinie !",
-				en : "To the infinite !"
+				fr :"Vers l'infinie !",
+				en :"To the infinite !"
 			},
 			"beltane-start-event" : {
-				fr : "Bonjour maître ! Grâce à vos choix l'humanité à bien grandit et est maintenant une fière nation éparpillée dans les nombreux mondes de la galaxie.",
-				en : "Hello, master ! Thanks to your choices, humanity has grown and is now a proud nation scattered in the many worlds of the galaxy."
+				fr :"Bonjour, maître ! Grâce à vos choix, l'humanité a bien grandi et est maintenant une fière nation éparpillée dans les nombreux mondes de la galaxie.",
+				en :"Hello, master ! Thanks to your choices, humanity has grown and is now a proud nation scattered in the many worlds of the galaxy."
 			},
 			"beltane-start2-event" : {
-				fr : "De nouvelles prières 2.0 nous parviennent chaque jour ! Saurez-vous y faire face ?",
-				en : "New 2.0 prayers are coming in every day! Will you be able to cope ?"
+				fr :"De nouvelles prières 2.0 nous parviennent chaque jour ! Saurez-vous y faire face ?",
+				en :"New 2.0 prayers are coming in every day! Will you be able to cope ?"
 			}
 	};
 	

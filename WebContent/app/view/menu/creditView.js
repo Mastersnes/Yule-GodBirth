@@ -29,8 +29,11 @@ function($, _, Utils, page) {
 			$(this.el).find(".close-button").click(function() {
 				$(that.el).hide("slow");
 			});
-			$("#deviant").click(function() {
-				window.open("https://lesjeuxdebebel.deviantart.com/", "_blank");
+			$("#avn").click(function() {
+				window.open("https://avn2dgameartist.wordpress.com", "_blank");
+			});
+			$("#soundcloud").click(function() {
+				window.open("https://soundcloud.com/user-856311901-937055955", "_blank");
 			});
 			$("#aeferrets").click(function() {
 				window.open("https://www.facebook.com/AEFerrets/", "_blank");

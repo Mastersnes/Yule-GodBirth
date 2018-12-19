@@ -21,7 +21,7 @@ etoile > span {
     background-color: black;
 }
 
-etoile:hover {
+etoile:hover, etoile.hovered {
 	animation-name: star-anim;
     animation-duration: 1s;
     animation-fill-mode: forwards;

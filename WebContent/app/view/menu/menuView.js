@@ -86,6 +86,12 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 			$("logo").click(function() {
 				that.kongregateUtils.login();
 			});
+			
+			$("bouton").hover(function() {
+				$(this).find("etoile").addClass("hovered");
+			}, function() {
+				$(this).find("etoile").removeClass("hovered");
+			});
 		};
 		
 		this.loadGame = function() {

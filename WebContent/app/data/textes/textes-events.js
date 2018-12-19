@@ -12,49 +12,49 @@ define(["jquery",
 			 * Boutons standard
 			 */
 			"enquete-button" : {
-				fr : "Enqueter",
-				en : "Investigate"
+				fr :"Enquêter",
+				en :"Investigate"
 			},
 			"intervenir-button" : {
-				fr : "Intervenir",
-				en : "-"
+				fr :"Intervenir",
+				en :"-"
 			},
 			"ignore-button" : {
-				fr : "Ignorer",
-				en : "Ignore"
+				fr :"Ignorer",
+				en :"Ignore"
 			},
 			"pasMonProbleme-button" : {
-				fr : "Pas mon probléme",
-				en : "Not my problem"
+				fr :"Pas mon problème",
+				en :"Not my problem"
 			},
 			"le-tuer-button" : {
-				fr : "Le tuer",
-				en : "Kill him"
+				fr :"Le tuer",
+				en :"Kill him"
 			},
 			"les-tuer-button" : {
-				fr : "Tous les tuer",
-				en : "Kill them all"
+				fr :"Tous les tuer",
+				en :"Kill them all"
 			},
 			"guerir-button" : {
-				fr : "Le guerir",
-				en : "Heal him"
+				fr :"Le guérir",
+				en :"Heal him"
 			},
 			"laisser-partir-button" : {
-				fr : "Le laisser partir",
-				en : "Let him go"
+				fr :"Le laisser partir",
+				en :"Let him go"
 			},
 			"enfermer-button" : {
-				fr : "Les enfermer",
-				en : "Lock them up"
+				fr :"Les enfermer",
+				en :"Lock them up"
 			},
 			"les-arreter-button" : {
-				fr : "Les arreter",
-				en : "Stop them"
+				fr :"Les arrêter",
+				en :"Stop them"
 			},
 			"laisser-tomber-button" : {
-				fr : "Laisser tomber",
-				en : "Give up"
-			},
+				fr :"Laisser tomber",
+				en :"Give up"
+			}
 	};
 	
 	return {

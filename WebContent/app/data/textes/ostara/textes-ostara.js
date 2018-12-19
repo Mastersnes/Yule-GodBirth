@@ -9,12 +9,12 @@ define(["jquery",
 			 * Premier evenement
 			 */
 			"ostara-start-event-titre" : {
-				fr : "Une grande responsabilité",
-				en : "-"
+				fr :"Une grande responsabilité",
+				en :"-"
 			},
 			"ostara-start-event" : {
-				fr : "Maître de plus en plus de prieres nous parviennent !<br/>Le monde a bien grandit et reconnait votre grandeur !",
-				en : "-"
+				fr :"Maître, de plus en plus de prières nous parviennent !<br/>Le monde a bien évolué et reconnaît votre grandeur !",
+				en :"-"
 			}
 	};
 	
