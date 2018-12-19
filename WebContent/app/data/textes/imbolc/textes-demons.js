@@ -10,12 +10,12 @@ define(["jquery"], function($){
 				en :"Fire daemons"
 			},
 			"demons-start-event" : {
-				fr :"Loin à l'est, de nombreux villages étaient en cendre. De toute part, les Hommes prennaient les armes contre des créatures de l'enfer.",
-				en :"-"
+				fr :"Loin à l'est, de nombreux villages étaient en cendre. De toute part, les Hommes prenaient les armes contre des créatures de l'enfer.",
+				en :"Far to the east, many villages were in ashes. On all sides, Men took up arms against creatures of hell."
 			},
 			"demons-start-event-2" : {
 				fr :"Une guerre avait débuté. Les démons de feu revendiquaient ce qui leur avait été volé.",
-				en :"-"
+				en :"A war had begun. The fire demons claimed what had been stolen from them."
 			},
 
 			/**
@@ -51,7 +51,7 @@ define(["jquery"], function($){
 			},
 			"demons-attaque-event-torture" : {
 				fr :"Sous les coups, il commença à parler : « Arghh... Nous venons de loin sous le sol, près d'un lieu nommé Osra.<br/>Notre peuple commence à mourir de famine et de maladie... »",
-				en :"-"
+				en :"Under the blows, he began to speak : « Arghh.... We come from far below the ground, near a place called Osra.<br/>Our people are beginning to die of famine and disease... »"
 			},
 			"demons-attaque-event-torture-2" : {
 				fr :"« Nous sommes revenus pour conquérir ce monde et reprendre ce qui nous revient de droit ! » Puis, il finit par mourir sous la torture...",
@@ -59,11 +59,11 @@ define(["jquery"], function($){
 			},
 			"demons-attaque-event-tuer" : {
 				fr :"D'un simple geste, le démon vola en éclat ! Vos fidèles furent très impressionnés !",
-				en :"-"
+				en :"With a simple gesture, the demon shattered ! Your followers were very impressed !"
 			},
 			"demons-attaque-event-partir" : {
 				fr :"Vous laissâtes le démon s'en retourner parmi les siens. Vos fidèles vous regardèrent, désabusés. Ils eurent l'impression d'avoir été trahis...",
-				en :"-"
+				en :"You let the demon go back to his people. Your followers looked at you, disillusioned. They felt as if they had been betrayed..."
 			},
 
 			/**
@@ -83,7 +83,7 @@ define(["jquery"], function($){
 			},
 			"demons-village-event-detruire" : {
 				fr :"La capitale tomba en morceau, emportant aussi bien les démons que les habitants...",
-				en :"-"
+				en :"The capital fell apart, taking away both demons and inhabitants..."
 			},
 			"demons-village-event-tuer-button" : {
 				fr :"Tuer les démons",
@@ -91,7 +91,7 @@ define(["jquery"], function($){
 			},
 			"demons-village-event-tuer" : {
 				fr :"Toutes les créatures tombèrent, inertes... Le peuple vous acclama ! Vous avez sauvé la capitale !",
-				en :"-"
+				en :"All the creatures fell, inert... The people cheered you on ! You saved the capital !"
 			},
 			"demons-village-event-stop-button" : {
 				fr :"<bonus>[Torque]-Stopper le combat</bonus>",
@@ -99,7 +99,7 @@ define(["jquery"], function($){
 			},
 			"demons-village-event-stop" : {
 				fr :"Les gens, aussi bien humains que démons, perdirent toute envie de se battre.<br/>Les armes tombèrent au sol et les combattants commencèrent à quitter les lieux...",
-				en :"-"
+				en :"People, both humans and demons, lost all desire to fight.<br/>The weapons fell to the ground and the fighters began to leave the area..."
 			},
 
 			/**
@@ -111,15 +111,15 @@ define(["jquery"], function($){
 			},
 			"demons-desert-event" : {
 				fr :"Le désert s'étendait de plus en plus. Les démons de feu gagnaient du terrain...",
-				en :"-"
+				en :"The desert was spreading more and more. The fire demons were gaining ground..."
 			},
 			"demons-desert-event-vie-button" : {
 				fr :"<bonus>[Idole de feu]-Ramener la vie</bonus>",
 				en :"<bonus>[Idol of fire]-Bring life back</bonus>"
 			},
 			"demons-desert-event-vie" : {
-				fr :"Les démons reconnurent leur idole. Ils se prosternèrent devant vous, vous jurant fidélité.<br/> Vous êtes désormais leur Dieu !",
-				en :"-"
+				fr :"Les démons reconnurent leur idole. Ils se prosternèrent devant vous, vous jurant fidélité.<br/>Vous êtes désormais leur Dieu !",
+				en :"The demons recognized their idol. They bowed down before you, swearing allegiance to you.<br/>You are now their God !"
 			},
 			"demons-desert-event-innonder-button" : {
 				fr :"Faire un déluge",

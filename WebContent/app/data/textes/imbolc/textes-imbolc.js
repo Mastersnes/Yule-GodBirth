@@ -31,11 +31,11 @@ define(["jquery",
 			 */
 			"rebellion-start-event-titre" : {
 				fr :"Rébellion !",
-				en :"-"
+				en :"Rebellion !"
 			},
 			"rebellion-start-event" : {
 				fr :"Maître ! Les mortels vous méprisent ! Tout est perdu... Plus personne ne croit en vous désormais...",
-				en :"-"
+				en :"Master ! Mortals despise you ! All is lost... No one believes in you anymore..."
 			}
 	};
 	

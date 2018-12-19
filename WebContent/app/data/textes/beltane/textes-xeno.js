@@ -11,7 +11,7 @@ define(["jquery"],
 			},
 			"xeno-1-event" : {
 				fr :"Dans le vide de l'espace, au milieu du système solaire XL44H, un gigantesque voilier solaire démarrait la procédure de décryogénisation.<br/>Sa mission : Analyser des signaux de vie dans le secteur...",
-				en :"-"
+				en :"In the vacuum of space, in the middle of the XL44H solar system, a gigantic solar sailboat started the decryogenization procedure.<br/>His mission: Analyze life signals in the area..."
 			},
 
 

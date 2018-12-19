@@ -46,8 +46,8 @@ define(["jquery"], function($){
 				en :"Crusade"
 			},
 			"croisade-attaques-event" : {
-				fr :"De toute part, des villages se faisaient attaquer par l'armée divine. Des milliers d'innocents mourraient en votre nom...",
-				en :"-"
+				fr :"De toute part, des villages se faisaient attaquer par l'armée divine. Des milliers d'innocents mouraient en votre nom...",
+				en :"From all sides, villages were being attacked by the divine army. Thousands of innocent people were dying in your name..."
 			},
 			"croisade-attaques-event-tuer-village-button" : {
 				fr :"Détruire les villages",
@@ -79,7 +79,7 @@ define(["jquery"], function($){
 			 */
 			"croisade-graal-event-titre" : {
 				fr :"Étrange grotte",
-				en :"-"
+				en :"Strange cave"
 			},
 			"croisade-graal-event" : {
 				fr :"Maître ! Nos éclaireurs rapportent qu'un groupe d’hérétiques se cache dans une grotte gardée secrète... Enfin, jusqu'à aujourd'hui !",
@@ -107,7 +107,7 @@ define(["jquery"], function($){
 			},
 			"croisade-graal-event-laisser" : {
 				fr :"Les croisés s'en allèrent, laissant la grotte intacte.<br/>On perdit toute trace des hérétiques de la grotte...",
-				en :"-"
+				en :"The crusaders left, leaving the cave intact.<br/>The heretics of the cave were lost..."
 			}
 	};
 	

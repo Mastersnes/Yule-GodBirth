@@ -9,7 +9,7 @@ define(["jquery",
 			 */
 			"refus-desert-event-titre" : {
 				fr :"Un village en cendre !",
-				en :"-"
+				en :"A village reduce to ashes !"
 			},
 			"refus-desert-event" : {
 				fr :"Maître ! Il semblerait que tout un village se soit transformé en désert ! Que doit-on faire ?",
@@ -29,7 +29,7 @@ define(["jquery",
 			 */
 			"refus-sacrifice-event-titre" : {
 				fr :"Une coulée de sang",
-				en :"-"
+				en :"A blood spill"
 			},
 			"refus-sacrifice-event" : {
 				fr :"Maître ! Un village sacrifie ses habitants en votre nom ! Que devons-nous faire ?",
@@ -40,7 +40,7 @@ define(["jquery",
 				en :"Reward them"
 			},
 			"refus-sacrifice-event-recompense" : {
-				fr :"VVotre règne, long et prospère, s'étendra jusqu'aux confins du monde !",
+				fr :"Votre règne, long et prospère, s'étendra jusqu'aux confins du monde !",
 				en :"Your long and prosperous reign will extend to the limits of the world !"
 			},
 			"refus-sacrifice-event-arreter-button" : {
@@ -73,7 +73,7 @@ define(["jquery",
 			 */
 			"refus-maladie-event-titre" : {
 				fr :"Un mal sombre",
-				en :"-"
+				en :"A dark disease"
 			},
 			"refus-maladie-event" : {
 				fr :"Maître ! C'est terrible ! Une maladie inconnue décime un village entier ! Que pouvons-nous faire ?",
@@ -81,7 +81,7 @@ define(["jquery",
 			},
 			"refus-maladie-event-enquete" : {
 				fr :"Tout était mort sur place et certains cadavres semblaient avoir disparu.<br/>Les villages proches parlèrent de créatures humanoïdes...",
-				en :"-"
+				en :"Everything had died on the spot and some bodies seemed to have disappeared...<br/>The nearby villages spoke of humanoid creatures..."
 			},
 			"refus-maladie-event-laisser" : {
 				fr :"Dans les jours qui suivirent, le mal s'étendit aux villages environnants.<br/>Certains parlèrent de créatures humanoïdes...",
@@ -93,7 +93,7 @@ define(["jquery",
 			},
 			"refus-maladie-event-2-titre" : {
 				fr :"Le prix d'une vie",
-				en :"-"
+				en :"The price of a life"
 			},
 			"refus-maladie-event-2" : {
 				fr :"Maître ! Mais, il reste encore des gens sains !",
@@ -105,7 +105,7 @@ define(["jquery",
 			},
 			"refus-maladie-event-bruler" : {
 				fr :"Rien ne survécut ce jour-là... Les légendes parlent d'un mal qui fut vaincu par le grand Dieu.",
-				en :"-"
+				en :"Nothing survived that day... Legends speak of an evil that was defeated by the great God."
 			},
 			"refus-maladie-event-bruler-malade-button" : {
 				fr :"Ne brûlez que les malades",
@@ -125,7 +125,7 @@ define(["jquery",
 			 */
 			"refus-question-event-titre" : {
 				fr :"Imposteur ?",
-				en :"-"
+				en :"Impostor ?"
 			},
 			"refus-question-event" : {
 				fr :"Maître ! Certaines personnes pensent que vous n'êtes pas un vrai dieu...",

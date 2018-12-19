@@ -8,7 +8,7 @@ define(["jquery",
 			 */
 			"tyrannie-start-event-titre" : {
 				fr :"La cité du vice",
-				en :"-"
+				en :"Vice city"
 			},
 			"tyrannie-start-event" : {
 				fr :"Au bout du monde, près des montagnes bordant le ciel, une grande et somptueuse cité fut créée par un homme d'une richesse infinie...",
@@ -24,7 +24,7 @@ define(["jquery",
 			 */
 			"tyrannie-soeur-event-titre" : {
 				fr :"Les horreurs du plaisir",
-				en :"-"
+				en :"Horrors of pleasure"
 			},
 			"tyrannie-soeur-event" : {
 				fr :"Mon Dieu ! Ma sœur a été enfermée dans un harem à Baia !<br/>Nul ne sait ce qu'ils lui font ! Libérez-la, je vous en supplie !",
@@ -88,7 +88,7 @@ define(["jquery",
 			 */
 			"tyrannie-esclave-event-titre" : {
 				fr :"Soulèvement",
-				en :"-"
+				en :"Uprising"
 			},
 			"tyrannie-esclave-event" : {
 				fr :"Un groupe d'esclaves s'est rebellé dans la ville de Baia ! Ils veulent leur liberté !",
@@ -100,7 +100,7 @@ define(["jquery",
 			},
 			"tyrannie-esclave-event-encourage" : {
 				fr :"Avec votre aide, les esclaves parvinrent à un accord. Ils seront désormais rémunérés pour leur travail...",
-				en :"_"
+				en :"With your help, the slaves reached an agreement. They will now be paid for their work..."
 			},
 			"tyrannie-esclave-event-taire-button" : {
 				fr :"Taire la rébellion",

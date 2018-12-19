@@ -99,7 +99,7 @@ define(["jquery"],
 			},
 			"nature-destruction-event-ignore" : {
 				fr :"La planète continua alors à décrépir, puis vola enfin dans un nuage de poussière. Il ne restait plus personne dans l'Univers pour croire en vous...",
-				en :"-"
+				en :"The planet then continued to decay, then finally flew in a cloud of dust. There was no one left in the Universe to believe in you..."
 			},
 			"nature-destruction-event-sauver-button" : {
 				fr :"<bonus>[Corne d'abondance]-Sauver la nature</bonus>",

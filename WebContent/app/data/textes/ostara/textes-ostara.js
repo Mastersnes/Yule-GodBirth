@@ -10,11 +10,11 @@ define(["jquery",
 			 */
 			"ostara-start-event-titre" : {
 				fr :"Une grande responsabilité",
-				en :"-"
+				en :"A high responsibility"
 			},
 			"ostara-start-event" : {
 				fr :"Maître, de plus en plus de prières nous parviennent !<br/>Le monde a bien évolué et reconnaît votre grandeur !",
-				en :"-"
+				en :"Master, more and more prayers are coming to us !<br/>The world has evolved well and recognizes your greatness !"
 			}
 	};
 	

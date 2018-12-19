@@ -7,7 +7,7 @@ define(["jquery"], function($){
 			 */
 			"epreuve-start-event-titre" : {
 				fr :"Épreuve",
-				en :"-"
+				en :"Test"
 			},
 			"epreuve-start-event" : {
 				fr :"Bien, monsieur... Alors comme cela, vous dites être un dieu ? Dans ce cas, il va falloir nous le prouver !",
@@ -23,7 +23,7 @@ define(["jquery"], function($){
 			 */
 			"epreuve-1-event-titre" : {
 				fr :"Épreuve de l'eau",
-				en :"-"
+				en :"Water test"
 			},
 			"epreuve-1-event" : {
 				fr :"Première épreuve : Dans cette première épreuve, vous devrez simplement faire pleuvoir. Allez-y, j'attends...",
@@ -47,7 +47,7 @@ define(["jquery"], function($){
 			 */
 			"epreuve-2-event-titre" : {
 				fr :"Épreuve du savoir",
-				en :"-"
+				en :"Knowledge test"
 			},
 			"epreuve-2-event" : {
 				fr :"Seconde épreuve : Tout simplement, une question. Quelle est la réponse à la grande question de l'Univers, de la vie, et de tout le reste ?",
@@ -91,7 +91,7 @@ define(["jquery"], function($){
 			 */
 			"epreuve-3-event-titre" : {
 				fr :"Épreuve du feu",
-				en :"-"
+				en :"Fire test"
 			},
 			"epreuve-3-event" : {
 				fr :"Troisième épreuve : Tuez Roger ! (Désolé, Roger... C'est tombé sur toi...)",
@@ -115,7 +115,7 @@ define(["jquery"], function($){
 			 */
 			"epreuve-4-event-titre" : {
 				fr :"Épreuve de l'infini",
-				en :"-"
+				en :"Infinity test"
 			},
 			"epreuve-4-event" : {
 				fr :"Quatrième épreuve : Encore une question ! Combien y a-t-il d'étoiles dans le ciel ?",
@@ -159,7 +159,7 @@ define(["jquery"], function($){
 			 */
 			"epreuve-5-event-titre" : {
 				fr :"Épreuve du vide",
-				en :"-"
+				en :"Void test"
 			},
 			"epreuve-5-event" : {
 				fr :"Dernière épreuve : C'est facile ! Vous devez simplement abandonner un artéfact aléatoire.",

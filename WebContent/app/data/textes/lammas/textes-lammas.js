@@ -111,7 +111,7 @@ define(["jquery"
 			},	
 			"lammas-disparition3-event-lumiere5" : {
 				fr :"Vous êtes ici dans l'immatériel. Un lieu au-delà du réel.<br/>Tout ce qui n'a jamais existé et tout ce qui existera se rassemblera en ce lieu.",
-				en :"-"
+				en :"You're here in the immaterial. A place beyond reality.<br/>All that has never existed and all that will exist will gather in this place."
 			},
 			"lammas-disparition3-event-lumiere6" : {
 				fr :"Votre expérience touche à sa fin. Les pensées divines ayant façonné votre monde s'estompent peu à peu, mais n'ayez crainte...",

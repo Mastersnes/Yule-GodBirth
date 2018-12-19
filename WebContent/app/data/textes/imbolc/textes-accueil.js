@@ -28,7 +28,7 @@ define(["jquery",
 			 */
 			"accueil-sacrifice-event-titre" : {
 				fr :"Une coulée de sang",
-				en :"A blood ???"
+				en :"A blood spill"
 			},
 			"accueil-sacrifice-event" : {
 				fr :"Cher maître, acceptez ce sacrifice humain comme preuve de notre foi !<br/>En retour, apportez-nous votre soutien !",
@@ -80,7 +80,7 @@ define(["jquery",
 			 */
 			"accueil-riche-event-titre" : {
 				fr :"Une richesse infinie",
-				en :"-"
+				en :"An infinite wealth"
 			},
 			"accueil-riche-event" : {
 				fr :"Cher Dieu, les affaires ne vont pas fort en ce moment.<br/>J'aimerais être le plus riche des Hommes !<br/>Je saurai vous récompenser...",
@@ -96,7 +96,7 @@ define(["jquery",
 			},
 			"accueil-riche-event-2-titre" : {
 				fr :"Impardonnable",
-				en :"-"
+				en :"Unforgivable"
 			},
 			"accueil-riche-event-2" : {
 				fr :"Ce mortel vous a insulté ! Souhaitez-vous le punir ?",
@@ -104,7 +104,7 @@ define(["jquery",
 			},
 			"accueil-riche-event-tuer" : {
 				fr :"L'homme s'écroula, sans même s'en rendre compte...",
-				en :"-"
+				en :"The man collapsed, without even realizing it..."
 			},
 			"accueil-riche-event-partir" : {
 				fr :"À jamais, dieu de pacotille !",
@@ -116,7 +116,7 @@ define(["jquery",
 			 */
 			"accueil-question-event-titre" : {
 				fr :"Imposteur ?",
-				en :"-"
+				en :"Impostor ?"
 			},
 			"accueil-question-event" : {
 				fr :"Bonjour ! Bon, je n'irai pas par quatre chemins... Êtes-vous un vrai dieu ?",

@@ -7,15 +7,15 @@ define(["jquery"], function($){
 			 */
 			"zombie-start-event-titre" : {
 				fr :"Un bruit dans la nuit",
-				en :"-"
+				en :"A noise in the night"
 			},
 			"zombie-start-event" : {
 				fr :"Au milieu de la nuit, au cœur de la forêt, un homme marchait.",
-				en :"-"
+				en :"In the middle of the night, in the heart of the forest, a man was walking."
 			},
 			"zombie-start-event-2" : {
 				fr :"Son pas était lourd, son souffle était rauque... Son seul désire : manger !",
-				en :"-"
+				en :"His step was heavy, his breath was hoarse... His only desire is to eat!"
 			},
 
 			/**
@@ -39,7 +39,7 @@ define(["jquery"], function($){
 			},
 			"zombie-fou-event-tuer" : {
 				fr :"L'homme s'écroula au sol. Son apparence laissait penser qu'il était mort depuis quelque temps déjà...",
-				en :"-"
+				en :"The man collapsed to the ground. His appearance suggested that he had been dead for some time..."
 			},
 
 			/**
@@ -51,11 +51,11 @@ define(["jquery"], function($){
 			},
 			"zombie-taverne-event" : {
 				fr :"La bataille faisait rage dans la taverne. Les gros bras tapaient sur les fortes têtes et certains commençaient à mordre comme des animaux !",
-				en :"-"
+				en :"The battle was raging in the tavern. The big arms were banging on the strong heads and some of them were starting to bite like animals !"
 			},
 			"zombie-taverne-event-no" : {
 				fr :"La bagarre se termina en bain de sang. Sur les lieux, il ne restait plus que des lambeaux de chair et des vêtements déchirés...",
-				en :"-"
+				en :"The fight ended in a bloodbath. At the scene, all that remained were shreds of flesh and torn clothes..."
 			},
 			"zombie-taverne-event-boire-button" : {
 				fr :"À boire pour tout le monde !",
@@ -67,7 +67,7 @@ define(["jquery"], function($){
 			},
 			"zombie-taverne-event-enferme" : {
 				fr :"On enferma les responsables de la bagarre : des hommes complètement fous et agressifs. Dans les profondeurs de leur cellule, ils ne feraient plus de mal à personne...",
-				en :"-"
+				en :"The people responsible for the fight were locked up : completely crazy and aggressive men. In the depths of their cell, they would no longer harm anyone..."
 			},
 			"zombie-taverne-event-tuer" : {
 				fr :"La taverne fut ensevelie, emportant avec elle les hommes qu'elle comptait. On construisit un tombeau à cet endroit...<br>Certaines légendes disent que l'on peut y entendre le râle des morts la nuit...",
@@ -111,11 +111,11 @@ define(["jquery"], function($){
 			 */
 			"zombie-step-event-2-titre" : {
 				fr :"Épidémie",
-				en :"-"
+				en :"Epidemic"
 			},
 			"zombie-step-event-2" : {
 				fr :"De plus en plus de malades s'amoncelaient dans les rues, errant dans les allées sombres, s'attaquant à quiconque croisait leur chemin...",
-				en :"-"
+				en :"More and more sick people were piling up in the streets, wandering in the dark alleys, attacking anyone who crossed their path..."
 			},
 
 			/**
@@ -143,7 +143,7 @@ define(["jquery"], function($){
 			 */
 			"zombie-cata-event-titre" : {
 				fr :"Dans les nuages",
-				en :"-"
+				en :"In the clouds"
 			},
 			"zombie-cata-event" : {
 				fr :"Maître ! Un village à l'est semble complètement paralysé ! Les habitants restent à regarder dans le vide, sans but...",
@@ -151,7 +151,7 @@ define(["jquery"], function($){
 			},
 			"zombie-cata-event-no" : {
 				fr :"De nombreux étrangers disparurent dans ce mystérieux village.<br/>Des rumeurs prétendent qu'une armée de morts se dressait en secret...",
-				en :"-"
+				en :"Many strangers disappeared in this mysterious village.<br/>Rumours have it that an army of dead people was secretly standing..."
 			},
 			"zombie-cata-event-tuer" : {
 				fr :"Le mystérieux village disparut de la surface de la Terre. Plus personne n'osait évoquer son nom...",
@@ -192,7 +192,7 @@ define(["jquery"], function($){
 			},
 			"zombie-step-event-3" : {
 				fr :"C'était la fin... Les morts marchaient sur le monde qui vivait ses derniers instants...",
-				en :"-"
+				en :"That was the end... The dead walked on the world as it lived its last moments..."
 			},
 			"zombie-step-event-3-laisser" : {
 				fr :"Le monde sombra dans le néant, ne laissant que des cadavres puants... Plus rien ne restait, hormis vous et votre pouvoir...",
