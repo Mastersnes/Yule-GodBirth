@@ -56,12 +56,6 @@ button:focus {outline:0;}
     position: absolute !important;
     left: 0px !important; top : 0px !important;
     width: 100% !important; height: 100% !important;
-    
-    background-color : white;
-    background-image: url("../img/menu/bebel.png");
-    background-repeat: no-repeat;
-    background-size: 50% 50%;
-    background-position: 50% 50%;
 }
 .preload {
 	z-index: -5;

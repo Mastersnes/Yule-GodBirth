@@ -11,7 +11,7 @@ define(["jquery",
 				en :"Rain day"
 			},
 			"accueil-pluie-event" : {
-				fr :"Bonjour, mon Dieu. Nous sommes une pauvre famille de paysans qui luttent pour survivre.<br/>Pourriez-vous faire tomber la pluie pour améliorer les récoltes ?<br/>Aidez-nous, je vous en prie !",
+				fr :"Bonjour, mon Dieu. Nous sommes une pauvre famille de paysans qui lutte pour survivre.<br/>Pourriez-vous faire tomber la pluie pour améliorer les récoltes ?<br/>Aidez-nous, je vous en prie !",
 				en :"Hello my God. We are a poor peasant family wich are strugling to survive.<br/>Could you make the rain down to improve our crops ?<br/>I beg of you, please help us !"
 			},
 			"accueil-pluie-event-ok" : {

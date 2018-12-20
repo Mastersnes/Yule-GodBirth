@@ -60,7 +60,7 @@ define(["jquery","app/utils/utils"
 			             }
 			         },
 			         {
-			             name : "rassemblement-mars2-event-ok-button",
+			             name : "ok-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
 			            		 croyance : -80,

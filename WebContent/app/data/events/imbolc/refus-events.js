@@ -30,7 +30,7 @@ define(["jquery",
 			             }
 			         },
 			         {
-                         name : "refus-desert-event-enquete-button",
+                         name : "enquete-button",
                          action : function(game) {
                         	 game.eventManager.addEvents(DemonsEvents.start());
                         	 game.alertPopup("refus-desert-event-enquete", function() {

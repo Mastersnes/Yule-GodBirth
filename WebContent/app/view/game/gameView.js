@@ -32,7 +32,7 @@ function($, _, Utils, PopupUtils, page, TextManager,
 		    this.el = $("#app");
 			this.parent = parent;
 		    this.Textes = parent.Textes;
-			this.mediatheque = parent.Mediatheque;
+			this.mediatheque = parent.mediatheque;
 			this.kongregateUtils = parent.kongregateUtils;
 			this.pause = false;
 			this.endGame = false;

@@ -59,7 +59,7 @@ define(["jquery"],
 				fr :"Bien... Tout cela est très malheureux, mais je pense que nous ne pouvons nous résoudre à suivre vos indications...",
 				en :"Well... All this is very unfortunate, but I think we cannot bring ourselves to follow your instructions..."
 			},
-			"rassemblement-mars2-event-ok-button" : {
+			"ok-button" : {
 				fr :"Bien entendu !",
 				en :"Of course !"
 			},

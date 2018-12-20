@@ -15,6 +15,10 @@ define(["jquery",
 				fr :"Enquêter",
 				en :"Investigate"
 			},
+			"ok-button" : {
+				fr :"Ok",
+				en :"Ok"
+			},
 			"intervenir-button" : {
 				fr :"Intervenir",
 				en :"Intercede"

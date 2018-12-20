@@ -15,9 +15,11 @@ define(["jquery"], function($){
 		* Permet de charger les sons
 		**/
 		this.load = function(key) {
+			console.log("Chargement de ", key);
 			var sound = new Audio("app/"+key); 
 			if (key.indexOf("music") > -1) {
-				sound.volume=0.5;
+				console.log("MUSIC");
+				sound.volume=1;
 				sound.addEventListener('ended', function() {
 					this.currentTime = 0;
 				    this.play();
@@ -38,6 +40,7 @@ define(["jquery"], function($){
 			}
 			try {
 				if (key.indexOf("music") > -1) this.currentMusic = key;
+				console.log("isMute : ", this.isMute);
 				if (this.isMute) return;
 				this.sounds[key].play();
 			}catch (e) {

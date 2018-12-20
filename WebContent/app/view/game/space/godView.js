@@ -72,6 +72,12 @@ define(["jquery",
             this.eventManager.setTypeEvents(this.type.events);
             this.textManager.show(this.type.text);
             
+            if (this.type.music) {
+            	console.log("stop : ", this.mediatheque);
+            	this.mediatheque.stopAllMusic();
+            	this.mediatheque.play("music/" + this.type.music);
+            }
+            
             this.textManager.next();
         };
 

@@ -22,7 +22,6 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 		    this.scene = new SceneManager(this);
 		    
             this.mediatheque = new Mediatheque();
-            this.mediatheque.play("music/menu.mp3");
             this.kongregateUtils = new Kongregate(Textes);
             this.saveManager = new SaveManager();
             this.Textes = Textes;
@@ -54,6 +53,8 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 			
 			this.makeEvents();
 			
+			this.mediatheque.play("music/menu.ogg");
+			var that = this;
 			setTimeout(function() {
 				$(".bebel").fadeOut("slow");
 				$(".preload").empty();

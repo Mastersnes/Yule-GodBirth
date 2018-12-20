@@ -23,8 +23,12 @@ define(["jquery"], function($){
 		};
 		
 		this.remove = function(key) {
-			var retour = this.data.splice(key, 1);
-			if (retour && retour.length > 1) return true;
+			try {
+				var retour = this.data.splice(key, 1);
+				if (retour && retour.length > 1) return true;
+			}catch (e) {
+				console.log("Erreur à la suppression");
+			}
 			
 			delete this.data[key];
 		};

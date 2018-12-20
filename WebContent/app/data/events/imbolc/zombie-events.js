@@ -175,7 +175,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "accueil-blessure-event-ok-button",
+				        	   name : "ok-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 0,

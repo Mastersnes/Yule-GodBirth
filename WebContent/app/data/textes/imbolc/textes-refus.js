@@ -47,6 +47,10 @@ define(["jquery",
 				fr :"Arrêtez-les !",
 				en :"Stop them !"
 			},
+			"refus-sacrifice-event-2-titre" : {
+				fr :"Complètement folle",
+				en :"Completely crazy"
+			},
 			"refus-sacrifice-event-2" : {
 				fr :"Ils ne veulent rien entendre ! Ils sont devenus complètement fous !",
 				en :"They don't want to hear anything ! They've gone completely crazy !"
@@ -80,8 +84,8 @@ define(["jquery",
 				en :"Master ! It's terrible ! An unknown illness decimates an entire village ! What could we do ?"
 			},
 			"refus-maladie-event-enquete" : {
-				fr :"Tout était mort sur place et certains cadavres semblaient avoir disparu.<br/>Les villages proches parlèrent de créatures humanoïdes...",
-				en :"Everything had died on the spot and some bodies seemed to have disappeared...<br/>The nearby villages spoke of humanoid creatures..."
+				fr :"Sur place, tout était mort et certains cadavres semblaient avoir disparu.<br/>Les villages proches parlèrent de créatures humanoïdes...",
+				en :"On the spot, everything had died and some bodies seemed to have disappeared.<br/>The nearby villages spoke of humanoid creatures..."
 			},
 			"refus-maladie-event-laisser" : {
 				fr :"Dans les jours qui suivirent, le mal s'étendit aux villages environnants.<br/>Certains parlèrent de créatures humanoïdes...",

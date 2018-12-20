@@ -6,6 +6,7 @@ define(["jquery"], function($){
 	         */
 			"dust" : {
 				name : "dust",
+				music : "eveil.ogg",
 			    nbr : 5,
 				next : "egg",
 				text : ["didactitiel1", "didactitiel2", "didactitiel3", "didactitiel4", "didactitiel5"],
