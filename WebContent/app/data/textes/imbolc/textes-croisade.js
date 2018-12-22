@@ -66,8 +66,8 @@ define(["jquery"], function($){
 				en :"My lord ! Why did you kill our soldiers who are fighting for you ?!<br/>We no longer understand your actions !"
 			},
 			"croisade-attaques-event-stop-button" : {
-				fr :"<bonus>Torque - Arrêter le massacre</bonus>",
-				en :"<bonus>Toque - Stop the massacre</bonus>"
+				fr :"Arrêter le massacre",
+				en :"Stop the massacre"
 			},
 			"croisade-attaques-event-stop" : {
 				fr :"Toutes les armes disparurent en un instant. Les croisés, au milieu du massacre, virent les blessés guérir sous leurs yeux...",

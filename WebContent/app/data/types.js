@@ -48,6 +48,7 @@ define(["jquery"], function($){
                 name : "imbolc",
                 nbr : 7,
 				next : "ostara",
+				music : "apprentissage.ogg",
                 text : ["cinematique-imbolc", "cinematique-imbolc1", "cinematique-imbolc2", "cinematique-imbolc3", "cinematique-imbolc4", "cinematique-imbolc5"],
                 events : {
                     typeEvents : [],
@@ -78,6 +79,7 @@ define(["jquery"], function($){
                 name : "ostara",
                 nbr : 10,
 				next : "beltane",
+				music : "ravage.ogg",
                 text : ["cinematique-ostara", "cinematique-ostara-1", "cinematique-ostara-2"],
                 events : {
                     typeEvents : [],

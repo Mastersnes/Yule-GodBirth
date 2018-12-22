@@ -17,6 +17,7 @@
 }
 
 .popup-game .titre, .popupEvent .titre {
+	margin-top: 1%;
 	font-weight: bold;
 	font-size: 3vh;
 	color: #9379e0;
@@ -40,8 +41,8 @@
 .popup-game .button {
 	cursor: pointer;
 /* 	width: 30%; height: 4%; */
-	margin-top: 5%;
-    margin-bottom: 3%;
+	margin-top: 2%;
+    margin-bottom: 2%;
 /*     margin-left: auto; */
 /*     margin-right: auto; */
     

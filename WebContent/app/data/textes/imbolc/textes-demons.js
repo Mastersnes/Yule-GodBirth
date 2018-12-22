@@ -94,8 +94,8 @@ define(["jquery"], function($){
 				en :"All the creatures fell, inert... The people cheered you on ! You saved the capital !"
 			},
 			"demons-village-event-stop-button" : {
-				fr :"<bonus>[Torque]-Stopper le combat</bonus>",
-				en :"<bonus>[Torque]-Stop the battle</bonus>"
+				fr :"Stopper le combat",
+				en :"Stop the battle"
 			},
 			"demons-village-event-stop" : {
 				fr :"Les gens, aussi bien humains que démons, perdirent toute envie de se battre.<br/>Les armes tombèrent au sol et les combattants commencèrent à quitter les lieux...",
@@ -114,8 +114,8 @@ define(["jquery"], function($){
 				en :"The desert was spreading more and more. The fire demons were gaining ground..."
 			},
 			"demons-desert-event-vie-button" : {
-				fr :"<bonus>[Idole de feu]-Ramener la vie</bonus>",
-				en :"<bonus>[Idol of fire]-Bring life back</bonus>"
+				fr :"Ramener la vie",
+				en :"Bring life back"
 			},
 			"demons-desert-event-vie" : {
 				fr :"Les démons reconnurent leur idole. Ils se prosternèrent devant vous, vous jurant fidélité.<br/>Vous êtes désormais leur Dieu !",

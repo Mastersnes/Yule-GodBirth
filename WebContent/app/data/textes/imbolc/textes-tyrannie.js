@@ -75,8 +75,8 @@ define(["jquery",
 				en :"What !!! You cancel everything ! But we've spend some time to organize all ! Pfff..."
 			},
 			"tyrannie-fete-event-boire-button" : {
-				fr :"<bonus>[Corne d'abondance]-Boire toute la nuit</bonus>",
-				en :"<bonus>[Horn of plenty]-Drink all night long</bonus>"
+				fr :"Boire toute la nuit",
+				en :"Drink all night long"
 			},
 			"tyrannie-fete-event-boire" : {
 				fr :"La fête dura 354 ans... La corne permit de remplir les verres indéfiniment.<br/>Mais, un jour ou l'autre, il faut bien savoir s'arrêter...",

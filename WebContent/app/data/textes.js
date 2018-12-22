@@ -10,6 +10,18 @@ define(["jquery",
 				fr : "Invité",
 				en : "Guest"
 			},
+			"chargement" : {
+				fr : "...Chargement...",
+				en : "...Loading..."
+			},
+			"use" : {
+				fr : "<span class='info' title='Et perdre'>Utiliser</span>",
+				en : "<span class='info' title='And lost'>Use</span>"
+			},
+			"clickToContinue" : {
+				fr : "- Cliquez pour continuer -",
+				en : "- Click to continue -"
+			},
 			"newGame" : {
 				fr : "Nouvelle partie",
 				en : "New Game"

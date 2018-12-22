@@ -102,8 +102,8 @@ define(["jquery"],
 				en :"The planet then continued to decay, then finally flew in a cloud of dust. There was no one left in the Universe to believe in you..."
 			},
 			"nature-destruction-event-sauver-button" : {
-				fr :"<bonus>[Corne d'abondance]-Sauver la nature</bonus>",
-				en :"<bonus>[Horn of plenty]-Save the nature</bonus>"
+				fr :"Sauver la nature",
+				en :"Save the nature"
 			},
 			"nature-destruction-event-sauver" : {
 				fr :"Des dizaines d'années passèrent, sans résultat. Puis, un jour, on vit réapparaître le premier papillon.<br/>Tout alla très vite. Les plantes recommencèrent à pousser puis, vint le tour des arbres...<br/>La Terre avait retrouvé sa grandeur passée !",

@@ -129,8 +129,8 @@ define(["jquery"],
 				en :"Immediately, the moon regained its former glory. Unable to resolve to lose it, you sacrificed part of your divine powers...<br/>Never again will you let it fail, even if it means losing your immortality !"
 			},
 			"lune-magie2-event-sauver2-button" : {
-				fr :"<bonus>[Saint Graal]-Sauver la lune</bonus>",
-				en :"<bonus>[Holy Grail]-Save the moon</bonus>"
+				fr :"Sauver la lune",
+				en :"Save the moon"
 			},
 			"lune-magie2-event-sauver2" : {
 				fr :"La puissance contenue dans la coupe suffit à raviver l'éclat perdu de l'astre divin.<br/>Sa splendeur éternelle s’éleva dans la galaxie pour le reste des temps...",

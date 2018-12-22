@@ -15,17 +15,21 @@ define(["jquery"], function($){
 		* Permet de charger les sons
 		**/
 		this.load = function(key) {
-			console.log("Chargement de ", key);
-			var sound = new Audio("app/"+key); 
+			console.log("load :", key);
+			var sound;
+			if (window.Audio)
+				sound = new Audio("app/"+key);
+			else
+				sound = new HTMLAudioElement("app/"+key);
+			sound.volume=1;
 			if (key.indexOf("music") > -1) {
-				console.log("MUSIC");
-				sound.volume=1;
 				sound.addEventListener('ended', function() {
 					this.currentTime = 0;
 				    this.play();
 				}, false);
 			}
 			
+			sound.load();
 			this.sounds[key] = sound;
 		};
 		
@@ -40,8 +44,14 @@ define(["jquery"], function($){
 			}
 			try {
 				if (key.indexOf("music") > -1) this.currentMusic = key;
-				console.log("isMute : ", this.isMute);
 				if (this.isMute) return;
+				
+				// Si c'est une music est qu'elle est deja en cours, on ne la relance pas
+				if (key.indexOf("music") > -1 && 
+						this.sounds[key].duration > 0 && 
+						!this.sounds[key].paused) 
+					return;
+				console.log("play : ", key);
 				this.sounds[key].play();
 			}catch (e) {
 				this.load(key);
@@ -67,19 +77,14 @@ define(["jquery"], function($){
 				this.sounds[key].pause();
 				this.sounds[key].currentTime = 0;
 			}catch (e) {
-				this.load(key);
+				//this.load(key);
 			}
 		};
 		
 		this.stopAllMusic = function() {
 			for (var index in this.sounds) {
 				if (index.indexOf("music") > -1) {
-					var sound = this.sounds[index];
-					try {
-						sound.pause();
-					}catch (e) {
-						this.load(index);
-					}
+					this.stop(index);
 				}
 			}
 		};

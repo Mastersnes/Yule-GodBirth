@@ -19,9 +19,12 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 		this.init = function() {
 		    this.el = $("#app");
 		    
+		    $(".text#loading").html(Textes.get("chargement"));
+		    
 		    this.scene = new SceneManager(this);
 		    
             this.mediatheque = new Mediatheque();
+            this.mediatheque.load("music/menu.ogg");
             this.kongregateUtils = new Kongregate(Textes);
             this.saveManager = new SaveManager();
             this.Textes = Textes;
@@ -53,10 +56,11 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 			
 			this.makeEvents();
 			
-			this.mediatheque.play("music/menu.ogg");
 			var that = this;
+			$(".app-container").removeClass("bebel");
 			setTimeout(function() {
-				$(".bebel").fadeOut("slow");
+				$(".text#loading").fadeOut("slow");
+				$(".text#starting").fadeIn("slow");
 				$(".preload").empty();
 			}, 1000);
 		};
@@ -92,6 +96,14 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 				$(this).find("etoile").addClass("hovered");
 			}, function() {
 				$(this).find("etoile").removeClass("hovered");
+			});
+			
+			$(".page.bebel").click(function() {
+				that.mediatheque.play("music/menu.ogg");
+				$(".page.bebel").fadeOut("slow", function() {
+					$(".page.bebel").remove();
+					$(".text#loading").remove();
+				});
 			});
 		};
 		

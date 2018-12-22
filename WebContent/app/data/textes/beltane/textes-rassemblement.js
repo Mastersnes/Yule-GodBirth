@@ -167,16 +167,16 @@ define(["jquery"],
 				en :"It's a shame you feel that way... We thought you were a little more thoughtful, you see..."
 			},
 			"rassemblement-saturnus2-event-connaissance-button" : {
-				fr :"<bonus>[3eme Oeil]-La connaissance absolue</bonus>",
-				en :"<bonus>[3rd Eye]-The absolute knowledge</bonus>"
+				fr :"La connaissance absolue",
+				en :"The absolute knowledge"
 			},
 			"rassemblement-saturnus2-event-connaissance" : {
 				fr :"Hum ! J’avoue que cela attire notre attention... Bien, c'est d'accord. Nous serons des vôtres !",
 				en :"Hmm ! I must admit that this attracts our attention... Well, that's okay. We'll be there !"
 			},
 			"rassemblement-saturnus2-event-mystere-button" : {
-				fr :"<bonus>[Fragment lunaire]-Un grand mystère</bonus>",
-				en :"<bonus>[Fragment lunaire]-A great mystery</bonus>"
+				fr :"Un grand mystère",
+				en :"A great mystery"
 			},
 			"rassemblement-saturnus2-event-mystere" : {
 				fr :"Hum ! J’avoue que cela attire notre curiosité... Bien, c'est d'accord. Nous serons des vôtres !",
@@ -212,8 +212,8 @@ define(["jquery"],
 				en :"Ahahaha! Are you serious, runt ? Did you see how many of us there are in front of you ?"
 			},
 			"rassemblement-triton2-event-torque-button" : {
-				fr :"<bonus>[Torque]-Resserrer les rangs</bonus>",
-				en :"<bonus>[Torque]-Tighten the ranks</bonus>"
+				fr :"Resserrer les rangs",
+				en :"Tighten the ranks"
 			},
 			"rassemblement-triton2-event-torque" : {
 				fr :"Excusez, chef, on vous avait pas reconnu ! Bien entendu, nous serons à vos ordres, chef !",

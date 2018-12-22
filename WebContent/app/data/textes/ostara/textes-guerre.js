@@ -35,8 +35,8 @@ define(["jquery"],
 				en :"On all sides, people were tearing each other apart. No one still remembers the origin of this war.<br/>All that was left was violence and resentment..."
 			},
 			"guerre-2-event-arreter-button" : {
-				fr :"<bonus>Torque-Arrêter le massacre</bonus>",
-				en :"<bonus>Toque-Stop the massacre</bonus>"
+				fr :"Arrêter le massacre",
+				en :"Stop the massacre"
 			},
 			"guerre-2-event-arreter" : {
 				fr :"Calmer les tensions ne fut pas chose aisée.<br/>Une grande partie des Hommes perdirent toute émotion ce jour-là.  Le vide en résultant, suffit à maintenir une paix relative...",

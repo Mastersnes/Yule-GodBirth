@@ -79,3 +79,8 @@ bonus {
 	display: block;
 	color: green;
 }
+
+bonus .info {
+	text-decoration: none;
+	border-bottom: dotted 1px green;
+}

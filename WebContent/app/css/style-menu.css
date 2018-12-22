@@ -18,6 +18,16 @@
 	background-size: 50% 50%;
 	background-position: 50% 50%;
 }
+.bebel .text, .text#loading {
+	position: absolute;
+	text-align: center;
+	top: 75%;
+	cursor: pointer;
+	width: 100%;
+}
+.bebel .text#starting {
+	display: none;
+}
 
 /**
 * Menu

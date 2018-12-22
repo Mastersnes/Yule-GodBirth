@@ -10,21 +10,15 @@
                 var action = actions[actionIndex];
                 if (!data.me.checkActionAffichable(action)) continue;
             %>
-                <li index="<%=actionIndex%>"><%=data.text.get(action.name)%> 
-                    <% if (action.prix) { %>
-                    (
-	                    <% if (action.prix.croyance) { %>
-	                        <span class="categorie croyance">
-	                        	- <%=data.text.get(action.prix.croyance)%> % <span class="icon"></span>
-	                        </span>
-	                        <% if (action.prix.illumination) %>&nbsp;
-	                    <% } if (action.prix.illumination) { %>
-	                        <span class="categorie illumination">
-	                        	- <%=data.text.get(action.prix.illumination)%> % <span class="icon"></span>
-	                        </span>
-	                    <% } %>
-                    )
-                    <% } %>
+                <li index="<%=actionIndex%>">
+                	<% 
+                		if (action.conditions) { 
+                		var condition = action.conditions[0];
+                	%>
+                		<bonus><%=data.text.get("use")%> <%=data.text.get(condition.name)%>-<%=data.text.get(action.name)%></bonus>
+                	<% } else { %>
+                		<%=data.text.get(action.name)%>
+                	<% } %>
                 </li>
             <%
                 }
