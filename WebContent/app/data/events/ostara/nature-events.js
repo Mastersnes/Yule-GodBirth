@@ -45,7 +45,12 @@ define(["jquery","app/utils/utils"
 			         {
 			             name : "continuerButton",
 			             action : function(game) {
-			            	 game.eventManager.addEvents(["nature-destruction-event"]);
+			            	 game.gainLoop({
+			            		 croyance : 0,
+			            		 illumination : 0,
+			            		 bien : 0,
+			            		 mal : 5
+			            	 }, "quete");
 			             }
 			         }
 			    ]

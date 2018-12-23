@@ -88,7 +88,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "accueil-riche-event-tuer-button",
+				        	   name : "le-tuer-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 15,

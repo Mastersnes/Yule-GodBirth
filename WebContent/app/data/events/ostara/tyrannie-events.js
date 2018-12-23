@@ -1,6 +1,6 @@
 'use strict';
 define(["jquery",
-        "app/data/events/imbolc/demi-dieu-events"], function($, DemiDieuEvents){
+        "app/data/events/ostara/demi-dieu-events"], function($, DemiDieuEvents){
 	/**
 	 * Tyrannie
 	 */

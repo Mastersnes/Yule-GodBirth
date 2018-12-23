@@ -1,9 +1,8 @@
 'use strict';
 define(["jquery","app/utils/utils",
-        "app/data/events/imbolc/tyrannie-events",
         "app/data/events/imbolc/croisade-events",
         "app/data/events/imbolc/epreuve-events"
-        ], function($, Utils, TyrannieEvents, CroisadeEvents, EpreuveEvents){
+        ], function($, Utils, CroisadeEvents, EpreuveEvents){
 	/**
 	 * Question des emissaires
 	 */
@@ -148,69 +147,6 @@ define(["jquery","app/utils/utils",
 			    ]
 			},
 			
-			"accueil-riche-event" : {
-				name : "accueil-riche-event",
-			    text : "accueil-riche-event",
-			    rarity : 40,
-			    unique : true,
-			    starter : true,
-			    actions : [
-			         {
-			             name : "yesButton",
-			             action : function(game) {
-			            	 game.eventManager.addEvents(TyrannieEvents.start());
-			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -50,
-			            		 illumination : -50,
-			            		 bien : 0,
-			            		 mal : 0
-			            	}, "quete");
-			                 game.alertPopup("accueil-riche-event-ok");
-			             }
-			         },
-			         {
-                         name : "noButton",
-                         action : function(game) {
-                             game.alertPopup("accueil-riche-event-ko");
-                             game.eventManager.showNow("accueil-riche-event-2");
-                         }
-                     }
-			    ]
-			},
-			"accueil-riche-event-2" : {
-				name : "accueil-riche-event-2",
-				text : "accueil-riche-event-2",
-				rarity : -1,
-				unique : true,
-				actions : [
-				           {
-				        	   name : "le-tuer-button",
-				        	   action : function(game) {
-				        		   game.gainLoop({
-		                            	 croyance : 0,
-		                            	 illumination : 0,
-		                            	 bien : 0,
-		                            	 mal : 10
-		                             }, "quete");
-				        		   game.eventManager.rebellion++;
-				        		   game.alertPopup("accueil-riche-event-tuer");
-				        	   }
-				           },
-				           {
-				        	   name : "laisser-partir-button",
-				        	   action : function(game) {
-				        		   game.gainLoop({
-		                            	 croyance : 0,
-		                            	 illumination : 25,
-		                            	 bien : 15,
-		                            	 mal : 0
-		                             }, "quete");
-				        		   game.alertPopup("accueil-riche-event-partir");
-				        	   }
-				           }
-				           ]
-			},
-			
 			"accueil-question-event" : {
 				name : "accueil-question-event",
 			    text : "accueil-question-event",
@@ -244,8 +180,7 @@ define(["jquery","app/utils/utils",
 	
 	return {
 		get : function(key) {
-			var event = TyrannieEvents.get(key);
-		    if (!event) event = CroisadeEvents.get(key);
+			var event = CroisadeEvents.get(key);
 		    if (!event) event = EpreuveEvents.get(key);
             if (!event) event = data[key];
             return event;

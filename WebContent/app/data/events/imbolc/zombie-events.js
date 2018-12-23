@@ -263,7 +263,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "zombie-groupe-event-tuer-button",
+				        	   name : "les-tuer-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 0,
@@ -305,7 +305,7 @@ define(["jquery"], function($){
 				        	   }
 				           },
 				           {
-				        	   name : "zombie-groupe-event-tuer-button",
+				        	   name : "les-tuer-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 0,

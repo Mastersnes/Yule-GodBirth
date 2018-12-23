@@ -1,6 +1,6 @@
 'use strict';
 define(["jquery",
-        "app/data/textes/imbolc/textes-demi-dieu"], function($, TextesDemiDieu){
+        "app/data/textes/ostara/textes-demi-dieu"], function($, TextesDemiDieu){
 	var data = {
 			/**
 			 * Tyrannie

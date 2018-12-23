@@ -1,6 +1,5 @@
 'use strict';
-define(["jquery",
-        "app/data/textes/imbolc/textes-tyrannie"], function($, TextesTyrannie){
+define(["jquery"], function($){
 	var data = {
 			/**
 			 * Imbolc - Accueil
@@ -76,42 +75,6 @@ define(["jquery",
 			},
 
 			/**
-			 * Riche
-			 */
-			"accueil-riche-event-titre" : {
-				fr :"Une richesse infinie",
-				en :"An infinite wealth"
-			},
-			"accueil-riche-event" : {
-				fr :"Cher Dieu, les affaires ne vont pas fort en ce moment.<br/>J'aimerais être le plus riche des Hommes !<br/>Je saurai vous récompenser...",
-				en :"Dear God, business is not going well rencently. I would like to be the richest man !<br/>I would know how to reward you..."
-			},
-			"accueil-riche-event-ok" : {
-				fr :"Oh yeah ! Les affaires reprennent ! Vous ne serez pas déçu !",
-				en :"Oh men ! Business is back ! You won't be disapointed !"
-			},
-			"accueil-riche-event-ko" : {
-				fr :"Dieu pathétique... Vous n'avez aucune ambition !",
-				en :"pathetic god... You don't have any ambition"
-			},
-			"accueil-riche-event-2-titre" : {
-				fr :"Impardonnable",
-				en :"Unforgivable"
-			},
-			"accueil-riche-event-2" : {
-				fr :"Ce mortel vous a insulté ! Souhaitez-vous le punir ?",
-				en :"This mortal insulted you ! Do you want to punish him ?"
-			},
-			"accueil-riche-event-tuer" : {
-				fr :"L'homme s'écroula, sans même s'en rendre compte...",
-				en :"The man collapsed, without even realizing it..."
-			},
-			"accueil-riche-event-partir" : {
-				fr :"À jamais, dieu de pacotille !",
-				en :"Goodbye, junk god !"
-			},
-
-			/**
 			 * Question
 			 */
 			"accueil-question-event-titre" : {
@@ -134,8 +97,7 @@ define(["jquery",
 	
 	return {
 		get : function(key) {
-			var text = TextesTyrannie.get(key);
-			if (!text) text = data[key];
+			var text = data[key];
 			return text;
 		}
 	};

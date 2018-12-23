@@ -12,27 +12,11 @@ define(["jquery"
 			    unique : true,
 			    actions : [
 			         {
-			             name : "pasMonProbleme-button",
+			             name : "continuerButton",
 			             action : function(game) {
-			            	 game.gainLoop({
-                            	 croyance : 0,
-                            	 illumination : 0,
-                            	 bien : 0,
-                            	 mal : 10
-                             }, "quete");
-			            	 game.eventManager.addEvents(DemonsEvents.start());
-			                 game.alertPopup("rebellion-start-event-ko");
+			            	 game.gameOver();
 			             }
-			         },
-			         {
-                         name : "intervenir-button",
-                         action : function(game) {
-                        	 game.eventManager.addEvents(DemonsEvents.start());
-                        	 game.alertPopup("rebellion-start-event-ok", function() {
-                        		 game.artefactsView.add("idole-feu");
-                        	 });
-                         }
-                     }
+			         }
 			    ]
 			}
 	};

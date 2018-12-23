@@ -46,8 +46,8 @@ define(["jquery"], function($){
 				en :"Crusade"
 			},
 			"croisade-attaques-event" : {
-				fr :"De toute part, des villages se faisaient attaquer par l'armée divine. Des milliers d'innocents mouraient en votre nom...",
-				en :"From all sides, villages were being attacked by the divine army. Thousands of innocent people were dying in your name..."
+				fr :"Maître ! De toute part, des villages se font attaquer par l'armée divine. Des milliers d'innocents meurent en votre nom...",
+				en :"Master ! From all sides, villages are attack by the divine army. Thousands of innocent people die in your name..."
 			},
 			"croisade-attaques-event-tuer-village-button" : {
 				fr :"Détruire les villages",

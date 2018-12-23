@@ -163,7 +163,9 @@ define(["jquery"], function($){
 	                        	 bien : 10,
 	                        	 mal : 0
 	                        }, "quete");
-			     			game.alertPopup("croisade-graal-event-laisser");
+			     			game.alertPopup("croisade-graal-event-laisser", function() {
+			     				game.artefactsView.add("saint-graal");
+			     			});
 			             }
 			         }
 			    ]

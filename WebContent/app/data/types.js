@@ -96,7 +96,7 @@ define(["jquery"], function($){
                 text : ["cinematique-beltane", "cinematique-beltane-1", "cinematique-beltane-2"],
                 events : {
                     typeEvents : [],
-                    newEvents : []
+                    newEvents : ["beltane-start-event"]
                 }
             },
             /**
@@ -109,7 +109,7 @@ define(["jquery"], function($){
                 text : ["cinematique-litha","cinematique-litha-1","cinematique-litha-2"],
                 events : {
                     typeEvents : [],
-                    newEvents : []
+                    newEvents : ["litha-start-event"]
                 }
             },
             /**
@@ -122,7 +122,7 @@ define(["jquery"], function($){
                 text : ["cinematique-lammas","cinematique-lammas-1","cinematique-lammas-2"],
                 events : {
                     typeEvents : [],
-                    newEvents : []
+                    newEvents : ["lammas-frere-event"]
                 }
             },
             /**
@@ -135,7 +135,7 @@ define(["jquery"], function($){
                 text : ["cinematique-mabon","cinematique-mabon-1","cinematique-mabon-2"],
                 events : {
                     typeEvents : [],
-                    newEvents : []
+                    newEvents : ["mabon-start-event"]
                 }
             },
             /**

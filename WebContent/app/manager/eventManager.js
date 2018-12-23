@@ -77,6 +77,8 @@ function($, _, Utils, page, Events) {
 	        var randIndex = Utils.rand(0, totalEvents.length);
 	        var randEvent = Events.get(totalEvents[randIndex]);
 	        
+	        console.log("reste :", totalEvents);
+	        
 	    	if (this.checkEvent(randEvent)) this.currentEvent = randEvent;
             if (this.currentEvent) {
             	this.showTimer();
@@ -123,6 +125,8 @@ function($, _, Utils, page, Events) {
 		this.checkEvent = function(randEvent) {
 			// Il ne peut pas être nulle
 			if (!randEvent) return false;
+			// Ca ne doit pas etre le meme que precedemment
+			if (this.previousEvent == randEvent) return false;
 			var isOk = true;
 			
 			// Si il est unique, il ne doit pas exister dans la liste des evenements deja rencontrés
@@ -134,7 +138,7 @@ function($, _, Utils, page, Events) {
 			var rarity = randEvent.rarity;
 			//TODO : Enlever !!!!
 			rarity = 0;
-			if (rarity == 0) return true;
+			if (rarity == 0) return isOk;
 			if (!rarity) rarity = 100;
 			
 			var result = Utils.rand(0, rarity);
@@ -172,6 +176,7 @@ function($, _, Utils, page, Events) {
                 this.uniquesEvents.push(this.currentEvent.name);
                 this.saveManager.save("uniquesEvents", this.uniquesEvents);
             }
+		    this.previousEvent = this.currentEvent;
 			this.currentEvent = null;
 			this.eventOpen = false;
 		    $(".popupEvent").hide();
