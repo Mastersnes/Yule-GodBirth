@@ -136,8 +136,6 @@ function($, _, Utils, page, Events) {
 			
 			// Si il est rare, il faut tomber sur sa rareté
 			var rarity = randEvent.rarity;
-			//TODO : Enlever !!!!
-			rarity = 0;
 			if (rarity == 0) return isOk;
 			if (!rarity) rarity = 100;
 			
