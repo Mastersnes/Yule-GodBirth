@@ -166,8 +166,8 @@ define(["jquery"], function($){
 				en :"Last test : It's easy ! You just have to lose a random artifact."
 			},
 			"epreuve-5-event-yes" : {
-				fr :"Vous êtes réellement un dieu, c'est une certitude à présent ! Nous serons éternellement vos fidèles !",
-				en :"You really are a god, that's a certainty now ! We will be your followers forever !"
+				fr :"Vous êtes réellement notre Dieu, c'est une certitude à présent ! Nous serons éternellement vos fidèles !",
+				en :"You're really our God, that's a certainty now ! We will be your followers forever !"
 			},
 			"epreuve-5-event-yes-2" : {
 				fr :"Prenez ce cadeau pour preuve de notre foi !",

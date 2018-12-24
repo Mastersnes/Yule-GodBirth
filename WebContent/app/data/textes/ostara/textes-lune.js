@@ -30,7 +30,7 @@ define(["jquery"],
 				en :"Attention ! 5... 4... 3... 2... 1... Takeoff !<br/>The rocket took off without any problem. Unfortunately, the trajectory was not correct...<br/>The device was lost in infinite space, we never saw it again..."
 			},
 			"lune-conquete1-event-ko" : {
-				fr :"La fusée décolla et parcourut quelques kilomètres avec succès. Malheureusement, en passant l’atmosphère, elle explosa en mille morceaux...<br/>L'humanité n’était pas prête à atteindre les étoiles...",
+				fr :"La fusée décolla et parcourut quelques kilomètres avec succès. Malheureusement, en passant l’atmosphère, elle explosa en mille morceaux...<br/>L'Humanité n’était pas prête à atteindre les étoiles...",
 				en :"The rocket took off and flew a few kilometers successfully. Unfortunately, as it passed through the atmosphere, it exploded into a thousand pieces...<br/>Humanity was not ready to reach the stars..."
 			},
 
@@ -52,7 +52,7 @@ define(["jquery"],
 				en :"Difficult starts"
 			},
 			"lune-conquete2-event-nohelp" : {
-				fr :"Après de nombreux échecs et de vies perdues, le tout nouveau modèle de vaisseau décolla enfin, transportant à son bord l'espoir de toute l'humanité.",
+				fr :"Après de nombreux échecs et de vies perdues, le tout nouveau modèle de vaisseau décolla enfin, transportant à son bord l'espoir de toute l'Humanité.",
 				en :"After many failures and lost lives, the brand new model ship is finally taking off, carrying on board the hope of all humanity."
 			},
 			"lune-conquete2-event-ko-1" : {
@@ -88,7 +88,7 @@ define(["jquery"],
 				en :"The men did not lose hope. Many peoples joined forces to seek the truth in space manifestations."
 			},
 			"lune-etude1-event-nohelp-2" : {
-				fr :"À chaque événement, l'humanité avançait et la sagesse commune grandissait. Une ère de curiosité avait commencé.",
+				fr :"À chaque événement, l'Humanité avançait et la sagesse commune grandissait. Une ère de curiosité avait commencé.",
 				en :"At each event, Humanity advanced, and common wisdom grew. An era of curiosity had begun."
 			},
 

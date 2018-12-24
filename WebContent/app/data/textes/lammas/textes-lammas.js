@@ -16,11 +16,11 @@ define(["jquery"
 			},
 			"lammas-frere-event-intervenir" : {
 				fr :"Malgré vos efforts, vous ne parvîntes pas à le ramener parmi les vivants. Son âme même semblait s'être évaporée...",
-				en :"Despite your efforts, you are unable to bring him back to the living. His very soul seemed to have evaporated...."
+				en :"Despite your efforts, you are unable to bring him back to the living. His very soul seemed to have evaporated..."
 			},
 			"lammas-frere-event-ignore" : {
 				fr :"La prière se perdit dans le vide de l'espace ne trouvant jamais réponse...",
-				en :"Prayer was lost in the void of space that never found an answer...."
+				en :"Prayer was lost in the void of space that never found an answer..."
 			},
 
 			"lammas-frere2-event-titre" : {

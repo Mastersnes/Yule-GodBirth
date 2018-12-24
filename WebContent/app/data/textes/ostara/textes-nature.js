@@ -7,7 +7,7 @@ define(["jquery"],
 			 */
 			"nature-abeille-event-titre" : {
 				fr :"Un bourdonnement lointain...",
-				en :"A distant buzzing...."
+				en :"A distant buzzing..."
 			},
 			"nature-abeille-event" : {
 				fr :"Maître ! Il semblerait que toutes les abeilles aient disparu ! Que pouvons-nous faire ?",
@@ -19,7 +19,7 @@ define(["jquery"],
 			},
 			"nature-abeille-event-ignore" : {
 				fr :"Plus jamais on n’entendit une seule abeille...<br/>Les conséquences ne furent pas visibles de suite. Et pourtant... Elles ne tardèrent pas à arriver...",
-				en :"Never again was a single bee heard...<br/>The consequences were not immediately visible. And yet.... They soon arrived..."
+				en :"Never again was a single bee heard...<br/>The consequences were not immediately visible. And yet... They soon arrived..."
 			},
 
 			/**
@@ -75,7 +75,7 @@ define(["jquery"],
 			},
 			"nature-nucleaire-event" : {
 				fr :"Plus rien ne subsiste à la surface de la Terre...<br/>Les Hommes se sont terrés dans les entrailles de notre planète pour survivre.<br/>La seule solution serait d'utiliser tout votre pouvoir pour les sauver...",
-				en :"Nothing remains on the surface of the earth.... Men have hid in the bowels of our planet to survive.<br/>The only solution would be to use all your power to save them..."
+				en :"Nothing remains on the surface of the earth... Men have hid in the bowels of our planet to survive.<br/>The only solution would be to use all your power to save them..."
 			},
 			"nature-nucleaire-event-ignore" : {
 				fr :"On continua à polluer, à l'intérieur même de la Terre, visant toujours plus de profits.<br/>L'Homme n'avait toujours rien compris de ses erreurs...",

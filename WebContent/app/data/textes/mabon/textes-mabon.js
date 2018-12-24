@@ -64,7 +64,7 @@ define(["jquery"
 			},
 			"mabon-fin-bad-event3" : {
 				fr :"Sachez que vos choix ont une incidence sur tout ce qui est et tout ce qui sera. Malheureusement, vous ne serez plus parmi nous pour le constater...",
-				en :"Know that your choices have an impact on everything that is and will be. Unfortunately, you will no longer be with us to see this...."
+				en :"Know that your choices have an impact on everything that is and will be. Unfortunately, you will no longer be with us to see this..."
 			},
 			"mabon-fin-bad-event4" : {
 				fr :"Vous vous réveillâtes en sursaut, assis dans votre palais. L'Univers touchait toujours à sa fin et cela vous inquiétait...",

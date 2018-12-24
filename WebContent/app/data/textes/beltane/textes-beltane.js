@@ -12,7 +12,7 @@ define(["jquery",
 				en :"To the infinite !"
 			},
 			"beltane-start-event" : {
-				fr :"Bonjour, maître ! Grâce à vos choix, l'humanité a bien grandi et est maintenant une fière nation éparpillée dans les nombreux mondes de la galaxie.",
+				fr :"Bonjour, maître ! Grâce à vos choix, l'Humanité a bien grandi et est maintenant une fière nation éparpillée dans les nombreux mondes de la galaxie.",
 				en :"Hello, master ! Thanks to your choices, humanity has grown and is now a proud nation scattered in the many worlds of the galaxy."
 			},
 			"beltane-start2-event" : {

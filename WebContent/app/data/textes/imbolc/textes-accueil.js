@@ -10,8 +10,8 @@ define(["jquery"], function($){
 				en :"Rain day"
 			},
 			"accueil-pluie-event" : {
-				fr :"Bonjour, mon Dieu. Nous sommes une pauvre famille de paysans qui lutte pour survivre.<br/>Pourriez-vous faire tomber la pluie pour améliorer les récoltes ?<br/>Aidez-nous, je vous en prie !",
-				en :"Hello my God. We are a poor peasant family wich are strugling to survive.<br/>Could you make the rain down to improve our crops ?<br/>I beg of you, please help us !"
+				fr :"Bonjour, mon Dieu.<br/>Nous sommes une pauvre famille de paysans qui lutte pour survivre.<br/>Pourriez-vous faire tomber la pluie pour améliorer les récoltes ?<br/>Aidez-nous, je vous en prie !",
+				en :"Hello my God.<br/>We are a poor peasant family wich are strugling to survive.<br/>Could you make the rain down to improve our crops ?<br/>I beg of you, please help us !"
 			},
 			"accueil-pluie-event-ok" : {
 				fr :"Ohh, merci mon Dieu ! Grâce à vous, nous allons pouvoir survivre quelques années de plus. Merci beaucoup !",

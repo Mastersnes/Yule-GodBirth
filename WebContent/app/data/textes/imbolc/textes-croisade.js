@@ -15,7 +15,7 @@ define(["jquery"], function($){
 			},
 			"croisade-start-event-2" : {
 				fr :"Que l'armée divine se mette en marche et fasse résonner la puissance du Dieu ! Que démarre la grande croisade divine !",
-				en :"Let the divine army march and make the power of the god resound ! Let the great divine crusade begin !"
+				en :"Let the divine army march and make the power of the God resound ! Let the great divine crusade begin !"
 			},
 
 			/**
@@ -35,7 +35,7 @@ define(["jquery"], function($){
 			},
 			"croisade-benediction-event-refus" : {
 				fr :"La corruption prend possession de vous, mon Dieu ! Nous devons tuer ces infidèles qui vous perturbent !",
-				en :"Corruption takes possession of you, my god ! We must kill those infidels who disturb you !"
+				en :"Corruption takes possession of you, my God ! We must kill those infidels who disturb you !"
 			},
 
 			/**

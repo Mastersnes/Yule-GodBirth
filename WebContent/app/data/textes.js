@@ -458,7 +458,47 @@ define(["jquery",
 			"quete-samhain-desc" : {
 				fr : "Atteignez Samhain",
 				en : "Reach Samhain"
+			},
+			"quete-5-events" : {
+				fr : "Premiers pas",
+				en : "First steps"
 			},        
+			"quete-5-events-desc" : {
+				fr : "Accomplissez 5 événements.",
+				en : "Complete 5 events."
+			},
+			"quete-10-events" : {
+				fr : "Continuez comme ça !",
+				en : "Continue like this !"
+			},        
+			"quete-10-events-desc" : {
+				fr : "Accomplissez 10 événements.",
+				en : "Complete 10 events."
+			},
+			"quete-20-events" : {
+				fr : "Assistante sociale",
+				en : "Social worker"
+			},        
+			"quete-20-events-desc" : {
+				fr : "Accomplissez 20 événements.",
+				en : "Complete 20 events."
+			},
+			"quete-40-events" : {
+				fr : "Expert en sociologie",
+				en : "Expert in sociology"
+			},        
+			"quete-40-events-desc" : {
+				fr : "Accomplissez 40 événements.",
+				en : "Complete 40 events."
+			},
+			"quete-60-events" : {
+				fr : "Omniscient",
+				en : "Omniscient"
+			},        
+			"quete-60-events-desc" : {
+				fr : "Accomplissez 60 événements.",
+				en : "Complete 60 events."
+			},
 			"primaire" : {
 				fr : "Primaire",
 				en : "Primary"
@@ -568,7 +608,7 @@ define(["jquery",
 				en : "Hematite"
 			},
 			"hematite-desc" : {
-				fr : "Pierre de sang, elle suit les progrès de l'humanité depuis ses débuts. Elle est un symbole de dynamisme et de vitalité.",
+				fr : "Pierre de sang, elle suit les progrès de l'Humanité depuis ses débuts. Elle est un symbole de dynamisme et de vitalité.",
 				en : "Bloodstone, it follow the progress of humanity since its inception. It's a symbol of dynamism and vitality."
 			},
 			"pierre-de-soleil" : {

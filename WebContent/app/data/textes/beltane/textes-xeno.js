@@ -116,7 +116,7 @@ define(["jquery"],
 			},
 			"xeno-bleu-event" : {
 				fr :"Le bleu détecté sur les radars n’était malheureusement pas de l'eau et l’équipage ne le comprit que trop tard...",
-				en :"The blue detected in the radar was unfortunately not water and the crew only understood it too late...."
+				en :"The blue detected in the radar was unfortunately not water and the crew only understood it too late..."
 			},
 			"xeno-bleu-event-2" : {
 				fr :"Le vaisseau, perdant tout contrôle, fut pris dans le nuage électromagnétique géant que représentait la planète et explosa...",

@@ -86,7 +86,7 @@ define(["jquery"],
 			},
 			"rassemblement-mars3-event-ignore" : {
 				fr :"Vous abandonnâtes les négociations. Inutile de perdre votre temps...",
-				en :"You abandoned the negotiations. No need to waste your time...."
+				en :"You abandoned the negotiations. No need to waste your time..."
 			},
 
 			/**
@@ -126,8 +126,8 @@ define(["jquery"],
 				en :"Io - Problème de jus"
 			},
 			"rassemblement-io3-event" : {
-				fr :"Désormais, cette énergie sera payante et c'est grâce à vous ! Dites merci à votre grand dieu hypocrite !",
-				en :"From now on, this energy will pay for itself and it's all thanks to you ! Say thank you to your great hypocritical god !"
+				fr :"Désormais, cette énergie sera payante et c'est grâce à vous ! Dites merci à votre grand Dieu hypocrite !",
+				en :"From now on, this energy will pay for itself and it's all thanks to you ! Say thank you to your great hypocritical God !"
 			},
 			"rassemblement-io3-event-menace" : {
 				fr :"Nous sommes bien obligés d’obéir... Même si c'est à contrecœur...",

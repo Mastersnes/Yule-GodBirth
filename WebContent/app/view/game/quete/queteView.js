@@ -13,6 +13,7 @@ define(["jquery",
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
             this.Quetes = Quetes;
+            this.eventManager = parent.eventManager;
             
             this.saveManager = this.parent.saveManager;
             this.pointManager = this.parent.pointManager;
@@ -93,6 +94,8 @@ define(["jquery",
         		if (!this.checkCondition(ameliorationToCheck)) return false;
         	}
         	
+        	if (quete.conditionsFunction) return quete.conditionsFunction(this);
+        	
         	return true;
         };
         
@@ -171,8 +174,6 @@ define(["jquery",
             
             if (!this.checkComplete(quete)) return false;
             this.complete.push(quete.name);
-            
-            this.parent.kongregateUtils.score(quete.name, 1);
             
             this.saveManager.save("quetesComplete", this.complete);
             this.pointManager.addPoints(quete.gains, null, "click");

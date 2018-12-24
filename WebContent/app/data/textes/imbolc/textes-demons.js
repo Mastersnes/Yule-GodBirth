@@ -51,7 +51,7 @@ define(["jquery"], function($){
 			},
 			"demons-attaque-event-torture" : {
 				fr :"Sous les coups, il commença à parler : « Arghh... Nous venons de loin sous le sol, près d'un lieu nommé Osra.<br/>Notre peuple commence à mourir de famine et de maladie... »",
-				en :"Under the blows, he began to speak : « Arghh.... We come from far below the ground, near a place called Osra.<br/>Our people are beginning to die of famine and disease... »"
+				en :"Under the blows, he began to speak : « Arghh... We come from far below the ground, near a place called Osra.<br/>Our people are beginning to die of famine and disease... »"
 			},
 			"demons-attaque-event-torture-2" : {
 				fr :"« Nous sommes revenus pour conquérir ce monde et reprendre ce qui nous revient de droit ! » Puis, il finit par mourir sous la torture...",

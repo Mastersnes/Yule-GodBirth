@@ -174,6 +174,23 @@ define(["jquery"], function($){
 			    	game.recompenseManager.addSuccess("success-imbolc");
 			    }
 			},
+			"quete-5-events" : {
+			    name : "quete-5-events",
+			    description : "quete-5-events-desc",
+				apparition : {
+					 isComplete : ["quete-imbolc"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	return queteView.eventManager.uniquesEvents.length >= 5;
+			    },
+			    gains : {
+			    	croyance : 1000,
+			    	illumination : 200
+			    },
+			    success : function(queteView) {
+			    }
+			},
 			"quete-ostara" : {
 			    name : "quete-ostara",
 			    description : "quete-ostara-desc",
@@ -194,6 +211,23 @@ define(["jquery"], function($){
 			    success : function(queteView) {
 			    	var game = queteView.parent;
 			    	game.recompenseManager.addSuccess("success-ostara");
+			    }
+			},
+			"quete-10-events" : {
+			    name : "quete-10-events",
+			    description : "quete-10-events-desc",
+				apparition : {
+					 isComplete : ["quete-5-events"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	return queteView.eventManager.uniquesEvents.length >= 10;
+			    },
+			    gains : {
+			    	croyance : 2500,
+			    	illumination : 500
+			    },
+			    success : function(queteView) {
 			    }
 			},
 			"quete-beltane" : {
@@ -218,6 +252,23 @@ define(["jquery"], function($){
 			    	game.recompenseManager.addSuccess("success-beltane");
 			    }
 			},
+			"quete-20-events" : {
+			    name : "quete-20-events",
+			    description : "quete-20-events-desc",
+				apparition : {
+					 isComplete : ["quete-10-events"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	return queteView.eventManager.uniquesEvents.length >= 20;
+			    },
+			    gains : {
+			    	croyance : 8000,
+			    	illumination : 1200
+			    },
+			    success : function(queteView) {
+			    }
+			},
 			"quete-litha" : {
 			    name : "quete-litha",
 			    description : "quete-litha-desc",
@@ -240,6 +291,23 @@ define(["jquery"], function($){
 			    	game.recompenseManager.addSuccess("success-litha");
 			    }
 			},
+			"quete-40-events" : {
+			    name : "quete-40-events",
+			    description : "quete-40-events-desc",
+				apparition : {
+					 isComplete : ["quete-20-events"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	return queteView.eventManager.uniquesEvents.length >= 40;
+			    },
+			    gains : {
+			    	croyance : 15000,
+			    	illumination : 3000
+			    },
+			    success : function(queteView) {
+			    }
+			},
 			"quete-lammas" : {
 			    name : "quete-lammas",
 			    description : "quete-lammas-desc",
@@ -260,6 +328,23 @@ define(["jquery"], function($){
 			    success : function(queteView) {
 			    	var game = queteView.parent;
 			    	game.recompenseManager.addSuccess("success-lammas");
+			    }
+			},
+			"quete-60-events" : {
+			    name : "quete-60-events",
+			    description : "quete-60-events-desc",
+				apparition : {
+					 isComplete : ["quete-40-events"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	return queteView.eventManager.uniquesEvents.length >= 60;
+			    },
+			    gains : {
+			    	croyance : 20000,
+			    	illumination : 5000
+			    },
+			    success : function(queteView) {
 			    }
 			},
 			"quete-mabon" : {
