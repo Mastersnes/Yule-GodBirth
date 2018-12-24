@@ -80,7 +80,7 @@ define(["jquery",
 			},
 			"tyrannie-fete-event-boire" : {
 				fr :"La fête dura 354 ans... La corne permit de remplir les verres indéfiniment.<br/>Mais, un jour ou l'autre, il faut bien savoir s'arrêter...",
-				en :"The party lasted 354 years... The horn allow you to fill the glasses indefinitely.<br/>But, soon or later, you have to know when to stop..."
+				en :"The party lasted 354 years... The horn allow you to fill the glasses indefinitely.<br/>But, soon or later, you've to know when to stop..."
 			},
 
 			/**

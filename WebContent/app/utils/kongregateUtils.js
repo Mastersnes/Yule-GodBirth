@@ -13,6 +13,7 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
             kongregateAPI.loadAPI(function(){
 			    that.isLoad = true;
             	that.kongregate = kongregateAPI.getAPI();
+            	that.makeEvents();
 			    callback.call();
 			});
 		};
@@ -22,11 +23,15 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
 			
 			var isGuest = this.isGuest;
 			var username = this.username;
-			if (isGuest) username = this.Textes.get("guest");
-			
-			$(".username").html(this.Textes.get("bienvenue") + " " + username);
-			
-			$(".username").removeClass("hidden");
+			if (isGuest) {
+				username = this.Textes.get("guest");
+				$("#login").removeClass("hidden");
+				$(".username").addClass("hidden");
+			} else {
+				$(".username").html(username);
+				$(".username").removeClass("hidden");
+				$("#login").addClass("hidden");
+			}
 		};
 		
 		this.score = function(key, value) {
@@ -52,20 +57,25 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
 			});
 		};
 		
+		this.makeEvents = function() {
+			var that = this;
+			this.kongregate.services.addEventListener('login', function(){
+				that.resolve();
+            	that.render();
+            });
+		};
+		
+		this.resolve = function() {
+			this.username = this.kongregate.services.getUsername();
+        	this.isGuest = this.kongregate.services.isGuest();
+        	if (this.isGuest == null || this.isGuest == undefined) this.isGuest = true;
+        	console.log('Kongregate username changed to: ' + that.username);
+		};
+		
 		this.login = function() {
 			if (!this.isLoad) return;
 			if (!this.isGuest) return;
 			
-			var that = this;
-			this.kongregate.services.addEventListener('login', function(){
-				that.username = that.kongregate.services.getUsername();
-            	console.log('Kongregate username changed to: ' + that.username);
-            	$(".username").html(that.username);
-            	that.isGuest = that.kongregate.services.isGuest();
-            	if (!isGuest) {
-            		$("#login").addClass("hidden");
-            	}
-            });
 			this.kongregate.services.showRegistrationBox();
 		};
 		

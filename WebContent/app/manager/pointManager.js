@@ -108,10 +108,10 @@ function($, _, Utils) {
 		    this.saveManager.save("points", this.points);		    
 		    this.saveManager.saveMaxPoints(this.points);
 		    
-		    this.parent.kongregateUtils.score("maxCroyance", this.points.croyance);
-		    this.parent.kongregateUtils.score("maxIllumination", this.points.illumination);
-		    this.parent.kongregateUtils.score("maxBien", this.points.bien);
-		    this.parent.kongregateUtils.score("maxMal", this.points.mal);
+		    this.parent.kongregateUtils.score("maxCroyance", Math.round(this.points.croyance));
+		    this.parent.kongregateUtils.score("maxIllumination", Math.round(this.points.illumination));
+		    this.parent.kongregateUtils.score("maxBien", Math.round(this.points.bien));
+		    this.parent.kongregateUtils.score("maxMal", Math.round(this.points.mal));
 		    
 		    this.render();
 		    
@@ -121,12 +121,15 @@ function($, _, Utils) {
 		this.incrementPoints = function(points, avantages, multiplier, key, from) {
 			if (!points[key]) return 0;
 			if (points[key] > Math.pow(10, 12)) return 0;
+			var multiple = multiplier[key];
+			if (multiple == undefined) multiple = 0;
+			
 			
 			var gainPerte = 0;
 			if (points[key] < 0) {
-				gainPerte += (points[key] * multiplier[key]);
+				gainPerte += (points[key] * multiple);
 			}else {
-				gainPerte += ((points[key] + parseInt(Utils.percent(points[key], avantages[key]))) * multiplier[key]);
+				gainPerte += ((points[key] + parseInt(Utils.percent(points[key], avantages[key]))) * multiple);
 			}
 			
 			if (from == "quete") this.launchAnimQuete(gainPerte, key);

@@ -257,7 +257,36 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
         	this.complete.push(pierre.name);
         	this.refreshPierre(pierre);
         	
+        	this.checkAllOngletFinish();
+        	
         	return true;
+        };
+        
+        /**
+         * Regarde chaque onglet s'il est terminé
+         */
+        this.checkAllOngletFinish = function() {
+        	var listOnglet = PierresOnglets.list();
+        	for (var index in listOnglet) {
+                var onglet = listOnglet[index];
+                this.checkOngletFinish(onglet);
+            }
+        };
+        
+        /**
+         * Regarde si l'onglet est fini
+         */
+        this.checkOngletFinish = function(onglet) {
+        	var nbBuy = 0;
+			for (var id in onglet.pierres) {
+				var pierreId = onglet.pierres[id];
+				if (this.complete.indexOf(pierreId) > -1) nbBuy++;
+			}
+			
+			if (nbBuy >= onglet.pierres.length) {
+				this.saveManager.save("pierre-"+onglet.name+"-success", 1);
+				this.parent.kongregateUtils.score("pierre-"+onglet.name+"-success", 1);
+			}
         };
         
 		this.init(parent);

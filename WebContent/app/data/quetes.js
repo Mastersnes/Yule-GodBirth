@@ -16,7 +16,7 @@ define(["jquery"], function($){
 				],
 			    gains : {
 			    	croyance : 200,
-			    	illumination : 10
+			    	illumination : 15
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -49,9 +49,9 @@ define(["jquery"], function($){
 				    	 level : 3
 			         }
 				],
-			    gains : {
-			    	croyance : 500,
-			    	illumination : 100
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 20
 			    }
 			},
 			"quete-vie" : {
@@ -75,9 +75,9 @@ define(["jquery"], function($){
 				    	 level : 5
 			         }
 				],
-			    gains : {
-			    	croyance : 1000,
-			    	illumination : 500
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 40
 			    }
 			},
 			"quete-mort" : {
@@ -101,9 +101,9 @@ define(["jquery"], function($){
 				    	 level : 5
 			         }
 				],
-			    gains : {
-			    	croyance : 1000,
-			    	illumination : 500
+			    gainsLoop : {
+			    	croyance : 40,
+			    	illumination : 30
 			    }
 			},
 			"quete-concept" : {
@@ -147,9 +147,9 @@ define(["jquery"], function($){
                          level : 5
                      }
 				],
-			    gains : {
-			    	croyance : 5000,
-			    	illumination : 3000
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 30
 			    }
 			},
 			"quete-imbolc" : {
@@ -165,9 +165,9 @@ define(["jquery"], function($){
 					     level : 8
 					 }
 				],
-			    gains : {
-			    	croyance : 1500,
-			    	illumination : 500
+			    gainsLoop : {
+			    	croyance : 20,
+			    	illumination : 20
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -184,9 +184,9 @@ define(["jquery"], function($){
 			    conditionsFunction : function(queteView) {
 			    	return queteView.eventManager.uniquesEvents.length >= 5;
 			    },
-			    gains : {
-			    	croyance : 1000,
-			    	illumination : 200
+			    gainsLoop : {
+			    	croyance : 15,
+			    	illumination : 20
 			    },
 			    success : function(queteView) {
 			    }
@@ -204,9 +204,9 @@ define(["jquery"], function($){
 					     level : 15
 					 }
 				],
-			    gains : {
-			    	croyance : 5000,
-			    	illumination : 2000
+			    gainsLoop : {
+			    	croyance : 20,
+			    	illumination : 20
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -223,9 +223,9 @@ define(["jquery"], function($){
 			    conditionsFunction : function(queteView) {
 			    	return queteView.eventManager.uniquesEvents.length >= 10;
 			    },
-			    gains : {
-			    	croyance : 2500,
-			    	illumination : 500
+			    gainsLoop : {
+			    	croyance : 20,
+			    	illumination : 25
 			    },
 			    success : function(queteView) {
 			    }
@@ -243,9 +243,9 @@ define(["jquery"], function($){
 					     level : 25
 					 }
 				],
-			    gains : {
-			    	croyance : 10000,
-			    	illumination : 3000
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 20
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -262,9 +262,9 @@ define(["jquery"], function($){
 			    conditionsFunction : function(queteView) {
 			    	return queteView.eventManager.uniquesEvents.length >= 20;
 			    },
-			    gains : {
-			    	croyance : 8000,
-			    	illumination : 1200
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 20
 			    },
 			    success : function(queteView) {
 			    }
@@ -282,9 +282,9 @@ define(["jquery"], function($){
 					     level : 40
 					 }
 				],
-			    gains : {
-			    	croyance : 20000,
-			    	illumination : 5000
+			    gainsLoop : {
+			    	croyance : 25,
+			    	illumination : 25
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -301,9 +301,9 @@ define(["jquery"], function($){
 			    conditionsFunction : function(queteView) {
 			    	return queteView.eventManager.uniquesEvents.length >= 40;
 			    },
-			    gains : {
-			    	croyance : 15000,
-			    	illumination : 3000
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 30
 			    },
 			    success : function(queteView) {
 			    }
@@ -321,9 +321,9 @@ define(["jquery"], function($){
 					     level : 55
 					 }
 				],
-			    gains : {
-			    	croyance : 30000,
-			    	illumination : 8000
+			    gainsLoop : {
+			    	croyance : 20,
+			    	illumination : 30
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -340,9 +340,9 @@ define(["jquery"], function($){
 			    conditionsFunction : function(queteView) {
 			    	return queteView.eventManager.uniquesEvents.length >= 60;
 			    },
-			    gains : {
-			    	croyance : 20000,
-			    	illumination : 5000
+			    gainsLoop : {
+			    	croyance : 20,
+			    	illumination : 20
 			    },
 			    success : function(queteView) {
 			    }
@@ -360,9 +360,9 @@ define(["jquery"], function($){
 					     level : 70
 					 }
 				],
-			    gains : {
-			    	croyance : 40000,
-			    	illumination : 10000
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 30
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -382,15 +382,83 @@ define(["jquery"], function($){
 					     level : 85
 					 }
 				],
-			    gains : {
-			    	croyance : 50000,
-			    	illumination : 30000
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 30
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
 			    	game.recompenseManager.addSuccess("success-samhain");
 			    }
-			}
+			},
+			"quete-primary-stones" : {
+			    name : "quete-primary-stones",
+			    description : "quete-primary-stones-desc",
+				apparition : {
+					 isComplete : ["quete-start"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	return queteView.saveManager.load("pierre-primaire-success") > 0;
+			    },
+			    gainsLoop : {
+			    	croyance : 25,
+			    	illumination : 30
+			    },
+			    success : function(queteView) {
+			    }
+			},
+			"quete-lunar-stones" : {
+			    name : "quete-lunar-stones",
+			    description : "quete-lunar-stones-desc",
+				apparition : {
+					 isComplete : ["quete-start"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	return queteView.saveManager.load("pierre-lunaire-success") > 0;
+			    },
+			    gainsLoop : {
+			    	croyance : 10,
+			    	illumination : 40
+			    },
+			    success : function(queteView) {
+			    }
+			},
+			"quete-solar-stones" : {
+			    name : "quete-solar-stones",
+			    description : "quete-solar-stones-desc",
+				apparition : {
+					 isComplete : ["quete-start"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	return queteView.saveManager.load("pierre-solaire-success") > 0;
+			    },
+			    gainsLoop : {
+			    	croyance : 50,
+			    	illumination : 10
+			    },
+			    success : function(queteView) {
+			    }
+			},
+			"quete-secret-stones" : {
+			    name : "quete-secret-stones",
+			    description : "quete-secret-stones-desc",
+				apparition : {
+					 isComplete : ["quete-primary-stones", "quete-lunar-stones", "quete-solar-stones"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	return queteView.saveManager.load("pierre-secrete-success") > 0;
+			    },
+			    gainsLoop : {
+			    	croyance : 50,
+			    	illumination : 30
+			    },
+			    success : function(queteView) {
+			    }
+			},
 	};
 	
 	return {

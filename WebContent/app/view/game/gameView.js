@@ -103,6 +103,7 @@ function($, _, Utils, PopupUtils, page, TextManager,
     		    	this.didactitielManager.loop();
         		    this.spaceView.loop(this);
         		    this.queteView.loop(this);
+        		    this.artefactsView.loop(this);
         		    this.constellationView.loop(this);
                     this.eventManager.loop();
                     
@@ -140,6 +141,13 @@ function($, _, Utils, PopupUtils, page, TextManager,
         };
         
         this.gameOver = function(gagne) {
+        	if (gagne) {
+        		this.saveManager.save("GameComplete", 1);
+        		this.kongregateUtils.score("GameComplete", 1);
+        	} else {
+        		this.saveManager.save("GameOver", 1);
+        		this.kongregateUtils.score("GameOver", 1);
+        	}
         	this.endGame = true;
             this.endView.render(gagne);
         };
@@ -201,11 +209,19 @@ function($, _, Utils, PopupUtils, page, TextManager,
          */
         this.alertPopup = function(texte, callback, noButton) {
         	var that = this;
-        	that.alertOpen = true;
-        	PopupUtils.alert(this.Textes, texte, "suivant", function() {
-        		that.alertOpen = false;
-        		if (callback) callback();
-        	}, noButton);
+        	if (that.alertOpen) {
+        		$(".bandeauBas").html(this.Textes.get(texte));
+        		$(".bandeauBas").fadeIn();
+        		setTimeout(function() {
+        			$(".bandeauBas").fadeOut();
+        		}, 2000);
+        	}else {
+	        	that.alertOpen = true;
+	        	PopupUtils.alert(this.Textes, texte, "suivant", function() {
+	        		that.alertOpen = false;
+	        		if (callback) callback();
+	        	}, noButton);
+        	}
         };
 		
 		this.init(parent);

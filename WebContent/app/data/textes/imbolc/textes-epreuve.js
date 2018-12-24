@@ -15,7 +15,7 @@ define(["jquery"], function($){
 			},
 			"epreuve-start-event-2" : {
 				fr :"Vous devrez réussir une série d’épreuves. Un faux pas et tout le monde saura que vous êtes un imposteur !",
-				en :"You will have to pass a series of tests. One false move and everyone will know you're an impostor !"
+				en :"You'll have to pass a series of tests. One false move and everyone will know you're an impostor !"
 			},
 
 			/**
@@ -27,7 +27,7 @@ define(["jquery"], function($){
 			},
 			"epreuve-1-event" : {
 				fr :"Première épreuve : Dans cette première épreuve, vous devrez simplement faire pleuvoir. Allez-y, j'attends...",
-				en :"First test : In this first trial, you will simply have to make it rain. Come on, I'll wait..."
+				en :"First test : In this first trial, you'll simply have to make it rain. Come on, I'll wait..."
 			},
 			"epreuve-1-event-pleuvoir-button" : {
 				fr :"Faire pleuvoir",

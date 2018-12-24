@@ -10,8 +10,8 @@ define(["jquery"], function($){
 				en :"Fire daemons"
 			},
 			"demons-start-event" : {
-				fr :"Loin à l'est, de nombreux villages étaient en cendre. De toute part, les Hommes prenaient les armes contre des créatures de l'enfer.",
-				en :"Far to the east, many villages were in ashes. On all sides, Men took up arms against creatures of hell."
+				fr :"Loin à l'est, de nombreux villages étaient en cendre. De toute part, l'Humanité prenait les armes contre des créatures de l'enfer.",
+				en :"Far to the east, many villages were in ashes. On all sides, Humanity took up arms against creatures of hell."
 			},
 			"demons-start-event-2" : {
 				fr :"Une guerre avait débuté. Les démons de feu revendiquaient ce qui leur avait été volé.",

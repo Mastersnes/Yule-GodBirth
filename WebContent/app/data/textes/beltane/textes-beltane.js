@@ -13,7 +13,7 @@ define(["jquery",
 			},
 			"beltane-start-event" : {
 				fr :"Bonjour, maître ! Grâce à vos choix, l'Humanité a bien grandi et est maintenant une fière nation éparpillée dans les nombreux mondes de la galaxie.",
-				en :"Hello, master ! Thanks to your choices, humanity has grown and is now a proud nation scattered in the many worlds of the galaxy."
+				en :"Hello, master ! Thanks to your choices, Humanity has grown and is now a proud nation scattered in the many worlds of the galaxy."
 			},
 			"beltane-start2-event" : {
 				fr :"De nouvelles prières 2.0 nous parviennent chaque jour ! Saurez-vous y faire face ?",

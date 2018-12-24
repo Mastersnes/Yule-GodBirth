@@ -6,10 +6,10 @@ define(["jquery",
 function($, _, Utils) {
 	'use strict';
 
-	return function(parent) {
-	    this.init = function(parent) {
+	return function(kongregateUtils) {
+	    this.init = function(kongregateUtils) {
 			this.el = "";
-			this.parent = parent;
+			this.kongregateUtils = kongregateUtils;
 			
 			this.initSaveData();
 		};
@@ -46,6 +46,9 @@ function($, _, Utils) {
 			        "rebellion" : 0,
 			        "epidemie" : 0,
 			        "sagesse" : 0,
+			        "artefactsUses" : 0,
+			        "GameComplete" : 0,
+			        "GameOver" : 0,
 			        
 			        "pierresComplete" : [],
 			        "selectedPierres" : {
@@ -56,6 +59,10 @@ function($, _, Utils) {
             			"gauche" : null,
             			"centre" : null
             		},
+            		"pierre-primaire-success" : 0,
+            		"pierre-lunaire-success" : 0,
+            		"pierre-solaire-success" : 0,
+            		"pierre-secrete-success" : 0,
             		
             		"inventaire" : {},
             		"options" : {
@@ -129,6 +136,33 @@ function($, _, Utils) {
 	            this.loaded = true;
 	        	this.saveData = JSON.parse(Utils.decode(saveSession));
 	        }
+	        
+	        //On rejout les succes à ce moment
+	        this.kongregateUtils.score("maxCroyance", this.load("maxPoints").croyance);
+	        this.kongregateUtils.score("maxIllumination", this.load("maxPoints").illumination);
+	        this.kongregateUtils.score("maxBien", this.load("maxPoints").bien);
+	        this.kongregateUtils.score("maxMal", this.load("maxPoints").mal);
+	        this.kongregateUtils.score("compteurClick", this.load("compteurClick"));
+	        this.kongregateUtils.score("artefactsUses", this.load("artefactsUses"));
+	        if (this.load("artefactsUses") >= 1) this.kongregateUtils.score("artefactsUses1", 1);
+	        if (this.load("artefactsUses") >= 3) this.kongregateUtils.score("artefactsUses3", 1);
+	        if (this.load("pierre-primaire-success"))
+	        	this.kongregateUtils.score("pierre-primaire-success", 1);
+	        if (this.load("pierre-lunaire-success"))
+	        	this.kongregateUtils.score("pierre-lunaire-success", 1);
+	        if (this.load("pierre-solaire-success"))
+	        	this.kongregateUtils.score("pierre-solaire-success", 1);
+	        if (this.load("pierre-secrete-success"))
+	        	this.kongregateUtils.score("pierre-secrete-success", 1);
+	        if (this.load("GameComplete"))
+	        	this.kongregateUtils.score("GameComplete", 1);
+	        if (this.load("GameOver"))
+	        	this.kongregateUtils.score("GameOver", 1);
+	        
+	        var successComplete = this.load("successComplete");
+	        for (var index in successComplete) {
+	        	this.kongregateUtils.score(successComplete[index], 1);
+	        }
 		};
 		
 		/**
@@ -189,6 +223,6 @@ function($, _, Utils) {
 			if (points.mal > this.saveData.maxPoints.mal) this.saveData.maxPoints.mal = points.mal;
 		};
 		
-		this.init(parent);
+		this.init(kongregateUtils);
 	};
 });

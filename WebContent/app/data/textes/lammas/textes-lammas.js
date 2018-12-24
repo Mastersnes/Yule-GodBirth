@@ -57,7 +57,7 @@ define(["jquery"
 			},
 			"lammas-disparition-event-question" : {
 				fr :"Vous aurez bientôt à faire un grand choix pour l'Univers !",
-				en :"You will soon have to make a wide choice for the Universe !"
+				en :"You'll soon have to make a wide choice for the Universe !"
 			},
 
 			"lammas-disparition2-event-titre" : {
@@ -87,7 +87,7 @@ define(["jquery"
 			},
 			"lammas-disparition3-event-ignore" : {
 				fr :"La lueur finit par s’éteindre au bout de quelques secondes. Vous ne connaîtrez jamais le réel sens de son intervention...",
-				en :"The glow eventually fades out after a few seconds. You will never know the real meaning of his intervention..."
+				en :"The glow eventually fades out after a few seconds. You'll never know the real meaning of his intervention..."
 			},
 			"lammas-disparition3-event-lumiere-button" : {
 				fr :"Plonger dans la lumière",

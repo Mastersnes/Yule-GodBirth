@@ -10,8 +10,8 @@ define(["jquery"],
 				en :"Planetary Gathering"
 			},
 			"rassemblement-1-event" : {
-				fr :"Voilà maintenant des milliers d'années que l'espèce humaine a conquis les étoiles.<br/>Dispersés sur de nombreux mondes, aux quatre coins du système solaire, les Hommes se sont perdus... Il est grand temps de les rassembler !",
-				en :"It has now been thousand of years since human being conquered the stars.<br/>Dispersed on many worlds, at the four corners of the solar system, men have lost themselves... It is high time to gather them together !"
+				fr :"Voilà maintenant des milliers d'années que l'espèce humaine a conquis les étoiles.<br/>Dispersés sur de nombreux mondes, aux quatre coins du système solaire, les Humains se sont perdus... Il est grand temps de les rassembler !",
+				en :"It has now been thousand of years since human being conquered the stars.<br/>Dispersed on many worlds, at the four corners of the solar system, humans have lost themselves... It's time to gather them together !"
 			},
 
 			"rassemblement-button" : {
@@ -246,7 +246,7 @@ define(["jquery"],
 			},
 			"rassemblement-pluton-event" : {
 				fr :"Voici Pluton, la planète pénitentiaire. Tous les plus grands criminels que compte l'Humanité sont enfermés ici pour le restant de leurs jours...",
-				en :"This is Pluto, the prison planet. All the greatest criminals in humanity are locked up here for the rest of their lives..."
+				en :"This is Pluto, the prison planet. All the greatest criminals in Humanity are locked up here for the rest of their lives..."
 			},
 			"rassemblement-pluton-event-contact" : {
 				fr :"Salut, cap'tain ! C'est moi le chef ici et c'est à moi que vous parlerez !<br/>Devenir vos petits pantins ? Bof, ça nous enchante pas vraiment.",

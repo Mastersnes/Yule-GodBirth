@@ -60,3 +60,6 @@ successList > success.success-samhain .icon {
 successList > success.success-autel .icon {
 	background-image: url("../img/game/success/autel.png");
 }
+successList > success.success-3eoeil .icon {
+	background-image: url("../img/game/artefact/3eoeil.png");
+}

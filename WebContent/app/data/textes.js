@@ -100,7 +100,7 @@ define(["jquery",
 			},
 			"gameOver-1" : {
 				fr : "L'équilibre de l'Univers a été rompu... Vous avez échoué...",
-				en : "The balance of the Universe has been broken... You have failed..."
+				en : "The balance of the Universe has been broken... You've failed..."
 			},
 			"gameOver-2" : {
 				fr : "Réessayez en rechargeant le jeu !",
@@ -292,15 +292,15 @@ define(["jquery",
 			},        
 			"volcan-descr" : {
 				fr : "C'est dans le feu et les cendres que l'Homme jaillit sur Terre. C'est dans le feu et les cendres qu'il s'éteindra.",
-				en : "It's in fire and ashes that humanity gushes on Earth. It's in fire and ashes that it will be extinguished."
+				en : "It's in fire and ashes that Humanity gushes on Earth. It's in fire and ashes that it will be extinguished."
 			},        
 			"ocean" : {
 				fr : "Océans",
 				en : "Oceans"
 			},        
 			"ocean-descr" : {
-				fr : "Berceau de la vie. L'ocean reflète la magie de la lune et la grandeur de la Déesse.",
-				en : "Cradle of life. The ocean reflects the magic of the moon and the greatness of the Goddess."
+				fr : "Berceau de la vie. L'ocean reflète la magie de la Lune et la grandeur de la Déesse.",
+				en : "Cradle of life. The ocean reflects the magic of the Moon and the greatness of the Goddess."
 			},        
 			"gouffre" : {
 				fr : "Gouffre",
@@ -361,7 +361,11 @@ define(["jquery",
 			"newQuete" : {
 				fr : "Félicitations ! Vous avez accompli un nouvel objectif !<br/>Voyagez dans la constellation pour consulter les détails.",
 				en : "Congratulations ! You've achieved a new goal !<br/>Explore the constellation to see the details."
-			},        
+			},
+			"fois" : {
+				fr : "<span class='info' title='Vous remporterez ?x? fois votre gain actuel en ?type?'>?x?x gain actuel</span>",
+				en : "<span class='info' title='You'll earn ?x? times our current earning in ?type?'>?x?x current earning</span>"
+			},
 			"quete-start" : {
 				fr : "Au commencement...",
 				en : "At beginning..."
@@ -499,6 +503,38 @@ define(["jquery",
 				fr : "Accomplissez 60 événements.",
 				en : "Complete 60 events."
 			},
+			"quete-primary-stones" : {
+				fr : "Achetez toutes les pierres primaires",
+				en : "Buy all primary gemstones"
+			},        
+			"quete-primary-stones-desc" : {
+				fr : "Le début d'une grande richesse",
+				en : "The beginning of a great wealth"
+			},
+			"quete-lunar-stones" : {
+				fr : "Achetez toutes les pierres lunaires",
+				en : "Buy all moon gemstones"
+			},        
+			"quete-lunar-stones-desc" : {
+				fr : "L'éclat d'une grande puissance",
+				en : "The brilliance of a great power"
+			},
+			"quete-solar-stones" : {
+				fr : "Achetez toutes les pierres solaires",
+				en : "Buy all solar gemstones"
+			},        
+			"quete-solar-stones-desc" : {
+				fr : "Brûlez dans les flammes de l'ignorance !",
+				en : "Burn in the flames of ignorance!"
+			},
+			"quete-secret-stones" : {
+				fr : "Achetez toutes les pierres secretes",
+				en : "Buy all the secret gemstones"
+			},        
+			"quete-secret-stones-desc" : {
+				fr : "Une connaissance infinie...",
+				en : "An infinite knowledge..."
+			},
 			"primaire" : {
 				fr : "Primaire",
 				en : "Primary"
@@ -609,15 +645,15 @@ define(["jquery",
 			},
 			"hematite-desc" : {
 				fr : "Pierre de sang, elle suit les progrès de l'Humanité depuis ses débuts. Elle est un symbole de dynamisme et de vitalité.",
-				en : "Bloodstone, it follow the progress of humanity since its inception. It's a symbol of dynamism and vitality."
+				en : "Bloodstone, it follow the progress of Humanity since its inception. It's a symbol of dynamism and vitality."
 			},
 			"pierre-de-soleil" : {
-				fr : "Pierre de soleil",
+				fr : "Pierre de Soleil",
 				en : "Sunstone"
 			},
 			"pierre-de-soleil-desc" : {
-				fr : "Lumière dans la tempête, elle guide les Hommes vers la grandeur du Soleil. Mais, gare aux fous qui pourraient s'y brûler !",
-				en : "Light in the storm, it guides humanity to the greatness of the Sun. But, beware of madmen who could be burned there !"
+				fr : "Lumière dans la tempête, elle guide l'Humanité vers la grandeur du Soleil. Mais, gare aux fous qui pourraient s'y brûler !",
+				en : "Light in the storm, it guides Humanity to the greatness of the Sun. But, beware of madmen who could be burned there !"
 			},	
 			"malachite" : {
 				fr : "Malachite",
@@ -660,7 +696,7 @@ define(["jquery",
 				en : "Stone of concentration, azurite also allows to connect himself to superior wisdom."
 			},
 			"pierre-de-lune" : {
-				fr : "Pierre de lune",
+				fr : "Pierre de Lune",
 				en : "Moonstone"
 			},
 			"pierre-de-lune-desc" : {
@@ -741,7 +777,7 @@ define(["jquery",
 			},	
 			"didactitiel-pierrePose" : {
 				fr : "Bien joué ! Il ne vous reste plus qu'à poser la pierre sur l'autel.",
-				en : "Well played ! All you have to do now is to put the gemstone on the altar."
+				en : "Well played ! All you've to do now is to put the gemstone on the altar."
 			},
 			"didactitiel-fin1" : {
 				fr : "Bravo ! Vous êtes en bonne voie pour rétablir l'équilibre de l'Univers !",
@@ -849,7 +885,7 @@ define(["jquery",
 			},	
 			"gainSuccess" : {
 				fr : "Félicitations ! Vous avez gagné le succès : {?} !<br/>Voyagez dans la constellation pour consulter les détails.",
-				en : "Congratulations ! You have won the success : {?} !<br/>Explore the constellation to see the details."
+				en : "Congratulations ! You've won the success : {?} !<br/>Explore the constellation to see the details."
 			},
 			"success-100click" : {
 				fr : "100 Clics",
@@ -889,7 +925,7 @@ define(["jquery",
 			},
 			"success-10000click-descr" : {
 				fr : "Effectuer un total de 10000 clics... Vous n'avez que ça à faire ?",
-				en : "Do a total of 10000 clicks... Don't you have anything else to do ?"
+				en : "Do a total of 10000 clicks... Don't you've anything else to do ?"
 			},
 			"success-50000click" : {
 				fr : "50K Clics",
@@ -978,10 +1014,18 @@ define(["jquery",
 			"success-autel-descr" : {
 				fr : "Placer 6 pierres sur l'autel.",
 				en : "Put 6 gemstones on the altar."
+			},
+			"success-3eoeil" : {
+				fr : "Troisième œil",
+				en : "Third eye"
 			},        
+			"success-3eoeil-descr" : {
+				fr : "Gagnez le troisième œil.",
+				en : "Earn the third eye."
+			},
 			"gainArtefact" : {
 				fr : "Félicitations ! Vous avez gagné l'artéfact : {?} !<br/>Voyagez dans la constellation pour consulter les détails.",
-				en : "Congratulations ! You have won the artefact : {?} !<br/>Explore the constellation to see the details."
+				en : "Congratulations ! You've won the artefact : {?} !<br/>Explore the constellation to see the details."
 			},
 			"torque" : {
 				fr : "Torque",

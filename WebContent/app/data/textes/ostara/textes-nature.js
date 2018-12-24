@@ -78,12 +78,12 @@ define(["jquery"],
 				en :"Nothing remains on the surface of the earth... Men have hid in the bowels of our planet to survive.<br/>The only solution would be to use all your power to save them..."
 			},
 			"nature-nucleaire-event-ignore" : {
-				fr :"On continua à polluer, à l'intérieur même de la Terre, visant toujours plus de profits.<br/>L'Homme n'avait toujours rien compris de ses erreurs...",
-				en :"Polluting continued, even within the earth, with the aim of increasing profits.<br/>Man had never understood anything of his mistakes..."
+				fr :"On continua à polluer, à l'intérieur même de la Terre, visant toujours plus de profits.<br/>L'Humanité n'avait toujours rien compris de ses erreurs...",
+				en :"Polluting continued, even within the earth, with the aim of increasing profits.<br/>Humanity had never understood anything of his mistakes..."
 			},
 			"nature-nucleaire-event-intervenir" : {
-				fr :"Le nuage se dissipa, emportant avec lui la mort et la maladie.<br/>Durant les siècles qui suivirent; les Hommes sortirent doucement de leur cachette...<br/>Plus rien ne restait à la surface, la nature avait repris ses droits.",
-				en :"The cloud dissipated, carrying with it death and disease.<br/>During the centuries that followed, men slowly came out of hiding...<br/>Nothing remained on the surface, nature had regained its rights."
+				fr :"Le nuage se dissipa, emportant avec lui la mort et la maladie.<br/>Durant les siècles qui suivirent; les êtres vivant sortirent doucement de leur cachette...<br/>Plus rien ne restait à la surface, la nature avait repris ses droits.",
+				en :"The cloud dissipated, carrying with it death and disease.<br/>During the centuries that followed, living beings slowly came out of hiding...<br/>Nothing remained on the surface, nature had regained its rights."
 			},
 
 			/**

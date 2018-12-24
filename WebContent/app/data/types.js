@@ -93,6 +93,7 @@ define(["jquery"], function($){
                 name : "beltane",
                 nbr : 15,
 				next : "litha",
+				music : "futureOfLove.ogg",
                 text : ["cinematique-beltane", "cinematique-beltane-1", "cinematique-beltane-2"],
                 events : {
                     typeEvents : [],
@@ -106,6 +107,7 @@ define(["jquery"], function($){
                 name : "litha",
                 nbr : 15,
 				next : "lammas",
+				music : "mariage.ogg",
                 text : ["cinematique-litha","cinematique-litha-1","cinematique-litha-2"],
                 events : {
                     typeEvents : [],

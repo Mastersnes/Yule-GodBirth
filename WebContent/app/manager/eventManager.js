@@ -77,8 +77,6 @@ function($, _, Utils, page, Events) {
 	        var randIndex = Utils.rand(0, totalEvents.length);
 	        var randEvent = Events.get(totalEvents[randIndex]);
 	        
-	        console.log("reste :", totalEvents);
-	        
 	    	if (this.checkEvent(randEvent)) this.currentEvent = randEvent;
             if (this.currentEvent) {
             	this.showTimer();

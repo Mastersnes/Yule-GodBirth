@@ -176,7 +176,8 @@ define(["jquery",
             this.complete.push(quete.name);
             
             this.saveManager.save("quetesComplete", this.complete);
-            this.pointManager.addPoints(quete.gains, null, "click");
+            if (quete.gains) this.pointManager.addPoints(quete.gains, null, "click");
+            if (quete.gainsLoop) this.parent.gainLoop(quete.gains, "click");
             if (quete.success) quete.success(this);
             
             this.refresh();

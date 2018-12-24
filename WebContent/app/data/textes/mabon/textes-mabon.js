@@ -32,7 +32,7 @@ define(["jquery"
 			},
 			"mabon-fin-good-event2" : {
 				fr :"Je me dois de vous féliciter. Vos actes ont été un modèle de sagesse et de bonté.<br/>Les choix que vous avez faits rayonneront à jamais dans le nouvel Univers qui se prépare.",
-				en :"I must congratulate you. Your actions have been a model of wisdom and kindness.<br/>The choices you have made will shine forever in the new Universe that is preparing."
+				en :"I must congratulate you. Your actions have been a model of wisdom and kindness.<br/>The choices you've made will shine forever in the new Universe that is preparing."
 			},
 			"mabon-fin-good-event3" : {
 				fr :"Vous rouvrîtes les yeux, assis dans votre palais. L'Univers touchait toujours à sa fin, mais cela ne vous inquiétait plus...",
@@ -64,7 +64,7 @@ define(["jquery"
 			},
 			"mabon-fin-bad-event3" : {
 				fr :"Sachez que vos choix ont une incidence sur tout ce qui est et tout ce qui sera. Malheureusement, vous ne serez plus parmi nous pour le constater...",
-				en :"Know that your choices have an impact on everything that is and will be. Unfortunately, you will no longer be with us to see this..."
+				en :"Know that your choices have an impact on everything that is and will be. Unfortunately, you'll no longer be with us to see this..."
 			},
 			"mabon-fin-bad-event4" : {
 				fr :"Vous vous réveillâtes en sursaut, assis dans votre palais. L'Univers touchait toujours à sa fin et cela vous inquiétait...",

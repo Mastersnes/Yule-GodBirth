@@ -26,7 +26,7 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
             this.mediatheque = new Mediatheque();
             this.mediatheque.load("music/menu.ogg");
             this.kongregateUtils = new Kongregate(Textes);
-            this.saveManager = new SaveManager();
+            this.saveManager = new SaveManager(this.kongregateUtils);
             this.Textes = Textes;
             
             var that = this;
@@ -58,10 +58,12 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 			
 			var that = this;
 			$(".app-container").removeClass("bebel");
+			this.scene.resize();
 			setTimeout(function() {
 				$(".text#loading").fadeOut("slow");
 				$(".text#starting").fadeIn("slow");
 				$(".preload").empty();
+				that.scene.resize();
 			}, 1000);
 		};
 		
@@ -88,7 +90,7 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 				new CreditView(Textes).show();
 			});
 			
-			$("logo").click(function() {
+			$("#login").click(function() {
 				that.kongregateUtils.login();
 			});
 			

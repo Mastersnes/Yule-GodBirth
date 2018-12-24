@@ -16,6 +16,7 @@ define(["jquery",
             this.saveManager = this.parent.saveManager;
             this.pointManager = this.parent.pointManager;
             this.ameliorationView = this.parent.spaceView.ameliorationView;
+            this.kongregateUtils = this.parent.kongregateUtils;
             
             this.pierresView = new PierresView(this);
             
@@ -194,7 +195,7 @@ define(["jquery",
         	// Si la pierre est deja placée, on n'y touche pas
         	if (this.selectedPierres.contains(pierreId)) return;
         	
-        	if (this.selectedPierres.length() == 6) {
+        	if (this.selectedPierres.length() >= 5) {
         		this.parent.recompenseManager.addSuccess("success-autel");
         	}
         	

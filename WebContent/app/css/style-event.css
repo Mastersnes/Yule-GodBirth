@@ -80,7 +80,8 @@ bonus {
 	color: green;
 }
 
-bonus .info {
+.info {
+	cursor: help;
 	text-decoration: none;
 	border-bottom: dotted 1px green;
 }

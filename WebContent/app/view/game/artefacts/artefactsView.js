@@ -18,6 +18,7 @@ define(["jquery",
             this.pointManager = this.parent.pointManager;
             
             this.inventaire = new HashMap(this.saveManager.load("inventaire"));
+            this.artefactsUses = this.saveManager.load("artefactsUses");
             this.newList = [];
         };
         
@@ -60,6 +61,10 @@ define(["jquery",
         	
         	this.pointManager.setAvantages(avantages, "artefacts");
         	this.newList.length = 0;
+        };
+        
+        this.loop = function() {
+        	
         };
         
         /**
@@ -132,6 +137,16 @@ define(["jquery",
         	if (!this.inventaire.contains(artefact)) return;
         	this.inventaire.remove(artefact);
         	this.saveManager.save("inventaire", this.inventaire.data);
+        	this.artefactsUses++;
+        	this.saveManager.save("artefactsUses", this.artefactsUses);
+        	
+        	this.parent.kongregateUtils.score("artefactsUses", this.artefactsUses);
+        	if (this.artefactsUses >= 1) {
+        		this.parent.kongregateUtils.score("artefactsUses1", 1);
+        	}
+        	if (this.artefactsUses >= 3) {
+        		this.parent.kongregateUtils.score("artefactsUses3", 1);
+        	}
         };
         
         this.makeEvents = function() {
