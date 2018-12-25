@@ -135,6 +135,7 @@ define(["jquery"], function($){
                 name : "mabon",
                 nbr : 15,
 				next : "samhain",
+				music : "declin.ogg",
                 text : ["cinematique-mabon","cinematique-mabon-1","cinematique-mabon-2"],
                 events : {
                     typeEvents : [],
