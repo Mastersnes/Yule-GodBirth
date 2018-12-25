@@ -19,9 +19,11 @@
 	position: absolute;
 	left: 0; bottom: 0;
 	width: 100%; height: auto;
-	background-color: #1f1c1c;
-	color: #c6c6e6;
-	font-size: 3vh;
+	color: #c6c6e6; font-size: 3vh;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../img/game/interface/ameliorations.png);
+    margin-left: 2%; margin-bottom: 1%;
 }
 
 .goto {

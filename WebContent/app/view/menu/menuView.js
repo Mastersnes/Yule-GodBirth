@@ -28,6 +28,7 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
             this.kongregateUtils = new Kongregate(Textes);
             this.saveManager = new SaveManager(this.kongregateUtils);
             this.Textes = Textes;
+            this.Textes.loadLanguage();
             
             var that = this;
 			if (window.location.href.indexOf("kongregate") > -1) {

@@ -45,12 +45,10 @@ define(["jquery",
         		that.parent.showConstellation();
         	});
 			this.el.find(".flag.fr").click(function() {
-				that.Textes.local = "fr";
-				that.parent.parent.render();
+				that.Textes.setLanguage("fr");
 			});
 			this.el.find(".flag.en").click(function() {
-				that.Textes.local = "en";
-				that.parent.parent.render();
+				that.Textes.setLanguage("en");
 			});
 			this.el.find("#fullscreen").click(function() {
 				var elem = $("body")[0];

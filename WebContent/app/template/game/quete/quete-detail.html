@@ -7,43 +7,43 @@
     </div>
     <div id="details">
 	    <div id="restrictions">
-	    	<p class="titre underline">Vous devez avoir :</p>
+	    	<p class="titre underline"><%=data.text.get("youneed")%></p>
 	    	<div class="text" id="list"></div>
 	    </div>
 	    
-	    <p class="titre underline">Vous gagnerez : </p>
+	    <p class="titre underline"><%=data.text.get("youearn")%></p>
 	    <div id="croyance" class="categorie text croyance">
            <div>
            		<span class="icon"></span>
-           		<span>Croyance</span>
+           		<span><%=data.text.get("croyance")%></span>
            </div>
            <div id="croyance-gain"></div>
         </div>
 	    <div id="illumination" class="categorie text illumination">
            <div>
            		<span class="icon"></span>
-           		<span>Illumination</span>
+           		<span><%=data.text.get("illumination")%></span>
            </div>
            <div id="illumination-gain"></div>
         </div>
         <div id="bien" class="categorie text bien">
            <div>
            		<span class="icon"></span>
-           		<span>Bien</span>
+           		<span><%=data.text.get("bien")%></span>
            </div>
            <div id="bien-gain"></div>
         </div>
         <div id="mal" class="categorie text mal">
            <div>
            		<span class="icon"></span>
-           		<span>Mal</span>
+           		<span><%=data.text.get("mal")%></span>
            </div>
            <div id="mal-gain"></div>
         </div>
     </div>
     <div>
     	<div id="collecte" class="categorie text button">
-    		<span>Collecter</span>
+    		<span><%=data.text.get("collect")%></span>
     	</div>
     </div>
 </div>

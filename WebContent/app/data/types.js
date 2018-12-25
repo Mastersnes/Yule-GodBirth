@@ -121,6 +121,7 @@ define(["jquery"], function($){
                 name : "lammas",
                 nbr : 15,
 				next : "mabon",
+				music : "zenitude.ogg",
                 text : ["cinematique-lammas","cinematique-lammas-1","cinematique-lammas-2"],
                 events : {
                     typeEvents : [],

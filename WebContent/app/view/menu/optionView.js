@@ -31,12 +31,10 @@ function($, _, Utils, page) {
 				$(that.el).hide("slow");
 			});
 			$(this.el).find(".flag.fr").click(function() {
-				that.Textes.local = "fr";
-				parent.render();
+				that.Textes.setLanguage("fr");
 			});
 			$(this.el).find(".flag.en").click(function() {
-				that.Textes.local = "en";
-				parent.render();
+				that.Textes.setLanguage("en");
 			});
 			$(this.el).find("#fullscreen").click(function() {
 				var elem = $("body")[0];

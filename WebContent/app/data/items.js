@@ -24,7 +24,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 			    	if (!incr) incr = 0;
 	        		var me = this.level + incr;
 	        		var croyance = Math.round(0.5 * me);
-	        		var illumination = me>=5 ? me/50 : 0;
+	        		var illumination = me>=5 ? me/40 : 0;
 	        		var bien = 0;
 	        		var mal = 0;
 	        		
@@ -35,7 +35,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 	        		return {
 	        			loop : {
 	        				croyance : croyance,
-	        				illumination : 0,
+	        				illumination : Math.round(illumination*10)/10,
                             bien : 0,
                             mal : 0
 	        			},

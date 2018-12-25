@@ -1,6 +1,7 @@
 'use strict';
 define(["jquery",
-        "app/data/textes/textes-events"], function($, EventsTextes){
+        "app/utils/utils",
+        "app/data/textes/textes-events"], function($, Utils, EventsTextes){
 	var data = {
 			"bienvenue" : {
 				fr : "Bienvenue",
@@ -178,6 +179,14 @@ define(["jquery",
 				fr : "Mal",
 				en : "Evilness"
 			},
+			"buy" : {
+				fr : "Acheter",
+				en : "Buy"
+			},
+			"collect" : {
+				fr : "Collecter",
+				en : "Collect"
+			},
 			"equilibre" : {
 				fr : "Équilibre de l'Univers",
 				en : "Balance of Universe"
@@ -201,6 +210,10 @@ define(["jquery",
 			"parSec" : {
 				fr : "/sec",
 				en : "/sec"
+			},
+			"parClicks" : {
+				fr : "/clicks",
+				en : "/clicks"
 			},
 			"deite" : {
 				fr : "Déités",
@@ -364,7 +377,7 @@ define(["jquery",
 			},
 			"fois" : {
 				fr : "<span class='info' title='Vous remporterez ?x? fois votre gain actuel en ?type?'>?x?x gain actuel</span>",
-				en : "<span class='info' title='You'll earn ?x? times our current earning in ?type?'>?x?x current earning</span>"
+				en : "<span class='info' title=\"You'll earn ?x? times your current ?type? earning\">?x?x current earning</span>"
 			},
 			"quete-start" : {
 				fr : "Au commencement...",
@@ -1082,6 +1095,14 @@ define(["jquery",
 			"fragment-lunaire-desc" : {
 				fr : "Un morceau de lune en souvenir du plus périlleux des voyages. Son éclat scintillera pendant des millénaires.",
 				en : "A piece of moon in memory of the most dangerous journey. Its glow will shine for millennia."
+			},
+			"youneed" : {
+				fr : "Vous devez avoir :",
+				en : "You need :"
+			},
+			"youearn" : {
+				fr : "Vous gagnerez :",
+				en : "You'll earn :"
 			}
 	};
 	
@@ -1110,6 +1131,22 @@ define(["jquery",
 			if (text[this.local]) return text[this.local]; 
 			else if (text.en) return text.en;
 			else return key;
+		},
+		
+		/**
+		* Permet de charger le language en session
+		**/
+		loadLanguage : function() {
+			var sessionLanguage = window.localStorage.getItem("bebelLanguage");
+			if (sessionLanguage) this.local = sessionLanguage;
+		},
+		
+		/**
+		* Permet de modifier le language en session
+		**/
+		setLanguage : function(newLanguage) {
+			window.localStorage.setItem("bebelLanguage", newLanguage);
+			parent.location.reload();
 		}
 	};
 });
