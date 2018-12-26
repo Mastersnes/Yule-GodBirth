@@ -10,12 +10,12 @@ define(["jquery"], function($){
 				en :"A demi-god?"
 			},
 			"demi-dieu-start-event" : {
-				fr :"Un soir, dans une vieille grange, un bébé pleurait... De ses larmes étincelait un destin grandiose.",
-				en :"One evening, in an old barn, a baby was crying... From his tears sparked a great destiny."
+				fr :"Une nuit, dans une vieille grange, un bébé pleurait... De ses larmes étincelait un destin grandiose.",
+				en :"One night, in an old barn, a baby was crying... From his tears sparked a great destiny."
 			},
 			"demi-dieu-start-event-2" : {
 				fr :"Nul ne pouvait se douter de ce qui l'attendait. Car ce bébé était bel et bien votre enfant!",
-				en :"No one could have known what was in store for him. Because that baby was indeed your child!"
+				en :"No one could have suspected what was waiting him. Because that baby was indeed your child!"
 			},
 
 			/**
@@ -26,16 +26,16 @@ define(["jquery"], function($){
 				en :"Walk on the water"
 			},
 			"demi-dieu-eau-event" : {
-				fr :"Pssst! Hey papa, s'te plaît! Je leur ai promis que je marcherai sur l'eau!<br/>Tu pourrais m'aider?",
-				en :"Pssst! Hey, Dad, please! I promised them I'd walk on water!<br/>Could you help me?"
+				fr :"Pssst! Hey papa, s'te plaît! Je leur ai promis que je marcherais sur l'eau!<br/>Tu pourrais m'aider?",
+				en :"Pssst! Hey dad, please! I promised them I'd walk on water!<br/>Could you help me?"
 			},
 			"demi-dieu-eau-event-accept" : {
 				fr :"Ouah, super! Je vais leur en mettre plein la vue!",
-				en :"Wow, great! I'm going to blow their minds!"
+				en :"Wow, great! I'm gonna blow them away!"
 			},
 			"demi-dieu-eau-event-refus" : {
 				fr :"Pff! T'es pas marrant hein...",
-				en :"Pfft! You're no fun, are you..."	
+				en :"Pff! You're not funny..."	
 			},
 
 			/**
@@ -47,7 +47,7 @@ define(["jquery"], function($){
 			},
 			"demi-dieu-vin-event" : {
 				fr :"Bon papa, je sais que tu aimes bien les fêtes et, nous, on n’a plus rien à boire.<br/>Tu pourrais changer la fontaine d'eau en vin?",
-				en :"Well, Dad, I know you like parties and we don't have anything to drink anymore.<br/>Could you turn the water cooler into wine?"
+				en :"Well dad, I know you like parties and we don't have anything to drink anymore.<br/>Could you turn the water cooler into wine?"
 			},
 			"demi-dieu-vin-event-accept" : {
 				fr :"Super! T'es vraiment cool comme type!",
@@ -55,7 +55,7 @@ define(["jquery"], function($){
 			},
 			"demi-dieu-vin-event-refus" : {
 				fr :"Super... On va finir au soft les gars...",
-				en :"Great... We're going to end up with softs drinks, guys..."
+				en :"Great... We're gonna end with softs drinks, guys..."
 			},
 
 			/**
@@ -75,7 +75,7 @@ define(["jquery"], function($){
 			},
 			"demi-dieu-scene-event-refus" : {
 				fr :"Ohh, c'est dommage... Ça aurait été chouette que tu sois là, papa...",
-				en :"Ohh, that's too bad... It would have been nice if you were here, Dad..."
+				en :"Ohh, that's too bad... It would have been nice if you were here, dad..."
 			}
 	};
 	
