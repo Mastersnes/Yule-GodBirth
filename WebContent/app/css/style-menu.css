@@ -164,7 +164,10 @@ ul.popup-menu > li:hover {
 }
 
 a {
-	color : #333;
+	color : #23527c;
+}
+a:hover {
+	color : #337ab7;
 }
 
 .flag-container {
@@ -174,7 +177,7 @@ a {
 .flag {
     cursor: pointer;
     display: inline-block;
-    width: 45%; height: 100%;
+    width: 35%; height: 90%;
     background-repeat: no-repeat;
     background-size: 100% 100%; 
 }

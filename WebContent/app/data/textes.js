@@ -27,9 +27,13 @@ define(["jquery",
 				fr : "Nouvelle partie",
 				en : "New Game"
 			},
+			"kongregate" : {
+				fr : "Nos autres jeux sur:",
+				en : "Our other games on:"
+			},
 			"eraseSave" : {
-				fr : "Attention, ceci effacera votre partie enregistrée !",
-				en : "Warning, this will erase your registered save !"
+				fr : "Attention, ceci effacera votre partie enregistrée!",
+				en : "Warning, this will erase your registered save!"
 			},
 			"continuerButton" : {
 				fr : "Continuer",
@@ -83,14 +87,6 @@ define(["jquery",
 				fr : "Textes",
 				en : "Texts"
 			},
-			"followUs" : {
-				fr : "Suivez-nous sur <a target='_blank' alt='Facebook' href='https://www.facebook.com/lesjeuxdebebel/'>Facebook</a> ou <a target='_blank' alt='Twitter' href='http://twitter.com/lesjeuxdebebel'>Twitter</a>.",
-				en : "Follow us on <a target='_blank' alt='Facebook' href='https://www.facebook.com/lesjeuxdebebel/'>Facebook</a> or <a target='_blank' alt='Twitter' href='http://twitter.com/lesjeuxdebebel'>Twitter</a>."
-			},       
-			"followUs3" : {
-				fr : "Jouez à nos jeux sur <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>.",
-				en : "Play our games on <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>."
-			},
 			"mute" : {
 				fr : "Mute",
 				en : "Mute"
@@ -104,24 +100,24 @@ define(["jquery",
 				en : "The balance of the Universe has been broken... You've failed..."
 			},
 			"gameOver-2" : {
-				fr : "Réessayez en rechargeant le jeu !",
-				en : "Try again by reloading the game !"
+				fr : "Réessayez en rechargeant le jeu!",
+				en : "Try again by reloading the game!"
 			},        
 			"gameOver-3" : {
 				fr : "Découvrez nos autres jeux sur <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>.",
 				en : "Discover our other games on <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>."
 			},        
 			"gameFinish-1" : {
-				fr : "Au loin dans l'Univers, une grande énergie naquit.<br/>Le Dieu n'était pas mort. Il était revenu à la vie !",
-				en : "Far away in the Universe, a mighty energy was born.<br/>The God was not dead. He came back to life !"
+				fr : "Au loin dans l'Univers, une grande énergie naquit.<br/>Le Dieu n'était pas mort. Il était revenu à la vie!",
+				en : "Far away in the Universe, a mighty energy was born.<br/>The God was not dead. He came back to life!"
 			},
 			"gameFinish-2" : {
 				fr : "Grâce à vos enseignements, il parvint à maintenir l'équilibre de l'Univers pour le reste des temps.",
 				en : "Thanks to your teachings, he was able to preserve the balance of the Universe for the rest of the time."
 			},
 			"gameFinish-3" : {
-				fr : "<br/>Félicitations ! Vous avez sauvé l'Univers !",
-				en : "<br/>Congratulations ! You saved the Universe !"
+				fr : "<br/>Félicitations! Vous avez sauvé l'Univers!",
+				en : "<br/>Congratulations! You saved the Universe!"
 			},
 			"gameFinish-4" : {
 				fr : "Découvrez nos autres jeux sur <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>.",
@@ -196,16 +192,16 @@ define(["jquery",
 				en : "Level : "
 			},
 			"passageLevel" : {
-				fr : "Passer au niveau : ",
-				en : "Go to level : "
+				fr : "Passer au niveau: ",
+				en : "Go to level: "
 			},
 			"prix" : {
-				fr : "Prix : ",
-				en : "Price : "
+				fr : "Prix: ",
+				en : "Price: "
 			},
 			"gain" : {
-				fr : "Gains : ",
-				en : "Earnings : "
+				fr : "Gains: ",
+				en : "Earnings: "
 			},
 			"parSec" : {
 				fr : "/sec",
@@ -327,7 +323,7 @@ define(["jquery",
 				fr : "Vide",
 				en : "Void"
 			},        
-			"vide-desc" : {
+			"vide-descr" : {
 				fr : "C'est là, dans le vide, que débutent les choses et qu'elles se terminent.<br/>C'est aussi là, dans le vide, que se cachent les maux les plus perfides.",
 				en : "It's here, into the void, that all things begins and ends.<br/>It's also here, into the void, that the most perfidious evils are hidden."
 			},        
@@ -372,12 +368,12 @@ define(["jquery",
 				en : "From the child comes adult, from the lightning comes storm. Things are in perpetual evolution and, paradoxically, in perpetual restart.<br/>The end of this cycle will mark the beginning of new one..."
 			},        
 			"newQuete" : {
-				fr : "Félicitations ! Vous avez accompli un nouvel objectif !<br/>Voyagez dans la constellation pour consulter les détails.",
-				en : "Congratulations ! You've achieved a new goal !<br/>Explore the constellation to see the details."
+				fr : "Félicitations! Vous avez accompli un nouvel objectif!<br/>Voyagez dans la constellation pour consulter les détails.",
+				en : "Congratulations! You've achieved a new goal!<br/>Explore the constellation to see the details."
 			},
 			"fois" : {
 				fr : "<span class='info' title='Vous remporterez ?x? fois votre gain actuel en ?type?'>?x?x gain actuel</span>",
-				en : "<span class='info' title=\"You'll earn ?x? times your current ?type? earning\">?x?x current earning</span>"
+				en : "<span class='info' title=\"You'll receive ?x? times your current ?type? earning\">?x?x current earning</span>"
 			},
 			"quete-start" : {
 				fr : "Au commencement...",
@@ -485,8 +481,8 @@ define(["jquery",
 				en : "Complete 5 events."
 			},
 			"quete-10-events" : {
-				fr : "Continuez comme ça !",
-				en : "Continue like this !"
+				fr : "Continuez comme ça!",
+				en : "Continue like this!"
 			},        
 			"quete-10-events-desc" : {
 				fr : "Accomplissez 10 événements.",
@@ -530,18 +526,18 @@ define(["jquery",
 			},        
 			"quete-lunar-stones-desc" : {
 				fr : "L'éclat d'une grande puissance",
-				en : "The brilliance of a great power"
+				en : "The shine of a great power"
 			},
 			"quete-solar-stones" : {
 				fr : "Achetez toutes les pierres solaires",
 				en : "Buy all solar gemstones"
 			},        
 			"quete-solar-stones-desc" : {
-				fr : "Brûlez dans les flammes de l'ignorance !",
+				fr : "Brûlez dans les flammes de l'ignorance!",
 				en : "Burn in the flames of ignorance!"
 			},
 			"quete-secret-stones" : {
-				fr : "Achetez toutes les pierres secretes",
+				fr : "Achetez toutes les pierres secrètes",
 				en : "Buy all the secret gemstones"
 			},        
 			"quete-secret-stones-desc" : {
@@ -569,8 +565,8 @@ define(["jquery",
 				en : "The gemstone is already placed on the altar."
 			},        
 			"retirerPierre" : {
-				fr : "Retirer la pierre de l'autel ?",
-				en : "Remove the gemstone from the altar ?"
+				fr : "Retirer la pierre de l'autel?",
+				en : "Remove the gemstone from the altar?"
 			},        
 			"diamant" : {
 				fr : "Diamant",
@@ -665,8 +661,8 @@ define(["jquery",
 				en : "Sunstone"
 			},
 			"pierre-de-soleil-desc" : {
-				fr : "Lumière dans la tempête, elle guide l'Humanité vers la grandeur du Soleil. Mais, gare aux fous qui pourraient s'y brûler !",
-				en : "Light in the storm, it guides Humanity to the greatness of the Sun. But, beware of madmen who could be burned there !"
+				fr : "Lumière dans la tempête, elle guide l'Humanité vers la grandeur du Soleil. Mais, gare aux fous qui pourraient s'y brûler!",
+				en : "Light in the storm, it guides Humanity to the greatness of the Sun. But, beware of madmen who could be burned there!"
 			},	
 			"malachite" : {
 				fr : "Malachite",
@@ -737,24 +733,24 @@ define(["jquery",
 				en : "Yule - Godbirth<br/>(Click on \"Next\" to continue)"
 			},
 			"didactitiel2" : {
-				fr : "Bienvenue, jeune maître ! Comment fut votre repos ?<br/>Je me nomme Origine. Je serai votre serviteur dans cette aventure.",
-				en : "Welcome, young master ! How was your rest ?<br/>My name is Origin. I will be your servant in this adventure."
+				fr : "Bienvenue, jeune maître! Comment fut votre repos?<br/>Je me nomme Origine. Je serai votre serviteur dans cette aventure.",
+				en : "Welcome, young master! How was your rest?<br/>My name is Origin. I will be your servant in this adventure."
 			},
 			"didactitiel3" : {
-				fr : "C'est un heureux jour qui se prépare car notre Déesse s'apprête à enfanter un nouveau dieu !",
-				en : "It's a happy day comming up because our Goddess going to give birth to a new god !"
+				fr : "C'est un heureux jour qui se prépare car notre Déesse s'apprête à enfanter un nouveau dieu!",
+				en : "It's a happy day comming up because our Goddess going to give birth to a new god!"
 			},
 			"didactitiel4" : {
 				fr : "Vous pourriez les aider, mais plus personne ne croit en vous, le Grand Tout...",
 				en : "You could help them, but no one believe in you anymore, the Great Everything..."
 			},
 			"didactitiel5" : {
-				fr : "Heureusement, moi, je ne vous ai pas oublié !<br/>Servez-vous de cette croyance pour vous élever.",
-				en : "Fortunately, me, I haven't forgotten you !<br/>Use this belief to elevate yourself."
+				fr : "Heureusement, moi, je ne vous ai pas oublié!<br/>Servez-vous de cette croyance pour vous élever.",
+				en : "Fortunately, me, I haven't forgotten you!<br/>Use this belief to elevate yourself."
 			},
 			"didactitiel-barre1" : {
-				fr : "Ah ! Je vous sens déjà beaucoup plus présent !<br/>Voyez-vous cette barre au-dessus de l'espace ?",
-				en : "Ah ! I already feel you much more present !<br/>Do you see this bar above the space ?"
+				fr : "Ah! Je vous sens déjà beaucoup plus présent!<br/>Voyez-vous cette barre au-dessus de l'espace?",
+				en : "Ah! I already feel you much more present!<br/>Do you see this bar above the space?"
 			},
 			"didactitiel-barre2" : {
 				fr : "Elle représente l'équilibre de l'Univers.<br/>Veillez à toujours garder un œil sur le cercle d'équilibre au centre.",
@@ -769,96 +765,96 @@ define(["jquery",
 				en : "Try to adapt yourself with this system.<br/>I'll come back when the God will be among us."
 			},	
 			"didactitiel-dieu1" : {
-				fr : "C'est un grand jour, le Dieu est né ! Tout cela mérite un petit cadeau !",
-				en : "It's a great day, the God was born ! All this requires a little gift !"
+				fr : "C'est un grand jour, le Dieu est né! Tout cela mérite un petit cadeau!",
+				en : "It's a great day, the God was born! All this requires a little gift!"
 			},
 			"didactitiel-dieu2" : {
-				fr : "Vous voyez cette constellation en bas à droite ?<br/>Vous y trouverez toute sorte d'options.",
-				en : "Do you see this constellation at bottom right ?<br/>You'll find all kinds of options there."
+				fr : "Vous voyez cette constellation en bas à droite?<br/>Vous y trouverez toute sorte d'options.",
+				en : "Do you see this constellation at bottom right?<br/>You'll find all kinds of options there."
 			},
 			"didactitiel-dieu3" : {
 				fr : "Pour commencer, cliquez dessus pour y accéder, puis accomplissez l'objectif. Ensuite, revenez me voir.",
 				en : "Now, click on it to access it, then complete the objective. After that, come back to see me."
 			},	
 			"didactitiel-autel1" : {
-				fr : "Félicitations ! Vous avez atteint votre premier objectif !<br/>Offrons maintenant notre cadeau au nouveau-né.",
-				en : "Congratulations ! You've reached your first goal !<br/>Now, offer our gift to the newborn."
+				fr : "Félicitations! Vous avez atteint votre premier objectif!<br/>Offrons maintenant notre cadeau au nouveau-né.",
+				en : "Congratulations! You've reached your first goal!<br/>Now, offer our gift to the newborn."
 			},
 			"didactitiel-autel2" : {
 				fr : "Pour ce faire, retournez sur la constellation, achetez une pierre à l'autel, puis posez-la dessus.",
 				en : "For this, go back to the constellation, buy a gemstone at the altar, then put it on."
 			},	
 			"didactitiel-pierrePose" : {
-				fr : "Bien joué ! Il ne vous reste plus qu'à poser la pierre sur l'autel.",
-				en : "Well played ! All you've to do now is to put the gemstone on the altar."
+				fr : "Bien joué! Il ne vous reste plus qu'à poser la pierre sur l'autel.",
+				en : "Well played! All you've to do now is to put the gemstone on the altar."
 			},
 			"didactitiel-fin1" : {
-				fr : "Bravo ! Vous êtes en bonne voie pour rétablir l'équilibre de l'Univers !",
-				en : "Bravo ! You're on the right track to restore the balance of the Universe !"
+				fr : "Bravo! Vous êtes en bonne voie pour rétablir l'équilibre de l'Univers!",
+				en : "Bravo! You're on the right track to restore the balance of the Universe!"
 			},
 			"didactitiel-fin2" : {
-				fr : "Maintenant, c'est à vous ! Bon courage ! Le destin de l'Univers est entre vos mains !",
-				en : "It's your turn, now ! Good luck ! The fate of the Universe are in your hands !"
+				fr : "Maintenant, c'est à vous! Bon courage! Le destin de l'Univers est entre vos mains!",
+				en : "It's your turn, now! Good luck! The fate of the Universe are in your hands!"
 			},	
 			"cinematique-imbolc" : {
 				fr : "Imbolc - Purification du corps et de l'esprit",
 				en : "Imbolc - Purification of body and mind"
 			},
 			"cinematique-imbolc1" : {
-				fr : "Félicitations, maître ! Le Dieu a bien grandit et la Déesse veille sur lui de son aura chaleureuse.",
-				en : "Congratulations, master ! The God has grown well and the Goddess takes care of him with her warm aura."
+				fr : "Félicitations, maître! Le Dieu a bien grandit et la Déesse veille sur lui de son aura chaleureuse.",
+				en : "Congratulations, master! The God has grown well and the Goddess takes care of him with her warm aura."
 			},
 			"cinematique-imbolc2" : {
 				fr : "Il est maintenant temps de prendre les bonnes décisions pour l'Univers.",
 				en : "Now, it's time to take the good decisions for the Universe."
 			},
 			"cinematique-imbolc3" : {
-				fr : "Mais, attention ! Chacune d'entre elles peut avoir une incidence bonne ou mauvaise sur la suite des événements !",
-				en : "But, be careful ! Each of them can have good or bad impact to the following events !"
+				fr : "Mais, attention! Chacune d'entre elles peut avoir une incidence bonne ou mauvaise sur la suite des événements!",
+				en : "But, be careful! Each of them can have good or bad impact to the following events!"
 			},
 			"cinematique-imbolc4" : {
 				fr : "Lorsque le sablier du destin apparaît, cliquez dessus pour prendre vos décisions.",
 				en : "When the sandglass of fate appears, click on it to take your decisions."
 			},
 			"cinematique-imbolc5" : {
-				fr : "Bon courage, mon maître ! Vous saurez faire les bons choix !",
-				en : "Good luck, my master ! You'll be able to make the right choices !"
+				fr : "Bon courage, mon maître! Vous saurez faire les bons choix!",
+				en : "Good luck, my master! You'll be able to make the right choices!"
 			},	
 			"cinematique-ostara" : {
 				fr : "Ostara - Renouveau de la vie et de la Terre",
 				en : "Ostara - Renewal of life and Earth"
 			},
 			"cinematique-ostara-1" : {
-				fr : "Félicitations ! Notre Dieu grandit de jour en jour ! Vous êtes sur la bonne voie !",
-				en : "Congratulations ! Our God grows day by day ! You're on the right track !"
+				fr : "Félicitations! Notre Dieu grandit de jour en jour! Vous êtes sur la bonne voie!",
+				en : "Congratulations! Our God grows day by day! You're on the right track!"
 			},
 			"cinematique-ostara-2" : {
-				fr : "De nouvelles responsabilités s'offrent à vous. Continuez de faire les bons choix ! L'Univers compte sur vous.",
-				en : "New responsibilities are open to you. Continue to do the right choices ! Universe is counting on you."
+				fr : "De nouvelles responsabilités s'offrent à vous. Continuez de faire les bons choix! L'Univers compte sur vous.",
+				en : "New responsibilities are open to you. Continue to do the right choices! Universe is counting on you."
 			},
 			"cinematique-beltane" : {
 				fr : "Beltane - L'unification de deux âmes",
 				en : "Beltane - Unification of two souls"
 			},
 			"cinematique-beltane-1" : {
-				fr : "Oh ! Nous nous retrouvons de nouveau ! Cela fait longtemps !",
-				en : "Oh ! We see each other again ! It's been a long time !"
+				fr : "Oh! Nous nous retrouvons de nouveau! Cela fait longtemps!",
+				en : "Oh! We see each other again! It's been a long time!"
 			},
 			"cinematique-beltane-2" : {
-				fr : "Ah, l'amour ! N'est-ce pas magnifique ? Notre Dieu a rencontré sa Déesse !<br/>Une belle histoire commence...",
-				en : "Ah, the love ! Wonderful, isn't it ? Our God met his Goddess !<br/>A beautiful story begins..."
+				fr : "Ah, l'amour! N'est-ce pas magnifique? Notre Dieu a rencontré sa Déesse!<br/>Une belle histoire commence...",
+				en : "Ah, the love! Wonderful, isn't it? Our God met his Goddess!<br/>A beautiful story begins..."
 			},
 			"cinematique-litha" : {
 				fr : "Litha - Mariage du Ciel et de la Terre",
 				en : "Litha - Wedding of Sky and Earth"
 			},
 			"cinematique-litha-1" : {
-				fr : "Bienvenue ! Nous sommes heureux de vous revoir !",
-				en : "Welcome ! We're happy to see you again !"
+				fr : "Bienvenue! Nous sommes heureux de vous revoir!",
+				en : "Welcome! We're happy to see you again!"
 			},
 			"cinematique-litha-2" : {
-				fr : "C'est un grand jour aujourd'hui ! Le Dieu et la Déesse se marient !<br/>Vous avez pensé au cadeau ?",
-				en : "It's a great day today ! The God and the Goddess get married !<br/>Have you thought about the gift ?"
+				fr : "C'est un grand jour aujourd'hui! Le Dieu et la Déesse se marient!<br/>Vous avez pensé au cadeau?",
+				en : "It's a great day today! The God and the Goddess get married!<br/>Have you thought about the gift?"
 			},
 			"cinematique-lammas" : {
 				fr : "Lammas - Le déclin du guerrier",
@@ -897,8 +893,8 @@ define(["jquery",
 				en : "The Goddess cry him constantly. I'll stay with her to support her."
 			},	
 			"gainSuccess" : {
-				fr : "Félicitations ! Vous avez gagné le succès : {?} !<br/>Voyagez dans la constellation pour consulter les détails.",
-				en : "Congratulations ! You've won the success : {?} !<br/>Explore the constellation to see the details."
+				fr : "Félicitations! Vous avez gagné le succès : {?}!<br/>Voyagez dans la constellation pour consulter les détails.",
+				en : "Congratulations! You've won the success : {?}!<br/>Explore the constellation to see the details."
 			},
 			"success-100click" : {
 				fr : "100 Clics",
@@ -921,40 +917,40 @@ define(["jquery",
 				en : "1K Clicks"
 			},
 			"success-1000click-descr" : {
-				fr : "Effectuer un total de 1000 clics !",
-				en : "Do a total of 1000 clicks !"
+				fr : "Effectuer un total de 1000 clics!",
+				en : "Do a total of 1000 clicks!"
 			},
 			"success-5000click" : {
 				fr : "5K Clics",
 				en : "5K Clicks"
 			},
 			"success-5000click-descr" : {
-				fr : "Effectuer un total de 5000 clics ! Incroyable !",
-				en : "Do a total of 5000 clicks ! Incredible !"
+				fr : "Effectuer un total de 5000 clics! Incroyable!",
+				en : "Do a total of 5000 clicks! Incredible!"
 			},
 			"success-10000click" : {
 				fr : "10K Clics",
 				en : "10K Clicks"
 			},
 			"success-10000click-descr" : {
-				fr : "Effectuer un total de 10000 clics... Vous n'avez que ça à faire ?",
-				en : "Do a total of 10000 clicks... Don't you've anything else to do ?"
+				fr : "Effectuer un total de 10000 clics... Vous n'avez que ça à faire?",
+				en : "Do a total of 10000 clicks... Don't you've anything else to do?"
 			},
 			"success-50000click" : {
 				fr : "50K Clics",
 				en : "50K Clicks"
 			},
 			"success-50000click-descr" : {
-				fr : "Effectuer un total de 50000 clics !!! Il faut arrêter maintenant o_O",
-				en : "Do a total of 50000 clicks !!! You have to stop now o_O"
+				fr : "Effectuer un total de 50000 clics!!! Il faut arrêter maintenant o_O",
+				en : "Do a total of 50000 clicks!!! You have to stop now o_O"
 			},
 			"success-100000click" : {
 				fr : "100K Clics",
 				en : "100K Clicks"
 			},
 			"success-100000click-descr" : {
-				fr : "Effectuer un total de 100000 clics !!! Top of the pop !",
-				en : "Do a total of 100000 clicks !!! Top of the pop !"
+				fr : "Effectuer un total de 100000 clics!!! Top of the pop!",
+				en : "Do a total of 100000 clicks!!! Top of the pop!"
 			},
 			"success-amour" : {
 				fr : "Premier amour",
@@ -1037,16 +1033,16 @@ define(["jquery",
 				en : "Earn the third eye."
 			},
 			"gainArtefact" : {
-				fr : "Félicitations ! Vous avez gagné l'artéfact : {?} !<br/>Voyagez dans la constellation pour consulter les détails.",
-				en : "Congratulations ! You've won the artefact : {?} !<br/>Explore the constellation to see the details."
+				fr : "Félicitations! Vous avez gagné l'artéfact : {?}!<br/>Voyagez dans la constellation pour consulter les détails.",
+				en : "Congratulations! You've won the artefact : {?}!<br/>Explore the constellation to see the details."
 			},
 			"torque" : {
 				fr : "Torque",
 				en : "Torc"
 			},
 			"torque-desc" : {
-				fr : "Symbole des grands guerriers. Il est l'objet essentiel à tout dieu en apprentissage !",
-				en : "Symbol of the great warriors. It's the essential object of any god in learning !"
+				fr : "Symbole des grands guerriers. Il est l'objet essentiel à tout dieu en apprentissage!",
+				en : "Symbol of the great warriors. It's the essential object of any god in learning!"
 			},
 			"corne-abondance" : {
 				fr : "Corne d'abondance",

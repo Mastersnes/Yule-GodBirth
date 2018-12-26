@@ -10,8 +10,8 @@ define(["jquery"],
 				en :"Little conflict"
 			},
 			"guerre-1-event" : {
-				fr :"Bonjour, seigneur ! Rien de bien palpitant aujourd'hui.<br/>Il semblerait qu'un peuple de l'est se lance dans plusieurs guérillas...<br/>Devons-nous intervenir ?",
-				en :"Hi my lord ! Nothing very exciting today.<br/>It seems that a people from the east is launching into several guerrillas...<br/>Should we do anything about it ?"
+				fr :"Bonjour, seigneur! Rien de bien palpitant aujourd'hui.<br/>Il semblerait qu'un peuple de l'est se lance dans plusieurs guérillas...<br/>Devons-nous intervenir?",
+				en :"Hi my lord! Nothing very exciting today.<br/>It seems that a people from the east is launching into several guerrillas...<br/>Should we do anything about it?"
 			},
 			"guerre-1-event-arreter" : {
 				fr :"Le peuple guerrier fut contraint de retourner d'où ils venaient, désarmé.<br/>Plus jamais ils ne devraient s'attaquer aux peuples limitrophes, sous peine de divines représailles.",

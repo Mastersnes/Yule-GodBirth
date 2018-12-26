@@ -14,7 +14,7 @@ define(["jquery"], function($){
 				en :"In the middle of the night, in the heart of the forest, a man was walking."
 			},
 			"zombie-start-event-2" : {
-				fr :"Son pas était lourd, son souffle était rauque... Son seul désire : manger !",
+				fr :"Son pas était lourd, son souffle était rauque... Son seul désire : manger!",
 				en :"His step was heavy, his breath was hoarse... His only desire is to eat!"
 			},
 
@@ -26,8 +26,8 @@ define(["jquery"], function($){
 				en :"Crazy man"
 			},
 			"zombie-fou-event" : {
-				fr :"Maître ! Un homme complètement fou se met à attaquer tout le monde sauvagement ! Nous devons l’arrêter !",
-				en :"Master ! A crazy man starts attacking everyone savagely ! We have to stop him ! "
+				fr :"Maître! Un homme complètement fou se met à attaquer tout le monde sauvagement! Nous devons l’arrêter!",
+				en :"Master! A crazy man starts attacking everyone savagely! We have to stop him! "
 			},
 			"zombie-fou-event-no" : {
 				fr :"L'homme fit plusieurs morts, puis disparut dans la forêt...",
@@ -46,24 +46,24 @@ define(["jquery"], function($){
 			 * Taverne
 			 */
 			"zombie-taverne-event-titre" : {
-				fr :"Une bière, siouplaît !",
-				en :"A beer, please !"
+				fr :"Une bière, siouplaît!",
+				en :"A beer, please!"
 			},
 			"zombie-taverne-event" : {
-				fr :"La bataille faisait rage dans la taverne. Les gros bras tapaient sur les fortes têtes et certains commençaient à mordre comme des animaux !",
-				en :"The battle was raging in the tavern. The big arms were banging on the strong heads and some of them were starting to bite like animals !"
+				fr :"La bataille faisait rage dans la taverne. Les gros bras tapaient sur les fortes têtes et certains commençaient à mordre comme des animaux!",
+				en :"The battle was raging in the tavern. The big arms were banging on the strong heads and some of them were starting to bite like animals!"
 			},
 			"zombie-taverne-event-no" : {
 				fr :"La bagarre se termina en bain de sang. Sur les lieux, il ne restait plus que des lambeaux de chair et des vêtements déchirés...",
 				en :"The fight ended in a bloodbath. At the scene, all that remained were shreds of flesh and torn clothes..."
 			},
 			"zombie-taverne-event-boire-button" : {
-				fr :"À boire pour tout le monde !",
+				fr :"À boire pour tout le monde!",
 				en :"Drinks for everyone!"
 			},
 			"zombie-taverne-event-boire" : {
-				fr :"Avec vos encouragements, tout le village participa à la plus grande bagarre de taverne du siècle ! On ne retrouva plus personne le lendemain...",
-				en :"With your encouragement the whole village participated in the biggest tavern fight of the century ! No one was found the next day..."
+				fr :"Avec vos encouragements, tout le village participa à la plus grande bagarre de taverne du siècle! On ne retrouva plus personne le lendemain...",
+				en :"With your encouragement the whole village participated in the biggest tavern fight of the century! No one was found the next day..."
 			},
 			"zombie-taverne-event-enferme" : {
 				fr :"On enferma les responsables de la bagarre : des hommes complètement fous et agressifs. Dans les profondeurs de leur cellule, ils ne feraient plus de mal à personne...",
@@ -78,20 +78,20 @@ define(["jquery"], function($){
 			 * Enfant
 			 */
 			"zombie-enfant-event-titre" : {
-				fr :"Un monstre !",
-				en :"Monster !"
+				fr :"Un monstre!",
+				en :"Monster!"
 			},
 			"zombie-enfant-event" : {
-				fr :"Mon Dieu ! Mon enfant s'est fait mordre par une créature sauvage dans la forêt ! Aidez-le, je vous en prie !",
-				en :"Oh, my God ! My child got bit by a wild creature in the forest! Help him, please !"
+				fr :"Mon Dieu! Mon enfant s'est fait mordre par une créature sauvage dans la forêt! Aidez-le, je vous en prie!",
+				en :"Oh, my God! My child got bit by a wild creature in the forest! Help him, please!"
 			},
 			"zombie-enfant-event-no" : {
-				fr :"Oh non ! Mon bébé ! Que vais-je faire à présent...",
-				en :"Oh no! My baby ! What am I going to do now..."
+				fr :"Oh non! Mon bébé! Que vais-je faire à présent...",
+				en :"Oh no! My baby! What am I going to do now..."
 			},
 			"zombie-enfant-event-yes" : {
-				fr :"C'est merveilleux ! Merci, mon Dieu ! Merci pour tout !",
-				en :"That's wonderful ! Thank, God ! Thanks for everything !"
+				fr :"C'est merveilleux! Merci, mon Dieu! Merci pour tout!",
+				en :"That's wonderful! Thank, God! Thanks for everything!"
 			},
 
 			/**
@@ -102,8 +102,8 @@ define(["jquery"], function($){
 				en :"Outch"
 			},
 			"zombie-blessure-event" : {
-				fr :"Arrrghh ! Mon Dieu ! Je me suis encore blessé ! Aidez-moi ! S'il vous plaît !!!",
-				en :"Arrrghh ! Oh, my God ! I hurt myself again ! Help me ! Please !!!!"
+				fr :"Arrrghh! Mon Dieu! Je me suis encore blessé! Aidez-moi! S'il vous plaît!!!",
+				en :"Arrrghh! Oh, my God! I hurt myself again! Help me! Please!!!!"
 			},
 
 			/**
@@ -126,8 +126,8 @@ define(["jquery"], function($){
 				en :"Savage"
 			},
 			"zombie-groupe-event" : {
-				fr :"Maître ! Un groupe d'hommes sauvages sèment la terreur dans la région !<br/>Ils mordent tout le monde sans raison !",
-				en :"Master ! A group of wild men sows terror in the region !<br/>They bite everyone for no reason !"
+				fr :"Maître! Un groupe d'hommes sauvages sèment la terreur dans la région!<br/>Ils mordent tout le monde sans raison!",
+				en :"Master! A group of wild men sows terror in the region!<br/>They bite everyone for no reason!"
 			},
 			"zombie-groupe-event-enfermer" : {
 				fr :"Les sauvages restèrent calmes quelque temps dans leur geôle. Ainsi, on les libéra dans une lointaine contrée...",
@@ -146,8 +146,8 @@ define(["jquery"], function($){
 				en :"In the clouds"
 			},
 			"zombie-cata-event" : {
-				fr :"Maître ! Un village à l'est semble complètement paralysé ! Les habitants restent à regarder dans le vide, sans but...",
-				en :"Master ! A village in the east seems completely paralyzed ! The inhabitants remain to look into the emptiness, without goal..."
+				fr :"Maître! Un village à l'est semble complètement paralysé! Les habitants restent à regarder dans le vide, sans but...",
+				en :"Master! A village in the east seems completely paralyzed! The inhabitants remain to look into the emptiness, without goal..."
 			},
 			"zombie-cata-event-no" : {
 				fr :"De nombreux étrangers disparurent dans ce mystérieux village.<br/>Des rumeurs prétendent qu'une armée de morts se dressait en secret...",
@@ -166,8 +166,8 @@ define(["jquery"], function($){
 				en :"Death War"
 			},
 			"zombie-guerre-event" : {
-				fr :"Maître ! De nombreux villages s'attaquent entre eux sauvagement !",
-				en :"Master ! Many villages attack each other savagely !"
+				fr :"Maître! De nombreux villages s'attaquent entre eux sauvagement!",
+				en :"Master! Many villages attack each other savagely!"
 			},
 			"zombie-guerre-event-no" : {
 				fr :"Le massacre continua encore et encore. De nombreuses personnes disparurent, mais leurs cadavres ne furent jamais retrouvés...",
@@ -211,7 +211,7 @@ define(["jquery"], function($){
 				en :"Revoke Death"
 			},
 			"zombie-step-event-3-invoquer" : {
-				fr :"Faucheuse, maîtresse des morts ! Reprends tes ouailles en ton sein et retournes-en à la terre ! Ainsi soit-il !",
+				fr :"Faucheuse, maîtresse des morts! Reprends tes ouailles en ton sein et retournes-en à la terre! Ainsi soit-il!",
 				en :"Grim reaper, mistress of the dead! Take your flock back into your bosom and return to the earth! So be it!"
 			}
 	};

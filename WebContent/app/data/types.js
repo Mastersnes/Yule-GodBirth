@@ -149,6 +149,7 @@ define(["jquery"], function($){
                 name : "samhain",
                 nbr : 15,
 				next : "yule-fin",
+				music : "instantDivin.ogg",
                 text : ["cinematique-samhain", "cinematique-samhain-1", "cinematique-samhain-2", "cinematique-samhain-3"],
                 events : {
                     typeEvents : [],

@@ -10,8 +10,8 @@ define(["jquery"],
 				en :"A distant buzzing..."
 			},
 			"nature-abeille-event" : {
-				fr :"Maître ! Il semblerait que toutes les abeilles aient disparu ! Que pouvons-nous faire ?",
-				en :"Master ! Its seems that all bees had disapears ! What could we do ?"
+				fr :"Maître! Il semblerait que toutes les abeilles aient disparu! Que pouvons-nous faire?",
+				en :"Master! Its seems that all bees had disapears! What could we do?"
 			},
 			"nature-abeille-enquete" : {
 				fr :"Des savants ont déjà commencé les recherches. Nous aurons les résultats sous peu.",
@@ -30,8 +30,8 @@ define(["jquery"],
 				en :"Stifling"
 			},
 			"nature-abeille-event-enquete" : {
-				fr :"Les savants sont formels : les abeilles ont disparu à cause des industries humaines !<br/>Il semblerait que le gaz qui s'échappe de leurs usines détruise la nature environnante !",
-				en :"The scientists are formal : the bees have disappeared because of human industries !<br/>It seems that the gas escaping from their factory is destroying the surrounding nature !"
+				fr :"Les savants sont formels : les abeilles ont disparu à cause des industries humaines!<br/>Il semblerait que le gaz qui s'échappe de leurs usines détruise la nature environnante!",
+				en :"The scientists are formal : the bees have disappeared because of human industries!<br/>It seems that the gas escaping from their factory is destroying the surrounding nature!"
 			},
 			"detruire-usine-button" : {
 				fr :"Détruire les usines",
@@ -62,8 +62,8 @@ define(["jquery"],
 				en :"A forgotten fragrance..."
 			},
 			"nature-fleurs-event" : {
-				fr :"C'est maintenant au tour des fleurs de disparaître ! Quelque chose d’étrange se passe sur Terre, c'est une certitude...",
-				en :"Now it's the flowers' turn to disappear ! Something strange is happening on earth, it's a certainty..."
+				fr :"C'est maintenant au tour des fleurs de disparaître! Quelque chose d’étrange se passe sur Terre, c'est une certitude...",
+				en :"Now it's the flowers' turn to disappear! Something strange is happening on earth, it's a certainty..."
 			},
 
 			/**
@@ -106,8 +106,8 @@ define(["jquery"],
 				en :"Save the nature"
 			},
 			"nature-destruction-event-sauver" : {
-				fr :"Des dizaines d'années passèrent, sans résultat. Puis, un jour, on vit réapparaître le premier papillon.<br/>Tout alla très vite. Les plantes recommencèrent à pousser puis, vint le tour des arbres...<br/>La Terre avait retrouvé sa grandeur passée !",
-				en :"Decades passed, with no results. Then, one day, we saw the first butterfly reappear.<br/>Everything went very quickly. The plants started growing again and then came the trees...<br/>The earth had found its past greatness !"
+				fr :"Des dizaines d'années passèrent, sans résultat. Puis, un jour, on vit réapparaître le premier papillon.<br/>Tout alla très vite. Les plantes recommencèrent à pousser puis, vint le tour des arbres...<br/>La Terre avait retrouvé sa grandeur passée!",
+				en :"Decades passed, with no results. Then, one day, we saw the first butterfly reappear.<br/>Everything went very quickly. The plants started growing again and then came the trees...<br/>The earth had found its past greatness!"
 			}
 	};
 	

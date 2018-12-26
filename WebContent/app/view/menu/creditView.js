@@ -38,6 +38,21 @@ function($, _, Utils, page) {
 			$("#aeferrets").click(function() {
 				window.open("https://www.facebook.com/AEFerrets/", "_blank");
 			});
+			$(".facebook").click(function() {
+				window.open("https://www.facebook.com/lesjeuxdebebel/", "_blank");
+			});
+			$(".twitter").click(function() {
+				window.open("https://twitter.com/lesjeuxdebebel", "_blank");
+			});
+			$(".wordpress").click(function() {
+				window.open("https://lesjeuxdebebel.wordpress.com", "_blank");
+			});
+			$(".instagram").click(function() {
+				window.open("https://www.instagram.com/lesjeuxdebebel/", "_blank");
+			});
+			$(".kongregate").click(function() {
+				window.open("https://www.kongregate.com/games/JeuxBebel", "_blank");
+			});
 		};
 		
 		this.show = function() {

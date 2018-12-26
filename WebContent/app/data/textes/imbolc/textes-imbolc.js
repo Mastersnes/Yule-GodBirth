@@ -14,28 +14,28 @@ define(["jquery",
 				en :"Beginning of a god"
 			},
 			"first-event" : {
-				fr :"Maître ! Vos fidèles demandent à vous parler. Souhaitez-vous les recevoir ?",
-				en :"Master ! Your faithful ask to talk to you. Do you want to receive them ?"
+				fr :"Maître! Vos fidèles demandent à vous parler. Souhaitez-vous les recevoir?",
+				en :"Master! Your faithful ask to talk to you. Do you want to receive them?"
 			},
 			"first-event-ok" : {
-				fr :"Très bien, maître ! Je vais les faire entrer.",
-				en :"Fine, Master ! I'll let them in."
+				fr :"Très bien, maître! Je vais les faire entrer.",
+				en :"Fine, master! I'll let them in."
 			},
 			"first-event-ko" : {
 				fr :"Très bien. Je vais leur demander de quitter les lieux.",
-				en :"Alright Master. I'll ask them to leave this place."
+				en :"Alright. I'll ask them to leave this place."
 			},
 
 			/**
 			 * Rebellion
 			 */
 			"rebellion-start-event-titre" : {
-				fr :"Rébellion !",
-				en :"Rebellion !"
+				fr :"Rébellion!",
+				en :"Rebellion!"
 			},
 			"rebellion-start-event" : {
-				fr :"Maître ! Les mortels vous méprisent ! Tout est perdu... Plus personne ne croit en vous désormais...",
-				en :"Master ! Mortals despise you ! All is lost... No one believes in you anymore..."
+				fr :"Maître! Les mortels vous méprisent! Tout est perdu... Plus personne ne croit en vous désormais...",
+				en :"Master! Mortals despise you! All is lost... No one believes in you anymore..."
 			}
 	};
 	

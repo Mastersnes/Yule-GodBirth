@@ -22,7 +22,7 @@
 	background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.popup > .content > .texte {
+.popup > .content .texte {
 	font-size: 2.5vh;
 	font-family: serif;
 	text-align: center;
@@ -35,9 +35,6 @@
     right: -2.5%;
 }
 
-.popup ul li {
-	color: #aaafbd;
-}
 .popup ul li a {
 	color: #337ab7;
 }

@@ -126,7 +126,7 @@ define(["jquery","app/utils/utils"
 			         {
 			             name : "continuerButton",
 			             action : function(game) {
-			            	 game.alertPopup("xeno-bleu-event-2", function() {
+			            	 game.alertPopup("xeno-blue-event-2", function() {
 			            		 game.pointManager.addPointsPercent({
 			            			 croyance : -30,
 			            			 illumination : -10,

@@ -27,8 +27,8 @@ define(["jquery"
 				en :"Good god"
 			},
 			"mabon-fin-good-event" : {
-				fr :"Ainsi, vous voici de nouveau parmi nous, au sein de l’immatériel...<br/>Le moment est venu, vous savez ? Toute chose doit trouver à nouveau sa place dans le grand cycle...",
-				en :"So, here you are again among us, within the immaterial...<br/>The time has come, you know ? Everything must find its place again in the great cycle..."
+				fr :"Ainsi, vous voici de nouveau parmi nous, au sein de l’immatériel...<br/>Le moment est venu, vous savez? Toute chose doit trouver à nouveau sa place dans le grand cycle...",
+				en :"So, here you are again among us, within the immaterial...<br/>The time has come, you know? Everything must find its place again in the great cycle..."
 			},
 			"mabon-fin-good-event2" : {
 				fr :"Je me dois de vous féliciter. Vos actes ont été un modèle de sagesse et de bonté.<br/>Les choix que vous avez faits rayonneront à jamais dans le nouvel Univers qui se prépare.",
@@ -55,8 +55,8 @@ define(["jquery"
 				en :"Bad god"
 			},
 			"mabon-fin-bad-event" : {
-				fr :"Ainsi, vous voici de nouveau parmi nous, au sein de l’immatériel...<br/>Le moment est venu, vous savez ? Toute chose doit trouver à nouveau sa place dans le grand cycle...",
-				en :"So, here you are again among us, within the immaterial...<br/>The time has come, you know ? Everything must find its place again in the great cycle..."
+				fr :"Ainsi, vous voici de nouveau parmi nous, au sein de l’immatériel...<br/>Le moment est venu, vous savez? Toute chose doit trouver à nouveau sa place dans le grand cycle...",
+				en :"So, here you are again among us, within the immaterial...<br/>The time has come, you know? Everything must find its place again in the great cycle..."
 			},
 			"mabon-fin-bad-event2" : {
 				fr :"Je vous avoue que je suis surpris, vos actes ont été terribles et le nouvel Univers qui se prépare regorgera de haine et de terreur...",

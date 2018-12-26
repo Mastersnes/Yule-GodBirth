@@ -27,16 +27,16 @@ define(["jquery",
 				en :"Horrors of pleasure"
 			},
 			"tyrannie-soeur-event" : {
-				fr :"Mon Dieu ! Ma sœur a été enfermée dans un harem à Baia !<br/>Nul ne sait ce qu'ils lui font ! Libérez-la, je vous en supplie !",
-				en :"My God ! My sister was locked up in a harem in Baia !<br/>No one knows what they're doing to her ! Set her free, please !"
+				fr :"Mon Dieu! Ma sœur a été enfermée dans un harem à Baia!<br/>Nul ne sait ce qu'ils lui font! Libérez-la, je vous en supplie!",
+				en :"My God! My sister was locked up in a harem in Baia!<br/>No one knows what they're doing to her! Set her free, please!"
 			},
 			"tyrannie-soeur-event-accept" : {
-				fr :"Oh Seigneur, merci beaucoup ! Ma soeur est en lieu sûr à présent. Je ne sais comment vous remercier !",
-				en :"Oh God, thank you ! My sister is safe now. I don't know how to thank you !"
+				fr :"Oh Seigneur, merci beaucoup! Ma soeur est en lieu sûr à présent. Je ne sais comment vous remercier!",
+				en :"Oh God, thank you! My sister is safe now. I don't know how to thank you!"
 			},
 			"tyrannie-soeur-event-refus" : {
-				fr :"Nooon ! S'il vous plaît !!! Elle a besoin d'aide !",
-				en :"Nooo ! Please !!! She needs help !"
+				fr :"Nooon! S'il vous plaît!!! Elle a besoin d'aide!",
+				en :"Nooo! Please!!! She needs help!"
 			},
 
 			/**
@@ -47,32 +47,32 @@ define(["jquery",
 				en :"Fiesta"
 			},
 			"tyrannie-fete-event" : {
-				fr :"Seigneur ! Nous organisons une superbe fête en votre honneur à Baia !<br/>Tout sera permis !",
-				en :"Lord ! We organize a great party for you at Baia !<br/>Everything will be permise !"
+				fr :"Seigneur! Nous organisons une superbe fête en votre honneur à Baia!<br/>Tout sera permis!",
+				en :"Lord! We organize a great party for you at Baia!<br/>Everything will be permise!"
 			},
 			"tyrannie-fete-event-participe-button" : {
 				fr :"Participer",
 				en :"Participate"
 			},
 			"tyrannie-fete-event-participe" : {
-				fr :"Super ! On va s'éclater !",
-				en :"Yeah ! We're gonna have some fun !"
+				fr :"Super! On va s'éclater!",
+				en :"Yeah! We're gonna have some fun!"
 			},
 			"tyrannie-fete-event-nonparticipe-button" : {
 				fr :"Ne pas participer",
 				en :"Do not participate"
 			},
 			"tyrannie-fete-event-nonparticipe" : {
-				fr :"Comment ?! Cette fête était pour vous ! On va devoir tout annuler... Merci, hein !",
-				en :"What ?! This party was for you ! We're gonna have to cancel everyting... Thanks, pff !"
+				fr :"Comment?! Cette fête était pour vous! On va devoir tout annuler... Merci, hein!",
+				en :"What?! This party was for you! We're gonna have to cancel everyting... Thanks, pff!"
 			},
 			"tyrannie-fete-event-annule-button" : {
 				fr :"Annuler la fête",
 				en :"Cancel the party"
 			},
 			"tyrannie-fete-event-annule" : {
-				fr :"Quoi !!! Vous annulez tout ! Mais on a mis énormément de temps à tout organiser ! Pfff...",
-				en :"What !!! You cancel everything ! But we've spend some time to organize all ! Pfff..."
+				fr :"Quoi!!! Vous annulez tout! Mais on a mis énormément de temps à tout organiser! Pfff...",
+				en :"What!!! You cancel everything! But we've spend some time to organize all! Pfff..."
 			},
 			"tyrannie-fete-event-boire-button" : {
 				fr :"Boire toute la nuit",
@@ -91,11 +91,11 @@ define(["jquery",
 				en :"Uprising"
 			},
 			"tyrannie-esclave-event" : {
-				fr :"Un groupe d'esclaves s'est rebellé dans la ville de Baia ! Ils veulent leur liberté !",
-				en :"A group of slaves rebelled in city of Baia ! They want their freedom !"
+				fr :"Un groupe d'esclaves s'est rebellé dans la ville de Baia! Ils veulent leur liberté!",
+				en :"A group of slaves rebelled in city of Baia! They want their freedom!"
 			},
 			"tyrannie-esclave-event-encourage-button" : {
-				fr :"Encourager la rébellion !",
+				fr :"Encourager la rébellion!",
 				en :"Encourage rebellion"
 			},
 			"tyrannie-esclave-event-encourage" : {

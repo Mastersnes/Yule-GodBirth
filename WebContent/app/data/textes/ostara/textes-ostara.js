@@ -14,8 +14,8 @@ define(["jquery",
 				en :"A high responsibility"
 			},
 			"ostara-start-event" : {
-				fr :"Maître, de plus en plus de prières nous parviennent !<br/>Le monde a bien évolué et reconnaît votre grandeur !",
-				en :"Master, more and more prayers are coming to us !<br/>The world has evolved well and recognizes your greatness !"
+				fr :"Maître, de plus en plus de prières nous parviennent!<br/>Le monde a bien évolué et reconnaît votre grandeur!",
+				en :"Master, more and more prayers are coming to us!<br/>The world has evolved well and recognizes your greatness!"
 			},
 			
 			/**
@@ -26,15 +26,15 @@ define(["jquery",
 				en :"An infinite wealth"
 			},
 			"accueil-riche-event" : {
-				fr :"Cher Dieu, les affaires ne vont pas fort en ce moment.<br/>J'aimerais être le plus riche des Hommes !<br/>Je saurai vous récompenser...",
-				en :"Dear God, business is not going well rencently. I would like to be the richest man !<br/>I would know how to reward you..."
+				fr :"Cher Dieu, les affaires ne vont pas fort en ce moment.<br/>J'aimerais être le plus riche des Hommes!<br/>Je saurai vous récompenser...",
+				en :"Dear God, business is not going well rencently. I would like to be the richest man!<br/>I would know how to reward you..."
 			},
 			"accueil-riche-event-ok" : {
-				fr :"Oh yeah ! Les affaires reprennent ! Vous ne serez pas déçu !",
-				en :"Oh men ! Business is back ! You won't be disapointed !"
+				fr :"Oh yeah! Les affaires reprennent! Vous ne serez pas déçu!",
+				en :"Oh men! Business is back! You won't be disapointed!"
 			},
 			"accueil-riche-event-ko" : {
-				fr :"Dieu pathétique... Vous n'avez aucune ambition !",
+				fr :"Dieu pathétique... Vous n'avez aucune ambition!",
 				en :"pathetic god... You don't have any ambition"
 			},
 			"accueil-riche-event-2-titre" : {
@@ -42,16 +42,16 @@ define(["jquery",
 				en :"Unforgivable"
 			},
 			"accueil-riche-event-2" : {
-				fr :"Ce mortel vous a insulté ! Souhaitez-vous le punir ?",
-				en :"This mortal insulted you ! Do you want to punish him ?"
+				fr :"Ce mortel vous a insulté! Souhaitez-vous le punir?",
+				en :"This mortal insulted you! Do you want to punish him?"
 			},
 			"accueil-riche-event-tuer" : {
 				fr :"L'homme s'écroula, sans même s'en rendre compte...",
 				en :"The man collapsed, without even realizing it..."
 			},
 			"accueil-riche-event-partir" : {
-				fr :"À jamais, dieu de pacotille !",
-				en :"Goodbye, junk god !"
+				fr :"À jamais, dieu de pacotille!",
+				en :"Goodbye, junk god!"
 			},
 	};
 	

@@ -11,8 +11,8 @@ define(["jquery"
 				en :"A worrying disappearance"
 			},
 			"lammas-frere-event" : {
-				fr :"Mon Dieu ! Pourriez-vous me venir en aide ? C'est mon frère, il a disparu ! Répondez à mon appel, je vous en prie !",
-				en :"My God ! Could you help me ? It's my brother, he's missing ! Please answer my call !"
+				fr :"Mon Dieu! Pourriez-vous me venir en aide? C'est mon frère, il a disparu! Répondez à mon appel, je vous en prie!",
+				en :"My God! Could you help me? It's my brother, he's missing! Please answer my call!"
 			},
 			"lammas-frere-event-intervenir" : {
 				fr :"Malgré vos efforts, vous ne parvîntes pas à le ramener parmi les vivants. Son âme même semblait s'être évaporée...",
@@ -56,8 +56,8 @@ define(["jquery"
 				en :"Question him"
 			},
 			"lammas-disparition-event-question" : {
-				fr :"Vous aurez bientôt à faire un grand choix pour l'Univers !",
-				en :"You'll soon have to make a wide choice for the Universe !"
+				fr :"Vous aurez bientôt à faire un grand choix pour l'Univers!",
+				en :"You'll soon have to make a wide choice for the Universe!"
 			},
 
 			"lammas-disparition2-event-titre" : {
@@ -69,8 +69,8 @@ define(["jquery"
 				en :"The outcome is already decided for you, but maybe you can change it..."
 			},
 			"lammas-disparition2-event-comment-button" : {
-				fr :"Comment ?",
-				en :"What ?"
+				fr :"Comment?",
+				en :"What?"
 			},
 			"lammas-disparition2-event-comment" : {
 				fr :"À peine l'homme eut-il terminé sa phrase, qu'il disparut aussitôt dans une intense lumière...",
@@ -122,8 +122,8 @@ define(["jquery"
 				en :"The accumulated energy will take shape somehow here and shape a new Universe."
 			},
 			"lammas-disparition3-event-lumiere8" : {
-				fr :"Serez-vous acteur ou pantin de ce mécanisme ? Ne répondez pas maintenant...<br/>Répondez simplement de façon juste aux choix que votre Univers vous propose. Nous nous reverrons, grand Dieu...",
-				en :"Will you be an actor or a puppet of this mechanism ? Don't answer now...<br/>Response simply in a fair way to the choices your Universe offers you. We will meet again, my Goodness..."
+				fr :"Serez-vous acteur ou pantin de ce mécanisme? Ne répondez pas maintenant...<br/>Répondez simplement de façon juste aux choix que votre Univers vous propose. Nous nous reverrons, grand Dieu...",
+				en :"Will you be an actor or a puppet of this mechanism? Don't answer now...<br/>Response simply in a fair way to the choices your Universe offers you. We will meet again, my Goodness..."
 			},
 			"lammas-disparition3-event-lumiere9" : {
 				fr :"Vous ouvrez les yeux dans votre palais... Jamais vous n'auriez pensé qu'une entité puisse dépasser l'entendement même des dieux.",

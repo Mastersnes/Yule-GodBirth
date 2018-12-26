@@ -21,7 +21,7 @@ define(["jquery",
 			},
 			"intervenir-button" : {
 				fr :"Intervenir",
-				en :"Intercede"
+				en :"Intervene"
 			},
 			"ignore-button" : {
 				fr :"Ignorer",

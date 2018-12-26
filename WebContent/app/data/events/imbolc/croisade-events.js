@@ -155,6 +155,20 @@ define(["jquery"], function($){
 			             }
 			         },
 			         {
+			             name : "croisade-graal-event-attaque-button",
+			             action : function(game) {
+			            	game.gainLoop({
+	                        	 croyance : 0,
+	                        	 illumination : 0,
+	                        	 bien : 0,
+	                        	 mal : 15
+	                        }, "quete");
+			            	game.alertPopup("croisade-graal-event-attaque", function() {
+			     				game.artefactsView.add("saint-graal");
+			     			});
+			             }
+			         },
+			         {
 			             name : "croisade-graal-event-laisser-button",
 			             action : function(game) {
 			            	 game.gainLoop({

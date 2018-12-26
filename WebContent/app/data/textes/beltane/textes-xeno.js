@@ -23,8 +23,8 @@ define(["jquery"],
 				en :"XL44H - Backward worlds"
 			},
 			"xeno-2-event" : {
-				fr :"Maître ! Nous sommes enfin opérationnels pour nos recherches ! Seulement, différentes planètes sont visibles sur nos radars... Laquelle devrions-nous choisir ?",
-				en :"Master ! We are finally operational for our research ! But, different planets are visible on our radars... Which one should we choose ?"
+				fr :"Maître! Nous sommes enfin opérationnels pour nos recherches! Seulement, différentes planètes sont visibles sur nos radars... Laquelle devrions-nous choisir?",
+				en :"Master! We are finally operational for our research! But, different planets are visible on our radars... Which one should we choose?"
 			},
 			"xeno-2-event-green-button" : {
 				fr :"La planète verte",
@@ -103,22 +103,22 @@ define(["jquery"],
 				en :"XL44H - Back in space"
 			},
 			"xeno-espace-red-event" : {
-				fr :"Maître ! Nous revoici en stationnement orbital. Deux planètes sont encore visibles sur nos radars. Laquelle devrions-nous choisir ?",
-				en :"Master ! We're back in orbit parking. Two planets are still visible on our radars. Which one should we choose ?"
+				fr :"Maître! Nous revoici en stationnement orbital. Deux planètes sont encore visibles sur nos radars. Laquelle devrions-nous choisir?",
+				en :"Master! We're back in orbit parking. Two planets are still visible on our radars. Which one should we choose?"
 			},
 
 			/**
 			 * Planete bleue
 			 */
-			"xeno-bleu-event-titre" : {
+			"xeno-blue-event-titre" : {
 				fr :"XL44H - Planète tempête",
 				en :"XL44H - Storm Planet"
 			},
-			"xeno-bleu-event" : {
+			"xeno-blue-event" : {
 				fr :"Le bleu détecté sur les radars n’était malheureusement pas de l'eau et l’équipage ne le comprit que trop tard...",
 				en :"The blue detected in the radar was unfortunately not water and the crew only understood it too late..."
 			},
-			"xeno-bleu-event-2" : {
+			"xeno-blue-event-2" : {
 				fr :"Le vaisseau, perdant tout contrôle, fut pris dans le nuage électromagnétique géant que représentait la planète et explosa...",
 				en :"The ship, losing all control, was caught in the giant electromagnetic cloud that the planet represented and exploded..."
 			}
