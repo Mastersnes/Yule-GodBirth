@@ -10,6 +10,15 @@ preload {
     background-size: 100% 100%;
 }
 
+/**Constellation**/
+preload.constellation-preload[step="1"] {
+	background-image: url("../img/game/interface/constellation/normal.png");
+}
+preload.constellation-preload[step="2"] {
+	background-image: url("../img/game/interface/constellation/hover.png");
+}
+
+
 /**GOD**/
 preload.god-dust[step="1"] {
 	background-image: url("../img/game/god/dust/1.png");

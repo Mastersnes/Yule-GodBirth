@@ -37,13 +37,11 @@ function($, _, Utils, page) {
 				that.Textes.setLanguage("en");
 			});
 			$(this.el).find("#fullscreen").click(function() {
-				var elem = $("body")[0];
-				if (elem.requestFullscreen) {
-				  elem.requestFullscreen();
-				} else if (elem.mozRequestFullScreen) {
-				  elem.mozRequestFullScreen();
-				} else if (elem.webkitRequestFullscreen) {
-				  elem.webkitRequestFullscreen();
+				var isFullscreen = Utils.fullscreen();
+				if (isFullscreen) {
+					$("fullscreen").removeClass("exit");
+				}else {
+					$("fullscreen").addClass("exit");
 				}
 			});
 		};

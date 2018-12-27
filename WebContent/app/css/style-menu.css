@@ -29,6 +29,22 @@
 	display: none;
 }
 
+fullscreen {
+	z-index: 10;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	right: 1%; bottom: 1%;
+	width: 3%; height: 4%;
+	background-image: url("../img/game/interface/bouton/fullscreen.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+fullscreen.exit {
+	background-image: url("../img/game/interface/bouton/exit-fullscreen.png") !important;
+}
+
 /**
 * Menu
 **/

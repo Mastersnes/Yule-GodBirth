@@ -177,6 +177,7 @@ define(["jquery",
         		if (!$(this).hasClass("used")) return;
         		
         		var emplacement = $(this).attr("id");
+        		that.mediatheque.playSound("getStone.ogg");
         		that.pierresView.removePierre(that.selectedPierres.get(emplacement));
         		
         		that.selectedPierres.put(emplacement, null);
@@ -200,6 +201,7 @@ define(["jquery",
         	}
         	
         	var firstEmptyKey = this.selectedPierres.getFirstEmptyKey();
+        	this.mediatheque.playSound("putStone.ogg");
         	this.selectedPierres.put(firstEmptyKey, pierreId);
         	this.refresh();
         };

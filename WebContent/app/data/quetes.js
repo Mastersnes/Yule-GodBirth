@@ -182,7 +182,9 @@ define(["jquery"], function($){
 				     ameliorations : []
 				},
 			    conditionsFunction : function(queteView) {
+			    	try{
 			    	return queteView.eventManager.uniquesEvents.length >= 5;
+			    	}catch(e){}
 			    },
 			    gainsLoop : {
 			    	croyance : 15,
@@ -221,7 +223,9 @@ define(["jquery"], function($){
 				     ameliorations : []
 				},
 			    conditionsFunction : function(queteView) {
+			    	try{
 			    	return queteView.eventManager.uniquesEvents.length >= 10;
+			    	}catch(e){}
 			    },
 			    gainsLoop : {
 			    	croyance : 20,
@@ -260,7 +264,9 @@ define(["jquery"], function($){
 				     ameliorations : []
 				},
 			    conditionsFunction : function(queteView) {
+			    	try{
 			    	return queteView.eventManager.uniquesEvents.length >= 20;
+			    	}catch(e){}
 			    },
 			    gainsLoop : {
 			    	croyance : 30,
@@ -299,7 +305,9 @@ define(["jquery"], function($){
 				     ameliorations : []
 				},
 			    conditionsFunction : function(queteView) {
+			    	try{
 			    	return queteView.eventManager.uniquesEvents.length >= 40;
+			    	}catch(e){}
 			    },
 			    gainsLoop : {
 			    	croyance : 30,
@@ -338,7 +346,9 @@ define(["jquery"], function($){
 				     ameliorations : []
 				},
 			    conditionsFunction : function(queteView) {
+			    	try{
 			    	return queteView.eventManager.uniquesEvents.length >= 60;
+			    	}catch(e){}
 			    },
 			    gainsLoop : {
 			    	croyance : 20,
@@ -399,7 +409,9 @@ define(["jquery"], function($){
 				     ameliorations : []
 				},
 			    conditionsFunction : function(queteView) {
+			    	try{
 			    	return queteView.saveManager.load("pierre-primaire-success") > 0;
+			    	}catch(e){}
 			    },
 			    gainsLoop : {
 			    	croyance : 25,
@@ -408,15 +420,37 @@ define(["jquery"], function($){
 			    success : function(queteView) {
 			    }
 			},
-			"quete-lunar-stones" : {
-			    name : "quete-lunar-stones",
-			    description : "quete-lunar-stones-desc",
+			"quete-unlock-lunar-stones" : {
+			    name : "quete-unlock-lunar-stones",
+			    description : "quete-unlock-lunar-stones-desc",
 				apparition : {
 					 isComplete : ["quete-start"],
 				     ameliorations : []
 				},
+				conditions : [
+				     {
+					     name : "deesse",
+					     level : 5
+					 }
+				],
+			    gainsLoop : {
+			    	croyance : 10,
+			    	illumination : 15
+			    },
+			    success : function(queteView) {
+			    }
+			},
+			"quete-lunar-stones" : {
+			    name : "quete-lunar-stones",
+			    description : "quete-lunar-stones-desc",
+				apparition : {
+					 isComplete : ["quete-unlock-lunar-stones"],
+				     ameliorations : []
+				},
 			    conditionsFunction : function(queteView) {
+			    	try{
 			    	return queteView.saveManager.load("pierre-lunaire-success") > 0;
+			    	}catch(e){}
 			    },
 			    gainsLoop : {
 			    	croyance : 10,
@@ -425,19 +459,62 @@ define(["jquery"], function($){
 			    success : function(queteView) {
 			    }
 			},
+			"quete-unlock-solar-stones" : {
+			    name : "quete-unlock-solar-stones",
+			    description : "quete-unlock-solar-stones-desc",
+				apparition : {
+					 isComplete : ["quete-start"],
+				     ameliorations : []
+				},
+				conditions : [
+				     {
+					     name : "dieu",
+					     level : 5
+					 }
+				],
+			    gainsLoop : {
+			    	croyance : 15,
+			    	illumination : 10
+			    },
+			    success : function(queteView) {
+			    }
+			},
 			"quete-solar-stones" : {
 			    name : "quete-solar-stones",
 			    description : "quete-solar-stones-desc",
+				apparition : {
+					 isComplete : ["quete-unlock-solar-stones"],
+				     ameliorations : []
+				},
+			    conditionsFunction : function(queteView) {
+			    	try{
+			    	return queteView.saveManager.load("pierre-solaire-success") > 0;
+			    	}catch(e){}
+			    },
+			    gainsLoop : {
+			    	croyance : 50,
+			    	illumination : 10
+			    },
+			    success : function(queteView) {
+			    }
+			},
+			"quete-unlock-secret-stones" : {
+			    name : "quete-unlock-secret-stones",
+			    description : "quete-unlock-secret-stones-desc",
 				apparition : {
 					 isComplete : ["quete-start"],
 				     ameliorations : []
 				},
 			    conditionsFunction : function(queteView) {
-			    	return queteView.saveManager.load("pierre-solaire-success") > 0;
+			    	try {
+				    	var pierresView = queteView.parent.autelView.pierresView;
+				    	var onglet = pierresView.PierresOnglets.get("secrete");
+				    	return pierresView.checkOngletAffichable(onglet.conditions);
+			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 50,
-			    	illumination : 10
+			    	croyance : 20,
+			    	illumination : 20
 			    },
 			    success : function(queteView) {
 			    }
@@ -450,7 +527,9 @@ define(["jquery"], function($){
 				     ameliorations : []
 				},
 			    conditionsFunction : function(queteView) {
+			    	try {
 			    	return queteView.saveManager.load("pierre-secrete-success") > 0;
+			    	}catch(e){}
 			    },
 			    gainsLoop : {
 			    	croyance : 50,

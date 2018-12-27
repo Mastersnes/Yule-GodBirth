@@ -472,6 +472,7 @@ define(["jquery",
 				fr : "Atteignez Samhain",
 				en : "Reach Samhain"
 			},
+			
 			"quete-5-events" : {
 				fr : "Premiers pas",
 				en : "First steps"
@@ -512,6 +513,7 @@ define(["jquery",
 				fr : "Accomplissez 60 événements.",
 				en : "Complete 60 events."
 			},
+			
 			"quete-primary-stones" : {
 				fr : "Achetez toutes les pierres primaires",
 				en : "Buy all primary gemstones"
@@ -519,6 +521,14 @@ define(["jquery",
 			"quete-primary-stones-desc" : {
 				fr : "Le début d'une grande richesse",
 				en : "The beginning of a great wealth"
+			},
+			"quete-unlock-lunar-stones" : {
+				fr : "Débloquer les pierres lunaires",
+				en : "Unlock the lunar gemstones"
+			},
+			"quete-unlock-lunar-stones-desc" : {
+				fr : "La Déesse veille sur vous",
+				en : "The Goddess takes care of you"
 			},
 			"quete-lunar-stones" : {
 				fr : "Achetez toutes les pierres lunaires",
@@ -528,6 +538,14 @@ define(["jquery",
 				fr : "L'éclat d'une grande puissance",
 				en : "The shine of a great power"
 			},
+			"quete-unlock-solar-stones" : {
+				fr : "Débloquer les pierres solaires",
+				en : "Unlock the solar gemstones"
+			},        
+			"quete-unlock-solar-stones-desc" : {
+				fr : "Le Dieu vous protège",
+				en : "God protects you"
+			},
 			"quete-solar-stones" : {
 				fr : "Achetez toutes les pierres solaires",
 				en : "Buy all solar gemstones"
@@ -535,6 +553,14 @@ define(["jquery",
 			"quete-solar-stones-desc" : {
 				fr : "Brûlez dans les flammes de l'ignorance!",
 				en : "Burn in the flames of ignorance!"
+			},
+			"quete-unlock-secret-stones" : {
+				fr : "Débloquer les pierres secrètes",
+				en : "Unlock the secret gemstones"
+			},        
+			"quete-unlock-secret-stones-desc" : {
+				fr : "Aucun mystère ne vous échappe",
+				en : "No mystery is unknown to you"
 			},
 			"quete-secret-stones" : {
 				fr : "Achetez toutes les pierres secrètes",
@@ -1142,7 +1168,11 @@ define(["jquery",
 		**/
 		setLanguage : function(newLanguage) {
 			window.localStorage.setItem("bebelLanguage", newLanguage);
-			parent.location.reload();
+			try {
+				parent.location.reload(true);
+			}catch(e) {
+				parent.location.href=parent.location.href;
+			}
 		}
 	};
 });

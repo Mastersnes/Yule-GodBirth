@@ -95,6 +95,16 @@ function($, _, Utils, PopupUtils, page, TextManager,
 					text : this.Textes
 			};
 			this.el.html(template(templateData));
+			
+			var isFullscreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
+            (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+            (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+            (document.msFullscreenElement && document.msFullscreenElement !== null);
+			if (!isFullscreen) {
+				$("fullscreen").removeClass("exit");
+			}else {
+				$("fullscreen").addClass("exit");
+			}
 		};
 		
 		this.loop = function() {
@@ -198,6 +208,14 @@ function($, _, Utils, PopupUtils, page, TextManager,
             	e.preventDefault();
             	return false;
             });
+            $("fullscreen").click(function() {
+            	var isFullscreen = Utils.fullscreen();
+				if (isFullscreen) {
+					$("fullscreen").removeClass("exit");
+				}else {
+					$("fullscreen").addClass("exit");
+				}
+			});
             $(document).mousemove(function(event) {
                 that.currentMousePos.x = event.pageX;
                 that.currentMousePos.y = event.pageY;

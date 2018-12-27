@@ -73,11 +73,14 @@ define(["jquery",
             this.textManager.show(this.type.text);
             
             if (this.type.music) {
-            	this.mediatheque.stopAllMusic();
-            	var that = this;
-            	setTimeout(function() {
-            		that.mediatheque.play("music/" + that.type.music);
-            	}, 300);
+            	var musicName = "music/" + this.type.music;
+            	if (this.mediatheque.currentMusic != musicName) { 
+	            	this.mediatheque.stopAllMusic();
+	            	var that = this;
+	            	setTimeout(function() {
+	            		that.mediatheque.play(musicName);
+	            	}, 300);
+            	}
             }
             
             this.textManager.next();

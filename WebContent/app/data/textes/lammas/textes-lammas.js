@@ -123,7 +123,7 @@ define(["jquery"
 			},
 			"lammas-disparition3-event-lumiere8" : {
 				fr :"Serez-vous acteur ou pantin de ce mécanisme? Ne répondez pas maintenant...<br/>Répondez simplement de façon juste aux choix que votre Univers vous propose. Nous nous reverrons, grand Dieu...",
-				en :"Will you be an actor or a puppet of this mechanism? Don't answer now...<br/>Response simply in a fair way to the choices your Universe offers you. We will meet again, my Goodness..."
+				en :"Will you be an actor or a puppet of this mechanism? Don't answer now...<br/>Response simply in a fair way to the choices your Universe offers you. We'll meet again, my Goodness..."
 			},
 			"lammas-disparition3-event-lumiere9" : {
 				fr :"Vous ouvrez les yeux dans votre palais... Jamais vous n'auriez pensé qu'une entité puisse dépasser l'entendement même des dieux.",

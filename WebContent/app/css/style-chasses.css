@@ -74,3 +74,13 @@ autel > chasse.used[pierre=azurite] {
 autel > chasse.used[pierre=pierre-de-lune] {
 	background-image: url("../img/game/autel/pierres/pierre-de-lune/pierre-de-lune.png");
 }
+
+/**
+* Secrete
+**/
+autel > chasse.used[pierre=ringwoodite] {
+	background-image: url("../img/game/autel/pierres/ringwoodite/ringwoodite.png");
+}
+autel > chasse.used[pierre=hypatia] {
+	background-image: url("../img/game/autel/pierres/hypatia/hypatia.png");
+}

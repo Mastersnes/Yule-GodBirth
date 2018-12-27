@@ -15,7 +15,7 @@ define(["jquery"],
 			},
 			"nature-abeille-enquete" : {
 				fr :"Des savants ont déjà commencé les recherches. Nous aurons les résultats sous peu.",
-				en :"Scientists have already begun the search. We will have the results shortly."
+				en :"Scientists have already begun the search. We'll have the results shortly."
 			},
 			"nature-abeille-event-ignore" : {
 				fr :"Plus jamais on n’entendit une seule abeille...<br/>Les conséquences ne furent pas visibles de suite. Et pourtant... Elles ne tardèrent pas à arriver...",

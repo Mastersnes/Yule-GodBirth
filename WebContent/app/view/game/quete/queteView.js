@@ -140,6 +140,7 @@ define(["jquery",
         this.loop = function(game) {
         	if (this.newList.length > 0) {
         		this.newList.length = 0;
+        		this.mediatheque.playSound("objectif.ogg");
         		this.parent.alertPopup("newQuete", null, true);
         	}
         };
@@ -179,6 +180,7 @@ define(["jquery",
             if (quete.gains) this.pointManager.addPoints(quete.gains, null, "click");
             if (quete.gainsLoop) this.parent.gainLoop(quete.gains, "click");
             if (quete.success) quete.success(this);
+            this.mediatheque.playSound("valideQuete.ogg");
             
             this.refresh();
             return true;

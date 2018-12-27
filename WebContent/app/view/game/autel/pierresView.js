@@ -16,6 +16,7 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
             this.Pierres = Pierres;
+            this.PierresOnglets = PierresOnglets;
             
             this.saveManager = this.parent.saveManager;
             this.pointManager = this.parent.pointManager;
@@ -255,6 +256,7 @@ function($, _, Utils, page, PierresOnglets, Pierres, DetailView) {
         	if (!this.checkAchetable(pierre)) return false;
         	if (!this.pointManager.depenser(this.calculPrix())) return false;
         	this.complete.push(pierre.name);
+        	this.mediatheque.playSound("buyStone.ogg");
         	this.refreshPierre(pierre);
         	
         	this.checkAllOngletFinish();

@@ -174,6 +174,7 @@ function($, _, Utils) {
                 	if (that.pointManager.depenser(prixTotal)) {
                         if (item.level == 0) that.close();
                         item.level+=incr;
+                        that.mediatheque.playSound("amelioration.ogg");
                         that.saveManager.saveAmelioration(itemId, level);
                         $("item#"+itemId).attr("level", item.level);
                         

@@ -14,6 +14,7 @@ function($, _, Utils) {
 			
 			this.pointManager = parent.pointManager;
 			this.saveManager = parent.saveManager;
+			this.mediatheque = parent.mediatheque;
 			
 			this.compteurClick = this.saveManager.load("compteurClick");
 			this.complete = this.saveManager.load("successComplete");
@@ -100,6 +101,7 @@ function($, _, Utils) {
 			    var gainText = this.Textes.get("gainSuccess");
         		gainText = gainText.replace("{?}", this.Textes.get(success));
 			    
+        		this.mediatheque.playSound("success.ogg");
 				this.parent.alertPopup(gainText, null, true);
 			}
 			return true;

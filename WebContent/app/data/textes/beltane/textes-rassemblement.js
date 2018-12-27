@@ -49,7 +49,7 @@ define(["jquery"],
 			},
 			"rassemblement-mars2-event" : {
 				fr :"Bien sûr, nous serions plus à même de discuter si Mars obtenait l'exclusivité sur l'économie humaine. Une banque universelle en somme...<br/>Qu'en pensez-vous?",
-				en :"Of course, we will be better able to discuss whether March would get exclusivity on the human economy. In short, a universal bank...<br/>What do you think?"
+				en :"Of course, we'll be better able to discuss whether March would get exclusivity on the human economy. In short, a universal bank...<br/>What do you think?"
 			},
 			"rassemblement-mars2-event-ko-button" : {
 				fr :"Hors de question!",
@@ -111,7 +111,7 @@ define(["jquery"],
 			},
 			"rassemblement-io2-event" : {
 				fr :"Le conseil a délibéré, grand Dieu et nous n'aurons qu'une revendication : des boissons énergisantes!<br/>Voyez-vous, c'est fatigant de travailler ici et on aurait bien besoin d'un peu de jus, si vous voyez ce que je veux dire...",
-				en :"The council deliberated, great God and we will only have one claim: Energy drinks!<br/>You see, it's tiring to work here and we could use a little juice, if you know what I mean..."
+				en :"The council deliberated, great God and we'll only have one claim: Energy drinks!<br/>You see, it's tiring to work here and we could use a little juice, if you know what I mean..."
 			},
 			"rassemblement-io2-event-ok" : {
 				fr :"Pfiou, vous nous sauvez, mon Dieu! En ce qui concerne le rassemblement, c'est d'accord!<br/>De toute façon, on alimente déjà tout le monde gratuitement, alors...",
@@ -217,7 +217,7 @@ define(["jquery"],
 			},
 			"rassemblement-triton2-event-torque" : {
 				fr :"Excusez, chef, on vous avait pas reconnu! Bien entendu, nous serons à vos ordres, chef!",
-				en :"Excuse me, chief, we didn't recognize you! Of course, we will be at your command, chief!"
+				en :"Excuse me, chief, we didn't recognize you! Of course, we'll be at your command, chief!"
 			},
 
 			"rassemblement-triton3-event-titre" : {

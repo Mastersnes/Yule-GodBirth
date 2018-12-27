@@ -32,7 +32,15 @@ define(["jquery"], function($){
                     {
                         name : "grandTout",
                         level : 30
-                    }
+                    },
+                    {
+                        name : "deesse",
+                        level : 10
+                    },
+                    {
+				    	name : "dieu",
+				    	level : 10
+				    }
                 ],
                 name : "secrete",
                 pierres : ["ringwoodite", "hypatia"]

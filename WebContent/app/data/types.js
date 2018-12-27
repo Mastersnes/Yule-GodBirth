@@ -20,6 +20,7 @@ define(["jquery"], function($){
 			 */
 			"egg" : {
 			    name : "egg",
+				music : "eveil.ogg",
 			    nbr : 3,
 				next : "baby",
 				text : [],
@@ -33,6 +34,7 @@ define(["jquery"], function($){
 			 */
 			"baby" : {
 				name : "baby",
+				music : "eveil.ogg",
 				nbr : 5,
 				next : "imbolc",
 				text : [],
@@ -150,7 +152,7 @@ define(["jquery"], function($){
                 nbr : 15,
 				next : "yule-fin",
 				music : "instantDivin.ogg",
-                text : ["cinematique-samhain", "cinematique-samhain-1", "cinematique-samhain-2", "cinematique-samhain-3"],
+                text : ["cinematique-samhain", "cinematique-samhain-1", "cinematique-samhain-2"],
                 events : {
                     typeEvents : [],
                     newEvents : []

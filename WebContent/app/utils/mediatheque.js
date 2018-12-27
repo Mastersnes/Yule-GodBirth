@@ -2,6 +2,7 @@
 define(["jquery"], function($){
 	return function(){
 		this.sounds = [];
+		this.soundsTicker = [];
 		
 		this.loadAll = function() {
 			var list = [];
@@ -14,7 +15,8 @@ define(["jquery"], function($){
 		/**
 		* Permet de charger les sons
 		**/
-		this.load = function(key) {
+		this.load = function(key, id) {
+			if (!id) id = "";
 			console.log("load :", key);
 			var sound;
 			if (window.Audio)
@@ -30,17 +32,18 @@ define(["jquery"], function($){
 			}
 			
 			sound.load();
-			this.sounds[key] = sound;
+			this.sounds[key + id] = sound;
 		};
 		
 		/**
 		 * Joue le son et le creer s'il n'existe pas
 		 */
-		this.play = function(key) {
+		this.play = function(key, id) {
 			if (!key) return;
-			if (!this.sounds[key]) {
+			if (!id) id = "";
+			if (!this.sounds[key + id]) {
 				console.log("Never pass!");
-				this.load(key);
+				this.load(key, id);
 			}
 			try {
 				if (key.indexOf("music") > -1) this.currentMusic = key;
@@ -52,9 +55,9 @@ define(["jquery"], function($){
 						!this.sounds[key].paused) 
 					return;
 				console.log("play : ", key);
-				this.sounds[key].play();
+				this.sounds[key + id].play();
 			}catch (e) {
-				this.load(key);
+				this.load(key, id);
 			}
 		};
 
@@ -63,7 +66,9 @@ define(["jquery"], function($){
 		 */
 		this.playSound = function(key) {
 			if (!key) return;
-			this.play("sounds/"+key);
+			if (this.soundsTicker[key] == undefined) this.soundsTicker[key] = 0;
+			this.play("sounds/"+key, this.soundsTicker[key]++);
+			if (this.soundsTicker[key] > 3) this.soundsTicker[key] = 0;
 		};
 		
 		this.stopSound = function(key) {

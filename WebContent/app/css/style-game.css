@@ -51,6 +51,38 @@
 	left: 0%;
 }
 
+.goto-aura {
+	pointer-events: none;
+	position: absolute;
+    z-index: 10;
+    bottom: 8.4%; right: -7.7%;
+    height: 20%; width: 20%;
+    
+    animation-name: star-anim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+	-webkit-animation-name: star-anim;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: star-anim;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+	-o-animation-name: star-anim;
+    -o-animation-duration: 2s;
+    -o-animation-fill-mode: forwards;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+}
+
 .options .text {
 	font-size: 3vh !important;
     text-align: center;

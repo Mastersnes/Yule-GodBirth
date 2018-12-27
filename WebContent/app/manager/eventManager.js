@@ -15,6 +15,7 @@ function($, _, Utils, page, Events) {
 			this.Textes = parent.Textes;
 			this.saveManager = parent.saveManager;
 			this.textManager = parent.textManager;
+			this.mediatheque = parent.mediatheque;
 			
 			this.currentEvent = null;
 			this.eventOpen = false;
@@ -115,6 +116,7 @@ function($, _, Utils, page, Events) {
 			$(".scene #event-timer").fadeIn("fast", function() {
 				$(".scene #event-timer").addClass("start");
 			});
+			this.mediatheque.playSound("sablier.ogg");
 		};
 		
 		/**

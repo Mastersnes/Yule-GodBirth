@@ -108,6 +108,15 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 					$(".text#loading").remove();
 				});
 			});
+			
+			$("fullscreen").click(function() {
+				var isFullscreen = Utils.fullscreen();
+				if (isFullscreen) {
+					$("fullscreen").removeClass("exit");
+				}else {
+					$("fullscreen").addClass("exit");
+				}
+			});
 		};
 		
 		this.loadGame = function() {

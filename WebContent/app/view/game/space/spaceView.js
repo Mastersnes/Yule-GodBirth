@@ -41,7 +41,7 @@ define(["jquery",
         };
         
         this.loop = function(game) {
-            var mustChangeFront = Utils.rand(0, 5) == 0;
+            var mustChangeFront = Utils.rand(0, 10) == 0;
             if (mustChangeFront) {
                 //On change le front
                 var front = Utils.rand(1, this.maxFront+1);
