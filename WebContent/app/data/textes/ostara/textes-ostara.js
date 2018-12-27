@@ -11,7 +11,7 @@ define(["jquery",
 			 */
 			"ostara-start-event-titre" : {
 				fr :"Une grande responsabilité",
-				en :"A high responsibility"
+				en :"High responsibility"
 			},
 			"ostara-start-event" : {
 				fr :"Maître, de plus en plus de prières nous parviennent!<br/>Le monde a bien évolué et reconnaît votre grandeur!",
@@ -23,19 +23,19 @@ define(["jquery",
 			 */
 			"accueil-riche-event-titre" : {
 				fr :"Une richesse infinie",
-				en :"An infinite wealth"
+				en :"Infinite wealth"
 			},
 			"accueil-riche-event" : {
 				fr :"Cher Dieu, les affaires ne vont pas fort en ce moment.<br/>J'aimerais être le plus riche des Hommes!<br/>Je saurai vous récompenser...",
-				en :"Dear God, business is not going well rencently. I would like to be the richest man!<br/>I would know how to reward you..."
+				en :"Dear God, business isn't going well these days. I would like to be the richest man!<br/>I would know how to reward you..."
 			},
 			"accueil-riche-event-ok" : {
 				fr :"Oh yeah! Les affaires reprennent! Vous ne serez pas déçu!",
-				en :"Oh men! Business is back! You won't be disapointed!"
+				en :"Oh yeah! Business is back! You won't be disapointed!"
 			},
 			"accueil-riche-event-ko" : {
 				fr :"Dieu pathétique... Vous n'avez aucune ambition!",
-				en :"pathetic god... You don't have any ambition"
+				en :"Pathetic god... You don't have any ambition"
 			},
 			"accueil-riche-event-2-titre" : {
 				fr :"Impardonnable",
@@ -47,7 +47,7 @@ define(["jquery",
 			},
 			"accueil-riche-event-tuer" : {
 				fr :"L'homme s'écroula, sans même s'en rendre compte...",
-				en :"The man collapsed, without even realizing it..."
+				en :"The man fell, without even realizing it..."
 			},
 			"accueil-riche-event-partir" : {
 				fr :"À jamais, dieu de pacotille!",
