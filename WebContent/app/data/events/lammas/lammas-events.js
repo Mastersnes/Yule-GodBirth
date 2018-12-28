@@ -23,7 +23,7 @@ define(["jquery","app/utils/utils"
 			             name : "ignore-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -20,
+			            		 croyance : -50,
 			            		 illumination : 0,
 			            		 bien : 0,
 			            		 mal : 0
@@ -52,7 +52,7 @@ define(["jquery","app/utils/utils"
 			             name : "laisser-tomber-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -10,
+			            		 croyance : -30,
 			            		 illumination : 0,
 			            		 bien : 0,
 			            		 mal : 0

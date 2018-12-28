@@ -24,8 +24,8 @@ define(["jquery","app/utils/utils"
 			             name : "pasMonProbleme-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -5,
-			            		 illumination : -5,
+			            		 croyance : -30,
+			            		 illumination : -30,
 			            		 bien : 0,
 			            		 mal : 0
 			            	 }, "quete");

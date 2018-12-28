@@ -166,7 +166,7 @@ define(["jquery","app/utils/utils",
                          action : function(game) {
                         	 game.pointManager.addPointsPercent({
                         		 croyance : -50,
-                        		 illumination : -20,
+                        		 illumination : -30,
                         		 bien : 0,
                         		 mal : 0
                         	 }, "quete");

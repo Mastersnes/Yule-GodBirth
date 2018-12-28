@@ -82,8 +82,8 @@ define(["jquery","app/utils/utils"
 			             name : "litha-enquete-event-detruire-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -20,
-			            		 illumination : -20,
+			            		 croyance : -50,
+			            		 illumination : -50,
 			            		 bien : 0,
 			            		 mal : 0
 			            	}, "quete");

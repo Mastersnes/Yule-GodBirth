@@ -44,8 +44,8 @@ define(["jquery","app/utils/utils",
 			             action : function(game) {
 			            	 game.eventManager.addEvents(TyrannieEvents.start());
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -50,
-			            		 illumination : -50,
+			            		 croyance : -80,
+			            		 illumination : -80,
 			            		 bien : 0,
 			            		 mal : 0
 			            	}, "quete");

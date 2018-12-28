@@ -44,7 +44,7 @@ define(["jquery"], function($){
 			             name : "refusButton",
 			             action : function(game) {
 			            	game.pointManager.addPointsPercent({
-                        		 croyance : -30,
+                        		 croyance : -50,
                         		 illumination : 0,
                         		 bien : 0,
                         		 mal : 0
@@ -75,7 +75,7 @@ define(["jquery"], function($){
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
                         		 croyance : 0,
-                        		 illumination : -20,
+                        		 illumination : -50,
                         		 bien : 0,
                         		 mal : 0
                         	}, "quete");
@@ -94,7 +94,7 @@ define(["jquery"], function($){
 			             name : "croisade-attaques-event-tuer-soldat-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-                        		 croyance : -30,
+                        		 croyance : -80,
                         		 illumination : 0,
                         		 bien : 0,
                         		 mal : 0
@@ -141,7 +141,7 @@ define(["jquery"], function($){
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
                         		 croyance : 0,
-                        		 illumination : -30,
+                        		 illumination : -50,
                         		 bien : 0,
                         		 mal : 0
                         	}, "quete");

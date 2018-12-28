@@ -50,7 +50,7 @@ define(["jquery"], function($){
 			             name : "refusButton",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-                        		 croyance : -30,
+                        		 croyance : -50,
                         		 illumination : 0,
                         		 bien : 0,
                         		 mal : 0
@@ -71,7 +71,7 @@ define(["jquery"], function($){
 				        	   name : "demons-attaque-event-torture-button",
 				        	   action : function(game) {
 				        		   game.pointManager.addPointsPercent({
-		                        		 croyance : -30,
+		                        		 croyance : -50,
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0
@@ -126,8 +126,8 @@ define(["jquery"], function($){
 			             name : "demons-village-event-detruire-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-                        		 croyance : -40,
-                        		 illumination : -10,
+                        		 croyance : -50,
+                        		 illumination : -30,
                         		 bien : 0,
                         		 mal : 0
                         	 }, "quete");
@@ -195,8 +195,14 @@ define(["jquery"], function($){
 			         {
 			             name : "demons-desert-event-innonder-button",
 			             action : function(game) {
+			            	 game.pointManager.addPointsPercent({
+                        		 croyance : -80,
+                        		 illumination : -50,
+                        		 bien : 0,
+                        		 mal : 0
+                        	 }, "quete");
 			            	 game.gainLoop({
-                            	 croyance : 30,
+                            	 croyance : 0,
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 20
@@ -208,8 +214,8 @@ define(["jquery"], function($){
 			             name : "ignore-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-                        		 croyance : -30,
-                        		 illumination : -10,
+                        		 croyance : -80,
+                        		 illumination : -80,
                         		 bien : 0,
                         		 mal : 0
                         	 }, "quete");

@@ -55,7 +55,7 @@ define(["jquery"], function($){
                             	 mal : 0
                              }, "quete");
 			            	 game.pointManager.addPointsPercent({
-                        		 croyance : -5,
+                        		 croyance : -30,
                         		 illumination : 0,
                         		 bien : 0,
                         		 mal : 0

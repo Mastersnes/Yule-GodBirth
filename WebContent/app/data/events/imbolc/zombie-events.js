@@ -47,7 +47,7 @@ define(["jquery"], function($){
 				        	   name : "le-tuer-button",
 				        	   action : function(game) {
 				        		   game.pointManager.addPointsPercent({
-		                        		 croyance : -30,
+		                        		 croyance : -50,
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0
@@ -108,8 +108,8 @@ define(["jquery"], function($){
 				        	   name : "les-tuer-button",
 				        	   action : function(game) {
 				        		   game.pointManager.addPointsPercent({
-		                        		 croyance : -20,
-		                        		 illumination : -10,
+		                        		 croyance : -50,
+		                        		 illumination : -30,
 		                        		 bien : 0,
 		                        		 mal : 0
 		                        	 }, "quete");
@@ -273,7 +273,7 @@ define(["jquery"], function($){
 				        		   }, "quete");
 				        		   game.pointManager.addPointsPercent({
 		                        		 croyance : 0,
-		                        		 illumination : -20,
+		                        		 illumination : -30,
 		                        		 bien : 0,
 		                        		 mal : 0
 		                        	 }, "quete");
@@ -314,8 +314,8 @@ define(["jquery"], function($){
 				        			   mal : 30
 				        		   }, "quete");
 				        		   game.pointManager.addPointsPercent({
-		                        		 croyance : -30,
-		                        		 illumination : -20,
+		                        		 croyance : -50,
+		                        		 illumination : -30,
 		                        		 bien : 0,
 		                        		 mal : 0
 		                        	 }, "quete");

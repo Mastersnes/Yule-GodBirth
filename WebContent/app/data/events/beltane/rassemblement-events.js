@@ -77,7 +77,7 @@ define(["jquery","app/utils/utils"
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
 			            		 croyance : -30,
-			            		 illumination : -10,
+			            		 illumination : -30,
 			            		 bien : 0,
 			            		 mal : 0
 			            	}, "quete");
@@ -166,8 +166,8 @@ define(["jquery","app/utils/utils"
 			             action : function(game) {
 			            	 game.eventManager.sagesse-=0.5;
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -20,
-			            		 illumination : -10,
+			            		 croyance : -30,
+			            		 illumination : -30,
 			            		 bien : 0,
 			            		 mal : 0
 			            	}, "quete");
@@ -235,8 +235,8 @@ define(["jquery","app/utils/utils"
 			             name : "menacer-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -20,
-			            		 illumination : -10,
+			            		 croyance : -30,
+			            		 illumination : -30,
 			            		 bien : 0,
 			            		 mal : 0
 			            	}, "quete");
@@ -341,8 +341,8 @@ define(["jquery","app/utils/utils"
 			             name : "les-tuer-button",
 			             action : function(game) {
 			            	game.pointManager.addPointsPercent({
-			            		 croyance : -50,
-			            		 illumination : -30,
+			            		 croyance : -80,
+			            		 illumination : -50,
 			            		 bien : 0,
 			            		 mal : 0
 			            	}, "quete");

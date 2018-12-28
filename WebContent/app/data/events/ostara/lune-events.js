@@ -49,7 +49,7 @@ define(["jquery","app/utils/utils"
 			             name : "refusButton",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -20,
+			            		 croyance : -30,
 			            		 illumination : 0,
 			            		 bien : 0,
 			            		 mal : 0
@@ -153,8 +153,8 @@ define(["jquery","app/utils/utils"
 			             name : "ignore-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -10,
-			            		 illumination : -20,
+			            		 croyance : -30,
+			            		 illumination : -50,
 			            		 bien : 0,
 			            		 mal : 0
 			            	}, "quete");
@@ -187,8 +187,8 @@ define(["jquery","app/utils/utils"
 			             name : "ignore-button",
 			             action : function(game) {
 			            	 game.pointManager.addPointsPercent({
-			            		 croyance : -10,
-			            		 illumination : -20,
+			            		 croyance : -30,
+			            		 illumination : -50,
 			            		 bien : 0,
 			            		 mal : 0
 			            	}, "quete");
@@ -206,7 +206,7 @@ define(["jquery","app/utils/utils"
 			        	 action : function(game) {
 			        		 game.pointManager.addPointsPercent({
 			            		 croyance : 0,
-			            		 illumination : -80,
+			            		 illumination : -100,
 			            		 bien : 0,
 			            		 mal : 0
 			            	}, "quete");

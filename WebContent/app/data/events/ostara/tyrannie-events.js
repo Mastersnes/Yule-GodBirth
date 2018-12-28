@@ -80,7 +80,7 @@ define(["jquery",
 				        		   }, "quete");
 				        		   game.pointManager.addPointsPercent({
 		                        		 croyance : 0,
-		                        		 illumination : -30,
+		                        		 illumination : -50,
 		                        		 bien : 0,
 		                        		 mal : 0
 		                        	 }, "quete");
@@ -100,7 +100,7 @@ define(["jquery",
 				        	   action : function(game) {
 				        		   game.eventManager.rebellion++;
 				        		   game.pointManager.addPointsPercent({
-		                        		 croyance : -20,
+		                        		 croyance : -30,
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0

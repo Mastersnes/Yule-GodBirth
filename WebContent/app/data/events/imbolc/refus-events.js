@@ -162,8 +162,8 @@ define(["jquery",
 				        	   name : "refus-maladie-event-bruler-2-button",
 				        	   action : function(game) {
 				        		   game.pointManager.addPointsPercent({
-		                        		 croyance : -50,
-		                        		 illumination : -30,
+		                        		 croyance : -80,
+		                        		 illumination : -50,
 		                        		 bien : 0,
 		                        		 mal : 0
 		                        	 }, "quete");
@@ -188,7 +188,7 @@ define(["jquery",
 				        	   action : function(game) {
 				        		   game.eventManager.rebellion++;
 				        		   game.pointManager.addPointsPercent({
-		                        		 croyance : -30,
+		                        		 croyance : -50,
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0
@@ -212,7 +212,7 @@ define(["jquery",
 				        	   action : function(game) {
 				        		   game.eventManager.rebellion++;
 				        		   game.pointManager.addPointsPercent({
-		                        		 croyance : -50,
+		                        		 croyance : -80,
 		                        		 illumination : 0,
 		                        		 bien : 0,
 		                        		 mal : 0

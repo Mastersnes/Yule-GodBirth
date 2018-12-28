@@ -128,8 +128,8 @@ define(["jquery","app/utils/utils"
 			             action : function(game) {
 			            	 game.alertPopup("xeno-blue-event-2", function() {
 			            		 game.pointManager.addPointsPercent({
-			            			 croyance : -30,
-			            			 illumination : -10,
+			            			 croyance : -50,
+			            			 illumination : -30,
 			            			 bien : 0,
 			            			 mal : 0
 			            		}, "quete");
