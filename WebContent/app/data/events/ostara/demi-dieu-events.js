@@ -37,7 +37,7 @@ define(["jquery"], function($){
 			             name : "acceptButton",
 			             action : function(game) {
 			            	 game.gainLoop({
-                            	 croyance : 20,
+                            	 croyance : 30,
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 0
@@ -51,7 +51,7 @@ define(["jquery"], function($){
 			            	 game.gainLoop({
                             	 croyance : 0,
                             	 illumination : 0,
-                            	 bien : 10,
+                            	 bien : 20,
                             	 mal : 0
                              }, "quete");
 			            	 game.pointManager.addPointsPercent({
@@ -77,10 +77,10 @@ define(["jquery"], function($){
 			             name : "acceptButton",
 			             action : function(game) {
 			            	 game.gainLoop({
-                            	 croyance : 20,
+                            	 croyance : 30,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 10
+                            	 mal : 20
                              }, "quete");
 			            	 game.eventManager.addEvents(["demi-dieu-scene-event"]);
 			                 game.alertPopup("demi-dieu-vin-event-accept");
@@ -92,7 +92,7 @@ define(["jquery"], function($){
 			            	 game.gainLoop({
                             	 croyance : 0,
                             	 illumination : 0,
-                            	 bien : 10,
+                            	 bien : 20,
                             	 mal : 0
                              }, "quete");
 			                 game.alertPopup("demi-dieu-vin-event-refus");
@@ -113,7 +113,7 @@ define(["jquery"], function($){
 			            	 game.gainLoop({
                             	 croyance : 30,
                             	 illumination : 0,
-                            	 bien : 10,
+                            	 bien : 20,
                             	 mal : 0
                              }, "quete");
 			                 game.alertPopup("demi-dieu-scene-event-accept");
@@ -126,7 +126,7 @@ define(["jquery"], function($){
                             	 croyance : 0,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 10
+                            	 mal : 20
                              }, "quete");
 			                 game.alertPopup("demi-dieu-scene-event-refus");
 			             }

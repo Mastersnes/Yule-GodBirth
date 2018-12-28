@@ -30,8 +30,8 @@ define(["jquery"], function($){
 			             name : "epreuve-1-event-pleuvoir-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			        			 croyance : 20,
-			        			 illumination : 10,
+			        			 croyance : 30,
+			        			 illumination : 20,
 			        			 bien : 0,
 			        			 mal : 0
 			        		}, "quete");
@@ -84,7 +84,7 @@ define(["jquery"], function($){
 			        			 croyance : 0,
 			        			 illumination : 0,
 			        			 bien : 0,
-			        			 mal : 10
+			        			 mal : 20
 			        		}, "quete");
 			            	game.pointManager.addPointsPercent({
 	                       		croyance : -30,
@@ -103,7 +103,7 @@ define(["jquery"], function($){
 			        			 croyance : 0,
 			        			 illumination : 0,
 			        			 bien : 0,
-			        			 mal : 10
+			        			 mal : 20
 			        		}, "quete");
 			     			game.eventManager.addEvents(["epreuve-3-event"]);
 			     			game.alertPopup("epreuve-2-event-42");
@@ -135,10 +135,10 @@ define(["jquery"], function($){
 			             name : "epreuve-3-event-tuer-button",
 			             action : function(game) {
 			            	game.gainLoop({
-			        			 croyance : 20,
+			        			 croyance : 30,
 			        			 illumination : 0,
 			        			 bien : 0,
-			        			 mal : 10
+			        			 mal : 20
 			        		});
 			     			game.eventManager.addEvents(["epreuve-4-event"]);
 			     			game.alertPopup("epreuve-3-event-tuer");
@@ -149,8 +149,8 @@ define(["jquery"], function($){
 			             action : function(game) {
 			            	game.gainLoop({
 			        			 croyance : 0,
-			        			 illumination : 10,
-			        			 bien : 10,
+			        			 illumination : 20,
+			        			 bien : 20,
 			        			 mal : 0
 			        		}, "quete");
 			     			game.eventManager.addEvents(["epreuve-4-event"]);
@@ -205,7 +205,7 @@ define(["jquery"], function($){
 			        			 croyance : 0,
 			        			 illumination : 0,
 			        			 bien : 0,
-			        			 mal : 10
+			        			 mal : 20
 			        		}, "quete");
 			     			game.alertPopup("epreuve-4-event-151");
 			             }
@@ -235,8 +235,8 @@ define(["jquery"], function($){
 			             name : "yesButton",
 			             action : function(game) {
 			            	game.gainLoop({
-			        			 croyance : 40,
-			        			 illumination : 40,
+			        			 croyance : 60,
+			        			 illumination : 60,
 			        			 bien : 0,
 			        			 mal : 0
 			        		}, "quete");

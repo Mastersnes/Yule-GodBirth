@@ -56,7 +56,7 @@ define(["jquery"], function($){
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 10
+				        			   mal : 20
 				        		   }, "quete");
 				        		   game.alertPopup("zombie-fou-event-tuer");
 				        	   }
@@ -82,7 +82,7 @@ define(["jquery"], function($){
 				        	   name : "zombie-taverne-event-boire-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
-				        			   croyance : 20,
+				        			   croyance : 30,
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 0
@@ -97,7 +97,7 @@ define(["jquery"], function($){
 				        		   game.gainLoop({
 				        			   croyance : 0,
 				        			   illumination : 0,
-				        			   bien : 5,
+				        			   bien : 10,
 				        			   mal : 0
 				        		   }, "quete");
 				        		   game.eventManager.epidemie++;
@@ -117,7 +117,7 @@ define(["jquery"], function($){
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 10
+				        			   mal : 20
 				        		   }, "quete");
 				        		   game.alertPopup("zombie-taverne-event-tuer");
 				        	   }
@@ -139,7 +139,7 @@ define(["jquery"], function($){
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 10
+				        			   mal : 20
 				        		   }, "quete");
 				        		   game.eventManager.epidemie++;
 				        		   game.alertPopup("zombie-enfant-event-no");
@@ -149,9 +149,9 @@ define(["jquery"], function($){
 				        	   name : "yesButton",
 				        	   action : function(game) {
 				        		   game.gainLoop({
-				        			   croyance : 20,
+				        			   croyance : 30,
 				        			   illumination : 0,
-				        			   bien : 10,
+				        			   bien : 20,
 				        			   mal : 0
 				        		   }, "quete");
 				        		   game.alertPopup("zombie-enfant-event-yes");
@@ -180,7 +180,7 @@ define(["jquery"], function($){
 				        		   game.gainLoop({
 				        			   croyance : 0,
 				        			   illumination : 0,
-				        			   bien : 10,
+				        			   bien : 20,
 				        			   mal : 0
 				        		   }, "quete");
 				        		   game.alertPopup("accueil-blessure2-event-ok");
@@ -226,7 +226,7 @@ define(["jquery"], function($){
 				        		   game.gainLoop({
 				        			   croyance : 0,
 				        			   illumination : 0,
-				        			   bien : 20,
+				        			   bien : 30,
 				        			   mal : 0
 				        		   }, "quete");
 				        		   game.eventManager.epidemie+=3;
@@ -240,7 +240,7 @@ define(["jquery"], function($){
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 20
+				        			   mal : 30
 				        		   }, "quete");
 				        		   game.alertPopup("zombie-groupe-event-tuer");
 				        	   }
@@ -269,7 +269,7 @@ define(["jquery"], function($){
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 20
+				        			   mal : 30
 				        		   }, "quete");
 				        		   game.pointManager.addPointsPercent({
 		                        		 croyance : 0,
@@ -311,7 +311,7 @@ define(["jquery"], function($){
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 20
+				        			   mal : 30
 				        		   }, "quete");
 				        		   game.pointManager.addPointsPercent({
 		                        		 croyance : -30,

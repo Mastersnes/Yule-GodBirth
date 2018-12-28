@@ -10,7 +10,7 @@ define(["jquery","app/utils/utils",
 			"beltane-start-event" : {
 				name : "beltane-start-event",
 			    text : "beltane-start-event",
-			    rarity : 5,
+			    rarity : 0,
 			    unique : true,
 			    actions : [
 			         {
@@ -18,8 +18,8 @@ define(["jquery","app/utils/utils",
 			             action : function(game) {
 			            	 game.alertPopup("beltane-start2-event", function() {
 			            		 game.gainLoop({
-	                            	 croyance : 10,
-	                            	 illumination : 5,
+	                            	 croyance : 20,
+	                            	 illumination : 10,
 	                            	 bien : 0,
 	                            	 mal : 0
 	                             }, "quete");

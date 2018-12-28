@@ -23,7 +23,7 @@ define(["jquery",
                             	 croyance : 0,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 10
+                            	 mal : 20
                              }, "quete");
 			            	 game.eventManager.addEvents(DemonsEvents.start());
 			                 game.alertPopup("refus-desert-event-refus");
@@ -52,10 +52,10 @@ define(["jquery",
 				        	   name : "refus-sacrifice-event-recompense-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
-				        			   croyance : 20,
+				        			   croyance : 30,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 20
+				        			   mal : 30
 				        		   }, "quete");
 				        		   game.eventManager.addEvents(CroisadeEvents.start());
 				        		   game.alertPopup("refus-sacrifice-event-recompense");
@@ -82,7 +82,7 @@ define(["jquery",
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 20
+				        			   mal : 30
 				        		   }, "quete");
 				        		   game.alertPopup("refus-sacrifice-event-tuer");
 				        	   }
@@ -91,7 +91,7 @@ define(["jquery",
 				        	   name : "refus-sacrifice-event-seisme-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
-				        			   croyance : 20,
+				        			   croyance : 30,
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 0
@@ -109,10 +109,10 @@ define(["jquery",
 				        	   name : "refus-sacrifice-event-recompense-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
-				        			   croyance : 15,
+				        			   croyance : 20,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 20
+				        			   mal : 30
 				        		   }, "quete");
 				        		   game.eventManager.addEvents(CroisadeEvents.start());
 				        		   game.alertPopup("refus-sacrifice-event-recompense");
@@ -171,7 +171,7 @@ define(["jquery",
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 20
+				        			   mal : 30
 				        		   }, "quete");
 				        		   game.alertPopup("refus-maladie-event-bruler");
 				        	   }

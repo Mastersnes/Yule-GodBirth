@@ -127,14 +127,13 @@ function($, _, Utils, page, Events) {
 			if (!randEvent) return false;
 			// Ca ne doit pas etre le meme que precedemment
 			if (this.previousEvent == randEvent) return false;
-			var isOk = true;
 			
 			// Si il est unique, il ne doit pas exister dans la liste des evenements deja rencontrés
-			if (randEvent.unique) {
-				isOk = this.uniquesEvents.indexOf(randEvent.name) < 0;
-			}
+			if (randEvent.unique && this.uniquesEvents.indexOf(randEvent.name) > -1)
+				return false;
 			
 			// Si il est rare, il faut tomber sur sa rareté
+			var isOk = true;
 			var rarity = randEvent.rarity;
 			if (rarity == 0) return isOk;
 			if (!rarity) rarity = 100;

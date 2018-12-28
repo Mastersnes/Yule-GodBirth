@@ -18,9 +18,9 @@ define(["jquery","app/utils/utils",
 			             name : "yesButton",
 			             action : function(game) {
                              game.gainLoop({
-                            	 croyance : 15,
-                            	 illumination : 5,
-                            	 bien : 5,
+                            	 croyance : 20,
+                            	 illumination : 10,
+                            	 bien : 10,
                             	 mal : 0
                              }, "quete");
                              
@@ -34,7 +34,7 @@ define(["jquery","app/utils/utils",
                             	 croyance : 0,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 5
+                            	 mal : 10
                              }, "quete");
                         	 game.eventManager.rebellion++;
                              game.alertPopup("accueil-pluie-event-ko");
@@ -54,10 +54,10 @@ define(["jquery","app/utils/utils",
 			             name : "acceptButton",
 			             action : function(game) {
                              game.gainLoop({
-                            	 croyance : 15,
+                            	 croyance : 20,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 10
+                            	 mal : 20
                              }, "quete");
                              
                              game.eventManager.addEvents(CroisadeEvents.start());
@@ -69,8 +69,8 @@ define(["jquery","app/utils/utils",
                          action : function(game) {
                         	 game.gainLoop({
                             	 croyance : 0,
-                            	 illumination : 15,
-                            	 bien : 10,
+                            	 illumination : 20,
+                            	 bien : 20,
                             	 mal : 0
                              }, "quete");
                         	 game.eventManager.rebellion++;
@@ -81,10 +81,10 @@ define(["jquery","app/utils/utils",
                          name : "accueil-sacrifice-event-tuer-pretre-button",
                          action : function(game) {
                         	 game.gainLoop({
-                            	 croyance : 20,
+                            	 croyance : 30,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 15
+                            	 mal : 20
                              }, "quete");
                         	 game.eventManager.addEvents(CroisadeEvents.start());
                              game.alertPopup("accueil-sacrifice-event-tuer-pretre");
@@ -107,15 +107,15 @@ define(["jquery","app/utils/utils",
 				            	 game.gainLoop({
 	                            	 croyance : 0,
 	                            	 illumination : 0,
-	                            	 bien : 5,
+	                            	 bien : 10,
 	                            	 mal : 0
 	                             }, "quete");
 				                 game.alertPopup("accueil-blessure-event-ok");
                              }else {
                             	 game.gainLoop({
-                                	 croyance : 5,
-                                	 illumination : 5,
-                                	 bien : 15,
+                                	 croyance : 10,
+                                	 illumination : 10,
+                                	 bien : 20,
                                 	 mal : 0
                                  }, "quete");
     			                 game.alertPopup("accueil-blessure2-event-ok");
@@ -130,14 +130,14 @@ define(["jquery","app/utils/utils",
 	                            	 croyance : 0,
 	                            	 illumination : 0,
 	                            	 bien : 0,
-	                            	 mal : 5
+	                            	 mal : 10
 	                             }, "quete");
                         	 }else {
 	                        	 game.gainLoop({
 	                            	 croyance : 0,
 	                            	 illumination : 0,
 	                            	 bien : 0,
-	                            	 mal : 10
+	                            	 mal : 20
 	                             }, "quete");
                         	 }
                         	 game.eventManager.rebellion++;

@@ -16,9 +16,9 @@ define(["jquery","app/utils/utils"
 			             name : "les-arreter-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 10,
-			            		 illumination : 5,
-			            		 bien : 10,
+			            		 croyance : 20,
+			            		 illumination : 10,
+			            		 bien : 20,
 			            		 mal : 0
 			            	 }, "quete");
 			            	 game.alertPopup("guerre-1-event-arreter");
@@ -28,10 +28,10 @@ define(["jquery","app/utils/utils"
 			             name : "les-tuer-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 15,
+			            		 croyance : 20,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 20
+			            		 mal : 30
 			            	 }, "quete");
 			            	 game.eventManager.addEvents(["guerre-2-event"]);
 			            	 game.alertPopup("guerre-1-event-tuer");
@@ -44,7 +44,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 10
+			            		 mal : 20
 			            	 }, "quete");
 			            	 game.eventManager.rebellion++;
 			            	 game.eventManager.addEvents(["guerre-2-event"]);
@@ -64,10 +64,10 @@ define(["jquery","app/utils/utils"
 			             name : "guerre-2-event-arreter-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 10,
+			            		 croyance : 20,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 20
+			            		 mal : 30
 			            	 }, "quete");
 			            	 game.alertPopup("guerre-2-event-arreter", function() {
 			            		 game.artefactsView.remove("torque");
@@ -82,7 +82,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 50
+			            		 mal : 60
 			            	 }, "quete");
 			            	 game.pointManager.addPointsPercent({
 			            		 croyance : -50,

@@ -31,10 +31,10 @@ define(["jquery"], function($){
 			             name : "acceptButton",
 			             action : function(game) {
 			            	game.gainLoop({
-	                        	 croyance : 20,
+	                        	 croyance : 30,
 	                        	 illumination : 0,
 	                        	 bien : 0,
-	                        	 mal : 20
+	                        	 mal : 30
 	                        }, "quete");
 			            	game.eventManager.addEvents(["croisade-attaques-event"]);
 			     			game.alertPopup("croisade-benediction-event-accept");
@@ -52,7 +52,7 @@ define(["jquery"], function($){
 			            	game.gainLoop({
 	                        	 croyance : 0,
 	                        	 illumination : 0,
-	                        	 bien : 20,
+	                        	 bien : 30,
 	                        	 mal : 0
 	                        }, "quete");
 			            	game.eventManager.rebellion++;
@@ -83,7 +83,7 @@ define(["jquery"], function($){
 	                        	 croyance : 0,
 	                        	 illumination : 0,
 	                        	 bien : 0,
-	                        	 mal : 20
+	                        	 mal : 30
 	                        }, "quete");
 			            	game.eventManager.rebellion++;
 			            	game.eventManager.addEvents(["croisade-graal-event"]);
@@ -103,7 +103,7 @@ define(["jquery"], function($){
 	                        	 croyance : 0,
 	                        	 illumination : 0,
 	                        	 bien : 0,
-	                        	 mal : 20
+	                        	 mal : 30
 	                        }, "quete");
 			            	game.eventManager.rebellion++;
 			            	game.eventManager.addEvents(["croisade-graal-event"]);
@@ -149,7 +149,7 @@ define(["jquery"], function($){
 	                        	 croyance : 0,
 	                        	 illumination : 0,
 	                        	 bien : 0,
-	                        	 mal : 20
+	                        	 mal : 30
 	                        }, "quete");
 			     			game.alertPopup("croisade-graal-event-ensevelir");
 			             }
@@ -161,7 +161,7 @@ define(["jquery"], function($){
 	                        	 croyance : 0,
 	                        	 illumination : 0,
 	                        	 bien : 0,
-	                        	 mal : 15
+	                        	 mal : 20
 	                        }, "quete");
 			            	game.alertPopup("croisade-graal-event-attaque", function() {
 			     				game.artefactsView.add("saint-graal");
@@ -172,9 +172,9 @@ define(["jquery"], function($){
 			             name : "croisade-graal-event-laisser-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-	                        	 croyance : 10,
-	                        	 illumination : 5,
-	                        	 bien : 10,
+	                        	 croyance : 20,
+	                        	 illumination : 10,
+	                        	 bien : 20,
 	                        	 mal : 0
 	                        }, "quete");
 			     			game.alertPopup("croisade-graal-event-laisser", function() {

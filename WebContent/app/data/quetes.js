@@ -15,8 +15,8 @@ define(["jquery"], function($){
 				     }
 				],
 			    gains : {
-			    	croyance : 200,
-			    	illumination : 15
+			    	croyance : 250,
+			    	illumination : 20
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -50,8 +50,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gainsLoop : {
-			    	croyance : 30,
-			    	illumination : 20
+			    	croyance : 60,
+			    	illumination : 30
 			    }
 			},
 			"quete-vie" : {
@@ -76,8 +76,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gainsLoop : {
-			    	croyance : 30,
-			    	illumination : 40
+			    	croyance : 60,
+			    	illumination : 90
 			    }
 			},
 			"quete-mort" : {
@@ -102,8 +102,8 @@ define(["jquery"], function($){
 			         }
 				],
 			    gainsLoop : {
-			    	croyance : 40,
-			    	illumination : 30
+			    	croyance : 120,
+			    	illumination : 60
 			    }
 			},
 			"quete-concept" : {
@@ -148,8 +148,8 @@ define(["jquery"], function($){
                      }
 				],
 			    gainsLoop : {
-			    	croyance : 30,
-			    	illumination : 30
+			    	croyance : 90,
+			    	illumination : 90
 			    }
 			},
 			"quete-imbolc" : {
@@ -166,8 +166,8 @@ define(["jquery"], function($){
 					 }
 				],
 			    gainsLoop : {
-			    	croyance : 20,
-			    	illumination : 20
+			    	croyance : 60,
+			    	illumination : 60
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -187,8 +187,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 15,
-			    	illumination : 20
+			    	croyance : 30,
+			    	illumination : 30
 			    },
 			    success : function(queteView) {
 			    }
@@ -207,8 +207,8 @@ define(["jquery"], function($){
 					 }
 				],
 			    gainsLoop : {
-			    	croyance : 20,
-			    	illumination : 20
+			    	croyance : 60,
+			    	illumination : 60
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -228,8 +228,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 20,
-			    	illumination : 25
+			    	croyance : 60,
+			    	illumination : 60
 			    },
 			    success : function(queteView) {
 			    }
@@ -248,8 +248,8 @@ define(["jquery"], function($){
 					 }
 				],
 			    gainsLoop : {
-			    	croyance : 30,
-			    	illumination : 20
+			    	croyance : 60,
+			    	illumination : 60
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -269,8 +269,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 30,
-			    	illumination : 20
+			    	croyance : 90,
+			    	illumination : 90
 			    },
 			    success : function(queteView) {
 			    }
@@ -289,8 +289,8 @@ define(["jquery"], function($){
 					 }
 				],
 			    gainsLoop : {
-			    	croyance : 25,
-			    	illumination : 25
+			    	croyance : 90,
+			    	illumination : 90
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -310,8 +310,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 30,
-			    	illumination : 30
+			    	croyance : 120,
+			    	illumination : 120
 			    },
 			    success : function(queteView) {
 			    }
@@ -330,8 +330,8 @@ define(["jquery"], function($){
 					 }
 				],
 			    gainsLoop : {
-			    	croyance : 20,
-			    	illumination : 30
+			    	croyance : 90,
+			    	illumination : 90
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -351,8 +351,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 20,
-			    	illumination : 20
+			    	croyance : 150,
+			    	illumination : 150
 			    },
 			    success : function(queteView) {
 			    }
@@ -371,8 +371,8 @@ define(["jquery"], function($){
 					 }
 				],
 			    gainsLoop : {
-			    	croyance : 30,
-			    	illumination : 30
+			    	croyance : 150,
+			    	illumination : 150
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -393,8 +393,8 @@ define(["jquery"], function($){
 					 }
 				],
 			    gainsLoop : {
-			    	croyance : 30,
-			    	illumination : 30
+			    	croyance : 150,
+			    	illumination : 200
 			    },
 			    success : function(queteView) {
 			    	var game = queteView.parent;
@@ -414,8 +414,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 25,
-			    	illumination : 30
+			    	croyance : 120,
+			    	illumination : 120
 			    },
 			    success : function(queteView) {
 			    }
@@ -434,8 +434,8 @@ define(["jquery"], function($){
 					 }
 				],
 			    gainsLoop : {
-			    	croyance : 10,
-			    	illumination : 15
+			    	croyance : 30,
+			    	illumination : 30
 			    },
 			    success : function(queteView) {
 			    }
@@ -453,8 +453,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 10,
-			    	illumination : 40
+			    	croyance : 120,
+			    	illumination : 120
 			    },
 			    success : function(queteView) {
 			    }
@@ -473,8 +473,8 @@ define(["jquery"], function($){
 					 }
 				],
 			    gainsLoop : {
-			    	croyance : 15,
-			    	illumination : 10
+			    	croyance : 30,
+			    	illumination : 30
 			    },
 			    success : function(queteView) {
 			    }
@@ -492,8 +492,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 50,
-			    	illumination : 10
+			    	croyance : 120,
+			    	illumination : 120
 			    },
 			    success : function(queteView) {
 			    }
@@ -513,8 +513,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 20,
-			    	illumination : 20
+			    	croyance : 90,
+			    	illumination : 90
 			    },
 			    success : function(queteView) {
 			    }
@@ -532,8 +532,8 @@ define(["jquery"], function($){
 			    	}catch(e){}
 			    },
 			    gainsLoop : {
-			    	croyance : 50,
-			    	illumination : 30
+			    	croyance : 120,
+			    	illumination : 120
 			    },
 			    success : function(queteView) {
 			    }

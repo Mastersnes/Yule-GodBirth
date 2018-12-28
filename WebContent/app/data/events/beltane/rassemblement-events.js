@@ -85,7 +85,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 10
+			            		 mal : 20
 			            	}, "quete");
 			            	 game.eventManager.rebellion++;
 			            	 game.alertPopup("rassemblement-mars2-event-menace", function() {
@@ -108,7 +108,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 10
+			            		 mal : 20
 			            	}, "quete");
 			            	 game.eventManager.sagesse--;
 			            	 game.alertPopup("rassemblement-mars3-event-tuer");
@@ -152,9 +152,9 @@ define(["jquery","app/utils/utils"
 			             name : "acceptButton",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 10,
+			            		 croyance : 20,
 			            		 illumination : 0,
-			            		 bien : 5,
+			            		 bien : 10,
 			            		 mal : 0
 			            	}, "quete");
 			            	 game.eventManager.sagesse+=0.5;
@@ -249,7 +249,7 @@ define(["jquery","app/utils/utils"
 			             action : function(game) {
 			            	 game.gainLoop({
 			            		 croyance : 0,
-			            		 illumination : 50,
+			            		 illumination : 60,
 			            		 bien : 0,
 			            		 mal : 0
 			            	 }, "quete");
@@ -264,7 +264,7 @@ define(["jquery","app/utils/utils"
 			             name : "rassemblement-saturnus2-event-mystere-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 50,
+			            		 croyance : 60,
 			            		 illumination : 0,
 			            		 bien : 0,
 			            		 mal : 0
@@ -317,8 +317,8 @@ define(["jquery","app/utils/utils"
 			             name : "rassemblement-triton2-event-torque-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 20,
-			            		 illumination : 10,
+			            		 croyance : 30,
+			            		 illumination : 20,
 			            		 bien : 0,
 			            		 mal : 0
 			            	 }, "quete");
@@ -363,7 +363,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 15
+			            		 mal : 20
 			            	}, "quete");
 			            	game.eventManager.rebellion++;
 			            	game.alertPopup("rassemblement-triton3-event-tuer");
@@ -408,10 +408,10 @@ define(["jquery","app/utils/utils"
 			             name : "acceptButton",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 10,
+			            		 croyance : 20,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 20
+			            		 mal : 30
 			            	}, "quete");
 			            	game.eventManager.rebellion+=0.5;
 			            	game.eventManager.sagesse+=0.5;
@@ -424,7 +424,7 @@ define(["jquery","app/utils/utils"
 			            	 game.gainLoop({
 			            		 croyance : 0,
 			            		 illumination : 0,
-			            		 bien : 5,
+			            		 bien : 10,
 			            		 mal : 0
 			            	}, "quete");
 			            	game.eventManager.rebellion++;
@@ -438,7 +438,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 20
+			            		 mal : 30
 			            	}, "quete");
 			            	game.alertPopup("rassemblement-pluton2-event-raser");
 			             }

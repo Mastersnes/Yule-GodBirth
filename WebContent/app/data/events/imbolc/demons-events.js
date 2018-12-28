@@ -37,8 +37,8 @@ define(["jquery"], function($){
 			             name : "acceptButton",
 			             action : function(game) {
 			            	 game.gainLoop({
-                            	 croyance : 20,
-                            	 illumination : 10,
+                            	 croyance : 30,
+                            	 illumination : 20,
                             	 bien : 0,
                             	 mal : 0
                              }, "quete");
@@ -80,7 +80,7 @@ define(["jquery"], function($){
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 15
+				        			   mal : 20
 				        		   }, "quete");
 				        		   game.alertPopup("demons-attaque-event-torture", function() {
 				        			   game.alertPopup("demons-attaque-event-torture-2");
@@ -91,10 +91,10 @@ define(["jquery"], function($){
 				        	   name : "le-tuer-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
-				        			   croyance : 15,
+				        			   croyance : 20,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 15
+				        			   mal : 20
 				        		   }, "quete");
 				        		   game.alertPopup("demons-attaque-event-tuer");
 				        	   }
@@ -104,8 +104,8 @@ define(["jquery"], function($){
 				        	   action : function(game) {
 				        		   game.gainLoop({
 				        			   croyance : 0,
-				        			   illumination : 10,
-				        			   bien : 15,
+				        			   illumination : 20,
+				        			   bien : 20,
 				        			   mal : 0
 				        		   }, "quete");
 				        		   game.eventManager.rebellion++;
@@ -144,7 +144,7 @@ define(["jquery"], function($){
 			             name : "demons-village-event-tuer-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-                            	 croyance : 20,
+                            	 croyance : 30,
                             	 illumination : 0,
                             	 bien : 0,
                             	 mal : 30
@@ -157,8 +157,8 @@ define(["jquery"], function($){
 			             action : function(game) {
 			            	 game.gainLoop({
                             	 croyance : 30,
-                            	 illumination : 20,
-                            	 bien : 30,
+                            	 illumination : 30,
+                            	 bien : 40,
                             	 mal : 0
                              }, "quete");
 			                 game.alertPopup("demons-village-event-stop", function() {
@@ -182,8 +182,8 @@ define(["jquery"], function($){
 			             action : function(game) {
 			            	 game.gainLoop({
                             	 croyance : 30,
-                            	 illumination : 20,
-                            	 bien : 15,
+                            	 illumination : 30,
+                            	 bien : 20,
                             	 mal : 0
                              }, "quete");
 			                 game.alertPopup("demons-desert-event-vie", function() {
@@ -196,10 +196,10 @@ define(["jquery"], function($){
 			             name : "demons-desert-event-innonder-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-                            	 croyance : 20,
+                            	 croyance : 30,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 10
+                            	 mal : 20
                              }, "quete");
 			            	 game.alertPopup("demons-desert-event-innonder");
 			             }
@@ -217,7 +217,7 @@ define(["jquery"], function($){
                             	 croyance : 0,
                             	 illumination : 0,
                             	 bien : 0,
-                            	 mal : 20
+                            	 mal : 30
                              }, "quete");
 			                 game.alertPopup("demons-desert-event-laisser");
 			             }

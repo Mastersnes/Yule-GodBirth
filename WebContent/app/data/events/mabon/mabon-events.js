@@ -8,7 +8,7 @@ define(["jquery","app/utils/utils"
 			"mabon-start-event" : {
 				name : "mabon-start-event",
 			    text : "mabon-start-event",
-			    rarity : 150,
+			    rarity : 100,
 			    unique : true,
 			    actions : [
 			         {
@@ -40,9 +40,9 @@ define(["jquery","app/utils/utils"
 			            			 game.alertPopup("mabon-fin-good-event4", function() {
 			            				 game.alertPopup("mabon-fin-event-conclusion", function() {
 			            					 game.gainLoop({
-			            						 croyance : 50,
-			            						 illumination : 100,
-			            						 bien : 1,
+			            						 croyance : 60,
+			            						 illumination : 120,
+			            						 bien : 10,
 			            						 mal : 0
 			            					}, "quete");
 						            	 });
@@ -69,10 +69,10 @@ define(["jquery","app/utils/utils"
 			            				 game.alertPopup("mabon-fin-bad-event5", function() {
 			            					 game.alertPopup("mabon-fin-event-conclusion", function() {
 			            						 game.gainLoop({
-				            						 croyance : 100,
-				            						 illumination : 50,
+				            						 croyance : 120,
+				            						 illumination : 60,
 				            						 bien : 0,
-				            						 mal : 1
+				            						 mal : 5
 				            					}, "quete");
 							            	 }); 
 						            	 });

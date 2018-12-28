@@ -12,15 +12,15 @@ define(["jquery","app/utils/utils",
 			"ostara-start-event" : {
 				name : "ostara-start-event",
 			    text : "ostara-start-event",
-			    rarity : 5,
+			    rarity : 0,
 			    unique : true,
 			    actions : [
 			         {
 			             name : "continuerButton",
 			             action : function(game) {
                              game.gainLoop({
-                            	 croyance : 5,
-                            	 illumination : 5,
+                            	 croyance : 10,
+                            	 illumination : 10,
                             	 bien : 0,
                             	 mal : 0
                              }, "quete");
@@ -74,7 +74,7 @@ define(["jquery","app/utils/utils",
 		                            	 croyance : 0,
 		                            	 illumination : 0,
 		                            	 bien : 0,
-		                            	 mal : 10
+		                            	 mal : 20
 		                             }, "quete");
 				        		   game.eventManager.rebellion++;
 				        		   game.alertPopup("accueil-riche-event-tuer");
@@ -85,8 +85,8 @@ define(["jquery","app/utils/utils",
 				        	   action : function(game) {
 				        		   game.gainLoop({
 		                            	 croyance : 0,
-		                            	 illumination : 25,
-		                            	 bien : 15,
+		                            	 illumination : 30,
+		                            	 bien : 20,
 		                            	 mal : 0
 		                             }, "quete");
 				        		   game.alertPopup("accueil-riche-event-partir");

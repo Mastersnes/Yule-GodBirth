@@ -49,7 +49,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 5
+			            		 mal : 10
 			            	 }, "quete");
 			             }
 			         }
@@ -95,7 +95,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 10
+			            		 mal : 20
 			            	 }, "quete");
 			            	 game.eventManager.addEvents(["nature-fleurs-event"]);
 			            	 game.alertPopup("nature-abeille-event-enquete-ignore");
@@ -117,7 +117,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 40
+			            		 mal : 60
 			            	 }, "quete");
 			            	 game.eventManager.addEvents(["nature-destruction-event"]);
 			            	 game.alertPopup("nature-nucleaire-event-ignore");
@@ -135,7 +135,7 @@ define(["jquery","app/utils/utils"
 			            	 game.gainLoop({
 			            		 croyance : 0,
 			            		 illumination : 0,
-			            		 bien : 20,
+			            		 bien : 30,
 			            		 mal : 0
 			            	 }, "quete");
 			            	 game.alertPopup("nature-nucleaire-event-intervenir");
@@ -162,9 +162,9 @@ define(["jquery","app/utils/utils"
 			             name : "nature-destruction-event-sauver-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 5,
-			            		 illumination : 5,
-			            		 bien : 10,
+			            		 croyance : 10,
+			            		 illumination : 10,
+			            		 bien : 20,
 			            		 mal : 0
 			            	 }, "quete");
 			            	 game.alertPopup("nature-destruction-event-sauver", function() {

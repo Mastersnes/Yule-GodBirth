@@ -36,8 +36,8 @@ define(["jquery","app/utils/utils"
 			             name : "acceptButton",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 10,
-			            		 illumination : 5,
+			            		 croyance : 20,
+			            		 illumination : 10,
 			            		 bien : 0,
 			            		 mal : 0
 			            	 }, "quete");
@@ -58,7 +58,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 10
+			            		 mal : 20
 			            	 }, "quete");
 			            	 game.alertPopup("lune-conquete1-event-ko");
 			            	 game.eventManager.addEvents(["lune-conquete2-event-nohelp"]);
@@ -113,8 +113,8 @@ define(["jquery","app/utils/utils"
 			             name : "lune-etude1-event-aider-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 10,
-			            		 illumination : 5,
+			            		 croyance : 20,
+			            		 illumination : 10,
 			            		 bien : 0,
 			            		 mal : 0
 			            	 }, "quete");
@@ -125,10 +125,10 @@ define(["jquery","app/utils/utils"
 			             name : "ignore-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 5,
-			            		 illumination : 10,
+			            		 croyance : 10,
+			            		 illumination : 20,
 			            		 bien : 0,
-			            		 mal : 10
+			            		 mal : 20
 			            	 }, "quete");
 			            	 game.eventManager.sagesse++;
 			            	 game.alertPopup("lune-etude1-event-nohelp", function() {
@@ -162,7 +162,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 10
+			            		 mal : 20
 			            	 }, "quete");
 			            	 game.alertPopup("lune-magie1-event-ko");
 			             }
@@ -196,7 +196,7 @@ define(["jquery","app/utils/utils"
 			            		 croyance : 0,
 			            		 illumination : 0,
 			            		 bien : 0,
-			            		 mal : 10
+			            		 mal : 20
 			            	 }, "quete");
 			            	 game.alertPopup("lune-magie1-event-ko");
 			             }
@@ -211,9 +211,9 @@ define(["jquery","app/utils/utils"
 			            		 mal : 0
 			            	}, "quete");
 			            	 game.gainLoop({
-			            		 croyance : 20,
+			            		 croyance : 30,
 			            		 illumination : 0,
-			            		 bien : 10,
+			            		 bien : 20,
 			            		 mal : 0
 			            	 }, "quete");
 			        		 game.alertPopup("lune-magie2-event-sauver1");
@@ -223,9 +223,9 @@ define(["jquery","app/utils/utils"
 			        	 name : "lune-magie2-event-sauver2-button",
 			        	 action : function(game) {
 			        		 game.gainLoop({
-			            		 croyance : 10,
-			            		 illumination : 20,
-			            		 bien : 10,
+			            		 croyance : 20,
+			            		 illumination : 30,
+			            		 bien : 20,
 			            		 mal : 0
 			            	 }, "quete");
 			        		 game.alertPopup("lune-magie2-event-sauver2", function() {

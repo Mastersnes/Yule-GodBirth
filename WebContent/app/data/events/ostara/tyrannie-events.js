@@ -40,7 +40,7 @@ define(["jquery",
 				        		   game.gainLoop({
 				        			   croyance : 30,
 				        			   illumination : 0,
-				        			   bien : 15,
+				        			   bien : 20,
 				        			   mal : 0
 				        		   }, "quete");
 				        		   game.alertPopup("tyrannie-soeur-event-accept");
@@ -53,7 +53,7 @@ define(["jquery",
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 10
+				        			   mal : 20
 				        		   }, "quete");
 				        		   game.eventManager.rebellion++;
 				        		   game.alertPopup("tyrannie-soeur-event-refus");
@@ -73,7 +73,7 @@ define(["jquery",
 				        	   name : "tyrannie-fete-event-participe-button",
 				        	   action : function(game) {
 				        		   game.gainLoop({
-				        			   croyance : 20,
+				        			   croyance : 30,
 				        			   illumination : 0,
 				        			   bien : 0,
 				        			   mal : 0
@@ -113,10 +113,10 @@ define(["jquery",
 				        	   action : function(game) {
 				        		   game.eventManager.rebellion++;
 				        		   game.gainLoop({
-				        			   croyance : 20,
-				        			   illumination : 20,
+				        			   croyance : 30,
+				        			   illumination : 30,
 				        			   bien : 0,
-				        			   mal : 15
+				        			   mal : 20
 				        		   }, "quete");
 				        		   game.eventManager.addEvents(DemiDieuEvents.start());
 				        		   game.alertPopup("tyrannie-fete-event-boire", function() {
@@ -141,7 +141,7 @@ define(["jquery",
 				        		   game.gainLoop({
 				        			   croyance : 30,
 				        			   illumination : 0,
-				        			   bien : 10,
+				        			   bien : 20,
 				        			   mal : 0
 				        		   }, "quete");
 				        		   game.eventManager.rebellion++;
@@ -155,7 +155,7 @@ define(["jquery",
 				        			   croyance : 0,
 				        			   illumination : 0,
 				        			   bien : 0,
-				        			   mal : 10
+				        			   mal : 20
 				        		   }, "quete");
 				        		   game.alertPopup("tyrannie-esclave-event-taire");
 				        	   }

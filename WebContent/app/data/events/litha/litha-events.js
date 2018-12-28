@@ -8,7 +8,7 @@ define(["jquery","app/utils/utils"
 			"litha-start-event" : {
 				name : "litha-start-event",
 			    text : "litha-start-event",
-			    rarity : 50,
+			    rarity : 0,
 			    unique : true,
 			    actions : [
 			         {
@@ -39,9 +39,9 @@ define(["jquery","app/utils/utils"
 			             name : "pasMonProbleme-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 50,
-			            		 illumination : 50,
-			            		 bien : 20,
+			            		 croyance : 60,
+			            		 illumination : 60,
+			            		 bien : 30,
 			            		 mal : 0
 			            	}, "quete");
 			            	 game.eventManager.sagesse++;
@@ -69,9 +69,9 @@ define(["jquery","app/utils/utils"
 			             name : "laisser-tomber-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 50,
-			            		 illumination : 50,
-			            		 bien : 20,
+			            		 croyance : 60,
+			            		 illumination : 60,
+			            		 bien : 30,
 			            		 mal : 0
 			            	}, "quete");
 			            	 game.eventManager.sagesse++;

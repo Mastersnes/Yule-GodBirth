@@ -115,10 +115,10 @@ define(["jquery","app/utils/utils"
 			             name : "lammas-disparition3-event-lumiere-button",
 			             action : function(game) {
 			            	 game.gainLoop({
-			            		 croyance : 50,
-			            		 illumination : 50,
-			            		 bien : 1,
-			            		 mal : 1
+			            		 croyance : 60,
+			            		 illumination : 60,
+			            		 bien : 5,
+			            		 mal : 5
 			            	}, "quete");
 			            	 game.eventManager.sagesse++;
 			            	 game.alertPopup("lammas-disparition3-event-lumiere", function() {
