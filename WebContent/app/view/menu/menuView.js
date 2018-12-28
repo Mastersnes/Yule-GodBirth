@@ -61,6 +61,7 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 			$(".app-container").removeClass("bebel");
 			this.scene.resize();
 			setTimeout(function() {
+				that.mediatheque.refreshMute();
 				$(".text#loading").fadeOut("slow");
 				$(".text#starting").fadeIn("slow");
 				$(".preload").empty();
@@ -116,6 +117,10 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 				}else {
 					$("fullscreen").addClass("exit");
 				}
+			});
+
+			$("mute").click(function() {
+				that.mediatheque.mute("all");
 			});
 		};
 		

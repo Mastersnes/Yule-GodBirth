@@ -105,6 +105,8 @@ function($, _, Utils, PopupUtils, page, TextManager,
 			}else {
 				$("fullscreen").addClass("exit");
 			}
+			
+			this.mediatheque.refreshMute();
 		};
 		
 		this.loop = function() {
@@ -138,6 +140,7 @@ function($, _, Utils, PopupUtils, page, TextManager,
         		    this.queteView.renderLoop(this);
         		    this.autelView.loop(this);
         		    this.successView.loop(this);
+        		    this.optionsView.loop(this);
     		    }
     		    
     		    setTimeout(function() {
@@ -151,13 +154,23 @@ function($, _, Utils, PopupUtils, page, TextManager,
         };
         
         this.gameOver = function(gagne) {
+        	this.mediatheque.stopAllMusic();
+        	var musicName = "";
         	if (gagne) {
+        		musicName = "music/victory.ogg";
         		this.saveManager.save("GameComplete", 1);
         		this.kongregateUtils.score("GameComplete", 1);
         	} else {
+        		musicName = "music/gameover.ogg";
         		this.saveManager.save("GameOver", 1);
         		this.kongregateUtils.score("GameOver", 1);
         	}
+        	var that = this;
+        	setTimeout(function() {
+        		that.mediatheque.play(musicName, "", function() {
+        			that.mediatheque.play("music/menu.ogg");
+        		});
+        	}, 200);
         	this.endGame = true;
             this.endView.render(gagne);
         };
@@ -215,6 +228,9 @@ function($, _, Utils, PopupUtils, page, TextManager,
 				}else {
 					$("fullscreen").addClass("exit");
 				}
+			});
+            $("mute").click(function() {
+            	that.mediatheque.mute("all");
 			});
             $(document).mousemove(function(event) {
                 that.currentMousePos.x = event.pageX;

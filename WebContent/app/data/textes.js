@@ -1125,6 +1125,23 @@ define(["jquery",
 			"youearn" : {
 				fr : "Vous gagnerez :",
 				en : "You'll earn :"
+			},
+			
+			"muteMusic" : {
+				fr : "Couper la musique",
+				en : "Mute musics"
+			},
+			"demuteMusic" : {
+				fr : "Jouer la musique",
+				en : "Play musics"
+			},
+			"muteSound" : {
+				fr : "Couper les effets sonores",
+				en : "Mute sonor effects"
+			},
+			"demuteSound" : {
+				fr : "Jouer les effets sonores",
+				en : "Play sonor effects"
 			}
 	};
 	

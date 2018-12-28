@@ -22,7 +22,21 @@ function($, _, Utils, page) {
 			};
 			$(this.el).html(template(templateData));
 			
+			this.refresh();
+			
 			this.makeEvents();
+		};
+		
+		this.refresh = function() {
+			if (this.parent.mediatheque.isMuteMusic)
+				$("#muteMusic").html(this.Textes.get("demuteMusic"));
+			else
+				$("#muteMusic").html(this.Textes.get("muteMusic"));
+
+			if (this.parent.mediatheque.isMuteSound)
+				$("#muteSound").html(this.Textes.get("demuteSound"));
+			else
+				$("#muteSound").html(this.Textes.get("muteSound"));
 		};
 		
 		this.makeEvents = function() {
@@ -43,6 +57,14 @@ function($, _, Utils, page) {
 				}else {
 					$("fullscreen").addClass("exit");
 				}
+			});
+			$(this.el).find("#muteMusic").click(function() {
+				that.parent.mediatheque.mute("music");
+				that.refresh();
+			});
+			$(this.el).find("#muteSound").click(function() {
+				that.parent.mediatheque.mute("sound");
+				that.refresh();
 			});
 		};
 		

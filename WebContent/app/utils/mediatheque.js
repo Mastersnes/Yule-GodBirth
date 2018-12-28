@@ -1,5 +1,5 @@
 'use strict';
-define(["jquery"], function($){
+define(["jquery", "app/utils/utils"], function($, Utils){
 	return function(){
 		this.sounds = [];
 		this.soundsTicker = [];
@@ -10,12 +10,18 @@ define(["jquery"], function($){
 				var key = list[index];
 				this.load(key);
 			}
+			
+			this.isMuteMusic = window.localStorage.getItem(Utils.name + "Music");
+			if (!this.isMuteMusic || this.isMuteMusic == "false") this.isMuteMusic = false;
+
+			this.isMuteSound = window.localStorage.getItem(Utils.name + "Sound");
+			if (!this.isMuteSound || this.isMuteSound == "false") this.isMuteSound = false;
 		};
 		
 		/**
 		* Permet de charger les sons
 		**/
-		this.load = function(key, id) {
+		this.load = function(key, id, callback) {
 			if (!id) id = "";
 			console.log("load :", key);
 			var sound;
@@ -27,7 +33,8 @@ define(["jquery"], function($){
 			if (key.indexOf("music") > -1) {
 				sound.addEventListener('ended', function() {
 					this.currentTime = 0;
-				    this.play();
+					if (callback) callback();
+					else this.play();
 				}, false);
 			}
 			
@@ -38,18 +45,27 @@ define(["jquery"], function($){
 		/**
 		 * Joue le son et le creer s'il n'existe pas
 		 */
-		this.play = function(key, id) {
+		this.play = function(key, id, callback) {
 			if (!key) return;
 			if (!id) id = "";
 			if (!this.sounds[key + id]) {
 				console.log("Never pass!");
-				this.load(key, id);
+				this.load(key, id, callback);
 			}
 			try {
-				if (key.indexOf("music") > -1) this.currentMusic = key;
-				if (this.isMute) return;
+				if (key.indexOf("music") > -1) {
+					this.currentMusic = key;
+					console.log("play Mute : ", this.isMuteMusic);
+					if (this.isMuteMusic) {
+						console.log("music is mute");
+						return;
+					}
+				}
 				
 				// Si c'est une music est qu'elle est deja en cours, on ne la relance pas
+				console.log("deja joué : ", key.indexOf("music") > -1 && 
+						this.sounds[key].duration > 0 && 
+						!this.sounds[key].paused);
 				if (key.indexOf("music") > -1 && 
 						this.sounds[key].duration > 0 && 
 						!this.sounds[key].paused) 
@@ -66,6 +82,7 @@ define(["jquery"], function($){
 		 */
 		this.playSound = function(key) {
 			if (!key) return;
+			if (this.isMuteSound) return;
 			if (this.soundsTicker[key] == undefined) this.soundsTicker[key] = 0;
 			this.play("sounds/"+key, this.soundsTicker[key]++);
 			if (this.soundsTicker[key] > 3) this.soundsTicker[key] = 0;
@@ -94,13 +111,40 @@ define(["jquery"], function($){
 			}
 		};
 		
-		this.mute = function(activation) {
-			if (activation) {
-				this.isMute = true;
-				this.stopAllMusic();
-			} else {
-				this.isMute = false;
-				if (this.currentMusic) this.play(this.currentMusic);
+		this.mute = function(type) {
+			console.log("avantMute :", this.isMuteMusic, this.isMuteSound);
+			var musicOldState = this.isMuteMusic;
+			switch(type) {
+				case "all" :
+					var allMute = this.isMuteMusic && this.isMuteSound;
+					this.isMuteMusic = !allMute;
+					this.isMuteSound = !allMute;
+					break;
+				case "music" :
+					this.isMuteMusic = !this.isMuteMusic;
+					break;
+				case "sound" :
+					this.isMuteSound = !this.isMuteSound;
+					break;
+				default:
+					break;
+			}
+			
+			window.localStorage.setItem(Utils.name + "Music", this.isMuteMusic);
+			window.localStorage.setItem(Utils.name + "Sound", this.isMuteSound);
+			
+			if (musicOldState != this.isMuteMusic) {
+				if (this.isMuteMusic) this.stopAllMusic();
+				else this.play(this.currentMusic);
+			}
+			this.refreshMute();
+		};
+		
+		this.refreshMute = function() {
+			console.log("refresh :", this.isMuteMusic, this.isMuteSound);
+			$("mute").removeClass("off");
+			if (!(this.isMuteMusic && this.isMuteSound)) {
+				$("mute").addClass("off");
 			}
 		};
 		

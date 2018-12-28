@@ -26,12 +26,26 @@ define(["jquery",
 			this.makeEvents();
         };
         
+        this.loop = function() {
+        	this.refresh();
+        };
+        
         this.refresh = function() {
         	if (this.data["notation-courte"]) {
         		$("#notation").text(this.Textes.get("passer-notation-longue"));
         	} else {
         		$("#notation").text(this.Textes.get("passer-notation-courte"));
         	}
+        	
+        	if (this.mediatheque.isMuteMusic)
+				$("#muteMusic").html(this.Textes.get("demuteMusic"));
+			else
+				$("#muteMusic").html(this.Textes.get("muteMusic"));
+
+			if (this.mediatheque.isMuteSound)
+				$("#muteSound").html(this.Textes.get("demuteSound"));
+			else
+				$("#muteSound").html(this.Textes.get("muteSound"));
         };
         
         this.show = function() {
@@ -61,6 +75,14 @@ define(["jquery",
 			this.el.find("#notation").click(function() {
 				that.data["notation-courte"] = !that.data["notation-courte"];
 				that.saveManager.save("options", that.data);
+				that.refresh();
+			});
+			$(this.el).find("#muteMusic").click(function() {
+				that.mediatheque.mute("music");
+				that.refresh();
+			});
+			$(this.el).find("#muteSound").click(function() {
+				that.mediatheque.mute("sound");
 				that.refresh();
 			});
         };
