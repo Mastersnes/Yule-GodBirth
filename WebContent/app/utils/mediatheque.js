@@ -23,7 +23,6 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 		**/
 		this.load = function(key, id, callback) {
 			if (!id) id = "";
-			console.log("load :", key);
 			var sound;
 			if (window.Audio)
 				sound = new Audio("app/"+key);
@@ -55,22 +54,16 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 			try {
 				if (key.indexOf("music") > -1) {
 					this.currentMusic = key;
-					console.log("play Mute : ", this.isMuteMusic);
 					if (this.isMuteMusic) {
-						console.log("music is mute");
 						return;
 					}
 				}
 				
 				// Si c'est une music est qu'elle est deja en cours, on ne la relance pas
-				console.log("deja joué : ", key.indexOf("music") > -1 && 
-						this.sounds[key].duration > 0 && 
-						!this.sounds[key].paused);
 				if (key.indexOf("music") > -1 && 
 						this.sounds[key].duration > 0 && 
 						!this.sounds[key].paused) 
 					return;
-				console.log("play : ", key);
 				this.sounds[key + id].play();
 			}catch (e) {
 				this.load(key, id);
@@ -112,7 +105,6 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 		};
 		
 		this.mute = function(type) {
-			console.log("avantMute :", this.isMuteMusic, this.isMuteSound);
 			var musicOldState = this.isMuteMusic;
 			switch(type) {
 				case "all" :
@@ -141,7 +133,6 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 		};
 		
 		this.refreshMute = function() {
-			console.log("refresh :", this.isMuteMusic, this.isMuteSound);
 			$("mute").removeClass("off");
 			if (!(this.isMuteMusic && this.isMuteSound)) {
 				$("mute").addClass("off");

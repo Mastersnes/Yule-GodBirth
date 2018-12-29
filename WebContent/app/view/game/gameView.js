@@ -87,6 +87,11 @@ function($, _, Utils, PopupUtils, page, TextManager,
                 this.renderLoop();
             }
 		};
+		
+		this.resetGame = function() {
+			this.endGame = true;
+			this.parent.render();
+		};
 
 		this.render = function(load) {
 			_.templateSettings.variable = "data";
@@ -233,9 +238,12 @@ function($, _, Utils, PopupUtils, page, TextManager,
             	that.mediatheque.mute("all");
 			});
             $(document).mousemove(function(event) {
-                that.currentMousePos.x = event.pageX;
-                that.currentMousePos.y = event.pageY;
+                that.currentMousePos.x = event.clientX;
+                that.currentMousePos.y = event.clientY;
             });
+            $("body").contextmenu(function() {
+				return false;
+			});
         };
         
         /**

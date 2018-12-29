@@ -95,12 +95,12 @@ function($, _, Utils, page, Events) {
 			var that = this;
 			this.timer++;
 			var timerMax = 5;
-			if (this.currentEvent.timer) timerMax = this.currentEvent;
+			if (this.currentEvent && this.currentEvent.timer) timerMax = this.currentEvent;
 			if (this.timer > timerMax && timerMax != -1) {
 				$(".scene #event-timer").removeClass("start");
 				var lastCurrentEvent = this.currentEvent;
 				$(".scene #event-timer").fadeOut("fast", function() {
-					if (that.currentEvent == lastCurrentEvent) that.currentEvent = null;
+//					if (that.currentEvent == lastCurrentEvent) that.currentEvent = null;
 				});
 			}
 		};
@@ -169,7 +169,7 @@ function($, _, Utils, page, Events) {
 		};
 
 		this.hide = function() {
-		    if (this.currentEvent.unique) {
+		    if (this.currentEvent && this.currentEvent.unique) {
                 this.uniquesEvents.push(this.currentEvent.name);
                 this.saveManager.save("uniquesEvents", this.uniquesEvents);
             }

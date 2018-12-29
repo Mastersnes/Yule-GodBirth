@@ -43,6 +43,7 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 		};
 
 		this.render = function() {
+			this.Textes.loadLanguage();
 			_.templateSettings.variable = "data";
 			var template = _.template(page);
 			
@@ -103,11 +104,14 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 			});
 			
 			$(".page.bebel").click(function() {
-				that.mediatheque.play("music/menu.ogg");
-				$(".page.bebel").fadeOut("slow", function() {
-					$(".page.bebel").remove();
-					$(".text#loading").remove();
-				});
+				that.mediatheque.stopAllMusic();
+				setTimeout(function() {
+					that.mediatheque.play("music/menu.ogg");
+					$(".page.bebel").fadeOut("slow", function() {
+						$(".page.bebel").remove();
+						$(".text#loading").remove();
+					});
+				}, 100);
 			});
 			
 			$("fullscreen").click(function() {
@@ -121,6 +125,10 @@ function($, _, SceneManager, Utils, PopupUtils, Kongregate, Textes, Mediatheque,
 
 			$("mute").click(function() {
 				that.mediatheque.mute("all");
+			});
+
+			$("body").contextmenu(function() {
+				return false;
 			});
 		};
 		

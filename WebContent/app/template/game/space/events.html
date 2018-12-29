@@ -15,9 +15,9 @@
                 		if (action.conditions) { 
                 		var condition = action.conditions[0];
                 	%>
-                		<bonus><%=data.text.get("use")%> <%=data.text.get(condition.name)%>-<%=data.text.get(action.name)%></bonus>
+                		<bonus>- <%=data.text.get("use")%> <%=data.text.get(condition.name)%>-<%=data.text.get(action.name)%> -</bonus>
                 	<% } else { %>
-                		<%=data.text.get(action.name)%>
+                		- <%=data.text.get(action.name)%> -
                 	<% } %>
                 </li>
             <%

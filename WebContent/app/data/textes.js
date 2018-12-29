@@ -1185,11 +1185,16 @@ define(["jquery",
 		**/
 		setLanguage : function(newLanguage) {
 			window.localStorage.setItem("bebelLanguage", newLanguage);
-			try {
-				parent.location.reload(true);
-			}catch(e) {
-				parent.location.href=parent.location.href;
-			}
+//			try {
+//				parent.location.reload(true);
+//			}catch(e) {
+//				parent.location.href=parent.location.href;
+//			}
+//			try {
+//				document.location.reload(true);
+//			}catch(e) {
+//				document.location.href=document.location.href;
+//			}
 		}
 	};
 });

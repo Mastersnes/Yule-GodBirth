@@ -46,9 +46,11 @@ function($, _, Utils, page) {
 			});
 			$(this.el).find(".flag.fr").click(function() {
 				that.Textes.setLanguage("fr");
+				that.parent.render();
 			});
 			$(this.el).find(".flag.en").click(function() {
 				that.Textes.setLanguage("en");
+				that.parent.render();
 			});
 			$(this.el).find("#fullscreen").click(function() {
 				var isFullscreen = Utils.fullscreen();

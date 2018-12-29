@@ -121,7 +121,7 @@ button:focus {outline:0;}
 	background-image: url("../img/game/interface/bouton/wordpress.png");
 }
 
-mute, mute.off:hover {
+mute {
 	z-index: 10;
 	cursor: pointer;
 	display: block;
@@ -132,6 +132,6 @@ mute, mute.off:hover {
 	background-size: 100% 100%;
 	background-image: url("../img/game/interface/bouton/mute-on.png");
 }
-mute.off, mute:hover {
+mute.off {
 	background-image: url("../img/game/interface/bouton/mute-off.png");
 }
