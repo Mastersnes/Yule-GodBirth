@@ -120,7 +120,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 				this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
 					return {
-						croyance : Math.round(Utils.pow(5.5, lvl, 2.87)),
+						croyance : Math.round(Utils.pow(5.6, lvl, 3)),
 	        			illumination : Math.round(lvl<5 ? 0 : Utils.pow(30, lvl, 1.95))
 	        		};
 			    };
@@ -217,7 +217,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-						croyance : Math.round(Utils.pow(310, lvl, 2.05)),
+						croyance : Math.round(Utils.pow(315, lvl, 2.5)),
 	        			illumination : Math.round(lvl<3 ? 0 : Utils.pow(110, lvl, 1.82))
 	        		};
                 };
@@ -261,7 +261,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(720, lvl, 1.85)),
+                    	croyance : Math.round(Utils.pow(720, lvl, 1.9)),
 	        			illumination : Math.round(lvl<4?0 : Utils.pow(150, lvl, 1.78))
                     };
                 };
@@ -309,7 +309,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(7100, lvl, 1.45)),
+                    	croyance : Math.round(Utils.pow(7500, lvl, 1.5)),
 	        			illumination : Math.round(Utils.pow(800, lvl, 1.4))
                     };
                 };
@@ -353,7 +353,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(7650, lvl, 1.45)),
+                    	croyance : Math.round(Utils.pow(7700, lvl, 1.5)),
 	        			illumination : Math.round(Utils.pow(900, lvl, 1.4))
                     };
                 };
@@ -533,7 +533,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(5100, lvl, 1.6)),
+                    	croyance : Math.round(Utils.pow(5300, lvl, 1.8)),
 	        			illumination : Math.round(Utils.pow(500, lvl, 1.58))
                     };
                 };
@@ -577,7 +577,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(15200, lvl, 1.25)),
+                    	croyance : Math.round(Utils.pow(15500, lvl, 1.3)),
 	        			illumination : Math.round(Utils.pow(600, lvl, 1.45))
                     };
                 };
@@ -621,7 +621,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(8100, lvl, 1.5)),
+                    	croyance : Math.round(Utils.pow(8300, lvl, 1.7)),
 	        			illumination : Math.round(Utils.pow(300, lvl, 1.73))
                     };
                 };
@@ -669,7 +669,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(33333, lvl, 1.3)),
+                    	croyance : Math.round(Utils.pow(33333, lvl, 1.4)),
 	        			illumination : Math.round(Utils.pow(3333, lvl, 1.2))
                     };
                 };
@@ -713,7 +713,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(66666, lvl, 1.1)),
+                    	croyance : Math.round(Utils.pow(66666, lvl, 1.2)),
 	        			illumination : Math.round(Utils.pow(6666, lvl, 1.06))
                     };
                 };
@@ -757,7 +757,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
                 this.prix = function (lvl) {
                     if(!lvl) lvl = this.level;
                     return {
-                    	croyance : Math.round(Utils.pow(99999, lvl, 1)),
+                    	croyance : Math.round(Utils.pow(99999, lvl, 1.1)),
 	        			illumination : Math.round(Utils.pow(9999, lvl, 0.99))
                     };
                 };

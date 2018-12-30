@@ -28,11 +28,37 @@ define(["jquery"], function($){
 			    	}
 			    }
 			},
+			"quete-complete-deite" : {
+			    name : "quete-complete-deite",
+			    description : "quete-complete-deite-desc",
+				apparition : {
+					 isComplete : ["quete-start"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "grandTout",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "dieu",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "deesse",
+				    	 level : 1
+			         }
+				],
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 15
+			    }
+			},
 			"quete-univers" : {
 			    name : "quete-univers",
 			    description : "quete-univers-desc",
 				apparition : {
-					 isComplete : [],
+					 isComplete : ["quete-complete-deite"],
 				     ameliorations : []
 				},
 			    conditions : [
@@ -51,6 +77,32 @@ define(["jquery"], function($){
 				],
 			    gainsLoop : {
 			    	croyance : 60,
+			    	illumination : 30
+			    }
+			},
+			"quete-complete-univers" : {
+			    name : "quete-complete-univers",
+			    description : "quete-complete-univers-desc",
+				apparition : {
+					 isComplete : ["quete-univers"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "terre",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "lune",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "soleil",
+				    	 level : 1
+			         }
+				],
+			    gainsLoop : {
+			    	croyance : 30,
 			    	illumination : 30
 			    }
 			},
@@ -80,6 +132,36 @@ define(["jquery"], function($){
 			    	illumination : 90
 			    }
 			},
+			"quete-complete-vie" : {
+			    name : "quete-complete-vie",
+			    description : "quete-complete-vie-desc",
+				apparition : {
+					 isComplete : ["quete-vie"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "ciel",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "foret",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "volcan",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "ocean",
+				    	 level : 1
+			         }
+				],
+			    gainsLoop : {
+			    	croyance : 30,
+			    	illumination : 60
+			    }
+			},
 			"quete-mort" : {
 			    name : "quete-mort",
 			    description : "quete-mort-desc",
@@ -104,6 +186,36 @@ define(["jquery"], function($){
 			    gainsLoop : {
 			    	croyance : 120,
 			    	illumination : 60
+			    }
+			},
+			"quete-complete-mort" : {
+			    name : "quete-complete-mort",
+			    description : "quete-complete-mort-desc",
+				apparition : {
+					 isComplete : ["quete-mort"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "gouffre",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "vide",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "chaos",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "abysse",
+				    	 level : 1
+			         }
+				],
+			    gainsLoop : {
+			    	croyance : 60,
+			    	illumination : 30
 			    }
 			},
 			"quete-concept" : {
@@ -150,6 +262,32 @@ define(["jquery"], function($){
 			    gainsLoop : {
 			    	croyance : 90,
 			    	illumination : 90
+			    }
+			},
+			"quete-complete-concept" : {
+			    name : "quete-complete-concept",
+			    description : "quete-complete-concept-desc",
+				apparition : {
+					 isComplete : ["quete-concept"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "amour",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "connaissance",
+				    	 level : 1
+			         },
+			         {
+				    	 name : "evolution",
+				    	 level : 1
+			         }
+				],
+			    gainsLoop : {
+			    	croyance : 60,
+			    	illumination : 60
 			    }
 			},
 			"quete-imbolc" : {

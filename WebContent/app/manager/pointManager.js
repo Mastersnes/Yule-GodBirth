@@ -58,7 +58,9 @@ function($, _, Utils) {
 		this.addPoints = function(points, multiplierParam, from) {
 			var gainsPertes = {
 					"croyance" : 0,
-					"illumination" : 0
+					"illumination" : 0,
+					"bien" : 0,
+					"mal" : 0
 			};
 			if (points.croyance == 0 && points.illumination == 0 && points.bien == 0 && points.mal == 0) return gainsPertes;
 			
@@ -96,8 +98,8 @@ function($, _, Utils) {
 			
 			gainsPertes.croyance = this.incrementPoints(points, avantages, multiplier, "croyance", from);
 			gainsPertes.illumination = this.incrementPoints(points, avantages, multiplier, "illumination", from);
-			this.incrementPoints(points, avantages, multiplier, "bien", from);
-			this.incrementPoints(points, avantages, multiplier, "mal", from);
+			gainsPertes.bien = this.incrementPoints(points, avantages, multiplier, "bien", from);
+			gainsPertes.mal = this.incrementPoints(points, avantages, multiplier, "mal", from);
 			
 		    if (this.points.bien > 1000000 && this.points.mal > 1000000) {
 		    	this.points.bien = parseInt(this.points.bien / 10);
@@ -119,7 +121,6 @@ function($, _, Utils) {
 		
 		this.incrementPoints = function(points, avantages, multiplier, key, from) {
 			if (!points[key]) return 0;
-			if (points[key] > Math.pow(10, 12)) return 0;
 			var multiple = multiplier[key];
 			if (multiple == undefined) multiple = 0;
 			
@@ -135,6 +136,10 @@ function($, _, Utils) {
 			
 			this.points[key] += gainPerte;
 			if (this.points[key] < 0) this.points[key] = 0;
+			if (this.points[key] > Math.pow(10, 15)) {
+				console.log("it's over nine thousand !");
+				this.points[key] = Math.pow(10, 15);
+			}
 			
 			return gainPerte;
 		};

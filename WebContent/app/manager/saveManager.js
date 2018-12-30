@@ -49,6 +49,8 @@ function($, _, Utils) {
 			        "artefactsUses" : 0,
 			        "GameComplete" : 0,
 			        "GameOver" : 0,
+			        "artefactsNumber" : 0,
+			        "upgradeNumber" : 0,
 			        
 			        "pierresComplete" : [],
 			        "selectedPierres" : {
@@ -138,12 +140,15 @@ function($, _, Utils) {
 	        }
 	        
 	        //On rejout les succes à ce moment
-	        this.kongregateUtils.score("maxCroyance", this.load("maxPoints").croyance);
-	        this.kongregateUtils.score("maxIllumination", this.load("maxPoints").illumination);
-	        this.kongregateUtils.score("maxBien", this.load("maxPoints").bien);
-	        this.kongregateUtils.score("maxMal", this.load("maxPoints").mal);
+	        var maxPoints = this.load("maxPoints");
+	        this.kongregateUtils.score("maxCroyance", maxPoints.croyance);
+	        this.kongregateUtils.score("maxIllumination", maxPoints.illumination);
+	        this.kongregateUtils.score("maxBien", maxPoints.bien);
+	        this.kongregateUtils.score("maxMal", maxPoints.mal);
 	        this.kongregateUtils.score("compteurClick", this.load("compteurClick"));
 	        this.kongregateUtils.score("artefactsUses", this.load("artefactsUses"));
+	        this.kongregateUtils.score("artefactsNumber", this.load("artefactsNumber"));
+	        this.kongregateUtils.score("upgradeNumber", this.load("upgradeNumber"));
 	        if (this.load("artefactsUses") >= 1) this.kongregateUtils.score("artefactsUses1", 1);
 	        if (this.load("artefactsUses") >= 3) this.kongregateUtils.score("artefactsUses3", 1);
 	        if (this.load("pierre-primaire-success"))

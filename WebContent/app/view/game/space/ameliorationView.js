@@ -17,11 +17,27 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
             this.mediatheque = parent.mediatheque;
             this.Items = Items;
             
+            this.kongregateUtils = parent.kongregateUtils;
             this.saveManager = parent.saveManager;
             this.pointManager = parent.pointManager;
             this.recompenseManager = parent.recompenseManager;
             
             this.saveManager.loadAmeliorations(this.Items);
+            this.firstTime = true;
+            this.totalGainsPerte = {
+            		loop : {
+            			croyance : 0,
+    		    		illumination : 0,
+    		    		bien : 0,
+    		    		mal : 0
+            		},
+            		click : {
+            			croyance : 0,
+    		    		illumination : 0,
+    		    		bien : 0,
+    		    		mal : 0
+            		}
+            };
 		};
 
 		this.render = function() {
@@ -102,10 +118,29 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 		this.loop = function(game, multiplier, from) {
 		    if (!from) from = "loop";
 
+		    var total = {
+		    		croyance : 0,
+		    		illumination : 0,
+		    		bien : 0,
+		    		mal : 0
+		    };
+		    
 		    var listItem = Items.list();
 		    for (var index in listItem) {
 		        var item = listItem[index];
-		        game.pointManager.addPoints(item.gain(0, Items).loop, multiplier, from);
+		        var gainsPerte = game.pointManager.addPoints(item.gain(0, Items).loop, multiplier, from);
+		        
+		        total.croyance += gainsPerte.croyance;
+		        total.illumination += gainsPerte.illumination;
+		        total.bien += gainsPerte.bien;
+		        total.mal += gainsPerte.mal;
+		    }
+		    
+		    this.totalGainsPerte.loop = total;
+		    
+		    if (this.firstTime) {
+		    	this.click(game, true);
+		    	this.firstTime = false;
 		    }
 		};
 
@@ -127,11 +162,13 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 			this.descriptionView.loop(game);
 		};
 
-		this.click = function(game) {
+		this.click = function(game, withoutAnim) {
 			var listItem = Items.list();
 			var total = {
 				"croyance" : 0,
-				"illumination" : 0
+				"illumination" : 0,
+				"bien" : 0,
+				"mal" : 0
 			};
 			for (var index in listItem) {
 				var item = listItem[index];
@@ -139,12 +176,18 @@ function($, _, Utils, page, Onglets, Items, DescriptionView) {
 				
 				total.croyance += gainsPertes.croyance;
 				total.illumination += gainsPertes.illumination;
+				total.bien += gainsPertes.bien;
+				total.mal += gainsPertes.mal;
 				
 				this.refreshItem(item);
 			}
-			game.pointManager.launchAnimClick(total);
 			
-			this.recompenseManager.addClick();
+			this.totalGainsPerte.click = total;
+			if (!withoutAnim) {
+				game.pointManager.launchAnimClick(total);
+				this.recompenseManager.addClick();
+			}
+			
 		};
         
         this.makeItemEvents = function() {

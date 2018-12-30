@@ -37,7 +37,14 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
 		this.score = function(key, value) {
 			if (!this.isLoad) return;
 			
+			value = this.redresseInt(value);
 			this.kongregate.stats.submit(key, value);
+		};
+		
+		this.redresseInt = function(val) {
+			if (!val) return 0;
+			if (val > Math.pow(10, 15)) return Math.pow(10, 15);
+			return val;
 		};
 		
 		this.getScore = function(key) {

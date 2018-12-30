@@ -122,6 +122,10 @@ define(["jquery",
         	this.inventaire.push(artefact);
         	this.newList.push(artefact);
         	this.saveManager.save("inventaire", this.inventaire.data);
+        	
+        	this.saveManager.save("artefactsNumber", this.inventaire.length());
+        	this.parent.kongregateUtils.score("artefactsNumber", this.inventaire.length());
+        	
         	this.mediatheque.playSound("artefact.ogg");
         	if (!this.parent.alertOpen) {
         		var gainText = this.Textes.get("gainArtefact");

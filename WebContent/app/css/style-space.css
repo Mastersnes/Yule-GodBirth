@@ -25,3 +25,7 @@ space.front[type="2"] {
 space.front[type="3"] {
 	background-image: url("../img/game/space/front/3.png");
 }
+
+#statistiques {
+	z-index : 5;
+}

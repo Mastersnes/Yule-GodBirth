@@ -71,7 +71,7 @@ function($, _, Utils) {
 			 */
 			if (!this.barreAlreadyDisplay && godType.name == "egg" && godType.level == 2) {
 			    this.barreAlreadyDisplay = true;
-			    this.textManager.show(["didactitiel-barre1", "didactitiel-barre2", "didactitiel-barre3", "didactitiel-barre4"]);
+			    this.textManager.show(["didactitiel-barre1", "didactitiel-barre2", "didactitiel-barre2-2", "didactitiel-barre3", "didactitiel-barre4"]);
 			    this.textManager.next();
 			    this.data.indication.barre = true;
 			    this.data.step.name = "barre";

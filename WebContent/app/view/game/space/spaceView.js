@@ -3,7 +3,8 @@ define(["jquery",
         "app/utils/utils",
         "text!app/template/game/space/space.html",
         "app/view/game/space/godView",
-        "app/view/game/space/ameliorationView"], function($, Utils, page, GodView, AmeliorationView){
+        "app/view/game/space/ameliorationView",
+        "app/view/game/space/statistiquesView"], function($, Utils, page, GodView, AmeliorationView, StatistiquesView){
     return function(parent){
         this.init = function(parent) {
         	this.el = $(".space");
@@ -14,6 +15,7 @@ define(["jquery",
             this.mediatheque = parent.mediatheque;
 
             // Manager
+            this.kongregateUtils = parent.kongregateUtils;
             this.saveManager = parent.saveManager;
             this.textManager = parent.textManager;
             this.eventManager = parent.eventManager;
@@ -21,6 +23,7 @@ define(["jquery",
             this.recompenseManager = parent.recompenseManager;
             
             this.ameliorationView = new AmeliorationView(this);
+            this.statistiquesView = new StatistiquesView(this);
             this.godView = new GodView(this);
         };
         
@@ -34,6 +37,7 @@ define(["jquery",
         	
         	this.godView.render();
         	this.ameliorationView.render();
+        	this.statistiquesView.render();
         };
         
         this.show = function() {
@@ -54,6 +58,7 @@ define(["jquery",
         
         this.renderLoop = function(game) {
             this.ameliorationView.renderLoop(game);
+            this.statistiquesView.renderLoop(game);
         };
 
         this.click = function(game) {

@@ -382,7 +382,15 @@ define(["jquery",
 			"quete-start-desc" : {
 				fr : "Améliorez le Grand Tout pour la première fois",
 				en : "Upgrade the Great Everything for the first time"
+			},     
+			"quete-complete-deite" : {
+				fr : "Un vrai dieu !",
+				en : "A real god !"
 			},        
+			"quete-complete-deite-desc" : {
+				fr : "Améliorez toutes les divinités au niveau 1",
+				en : "Upgrade all deities to level 1"
+			},
 			"quete-univers" : {
 				fr : "La création de l'Univers",
 				en : "Universe creation"
@@ -390,7 +398,15 @@ define(["jquery",
 			"quete-univers-desc" : {
 				fr : "Créez l'Univers",
 				en : "Create the Universe"
+			},
+			"quete-complete-univers" : {
+				fr : "Astronome !",
+				en : "Astronomer !"
 			},        
+			"quete-complete-univers-desc" : {
+				fr : "Améliorez tous les astres de l'Univers au niveau 1",
+				en : "Upgrade all stars of the Universe to level 1"
+			},
 			"quete-vie" : {
 				fr : "La création de la vie",
 				en : "The life creation"
@@ -398,7 +414,15 @@ define(["jquery",
 			"quete-vie-desc" : {
 				fr : "Créez la vie",
 				en : "Create the life"
+			},
+			"quete-complete-vie" : {
+				fr : "Balbutiement",
+				en : "Babbling"
 			},        
+			"quete-complete-vie-desc" : {
+				fr : "Améliorez tous les éléments de la vie au niveau 1",
+				en : "Upgrade all elements of life to level 1"
+			},
 			"quete-mort" : {
 				fr : "La création de la mort",
 				en : "The death creation"
@@ -406,7 +430,15 @@ define(["jquery",
 			"quete-mort-desc" : {
 				fr : "Créez la mort",
 				en : "Create the death"
+			},
+			"quete-complete-mort" : {
+				fr : "Dernier soupir",
+				en : "Last breath"
 			},        
+			"quete-complete-mort-desc" : {
+				fr : "Améliorez tous les éléments de la mort au niveau 1",
+				en : "Upgrade all elements of death to level 1"
+			},
 			"quete-concept" : {
 				fr : "Humanité",
 				en : "Humanity"
@@ -414,7 +446,15 @@ define(["jquery",
 			"quete-concept-desc" : {
 				fr : "Créez les concepts humains",
 				en : "Create humans concepts"
+			},
+			"quete-complete-concept" : {
+				fr : "Ces humains...",
+				en : "Humans..."
 			},        
+			"quete-complete-concept-desc" : {
+				fr : "Améliorez tous les concepts humains au niveau 1",
+				en : "Upgrade all humans concepts to level 1"
+			},
 			        
 			"quete-imbolc" : {
 				fr : "Imbolc",
@@ -781,6 +821,10 @@ define(["jquery",
 			"didactitiel-barre2" : {
 				fr : "Elle représente l'équilibre de l'Univers.<br/>Veillez à toujours garder un œil sur le cercle d'équilibre au centre.",
 				en : "It represents the Universe balance.<br/>Always keep an eye on the balance circle in the centre."
+			},
+			"didactitiel-barre2-2" : {
+				fr : "Vous pouvez également cliquer dessus pour consulter vos statistiques à tout moment.",
+				en : "You can also click on it to view your statistics at any time."
 			},
 			"didactitiel-barre3" : {
 				fr : "Malheureusement, depuis votre départ, le mal a pris le dessus...",

@@ -14,8 +14,10 @@ function($, _, Utils) {
             this.Items = parent.Items;
             this.refreshMax = false;
             
+            this.kongregateUtils = parent.kongregateUtils;
             this.saveManager = parent.saveManager;
             this.pointManager = parent.pointManager;
+            this.upgradeNumber = this.saveManager.load("upgradeNumber");
 		};
 
 		this.show = function(itemId, reinitIncr) {
@@ -172,7 +174,12 @@ function($, _, Utils) {
                 var prixTotal = that.parent.calculPrix(item, level);
                 if (that.parent.checkAchetable(item, level, prixTotal)) {
                 	if (that.pointManager.depenser(prixTotal)) {
-                        if (item.level == 0) that.close();
+                        if (item.level == 0) {
+                        	that.upgradeNumber++;
+                        	that.saveManager.save("upgradeNumber", that.upgradeNumber);
+                        	that.kongregateUtils.score("upgradeNumber", that.upgradeNumber);
+                        	that.close();
+                        }
                         item.level+=incr;
                         that.mediatheque.playSound("amelioration.ogg");
                         that.saveManager.saveAmelioration(itemId, level);

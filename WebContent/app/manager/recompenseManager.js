@@ -26,6 +26,7 @@ function($, _, Utils) {
 			
 			this.compteurClick++;
 			
+			
 			this.parent.kongregateUtils.score("compteurClick", this.compteurClick);
 			this.saveManager.save("compteurClick", this.compteurClick);
 			
@@ -43,15 +44,15 @@ function($, _, Utils) {
 				recompense.illumination += 1;
 			}
 			
-			this.checkClickSuccess(100, this.compteurClick, 1, recompense);
-			this.checkClickSuccess(500, this.compteurClick, 10, recompense);
-			this.checkClickSuccess(1000, this.compteurClick, 50, recompense);
-			this.checkClickSuccess(5000, this.compteurClick, 100, recompense);
-			this.checkClickSuccess(10000, this.compteurClick, 500, recompense);
-			this.checkClickSuccess(50000, this.compteurClick, 1000, recompense);
-			this.checkClickSuccess(100000, this.compteurClick, 10000, recompense);
+			this.checkClickSuccess(100, this.compteurClick, 10, recompense);
+			this.checkClickSuccess(500, this.compteurClick, 20, recompense);
+			this.checkClickSuccess(1000, this.compteurClick, 30, recompense);
+			this.checkClickSuccess(5000, this.compteurClick, 60, recompense);
+			this.checkClickSuccess(10000, this.compteurClick, 60, recompense);
+			this.checkClickSuccess(50000, this.compteurClick, 120, recompense);
+			this.checkClickSuccess(100000, this.compteurClick, 120, recompense);
 			
-			this.pointManager.addPoints(recompense, null, "quete");
+			this.parent.gainLoop(recompense, "quete");
 		};
 		
 		/**
@@ -92,6 +93,13 @@ function($, _, Utils) {
 			this.complete.push(success);
 			this.newList.push(success);
 			this.saveManager.save("successComplete", this.complete);
+			
+			this.parent.gainLoop({
+				croyance : 10,
+				illumination : 10,
+				bien : 0,
+				mal : 0
+			}, "quete");
 			
 			if (!withoutMessage) {
 				this.parent.spaceView.ameliorationView.descriptionView.close();
