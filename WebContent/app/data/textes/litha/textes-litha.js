@@ -56,7 +56,7 @@ define(["jquery"
 				fr :"Détruire les étoiles",
 				en :"Destroy the stars"
 			},
-			"litha-enquete-event-detruire" : {
+			"litha-empeche-event-detruire" : {
 				fr :"L'explosion engendra une réaction en chaîne qui se répercuta dans une grande partie de l'Univers...",
 				en :"Explosion caused a chain reaction that affected a large part of the Universe..."
 			}

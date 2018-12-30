@@ -25,14 +25,13 @@ function($, _, Utils) {
 		    if (this.points.illumination > 0) $(this.el).find("illumination").show();
 		    else $(this.el).find("illumination").hide();
 
-		    if (this.parent.artefactsView.checkHad("troisieme-oeil")) {
-			    $(this.el).find("bien .text").html(Utils.format(this.points.bien, notationCourte, this.Textes));
-			    $(this.el).find("mal .text").html(Utils.format(this.points.mal, notationCourte, this.Textes));
-		    }
-		    
 		    var total = this.points.bien + this.points.mal;
-		    var bienPercent = Utils.toPercent(this.points.bien, total);
+		    var bienPercent = Math.round(Utils.toPercent(this.points.bien, total));
+		    var malPercent = Math.round(Utils.toPercent(this.points.mal, total));
+		    $(this.el).find("bien .text").html(bienPercent + "%");
+		    $(this.el).find("mal .text").html(malPercent + "%");
 		    
+		    var bienPercent = Utils.toPercent(this.points.bien, total);
 		    $(this.el).find("jauge yang").css({
 		    	width : bienPercent + "%"
 		    });
@@ -247,9 +246,14 @@ function($, _, Utils) {
 		 */
 		this.gameOver = function() {
 			var perdu = this.points.bien * this.points.mal <= 0;
-			var bienGagne = this.points.bien > (5 * this.points.mal);
-			var malGagne = this.points.mal > (5 * this.points.bien);
 			
+			var total = this.points.bien + this.points.mal;
+		    var bienPercent = Math.round(Utils.toPercent(this.points.bien, total));
+		    var malPercent = Math.round(Utils.toPercent(this.points.mal, total));
+			
+		    var bienGagne = bienPercent >= 85;
+		    var malGagne = malPercent >= 85;
+		    
 			return perdu || bienGagne || malGagne;
 		};
 		

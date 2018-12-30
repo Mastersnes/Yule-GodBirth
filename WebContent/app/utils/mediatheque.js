@@ -57,6 +57,7 @@ define(["jquery", "app/utils/utils"], function($, Utils){
 					if (this.isMuteMusic) {
 						return;
 					}
+					this.stopAllMusic();
 				}
 				
 				// Si c'est une music est qu'elle est deja en cours, on ne la relance pas
