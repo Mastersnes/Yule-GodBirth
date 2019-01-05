@@ -9,7 +9,7 @@ define(["jquery","app/utils/utils"
 			"rassemblement-1-event" : {
 				name : "rassemblement-1-event",
 			    text : "rassemblement-1-event",
-			    rarity : 100,
+			    rarity : 80,
 			    unique : true,
 			    starter: true,
 			    actions : [

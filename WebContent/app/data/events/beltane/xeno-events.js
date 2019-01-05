@@ -9,7 +9,7 @@ define(["jquery","app/utils/utils"
 			"xeno-1-event" : {
 				name : "xeno-1-event",
 			    text : "xeno-1-event",
-			    rarity : 100,
+			    rarity : 80,
 			    unique : true,
 			    starter: true,
 			    actions : [

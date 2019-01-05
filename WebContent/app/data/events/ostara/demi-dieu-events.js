@@ -7,7 +7,7 @@ define(["jquery"], function($){
 			"demi-dieu-start-event" : {
 				name : "demi-dieu-start-event",
 			    text : "demi-dieu-start-event",
-			    rarity : 100,
+			    rarity : 80,
 			    unique : true,
 			    actions : [
 			         {
@@ -69,7 +69,7 @@ define(["jquery"], function($){
 			"demi-dieu-vin-event" : {
 				name : "demi-dieu-vin-event",
 			    text : "demi-dieu-vin-event",
-			    rarity : 100,
+			    rarity : 50,
 			    unique : true,
 			    starter : true,
 			    actions : [
@@ -104,7 +104,7 @@ define(["jquery"], function($){
 			"demi-dieu-scene-event" : {
 				name : "demi-dieu-scene-event",
 			    text : "demi-dieu-scene-event",
-			    rarity : 150,
+			    rarity : 60,
 			    unique : true,
 			    actions : [
 			         {

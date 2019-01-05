@@ -100,8 +100,8 @@ define(["jquery",
 				en : "The balance of the Universe has been broken... You've failed..."
 			},
 			"gameOver-2" : {
-				fr : "Réessayez en rechargeant le jeu!",
-				en : "Try again by reloading the game!"
+				fr : "<a alt='Réessayer'>Réessayez en rechargeant la page ou en cliquant ici !</a>",
+				en : "<a alt='Try again'>Try again by reloading the page or by clicking here !</a>"
 			},        
 			"gameOver-3" : {
 				fr : "Découvrez nos autres jeux sur <a target='_blank' alt='Kongregate' href='http://www.kongregate.com/games/JeuxBebel'>Kongregate</a>.",

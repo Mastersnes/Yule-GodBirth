@@ -67,7 +67,7 @@ define(["jquery","app/utils/utils"
 			"lammas-disparition-event" : {
 				name : "lammas-disparition-event",
 			    text : "lammas-disparition-event",
-			    rarity : 100,
+			    rarity : 80,
 			    unique : true,
 			    actions : [
 			         {

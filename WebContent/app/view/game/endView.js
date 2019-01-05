@@ -9,7 +9,7 @@ function($, _, Utils, page, SceneManager) {
 
 	return function(parent) {
 		this.init = function(parent) {
-		    this.el = $("#app");
+		    this.el = "#app";
 		    this.parent = parent;
             this.Textes = parent.Textes;
             this.mediatheque = parent.mediatheque;
@@ -22,9 +22,18 @@ function($, _, Utils, page, SceneManager) {
 					text : this.Textes,
 					gagne : gagne
 			};
-			this.el.html(template(templateData));
+			$(this.el).html(template(templateData));
 			
 			this.scene = new SceneManager(this);
+			this.makeEvents();
+		};
+		
+		this.makeEvents = function() {
+			var that = this;
+			$(this.el).find("#reload").click(function(e) {
+				e.preventDefault();
+				that.parent.resetGame();
+			});
 		};
 		
 		this.init(parent);

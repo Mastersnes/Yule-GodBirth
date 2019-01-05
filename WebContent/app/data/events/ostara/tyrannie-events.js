@@ -166,7 +166,9 @@ define(["jquery",
 	
 	return {
 		get : function(key) {
-			return data[key];
+			var event = DemiDieuEvents.get(key);
+			if (!event) event = data[key];
+			return event;
 		},
 		start : function(key) {
 			return ["tyrannie-start-event"];

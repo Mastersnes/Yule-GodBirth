@@ -12,3 +12,7 @@
     color: #f1efeb;
     text-align: center;
 }
+
+#reload {
+	cursor: pointer;	
+}

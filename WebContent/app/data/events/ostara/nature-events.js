@@ -107,7 +107,7 @@ define(["jquery","app/utils/utils"
 			"nature-nucleaire-event" : {
 				name : "nature-nucleaire-event",
 			    text : "nature-nucleaire-event",
-			    rarity : 100,
+			    rarity : 80,
 			    unique : true,
 			    actions : [
 			         {
@@ -147,7 +147,7 @@ define(["jquery","app/utils/utils"
 			"nature-destruction-event" : {
 				name : "nature-destruction-event",
 			    text : "nature-destruction-event",
-			    rarity : 150,
+			    rarity : 100,
 			    unique : true,
 			    actions : [
 			         {

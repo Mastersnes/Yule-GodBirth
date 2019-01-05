@@ -57,7 +57,7 @@ define(["jquery","app/utils/utils"
 			"guerre-2-event" : {
 				name : "guerre-2-event",
 			    text : "guerre-2-event",
-			    rarity : 100,
+			    rarity : 60,
 			    unique : true,
 			    actions : [
 			         {

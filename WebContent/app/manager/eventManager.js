@@ -51,7 +51,7 @@ function($, _, Utils, page, Events) {
 			var ameliorationView = parent.spaceView.ameliorationView;
 			var grandToutLevel = 0;
 			if (ameliorationView) {
-				grandToutLevel = ameliorationView.Items.get("grandTout");
+				grandToutLevel = ameliorationView.Items.get("grandTout").level;
 			}
 			if (grandToutLevel < 6) return;
 			
@@ -68,15 +68,17 @@ function($, _, Utils, page, Events) {
 		    /**
 		     * On retire les evenements uniques deja eu lieu du total des evenements pour ne pas poluer le choix
 		     */
-		    for (var index in this.uniquesEvents) {
-		    	var eventName = this.uniquesEvents[index];
-		    	var eventIndex = totalEvents.indexOf(eventName);
-		    	totalEvents.splice(eventIndex, 1);
+		    var eventsRestant = [];
+		    for (var index in totalEvents) {
+		    	var eventName = totalEvents[index];
+		    	var eventIndex = this.uniquesEvents.indexOf(eventName);
+		    	if (eventIndex == -1) eventsRestant.push(eventName);
 		    }
-		    if (totalEvents.length == 0) return;
 		    
-	        var randIndex = Utils.rand(0, totalEvents.length);
-	        var randEvent = Events.get(totalEvents[randIndex]);
+		    if (eventsRestant.length == 0) return;
+		    
+	        var randIndex = Utils.rand(0, eventsRestant.length);
+	        var randEvent = Events.get(eventsRestant[randIndex]);
 	        
 	    	if (this.checkEvent(randEvent)) this.currentEvent = randEvent;
             if (this.currentEvent) {

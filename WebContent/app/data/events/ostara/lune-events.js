@@ -69,7 +69,7 @@ define(["jquery","app/utils/utils"
 			"lune-conquete2-event-help" : {
 				name : "lune-conquete2-event-help",
 			    text : "lune-conquete2-event-help",
-			    rarity : 100,
+			    rarity : 80,
 			    unique : true,
 			    actions : [
 			         {
@@ -85,7 +85,7 @@ define(["jquery","app/utils/utils"
 			"lune-conquete2-event-nohelp" : {
 				name : "lune-conquete2-event-nohelp",
 			    text : "lune-conquete2-event-nohelp",
-			    rarity : 100,
+			    rarity : 80,
 			    unique : true,
 			    actions : [
 			         {
@@ -180,7 +180,7 @@ define(["jquery","app/utils/utils"
 			"lune-magie2-event" : {
 				name : "lune-magie2-event",
 			    text : "lune-magie2-event",
-			    rarity : 100,
+			    rarity : 80,
 			    unique : true,
 			    actions : [
 			         {
