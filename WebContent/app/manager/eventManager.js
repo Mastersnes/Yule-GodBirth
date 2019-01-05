@@ -14,6 +14,7 @@ function($, _, Utils, page, Events) {
 			this.parent = parent;
 			this.Textes = parent.Textes;
 			this.saveManager = parent.saveManager;
+			this.kongregateUtils = parent.kongregateUtils;
 			this.textManager = parent.textManager;
 			this.mediatheque = parent.mediatheque;
 			
@@ -174,6 +175,7 @@ function($, _, Utils, page, Events) {
 		this.hide = function() {
 		    if (this.currentEvent && this.currentEvent.unique) {
                 this.uniquesEvents.push(this.currentEvent.name);
+                this.kongregateUtils.score("eventsComplete", this.uniquesEvents.length);
                 this.saveManager.save("uniquesEvents", this.uniquesEvents);
             }
 		    this.previousEvent = this.currentEvent;
