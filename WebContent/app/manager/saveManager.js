@@ -149,6 +149,7 @@ function($, _, Utils) {
 	        this.kongregateUtils.score("artefactsUses", this.load("artefactsUses"));
 	        this.kongregateUtils.score("artefactsNumber", this.load("artefactsNumber"));
 	        this.kongregateUtils.score("upgradeNumber", this.load("upgradeNumber"));
+	        this.kongregateUtils.score("eventsComplete", this.load("uniquesEvents").length);
 	        if (this.load("artefactsUses") >= 1) this.kongregateUtils.score("artefactsUses1", 1);
 	        if (this.load("artefactsUses") >= 3) this.kongregateUtils.score("artefactsUses3", 1);
 	        if (this.load("pierre-primaire-success"))
