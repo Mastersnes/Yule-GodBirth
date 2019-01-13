@@ -32,11 +32,8 @@ function($, _, Utils, page) {
 			$("#avn").click(function() {
 				window.open("https://avn2dgameartist.wordpress.com", "_blank");
 			});
-			$("#soundcloud").click(function() {
-				window.open("https://soundcloud.com/user-856311901-937055955", "_blank");
-			});
-			$("#aeferrets").click(function() {
-				window.open("https://www.facebook.com/AEFerrets/", "_blank");
+			$("#bandcamp").click(function() {
+				window.open("https://lesjeuxdebebel.bandcamp.com/album/yule-a-god-birth", "_blank");
 			});
 			$(".facebook").click(function() {
 				window.open("https://www.facebook.com/lesjeuxdebebel/", "_blank");
