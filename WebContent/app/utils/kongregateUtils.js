@@ -70,13 +70,15 @@ define(["jquery", "app/utils/utils", "app/data/kongregateStats", "kongregate"], 
 				that.resolve();
             	that.render();
             });
+            this.resolve();
+            this.render();
 		};
 		
 		this.resolve = function() {
 			this.username = this.kongregate.services.getUsername();
         	this.isGuest = this.kongregate.services.isGuest();
         	if (this.isGuest == null || this.isGuest == undefined) this.isGuest = true;
-        	console.log('Kongregate username changed to: ' + that.username);
+        	console.log('Kongregate username changed to: ' + this.username);
 		};
 		
 		this.login = function() {

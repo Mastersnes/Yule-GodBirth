@@ -125,49 +125,65 @@ function($, _, Utils) {
 		 * Permet de savoir si il existe une partie a charger
 		 */
 		this.checkSave = function() {
-			var saveSession = window.localStorage.getItem(Utils.name);
-			return saveSession != null;
+			this.saveSession = window.localStorage.getItem(Utils.name);
+			if (!this.saveSession) {
+			    var username = this.kongregateUtils.username;
+			    console.log("Kongregate", this.kongregateUtils, username);
+			    if (this.kongregateUtils.isLoad && username) {
+                    var that = this;
+                    var request = {
+                        "username" : username,
+                        "secretPass" : Utils.hash("Yule5497" + username)
+                    };
+                    Utils.load("https://bebel-server.herokuapp.com/yule/getSave", request, function(data, status) {
+                        console.log("Succes de la recuperation de la sauvegarde", data, "avec le status", status);
+                        that.saveSession = data.data;
+                    });
+			    }
+			}
+			return this.saveSession != null;
 		};
 
 		/**
 		 * Permet de charger la sauvegarde en memoire
 		 */
 		this.loadSave = function() {
-			var saveSession = window.localStorage.getItem(Utils.name);
-	        if (saveSession) {
+	        if (this.saveSession) {
 	            this.loaded = true;
-	        	this.saveData = JSON.parse(Utils.decode(saveSession));
-	        }
-	        
-	        //On rejout les succes à ce moment
-	        var maxPoints = this.load("maxPoints");
-	        this.kongregateUtils.score("maxCroyance", maxPoints.croyance);
-	        this.kongregateUtils.score("maxIllumination", maxPoints.illumination);
-	        this.kongregateUtils.score("maxBien", maxPoints.bien);
-	        this.kongregateUtils.score("maxMal", maxPoints.mal);
-	        this.kongregateUtils.score("compteurClick", this.load("compteurClick"));
-	        this.kongregateUtils.score("artefactsUses", this.load("artefactsUses"));
-	        this.kongregateUtils.score("artefactsNumber", this.load("artefactsNumber"));
-	        this.kongregateUtils.score("upgradeNumber", this.load("upgradeNumber"));
-	        this.kongregateUtils.score("eventsComplete", this.load("uniquesEvents").length);
-	        if (this.load("artefactsUses") >= 1) this.kongregateUtils.score("artefactsUses1", 1);
-	        if (this.load("artefactsUses") >= 3) this.kongregateUtils.score("artefactsUses3", 1);
-	        if (this.load("pierre-primaire-success"))
-	        	this.kongregateUtils.score("pierre-primaire-success", 1);
-	        if (this.load("pierre-lunaire-success"))
-	        	this.kongregateUtils.score("pierre-lunaire-success", 1);
-	        if (this.load("pierre-solaire-success"))
-	        	this.kongregateUtils.score("pierre-solaire-success", 1);
-	        if (this.load("pierre-secrete-success"))
-	        	this.kongregateUtils.score("pierre-secrete-success", 1);
-	        if (this.load("GameComplete"))
-	        	this.kongregateUtils.score("GameComplete", 1);
-	        if (this.load("GameOver"))
-	        	this.kongregateUtils.score("GameOver", 1);
-	        
-	        var successComplete = this.load("successComplete");
-	        for (var index in successComplete) {
-	        	this.kongregateUtils.score(successComplete[index], 1);
+	        	this.saveData = JSON.parse(Utils.decode(this.saveSession));
+
+	        	console.log("Chargement de la sauvegarde", this.saveData)
+
+                //On rejout les succes à ce moment
+                var maxPoints = this.load("maxPoints");
+                this.kongregateUtils.score("maxCroyance", maxPoints.croyance);
+                this.kongregateUtils.score("maxIllumination", maxPoints.illumination);
+                this.kongregateUtils.score("maxBien", maxPoints.bien);
+                this.kongregateUtils.score("maxMal", maxPoints.mal);
+                this.kongregateUtils.score("compteurClick", this.load("compteurClick"));
+                this.kongregateUtils.score("artefactsUses", this.load("artefactsUses"));
+                this.kongregateUtils.score("artefactsNumber", this.load("artefactsNumber"));
+                this.kongregateUtils.score("upgradeNumber", this.load("upgradeNumber"));
+                this.kongregateUtils.score("eventsComplete", this.load("uniquesEvents").length);
+                if (this.load("artefactsUses") >= 1) this.kongregateUtils.score("artefactsUses1", 1);
+                if (this.load("artefactsUses") >= 3) this.kongregateUtils.score("artefactsUses3", 1);
+                if (this.load("pierre-primaire-success"))
+                    this.kongregateUtils.score("pierre-primaire-success", 1);
+                if (this.load("pierre-lunaire-success"))
+                    this.kongregateUtils.score("pierre-lunaire-success", 1);
+                if (this.load("pierre-solaire-success"))
+                    this.kongregateUtils.score("pierre-solaire-success", 1);
+                if (this.load("pierre-secrete-success"))
+                    this.kongregateUtils.score("pierre-secrete-success", 1);
+                if (this.load("GameComplete"))
+                    this.kongregateUtils.score("GameComplete", 1);
+                if (this.load("GameOver"))
+                    this.kongregateUtils.score("GameOver", 1);
+
+                var successComplete = this.load("successComplete");
+                for (var index in successComplete) {
+                    this.kongregateUtils.score(successComplete[index], 1);
+                }
 	        }
 		};
 		
@@ -177,6 +193,21 @@ function($, _, Utils) {
 		this.saveInSession = function() {
 			var saveJeton = Utils.encode(JSON.stringify(this.saveData));
 		    window.localStorage.setItem(Utils.name, saveJeton);
+		};
+		this.saveInCloud = function() {
+			var saveJeton = Utils.encode(JSON.stringify(this.saveData));
+		    var username = this.kongregateUtils.username;
+		    console.log("Kongregate", this.kongregateUtils, username);
+            if (this.kongregateUtils.isLoad && username) {
+                var that = this;
+                var request = {
+                    "username" : username,
+                    "secretPass" : Utils.hash("Yule5497" + username),
+                    "data" : saveJeton
+                };
+                //loadAsync
+                Utils.load("https://bebel-server.herokuapp.com/yule/save", request, null, "POST", true);
+            }
 		};
 
 		/**

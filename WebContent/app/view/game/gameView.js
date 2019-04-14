@@ -84,6 +84,7 @@ function($, _, Utils, PopupUtils, page, TextManager,
 			    this.alreadyLoop = true;
                 this.makeEvents();
                 this.loop();
+                this.hardLoop();
                 this.renderLoop();
             }
 		};
@@ -113,6 +114,16 @@ function($, _, Utils, PopupUtils, page, TextManager,
 			
 			this.mediatheque.refreshMute();
 		};
+
+		this.hardLoop = function() {
+            if (!this.endGame) {
+                this.saveManager.saveInCloud();
+                var that = this;
+                setTimeout(function() {
+                    that.hardLoop();
+                }, 1*60*1000);
+            }
+        };
 		
 		this.loop = function() {
 		    if (!this.endGame) {
