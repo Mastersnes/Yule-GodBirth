@@ -218,11 +218,177 @@ define(["jquery"], function($){
 			    	illumination : 30
 			    }
 			},
+			"quete-premice-amour" : {
+			    name : "quete-premice-amour",
+			    description : "quete-premice-amour-desc",
+				apparition : {
+					 isComplete : ["quete-vie", "quete-mort"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "dieu",
+				    	 level : 10
+			         },
+			         {
+				    	 name : "deesse",
+				    	 level : 10
+			         }
+				],
+			    gainsLoop : {
+			    	croyance : 50,
+			    	illumination : 50
+			    }
+			},
+			"quete-amour-eternel" : {
+			    name : "quete-amour-eternel",
+			    description : "quete-amour-eternel-desc",
+				apparition : {
+					 isComplete : ["quete-premice-amour"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "dieu",
+				    	 level : 30
+			         },
+			         {
+				    	 name : "deesse",
+				    	 level : 30
+			         }
+				],
+			    gainsLoop : {
+			    	croyance : 80,
+			    	illumination : 80
+			    }
+			},
+			"quete-confin-etoile" : {
+			    name : "quete-confin-etoile",
+			    description : "quete-confin-etoile-desc",
+				apparition : {
+					 isComplete : ["quete-amour-eternel"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "dieu",
+				    	 level : 60
+			         },
+			         {
+				    	 name : "deesse",
+				    	 level : 60
+			         }
+				],
+			    gainsLoop : {
+			    	croyance : 100,
+			    	illumination : 100
+			    }
+			},
+			"quete-reve-etoile" : {
+			    name : "quete-reve-etoile",
+			    description : "quete-reve-etoile-desc",
+				apparition : {
+					 isComplete : ["quete-confin-etoile"],
+				     ameliorations : []
+				},
+			    conditions : [
+				     {
+				    	 name : "dieu",
+				    	 level : 90
+			         },
+			         {
+				    	 name : "deesse",
+				    	 level : 90
+			         }
+				],
+			    gainsLoop : {
+			    	croyance : 200,
+			    	illumination : 200
+			    }
+			},
+			"quete-system-alpha" : {
+                name : "quete-system-alpha",
+                description : "quete-system-alpha-desc",
+                apparition : {
+                     isComplete : ["quete-vie", "quete-mort"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "terre",
+                         level : 15
+                     },
+                     {
+                         name : "lune",
+                         level : 15
+                     },
+                     {
+                         name : "soleil",
+                         level : 15
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 60,
+                    illumination : 60
+                }
+            },
+			"quete-origine-monde" : {
+                name : "quete-origine-monde",
+                description : "quete-origine-monde-desc",
+                apparition : {
+                     isComplete : ["quete-system-alpha"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "terre",
+                         level : 40
+                     },
+                     {
+                         name : "lune",
+                         level : 40
+                     },
+                     {
+                         name : "soleil",
+                         level : 40
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 100,
+                    illumination : 100
+                }
+            },
+			"quete-persistance-regne" : {
+                name : "quete-persistance-regne",
+                description : "quete-persistance-regne-desc",
+                apparition : {
+                     isComplete : ["quete-origine-monde"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "terre",
+                         level : 80
+                     },
+                     {
+                         name : "lune",
+                         level : 80
+                     },
+                     {
+                         name : "soleil",
+                         level : 80
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 150,
+                    illumination : 200
+                }
+            },
 			"quete-concept" : {
 			    name : "quete-concept",
 			    description : "quete-concept-desc",
 				apparition : {
-					 isComplete : ["quete-vie", "quete-mort"],
+					 isComplete : ["quete-complete-vie", "quete-complete-mort"],
 				     ameliorations : []
 				},
 			    conditions : [
@@ -290,6 +456,292 @@ define(["jquery"], function($){
 			    	illumination : 60
 			    }
 			},
+			"quete-souffle-vie" : {
+                name : "quete-souffle-vie",
+                description : "quete-souffle-vie-desc",
+                apparition : {
+                     isComplete : ["quete-concept"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "foret",
+                         level : 20
+                     },
+                     {
+                         name : "ciel",
+                         level : 20
+                     },
+                     {
+                         name : "volcan",
+                         level : 20
+                     },
+                     {
+                         name : "ocean",
+                         level : 20
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 60,
+                    illumination : 60
+                }
+            },
+			"quete-force-vie" : {
+                name : "quete-force-vie",
+                description : "quete-force-vie-desc",
+                apparition : {
+                     isComplete : ["quete-souffle-vie"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "foret",
+                         level : 50
+                     },
+                     {
+                         name : "ciel",
+                         level : 50
+                     },
+                     {
+                         name : "volcan",
+                         level : 50
+                     },
+                     {
+                         name : "ocean",
+                         level : 50
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 100,
+                    illumination : 100
+                }
+            },
+			"quete-ad-vitam" : {
+                name : "quete-ad-vitam",
+                description : "quete-ad-vitam-desc",
+                apparition : {
+                     isComplete : ["quete-force-vie"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "foret",
+                         level : 80
+                     },
+                     {
+                         name : "ciel",
+                         level : 80
+                     },
+                     {
+                         name : "volcan",
+                         level : 80
+                     },
+                     {
+                         name : "ocean",
+                         level : 80
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 200,
+                    illumination : 300
+                }
+            },
+
+            "quete-souffle-mort" : {
+                name : "quete-souffle-mort",
+                description : "quete-souffle-mort-desc",
+                apparition : {
+                     isComplete : ["quete-concept"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "gouffre",
+                         level : 20
+                     },
+                     {
+                         name : "vide",
+                         level : 20
+                     },
+                     {
+                         name : "chaos",
+                         level : 20
+                     },
+                     {
+                         name : "abysse",
+                         level : 20
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 60,
+                    illumination : 60
+                }
+            },
+            "quete-force-mort" : {
+                name : "quete-force-mort",
+                description : "quete-force-mort-desc",
+                apparition : {
+                     isComplete : ["quete-souffle-mort"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "gouffre",
+                         level : 50
+                     },
+                     {
+                         name : "vide",
+                         level : 50
+                     },
+                     {
+                         name : "chaos",
+                         level : 50
+                     },
+                     {
+                         name : "abysse",
+                         level : 50
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 100,
+                    illumination : 100
+                }
+            },
+            "quete-abyssus" : {
+                name : "quete-abyssus",
+                description : "quete-abyssus-desc",
+                apparition : {
+                     isComplete : ["quete-force-mort"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "gouffre",
+                         level : 80
+                     },
+                     {
+                         name : "vide",
+                         level : 80
+                     },
+                     {
+                         name : "chaos",
+                         level : 80
+                     },
+                     {
+                         name : "abysse",
+                         level : 80
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 200,
+                    illumination : 300
+                }
+            },
+
+            "quete-incomprehensive" : {
+                name : "quete-incomprehensive",
+                description : "quete-incomprehensive-desc",
+                apparition : {
+                     isComplete : ["quete-complete-concept"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "amour",
+                         level : 10
+                     },
+                     {
+                         name : "connaissance",
+                         level : 10
+                     },
+                     {
+                         name : "evolution",
+                         level : 10
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 120,
+                    illumination : 120
+                }
+            },
+            "quete-ou-venir" : {
+                name : "quete-ou-venir",
+                description : "quete-ou-venir-desc",
+                apparition : {
+                     isComplete : ["quete-incomprehensive"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "amour",
+                         level : 30
+                     },
+                     {
+                         name : "connaissance",
+                         level : 30
+                     },
+                     {
+                         name : "evolution",
+                         level : 30
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 150,
+                    illumination : 150
+                }
+            },
+            "quete-jusquou" : {
+                name : "quete-jusquou",
+                description : "quete-jusquou-desc",
+                apparition : {
+                     isComplete : ["quete-ou-venir"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "amour",
+                         level : 60
+                     },
+                     {
+                         name : "connaissance",
+                         level : 60
+                     },
+                     {
+                         name : "evolution",
+                         level : 60
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 200,
+                    illumination : 200
+                }
+            },
+            "quete-arreter-jamais" : {
+                name : "quete-arreter-jamais",
+                description : "quete-arreter-jamais-desc",
+                apparition : {
+                     isComplete : ["quete-jusquou"],
+                     ameliorations : []
+                },
+                conditions : [
+                     {
+                         name : "amour",
+                         level : 90
+                     },
+                     {
+                         name : "connaissance",
+                         level : 90
+                     },
+                     {
+                         name : "evolution",
+                         level : 90
+                     }
+                ],
+                gainsLoop : {
+                    croyance : 300,
+                    illumination : 300
+                }
+            },
 			"quete-imbolc" : {
 			    name : "quete-imbolc",
 			    description : "quete-imbolc-desc",

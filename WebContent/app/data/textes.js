@@ -439,6 +439,86 @@ define(["jquery",
 				fr : "Améliorez tous les éléments de la mort au niveau 1",
 				en : "Upgrade all elements of death to level 1"
 			},
+			"quete-premice-amour" : {
+                fr : "Les prémices de l'amour",
+                en : "The beginnings of love"
+            },
+            "quete-premice-amour-desc" : {
+                fr : "Améliorez le dieu et la déesse au niveau 10",
+                en : "Upgrade God and Goddess to level 10"
+            },
+			"quete-amour-eternel" : {
+                fr : "Un amour éternel",
+                en : "An eternal Love"
+            },
+            "quete-amour-eternel-desc" : {
+                fr : "Améliorez le dieu et la déesse au niveau 30",
+                en : "Upgrade God and Goddess to level 30"
+            },
+			"quete-confin-etoile" : {
+                fr : "Jusqu'au confins des étoiles",
+                en : "To the edge of the stars"
+            },
+            "quete-confin-etoile-desc" : {
+                fr : "Améliorez le dieu et la déesse au niveau 60",
+                en : "Upgrade God and Goddess to level 60"
+            },
+			"quete-reve-etoile" : {
+                fr : "Rêve étoilés",
+                en : "Starry dreams"
+            },
+            "quete-reve-etoile-desc" : {
+                fr : "L'amour entre dans un cycle sans fin et s’entremêle de rêve et de douceur...",
+                en : "Love enters an endless cycle and is intertwined with dreams and sweetness..."
+            },
+			"quete-system-alpha" : {
+                fr : "Système alpha",
+                en : "Alpha system"
+            },
+            "quete-system-alpha-desc" : {
+                fr : "Améliorez le système solaire au niveau 15",
+                en : "Upgrade the solar system to level 15"
+            },
+			"quete-origine-monde" : {
+                fr : "L'origine des mondes",
+                en : "The origin of the worlds"
+            },
+            "quete-origine-monde-desc" : {
+                fr : "Améliorez le système solaire au niveau 40",
+                en : "Upgrade the solar system to level 40"
+            },
+			"quete-persistance-regne" : {
+                fr : "La persistance d'un règne",
+                en : "The persistence of a reign"
+            },
+            "quete-persistance-regne-desc" : {
+                fr : "Régnez sur vos sujet au delà de leurs souhaits !",
+                en : "Rule over your subjects beyond their wishes!"
+            },
+			"quete-souffle-vie" : {
+                fr : "Souffle de vie",
+                en : "Breath of life"
+            },
+            "quete-souffle-vie-desc" : {
+                fr : "Améliorez les éléments de la vie au niveau 20",
+                en : "Upgrade the elements of life to level 20"
+            },
+			"quete-force-vie" : {
+                fr : "La force de la vie",
+                en : "The force of life"
+            },
+            "quete-force-vie-desc" : {
+                fr : "Améliorez les éléments de la vie au niveau 50",
+                en : "Upgrade the elements of life to level 50"
+            },
+            "quete-ad-vitam" : {
+                fr : "Ad vitam æternam",
+                en : "Ad vitam æternam"
+            },
+            "quete-ad-vitam-desc" : {
+                fr : "Faites resplendir la grandeur de la vie dans l'Univers",
+                en : "Make the greatness of life shine forth in the Universe"
+            },
 			"quete-concept" : {
 				fr : "Humanité",
 				en : "Humanity"
@@ -449,13 +529,70 @@ define(["jquery",
 			},
 			"quete-complete-concept" : {
 				fr : "Ces humains...",
-				en : "Humans..."
+				en : "These humans..."
 			},        
 			"quete-complete-concept-desc" : {
 				fr : "Améliorez tous les concepts humains au niveau 1",
 				en : "Upgrade all humans concepts to level 1"
 			},
-			        
+			"quete-incomprehensive" : {
+				fr : "Incompréhensible",
+				en : "Incomprehensible"
+			},
+			"quete-incomprehensive-desc" : {
+				fr : "Améliorez tous les concepts humains au niveau 10",
+				en : "Upgrade all humans concepts to level 10"
+			},
+			"quete-ou-venir" : {
+				fr : "Où veulent-ils en venir ?",
+				en : "What are they getting at?"
+			},
+			"quete-ou-venir-desc" : {
+				fr : "Améliorez tous les concepts humains au niveau 30",
+				en : "Upgrade all humans concepts to level 30"
+			},
+			"quete-jusquou" : {
+				fr : "Mais, jusqu'où vont-ils aller ?",
+				en : "But, how far will they go?"
+			},
+			"quete-jusquou-desc" : {
+				fr : "Améliorez tous les concepts humains au niveau 60",
+				en : "Upgrade all humans concepts to level 60"
+			},
+			"quete-arreter-jamais" : {
+				fr : "Il ne s’arrêteront jamais...",
+				en : "They will never stop..."
+			},
+			"quete-arreter-jamais-desc" : {
+				fr : "Étendez la puissance humaine à son paroxysme",
+				en : "Extend human power to its peak"
+			},
+
+			"quete-souffle-mort" : {
+                fr : "Souffle de mort",
+                en : "Breath of death"
+            },
+            "quete-souffle-mort-desc" : {
+                fr : "Améliorez les éléments de la mort au niveau 20",
+                en : "Upgrade the elements of death to level 20"
+            },
+			"quete-force-mort" : {
+                fr : "La force de la mort",
+                en : "Force of death"
+            },
+            "quete-force-mort-desc" : {
+                fr : "Améliorez les éléments de la mort au niveau 50",
+                en : "Upgrade the elements of death to level 50"
+            },
+			"quete-abyssus" : {
+                fr : "Abyssus abyssum invocat",
+                en : "Abyssus abyssum invocat"
+            },
+            "quete-abyssus-desc" : {
+                fr : "Anéantissez toute chose dans l'Univers",
+                en : "Annihilate everything in the Universe"
+            },
+
 			"quete-imbolc" : {
 				fr : "Imbolc",
 				en : "Imbolc"

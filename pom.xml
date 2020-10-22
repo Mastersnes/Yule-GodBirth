@@ -8,7 +8,6 @@
 	<name>Yule - La naissance d'un dieu</name>
 	<description>Jeu clicker gratuit sur navigateur - Les jeux de Bebel</description>
 	<build>
-		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
