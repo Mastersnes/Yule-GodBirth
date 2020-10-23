@@ -40,7 +40,7 @@ function($, _, Utils) {
 		    
 		    var maxIncr = this.getMaxIncr(item);
             if (this.refreshMax) this.currentIncr = maxIncr;
-		    
+
         	this.fill("#current", item, 0, loop);
             this.fill("#next", item, this.currentIncr, loop);
             

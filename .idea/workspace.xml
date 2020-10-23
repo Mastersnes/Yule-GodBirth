@@ -23,12 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91c09576-1837-44aa-b36b-f903b66d79e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/app/data/quetes.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/app/data/quetes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/app/data/textes.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/app/data/textes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yule-GodBirth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Yule-GodBirth.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/app/data/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/app/data/items.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/app/view/game/space/descriptionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/app/view/game/space/descriptionView.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,34 +108,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603262141466" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603364476373">
+    <state width="1877" height="198" key="GridCell.Tab.0.bottom" timestamp="1603389179878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603364476373" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603364476373">
+    <state width="1877" height="198" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603389179878" />
+    <state width="1877" height="198" key="GridCell.Tab.0.center" timestamp="1603389179877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603364476373" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603364476373">
+    <state width="1877" height="198" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603389179877" />
+    <state width="1877" height="198" key="GridCell.Tab.0.left" timestamp="1603389179877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603364476373" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603364476373">
+    <state width="1877" height="198" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603389179877" />
+    <state width="1877" height="198" key="GridCell.Tab.0.right" timestamp="1603389179877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603364476373" />
-    <state x="667" y="58" width="865" height="729" key="find.popup" timestamp="1603364158682">
+    <state width="1877" height="198" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603389179877" />
+    <state x="667" y="58" width="865" height="729" key="find.popup" timestamp="1603378696518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="58" width="865" height="729" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603364158682" />
+    <state x="667" y="58" width="865" height="729" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603378696518" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1603360504596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603360504596" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603363749472">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603378323445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603363749472" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603378323445" />
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="$PROJECT_DIR$" />
